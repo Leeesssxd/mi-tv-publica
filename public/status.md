@@ -1,11 +1,11 @@
 # Estado de canales
 
-Última revisión UTC: `2026-06-30T19:20:50Z`
+Última revisión UTC: `2026-06-30T19:29:09Z`
 
 - Canales totales: **348**
-- Canales vivos: **293**
-- Canales inestables: **6**
-- Canales muertos: **49**
+- Canales vivos: **277**
+- Canales inestables: **4**
+- Canales muertos: **67**
 
 | Canal | Grupo | País | Estado | Código | Error |
 |---|---|---|---|---|---|
@@ -13,26 +13,26 @@
 | Canal 5 TV Cozumel (1080p) | Familia y TV Abierta | MX | ✅ Vivo | 200 |  |
 | Canal 5 (720p) | Familia y TV Abierta | MX | ✅ Vivo | 200 |  |
 | Canal 50.1 Juárez (XEJ-TDT) (614p) | Familia y TV Abierta | MX | ❌ Muerto | 404 | HTTP 404 |
-| Azteca 7 | Familia y TV Abierta | MX | ✅ Vivo | 200 |  |
-| Azteca Uno | Familia y TV Abierta | MX | ✅ Vivo | 200 |  |
-| Las Estrellas (1080p) | Familia y TV Abierta | MX | ✅ Vivo | 200 |  |
+| Azteca 7 | Familia y TV Abierta | MX | ❌ Muerto | 403 | HTTP 403 |
+| Azteca Uno | Familia y TV Abierta | MX | ❌ Muerto | 403 | HTTP 403 |
+| Las Estrellas (1080p) | Familia y TV Abierta | MX | ❌ Muerto | 403 | HTTP 403 |
 | Las Estrellas Latin America (1080p) | Familia y TV Abierta | MX | ❌ Muerto | 403 | HTTP 403 |
 | Canal 13 Michoacán (720p) [Not 24/7] | Familia y TV Abierta | MX | ❌ Muerto | 404 | HTTP 404 |
 | Once México (1080p) | Familia y TV Abierta | MX | ❌ Muerto | 404 | HTTP 404 |
 | TV Pública | Familia y TV Abierta | AR | ✅ Vivo | 200 |  |
 | Azteca Internacional (1080p) | Familia y TV Abierta | MX | ✅ Vivo | 200 |  |
 | Azteca Internacional (720p) | Familia y TV Abierta | MX | ✅ Vivo | 200 |  |
-| Milenio Television (720p) | Noticias | MX | ✅ Vivo | 200 |  |
+| Milenio Television (720p) | Noticias | MX | ❌ Muerto | 403 | HTTP 403 |
 | Milenio Televisión (720p) | Noticias | MX | ✅ Vivo | 200 |  |
 | Telediario Now | Noticias | MX | ✅ Vivo | 200 |  |
-| Multimedios Bajío (720p) [Not 24/7] | Noticias | MX | ✅ Vivo | 200 |  |
-| Multimedios CDMX (720p) [Not 24/7] | Noticias | MX | ✅ Vivo | 200 |  |
-| Multimedios Ciudad Juárez (720p) [Not 24/7] | Noticias | MX | ✅ Vivo | 200 |  |
-| Multimedios Guadalajara (720p) [Not 24/7] | Noticias | MX | ✅ Vivo | 200 |  |
-| Multimedios Laguna (720p) [Not 24/7] | Noticias | MX | ✅ Vivo | 200 |  |
-| Multimedios Monterrey (720p) [Not 24/7] | Noticias | MX | ✅ Vivo | 200 |  |
-| Multimedios Puebla (720p) [Not 24/7] | Noticias | MX | ✅ Vivo | 200 |  |
-| Multimedios Saltillo (720p) [Not 24/7] | Noticias | MX | ✅ Vivo | 200 |  |
+| Multimedios Bajío (720p) [Not 24/7] | Noticias | MX | ❌ Muerto | 403 | HTTP 403 |
+| Multimedios CDMX (720p) [Not 24/7] | Noticias | MX | ❌ Muerto | 403 | HTTP 403 |
+| Multimedios Ciudad Juárez (720p) [Not 24/7] | Noticias | MX | ❌ Muerto | 403 | HTTP 403 |
+| Multimedios Guadalajara (720p) [Not 24/7] | Noticias | MX | ❌ Muerto | 403 | HTTP 403 |
+| Multimedios Laguna (720p) [Not 24/7] | Noticias | MX | ❌ Muerto | 403 | HTTP 403 |
+| Multimedios Monterrey (720p) [Not 24/7] | Noticias | MX | ❌ Muerto | 403 | HTTP 403 |
+| Multimedios Puebla (720p) [Not 24/7] | Noticias | MX | ❌ Muerto | 403 | HTTP 403 |
+| Multimedios Saltillo (720p) [Not 24/7] | Noticias | MX | ❌ Muerto | 403 | HTTP 403 |
 | Canal 26 Aguascalientes (1080p) | Familia y TV Abierta | MX | ✅ Vivo | 200 |  |
 | SET Televisión Canal 26.1 (720p) [Not 24/7] | Familia y TV Abierta | MX | ✅ Vivo | 200 |  |
 | SET Televisión Canal 26.2 (720p) [Not 24/7] | Familia y TV Abierta | MX | ✅ Vivo | 200 |  |
@@ -41,8 +41,8 @@
 | C4 En Alerta | Noticias | MX | ✅ Vivo | 200 |  |
 | MX Nuestro Cine | Peliculas - Cine | MX | ✅ Vivo | 200 |  |
 | Golden (240p) | Peliculas - Cine | MX | ✅ Vivo | 200 |  |
-| Filmex (Xumo) (1080p) [Geo-blocked] | Peliculas - Cine | MX | ❌ Muerto | 403 | HTTP 403 |
-| Filmex Clásico (1080p) [Geo-blocked] | Peliculas - Cine | MX | ❌ Muerto | 403 | HTTP 403 |
+| Filmex (Xumo) (1080p) [Geo-blocked] | Peliculas - Cine | MX | ✅ Vivo | 200 |  |
+| Filmex Clásico (1080p) [Geo-blocked] | Peliculas - Cine | MX | ✅ Vivo | 200 |  |
 | Runtime Acción | Peliculas - Accion | MX | ✅ Vivo | 200 |  |
 | Runtime Cine y Series | Peliculas - Drama y Series | MX | ✅ Vivo | 200 |  |
 | Runtime Comedia | Peliculas - Comedia | MX | ✅ Vivo | 200 |  |
@@ -53,7 +53,7 @@
 | RTVE 24 Horas Oficial (720p) | Deportes Públicos Internacionales | ES | ✅ Vivo | 200 |  |
 | RTVE Teledeporte Oficial (720p) | Deportes Públicos Internacionales | ES | ✅ Vivo | 200 |  |
 | TV Brasil Oficial (720p) | Deportes Públicos Internacionales | BR | ✅ Vivo | 200 |  |
-| Claro Sports (720p) | Deportes | MX | ✅ Vivo | 200 |  |
+| Claro Sports (720p) | Deportes | MX | ❌ Muerto | 403 | HTTP 403 |
 | ITV Deportes (720p) | Deportes | MX | ✅ Vivo | 200 |  |
 | ITV Deportes (720p) | Deportes | MX | ✅ Vivo | 200 |  |
 | ITV Deportes | Deportes | MX | ❌ Muerto | 400 | HTTP 400 |
@@ -67,7 +67,7 @@
 | B15 Fresnillo (1080p) | Familia y TV Abierta | MX | ✅ Vivo | 200 |  |
 | B15 Zacatecas (1080p) | Familia y TV Abierta | MX | ✅ Vivo | 200 |  |
 | Canal 10 Durango (1080p) | Familia y TV Abierta | MX | ✅ Vivo | 200 |  |
-| Capital 21 (1080p) [Not 24/7] | Familia y TV Abierta | MX | ⚠️ Inestable | 200 | Handshake correcto pero contenido inestable (C21ti202) |
+| Capital 21 (1080p) [Not 24/7] | Familia y TV Abierta | MX | ❌ Muerto | - | Timeout |
 | Estrella TV (1080p) | Familia y TV Abierta | MX | ✅ Vivo | 200 |  |
 | ICRTV Colima (1080p) | Familia y TV Abierta | MX | ✅ Vivo | 200 |  |
 | IERTBCS Canal 8 La Paz (1080p) [Not 24/7] | Familia y TV Abierta | MX | ✅ Vivo | 200 |  |
@@ -82,7 +82,7 @@
 | Super Channel 12 (1080p) | Familia y TV Abierta | MX | ✅ Vivo | 200 |  |
 | Tele Yucatan (1080p) [Geo-blocked] | Familia y TV Abierta | MX | ✅ Vivo | 200 |  |
 | Telemax (XEWH-TDT) (1080p) | Familia y TV Abierta | MX | ✅ Vivo | 200 |  |
-| TV BUAP (1080p) | Familia y TV Abierta | MX | ✅ Vivo | 200 |  |
+| TV BUAP (1080p) | Familia y TV Abierta | MX | ❌ Muerto | 403 | HTTP 403 |
 | TV Cuatro 4.1 (1080p) | Familia y TV Abierta | MX | ✅ Vivo | 200 |  |
 | TV Cuatro 4.1 (1080p) | Familia y TV Abierta | MX | ✅ Vivo | 200 |  |
 | TV Cuatro 4.2 (1080p) | Familia y TV Abierta | MX | ✅ Vivo | 200 |  |
@@ -115,7 +115,7 @@
 | Canal 44 Ciudad Juárez (720p) [Not 24/7] | Familia y TV Abierta | MX | ✅ Vivo | 200 |  |
 | Imagen TV+ (720p) | Familia y TV Abierta | MX | ✅ Vivo | 200 |  |
 | IMRyT Morelos TV (720p) | Familia y TV Abierta | MX | ❌ Muerto | 404 | HTTP 404 |
-| Ingenio TV (720p) | Familia y TV Abierta | MX | ❌ Muerto | - | Cannot connect to host aprende-usea.streaming.media.azure.net:443 ssl:False [getaddrinfo failed] |
+| Ingenio TV (720p) | Familia y TV Abierta | MX | ❌ Muerto | - | Cannot connect to host aprende-usea.streaming.media.azure.net:443 ssl:False [Name or service not known] |
 | Jalisco TV (720p) | Familia y TV Abierta | MX | ✅ Vivo | 200 |  |
 | Lobo TV (720p) | Familia y TV Abierta | MX | ✅ Vivo | 200 |  |
 | Mexiquense TV (720p) | Familia y TV Abierta | MX | ✅ Vivo | 200 |  |
@@ -151,14 +151,14 @@
 | Canal 14 | Familia y TV Abierta | MX | ✅ Vivo | 200 |  |
 | Canal 21 | Familia y TV Abierta | MX | ✅ Vivo | 200 |  |
 | Canal 22 | Familia y TV Abierta | MX | ✅ Vivo | 200 |  |
-| Canal 22 Mexico | Familia y TV Abierta | MX | ⚠️ Inestable | 200 | Handshake correcto pero contenido inestable (text/html) |
+| Canal 22 Mexico | Familia y TV Abierta | MX | ❌ Muerto | - | Cannot connect to host canal22.org.mx:443 ssl:False [Temporary failure in name resolution] |
 | Canal 6 CDMX (FAST) | Familia y TV Abierta | MX | ✅ Vivo | 200 |  |
 | Canal 66 | Familia y TV Abierta | MX | ✅ Vivo | 200 |  |
 | Canal 7 Neuquén | Familia y TV Abierta | AR | ✅ Vivo | 200 |  |
 | Canal 99 Miramar | Familia y TV Abierta | AR | ✅ Vivo | 200 |  |
 | Canal Provincial | Familia y TV Abierta | AR | ✅ Vivo | 200 |  |
 | El Trece | Familia y TV Abierta | AR | ✅ Vivo | 200 |  |
-| MVS TV | Familia y TV Abierta | MX | ✅ Vivo | 200 |  |
+| MVS TV | Familia y TV Abierta | MX | ❌ Muerto | 403 | HTTP 403 |
 | Tele Saltillo | Familia y TV Abierta | MX | ✅ Vivo | 200 |  |
 | Tele UV [Not 24/7] | Familia y TV Abierta | MX | ✅ Vivo | 200 |  |
 | TV de Puebla | Familia y TV Abierta | MX | ✅ Vivo | 200 |  |
@@ -172,9 +172,9 @@
 | Así Sucede Guanajuato (720p) [Not 24/7] | Noticias | MX | ❌ Muerto | 404 | HTTP 404 |
 | Canal Parlamento del Congreso de Jalisco (720p) [Not 24/7] | Noticias | MX | ✅ Vivo | 200 |  |
 | Justicia TV (720p) | Noticias | MX | ✅ Vivo | 200 |  |
-| TeleFórmula (720p) | Noticias | MX | ✅ Vivo | 200 |  |
+| TeleFórmula (720p) | Noticias | MX | ❌ Muerto | 403 | HTTP 403 |
 | 24/7 Canal de Noticias | Noticias | AR | ✅ Vivo | 200 |  |
-| Canal del Congreso 45.1 | Noticias | MX | ✅ Vivo | 200 |  |
+| Canal del Congreso 45.1 | Noticias | MX | ❌ Muerto | - | Timeout |
 | Canal E | Noticias | AR | ✅ Vivo | 200 |  |
 | Canal TDC | Noticias | AR | ✅ Vivo | 200 |  |
 | Catamarca TV | Noticias | AR | ✅ Vivo | 200 |  |
@@ -250,7 +250,7 @@
 | El Chavo TV (720p) | Peliculas - Familiar | MX | ✅ Vivo | 200 |  |
 | Pluto TV Juniorklubben (720p) | Peliculas - Familiar | SE | ✅ Vivo | 200 |  |
 | Pluto TV Klassiske tegnefilmer (720p) | Peliculas - Familiar | SE | ✅ Vivo | 200 |  |
-| Pluto TV Tegnefilm (720p) | Peliculas - Familiar | SE | ❌ Muerto | 404 | HTTP 404 |
+| Pluto TV Tegnefilm (720p) | Peliculas - Familiar | SE | ✅ Vivo | 200 |  |
 | Pluto TV Ungdomsserier (720p) | Peliculas - Familiar | SE | ✅ Vivo | 200 |  |
 | SvampeBob Firkant (720p) | Peliculas - Familiar | SE | ✅ Vivo | 200 |  |
 | Totally Turtles (720p) | Peliculas - Familiar | SE | ✅ Vivo | 200 |  |
@@ -260,7 +260,7 @@
 | TUDN (1080p) | Deportes | MX | ✅ Vivo | 200 |  |
 | TV Cuatro 4.3 (1080p) | Deportes | MX | ✅ Vivo | 200 |  |
 | Pluto TV Snooker 900 (720p) | Deportes | SE | ✅ Vivo | 200 |  |
-| Pluto TV Sport | Deportes | SE | ✅ Vivo | 200 |  |
+| Pluto TV Sport | Deportes | SE | ❌ Muerto | 403 | HTTP 403 |
 | WPT | Deportes | MX | ✅ Vivo | 200 |  |
 | CreaLaTV (1080p) | Entretenimiento | MX | ✅ Vivo | 200 |  |
 | Despierta TV (1080p) [Not 24/7] | Entretenimiento | MX | ✅ Vivo | 200 |  |
@@ -269,7 +269,7 @@
 | TV Østfold (1080p) | Entretenimiento | NO | ✅ Vivo | 200 |  |
 | VB Media TV (1080p) | Entretenimiento | MX | ✅ Vivo | 200 |  |
 | ZAZ (1080p) | Entretenimiento | MX | ✅ Vivo | 200 |  |
-| 15TV (720p) [Not 24/7] | Entretenimiento | MX | ❌ Muerto | - | Cannot connect to host cdn.fastocloud.com:443 ssl:False [getaddrinfo failed] |
+| 15TV (720p) [Not 24/7] | Entretenimiento | MX | ❌ Muerto | - | Cannot connect to host cdn.fastocloud.com:443 ssl:False [Name or service not known] |
 | Conecta TV (720p) | Entretenimiento | MX | ✅ Vivo | 200 |  |
 | Eclipse TV (720p) | Entretenimiento | MX | ❌ Muerto | 404 | HTTP 404 |
 | Expresa TV (720p) | Entretenimiento | MX | ✅ Vivo | 200 |  |
@@ -284,7 +284,7 @@
 | TELE 4 Ojocaliente (720p) | Entretenimiento | MX | ❌ Muerto | 404 | HTTP 404 |
 | TELE 6 (720p) | Entretenimiento | MX | ✅ Vivo | 200 |  |
 | Teleplay Sureste (720p) | Entretenimiento | MX | ✅ Vivo | 200 |  |
-| Teleritmo (720p) [Not 24/7] | Entretenimiento | MX | ✅ Vivo | 200 |  |
+| Teleritmo (720p) [Not 24/7] | Entretenimiento | MX | ❌ Muerto | 403 | HTTP 403 |
 | The Pet Collective International (720p) | Entretenimiento | MX | ✅ Vivo | 200 |  |
 | TV Migrante (720p) | Entretenimiento | MX | ✅ Vivo | 200 |  |
 | TV Modum (720p) | Entretenimiento | NO | ✅ Vivo | 200 |  |
@@ -293,7 +293,7 @@
 | Super9 TV (480p) [Not 24/7] | Entretenimiento | MX | ❌ Muerto | 404 | HTTP 404 |
 | Teleplay Sureste (360p) | Entretenimiento | MX | ✅ Vivo | 200 |  |
 | PSN (288p) | Entretenimiento | MX | ⚠️ Inestable | 200 | Handshake correcto pero contenido inestable (text/plain; charset=utf-8) |
-| A+ [Geo-blocked] | Entretenimiento | MX | ✅ Vivo | 200 |  |
+| A+ [Geo-blocked] | Entretenimiento | MX | ❌ Muerto | 403 | HTTP 403 |
 | Are You The One? | Entretenimiento | SE | ✅ Vivo | 200 |  |
 | Best of MTV | Entretenimiento | SE | ✅ Vivo | 200 |  |
 | Best of The Drew Barrymore Show | Entretenimiento | SE | ✅ Vivo | 200 |  |
@@ -306,9 +306,9 @@
 | Jersey Shore | Entretenimiento | SE | ✅ Vivo | 200 |  |
 | Jersey Shore Family Vacation | Entretenimiento | SE | ✅ Vivo | 200 |  |
 | Luksusfellen | Entretenimiento | SE | ✅ Vivo | 200 |  |
-| MTV Catfish | Entretenimiento | SE | ❌ Muerto | 404 | HTTP 404 |
+| MTV Catfish | Entretenimiento | SE | ✅ Vivo | 200 |  |
 | MTV Reality | Entretenimiento | SE | ✅ Vivo | 200 |  |
-| NASA TV Public | Entretenimiento | US | ❌ Muerto | - | Cannot connect to host akamaized.net:443 ssl:False [getaddrinfo failed] |
+| NASA TV Public | Entretenimiento | US | ❌ Muerto | - | Cannot connect to host akamaized.net:443 ssl:False [No address associated with hostname] |
 | NRK 1 (1080i) [Geo-blocked] | Entretenimiento | NO | ❌ Muerto | 403 | HTTP 403 |
 | NRK 2 (1080i) [Geo-blocked] | Entretenimiento | NO | ❌ Muerto | 403 | HTTP 403 |
 | NRK 3 (1080i) [Geo-blocked] | Entretenimiento | NO | ❌ Muerto | 403 | HTTP 403 |
