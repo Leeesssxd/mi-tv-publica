@@ -75,6 +75,8 @@ DEFAULT_CONFIG: dict[str, Any] = {
     "jitter_max_seconds": 1.5,
     "cache_ttl_seconds": 21600,
     "chunk_size_bytes": 65536,
+    "max_secret_sources": 1,
+    "max_private_channels_per_source": 500,
 }
 
 M3U8_URL_PATTERN = re.compile(
@@ -235,6 +237,16 @@ def load_secret_upstream_pools(secret_value: str | None) -> list[dict[str, Any]]
         if isinstance(item, dict):
             resolved.append(item)
     return resolved
+
+
+def limit_discovered_channels(
+    discovered_channels: list[dict[str, Any]] | list[str],
+    *,
+    max_items: int | None,
+) -> list[dict[str, Any]] | list[str]:
+    if max_items is None or max_items <= 0:
+        return discovered_channels
+    return discovered_channels[:max_items]
 
 
 def load_quarantine_state(quarantine_path: Path | None = None) -> dict[str, dict[str, Any]]:
@@ -855,6 +867,7 @@ async def import_single_source(
     default_country: str,
     metadata_url: str | None = None,
     category_filter: list[str] | None = None,
+    max_channels: int | None = None,
 ) -> tuple[int, int]:
     cached_file = await fetch_source_to_cache(source_url, config)
 
@@ -896,6 +909,12 @@ async def import_single_source(
             int(config.get("chunk_size_bytes", 65536)),
         )
         detected_count = len(discovered_channels)
+
+    discovered_channels = limit_discovered_channels(
+        discovered_channels,
+        max_items=max_channels,
+    )
+    detected_count = len(discovered_channels)
 
     payload = load_sources_payload(sources_path)
     existing_channels = _extract_channel_entries(payload)
@@ -1151,7 +1170,7 @@ async def run(
             continue
 
     private_source_specs = [
-        *load_secret_upstream_pools(os.getenv(SECRET_UPSTREAM_POOLS_ENV)),
+        *load_secret_upstream_pools(os.getenv(SECRET_UPSTREAM_POOLS_ENV))[: int(config.get("max_secret_sources", 1))],
         *ensure_local_private_sources_file(LOCAL_PRIVATE_SOURCES_FILE),
     ]
     for source_spec in private_source_specs:
@@ -1194,6 +1213,7 @@ async def run(
                 default_country=str(source_spec.get("country") or default_country).strip(),
                 metadata_url=source_spec.get("metadata_url"),
                 category_filter=source_spec.get("categories") if isinstance(source_spec.get("categories"), list) else None,
+                max_channels=int(config.get("max_private_channels_per_source", 500)),
             )
             total_detected += batch_detected
             total_added += batch_added

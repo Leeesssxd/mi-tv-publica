@@ -679,6 +679,7 @@ def test_run_omite_fuente_secundaria_caida_y_sigue_con_las_demas(tmp_path, monke
         default_country,
         metadata_url=None,
         category_filter=None,
+        max_channels=None,
     ):
         calls.append(source_url)
         if "bad.example" in source_url:
@@ -741,6 +742,7 @@ def test_run_omite_fuente_local_caida_y_sigue_con_pipeline(tmp_path, monkeypatch
     )
     monkeypatch.setenv("PRIVATE_SOURCE_1", "http://127.0.0")
     monkeypatch.setenv("PRIVATE_SOURCE_2", "http://127.0.0.1/feed.m3u")
+    monkeypatch.setattr(scrape_channels, "QUARANTINE_SOURCES_FILE", tmp_path / "quarantine_sources.json")
 
     calls: list[str] = []
 
@@ -753,6 +755,7 @@ def test_run_omite_fuente_local_caida_y_sigue_con_pipeline(tmp_path, monkeypatch
         default_country,
         metadata_url=None,
         category_filter=None,
+        max_channels=None,
     ):
         calls.append(source_url)
         if source_url == "http://127.0.0":
@@ -813,6 +816,7 @@ def test_run_reporta_403_local_como_rechazo_de_origen(tmp_path, monkeypatch, cap
         encoding="utf-8",
     )
     monkeypatch.setenv("PRIVATE_SOURCE_1", "http://provider.example/forbidden")
+    monkeypatch.setattr(scrape_channels, "QUARANTINE_SOURCES_FILE", tmp_path / "quarantine_sources.json")
 
     async def fake_import_single_source(
         source_url,
@@ -823,6 +827,7 @@ def test_run_reporta_403_local_como_rechazo_de_origen(tmp_path, monkeypatch, cap
         default_country,
         metadata_url=None,
         category_filter=None,
+        max_channels=None,
     ):
         if source_url == "https://primary.example/list.m3u":
             return 1, 0
@@ -889,6 +894,7 @@ def test_run_deduplica_fuentes_repetidas_entre_config_y_archivo_local(tmp_path, 
         default_country,
         metadata_url=None,
         category_filter=None,
+        max_channels=None,
     ):
         calls.append(source_url)
         return 1, 0
@@ -945,6 +951,7 @@ def test_run_genera_telemetria_y_cuarentena_tras_tres_403(tmp_path, monkeypatch)
         default_country,
         metadata_url=None,
         category_filter=None,
+        max_channels=None,
     ):
         if source_url == "https://primary.example/list.m3u":
             return 1, 0
