@@ -1,11 +1,11 @@
 # Estado de canales
 
-Última revisión UTC: `2026-06-30T18:49:49Z`
+Última revisión UTC: `2026-06-30T19:20:50Z`
 
 - Canales totales: **348**
-- Canales vivos: **291**
+- Canales vivos: **293**
 - Canales inestables: **6**
-- Canales muertos: **51**
+- Canales muertos: **49**
 
 | Canal | Grupo | País | Estado | Código | Error |
 |---|---|---|---|---|---|
@@ -155,7 +155,7 @@
 | Canal 6 CDMX (FAST) | Familia y TV Abierta | MX | ✅ Vivo | 200 |  |
 | Canal 66 | Familia y TV Abierta | MX | ✅ Vivo | 200 |  |
 | Canal 7 Neuquén | Familia y TV Abierta | AR | ✅ Vivo | 200 |  |
-| Canal 99 Miramar | Familia y TV Abierta | AR | ❌ Muerto | - | Cannot connect to host vivo.solumedia.com:19360 ssl:False [getaddrinfo failed] |
+| Canal 99 Miramar | Familia y TV Abierta | AR | ✅ Vivo | 200 |  |
 | Canal Provincial | Familia y TV Abierta | AR | ✅ Vivo | 200 |  |
 | El Trece | Familia y TV Abierta | AR | ✅ Vivo | 200 |  |
 | MVS TV | Familia y TV Abierta | MX | ✅ Vivo | 200 |  |
@@ -252,7 +252,7 @@
 | Pluto TV Klassiske tegnefilmer (720p) | Peliculas - Familiar | SE | ✅ Vivo | 200 |  |
 | Pluto TV Tegnefilm (720p) | Peliculas - Familiar | SE | ❌ Muerto | 404 | HTTP 404 |
 | Pluto TV Ungdomsserier (720p) | Peliculas - Familiar | SE | ✅ Vivo | 200 |  |
-| SvampeBob Firkant (720p) | Peliculas - Familiar | SE | ❌ Muerto | 404 | HTTP 404 |
+| SvampeBob Firkant (720p) | Peliculas - Familiar | SE | ✅ Vivo | 200 |  |
 | Totally Turtles (720p) | Peliculas - Familiar | SE | ✅ Vivo | 200 |  |
 | Disney Channel Latin America North (576p) | Peliculas - Familiar | MX | ✅ Vivo | 200 |  |
 | iCarly | Peliculas - Familiar | SE | ✅ Vivo | 200 |  |
@@ -306,7 +306,7 @@
 | Jersey Shore | Entretenimiento | SE | ✅ Vivo | 200 |  |
 | Jersey Shore Family Vacation | Entretenimiento | SE | ✅ Vivo | 200 |  |
 | Luksusfellen | Entretenimiento | SE | ✅ Vivo | 200 |  |
-| MTV Catfish | Entretenimiento | SE | ✅ Vivo | 200 |  |
+| MTV Catfish | Entretenimiento | SE | ❌ Muerto | 404 | HTTP 404 |
 | MTV Reality | Entretenimiento | SE | ✅ Vivo | 200 |  |
 | NASA TV Public | Entretenimiento | US | ❌ Muerto | - | Cannot connect to host akamaized.net:443 ssl:False [getaddrinfo failed] |
 | NRK 1 (1080i) [Geo-blocked] | Entretenimiento | NO | ❌ Muerto | 403 | HTTP 403 |
@@ -330,7 +330,7 @@
 | WeatherSpy (720p) | Otros | MX | ✅ Vivo | 200 |  |
 | María Visión Mexico (360p) [Not 24/7] | Otros | MX | ✅ Vivo | 200 |  |
 | PSN Canal 45.2 (288p) | Otros | MX | ⚠️ Inestable | 200 | Handshake correcto pero contenido inestable (text/plain; charset=utf-8) |
-| Beavis and Butt-Head | Otros | SE | ❌ Muerto | 500 | HTTP 500 |
+| Beavis and Butt-Head | Otros | SE | ✅ Vivo | 200 |  |
 | Boligkjøp i blinde | Otros | SE | ✅ Vivo | 200 |  |
 | Broad City | Otros | SE | ✅ Vivo | 200 |  |
 | Caroline in the City | Otros | SE | ✅ Vivo | 200 |  |

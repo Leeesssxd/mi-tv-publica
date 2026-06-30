@@ -71,6 +71,16 @@ EXTINF_PATTERN = re.compile(r"^#EXTINF:-?\d+\s*(?P<attrs>.*?),(?P<name>.*)$")
 ATTR_PATTERN = re.compile(r'([a-zA-Z0-9_-]+)="([^"]*)"')
 TVG_ID_COUNTRY_PATTERN = re.compile(r"\.([A-Za-z]{2})(?:$|[@._-])")
 RETRIABLE_STATUS_CODES = {429, 503}
+M3U_HEADER = "#EXTM3U"
+
+
+def detect_payload_kind(text: str) -> str:
+    stripped = (text or "").lstrip("\ufeff").lstrip()
+    if stripped.startswith(M3U_HEADER) or stripped.startswith("#EXTINF"):
+        return "m3u"
+    if stripped.startswith("{") or stripped.startswith("["):
+        return "json"
+    return "text"
 
 
 def load_config(config_path: Path = CONFIG_FILE) -> dict[str, Any]:
@@ -745,11 +755,15 @@ async def fetch_source_to_cache(source_url: str, config: dict[str, Any]) -> Path
                         await asyncio.sleep(backoff_base * (2 ** (attempt - 1)))
                         continue
                     response.raise_for_status()
+                    response_text = await response.text(errors="ignore")
+                    payload_kind = detect_payload_kind(response_text)
                     cache_path = cache_path_for_url(source_url)
                     cache_path.parent.mkdir(parents=True, exist_ok=True)
-                    with cache_path.open("w", encoding="utf-8", errors="ignore") as handle:
-                        async for chunk in response.content.iter_chunked(int(config.get("chunk_size_bytes", 65536))):
-                            handle.write(chunk.decode("utf-8", errors="ignore"))
+                    if payload_kind == "m3u":
+                        cache_path = cache_path.with_suffix(".m3u")
+                    elif payload_kind == "json":
+                        cache_path = cache_path.with_suffix(".json")
+                    cache_path.write_text(response_text, encoding="utf-8")
                     return cache_path
             except asyncio.TimeoutError:
                 if attempt < attempts:
@@ -776,8 +790,21 @@ def file_looks_like_m3u(file_path: Path) -> bool:
             stripped = line.strip()
             if not stripped:
                 continue
-            return stripped.startswith("#EXTM3U") or stripped.startswith("#EXTINF")
+            return detect_payload_kind(stripped) == "m3u"
     return file_path.suffix.lower() == ".m3u"
+
+
+def file_looks_like_text(file_path: Path) -> bool:
+    with file_path.open("r", encoding="utf-8", errors="ignore") as handle:
+        for _ in range(20):
+            line = handle.readline()
+            if not line:
+                break
+            stripped = line.strip()
+            if not stripped:
+                continue
+            return detect_payload_kind(stripped) == "text"
+    return True
 
 
 def extract_text_links_from_file(file_path: Path, chunk_size: int) -> list[str]:
@@ -831,17 +858,21 @@ async def run(
         batch_url = str(source_spec.get("source_url") or "").strip()
         if not batch_url or batch_url == resolved_source_url:
             continue
-        batch_detected, batch_added = await import_single_source(
-            batch_url,
-            sources_path,
-            config,
-            default_group=str(source_spec.get("group") or default_group).strip() or default_group,
-            default_country=str(source_spec.get("country") or default_country).strip(),
-            metadata_url=source_spec.get("metadata_url"),
-            category_filter=source_spec.get("categories") if isinstance(source_spec.get("categories"), list) else None,
-        )
-        total_detected += batch_detected
-        total_added += batch_added
+        try:
+            batch_detected, batch_added = await import_single_source(
+                batch_url,
+                sources_path,
+                config,
+                default_group=str(source_spec.get("group") or default_group).strip() or default_group,
+                default_country=str(source_spec.get("country") or default_country).strip(),
+                metadata_url=source_spec.get("metadata_url"),
+                category_filter=source_spec.get("categories") if isinstance(source_spec.get("categories"), list) else None,
+            )
+            total_detected += batch_detected
+            total_added += batch_added
+        except Exception as exc:  # noqa: BLE001
+            print(f"[WARN] Fuente secundaria omitida por fallo de red o parsing: {batch_url} -> {exc}")
+            continue
 
     merged_channels = _extract_channel_entries(load_sources_payload(sources_path))
 

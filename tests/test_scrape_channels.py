@@ -5,8 +5,12 @@ Cubren la extraccion por regex y el merge en channels.json sin hacer
 peticiones HTTP reales.
 """
 
+import asyncio
+import json
 import sys
 from pathlib import Path
+
+import pytest
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "scripts"))
 
@@ -14,6 +18,7 @@ from scrape_channels import (  # noqa: E402
     DEFAULT_IPTVORG_CHANNELS_URL,
     DEFAULT_SECONDARY_SOURCES,
     DEFAULT_SOURCE_URL,
+    detect_payload_kind,
     ensure_unique_name,
     extract_m3u8_links,
     extract_text_links_from_file,
@@ -29,6 +34,7 @@ from scrape_channels import (  # noqa: E402
     parse_generic_channel_json,
     parse_iptv_org_streams,
     parse_m3u_file,
+    run,
     save_cached_text,
 )
 
@@ -46,6 +52,12 @@ def test_extract_m3u8_links_detecta_y_deduplica_urls():
         "https://example.com/live/main.m3u8",
         "https://cdn.example.org/otro/index.m3u8?token=abc123",
     ]
+
+
+def test_detect_payload_kind_distingue_m3u_json_y_texto():
+    assert detect_payload_kind("#EXTM3U\n#EXTINF:-1,Demo") == "m3u"
+    assert detect_payload_kind('{"channels": []}') == "json"
+    assert detect_payload_kind("https://example.com/live.m3u8") == "text"
 
 
 def test_parse_extinf_line_extrae_atributos():
@@ -488,3 +500,74 @@ def test_default_metadata_url_apunta_a_iptv_org():
 def test_default_secondary_sources_incluyen_mexico_y_noruega():
     assert any(source.get("country") == "MX" for source in DEFAULT_SECONDARY_SOURCES)
     assert any(source.get("country") == "NO" for source in DEFAULT_SECONDARY_SOURCES)
+
+
+def test_run_omite_fuente_secundaria_caida_y_sigue_con_las_demas(tmp_path, monkeypatch, capsys):
+    import scrape_channels
+
+    sources_path = tmp_path / "channels.json"
+    sources_path.write_text(json.dumps({"channels": []}), encoding="utf-8")
+    config_path = tmp_path / "config.json"
+    config_path.write_text(
+        json.dumps(
+            {
+                "secondary_sources": [
+                    {"source_url": "https://bad.example/one.m3u", "group": "Importados", "country": "MX"},
+                    {"source_url": "https://good.example/two.m3u", "group": "Importados", "country": "MX"},
+                ]
+            }
+        ),
+        encoding="utf-8",
+    )
+
+    calls: list[str] = []
+
+    async def fake_import_single_source(
+        source_url,
+        sources_path,
+        config,
+        *,
+        default_group,
+        default_country,
+        metadata_url=None,
+        category_filter=None,
+    ):
+        calls.append(source_url)
+        if "bad.example" in source_url:
+            raise Exception("getaddrinfo failed")
+        payload = json.loads(sources_path.read_text(encoding="utf-8"))
+        payload["channels"].append(
+            {
+                "name": "Canal Bueno",
+                "group": default_group,
+                "country": default_country,
+                "url": "https://good.example/live.m3u8",
+                "logo": "",
+                "tvg_id": "",
+            }
+        )
+        sources_path.write_text(json.dumps(payload), encoding="utf-8")
+        return 1, 1
+
+    monkeypatch.setattr(scrape_channels, "import_single_source", fake_import_single_source)
+
+    added = asyncio.run(
+        run(
+            "https://primary.example/list.m3u",
+            sources_path,
+            config_path,
+            default_group="Base",
+            default_country="MX",
+        )
+    )
+
+    assert added == 2
+    assert calls == [
+        "https://primary.example/list.m3u",
+        "https://bad.example/one.m3u",
+        "https://good.example/two.m3u",
+    ]
+    payload = json.loads(sources_path.read_text(encoding="utf-8"))
+    assert len(payload["channels"]) == 2
+    captured = capsys.readouterr()
+    assert "Fuente secundaria omitida" in captured.out
