@@ -17,12 +17,17 @@ sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "scripts"))
 from build_playlist import (  # noqa: E402
     Channel,
     ChannelStatus,
+    VodStatus,
     build_m3u,
+    build_vod_browser_links,
     build_status_json,
     build_status_markdown,
     build_vod_m3u,
+    build_vod_status_json,
+    build_vod_status_markdown,
     classify_group,
     has_playable_channels,
+    _classify_vod_transport,
     load_channels,
     load_cloud_catalog_items,
     load_config,
@@ -391,6 +396,11 @@ def test_build_vod_m3u_incluye_todos_los_items_sin_revision_http():
     assert "https://vod.example/tv/2/1/1" in m3u
 
 
+def test_classify_vod_transport_detecta_stream_directo_y_web():
+    assert _classify_vod_transport("https://example.com/video.m3u8", 200, "application/vnd.apple.mpegurl") == (True, "direct_media")
+    assert _classify_vod_transport("https://example.com/watch/123", 200, "text/html; charset=utf-8") == (False, "web_page")
+
+
 def test_has_playable_channels_detecta_alive_e_unstable():
     statuses = [
         make_status("Muerto", "Grupo", False),
@@ -419,12 +429,88 @@ def test_write_vod_output_crea_playlist_independiente(tmp_path):
     items = [
         {"name": "Movie One (2024)", "group": "Mi Catálogo Cloud", "url": "https://vod.example/movie/1", "tvg_id": "tt1", "logo": ""}
     ]
+    vod_statuses = [
+        VodStatus(
+            name="Movie One (2024)",
+            group="Mi Catálogo Cloud",
+            url="https://vod.example/movie/1",
+            tvg_id="tt1",
+            playable_in_vlc=True,
+            delivery="direct_media",
+            status_code=200,
+            content_type="application/vnd.apple.mpegurl",
+            error=None,
+        )
+    ]
 
-    write_vod_output(items, public_dir)
+    write_vod_output(items, vod_statuses, public_dir)
 
     vod_playlist = (public_dir / "vod_playlist.m3u").read_text(encoding="utf-8")
     assert "Movie One (2024)" in vod_playlist
     assert "https://vod.example/movie/1" in vod_playlist
+
+
+def test_write_vod_output_separa_items_solo_web(tmp_path):
+    public_dir = tmp_path / "public"
+    items = [
+        {"name": "Movie One (2024)", "group": "Mi Catálogo Cloud", "url": "https://vod.example/watch/1", "tvg_id": "tt1", "logo": ""}
+    ]
+    vod_statuses = [
+        VodStatus(
+            name="Movie One (2024)",
+            group="Mi Catálogo Cloud",
+            url="https://vod.example/watch/1",
+            tvg_id="tt1",
+            playable_in_vlc=False,
+            delivery="web_page",
+            status_code=200,
+            content_type="text/html",
+            error="No es stream directo para VLC",
+        )
+    ]
+
+    write_vod_output(items, vod_statuses, public_dir)
+
+    vod_playlist = (public_dir / "vod_playlist.m3u").read_text(encoding="utf-8")
+    browser_links = (public_dir / "vod_browser_links.txt").read_text(encoding="utf-8")
+    assert vod_playlist.strip() == "#EXTM3U"
+    assert "Movie One (2024)" in browser_links
+
+
+def test_build_vod_status_outputs_resumen_y_detalle():
+    statuses = [
+        VodStatus(
+            name="Movie One (2024)",
+            group="Mi Catálogo Cloud",
+            url="https://vod.example/movie/1",
+            tvg_id="tt1",
+            playable_in_vlc=True,
+            delivery="direct_media",
+            status_code=200,
+            content_type="application/vnd.apple.mpegurl",
+            error=None,
+        ),
+        VodStatus(
+            name="Series One (2024)",
+            group="Mi Catálogo Cloud",
+            url="https://vod.example/watch/2",
+            tvg_id="tt2",
+            playable_in_vlc=False,
+            delivery="web_page",
+            status_code=200,
+            content_type="text/html",
+            error="No es stream directo para VLC",
+        ),
+    ]
+
+    payload = json.loads(build_vod_status_json(statuses))
+    markdown = build_vod_status_markdown(statuses)
+    browser_links = build_vod_browser_links(statuses)
+
+    assert payload["playable_in_vlc"] == 1
+    assert payload["browser_only"] == 1
+    assert "Compatibles con VLC" in markdown
+    assert "Series One (2024)" in browser_links
 
 
 # ---------------------------------------------------------------------------

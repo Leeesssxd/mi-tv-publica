@@ -27,6 +27,7 @@ from dataclasses import asdict, dataclass, field, replace
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
+from urllib.parse import urlparse
 
 import aiohttp
 
@@ -58,6 +59,9 @@ SOURCES_FILE = ROOT_DIR / "sources" / "channels.json"
 PUBLIC_DIR = ROOT_DIR / "public"
 CONFIG_FILE = ROOT_DIR / "config.json"
 VOD_PLAYLIST_FILE = PUBLIC_DIR / "vod_playlist.m3u"
+VOD_STATUS_FILE = PUBLIC_DIR / "vod_status.json"
+VOD_STATUS_MD_FILE = PUBLIC_DIR / "vod_status.md"
+VOD_WEB_LINKS_FILE = PUBLIC_DIR / "vod_browser_links.txt"
 
 PLAYABLE_CONTENT_HINTS = (
     "mpegurl",
@@ -66,6 +70,7 @@ PLAYABLE_CONTENT_HINTS = (
     "octet-stream",
     "mp2t",
 )
+DIRECT_VOD_EXTENSIONS = (".m3u8", ".mp4", ".m4v", ".mpd", ".ts", ".webm", ".aac", ".mp3")
 
 RETRIABLE_STATUS_CODES = {429, 503}
 QUALITY_PATTERN = re.compile(r"(\d{3,4})p", re.IGNORECASE)
@@ -364,6 +369,25 @@ class ChannelStatus:
         return asdict(self)
 
 
+@dataclass
+class VodStatus:
+    name: str
+    group: str
+    url: str
+    tvg_id: str
+    playable_in_vlc: bool
+    delivery: str
+    status_code: int | None
+    content_type: str
+    error: str | None
+    checked_at: str = field(
+        default_factory=lambda: datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+    )
+
+    def to_dict(self) -> dict[str, Any]:
+        return asdict(self)
+
+
 def load_config(config_path: Path = CONFIG_FILE) -> dict[str, Any]:
     config = dict(DEFAULT_CONFIG)
     if config_path.exists():
@@ -474,6 +498,25 @@ def _looks_playable(content_type: str) -> bool:
     if not content_type:
         return True
     return any(hint in content_type for hint in PLAYABLE_CONTENT_HINTS)
+
+
+def _looks_like_direct_media_url(url: str) -> bool:
+    parsed = urlparse(url)
+    path = parsed.path.casefold()
+    return any(path.endswith(extension) for extension in DIRECT_VOD_EXTENSIONS)
+
+
+def _classify_vod_transport(url: str, status_code: int | None, content_type: str) -> tuple[bool, str]:
+    lowered_content_type = (content_type or "").casefold()
+    if status_code is not None and not (200 <= status_code < 400):
+        return False, "error"
+    if _looks_like_direct_media_url(url) or _looks_playable(lowered_content_type):
+        return True, "direct_media"
+    if "text/html" in lowered_content_type:
+        return False, "web_page"
+    if lowered_content_type:
+        return False, "unknown"
+    return False, "unknown"
 
 
 async def _sleep_with_jitter(config: dict[str, Any]) -> None:
@@ -617,6 +660,132 @@ async def check_all_channels(
         return await asyncio.gather(*tasks)
 
 
+async def _request_vod_item(
+    session: aiohttp.ClientSession,
+    item: dict[str, Any],
+    config: dict[str, Any],
+) -> VodStatus:
+    name = str(item.get("name") or "Sin nombre").strip() or "Sin nombre"
+    url = str(item.get("url") or "").strip()
+    tvg_id = str(item.get("tvg_id") or "").strip()
+    group = str(item.get("group") or "Mi Catálogo Cloud").strip() or "Mi Catálogo Cloud"
+
+    if not url:
+        return VodStatus(
+            name=name,
+            group=group,
+            url=url,
+            tvg_id=tvg_id,
+            playable_in_vlc=False,
+            delivery="error",
+            status_code=None,
+            content_type="",
+            error="URL vacia",
+        )
+
+    attempts = int(config.get("retry_attempts", 3))
+    backoff_base = float(config.get("retry_backoff_base_seconds", 1.0))
+
+    for attempt in range(1, attempts + 1):
+        await _sleep_with_jitter(config)
+        try:
+            async with session.get(url, allow_redirects=True, ssl=False) as response:
+                content_type = response.headers.get("Content-Type", "")
+                if response.status in RETRIABLE_STATUS_CODES and attempt < attempts:
+                    await asyncio.sleep(backoff_base * (2 ** (attempt - 1)))
+                    continue
+                playable, delivery = _classify_vod_transport(url, response.status, content_type)
+                error = None if playable else f"No es stream directo para VLC ({content_type or 'sin content-type'})"
+                return VodStatus(
+                    name=name,
+                    group=group,
+                    url=url,
+                    tvg_id=tvg_id,
+                    playable_in_vlc=playable,
+                    delivery=delivery,
+                    status_code=response.status,
+                    content_type=content_type,
+                    error=error,
+                )
+        except asyncio.TimeoutError:
+            if attempt < attempts:
+                await asyncio.sleep(backoff_base * (2 ** (attempt - 1)))
+                continue
+            return VodStatus(
+                name=name,
+                group=group,
+                url=url,
+                tvg_id=tvg_id,
+                playable_in_vlc=False,
+                delivery="error",
+                status_code=None,
+                content_type="",
+                error="Timeout",
+            )
+        except aiohttp.ClientError as exc:
+            if attempt < attempts:
+                await asyncio.sleep(backoff_base * (2 ** (attempt - 1)))
+                continue
+            return VodStatus(
+                name=name,
+                group=group,
+                url=url,
+                tvg_id=tvg_id,
+                playable_in_vlc=False,
+                delivery="error",
+                status_code=None,
+                content_type="",
+                error=str(exc),
+            )
+        except Exception as exc:  # noqa: BLE001
+            return VodStatus(
+                name=name,
+                group=group,
+                url=url,
+                tvg_id=tvg_id,
+                playable_in_vlc=False,
+                delivery="error",
+                status_code=None,
+                content_type="",
+                error=f"Error inesperado: {exc}",
+            )
+
+    return VodStatus(
+        name=name,
+        group=group,
+        url=url,
+        tvg_id=tvg_id,
+        playable_in_vlc=False,
+        delivery="error",
+        status_code=None,
+        content_type="",
+        error="Agotado tras reintentos",
+    )
+
+
+async def check_vod_item(
+    session: aiohttp.ClientSession,
+    item: dict[str, Any],
+    semaphore: asyncio.Semaphore,
+    config: dict[str, Any],
+) -> VodStatus:
+    async with semaphore:
+        return await _request_vod_item(session, item, config)
+
+
+async def check_all_vod_items(items: list[dict[str, Any]], config: dict[str, Any]) -> list[VodStatus]:
+    if not items:
+        return []
+
+    timeout = aiohttp.ClientTimeout(total=float(config["timeout_seconds"]))
+    headers = _build_headers(config)
+    semaphore = asyncio.Semaphore(int(config["max_concurrency"]))
+
+    async with aiohttp.ClientSession(timeout=timeout, headers=headers) as session:
+        tasks = [check_vod_item(session, item, semaphore, config) for item in items]
+        return await asyncio.gather(*tasks)
+
+
 def _normalize_name(value: str) -> str:
     return " ".join((value or "").casefold().split())
 
@@ -753,6 +922,52 @@ def build_vod_m3u(items: list[dict[str, Any]]) -> str:
     return "\n".join(lines) + "\n"
 
 
+def build_vod_status_json(statuses: list[VodStatus]) -> str:
+    payload = {
+        "generated_at": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
+        "total": len(statuses),
+        "playable_in_vlc": sum(1 for status in statuses if status.playable_in_vlc),
+        "browser_only": sum(1 for status in statuses if status.delivery == "web_page"),
+        "other": sum(1 for status in statuses if status.delivery not in {"direct_media", "web_page"}),
+        "items": [status.to_dict() for status in statuses],
+    }
+    return json.dumps(payload, indent=2, ensure_ascii=False) + "\n"
+
+
+def build_vod_status_markdown(statuses: list[VodStatus]) -> str:
+    now = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+    playable = sum(1 for status in statuses if status.playable_in_vlc)
+    browser_only = sum(1 for status in statuses if status.delivery == "web_page")
+    other = sum(1 for status in statuses if status.delivery not in {"direct_media", "web_page"})
+
+    lines = [
+        "# Estado VOD",
+        "",
+        f"Última revisión UTC: `{now}`",
+        "",
+        f"- Items totales: **{len(statuses)}**",
+        f"- Compatibles con VLC: **{playable}**",
+        f"- Solo navegador: **{browser_only}**",
+        f"- Otros/errores: **{other}**",
+        "",
+        "| Título | Entrega | Código | Content-Type | Error |",
+        "|---|---|---|---|---|",
+    ]
+    for status in statuses:
+        lines.append(
+            f"| {status.name} | {status.delivery} | {status.status_code if status.status_code is not None else '-'} | {status.content_type or '-'} | {status.error or ''} |"
+        )
+    return "\n".join(lines) + "\n"
+
+
+def build_vod_browser_links(statuses: list[VodStatus]) -> str:
+    lines: list[str] = []
+    for status in statuses:
+        if status.delivery == "web_page":
+            lines.append(f"{status.name}\t{status.url}")
+    return "\n".join(lines) + ("\n" if lines else "")
+
+
 def has_playable_channels(statuses: list[ChannelStatus]) -> bool:
     return any(status.state in {"alive", "unstable"} for status in statuses)
 
@@ -824,9 +1039,19 @@ def write_outputs(statuses: list[ChannelStatus], public_dir: Path = PUBLIC_DIR) 
     return fallback_used
 
 
-def write_vod_output(items: list[dict[str, Any]], public_dir: Path = PUBLIC_DIR) -> None:
+def write_vod_output(
+    items: list[dict[str, Any]],
+    vod_statuses: list[VodStatus] | None = None,
+    public_dir: Path = PUBLIC_DIR,
+) -> None:
     public_dir.mkdir(parents=True, exist_ok=True)
-    (public_dir / "vod_playlist.m3u").write_text(build_vod_m3u(items), encoding="utf-8")
+    statuses = vod_statuses or []
+    playable_urls = {status.url for status in statuses if status.playable_in_vlc}
+    filtered_items = [item for item in items if str(item.get("url") or "").strip() in playable_urls]
+    (public_dir / "vod_playlist.m3u").write_text(build_vod_m3u(filtered_items), encoding="utf-8")
+    (public_dir / "vod_status.json").write_text(build_vod_status_json(statuses), encoding="utf-8")
+    (public_dir / "vod_status.md").write_text(build_vod_status_markdown(statuses), encoding="utf-8")
+    (public_dir / "vod_browser_links.txt").write_text(build_vod_browser_links(statuses), encoding="utf-8")
 
 
 def print_summary(statuses: list[ChannelStatus]) -> None:
@@ -851,6 +1076,7 @@ async def run(sources_path: Path, public_dir: Path, config_path: Path) -> list[C
     config = load_config(config_path)
     channels = load_channels(sources_path)
     cloud_catalog_items = load_cloud_catalog_items(sources_path)
+    vod_statuses = await check_all_vod_items(cloud_catalog_items, config)
 
     if not channels:
         print("[WARN] No hay canales validos en sources/channels.json")
@@ -866,7 +1092,7 @@ async def run(sources_path: Path, public_dir: Path, config_path: Path) -> list[C
         )
 
     fallback_used = write_outputs(statuses, public_dir)
-    write_vod_output(cloud_catalog_items, public_dir)
+    write_vod_output(cloud_catalog_items, vod_statuses, public_dir)
     if fallback_used:
         print("[WARN] Se conservo la ultima playlist valida por una caida masiva del upstream.")
     print_summary(statuses)

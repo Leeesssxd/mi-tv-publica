@@ -1,11 +1,11 @@
 # Estado de canales
 
-Última revisión UTC: `2026-06-30T11:25:46Z`
+Última revisión UTC: `2026-06-30T11:35:21Z`
 
 - Canales totales: **228**
-- Canales vivos: **173**
+- Canales vivos: **172**
 - Canales inestables: **6**
-- Canales muertos: **49**
+- Canales muertos: **50**
 
 | Canal | Grupo | País | Estado | Código | Error |
 |---|---|---|---|---|---|
@@ -113,7 +113,7 @@
 | Canal 44 Ciudad Juárez (720p) [Not 24/7] | Familia y TV Abierta | MX | ✅ Vivo | 200 |  |
 | Imagen TV+ (720p) | Familia y TV Abierta | MX | ✅ Vivo | 200 |  |
 | IMRyT Morelos TV (720p) | Familia y TV Abierta | MX | ❌ Muerto | 404 | HTTP 404 |
-| Ingenio TV (720p) | Familia y TV Abierta | MX | ❌ Muerto | - | Cannot connect to host aprende-usea.streaming.media.azure.net:443 ssl:False [getaddrinfo failed] |
+| Ingenio TV (720p) | Familia y TV Abierta | MX | ❌ Muerto | - | Timeout |
 | Jalisco TV (720p) | Familia y TV Abierta | MX | ✅ Vivo | 200 |  |
 | Lobo TV (720p) | Familia y TV Abierta | MX | ✅ Vivo | 200 |  |
 | Mexiquense TV (720p) | Familia y TV Abierta | MX | ✅ Vivo | 200 |  |
@@ -195,7 +195,7 @@
 | Estrella Games (1080p) | Peliculas - Familiar | MX | ✅ Vivo | 200 |  |
 | Nick Jr. Latin America (1080p) | Peliculas - Familiar | MX | ✅ Vivo | 200 |  |
 | Disney Channel Latin America Mexico (720p) | Peliculas - Familiar | MX | ✅ Vivo | 200 |  |
-| El Chavo TV (720p) | Peliculas - Familiar | MX | ✅ Vivo | 200 |  |
+| El Chavo TV (720p) | Peliculas - Familiar | MX | ❌ Muerto | 502 | HTTP 502 |
 | Disney Channel Latin America North (576p) | Peliculas - Familiar | MX | ✅ Vivo | 200 |  |
 | TUDN (1080p) | Deportes | MX | ✅ Vivo | 200 |  |
 | TV Cuatro 4.3 (1080p) | Deportes | MX | ✅ Vivo | 200 |  |
