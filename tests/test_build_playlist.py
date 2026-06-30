@@ -47,6 +47,7 @@ def make_status(name: str, group: str, alive: bool, **kwargs) -> ChannelStatus:
     defaults = dict(
         country="MX",
         url=f"https://example.com/{name.lower().replace(' ', '-')}.m3u8",
+        backup_urls=[],
         logo="",
         tvg_id="",
         status_code=200 if alive else 404,
@@ -253,6 +254,32 @@ def test_select_curated_statuses_respeta_cupos_y_rellena_hasta_objetivo():
     assert any(status.group == "Peliculas - Cine" for status in selected)
 
 
+def test_select_curated_statuses_conserva_prioritarios_antes_del_recorte():
+    statuses = [
+        make_status("Azteca Uno", "Familia y TV Abierta", True),
+        make_status("Azteca 7", "Familia y TV Abierta", True),
+        make_status("Canal 5 (1080p)", "Familia y TV Abierta", True),
+        make_status("Las Estrellas HD", "Familia y TV Abierta", True),
+        make_status("TUDN (1080p)", "Deportes", True),
+        make_status("Otro 1", "Otros", True),
+        make_status("Otro 2", "Otros", True),
+    ]
+
+    selected = select_curated_statuses(
+        statuses,
+        target_size=4,
+        group_quotas={"Familia y TV Abierta": 1, "Deportes": 1, "Otros": 1},
+        priority_channels=["Azteca Uno", "Canal 5", "Las Estrellas", "TUDN"],
+    )
+
+    assert [status.name for status in selected] == [
+        "Azteca Uno",
+        "Canal 5 (1080p)",
+        "Las Estrellas HD",
+        "TUDN (1080p)",
+    ]
+
+
 def test_load_config_conserva_custom_routing_rules_si_es_dict(tmp_path):
     config_file = tmp_path / "config.json"
     config_file.write_text(
@@ -331,6 +358,26 @@ def test_sort_statuses_prioriza_canales_configurados_y_mejor_calidad():
     ]
 
 
+def test_sort_statuses_prefiere_vivos_y_mx_entre_empates():
+    statuses = [
+        make_status("Canal 5 (1080p)", "Familia y TV Abierta", False, state="unstable", status_code=200, error="Handshake correcto"),
+        make_status("Canal 5 (1080p)", "Familia y TV Abierta", True, country="ALL"),
+        make_status("Canal 5 (1080p)", "Familia y TV Abierta", True, country="MX"),
+    ]
+
+    ordered = sort_statuses(
+        statuses,
+        ["group", "name"],
+        priority_channels=["Canal 5"],
+    )
+
+    assert [(status.country, status.state) for status in ordered] == [
+        ("MX", "alive"),
+        ("ALL", "alive"),
+        ("MX", "unstable"),
+    ]
+
+
 def test_classify_group_ubica_canales_en_secciones_usuario():
     assert classify_group("Azteca Uno", "General") == "Familia y TV Abierta"
     assert classify_group("Milenio Televisión (720p)", "News") == "Noticias"
@@ -371,6 +418,7 @@ def test_classify_group_reconoce_aliases_extra_de_usuario():
     assert classify_group("Once México (1080p)", "Entertainment") == "Familia y TV Abierta"
     assert classify_group("Multimedios Monterrey (720p)", "Entertainment") == "Noticias"
     assert classify_group("Golden (240p)", "Entertainment") == "Peliculas - Cine"
+    assert classify_group("DSPORTPLUS", "Entertainment") == "Deportes"
 
 
 def test_classify_group_reconoce_mas_tv_publica_regional():
@@ -404,6 +452,23 @@ def test_build_m3u_tambien_incluye_canales_inestables():
     m3u = build_m3u(statuses)
     assert "Inestable" in m3u
     assert "Muerto" not in m3u
+
+
+def test_build_m3u_expone_urls_de_respaldo_como_entradas_visibles():
+    statuses = [
+        make_status(
+            "Canal 5 (1080p)",
+            "Familia y TV Abierta",
+            True,
+            url="https://example.com/main.m3u8",
+            backup_urls=["https://example.com/backup.m3u8"],
+        )
+    ]
+
+    m3u = build_m3u(statuses)
+
+    assert "Canal 5 (1080p) [Respaldo 1]" in m3u
+    assert "https://example.com/backup.m3u8" in m3u
 
 
 def test_build_m3u_es_valido_y_tiene_extinf_y_url():

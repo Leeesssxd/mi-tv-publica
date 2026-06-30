@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-30T19:20:50Z",
+  "generated_at": "2026-06-30T22:28:37Z",
   "total": 50,
   "playable_in_vlc": 0,
   "browser_only": 50,
@@ -15,7 +15,7 @@
       "status_code": 200,
       "content_type": "text/html; charset=utf-8",
       "error": "No es stream directo para VLC (text/html; charset=utf-8)",
-      "checked_at": "2026-06-30T19:18:55Z"
+      "checked_at": "2026-06-30T22:26:43Z"
     },
     {
       "name": "House of the Dragon (2022)",
@@ -27,7 +27,7 @@
       "status_code": 200,
       "content_type": "text/html; charset=utf-8",
       "error": "No es stream directo para VLC (text/html; charset=utf-8)",
-      "checked_at": "2026-06-30T19:18:55Z"
+      "checked_at": "2026-06-30T22:26:44Z"
     },
     {
       "name": "The Last of Us (2023)",
@@ -39,7 +39,7 @@
       "status_code": 200,
       "content_type": "text/html; charset=utf-8",
       "error": "No es stream directo para VLC (text/html; charset=utf-8)",
-      "checked_at": "2026-06-30T19:18:55Z"
+      "checked_at": "2026-06-30T22:26:44Z"
     },
     {
       "name": "Andor (2022)",
@@ -51,7 +51,7 @@
       "status_code": 200,
       "content_type": "text/html; charset=utf-8",
       "error": "No es stream directo para VLC (text/html; charset=utf-8)",
-      "checked_at": "2026-06-30T19:18:56Z"
+      "checked_at": "2026-06-30T22:26:44Z"
     },
     {
       "name": "Severance (2022)",
@@ -63,7 +63,7 @@
       "status_code": 200,
       "content_type": "text/html; charset=utf-8",
       "error": "No es stream directo para VLC (text/html; charset=utf-8)",
-      "checked_at": "2026-06-30T19:18:55Z"
+      "checked_at": "2026-06-30T22:26:44Z"
     },
     {
       "name": "Fallout (2024)",
@@ -75,7 +75,7 @@
       "status_code": 200,
       "content_type": "text/html; charset=utf-8",
       "error": "No es stream directo para VLC (text/html; charset=utf-8)",
-      "checked_at": "2026-06-30T19:18:56Z"
+      "checked_at": "2026-06-30T22:26:45Z"
     },
     {
       "name": "Shogun (2024)",
@@ -87,7 +87,7 @@
       "status_code": 200,
       "content_type": "text/html; charset=utf-8",
       "error": "No es stream directo para VLC (text/html; charset=utf-8)",
-      "checked_at": "2026-06-30T19:18:56Z"
+      "checked_at": "2026-06-30T22:26:45Z"
     },
     {
       "name": "The White Lotus (2021)",
@@ -99,7 +99,7 @@
       "status_code": 200,
       "content_type": "text/html; charset=utf-8",
       "error": "No es stream directo para VLC (text/html; charset=utf-8)",
-      "checked_at": "2026-06-30T19:18:56Z"
+      "checked_at": "2026-06-30T22:26:45Z"
     },
     {
       "name": "The Boys (2019)",
@@ -111,7 +111,7 @@
       "status_code": 200,
       "content_type": "text/html; charset=utf-8",
       "error": "No es stream directo para VLC (text/html; charset=utf-8)",
-      "checked_at": "2026-06-30T19:18:57Z"
+      "checked_at": "2026-06-30T22:26:45Z"
     },
     {
       "name": "Bridgerton (2020)",
@@ -123,7 +123,7 @@
       "status_code": 200,
       "content_type": "text/html; charset=utf-8",
       "error": "No es stream directo para VLC (text/html; charset=utf-8)",
-      "checked_at": "2026-06-30T19:18:57Z"
+      "checked_at": "2026-06-30T22:26:46Z"
     },
     {
       "name": "Wednesday (2022)",
@@ -135,7 +135,7 @@
       "status_code": 200,
       "content_type": "text/html; charset=utf-8",
       "error": "No es stream directo para VLC (text/html; charset=utf-8)",
-      "checked_at": "2026-06-30T19:18:57Z"
+      "checked_at": "2026-06-30T22:26:46Z"
     },
     {
       "name": "True Detective (2014)",
@@ -147,7 +147,7 @@
       "status_code": 200,
       "content_type": "text/html; charset=utf-8",
       "error": "No es stream directo para VLC (text/html; charset=utf-8)",
-      "checked_at": "2026-06-30T19:18:57Z"
+      "checked_at": "2026-06-30T22:26:46Z"
     },
     {
       "name": "The Gentlemen (2024)",
@@ -159,7 +159,7 @@
       "status_code": 200,
       "content_type": "text/html; charset=utf-8",
       "error": "No es stream directo para VLC (text/html; charset=utf-8)",
-      "checked_at": "2026-06-30T19:18:58Z"
+      "checked_at": "2026-06-30T22:26:46Z"
     },
     {
       "name": "Ripley (2024)",
@@ -171,7 +171,7 @@
       "status_code": 200,
       "content_type": "text/html; charset=utf-8",
       "error": "No es stream directo para VLC (text/html; charset=utf-8)",
-      "checked_at": "2026-06-30T19:18:58Z"
+      "checked_at": "2026-06-30T22:26:46Z"
     },
     {
       "name": "3 Body Problem (2024)",
@@ -183,7 +183,7 @@
       "status_code": 200,
       "content_type": "text/html; charset=utf-8",
       "error": "No es stream directo para VLC (text/html; charset=utf-8)",
-      "checked_at": "2026-06-30T19:18:59Z"
+      "checked_at": "2026-06-30T22:26:47Z"
     },
     {
       "name": "Presumed Innocent (2024)",
@@ -195,7 +195,7 @@
       "status_code": 200,
       "content_type": "text/html; charset=utf-8",
       "error": "No es stream directo para VLC (text/html; charset=utf-8)",
-      "checked_at": "2026-06-30T19:18:58Z"
+      "checked_at": "2026-06-30T22:26:48Z"
     },
     {
       "name": "The Penguin (2024)",
@@ -207,7 +207,7 @@
       "status_code": 200,
       "content_type": "text/html; charset=utf-8",
       "error": "No es stream directo para VLC (text/html; charset=utf-8)",
-      "checked_at": "2026-06-30T19:18:58Z"
+      "checked_at": "2026-06-30T22:26:47Z"
     },
     {
       "name": "Nobody Wants This (2024)",
@@ -219,7 +219,7 @@
       "status_code": 200,
       "content_type": "text/html; charset=utf-8",
       "error": "No es stream directo para VLC (text/html; charset=utf-8)",
-      "checked_at": "2026-06-30T19:18:59Z"
+      "checked_at": "2026-06-30T22:26:48Z"
     },
     {
       "name": "The Substance (2024)",
@@ -231,7 +231,7 @@
       "status_code": 200,
       "content_type": "text/html; charset=utf-8",
       "error": "No es stream directo para VLC (text/html; charset=utf-8)",
-      "checked_at": "2026-06-30T19:18:59Z"
+      "checked_at": "2026-06-30T22:26:48Z"
     },
     {
       "name": "Dune: Part Two (2024)",
@@ -243,7 +243,7 @@
       "status_code": 200,
       "content_type": "text/html; charset=utf-8",
       "error": "No es stream directo para VLC (text/html; charset=utf-8)",
-      "checked_at": "2026-06-30T19:19:00Z"
+      "checked_at": "2026-06-30T22:26:48Z"
     },
     {
       "name": "Inside Out 2 (2024)",
@@ -255,7 +255,7 @@
       "status_code": 200,
       "content_type": "text/html; charset=utf-8",
       "error": "No es stream directo para VLC (text/html; charset=utf-8)",
-      "checked_at": "2026-06-30T19:18:59Z"
+      "checked_at": "2026-06-30T22:26:49Z"
     },
     {
       "name": "Civil War (2024)",
@@ -267,7 +267,7 @@
       "status_code": 200,
       "content_type": "text/html; charset=utf-8",
       "error": "No es stream directo para VLC (text/html; charset=utf-8)",
-      "checked_at": "2026-06-30T19:19:00Z"
+      "checked_at": "2026-06-30T22:26:49Z"
     },
     {
       "name": "Furiosa: A Mad Max Saga (2024)",
@@ -279,7 +279,7 @@
       "status_code": 200,
       "content_type": "text/html; charset=utf-8",
       "error": "No es stream directo para VLC (text/html; charset=utf-8)",
-      "checked_at": "2026-06-30T19:19:00Z"
+      "checked_at": "2026-06-30T22:26:49Z"
     },
     {
       "name": "Kingdom of the Planet of the Apes (2024)",
@@ -291,7 +291,7 @@
       "status_code": 200,
       "content_type": "text/html; charset=utf-8",
       "error": "No es stream directo para VLC (text/html; charset=utf-8)",
-      "checked_at": "2026-06-30T19:19:01Z"
+      "checked_at": "2026-06-30T22:26:49Z"
     },
     {
       "name": "Deadpool & Wolverine (2024)",
@@ -303,7 +303,7 @@
       "status_code": 200,
       "content_type": "text/html; charset=utf-8",
       "error": "No es stream directo para VLC (text/html; charset=utf-8)",
-      "checked_at": "2026-06-30T19:19:01Z"
+      "checked_at": "2026-06-30T22:26:49Z"
     },
     {
       "name": "Twisters (2024)",
@@ -315,7 +315,7 @@
       "status_code": 200,
       "content_type": "text/html; charset=utf-8",
       "error": "No es stream directo para VLC (text/html; charset=utf-8)",
-      "checked_at": "2026-06-30T19:19:01Z"
+      "checked_at": "2026-06-30T22:26:50Z"
     },
     {
       "name": "Beetlejuice Beetlejuice (2024)",
@@ -327,7 +327,7 @@
       "status_code": 200,
       "content_type": "text/html; charset=utf-8",
       "error": "No es stream directo para VLC (text/html; charset=utf-8)",
-      "checked_at": "2026-06-30T19:19:00Z"
+      "checked_at": "2026-06-30T22:26:51Z"
     },
     {
       "name": "Alien: Romulus (2024)",
@@ -339,7 +339,7 @@
       "status_code": 200,
       "content_type": "text/html; charset=utf-8",
       "error": "No es stream directo para VLC (text/html; charset=utf-8)",
-      "checked_at": "2026-06-30T19:19:02Z"
+      "checked_at": "2026-06-30T22:26:50Z"
     },
     {
       "name": "The Wild Robot (2024)",
@@ -351,7 +351,7 @@
       "status_code": 200,
       "content_type": "text/html; charset=utf-8",
       "error": "No es stream directo para VLC (text/html; charset=utf-8)",
-      "checked_at": "2026-06-30T19:19:01Z"
+      "checked_at": "2026-06-30T22:26:50Z"
     },
     {
       "name": "Flow (2024)",
@@ -363,7 +363,7 @@
       "status_code": 200,
       "content_type": "text/html; charset=utf-8",
       "error": "No es stream directo para VLC (text/html; charset=utf-8)",
-      "checked_at": "2026-06-30T19:19:02Z"
+      "checked_at": "2026-06-30T22:26:50Z"
     },
     {
       "name": "Anora (2024)",
@@ -375,7 +375,7 @@
       "status_code": 200,
       "content_type": "text/html; charset=utf-8",
       "error": "No es stream directo para VLC (text/html; charset=utf-8)",
-      "checked_at": "2026-06-30T19:19:02Z"
+      "checked_at": "2026-06-30T22:26:51Z"
     },
     {
       "name": "Challengers (2024)",
@@ -387,7 +387,7 @@
       "status_code": 200,
       "content_type": "text/html; charset=utf-8",
       "error": "No es stream directo para VLC (text/html; charset=utf-8)",
-      "checked_at": "2026-06-30T19:19:02Z"
+      "checked_at": "2026-06-30T22:26:51Z"
     },
     {
       "name": "The Fall Guy (2024)",
@@ -399,7 +399,7 @@
       "status_code": 200,
       "content_type": "text/html; charset=utf-8",
       "error": "No es stream directo para VLC (text/html; charset=utf-8)",
-      "checked_at": "2026-06-30T19:19:02Z"
+      "checked_at": "2026-06-30T22:26:51Z"
     },
     {
       "name": "A Quiet Place: Day One (2024)",
@@ -411,7 +411,7 @@
       "status_code": 200,
       "content_type": "text/html; charset=utf-8",
       "error": "No es stream directo para VLC (text/html; charset=utf-8)",
-      "checked_at": "2026-06-30T19:19:03Z"
+      "checked_at": "2026-06-30T22:26:52Z"
     },
     {
       "name": "Longlegs (2024)",
@@ -423,7 +423,7 @@
       "status_code": 200,
       "content_type": "text/html; charset=utf-8",
       "error": "No es stream directo para VLC (text/html; charset=utf-8)",
-      "checked_at": "2026-06-30T19:19:03Z"
+      "checked_at": "2026-06-30T22:26:52Z"
     },
     {
       "name": "Gladiator II (2024)",
@@ -435,7 +435,7 @@
       "status_code": 200,
       "content_type": "text/html; charset=utf-8",
       "error": "No es stream directo para VLC (text/html; charset=utf-8)",
-      "checked_at": "2026-06-30T19:19:03Z"
+      "checked_at": "2026-06-30T22:26:53Z"
     },
     {
       "name": "Wicked (2024)",
@@ -447,7 +447,7 @@
       "status_code": 200,
       "content_type": "text/html; charset=utf-8",
       "error": "No es stream directo para VLC (text/html; charset=utf-8)",
-      "checked_at": "2026-06-30T19:19:03Z"
+      "checked_at": "2026-06-30T22:26:52Z"
     },
     {
       "name": "Moana 2 (2024)",
@@ -459,7 +459,7 @@
       "status_code": 200,
       "content_type": "text/html; charset=utf-8",
       "error": "No es stream directo para VLC (text/html; charset=utf-8)",
-      "checked_at": "2026-06-30T19:19:04Z"
+      "checked_at": "2026-06-30T22:26:53Z"
     },
     {
       "name": "Sonic the Hedgehog 3 (2024)",
@@ -471,7 +471,7 @@
       "status_code": 200,
       "content_type": "text/html; charset=utf-8",
       "error": "No es stream directo para VLC (text/html; charset=utf-8)",
-      "checked_at": "2026-06-30T19:19:04Z"
+      "checked_at": "2026-06-30T22:26:53Z"
     },
     {
       "name": "Mickey 17 (2025)",
@@ -483,7 +483,7 @@
       "status_code": 200,
       "content_type": "text/html; charset=utf-8",
       "error": "No es stream directo para VLC (text/html; charset=utf-8)",
-      "checked_at": "2026-06-30T19:19:05Z"
+      "checked_at": "2026-06-30T22:26:53Z"
     },
     {
       "name": "Superman (2025)",
@@ -495,7 +495,7 @@
       "status_code": 200,
       "content_type": "text/html; charset=utf-8",
       "error": "No es stream directo para VLC (text/html; charset=utf-8)",
-      "checked_at": "2026-06-30T19:19:04Z"
+      "checked_at": "2026-06-30T22:26:54Z"
     },
     {
       "name": "The Fantastic Four: First Steps (2025)",
@@ -507,7 +507,7 @@
       "status_code": 200,
       "content_type": "text/html; charset=utf-8",
       "error": "No es stream directo para VLC (text/html; charset=utf-8)",
-      "checked_at": "2026-06-30T19:19:05Z"
+      "checked_at": "2026-06-30T22:26:54Z"
     },
     {
       "name": "Mission: Impossible - The Final Reckoning (2025)",
@@ -519,7 +519,7 @@
       "status_code": 200,
       "content_type": "text/html; charset=utf-8",
       "error": "No es stream directo para VLC (text/html; charset=utf-8)",
-      "checked_at": "2026-06-30T19:19:04Z"
+      "checked_at": "2026-06-30T22:26:54Z"
     },
     {
       "name": "Elio (2025)",
@@ -531,7 +531,7 @@
       "status_code": 200,
       "content_type": "text/html; charset=utf-8",
       "error": "No es stream directo para VLC (text/html; charset=utf-8)",
-      "checked_at": "2026-06-30T19:19:05Z"
+      "checked_at": "2026-06-30T22:26:54Z"
     },
     {
       "name": "Jurassic World Rebirth (2025)",
@@ -543,7 +543,7 @@
       "status_code": 200,
       "content_type": "text/html; charset=utf-8",
       "error": "No es stream directo para VLC (text/html; charset=utf-8)",
-      "checked_at": "2026-06-30T19:19:05Z"
+      "checked_at": "2026-06-30T22:26:54Z"
     },
     {
       "name": "Captain America: Brave New World (2025)",
@@ -555,7 +555,7 @@
       "status_code": 200,
       "content_type": "text/html; charset=utf-8",
       "error": "No es stream directo para VLC (text/html; charset=utf-8)",
-      "checked_at": "2026-06-30T19:19:05Z"
+      "checked_at": "2026-06-30T22:26:55Z"
     },
     {
       "name": "Thunderbolts* (2025)",
@@ -567,7 +567,7 @@
       "status_code": 200,
       "content_type": "text/html; charset=utf-8",
       "error": "No es stream directo para VLC (text/html; charset=utf-8)",
-      "checked_at": "2026-06-30T19:19:06Z"
+      "checked_at": "2026-06-30T22:26:56Z"
     },
     {
       "name": "Avatar: Fire and Ash (2025)",
@@ -579,7 +579,7 @@
       "status_code": 200,
       "content_type": "text/html; charset=utf-8",
       "error": "No es stream directo para VLC (text/html; charset=utf-8)",
-      "checked_at": "2026-06-30T19:19:06Z"
+      "checked_at": "2026-06-30T22:26:55Z"
     },
     {
       "name": "The Batman Part II (2026)",
@@ -591,7 +591,7 @@
       "status_code": 200,
       "content_type": "text/html; charset=utf-8",
       "error": "No es stream directo para VLC (text/html; charset=utf-8)",
-      "checked_at": "2026-06-30T19:19:06Z"
+      "checked_at": "2026-06-30T22:26:55Z"
     },
     {
       "name": "Wake Up Dead Man: A Knives Out Mystery (2025)",
@@ -603,7 +603,7 @@
       "status_code": 200,
       "content_type": "text/html; charset=utf-8",
       "error": "No es stream directo para VLC (text/html; charset=utf-8)",
-      "checked_at": "2026-06-30T19:19:07Z"
+      "checked_at": "2026-06-30T22:26:56Z"
     }
   ]
 }

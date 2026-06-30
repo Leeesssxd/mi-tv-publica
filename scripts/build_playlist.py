@@ -222,6 +222,12 @@ SPORTS_PATTERNS = (
     "aym sports",
     "deportes",
     "sports",
+    "dsport",
+    "dsports",
+    "d sports",
+    "directv sports",
+    "fox sports",
+    "espn",
     "wpt",
     "combate",
     "tv cuatro 4.3",
@@ -398,6 +404,7 @@ class ChannelStatus:
     group: str
     country: str
     url: str
+    backup_urls: list[str]
     logo: str
     tvg_id: str
     alive: bool
@@ -591,6 +598,7 @@ def _make_status(
         group=channel.group,
         country=channel.country,
         url=active_url or channel.url,
+        backup_urls=list(channel.backup_urls),
         logo=channel.logo,
         tvg_id=channel.tvg_id,
         alive=state == "alive",
@@ -868,6 +876,23 @@ def _group_rank(status: ChannelStatus, group_order: list[str]) -> int:
         return len(group_order)
 
 
+def _state_rank(status: ChannelStatus) -> int:
+    if status.state == "alive":
+        return 0
+    if status.state == "unstable":
+        return 1
+    return 2
+
+
+def _country_rank(status: ChannelStatus) -> int:
+    normalized_country = _normalize_name(status.country)
+    if normalized_country == "mx":
+        return 0
+    if normalized_country == "all":
+        return 1
+    return 2
+
+
 def _matches_any(value: str, patterns: tuple[str, ...]) -> bool:
     return any(pattern in value for pattern in patterns)
 
@@ -922,6 +947,8 @@ def sort_statuses(
     def sort_key(status: ChannelStatus) -> tuple:
         return (
             _priority_rank(status, priorities),
+            _state_rank(status),
+            _country_rank(status),
             _group_rank(status, ordered_groups),
             -_quality_score(status.name),
             *tuple(str(getattr(status, field_name, "")).lower() for field_name in sort_by),
@@ -935,17 +962,29 @@ def select_curated_statuses(
     *,
     target_size: int,
     group_quotas: dict[str, int],
+    priority_channels: list[str] | None = None,
 ) -> list[ChannelStatus]:
     playable = [status for status in statuses if status.state in {"alive", "unstable"}]
     if target_size <= 0 or len(playable) <= target_size:
         return playable
 
+    priorities = priority_channels or []
     buckets: dict[str, list[ChannelStatus]] = {}
     for status in playable:
         buckets.setdefault(status.group, []).append(status)
 
     selected: list[ChannelStatus] = []
     selected_urls: set[str] = set()
+
+    for status in playable:
+        if _priority_rank(status, priorities) >= len(priorities):
+            continue
+        if status.url in selected_urls:
+            continue
+        selected.append(status)
+        selected_urls.add(status.url)
+        if len(selected) >= target_size:
+            return selected[:target_size]
 
     for group_name, quota in group_quotas.items():
         for status in buckets.get(group_name, [])[:quota]:
@@ -985,6 +1024,12 @@ def build_m3u(statuses: list[ChannelStatus]) -> str:
         )
         lines.append(extinf)
         lines.append(status.url)
+        for backup_index, backup_url in enumerate(status.backup_urls, start=1):
+            backup_name = _escape_m3u_field(f"{status.name} [Respaldo {backup_index}]")
+            lines.append(
+                f'#EXTINF:-1 tvg-id="{tvg_id}" tvg-name="{backup_name}" tvg-logo="{logo}" group-title="{group}",{backup_name}'
+            )
+            lines.append(backup_url)
     return "\n".join(lines) + "\n"
 
 
@@ -1179,6 +1224,7 @@ async def run(sources_path: Path, public_dir: Path, config_path: Path) -> list[C
             statuses,
             target_size=int(config.get("target_playlist_size", 500)),
             group_quotas=dict(config.get("target_group_quotas", {})),
+            priority_channels=list(config.get("priority_channels", [])),
         )
 
     fallback_used = write_outputs(statuses, public_dir)
