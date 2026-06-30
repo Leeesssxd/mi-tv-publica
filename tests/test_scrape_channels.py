@@ -16,9 +16,11 @@ sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "scripts"))
 
 from scrape_channels import (  # noqa: E402
     DEFAULT_IPTVORG_CHANNELS_URL,
+    DEFAULT_LOCAL_PRIVATE_SOURCES,
     DEFAULT_SECONDARY_SOURCES,
     DEFAULT_SOURCE_URL,
     detect_payload_kind,
+    ensure_local_private_sources_file,
     ensure_unique_name,
     extract_m3u8_links,
     extract_text_links_from_file,
@@ -58,6 +60,26 @@ def test_detect_payload_kind_distingue_m3u_json_y_texto():
     assert detect_payload_kind("#EXTM3U\n#EXTINF:-1,Demo") == "m3u"
     assert detect_payload_kind('{"channels": []}') == "json"
     assert detect_payload_kind("https://example.com/live.m3u8") == "text"
+
+
+def test_ensure_local_private_sources_file_lo_crea_si_no_existe(tmp_path):
+    local_file = tmp_path / "local_private_sources.json"
+
+    payload = ensure_local_private_sources_file(local_file)
+
+    assert local_file.exists()
+    assert payload == DEFAULT_LOCAL_PRIVATE_SOURCES
+
+
+def test_ensure_local_private_sources_file_omite_json_invalido(tmp_path, capsys):
+    local_file = tmp_path / "local_private_sources.json"
+    local_file.write_text("{bad", encoding="utf-8")
+
+    payload = ensure_local_private_sources_file(local_file)
+
+    assert payload == []
+    captured = capsys.readouterr()
+    assert "local_private_sources.json invalido" in captured.out
 
 
 def test_parse_extinf_line_extrae_atributos():
@@ -519,6 +541,8 @@ def test_run_omite_fuente_secundaria_caida_y_sigue_con_las_demas(tmp_path, monke
         ),
         encoding="utf-8",
     )
+    local_sources_path = tmp_path / "local_private_sources.json"
+    local_sources_path.write_text("[]", encoding="utf-8")
 
     calls: list[str] = []
 
@@ -550,6 +574,7 @@ def test_run_omite_fuente_secundaria_caida_y_sigue_con_las_demas(tmp_path, monke
         return 1, 1
 
     monkeypatch.setattr(scrape_channels, "import_single_source", fake_import_single_source)
+    monkeypatch.setattr(scrape_channels, "LOCAL_PRIVATE_SOURCES_FILE", local_sources_path)
 
     added = asyncio.run(
         run(
@@ -571,3 +596,75 @@ def test_run_omite_fuente_secundaria_caida_y_sigue_con_las_demas(tmp_path, monke
     assert len(payload["channels"]) == 2
     captured = capsys.readouterr()
     assert "Fuente secundaria omitida" in captured.out
+
+
+def test_run_omite_fuente_local_caida_y_sigue_con_pipeline(tmp_path, monkeypatch, capsys):
+    import scrape_channels
+
+    sources_path = tmp_path / "channels.json"
+    sources_path.write_text(json.dumps({"channels": []}), encoding="utf-8")
+    config_path = tmp_path / "config.json"
+    config_path.write_text(json.dumps({"secondary_sources": []}), encoding="utf-8")
+    local_sources_path = tmp_path / "local_private_sources.json"
+    local_sources_path.write_text(
+        json.dumps(
+            [
+                {"source_url": "http://127.0.0", "group": "Deportes Locales", "country": "ALL"},
+                {"source_url": "http://127.0.0.1/feed.m3u", "group": "Deportes Locales", "country": "ALL"},
+            ]
+        ),
+        encoding="utf-8",
+    )
+
+    calls: list[str] = []
+
+    async def fake_import_single_source(
+        source_url,
+        sources_path,
+        config,
+        *,
+        default_group,
+        default_country,
+        metadata_url=None,
+        category_filter=None,
+    ):
+        calls.append(source_url)
+        if source_url == "http://127.0.0":
+            raise Exception("handshake failed")
+        payload = json.loads(sources_path.read_text(encoding="utf-8"))
+        payload["channels"].append(
+            {
+                "name": "Canal Local",
+                "group": default_group,
+                "country": default_country,
+                "url": "http://127.0.0.1/live.m3u8",
+                "logo": "",
+                "tvg_id": "",
+            }
+        )
+        sources_path.write_text(json.dumps(payload), encoding="utf-8")
+        return 1, 1
+
+    monkeypatch.setattr(scrape_channels, "import_single_source", fake_import_single_source)
+    monkeypatch.setattr(scrape_channels, "LOCAL_PRIVATE_SOURCES_FILE", local_sources_path)
+
+    added = asyncio.run(
+        run(
+            "https://primary.example/list.m3u",
+            sources_path,
+            config_path,
+            default_group="Base",
+            default_country="MX",
+        )
+    )
+
+    assert added == 2
+    assert calls == [
+        "https://primary.example/list.m3u",
+        "http://127.0.0",
+        "http://127.0.0.1/feed.m3u",
+    ]
+    payload = json.loads(sources_path.read_text(encoding="utf-8"))
+    assert len(payload["channels"]) == 2
+    captured = capsys.readouterr()
+    assert "Fuente local omitida" in captured.out

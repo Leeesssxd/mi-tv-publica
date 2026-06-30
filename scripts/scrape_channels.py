@@ -33,6 +33,7 @@ import aiohttp
 
 ROOT_DIR = Path(__file__).resolve().parent.parent
 SOURCES_FILE = ROOT_DIR / "sources" / "channels.json"
+LOCAL_PRIVATE_SOURCES_FILE = ROOT_DIR / "sources" / "local_private_sources.json"
 CONFIG_FILE = ROOT_DIR / "config.json"
 CACHE_DIR = ROOT_DIR / ".cache" / "sources"
 DEFAULT_SOURCE_URL = "https://iptv-org.github.io/iptv/countries/mx.m3u"
@@ -48,6 +49,13 @@ DEFAULT_SECONDARY_SOURCES: list[dict[str, Any]] = [
         "group": "Deportes Públicos Internacionales",
         "country": "NO",
     },
+]
+DEFAULT_LOCAL_PRIVATE_SOURCES: list[dict[str, str]] = [
+    {
+        "source_url": "http://127.0.0",
+        "group": "Deportes Locales",
+        "country": "ALL",
+    }
 ]
 
 DEFAULT_CONFIG: dict[str, Any] = {
@@ -100,6 +108,31 @@ def load_sources_payload(sources_path: Path = SOURCES_FILE) -> Any:
         return []
 
     return json.loads(sources_path.read_text(encoding="utf-8"))
+
+
+def ensure_local_private_sources_file(
+    local_sources_path: Path | None = None,
+) -> list[dict[str, str]]:
+    local_sources_path = local_sources_path or LOCAL_PRIVATE_SOURCES_FILE
+    if not local_sources_path.exists():
+        local_sources_path.parent.mkdir(parents=True, exist_ok=True)
+        local_sources_path.write_text(
+            json.dumps(DEFAULT_LOCAL_PRIVATE_SOURCES, indent=2, ensure_ascii=False) + "\n",
+            encoding="utf-8",
+        )
+        return list(DEFAULT_LOCAL_PRIVATE_SOURCES)
+
+    try:
+        payload = json.loads(local_sources_path.read_text(encoding="utf-8"))
+    except json.JSONDecodeError as exc:
+        print(f"[WARN] local_private_sources.json invalido, se omite: {exc}")
+        return []
+
+    if not isinstance(payload, list):
+        print("[WARN] local_private_sources.json debe contener una lista, se omite.")
+        return []
+
+    return [item for item in payload if isinstance(item, dict)]
 
 
 def _extract_channel_entries(payload: Any) -> list[dict[str, Any]]:
@@ -872,6 +905,27 @@ async def run(
             total_added += batch_added
         except Exception as exc:  # noqa: BLE001
             print(f"[WARN] Fuente secundaria omitida por fallo de red o parsing: {batch_url} -> {exc}")
+            continue
+
+    local_source_specs = ensure_local_private_sources_file(LOCAL_PRIVATE_SOURCES_FILE)
+    for source_spec in local_source_specs:
+        try:
+            batch_url = str(source_spec.get("source_url") or "").strip()
+            if not batch_url:
+                continue
+            batch_detected, batch_added = await import_single_source(
+                batch_url,
+                sources_path,
+                config,
+                default_group=str(source_spec.get("group") or default_group).strip() or default_group,
+                default_country=str(source_spec.get("country") or default_country).strip(),
+                metadata_url=source_spec.get("metadata_url"),
+                category_filter=source_spec.get("categories") if isinstance(source_spec.get("categories"), list) else None,
+            )
+            total_detected += batch_detected
+            total_added += batch_added
+        except Exception as exc:  # noqa: BLE001
+            print(f"[WARN] Fuente local omitida por fallo de red o parsing: {source_spec.get('source_url')} -> {exc}")
             continue
 
     merged_channels = _extract_channel_entries(load_sources_payload(sources_path))
