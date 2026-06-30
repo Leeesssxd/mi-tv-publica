@@ -68,9 +68,11 @@
     "ITV Deportes",
     "AyM Sports",
     "TyC Sports",
-    "DeporTV",
+   "DeporTV",
     "Sports",
     "Comedy",
     "Movies"
-  ]
+  ],
+  "VOD_TEMPLATE_MOVIE": "https://vidsrc.win/{id}",
+  "VOD_TEMPLATE_TV": "https://vidsrc.win/{id}"
 }
