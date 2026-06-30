@@ -87,6 +87,15 @@ def _extract_channel_entries(payload: Any) -> list[dict[str, Any]]:
     if not isinstance(payload, dict):
         raise ValueError("sources/channels.json debe contener una lista o un objeto compatible")
 
+    if isinstance(payload.get("channels"), list):
+        extracted = [item for item in payload["channels"] if isinstance(item, dict)]
+        for key, value in payload.items():
+            if key in {"channels", "cloud_catalog"}:
+                continue
+            if isinstance(value, (list, dict)):
+                extracted.extend(_extract_channel_entries(value))
+        return extracted
+
     extracted: list[dict[str, Any]] = []
 
     def visit(value: Any) -> None:
