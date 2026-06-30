@@ -23,6 +23,7 @@ from scrape_channels import (  # noqa: E402
     load_cached_text,
     merge_channels,
     normalize_url,
+    parse_json_teles_channel_json,
     parse_extinf_line,
     parse_generic_channel_json,
     parse_iptv_org_streams,
@@ -179,6 +180,85 @@ def test_parse_generic_channel_json_convierte_a_formato_local(tmp_path):
             "url": "https://a.com/live.m3u8",
             "logo": "https://a.com/logo.png",
             "tvg_id": "canal-14",
+        }
+    ]
+
+
+def test_parse_json_teles_channel_json_convierte_senales_m3u8(tmp_path):
+    source_file = tmp_path / "channels.json"
+    source_file.write_text(
+        """
+        {
+          "channels": [
+            {
+              "id": "net-tv",
+              "name": "Net TV",
+              "logo": "https://example.com/logo.png",
+              "country": "ar",
+              "category": "news",
+              "signals": [
+                {"type": "m3u8", "url": "https://example.com/live/chunks.m3u8"},
+                {"type": "iframe", "url": "https://example.com/embed"}
+              ]
+            }
+          ]
+        }
+        """,
+        encoding="utf-8",
+    )
+
+    parsed = parse_json_teles_channel_json(source_file)
+
+    assert parsed == [
+        {
+            "name": "Net TV",
+            "group": "News",
+            "country": "AR",
+            "url": "https://example.com/live/chunks.m3u8",
+            "logo": "https://example.com/logo.png",
+            "tvg_id": "net-tv",
+        }
+    ]
+
+
+def test_parse_json_teles_channel_json_filtra_por_pais(tmp_path):
+    source_file = tmp_path / "channels.json"
+    source_file.write_text(
+        """
+        {
+          "channels": [
+            {
+              "id": "net-tv",
+              "name": "Net TV",
+              "logo": "https://example.com/logo.png",
+              "country": "ar",
+              "category": "news",
+              "signals": [{"type": "m3u8", "url": "https://example.com/ar.m3u8"}]
+            },
+            {
+              "id": "nmas",
+              "name": "NMás",
+              "logo": "https://example.com/logo2.png",
+              "country": "mx",
+              "category": "news",
+              "signals": [{"type": "m3u8", "url": "https://example.com/mx.m3u8"}]
+            }
+          ]
+        }
+        """,
+        encoding="utf-8",
+    )
+
+    parsed = parse_json_teles_channel_json(source_file, country_filter="MX")
+
+    assert parsed == [
+        {
+            "name": "NMás",
+            "group": "News",
+            "country": "MX",
+            "url": "https://example.com/mx.m3u8",
+            "logo": "https://example.com/logo2.png",
+            "tvg_id": "nmas",
         }
     ]
 

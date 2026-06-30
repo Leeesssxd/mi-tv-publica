@@ -318,6 +318,72 @@ def parse_generic_channel_json(
     return parsed_channels
 
 
+def parse_json_teles_channel_json(
+    source_path: Path,
+    *,
+    country_filter: str = "",
+) -> list[dict[str, Any]]:
+    payload = json.loads(source_path.read_text(encoding="utf-8"))
+    items = payload.get("channels") or []
+    allowed_countries = {
+        token.strip().upper()
+        for token in country_filter.split(",")
+        if token.strip()
+    }
+
+    parsed_channels: list[dict[str, Any]] = []
+    for item in items:
+        if not isinstance(item, dict):
+            continue
+
+        name = str(item.get("name") or "").strip()
+        country = str(item.get("country") or "").strip().upper()
+        if allowed_countries and country not in allowed_countries:
+            continue
+        category = str(item.get("category") or "").strip().lower()
+        logo = str(item.get("logo") or "").strip()
+        tvg_id = str(item.get("id") or "").strip()
+
+        if category == "news":
+            group = "News"
+        elif category == "sports":
+            group = "Sports"
+        elif category == "movies":
+            group = "Movies"
+        elif category == "kids":
+            group = "Kids"
+        elif category == "culture":
+            group = "Culture"
+        elif category == "entertainment":
+            group = "Entertainment"
+        else:
+            group = "General"
+
+        signals = item.get("signals") or []
+        for signal in signals:
+            if not isinstance(signal, dict):
+                continue
+            if str(signal.get("type") or "").strip().lower() != "m3u8":
+                continue
+
+            url = normalize_url(str(signal.get("url") or "").strip())
+            if not url:
+                continue
+
+            parsed_channels.append(
+                {
+                    "name": name or build_channel_name(url, set()),
+                    "group": group,
+                    "country": country,
+                    "url": url,
+                    "logo": logo,
+                    "tvg_id": tvg_id,
+                }
+            )
+
+    return parsed_channels
+
+
 def merge_channels(
     existing_channels: list[dict[str, Any]],
     discovered_channels: list[dict[str, Any]] | list[str],
@@ -535,6 +601,11 @@ async def run(
             discovered_channels = parse_iptv_org_streams(
                 cached_file,
                 metadata_file,
+                country_filter=default_country,
+            )
+        elif "raw.githubusercontent.com/alplox/json-teles" in resolved_source_url.casefold():
+            discovered_channels = parse_json_teles_channel_json(
+                cached_file,
                 country_filter=default_country,
             )
         else:

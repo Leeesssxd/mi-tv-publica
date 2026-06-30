@@ -23,7 +23,7 @@ import json
 import random
 import re
 import sys
-from dataclasses import asdict, dataclass, field
+from dataclasses import asdict, dataclass, field, replace
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
@@ -36,11 +36,21 @@ DEFAULT_CONFIG: dict[str, Any] = {
     "user_agent": "MiTVPublicaBot/1.0 (+https://github.com)",
     "accept_language": "es-MX,es;q=0.9,en;q=0.6",
     "sort_by": ["group", "name"],
+    "group_order": [],
     "priority_channels": [],
     "retry_attempts": 3,
     "retry_backoff_base_seconds": 1.0,
     "jitter_min_seconds": 0.5,
     "jitter_max_seconds": 1.5,
+    "stream_selection": {
+        "mode": "strict",
+        "min_width": 1920,
+        "min_height": 1080,
+        "min_average_bandwidth": 4500000,
+        "preferred_frame_rates": [60.0, 30.0, 25.0],
+        "allowed_video_codecs": ["avc1"],
+        "allowed_audio_codecs": ["mp4a.40.2"],
+    },
 }
 
 ROOT_DIR = Path(__file__).resolve().parent.parent
@@ -58,6 +68,234 @@ PLAYABLE_CONTENT_HINTS = (
 
 RETRIABLE_STATUS_CODES = {429, 503}
 QUALITY_PATTERN = re.compile(r"(\d{3,4})p", re.IGNORECASE)
+
+FAMILY_PATTERNS = (
+    "azteca uno",
+    "azteca 7",
+    "azteca internacional",
+    "b15 ",
+    "canal 10 durango",
+    "canal 10 cancún",
+    "canal 10 cancun",
+    "canal 5",
+    "las estrellas",
+    "canal 13 michoacán",
+    "canal 13 bajío",
+    "canal 13 bajio",
+    "canal 13 campeche",
+    "canal 13 chiapas",
+    "canal 13 guadalajara",
+    "canal 13 oaxaca",
+    "canal 13 puebla",
+    "canal 13 tabasco",
+    "canal 13 tapachula",
+    "canal 11",
+    "canal 14",
+    "canal 21",
+    "tv unam",
+    "canal 22",
+    "canal 6 cdmx",
+    "capital 21",
+    "canal 28",
+    "imagen tv",
+    "mexiquense tv",
+    "jalisco tv",
+    "telemax",
+    "canal 44",
+    "tv de puebla",
+    "canal 10 chiapas",
+    "tvp ",
+    "canal 66",
+    "tele saltillo",
+    "mvs tv",
+    "set televisión",
+    "set television",
+    "tv más",
+    "tv mas",
+    "8ntv",
+    "canal 26 aguascalientes",
+    "nayarit comunica",
+    "rcg tv",
+    "rtq querétaro",
+    "rtq queretaro",
+    "sipse",
+    "sistema michoacano",
+    "super channel 12",
+    "tele yucatan",
+    "tv buap",
+    "once méxico",
+    "once mexico",
+    "tv cuatro",
+    "sqcs canal 4",
+    "trc televisión",
+    "trc television",
+    "canal 12 iguala",
+    "canal 15 ilce",
+    "ingenio tv",
+    "iertbcs",
+    "icrtv colima",
+    "canal 33 tijuana",
+    "california medios",
+    "canal 30 cintalapa",
+    "lobo tv",
+    "nueve tv",
+    "rtg",
+    "sizart",
+    "tv ug",
+    "umtv",
+    "unison tv",
+    "tv independencia",
+    "tv lobo durango",
+    "tv mar la paz",
+    "tv mar los cabos",
+    "tv mar puerto vallarta",
+    "tv guanajuato",
+    "tv libertad",
+    "tv ujat",
+    "tlaxcala televisión",
+    "tlaxcala television",
+    "tele uv",
+    "ultra tv puebla",
+    "uacj-tv",
+    "uacj tv",
+    "antena tv",
+    "c9ntv",
+    "visión televisión",
+    "vision television",
+    "radiotele morelia",
+    "tv pública",
+    "tv publica",
+    "estrella tv",
+    "univision",
+    "américa tv",
+    "america tv",
+    "el trece",
+    "bravo tv",
+    "tv publica marcos paz",
+)
+
+NEWS_PATTERNS = (
+    "milenio",
+    "telediario",
+    "multimedios",
+    "c4 en alerta",
+    "adn40",
+    "adn 40",
+    "noticias",
+    "notigram",
+    "teleformula",
+    "fórmula",
+    "formula",
+    "amx noticias",
+    "estrella news",
+    "congreso",
+    "imagen tv+",
+    "justicia tv",
+    "meganoticias",
+    "canal 26",
+    "canal e",
+    "tn",
+    "la nacion +",
+    "asi sucede",
+    "así sucede",
+)
+
+SPORTS_PATTERNS = (
+    "claro sports",
+    "itv deportes",
+    "aym sports",
+    "deportes",
+    "sports",
+    "wpt",
+    "combate",
+    "tv cuatro 4.3",
+    "tudn",
+)
+
+MOVIE_CINE_PATTERNS = (
+    "mx nuestro cine",
+    "filmex",
+    "golden",
+    "runtime films",
+    "runtime latino",
+    "runtime español",
+    "runtime espanyol",
+    "cine",
+)
+
+MOVIE_ACTION_PATTERNS = (
+    "runtime acción",
+    "runtime accion",
+    "acción mexicana",
+    "accion mexicana",
+)
+
+MOVIE_COMEDY_PATTERNS = (
+    "runtime comedia",
+    "comedy central",
+    "comedia",
+)
+
+MOVIE_CRIME_PATTERNS = (
+    "runtime crimen",
+    "crimen",
+)
+
+MOVIE_HORROR_PATTERNS = (
+    "runtime terror",
+    "terror",
+    "panico",
+)
+
+MOVIE_DRAMA_PATTERNS = (
+    "runtime cine y series",
+    "runtime films",
+    "runtime latino",
+    "runtime español",
+    "runtime espanol",
+    "runtime espanyol",
+    "corazón fast",
+    "corazon fast",
+    "drama",
+    "novelas",
+    "series",
+)
+
+MOVIE_FAMILY_PATTERNS = (
+    "runtime familia",
+    "familia",
+    "kids",
+    "estrella games",
+)
+
+GROUP_FAMILIA = "Familia y TV Abierta"
+GROUP_NEWS = "Noticias"
+GROUP_MOVIES_CINE = "Peliculas - Cine"
+GROUP_MOVIES_ACTION = "Peliculas - Accion"
+GROUP_MOVIES_COMEDY = "Peliculas - Comedia"
+GROUP_MOVIES_CRIME = "Peliculas - Crimen"
+GROUP_MOVIES_HORROR = "Peliculas - Terror"
+GROUP_MOVIES_DRAMA = "Peliculas - Drama y Series"
+GROUP_MOVIES_FAMILY = "Peliculas - Familiar"
+GROUP_SPORTS_PUBLIC = "Deportes Públicos Internacionales"
+GROUP_SPORTS = "Deportes"
+GROUP_ENTERTAINMENT = "Entretenimiento"
+GROUP_OTHER = "Otros"
+CANONICAL_GROUPS = {
+    GROUP_FAMILIA,
+    GROUP_NEWS,
+    GROUP_MOVIES_CINE,
+    GROUP_MOVIES_ACTION,
+    GROUP_MOVIES_COMEDY,
+    GROUP_MOVIES_CRIME,
+    GROUP_MOVIES_HORROR,
+    GROUP_MOVIES_DRAMA,
+    GROUP_MOVIES_FAMILY,
+    GROUP_SPORTS_PUBLIC,
+    GROUP_SPORTS,
+    GROUP_ENTERTAINMENT,
+    GROUP_OTHER,
+}
 
 
 @dataclass
@@ -126,17 +364,51 @@ def load_channels(sources_path: Path = SOURCES_FILE) -> list[Channel]:
     if not sources_path.exists():
         raise FileNotFoundError(f"No se encontro {sources_path}")
 
-    raw_list = json.loads(sources_path.read_text(encoding="utf-8"))
-    if not isinstance(raw_list, list):
-        raise ValueError("sources/channels.json debe contener una lista de canales")
+    raw_payload = json.loads(sources_path.read_text(encoding="utf-8"))
+    raw_list = _extract_channel_entries(raw_payload)
 
     channels: list[Channel] = []
+    seen_urls: set[str] = set()
     for index, raw in enumerate(raw_list):
         try:
-            channels.append(Channel.from_dict(raw))
+            channel = Channel.from_dict(raw)
+            normalized_url = channel.url.casefold()
+            if normalized_url in seen_urls:
+                continue
+            seen_urls.add(normalized_url)
+            channels.append(channel)
         except ValueError as exc:
             print(f"[WARN] Canal #{index} invalido, se omite: {exc}")
     return channels
+
+
+def _extract_channel_entries(payload: Any) -> list[dict[str, Any]]:
+    if isinstance(payload, list):
+        return [item for item in payload if isinstance(item, dict)]
+
+    if not isinstance(payload, dict):
+        raise ValueError("sources/channels.json debe contener una lista o un objeto compatible")
+
+    extracted: list[dict[str, Any]] = []
+
+    def visit(value: Any) -> None:
+        if isinstance(value, list):
+            for item in value:
+                if isinstance(item, dict):
+                    if "name" in item and "url" in item:
+                        extracted.append(item)
+                    else:
+                        for nested in item.values():
+                            visit(nested)
+        elif isinstance(value, dict):
+            if "name" in value and "url" in value:
+                extracted.append(value)
+            else:
+                for nested in value.values():
+                    visit(nested)
+
+    visit(payload)
+    return extracted
 
 
 def _looks_playable(content_type: str) -> bool:
@@ -311,16 +583,70 @@ def _priority_rank(status: ChannelStatus, priority_channels: list[str]) -> int:
     return len(priority_channels)
 
 
+def _group_rank(status: ChannelStatus, group_order: list[str]) -> int:
+    normalized_group = _normalize_name(status.group)
+    normalized_order = [_normalize_name(item) for item in group_order]
+    try:
+        return normalized_order.index(normalized_group)
+    except ValueError:
+        return len(group_order)
+
+
+def _matches_any(value: str, patterns: tuple[str, ...]) -> bool:
+    return any(pattern in value for pattern in patterns)
+
+
+def classify_group(name: str, current_group: str) -> str:
+    normalized_name = _normalize_name(name)
+    normalized_group = _normalize_name(current_group)
+    haystack = f"{normalized_name} {normalized_group}".strip()
+
+    if current_group in CANONICAL_GROUPS:
+        return current_group
+    if _matches_any(haystack, FAMILY_PATTERNS):
+        return GROUP_FAMILIA
+    if _matches_any(haystack, NEWS_PATTERNS):
+        return GROUP_NEWS
+    if _matches_any(haystack, SPORTS_PATTERNS):
+        return GROUP_SPORTS
+    if _matches_any(haystack, MOVIE_ACTION_PATTERNS):
+        return GROUP_MOVIES_ACTION
+    if _matches_any(haystack, MOVIE_COMEDY_PATTERNS):
+        return GROUP_MOVIES_COMEDY
+    if _matches_any(haystack, MOVIE_CRIME_PATTERNS):
+        return GROUP_MOVIES_CRIME
+    if _matches_any(haystack, MOVIE_HORROR_PATTERNS):
+        return GROUP_MOVIES_HORROR
+    if _matches_any(haystack, MOVIE_DRAMA_PATTERNS):
+        return GROUP_MOVIES_DRAMA
+    if _matches_any(haystack, MOVIE_FAMILY_PATTERNS):
+        return GROUP_MOVIES_FAMILY
+    if _matches_any(haystack, MOVIE_CINE_PATTERNS) or "movies" in normalized_group:
+        return GROUP_MOVIES_CINE
+    if any(token in normalized_group for token in ("entertainment", "music", "culture", "family", "kids")):
+        return GROUP_ENTERTAINMENT
+    if normalized_group in {"general", "publico", "educativo", "education", "undefined"}:
+        return GROUP_ENTERTAINMENT
+    return GROUP_OTHER
+
+
+def regroup_statuses(statuses: list[ChannelStatus]) -> list[ChannelStatus]:
+    return [replace(status, group=classify_group(status.name, status.group)) for status in statuses]
+
+
 def sort_statuses(
     statuses: list[ChannelStatus],
     sort_by: list[str],
+    group_order: list[str] | None = None,
     priority_channels: list[str] | None = None,
 ) -> list[ChannelStatus]:
     priorities = priority_channels or []
+    ordered_groups = group_order or []
 
     def sort_key(status: ChannelStatus) -> tuple:
         return (
             _priority_rank(status, priorities),
+            _group_rank(status, ordered_groups),
             -_quality_score(status.name),
             *tuple(str(getattr(status, field_name, "")).lower() for field_name in sort_by),
         )
@@ -448,9 +774,11 @@ async def run(sources_path: Path, public_dir: Path, config_path: Path) -> list[C
         statuses: list[ChannelStatus] = []
     else:
         statuses = await check_all_channels(channels, config)
+        statuses = regroup_statuses(statuses)
         statuses = sort_statuses(
             statuses,
             list(config["sort_by"]),
+            group_order=list(config.get("group_order", [])),
             priority_channels=list(config.get("priority_channels", [])),
         )
 

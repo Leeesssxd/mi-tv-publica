@@ -20,8 +20,10 @@ from build_playlist import (  # noqa: E402
     build_m3u,
     build_status_json,
     build_status_markdown,
+    classify_group,
     has_playable_channels,
     load_channels,
+    regroup_statuses,
     sort_statuses,
     write_outputs,
 )
@@ -88,6 +90,28 @@ def test_load_channels_ignora_entradas_invalidas(tmp_path, capsys):
     assert "se omite" in captured.out
 
 
+def test_load_channels_acepta_payload_multinivel_y_deduplica_por_url(tmp_path):
+    data = {
+        "channels": [
+            {"name": "Base", "url": "https://a.com/x.m3u8", "group": "General"},
+        ],
+        "regional_tiers": {
+            "strict_verified": [
+                {"name": "DeporTV Oficial", "url": "https://b.com/live.m3u8", "group": "Deportes Públicos Internacionales"},
+            ],
+            "flex_verified": [
+                {"name": "Duplicado", "url": "https://a.com/x.m3u8", "group": "Deportes Públicos Internacionales"},
+            ],
+        },
+    }
+    sources_file = tmp_path / "channels.json"
+    sources_file.write_text(json.dumps(data), encoding="utf-8")
+
+    channels = load_channels(sources_file)
+
+    assert [channel.name for channel in channels] == ["Base", "DeporTV Oficial"]
+
+
 # ---------------------------------------------------------------------------
 # Orden de canales
 # ---------------------------------------------------------------------------
@@ -101,6 +125,23 @@ def test_sort_statuses_por_grupo_y_nombre():
     ordered = sort_statuses(statuses, ["group", "name"])
     names = [s.name for s in ordered]
     assert names == ["Alfa", "Beta", "Zeta"]
+
+
+def test_sort_statuses_respeta_group_order():
+    statuses = [
+        make_status("Runtime Acción", "Peliculas - Accion", True),
+        make_status("Runtime Crimen", "Peliculas - Crimen", True),
+        make_status("Milenio", "Noticias", True),
+        make_status("Azteca Uno", "Familia y TV Abierta", True),
+    ]
+
+    ordered = sort_statuses(
+        statuses,
+        ["group", "name"],
+        group_order=["Familia y TV Abierta", "Noticias", "Peliculas - Accion", "Peliculas - Crimen"],
+    )
+
+    assert [status.name for status in ordered] == ["Azteca Uno", "Milenio", "Runtime Acción", "Runtime Crimen"]
 
 
 def test_sort_statuses_prioriza_canales_configurados_y_mejor_calidad():
@@ -124,6 +165,56 @@ def test_sort_statuses_prioriza_canales_configurados_y_mejor_calidad():
         "Milenio Televisión (720p)",
         "Otro Canal (1080p)",
     ]
+
+
+def test_classify_group_ubica_canales_en_secciones_usuario():
+    assert classify_group("Azteca Uno", "General") == "Familia y TV Abierta"
+    assert classify_group("Milenio Televisión (720p)", "News") == "Noticias"
+    assert classify_group("Runtime Acción", "Movies") == "Peliculas - Accion"
+    assert classify_group("Runtime Comedia", "Comedy") == "Peliculas - Comedia"
+    assert classify_group("Runtime Crimen", "Movies") == "Peliculas - Crimen"
+    assert classify_group("Runtime Terror", "Movies") == "Peliculas - Terror"
+    assert classify_group("Runtime Familia", "Family") == "Peliculas - Familiar"
+    assert classify_group("AyM Sports", "Sports") == "Deportes"
+    assert classify_group("Imagen TV+ (720p)", "General") == "Familia y TV Abierta"
+
+
+def test_regroup_statuses_reescribe_grupos_para_salida():
+    statuses = [
+        make_status("Azteca 7", "General", True),
+        make_status("Telediario Now", "News", True),
+    ]
+
+    regrouped = regroup_statuses(statuses)
+
+    assert [status.group for status in regrouped] == ["Familia y TV Abierta", "Noticias"]
+
+
+def test_classify_group_respeta_grupo_canonico_manual():
+    assert classify_group("TyC Sports", "Deportes") == "Deportes"
+    assert classify_group("La Nacion +", "Noticias") == "Noticias"
+    assert classify_group("RTVE La 1 Oficial (720p)", "Deportes Públicos Internacionales") == "Deportes Públicos Internacionales"
+
+
+def test_classify_group_reconoce_noticias_y_tv_abierta_adicionales():
+    assert classify_group("TN", "General") == "Noticias"
+    assert classify_group("Canal 26", "General") == "Noticias"
+    assert classify_group("America TV", "General") == "Familia y TV Abierta"
+
+
+def test_classify_group_reconoce_aliases_extra_de_usuario():
+    assert classify_group("Azteca Internacional (1080p)", "Entertainment") == "Familia y TV Abierta"
+    assert classify_group("Once México (1080p)", "Entertainment") == "Familia y TV Abierta"
+    assert classify_group("Multimedios Monterrey (720p)", "Entertainment") == "Noticias"
+    assert classify_group("Golden (240p)", "Entertainment") == "Peliculas - Cine"
+
+
+def test_classify_group_reconoce_mas_tv_publica_regional():
+    assert classify_group("Canal 13 Puebla (720p)", "Entertainment") == "Familia y TV Abierta"
+    assert classify_group("ICRTV Colima (1080p)", "Other") == "Familia y TV Abierta"
+    assert classify_group("TV Mar La Paz (1080p)", "Entertainment") == "Familia y TV Abierta"
+    assert classify_group("Unison TV (1080p)", "Entertainment") == "Familia y TV Abierta"
+    assert classify_group("Antena TV", "Entertainment") == "Familia y TV Abierta"
 
 
 # ---------------------------------------------------------------------------
