@@ -39,6 +39,16 @@ DEFAULT_CONFIG: dict[str, Any] = {
     "sort_by": ["group", "name"],
     "group_order": [],
     "priority_channels": [],
+    "target_playlist_size": 700,
+    "target_group_quotas": {
+        "Familia y TV Abierta": 180,
+        "Peliculas - Cine": 170,
+        "Peliculas - Drama y Series": 110,
+        "Deportes": 140,
+        "Noticias": 50,
+        "Entretenimiento": 50,
+        "Otros": 30,
+    },
     "retry_attempts": 3,
     "retry_backoff_base_seconds": 1.0,
     "jitter_min_seconds": 0.5,
@@ -920,6 +930,42 @@ def sort_statuses(
     return sorted(statuses, key=sort_key)
 
 
+def select_curated_statuses(
+    statuses: list[ChannelStatus],
+    *,
+    target_size: int,
+    group_quotas: dict[str, int],
+) -> list[ChannelStatus]:
+    playable = [status for status in statuses if status.state in {"alive", "unstable"}]
+    if target_size <= 0 or len(playable) <= target_size:
+        return playable
+
+    buckets: dict[str, list[ChannelStatus]] = {}
+    for status in playable:
+        buckets.setdefault(status.group, []).append(status)
+
+    selected: list[ChannelStatus] = []
+    selected_urls: set[str] = set()
+
+    for group_name, quota in group_quotas.items():
+        for status in buckets.get(group_name, [])[:quota]:
+            if status.url in selected_urls:
+                continue
+            selected.append(status)
+            selected_urls.add(status.url)
+
+    if len(selected) < target_size:
+        for status in playable:
+            if status.url in selected_urls:
+                continue
+            selected.append(status)
+            selected_urls.add(status.url)
+            if len(selected) >= target_size:
+                break
+
+    return selected[:target_size]
+
+
 def _escape_m3u_field(value: str) -> str:
     return value.replace('"', "'").replace("\n", " ").replace("\r", " ").strip()
 
@@ -1128,6 +1174,11 @@ async def run(sources_path: Path, public_dir: Path, config_path: Path) -> list[C
             list(config["sort_by"]),
             group_order=list(config.get("group_order", [])),
             priority_channels=list(config.get("priority_channels", [])),
+        )
+        statuses = select_curated_statuses(
+            statuses,
+            target_size=int(config.get("target_playlist_size", 500)),
+            group_quotas=dict(config.get("target_group_quotas", {})),
         )
 
     fallback_used = write_outputs(statuses, public_dir)

@@ -26,17 +26,17 @@
   "sort_by": ["group", "name"],
   "group_order": [
     "Familia y TV Abierta",
-    "Noticias",
     "Peliculas - Cine",
+    "Peliculas - Drama y Series",
     "Peliculas - Accion",
     "Peliculas - Comedia",
     "Peliculas - Crimen",
     "Peliculas - Terror",
-    "Peliculas - Drama y Series",
     "Peliculas - Familiar",
-    "Deportes Públicos Internacionales",
     "Deportes",
+    "Noticias",
     "Entretenimiento",
+    "Deportes Públicos Internacionales",
     "Otros"
   ],
   "stream_selection": {
@@ -49,10 +49,14 @@
     "allowed_audio_codecs": ["mp4a.40.2"]
   },
   "priority_channels": [
+    "Azteca Uno",
     "Canal 5",
     "Azteca 7",
-    "Azteca Uno",
     "Las Estrellas",
+    "TUDN",
+    "ViX",
+    "Vix",
+    "S Sports",
     "Canal 13 Michoacán",
     "Once México",
     "TV Pública",
@@ -86,5 +90,15 @@
     "Sports",
     "Comedy",
     "Movies"
+  ],
+  "target_playlist_size": 700,
+  "target_group_quotas": {
+    "Familia y TV Abierta": 180,
+    "Peliculas - Cine": 170,
+    "Peliculas - Drama y Series": 110,
+    "Deportes": 140,
+    "Noticias": 50,
+    "Entretenimiento": 50,
+    "Otros": 30
   ]
 }

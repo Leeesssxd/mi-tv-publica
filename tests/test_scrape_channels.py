@@ -20,6 +20,7 @@ from scrape_channels import (  # noqa: E402
     DEFAULT_LOCAL_PRIVATE_SOURCES,
     DEFAULT_SECONDARY_SOURCES,
     DEFAULT_SOURCE_URL,
+    curate_private_channels,
     detect_payload_kind,
     ensure_local_private_sources_file,
     ensure_unique_name,
@@ -215,6 +216,22 @@ def test_parse_m3u_file_acepta_urls_http_sin_extension_m3u8(tmp_path):
             "tvg_id": "",
         }
     ]
+
+
+def test_curate_private_channels_prioriza_mx_deportes_y_filtra_adultos():
+    curated = curate_private_channels(
+        [
+            {"name": "Canal 5 MX", "group": "General", "country": "MX", "url": "http://a", "logo": "", "tvg_id": "canal5.mx"},
+            {"name": "ESPN Deportes", "group": "Sports", "country": "MX", "url": "http://b", "logo": "", "tvg_id": "espn.mx"},
+            {"name": "Movie Gold", "group": "Movies", "country": "ALL", "url": "http://c", "logo": "", "tvg_id": "movie"},
+            {"name": "Adult XXX", "group": "Adult", "country": "ALL", "url": "http://d", "logo": "", "tvg_id": "adult"},
+        ],
+        max_items=10,
+        priority_patterns=["Canal 5"],
+    )
+
+    assert [item["name"] for item in curated] == ["Canal 5 MX", "ESPN Deportes", "Movie Gold"]
+    assert [item["group"] for item in curated] == ["Familia y TV Abierta", "Deportes", "Peliculas - Cine"]
 
 
 def test_parse_m3u_file_asegura_nombres_unicos_en_cargas_masivas(tmp_path):
@@ -581,6 +598,38 @@ def test_merge_channels_promueve_mirror_a_backup_url():
     assert merged[0]["backup_url"] == "https://example.com/backup.m3u8"
 
 
+def test_merge_channels_promueve_prioritario_a_primario_y_conserva_backup():
+    existing = [
+        {
+            "name": "Canal 5",
+            "group": "Familia y TV Abierta",
+            "country": "MX",
+            "url": "https://example.com/public.m3u8",
+            "logo": "",
+            "tvg_id": "canal5.mx",
+        }
+    ]
+
+    merged, added = merge_channels(
+        existing,
+        [
+            {
+                "name": "Canal 5",
+                "group": "Familia y TV Abierta",
+                "country": "MX",
+                "url": "https://example.com/private.m3u8",
+                "logo": "",
+                "tvg_id": "canal5.mx",
+            }
+        ],
+        preferred_primary_patterns=["Canal 5"],
+    )
+
+    assert added == 1
+    assert merged[0]["url"] == "https://example.com/private.m3u8"
+    assert merged[0]["backup_url"] == "https://example.com/public.m3u8"
+
+
 def test_ensure_unique_name_agrega_sufijo_si_ya_existe():
     used_names = {"canal demo"}
     assert ensure_unique_name("Canal Demo", used_names) == "Canal Demo (2)"
@@ -680,6 +729,8 @@ def test_run_omite_fuente_secundaria_caida_y_sigue_con_las_demas(tmp_path, monke
         metadata_url=None,
         category_filter=None,
         max_channels=None,
+        preferred_primary_patterns=None,
+        curate_private=False,
     ):
         calls.append(source_url)
         if "bad.example" in source_url:
@@ -756,6 +807,8 @@ def test_run_omite_fuente_local_caida_y_sigue_con_pipeline(tmp_path, monkeypatch
         metadata_url=None,
         category_filter=None,
         max_channels=None,
+        preferred_primary_patterns=None,
+        curate_private=False,
     ):
         calls.append(source_url)
         if source_url == "http://127.0.0":
@@ -828,6 +881,8 @@ def test_run_reporta_403_local_como_rechazo_de_origen(tmp_path, monkeypatch, cap
         metadata_url=None,
         category_filter=None,
         max_channels=None,
+        preferred_primary_patterns=None,
+        curate_private=False,
     ):
         if source_url == "https://primary.example/list.m3u":
             return 1, 0
@@ -895,6 +950,8 @@ def test_run_deduplica_fuentes_repetidas_entre_config_y_archivo_local(tmp_path, 
         metadata_url=None,
         category_filter=None,
         max_channels=None,
+        preferred_primary_patterns=None,
+        curate_private=False,
     ):
         calls.append(source_url)
         return 1, 0
@@ -952,6 +1009,8 @@ def test_run_genera_telemetria_y_cuarentena_tras_tres_403(tmp_path, monkeypatch)
         metadata_url=None,
         category_filter=None,
         max_channels=None,
+        preferred_primary_patterns=None,
+        curate_private=False,
     ):
         if source_url == "https://primary.example/list.m3u":
             return 1, 0

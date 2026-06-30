@@ -32,6 +32,7 @@ from build_playlist import (  # noqa: E402
     load_cloud_catalog_items,
     load_config,
     regroup_statuses,
+    select_curated_statuses,
     sort_statuses,
     write_vod_output,
     write_outputs,
@@ -218,6 +219,38 @@ def test_load_cloud_catalog_items_extrae_items_del_bloque_cloud(tmp_path):
     items = load_cloud_catalog_items(sources_file)
 
     assert [item["name"] for item in items] == ["Movie One (2024)", "Series One (2024)"]
+
+
+def test_select_curated_statuses_respeta_cupos_y_rellena_hasta_objetivo():
+    statuses = [
+        make_status("Canal 5", "Familia y TV Abierta", True),
+        make_status("Azteca 7", "Familia y TV Abierta", True),
+        make_status("ESPN", "Deportes", True),
+        make_status("Fox Sports", "Deportes", True),
+        make_status("Golden", "Peliculas - Cine", True),
+        make_status("Runtime Cine y Series", "Peliculas - Drama y Series", True),
+        make_status("Milenio", "Noticias", True),
+        make_status("Telehit", "Entretenimiento", True),
+        make_status("Otro 1", "Otros", True),
+        make_status("Otro 2", "Otros", True),
+    ]
+
+    selected = select_curated_statuses(
+        statuses,
+        target_size=6,
+        group_quotas={
+            "Familia y TV Abierta": 2,
+            "Deportes": 1,
+            "Peliculas - Cine": 1,
+            "Noticias": 1,
+            "Entretenimiento": 1,
+        },
+    )
+
+    assert len(selected) == 6
+    assert any(status.group == "Familia y TV Abierta" for status in selected)
+    assert any(status.group == "Deportes" for status in selected)
+    assert any(status.group == "Peliculas - Cine" for status in selected)
 
 
 def test_load_config_conserva_custom_routing_rules_si_es_dict(tmp_path):

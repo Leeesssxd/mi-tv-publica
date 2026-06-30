@@ -76,7 +76,7 @@ DEFAULT_CONFIG: dict[str, Any] = {
     "cache_ttl_seconds": 21600,
     "chunk_size_bytes": 65536,
     "max_secret_sources": 1,
-    "max_private_channels_per_source": 500,
+    "max_private_channels_per_source": 1200,
 }
 
 M3U8_URL_PATTERN = re.compile(
@@ -90,6 +90,94 @@ RETRIABLE_STATUS_CODES = {429, 503}
 M3U_HEADER = "#EXTM3U"
 RESTRICTIVE_STATUS_CODES = {401, 403, 503}
 QUARANTINE_THRESHOLD = 3
+CURATED_BUCKET_LIMITS: dict[str, int] = {
+    "Familia y TV Abierta": 180,
+    "Deportes": 140,
+    "Peliculas - Cine": 170,
+    "Peliculas - Drama y Series": 110,
+    "Noticias": 50,
+    "Entretenimiento": 50,
+    "Otros": 30,
+}
+ADULT_OR_LOW_TRUST_PATTERNS = (
+    "adult",
+    "xxx",
+    "porn",
+    "18+",
+    "brazzers",
+    "playboy",
+    "hot ",
+    "hustler",
+    "venus",
+    "sex",
+)
+FAMILY_PATTERNS = (
+    "canal 5",
+    "azteca 7",
+    "azteca uno",
+    "las estrellas",
+    "canal 13",
+    "once",
+    "canal 14",
+    "tv unam",
+    "canal 22",
+    "imagen tv",
+    "capital 21",
+    "canal 26",
+    "multimedios",
+    "televisa",
+)
+SPORTS_PATTERNS = (
+    "sports",
+    "deportes",
+    "espn",
+    "fox sports",
+    "claro sports",
+    "tdn",
+    "tudn",
+    "wpt",
+    "ufc",
+    "boxing",
+    "nba",
+    "nfl",
+    "mlb",
+    "liga mx",
+)
+MOVIE_PATTERNS = (
+    "movie",
+    "movies",
+    "pelicula",
+    "peliculas",
+    "cine",
+    "cinema",
+    "film",
+    "films",
+    "golden",
+    "runtime",
+    "filmex",
+    "series",
+)
+NEWS_PATTERNS = (
+    "news",
+    "noticias",
+    "milenio",
+    "telediario",
+    "adn40",
+    "foro tv",
+    "cnn",
+    "bbc",
+    "al jazeera",
+)
+ENTERTAINMENT_PATTERNS = (
+    "entretenimiento",
+    "entertainment",
+    "comedy",
+    "musica",
+    "music",
+    "mtv",
+    "telehit",
+    "variedades",
+)
 
 
 def detect_payload_kind(text: str) -> str:
@@ -99,6 +187,15 @@ def detect_payload_kind(text: str) -> str:
     if stripped.startswith("{") or stripped.startswith("["):
         return "json"
     return "text"
+
+
+def _normalized_text(*parts: str) -> str:
+    return " ".join(part.strip().casefold() for part in parts if part).strip()
+
+
+def _matches_any_pattern(text: str, patterns: tuple[str, ...] | list[str]) -> bool:
+    normalized = text.casefold()
+    return any(pattern.casefold() in normalized for pattern in patterns)
 
 
 def load_config(config_path: Path = CONFIG_FILE) -> dict[str, Any]:
@@ -762,12 +859,122 @@ def parse_json_teles_channel_json(
     return parsed_channels
 
 
+def categorize_curated_channel(item: dict[str, Any]) -> str:
+    text = _normalized_text(
+        str(item.get("name") or ""),
+        str(item.get("group") or ""),
+        str(item.get("tvg_id") or ""),
+    )
+    if _matches_any_pattern(text, SPORTS_PATTERNS):
+        return "Deportes"
+    if _matches_any_pattern(text, MOVIE_PATTERNS):
+        if "series" in text:
+            return "Peliculas - Drama y Series"
+        return "Peliculas - Cine"
+    if _matches_any_pattern(text, NEWS_PATTERNS):
+        return "Noticias"
+    if _matches_any_pattern(text, FAMILY_PATTERNS):
+        return "Familia y TV Abierta"
+    if _matches_any_pattern(text, ENTERTAINMENT_PATTERNS):
+        return "Entretenimiento"
+    return "Otros"
+
+
+def is_low_trust_channel(item: dict[str, Any]) -> bool:
+    text = _normalized_text(
+        str(item.get("name") or ""),
+        str(item.get("group") or ""),
+        str(item.get("tvg_id") or ""),
+        str(item.get("url") or ""),
+    )
+    return _matches_any_pattern(text, ADULT_OR_LOW_TRUST_PATTERNS)
+
+
+def curated_channel_score(item: dict[str, Any], priority_patterns: list[str] | None = None) -> int:
+    text = _normalized_text(
+        str(item.get("name") or ""),
+        str(item.get("group") or ""),
+        str(item.get("tvg_id") or ""),
+    )
+    country = str(item.get("country") or "").strip().upper()
+    category = categorize_curated_channel(item)
+    score = 0
+
+    if country == "MX":
+        score += 120
+    elif country == "ALL":
+        score += 40
+
+    if category == "Familia y TV Abierta":
+        score += 80
+    elif category == "Deportes":
+        score += 70
+    elif category.startswith("Peliculas"):
+        score += 60
+    elif category == "Noticias":
+        score += 35
+    elif category == "Entretenimiento":
+        score += 30
+
+    if "mx" in text or "mex" in text or "latino" in text or "español" in text or "espanol" in text:
+        score += 20
+
+    if priority_patterns and _matches_any_pattern(text, tuple(priority_patterns)):
+        score += 200
+
+    return score
+
+
+def curate_private_channels(
+    discovered_channels: list[dict[str, Any]] | list[str],
+    *,
+    max_items: int,
+    priority_patterns: list[str] | None = None,
+) -> list[dict[str, Any]] | list[str]:
+    if not discovered_channels or isinstance(discovered_channels[0], str):
+        return limit_discovered_channels(discovered_channels, max_items=max_items)
+
+    normalized_items: list[dict[str, Any]] = []
+    for raw_item in discovered_channels:
+        if not isinstance(raw_item, dict):
+            continue
+        if is_low_trust_channel(raw_item):
+            continue
+        item = dict(raw_item)
+        item["group"] = categorize_curated_channel(item)
+        normalized_items.append(item)
+
+    buckets: dict[str, list[dict[str, Any]]] = {}
+    for item in normalized_items:
+        bucket = str(item.get("group") or "Otros")
+        buckets.setdefault(bucket, []).append(item)
+
+    for items in buckets.values():
+        items.sort(key=lambda candidate: curated_channel_score(candidate, priority_patterns), reverse=True)
+
+    curated: list[dict[str, Any]] = []
+    for bucket_name, bucket_limit in CURATED_BUCKET_LIMITS.items():
+        curated.extend(buckets.get(bucket_name, [])[:bucket_limit])
+
+    seen_urls: set[str] = set()
+    deduped: list[dict[str, Any]] = []
+    for item in sorted(curated, key=lambda candidate: curated_channel_score(candidate, priority_patterns), reverse=True):
+        normalized_url = normalize_url(str(item.get("url") or ""))
+        if not normalized_url or normalized_url in seen_urls:
+            continue
+        seen_urls.add(normalized_url)
+        deduped.append(item)
+
+    return deduped[:max_items]
+
+
 def merge_channels(
     existing_channels: list[dict[str, Any]],
     discovered_channels: list[dict[str, Any]] | list[str],
     *,
     default_group: str = "Importados",
     default_country: str = "",
+    preferred_primary_patterns: list[str] | None = None,
 ) -> tuple[list[dict[str, Any]], int]:
     merged = list(existing_channels)
     existing_urls = {
@@ -837,6 +1044,32 @@ def merge_channels(
                 if normalized_url in {existing_primary, existing_backup}:
                     failover_match = "duplicate"
                     break
+                candidate_text = _normalized_text(
+                    str(candidate.get("name") or ""),
+                    str(candidate.get("group") or ""),
+                    str(candidate.get("tvg_id") or ""),
+                )
+                if preferred_primary_patterns and _matches_any_pattern(candidate_text, tuple(preferred_primary_patterns)):
+                    old_primary = existing_primary
+                    existing_item["url"] = normalized_url
+                    backup_values = [old_primary, existing_backup]
+                    deduped_backups = []
+                    seen_backups: set[str] = set()
+                    for backup_candidate in backup_values:
+                        normalized_backup = normalize_url(backup_candidate)
+                        if (
+                            normalized_backup
+                            and normalized_backup != normalized_url
+                            and normalized_backup not in seen_backups
+                        ):
+                            seen_backups.add(normalized_backup)
+                            deduped_backups.append(normalized_backup)
+                    if deduped_backups:
+                        existing_item["backup_url"] = deduped_backups if len(deduped_backups) > 1 else deduped_backups[0]
+                    existing_urls.add(normalized_url)
+                    added += 1
+                    failover_match = "promoted_to_primary"
+                    break
                 if not existing_item.get("backup_url"):
                     existing_item["backup_url"] = normalized_url
                     existing_urls.add(normalized_url)
@@ -868,6 +1101,8 @@ async def import_single_source(
     metadata_url: str | None = None,
     category_filter: list[str] | None = None,
     max_channels: int | None = None,
+    preferred_primary_patterns: list[str] | None = None,
+    curate_private: bool = False,
 ) -> tuple[int, int]:
     cached_file = await fetch_source_to_cache(source_url, config)
 
@@ -910,10 +1145,17 @@ async def import_single_source(
         )
         detected_count = len(discovered_channels)
 
-    discovered_channels = limit_discovered_channels(
-        discovered_channels,
-        max_items=max_channels,
-    )
+    if curate_private:
+        discovered_channels = curate_private_channels(
+            discovered_channels,
+            max_items=max_channels or int(DEFAULT_CONFIG["max_private_channels_per_source"]),
+            priority_patterns=preferred_primary_patterns,
+        )
+    else:
+        discovered_channels = limit_discovered_channels(
+            discovered_channels,
+            max_items=max_channels,
+        )
     detected_count = len(discovered_channels)
 
     payload = load_sources_payload(sources_path)
@@ -923,6 +1165,7 @@ async def import_single_source(
         discovered_channels,
         default_group=default_group,
         default_country=default_country,
+        preferred_primary_patterns=preferred_primary_patterns,
     )
     if isinstance(payload, dict) and isinstance(payload.get("channels"), list):
         payload["channels"] = merged_channels
@@ -1214,6 +1457,8 @@ async def run(
                 metadata_url=source_spec.get("metadata_url"),
                 category_filter=source_spec.get("categories") if isinstance(source_spec.get("categories"), list) else None,
                 max_channels=int(config.get("max_private_channels_per_source", 500)),
+                preferred_primary_patterns=list(config.get("priority_channels", [])),
+                curate_private=True,
             )
             total_detected += batch_detected
             total_added += batch_added
