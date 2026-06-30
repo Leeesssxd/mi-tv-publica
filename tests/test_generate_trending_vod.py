@@ -11,6 +11,7 @@ from generate_trending_vod import (  # noqa: E402
     TRENDING_VOD,
     build_templated_url,
     build_vod_item,
+    load_env_overrides,
     resolve_templates,
     run,
 )
@@ -52,6 +53,39 @@ def test_resolve_templates_acepta_claves_mayusculas_desde_config():
 
     assert movie_template == "https://vod.example/movie/{id}"
     assert tv_template == "https://vod.example/tv/{id}"
+
+
+def test_load_env_overrides_lee_dotenv(tmp_path):
+    env_file = tmp_path / ".env"
+    env_file.write_text(
+        'VOD_TEMPLATE_MOVIE=https://env.example/movie/{id}\n'
+        'VOD_TEMPLATE_TV="https://env.example/tv/{id}"\n',
+        encoding="utf-8",
+    )
+
+    overrides = load_env_overrides(env_file)
+
+    assert overrides["VOD_TEMPLATE_MOVIE"] == "https://env.example/movie/{id}"
+    assert overrides["VOD_TEMPLATE_TV"] == "https://env.example/tv/{id}"
+
+
+def test_resolve_templates_acepta_custom_routing_rules(monkeypatch):
+    monkeypatch.delenv("VOD_TEMPLATE_MOVIE", raising=False)
+    monkeypatch.delenv("VOD_TEMPLATE_TV", raising=False)
+
+    movie_template, tv_template = resolve_templates(
+        {
+            "custom_routing_rules": {
+                "cloud_catalog": {
+                    "vod_template_movie": "https://routing.example/movie/{id}",
+                    "vod_template_tv": "https://routing.example/tv/{id}",
+                }
+            }
+        }
+    )
+
+    assert movie_template == "https://routing.example/movie/{id}"
+    assert tv_template == "https://routing.example/tv/{id}"
 
 
 def test_build_templated_url_formatea_movie_y_series():

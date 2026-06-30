@@ -1,6 +1,6 @@
 # Estado de canales
 
-Última revisión UTC: `2026-06-30T10:28:05Z`
+Última revisión UTC: `2026-06-30T10:58:24Z`
 
 - Canales totales: **228**
 - Canales vivos: **174**
@@ -113,7 +113,7 @@
 | Canal 44 Ciudad Juárez (720p) [Not 24/7] | Familia y TV Abierta | MX | ✅ Vivo | 200 |  |
 | Imagen TV+ (720p) | Familia y TV Abierta | MX | ✅ Vivo | 200 |  |
 | IMRyT Morelos TV (720p) | Familia y TV Abierta | MX | ❌ Muerto | 404 | HTTP 404 |
-| Ingenio TV (720p) | Familia y TV Abierta | MX | ❌ Muerto | - | Cannot connect to host aprende-usea.streaming.media.azure.net:443 ssl:False [getaddrinfo failed] |
+| Ingenio TV (720p) | Familia y TV Abierta | MX | ❌ Muerto | - | Timeout |
 | Jalisco TV (720p) | Familia y TV Abierta | MX | ✅ Vivo | 200 |  |
 | Lobo TV (720p) | Familia y TV Abierta | MX | ✅ Vivo | 200 |  |
 | Mexiquense TV (720p) | Familia y TV Abierta | MX | ✅ Vivo | 200 |  |

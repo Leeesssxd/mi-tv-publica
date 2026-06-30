@@ -95,6 +95,24 @@ def load_config(config_path: Path = CONFIG_FILE) -> dict[str, Any]:
     return payload if isinstance(payload, dict) else {}
 
 
+def load_env_overrides(env_path: Path | None = None) -> dict[str, str]:
+    dot_env_path = env_path or (ROOT_DIR / ".env")
+    if not dot_env_path.exists():
+        return {}
+
+    overrides: dict[str, str] = {}
+    for raw_line in dot_env_path.read_text(encoding="utf-8").splitlines():
+        line = raw_line.strip()
+        if not line or line.startswith("#") or "=" not in line:
+            continue
+        key, value = line.split("=", 1)
+        cleaned_key = key.strip()
+        cleaned_value = value.strip().strip('"').strip("'")
+        if cleaned_key:
+            overrides[cleaned_key] = cleaned_value
+    return overrides
+
+
 def save_sources_payload(payload: Any, sources_path: Path = SOURCES_FILE) -> None:
     sources_path.parent.mkdir(parents=True, exist_ok=True)
     sources_path.write_text(json.dumps(payload, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
@@ -117,14 +135,29 @@ def youtube_search_path(item: dict[str, Any]) -> str:
 
 def resolve_templates(config: dict[str, Any] | None = None) -> tuple[str, str]:
     config = config or {}
+    custom_routing_rules = config.get("custom_routing_rules")
+    routing_rules = custom_routing_rules if isinstance(custom_routing_rules, dict) else {}
+    cloud_rules = routing_rules.get("cloud_catalog")
+    cloud_catalog_rules = cloud_rules if isinstance(cloud_rules, dict) else {}
+    env_overrides = load_env_overrides()
     movie_template = str(
         os.getenv("VOD_TEMPLATE_MOVIE")
+        or env_overrides.get("VOD_TEMPLATE_MOVIE")
+        or cloud_catalog_rules.get("VOD_TEMPLATE_MOVIE")
+        or cloud_catalog_rules.get("vod_template_movie")
+        or routing_rules.get("VOD_TEMPLATE_MOVIE")
+        or routing_rules.get("vod_template_movie")
         or config.get("VOD_TEMPLATE_MOVIE")
         or config.get("vod_template_movie")
         or TEMPLATE_MOVIE
     ).strip()
     tv_template = str(
         os.getenv("VOD_TEMPLATE_TV")
+        or env_overrides.get("VOD_TEMPLATE_TV")
+        or cloud_catalog_rules.get("VOD_TEMPLATE_TV")
+        or cloud_catalog_rules.get("vod_template_tv")
+        or routing_rules.get("VOD_TEMPLATE_TV")
+        or routing_rules.get("vod_template_tv")
         or config.get("VOD_TEMPLATE_TV")
         or config.get("vod_template_tv")
         or TEMPLATE_TV

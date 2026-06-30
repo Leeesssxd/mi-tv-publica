@@ -57,6 +57,7 @@ ROOT_DIR = Path(__file__).resolve().parent.parent
 SOURCES_FILE = ROOT_DIR / "sources" / "channels.json"
 PUBLIC_DIR = ROOT_DIR / "public"
 CONFIG_FILE = ROOT_DIR / "config.json"
+VOD_PLAYLIST_FILE = PUBLIC_DIR / "vod_playlist.m3u"
 
 PLAYABLE_CONTENT_HINTS = (
     "mpegurl",
@@ -329,8 +330,12 @@ class Channel:
 
 
 def _is_non_playable_catalog_entry(raw: dict[str, Any]) -> bool:
-    return False
-    #
+    group = str(raw.get("group") or "").strip()
+    availability = str(raw.get("availability") or "").strip().casefold()
+    url = str(raw.get("url") or "").strip().casefold()
+
+    if group != "Mi Catálogo Cloud":
+        return False
     if availability == "metadata_only":
         return True
     if availability == "templated_routing" and "localhost" in url:
@@ -443,6 +448,25 @@ def _extract_channel_entries(payload: Any) -> list[dict[str, Any]]:
 
     visit(payload)
     return extracted
+
+
+def load_cloud_catalog_items(sources_path: Path = SOURCES_FILE) -> list[dict[str, Any]]:
+    if not sources_path.exists():
+        raise FileNotFoundError(f"No se encontro {sources_path}")
+
+    payload = json.loads(sources_path.read_text(encoding="utf-8"))
+    if not isinstance(payload, dict):
+        return []
+
+    cloud_catalog = payload.get("cloud_catalog")
+    if not isinstance(cloud_catalog, dict):
+        return []
+
+    items = cloud_catalog.get("items")
+    if not isinstance(items, list):
+        return []
+
+    return [item for item in items if isinstance(item, dict)]
 
 
 def _looks_playable(content_type: str) -> bool:
@@ -710,6 +734,25 @@ def build_m3u(statuses: list[ChannelStatus]) -> str:
     return "\n".join(lines) + "\n"
 
 
+def build_vod_m3u(items: list[dict[str, Any]]) -> str:
+    lines = ["#EXTM3U"]
+    for raw in items:
+        name = _escape_m3u_field(str(raw.get("name") or "").strip())
+        url = str(raw.get("url") or "").strip()
+        if not name or not url:
+            continue
+        group = _escape_m3u_field(str(raw.get("group") or "Mi Catálogo Cloud").strip())
+        tvg_id = _escape_m3u_field(str(raw.get("tvg_id") or "").strip())
+        logo = _escape_m3u_field(str(raw.get("logo") or "").strip())
+        extinf = (
+            f'#EXTINF:-1 tvg-id="{tvg_id}" tvg-name="{name}" '
+            f'tvg-logo="{logo}" group-title="{group}",{name}'
+        )
+        lines.append(extinf)
+        lines.append(url)
+    return "\n".join(lines) + "\n"
+
+
 def has_playable_channels(statuses: list[ChannelStatus]) -> bool:
     return any(status.state in {"alive", "unstable"} for status in statuses)
 
@@ -781,6 +824,11 @@ def write_outputs(statuses: list[ChannelStatus], public_dir: Path = PUBLIC_DIR) 
     return fallback_used
 
 
+def write_vod_output(items: list[dict[str, Any]], public_dir: Path = PUBLIC_DIR) -> None:
+    public_dir.mkdir(parents=True, exist_ok=True)
+    (public_dir / "vod_playlist.m3u").write_text(build_vod_m3u(items), encoding="utf-8")
+
+
 def print_summary(statuses: list[ChannelStatus]) -> None:
     total = len(statuses)
     alive = sum(1 for s in statuses if s.state == "alive")
@@ -802,6 +850,7 @@ def print_summary(statuses: list[ChannelStatus]) -> None:
 async def run(sources_path: Path, public_dir: Path, config_path: Path) -> list[ChannelStatus]:
     config = load_config(config_path)
     channels = load_channels(sources_path)
+    cloud_catalog_items = load_cloud_catalog_items(sources_path)
 
     if not channels:
         print("[WARN] No hay canales validos en sources/channels.json")
@@ -817,6 +866,7 @@ async def run(sources_path: Path, public_dir: Path, config_path: Path) -> list[C
         )
 
     fallback_used = write_outputs(statuses, public_dir)
+    write_vod_output(cloud_catalog_items, public_dir)
     if fallback_used:
         print("[WARN] Se conservo la ultima playlist valida por una caida masiva del upstream.")
     print_summary(statuses)

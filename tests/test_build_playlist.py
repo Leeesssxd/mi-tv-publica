@@ -20,12 +20,15 @@ from build_playlist import (  # noqa: E402
     build_m3u,
     build_status_json,
     build_status_markdown,
+    build_vod_m3u,
     classify_group,
     has_playable_channels,
     load_channels,
+    load_cloud_catalog_items,
     load_config,
     regroup_statuses,
     sort_statuses,
+    write_vod_output,
     write_outputs,
 )
 
@@ -175,6 +178,28 @@ def test_load_channels_conserva_items_templated_routing_configurados(tmp_path):
     channels = load_channels(sources_file)
 
     assert [channel.name for channel in channels] == ["Movie Template Configurado"]
+
+
+def test_load_cloud_catalog_items_extrae_items_del_bloque_cloud(tmp_path):
+    sources_file = tmp_path / "channels.json"
+    sources_file.write_text(
+        json.dumps(
+            {
+                "channels": [{"name": "Base", "url": "https://a.com/x.m3u8"}],
+                "cloud_catalog": {
+                    "items": [
+                        {"name": "Movie One (2024)", "url": "https://vod.example/movie/1"},
+                        {"name": "Series One (2024)", "url": "https://vod.example/tv/2/1/1"},
+                    ]
+                },
+            }
+        ),
+        encoding="utf-8",
+    )
+
+    items = load_cloud_catalog_items(sources_file)
+
+    assert [item["name"] for item in items] == ["Movie One (2024)", "Series One (2024)"]
 
 
 def test_load_config_conserva_custom_routing_rules_si_es_dict(tmp_path):
@@ -352,6 +377,20 @@ def test_build_m3u_sin_canales_vivos_devuelve_solo_encabezado():
     assert m3u.strip() == "#EXTM3U"
 
 
+def test_build_vod_m3u_incluye_todos_los_items_sin_revision_http():
+    m3u = build_vod_m3u(
+        [
+            {"name": "Movie One (2024)", "group": "Mi Catálogo Cloud", "url": "https://vod.example/movie/1", "tvg_id": "tt1", "logo": ""},
+            {"name": "Series One (2024)", "group": "Mi Catálogo Cloud", "url": "https://vod.example/tv/2/1/1", "tvg_id": "tt2", "logo": ""},
+        ]
+    )
+
+    assert m3u.startswith("#EXTM3U")
+    assert "Movie One (2024)" in m3u
+    assert "Series One (2024)" in m3u
+    assert "https://vod.example/tv/2/1/1" in m3u
+
+
 def test_has_playable_channels_detecta_alive_e_unstable():
     statuses = [
         make_status("Muerto", "Grupo", False),
@@ -373,6 +412,19 @@ def test_write_outputs_conserva_playlist_previa_si_todo_cae(tmp_path):
 
     assert fallback_used is True
     assert "Canal Respaldo" in (public_dir / "playlist.m3u").read_text(encoding="utf-8")
+
+
+def test_write_vod_output_crea_playlist_independiente(tmp_path):
+    public_dir = tmp_path / "public"
+    items = [
+        {"name": "Movie One (2024)", "group": "Mi Catálogo Cloud", "url": "https://vod.example/movie/1", "tvg_id": "tt1", "logo": ""}
+    ]
+
+    write_vod_output(items, public_dir)
+
+    vod_playlist = (public_dir / "vod_playlist.m3u").read_text(encoding="utf-8")
+    assert "Movie One (2024)" in vod_playlist
+    assert "https://vod.example/movie/1" in vod_playlist
 
 
 # ---------------------------------------------------------------------------
