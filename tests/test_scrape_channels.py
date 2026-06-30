@@ -12,6 +12,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "scripts"))
 
 from scrape_channels import (  # noqa: E402
     DEFAULT_IPTVORG_CHANNELS_URL,
+    DEFAULT_SECONDARY_SOURCES,
     DEFAULT_SOURCE_URL,
     ensure_unique_name,
     extract_m3u8_links,
@@ -159,6 +160,32 @@ def test_parse_iptv_org_streams_convierte_a_formato_local(tmp_path):
     ]
 
 
+def test_parse_iptv_org_streams_filtra_por_categoria(tmp_path):
+    streams_file = tmp_path / "streams.json"
+    channels_file = tmp_path / "channels.json"
+    streams_file.write_text(
+        '[{"channel":"sport.no","title":"Sport","url":"https://a.com/sport.m3u8"},{"channel":"news.no","title":"News","url":"https://a.com/news.m3u8"}]',
+        encoding="utf-8",
+    )
+    channels_file.write_text(
+        '[{"id":"sport.no","name":"Sport Norge","country":"NO","categories":["sports"]},{"id":"news.no","name":"News Norge","country":"NO","categories":["news"]}]',
+        encoding="utf-8",
+    )
+
+    parsed = parse_iptv_org_streams(streams_file, channels_file, country_filter="NO", category_filter=["sports"])
+
+    assert parsed == [
+        {
+            "name": "Sport Norge",
+            "group": "Sports",
+            "country": "NO",
+            "url": "https://a.com/sport.m3u8",
+            "logo": "",
+            "tvg_id": "sport.no",
+        }
+    ]
+
+
 def test_parse_generic_channel_json_convierte_a_formato_local(tmp_path):
     source_file = tmp_path / "channels.json"
     source_file.write_text(
@@ -217,6 +244,40 @@ def test_parse_json_teles_channel_json_convierte_senales_m3u8(tmp_path):
             "url": "https://example.com/live/chunks.m3u8",
             "logo": "https://example.com/logo.png",
             "tvg_id": "net-tv",
+        }
+    ]
+
+
+def test_parse_json_teles_channel_json_acepta_catalogo_actual(tmp_path):
+    source_file = tmp_path / "canales.json"
+    source_file.write_text(
+        """
+        {
+          "nordic-sport": {
+            "nombre": "Nordic Sport",
+            "logo": "https://example.com/logo.png",
+            "país": "no",
+            "categoría": "sports",
+            "señales": {
+              "m3u8_url": ["https://example.com/live/nordic.m3u8"],
+              "iframe_url": ["https://example.com/embed"]
+            }
+          }
+        }
+        """,
+        encoding="utf-8",
+    )
+
+    parsed = parse_json_teles_channel_json(source_file, country_filter="NO")
+
+    assert parsed == [
+        {
+            "name": "Nordic Sport",
+            "group": "Sports",
+            "country": "NO",
+            "url": "https://example.com/live/nordic.m3u8",
+            "logo": "https://example.com/logo.png",
+            "tvg_id": "nordic-sport",
         }
     ]
 
@@ -373,6 +434,37 @@ def test_merge_channels_renombra_registros_descubiertos_con_nombre_duplicado():
     assert merged[1]["name"] == "Canal Demo (2)"
 
 
+def test_merge_channels_promueve_mirror_a_backup_url():
+    existing = [
+        {
+            "name": "Canal Demo",
+            "group": "Base",
+            "country": "MX",
+            "url": "https://example.com/main.m3u8",
+            "logo": "",
+            "tvg_id": "canal-demo",
+        }
+    ]
+
+    merged, added = merge_channels(
+        existing,
+        [
+            {
+                "name": "Canal Demo",
+                "group": "Base",
+                "country": "MX",
+                "url": "https://example.com/backup.m3u8",
+                "logo": "",
+                "tvg_id": "canal-demo",
+            }
+        ],
+    )
+
+    assert added == 1
+    assert len(merged) == 1
+    assert merged[0]["backup_url"] == "https://example.com/backup.m3u8"
+
+
 def test_ensure_unique_name_agrega_sufijo_si_ya_existe():
     used_names = {"canal demo"}
     assert ensure_unique_name("Canal Demo", used_names) == "Canal Demo (2)"
@@ -386,8 +478,13 @@ def test_cache_roundtrip(tmp_path):
 
 
 def test_default_source_url_apunta_a_iptv_org():
-    assert DEFAULT_SOURCE_URL == "https://iptv-org.github.io/iptv/index.m3u"
+    assert DEFAULT_SOURCE_URL == "https://iptv-org.github.io/iptv/countries/mx.m3u"
 
 
 def test_default_metadata_url_apunta_a_iptv_org():
     assert DEFAULT_IPTVORG_CHANNELS_URL == "https://iptv-org.github.io/api/channels.json"
+
+
+def test_default_secondary_sources_incluyen_mexico_y_noruega():
+    assert any(source.get("country") == "MX" for source in DEFAULT_SECONDARY_SOURCES)
+    assert any(source.get("country") == "NO" for source in DEFAULT_SECONDARY_SOURCES)

@@ -67,6 +67,19 @@ def test_channel_from_dict_valida_campos_obligatorios():
     assert channel.country == ""
 
 
+def test_channel_from_dict_acepta_backup_url_y_lista_de_urls():
+    channel = Channel.from_dict(
+        {
+            "name": "Canal A",
+            "url": ["https://a.com/main.m3u8", "https://a.com/mirror.m3u8"],
+            "backup_url": "https://a.com/failover.m3u8",
+        }
+    )
+
+    assert channel.url == "https://a.com/main.m3u8"
+    assert channel.backup_urls == ["https://a.com/mirror.m3u8", "https://a.com/failover.m3u8"]
+
+
 def test_channel_from_dict_rechaza_sin_name():
     with pytest.raises(ValueError):
         Channel.from_dict({"url": "https://a.com/x.m3u8"})

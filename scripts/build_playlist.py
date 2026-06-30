@@ -308,6 +308,7 @@ CANONICAL_GROUPS = {
 class Channel:
     name: str
     url: str
+    backup_urls: list[str] = field(default_factory=list)
     group: str = "General"
     country: str = ""
     logo: str = ""
@@ -316,17 +317,49 @@ class Channel:
     @staticmethod
     def from_dict(raw: dict[str, Any]) -> "Channel":
         name = (raw.get("name") or "").strip()
-        url = (raw.get("url") or "").strip()
+        raw_url = raw.get("url")
+        primary_url = ""
+        backup_urls: list[str] = []
+
+        if isinstance(raw_url, list):
+            normalized_urls = [str(item).strip() for item in raw_url if str(item).strip()]
+            if normalized_urls:
+                primary_url = normalized_urls[0]
+                backup_urls.extend(normalized_urls[1:])
+        else:
+            primary_url = str(raw_url or "").strip()
+
+        raw_backup = raw.get("backup_url")
+        if isinstance(raw_backup, list):
+            backup_urls.extend(str(item).strip() for item in raw_backup if str(item).strip())
+        else:
+            backup_candidate = str(raw_backup or "").strip()
+            if backup_candidate:
+                backup_urls.append(backup_candidate)
+
+        deduped_backups: list[str] = []
+        seen_backups: set[str] = set()
+        for candidate in backup_urls:
+            normalized_candidate = candidate.casefold()
+            if not candidate or normalized_candidate == primary_url.casefold() or normalized_candidate in seen_backups:
+                continue
+            seen_backups.add(normalized_candidate)
+            deduped_backups.append(candidate)
+
         if not name:
             raise ValueError(f"Canal sin 'name': {raw}")
-        if not url:
+        if not primary_url:
             raise ValueError(f"Canal sin 'url': {raw}")
-        if not (url.startswith("http://") or url.startswith("https://")):
-            raise ValueError(f"URL invalida (debe empezar con http/https): {url}")
+        if not (primary_url.startswith("http://") or primary_url.startswith("https://")):
+            raise ValueError(f"URL invalida (debe empezar con http/https): {primary_url}")
+        for backup_url in deduped_backups:
+            if not (backup_url.startswith("http://") or backup_url.startswith("https://")):
+                raise ValueError(f"backup_url invalida (debe empezar con http/https): {backup_url}")
 
         return Channel(
             name=name,
-            url=url,
+            url=primary_url,
+            backup_urls=deduped_backups,
             group=(raw.get("group") or "General").strip() or "General",
             country=(raw.get("country") or "").strip(),
             logo=(raw.get("logo") or "").strip(),
@@ -538,6 +571,7 @@ def _build_headers(config: dict[str, Any]) -> dict[str, str]:
 def _make_status(
     channel: Channel,
     *,
+    active_url: str | None = None,
     state: str,
     status_code: int | None,
     error: str | None,
@@ -546,7 +580,7 @@ def _make_status(
         name=channel.name,
         group=channel.group,
         country=channel.country,
-        url=channel.url,
+        url=active_url or channel.url,
         logo=channel.logo,
         tvg_id=channel.tvg_id,
         alive=state == "alive",
@@ -556,11 +590,11 @@ def _make_status(
     )
 
 
-async def _request_channel(
+async def _request_channel_candidate(
     session: aiohttp.ClientSession,
-    channel: Channel,
+    url: str,
     config: dict[str, Any],
-) -> ChannelStatus:
+) -> tuple[int | None, str, str | None]:
     attempts = int(config.get("retry_attempts", 3))
     backoff_base = float(config.get("retry_backoff_base_seconds", 1.0))
 
@@ -568,7 +602,7 @@ async def _request_channel(
         await _sleep_with_jitter(config)
         try:
             async with session.get(
-                channel.url,
+                url,
                 allow_redirects=True,
                 ssl=False,
             ) as response:
@@ -576,66 +610,71 @@ async def _request_channel(
                 if response.status in RETRIABLE_STATUS_CODES and attempt < attempts:
                     await asyncio.sleep(backoff_base * (2 ** (attempt - 1)))
                     continue
+                return response.status, content_type, None
+        except asyncio.TimeoutError:
+            return None, "", "Timeout"
+        except aiohttp.ClientError as exc:
+            return None, "", str(exc)
+        except Exception as exc:  # noqa: BLE001
+            return None, "", f"Error inesperado: {exc}"
 
-                if response.status == 401:
-                    return _make_status(
-                        channel,
-                        state="dead",
-                        status_code=response.status,
-                        error="No autorizado por el origen (401)",
-                    )
+    return None, "", "Agotado tras reintentos"
 
-                if 200 <= response.status < 400:
-                    if _looks_playable(content_type):
-                        return _make_status(
-                            channel,
-                            state="alive",
-                            status_code=response.status,
-                            error=None,
-                        )
-                    return _make_status(
-                        channel,
-                        state="unstable",
-                        status_code=response.status,
-                        error=f"Handshake correcto pero contenido inestable ({content_type or 'sin content-type'})",
-                    )
 
+async def _request_channel(
+    session: aiohttp.ClientSession,
+    channel: Channel,
+    config: dict[str, Any],
+) -> ChannelStatus:
+    candidate_urls = [channel.url, *channel.backup_urls]
+    last_status_code: int | None = None
+    last_error: str | None = None
+
+    for index, candidate_url in enumerate(candidate_urls):
+        status_code, content_type, error = await _request_channel_candidate(session, candidate_url, config)
+        last_status_code = status_code
+        last_error = error
+
+        if status_code is None:
+            if index < len(candidate_urls) - 1:
+                continue
+            return _make_status(
+                channel,
+                active_url=candidate_url,
+                state="dead",
+                status_code=None,
+                error=error,
+            )
+
+        if 200 <= status_code < 400:
+            if _looks_playable(content_type):
                 return _make_status(
                     channel,
-                    state="dead",
-                    status_code=response.status,
-                    error=f"HTTP {response.status}",
+                    active_url=candidate_url,
+                    state="alive",
+                    status_code=status_code,
+                    error=None,
                 )
-        except asyncio.TimeoutError:
-            if attempt < attempts:
-                await asyncio.sleep(backoff_base * (2 ** (attempt - 1)))
-                continue
             return _make_status(
                 channel,
-                state="dead",
-                status_code=None,
-                error="Timeout",
-            )
-        except aiohttp.ClientError as exc:
-            message = str(exc)
-            if attempt < attempts:
-                await asyncio.sleep(backoff_base * (2 ** (attempt - 1)))
-                continue
-            return _make_status(
-                channel,
-                state="dead",
-                status_code=None,
-                error=message,
-            )
-        except Exception as exc:  # noqa: BLE001
-            return _make_status(
-                channel,
-                state="dead",
-                status_code=None,
-                error=f"Error inesperado: {exc}",
+                active_url=candidate_url,
+                state="unstable",
+                status_code=status_code,
+                error=f"Handshake correcto pero contenido inestable ({content_type or 'sin content-type'})",
             )
 
-    return _make_status(channel, state="dead", status_code=None, error="Agotado tras reintentos")
+        if index < len(candidate_urls) - 1:
+            continue
+
+        return _make_status(
+            channel,
+            active_url=candidate_url,
+            state="dead",
+            status_code=status_code,
+            error=f"HTTP {status_code}",
+        )
+
+    return _make_status(channel, state="dead", status_code=last_status_code, error=last_error)
 
 
 async def check_channel(

@@ -11,6 +11,18 @@
   "jitter_max_seconds": 1.5,
   "cache_ttl_seconds": 21600,
   "chunk_size_bytes": 65536,
+  "secondary_sources": [
+    {
+      "source_url": "https://raw.githubusercontent.com/Alplox/json-teles/main/canales.json",
+      "group": "Familia y TV Abierta",
+      "country": "MX"
+    },
+    {
+      "source_url": "https://iptv-org.github.io/iptv/countries/no.m3u",
+      "group": "Deportes Públicos Internacionales",
+      "country": "NO"
+    }
+  ],
   "sort_by": ["group", "name"],
   "group_order": [
     "Familia y TV Abierta",

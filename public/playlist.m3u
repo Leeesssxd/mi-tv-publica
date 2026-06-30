@@ -5,16 +5,40 @@ http://190.11.225.124:5000/live/canal5_hd/playlist.m3u8
 https://video0.rogohosting.com:19360/tvcozumel/tvcozumel.m3u8
 #EXTINF:-1 tvg-id="Canal5.mx" tvg-name="Canal 5 (720p)" tvg-logo="" group-title="Familia y TV Abierta",Canal 5 (720p)
 http://45.5.119.43:4000/play/a05o/index.m3u8
+#EXTINF:-1 tvg-id="Azteca7.mx" tvg-name="Azteca 7" tvg-logo="" group-title="Familia y TV Abierta",Azteca 7
+https://mdstrm.com/live-stream-playlist/609ad46a7a441137107d7a81.m3u8
+#EXTINF:-1 tvg-id="AztecaUno.mx" tvg-name="Azteca Uno" tvg-logo="https://static.wikia.nocookie.net/logopedia/images/5/58/Logo_Azteca_Uno_2023.png" group-title="Familia y TV Abierta",Azteca Uno
+https://mdstrm.com/live-stream-playlist/609b243156cca108312822a6.m3u8
+#EXTINF:-1 tvg-id="LasEstrellas.mx@SD" tvg-name="Las Estrellas (1080p)" tvg-logo="https://i.imgur.com/g5ShxZ7.png" group-title="Familia y TV Abierta",Las Estrellas (1080p)
+https://channel01-onlymex.akamaized.net/hls/live/2022749/event01/index.m3u8
 #EXTINF:-1 tvg-id="TVPublica.ar" tvg-name="TV Pública" tvg-logo="" group-title="Familia y TV Abierta",TV Pública
 http://playcom.trapemn.tv:1935/transcoderip/tvpublica.stream/playlist.m3u8
 #EXTINF:-1 tvg-id="AztecaInternacional.mx@SD" tvg-name="Azteca Internacional (1080p)" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/e/eb/Azteca_Internacional_logo_2023.png" group-title="Familia y TV Abierta",Azteca Internacional (1080p)
 https://azt-mun.otteravision.com/azt/mun/mun.m3u8
 #EXTINF:-1 tvg-id="AztecaInternacional.mx" tvg-name="Azteca Internacional (720p)" tvg-logo="" group-title="Familia y TV Abierta",Azteca Internacional (720p)
 https://jmp2.uk/plu-646cce4d1593940008a33f09.m3u8
+#EXTINF:-1 tvg-id="MilenioTelevision.mx" tvg-name="Milenio Television (720p)" tvg-logo="" group-title="Noticias",Milenio Television (720p)
+https://mdstrm.com/live-stream-playlist/610178c7db32a4112d994650.m3u8
 #EXTINF:-1 tvg-id="MilenioTelevision.mx@SD" tvg-name="Milenio Televisión (720p)" tvg-logo="https://i.imgur.com/TG1T5Oh.png" group-title="Noticias",Milenio Televisión (720p)
 https://jmp2.uk/plu-652e922db4b047000825f975.m3u8
 #EXTINF:-1 tvg-id="TelediarioNow.mx" tvg-name="Telediario Now" tvg-logo="" group-title="Noticias",Telediario Now
 https://stream.ads.ottera.tv/playlist.m3u8?network_id=11014
+#EXTINF:-1 tvg-id="MultimediosBajio.mx@SD" tvg-name="Multimedios Bajío (720p) [Not 24/7]" tvg-logo="https://i.imgur.com/4IGzNdq.png" group-title="Noticias",Multimedios Bajío (720p) [Not 24/7]
+https://mdstrm.com/live-stream-playlist/5d4b0fec848918070128c8cb.m3u8
+#EXTINF:-1 tvg-id="MultimediosCDMX.mx@SD" tvg-name="Multimedios CDMX (720p) [Not 24/7]" tvg-logo="https://i.imgur.com/4IGzNdq.png" group-title="Noticias",Multimedios CDMX (720p) [Not 24/7]
+https://mdstrm.com/live-stream-playlist/5f2d9d6ff17144074bd8a284.m3u8
+#EXTINF:-1 tvg-id="MultimediosCiudadJuarez.mx@SD" tvg-name="Multimedios Ciudad Juárez (720p) [Not 24/7]" tvg-logo="https://i.imgur.com/4IGzNdq.png" group-title="Noticias",Multimedios Ciudad Juárez (720p) [Not 24/7]
+https://mdstrm.com/live-stream-playlist/5d9e440d675235586a92be7f.m3u8
+#EXTINF:-1 tvg-id="MultimediosGuadalajara.mx@SD" tvg-name="Multimedios Guadalajara (720p) [Not 24/7]" tvg-logo="https://i.imgur.com/4IGzNdq.png" group-title="Noticias",Multimedios Guadalajara (720p) [Not 24/7]
+https://mdstrm.com/live-stream-playlist/5c54d38ca392a5119bb0aa0d.m3u8
+#EXTINF:-1 tvg-id="MultimediosLaguna.mx@SD" tvg-name="Multimedios Laguna (720p) [Not 24/7]" tvg-logo="https://i.imgur.com/4IGzNdq.png" group-title="Noticias",Multimedios Laguna (720p) [Not 24/7]
+https://mdstrm.com/live-stream-playlist/57bf686a61ff39e1085d43e1.m3u8
+#EXTINF:-1 tvg-id="MultimediosMonterrey.mx@SD" tvg-name="Multimedios Monterrey (720p) [Not 24/7]" tvg-logo="https://i.imgur.com/4IGzNdq.png" group-title="Noticias",Multimedios Monterrey (720p) [Not 24/7]
+https://mdstrm.com/live-stream-playlist/57b4dbf5dbbfc8f16bb63ce1.m3u8
+#EXTINF:-1 tvg-id="MultimediosPuebla.mx@SD" tvg-name="Multimedios Puebla (720p) [Not 24/7]" tvg-logo="https://i.imgur.com/4IGzNdq.png" group-title="Noticias",Multimedios Puebla (720p) [Not 24/7]
+https://mdstrm.com/live-stream-playlist/5d56ed29c92dd106ff01543b.m3u8
+#EXTINF:-1 tvg-id="MultimediosSaltillo.mx@SD" tvg-name="Multimedios Saltillo (720p) [Not 24/7]" tvg-logo="https://i.imgur.com/4IGzNdq.png" group-title="Noticias",Multimedios Saltillo (720p) [Not 24/7]
+https://mdstrm.com/live-stream-playlist/5d5d51a4e9a40e25f4a0332c.m3u8
 #EXTINF:-1 tvg-id="Canal26.mx@SD" tvg-name="Canal 26 Aguascalientes (1080p)" tvg-logo="https://i.imgur.com/PAvnVN9.png" group-title="Familia y TV Abierta",Canal 26 Aguascalientes (1080p)
 https://60417ddeaf0d9.streamlock.net/telemetrika3/smil:telemetrika3.smil/playlist.m3u8
 #EXTINF:-1 tvg-id="XHPBZCTDT1.mx@SD" tvg-name="SET Televisión Canal 26.1 (720p) [Not 24/7]" tvg-logo="https://i.imgur.com/dbJKErB.png" group-title="Familia y TV Abierta",SET Televisión Canal 26.1 (720p) [Not 24/7]
@@ -31,10 +55,6 @@ https://stream.ads.ottera.tv/playlist.m3u8?network_id=6404
 https://5fc584f3f19c9.streamlock.net/canal222/smil:canal222.smil/playlist.m3u8
 #EXTINF:-1 tvg-id="Golden.mx" tvg-name="Golden (240p)" tvg-logo="" group-title="Peliculas - Cine",Golden (240p)
 https://rpn.bozztv.com/gusa/gusa-goldentv/index.m3u8
-#EXTINF:-1 tvg-id="Filmex.mx@SD" tvg-name="Filmex (Xumo) (1080p) [Geo-blocked]" tvg-logo="https://i.imgur.com/Hiz2OyC.png" group-title="Peliculas - Cine",Filmex (Xumo) (1080p) [Geo-blocked]
-https://filmex-filmex-xumo.amagi.tv/playlist.m3u8
-#EXTINF:-1 tvg-id="FilmexClasico.mx@SD" tvg-name="Filmex Clásico (1080p) [Geo-blocked]" tvg-logo="https://i.imgur.com/D3dj4mv.png" group-title="Peliculas - Cine",Filmex Clásico (1080p) [Geo-blocked]
-https://filmex-filmexclasico-xumo.amagi.tv/playlist.m3u8
 #EXTINF:-1 tvg-id="RuntimeAccion.mx" tvg-name="Runtime Acción" tvg-logo="" group-title="Peliculas - Accion",Runtime Acción
 https://stream.ads.ottera.tv/playlist.m3u8?network_id=2550
 #EXTINF:-1 tvg-id="RuntimeCineSeries.mx" tvg-name="Runtime Cine y Series" tvg-logo="" group-title="Peliculas - Drama y Series",Runtime Cine y Series
@@ -65,12 +85,18 @@ https://jmp2.uk/plu-63f7e3f9dff38e00082a57af.m3u8
 https://stream.ads.ottera.tv/playlist.m3u8?network_id=5106
 #EXTINF:-1 tvg-id="TyCSports.ar" tvg-name="TyC Sports" tvg-logo="" group-title="Deportes",TyC Sports
 https://amg26268-amg26268c14-freelivesports-emea-10267.playouts.now.amagi.tv/ts-us-e2-n2/playlist/amg26268-sportsstudio-tycsports-freelivesportsemea/playlist.m3u8
-#EXTINF:-1 tvg-id="DeporTV.ar" tvg-name="DeporTV" tvg-logo="" group-title="Deportes",DeporTV
-https://edgectc.com/DEPORTES_CTC_PLUS/index.m3u8
 #EXTINF:-1 tvg-id="ComedyCentralLatinAmerica.us@Panregional" tvg-name="Comedy Central Latin America (1080p)" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Comedy_Central_2018.svg/960px-Comedy_Central_2018.svg.png" group-title="Peliculas - Comedia",Comedy Central Latin America (1080p)
 http://181.119.93.83:8000/play/a1di/index.m3u8
+#EXTINF:-1 tvg-id="StarTrekMovies.se@NO" tvg-name="Star Trek Movies" tvg-logo="https://images.pluto.tv/channels/6400c281dff38e00083f59da/colorLogoPNG.png" group-title="Peliculas - Cine",Star Trek Movies
+https://jmp2.uk/plu-6400c228498393000878a9b7.m3u8
+#EXTINF:-1 tvg-id="ViafreeMovies.se@NO" tvg-name="Viafree Movies" tvg-logo="https://images.pluto.tv/channels/62bebc3459624e00078209c3/colorLogoPNG.png" group-title="Peliculas - Cine",Viafree Movies
+https://jmp2.uk/plu-62beb44e3afd120007915d1b.m3u8
 #EXTINF:-1 tvg-id="8NTV.mx@SD" tvg-name="8NTV (1080p)" tvg-logo="https://i.imgur.com/7ecgGIG.png" group-title="Familia y TV Abierta",8NTV (1080p)
 https://60417ddeaf0d9.streamlock.net/ntv/videontv/playlist.m3u8
+#EXTINF:-1 tvg-id="B15Fresnillo.mx@SD" tvg-name="B15 Fresnillo (1080p)" tvg-logo="https://i.imgur.com/kaUhEQy.png" group-title="Familia y TV Abierta",B15 Fresnillo (1080p)
+https://s5.mexside.net:1936/lsac/lsac/playlist.m3u8
+#EXTINF:-1 tvg-id="B15Zacatecas.mx@SD" tvg-name="B15 Zacatecas (1080p)" tvg-logo="https://i.imgur.com/kaUhEQy.png" group-title="Familia y TV Abierta",B15 Zacatecas (1080p)
+https://s5.mexside.net:1936/envio2/envio2/playlist.m3u8
 #EXTINF:-1 tvg-id="Canal10Durango.mx@SD" tvg-name="Canal 10 Durango (1080p)" tvg-logo="https://i.imgur.com/H34quHQ.png" group-title="Familia y TV Abierta",Canal 10 Durango (1080p)
 https://5e50264bd6766.streamlock.net/canal10durango/videocanal10durango/playlist.m3u8
 #EXTINF:-1 tvg-id="Capital21.mx@SD" tvg-name="Capital 21 (1080p) [Not 24/7]" tvg-logo="https://i.imgur.com/8ign49i.png" group-title="Familia y TV Abierta",Capital 21 (1080p) [Not 24/7]
@@ -103,6 +129,8 @@ https://servilive.com:3263/live/channel12live.m3u8
 https://5ca3e84a76d30.streamlock.net/teleyucatan/videoteleyucatan/playlist.m3u8
 #EXTINF:-1 tvg-id="XEWHTDT.mx@SD" tvg-name="Telemax (XEWH-TDT) (1080p)" tvg-logo="https://i.imgur.com/klhTyDU.png" group-title="Familia y TV Abierta",Telemax (XEWH-TDT) (1080p)
 https://s5.mexside.net:1936/telemax/telemax/playlist.m3u8
+#EXTINF:-1 tvg-id="TVBUAP.mx@SD" tvg-name="TV BUAP (1080p)" tvg-logo="https://i.imgur.com/hHrIn0r.png" group-title="Familia y TV Abierta",TV BUAP (1080p)
+https://tvenvivo.buap.mx/livestream/stream/index.m3u8
 #EXTINF:-1 tvg-id="TVCuatro41.mx@SD" tvg-name="TV Cuatro 4.1 (1080p)" tvg-logo="https://i.imgur.com/Of044Jx.png" group-title="Familia y TV Abierta",TV Cuatro 4.1 (1080p)
 https://5f1af61612fb5.streamlock.net/tv4/tv4.smil/.m3u8
 #EXTINF:-1 tvg-id="TVCuatro41.mx" tvg-name="TV Cuatro 4.1 (1080p)" tvg-logo="" group-title="Familia y TV Abierta",TV Cuatro 4.1 (1080p)
@@ -209,14 +237,16 @@ https://stream.ads.ottera.tv/playlist.m3u8?network_id=6405
 https://5ca3e84a76d30.streamlock.net:443/canal66/videocanal66/playlist.m3u8
 #EXTINF:-1 tvg-id="Canal7Neuquen.ar" tvg-name="Canal 7 Neuquén" tvg-logo="" group-title="Familia y TV Abierta",Canal 7 Neuquén
 https://stream.arcast.com.ar/c7nq/ngrp:c7nq_all/playlist.m3u8
-#EXTINF:-1 tvg-id="Canal99Miramar.ar" tvg-name="Canal 99 Miramar" tvg-logo="" group-title="Familia y TV Abierta",Canal 99 Miramar
-https://vivo.solumedia.com:19360/cardinal/cardinal.m3u8
 #EXTINF:-1 tvg-id="CanalProvincial.ar" tvg-name="Canal Provincial" tvg-logo="" group-title="Familia y TV Abierta",Canal Provincial
 https://streaming.telered.com.ar/provincial/streaming/mystream.m3u8
 #EXTINF:-1 tvg-id="ElTrece.ar" tvg-name="El Trece" tvg-logo="" group-title="Familia y TV Abierta",El Trece
 https://livetrx01.vodgc.net/eltrecetv/index.m3u8
+#EXTINF:-1 tvg-id="MVSTV.mx" tvg-name="MVS TV" tvg-logo="" group-title="Familia y TV Abierta",MVS TV
+https://dish.akamaized.net/Content/HLS_HLS_CLR/Live/channel(mvs)/variant.m3u8
 #EXTINF:-1 tvg-id="TeleSaltillo.mx@SD" tvg-name="Tele Saltillo" tvg-logo="https://i.imgur.com/PgBtvgO.png" group-title="Familia y TV Abierta",Tele Saltillo
 https://servilive.com:3879/live/telesaltillolive.m3u8
+#EXTINF:-1 tvg-id="TeleUV.mx@SD" tvg-name="Tele UV [Not 24/7]" tvg-logo="https://i.imgur.com/8MdUH69.jpeg" group-title="Familia y TV Abierta",Tele UV [Not 24/7]
+https://58fe359775f31.streamlock.net/tvuv/myStream/playlist.m3u8
 #EXTINF:-1 tvg-id="tv-puebla" tvg-name="TV de Puebla" tvg-logo="https://mxplus.tv/img/logos/canales/white/tv-puebla.png" group-title="Familia y TV Abierta",TV de Puebla
 https://5d0d1d7a6be9e.streamlock.net/sicom/canal1/chunklist_w2123636069.m3u8
 #EXTINF:-1 tvg-id="TVPublicaMarcosPaz.ar" tvg-name="TV Publica Marcos Paz" tvg-logo="" group-title="Familia y TV Abierta",TV Publica Marcos Paz
@@ -225,6 +255,8 @@ https://online.radiomelody.com.ar:2443/hls/mediospublicos.m3u8
 https://5fc584f3f19c9.streamlock.net/tvunam/videotvunam/chunklist_w1874753134_DVR.m3u8
 #EXTINF:-1 tvg-id="EstrellaNews.us@SD" tvg-name="Estrella News (1080p)" tvg-logo="https://i.imgur.com/HRrkhLq.png" group-title="Noticias",Estrella News (1080p)
 https://estrella-news-oando.amagi.tv/playlist.m3u8
+#EXTINF:-1 tvg-id="XHFGLTDT.mx@SD" tvg-name="Notigram TV (XHFGL-TDT) (1080p)" tvg-logo="https://i.imgur.com/9ZXCQvy.png" group-title="Noticias",Notigram TV (XHFGL-TDT) (1080p)
+https://stream.ontvmx.com/ontv/Wn3jgo4UYNSmwRDIev/playlist.m3u8
 #EXTINF:-1 tvg-id="ADN40.mx@SD" tvg-name="ADN 40 (720p)" tvg-logo="https://i.imgur.com/Og17U9N.png" group-title="Noticias",ADN 40 (720p)
 https://mdstrm.com/live-stream-playlist/60b578b060947317de7b57ac.m3u8
 #EXTINF:-1 tvg-id="AMXNoticias.mx@SD" tvg-name="AMX Noticias (720p) [Not 24/7]" tvg-logo="https://i.imgur.com/snIU1UA.jpg" group-title="Noticias",AMX Noticias (720p) [Not 24/7]
@@ -233,8 +265,12 @@ https://5e50264bd6766.streamlock.net/mexiquense2/videomexiquense2/playlist.m3u8
 https://60417ddeaf0d9.streamlock.net/srtc/smil:srtc.smil/playlist.m3u8
 #EXTINF:-1 tvg-id="JusticiaTV.mx@SD" tvg-name="Justicia TV (720p)" tvg-logo="https://i.imgur.com/zyAS1hk.png" group-title="Noticias",Justicia TV (720p)
 https://live-scjn.ovp-vivaro.digital/ovp-origin/638a22b47746d/playlist.m3u8
+#EXTINF:-1 tvg-id="TeleFormula.mx@SD" tvg-name="TeleFórmula (720p)" tvg-logo="https://i.imgur.com/y0a0xwY.png" group-title="Noticias",TeleFórmula (720p)
+https://mdstrm.com/live-stream-playlist/62f2c855f7981b5a5a2d8763.m3u8
 #EXTINF:-1 tvg-id="247CanaldeNoticias.ar" tvg-name="24/7 Canal de Noticias" tvg-logo="" group-title="Noticias",24/7 Canal de Noticias
 https://panel.host-live.com:19360/cn247tv/cn247tv.m3u8
+#EXTINF:-1 tvg-id="CanaldelCongreso451.mx@SD" tvg-name="Canal del Congreso 45.1" tvg-logo="https://i.imgur.com/xAC6gQO.png" group-title="Noticias",Canal del Congreso 45.1
+https://ccstreaming.packet.mx/WebRTCAppEE/streams/45.1_kd5oiNTTWO0gEOFc431277834.m3u8
 #EXTINF:-1 tvg-id="CanalE.ar" tvg-name="Canal E" tvg-logo="" group-title="Noticias",Canal E
 https://unlimited1-us.dps.live/perfiltv/perfiltv.smil/playlist.m3u8
 #EXTINF:-1 tvg-id="CanalTDC.ar" tvg-name="Canal TDC" tvg-logo="" group-title="Noticias",Canal TDC
@@ -257,18 +293,118 @@ https://appletree-mytime-samsungmexico.amagi.tv/playlist.m3u8
 http://190.11.225.124:5000/live/axn_hd/playlist.m3u8
 #EXTINF:-1 tvg-id="DePeliculaLatinAmerica.mx" tvg-name="De Pelicula Latin America" tvg-logo="" group-title="Peliculas - Cine",De Pelicula Latin America
 http://181.119.93.83:8000/play/a1jw/index.m3u8
+#EXTINF:-1 tvg-id="MerryChristmasfromViafree.se@NO" tvg-name="Merry Christmas from Viafree" tvg-logo="https://images.pluto.tv/channels/63048147b09fd60007847a08/colorLogoPNG.png" group-title="Peliculas - Cine",Merry Christmas from Viafree
+https://jmp2.uk/plu-63047bd6b0726b000795341d.m3u8
+#EXTINF:-1 tvg-id="NonStopKungFu.se@NO" tvg-name="NonStop Kung Fu" tvg-logo="https://images.pluto.tv/channels/6728d2be529ac9000830dc15/colorLogoPNG_1732110461260.png" group-title="Peliculas - Cine",NonStop Kung Fu
+https://jmp2.uk/plu-6728d30cdaad7f000881d979.m3u8
+#EXTINF:-1 tvg-id="PlutoTVBudTerence.se@NO" tvg-name="Pluto TV Bud & Terence" tvg-logo="https://images.pluto.tv/channels/64be7398e4391c0008cdedfe/colorLogoPNG_1776936976930.png" group-title="Peliculas - Cine",Pluto TV Bud & Terence
+https://jmp2.uk/plu-65b916ec3af63d00084c5841.m3u8
+#EXTINF:-1 tvg-id="PlutoTVFilm.se@NO" tvg-name="Pluto TV Film" tvg-logo="https://images.pluto.tv/channels/61c09515fbb4b50007d221f5/colorLogoPNG.png" group-title="Peliculas - Cine",Pluto TV Film
+https://jmp2.uk/plu-61c1e1e55deef000075aed0c.m3u8
+#EXTINF:-1 tvg-id="PlutoTVHarlequin.se@NO" tvg-name="Pluto TV Harlequin" tvg-logo="https://images.pluto.tv/channels/68c01afa3efb41cd9759dafb/colorLogoPNG_1770018342774.png" group-title="Peliculas - Cine",Pluto TV Harlequin
+https://jmp2.uk/plu-68c01b9a6bdcf3b9a64febcc.m3u8
+#EXTINF:-1 tvg-id="PlutoTVJohnWayne.se@NO" tvg-name="Pluto TV John Wayne" tvg-logo="https://images.pluto.tv/channels/655ca7aa635c3c000855d655/colorLogoPNG.png" group-title="Peliculas - Cine",Pluto TV John Wayne
+https://jmp2.uk/plu-655ca99dfbc15b00081f209c.m3u8
+#EXTINF:-1 tvg-id="PlutoTVKomedie.se@NO" tvg-name="Pluto TV Komedie" tvg-logo="https://images.pluto.tv/channels/61c1e3a679a4390007c78136/colorLogoPNG.png" group-title="Peliculas - Cine",Pluto TV Komedie
+https://jmp2.uk/plu-61c1e3a679a4390007c78136.m3u8
+#EXTINF:-1 tvg-id="PlutoTVKultfilmer.se@NO" tvg-name="Pluto TV Kultfilmer" tvg-logo="https://images.pluto.tv/channels/63dbe80f60bc8f0008aa7c78/colorLogoPNG.png" group-title="Peliculas - Cine",Pluto TV Kultfilmer
+https://jmp2.uk/plu-63dbe80f60bc8f0008aa7c78.m3u8
+#EXTINF:-1 tvg-id="PlutoTVRomantikk.se@NO" tvg-name="Pluto TV Romantikk" tvg-logo="https://images.pluto.tv/channels/63a19bb5e6914b000721b5c0/colorLogoPNG_1767773376618.png" group-title="Peliculas - Cine",Pluto TV Romantikk
+https://jmp2.uk/plu-63a19bb5e6914b000721b5c0.m3u8
 #EXTINF:-1 tvg-id="RuntimeCrimen.mx" tvg-name="Runtime Crimen" tvg-logo="" group-title="Peliculas - Crimen",Runtime Crimen
 https://stream.ads.ottera.tv/playlist.m3u8?network_id=3533
 #EXTINF:-1 tvg-id="Panico.mx@SD" tvg-name="Panico (576p)" tvg-logo="https://i.imgur.com/XOJzlfS.png" group-title="Peliculas - Terror",Panico (576p)
 http://181.78.8.199:8000/play/a0bt/index.m3u8
 #EXTINF:-1 tvg-id="RuntimeTerror.mx" tvg-name="Runtime Terror" tvg-logo="" group-title="Peliculas - Terror",Runtime Terror
 https://stream.ads.ottera.tv/playlist.m3u8?network_id=3529
+#EXTINF:-1 tvg-id="BondiRescue.se@NO" tvg-name="Bondi Rescue (720p)" tvg-logo="https://images.pluto.tv/channels/660d66be7bcd8600087cfee5/colorLogoPNG.png" group-title="Peliculas - Drama y Series",Bondi Rescue (720p)
+https://jmp2.uk/plu-660d67c419ca71000849a4e9.m3u8
+#EXTINF:-1 tvg-id="CarChase.se@NO" tvg-name="Car Chase (720p)" tvg-logo="https://images.pluto.tv/channels/65a93b0607e03a000895abda/colorLogoPNG.png" group-title="Peliculas - Drama y Series",Car Chase (720p)
+https://jmp2.uk/plu-65a93b870c7ff50008d1ca47.m3u8
+#EXTINF:-1 tvg-id="7thHeaven.se@NO" tvg-name="7th Heaven" tvg-logo="https://images.pluto.tv/channels/6728c9c85534bb0008b320a4/colorLogoPNG.png" group-title="Peliculas - Drama y Series",7th Heaven
+https://jmp2.uk/plu-6728ca75529ac9000830ab14.m3u8
+#EXTINF:-1 tvg-id="AmericasNextTopModel.se@NO" tvg-name="America's Next Top Model" tvg-logo="https://images.pluto.tv/channels/6464cc595a0cd500088c7749/colorLogoPNG.png" group-title="Peliculas - Drama y Series",America's Next Top Model
+https://jmp2.uk/plu-6464cd7c7cb4b100086c71c9.m3u8
+#EXTINF:-1 tvg-id="AuctionHunters.se@NO" tvg-name="Auction Hunters" tvg-logo="https://images.pluto.tv/channels/62da73c4ec46c000070f4cb1/colorLogoPNG.png" group-title="Peliculas - Drama y Series",Auction Hunters
+https://jmp2.uk/plu-62da7159ca8f220008032730.m3u8
+#EXTINF:-1 tvg-id="Becker.se@NO" tvg-name="Becker" tvg-logo="https://images.pluto.tv/channels/672e157d7d5da5000812872d/colorLogoPNG-1731073515797.png" group-title="Peliculas - Drama y Series",Becker
+https://jmp2.uk/plu-672e1634e482950008c759a5.m3u8
+#EXTINF:-1 tvg-id="BET.se@NO" tvg-name="BET" tvg-logo="https://images.pluto.tv/channels/61c1939b8929e40007ff6382/colorLogoPNG.png" group-title="Peliculas - Drama y Series",BET
+https://jmp2.uk/plu-61dd5bf8db0b8e00080804ff.m3u8
+#EXTINF:-1 tvg-id="BritainsNextTopModel.se@NO" tvg-name="Britain's Next Top Model" tvg-logo="https://images.pluto.tv/channels/67a09ddc21af380008088dc3/colorLogoPNG.png" group-title="Peliculas - Drama y Series",Britain's Next Top Model
+https://jmp2.uk/plu-67a09e25c070cf00083c40fa.m3u8
+#EXTINF:-1 tvg-id="Bull.se@NO" tvg-name="Bull" tvg-logo="https://images.pluto.tv/channels/6964b982ca459f9b939da8e6/colorLogoPNG_1770900947317.png" group-title="Peliculas - Drama y Series",Bull
+https://jmp2.uk/plu-6964b9b97d2afdec4f9390f6.m3u8
+#EXTINF:-1 tvg-id="DallasCowboysCheerleaders.se@NO" tvg-name="Dallas Cowboys Cheerleaders" tvg-logo="https://images.pluto.tv/channels/64e87c6b28cec700088ceb55/colorLogoPNG.png" group-title="Peliculas - Drama y Series",Dallas Cowboys Cheerleaders
+https://jmp2.uk/plu-64e77016324d190008291c13.m3u8
+#EXTINF:-1 tvg-id="DatingNakedUK.se@NO" tvg-name="Dating Naked UK" tvg-logo="https://images.pluto.tv/channels/692edc78d52ea9e4858cf78f/colorLogoPNG_1768226003744.png" group-title="Peliculas - Drama y Series",Dating Naked UK
+https://jmp2.uk/plu-692edcff77f0147d69f19498.m3u8
+#EXTINF:-1 tvg-id="DiagnosisMurder.se@NO" tvg-name="Diagnosis Murder" tvg-logo="https://images.pluto.tv/channels/668bf7dd74f5ec000817e6d1/colorLogoPNG.png" group-title="Peliculas - Drama y Series",Diagnosis Murder
+https://jmp2.uk/plu-668bf91208d5490008065ffd.m3u8
+#EXTINF:-1 tvg-id="DocMartin.se@NO" tvg-name="Doc Martin" tvg-logo="https://images.pluto.tv/channels/62724ae034f5190007b63424/colorLogoPNG.png" group-title="Peliculas - Drama y Series",Doc Martin
+https://jmp2.uk/plu-62724ae034f5190007b63424.m3u8
+#EXTINF:-1 tvg-id="HappyDays.se@NO" tvg-name="Happy Days" tvg-logo="https://images.pluto.tv/channels/654a4e29ab05240008a18625/colorLogoPNG.png" group-title="Peliculas - Drama y Series",Happy Days
+https://jmp2.uk/plu-654a508d986ad20008a456a5.m3u8
+#EXTINF:-1 tvg-id="HouseofLies.se@NO" tvg-name="House of Lies" tvg-logo="https://images.pluto.tv/channels/693ae62a43fe00a023e76e0d/colorLogoPNG_1769415649672.png" group-title="Peliculas - Drama y Series",House of Lies
+https://jmp2.uk/plu-693ae65fab5959c036fa6c1e.m3u8
+#EXTINF:-1 tvg-id="JAG.se@NO" tvg-name="JAG" tvg-logo="https://images.pluto.tv/channels/654a4ab92c1d330008657ae5/colorLogoPNG.png" group-title="Peliculas - Drama y Series",JAG
+https://jmp2.uk/plu-654a4fc753fc9700083ae79f.m3u8
+#EXTINF:-1 tvg-id="JudgeJudy.se@NO" tvg-name="Judge Judy" tvg-logo="https://images.pluto.tv/channels/6380c36389eccc000858c50f/colorLogoPNG.png" group-title="Peliculas - Drama y Series",Judge Judy
+https://jmp2.uk/plu-6380c428dd0f47000799907c.m3u8
+#EXTINF:-1 tvg-id="LuksusfellenSverige.se@NO" tvg-name="Luksusfellen Sverige" tvg-logo="https://images.pluto.tv/channels/61c1e0f1d6d97900076ea16f/colorLogoPNG.png" group-title="Peliculas - Drama y Series",Luksusfellen Sverige
+https://jmp2.uk/plu-61c1e0f1d6d97900076ea16f.m3u8
+#EXTINF:-1 tvg-id="MacGyver.se@NO" tvg-name="MacGyver" tvg-logo="https://images.pluto.tv/channels/654a59742c1d33000865a797/colorLogoPNG.png" group-title="Peliculas - Drama y Series",MacGyver
+https://jmp2.uk/plu-654a59d483595c0008187514.m3u8
+#EXTINF:-1 tvg-id="Matlock.se@NO" tvg-name="Matlock" tvg-logo="https://images.pluto.tv/channels/66290a779e68c20008a18cf3/colorLogoPNG.png" group-title="Peliculas - Drama y Series",Matlock
+https://jmp2.uk/plu-66290b7523e24f000832cc17.m3u8
+#EXTINF:-1 tvg-id="McLeodsdotreGrantchester.se@NO" tvg-name="McLeods døtre & Grantchester" tvg-logo="https://images.pluto.tv/channels/65ba4db63ef47d000837b535/colorLogoPNG_1756125306200.png" group-title="Peliculas - Drama y Series",McLeods døtre & Grantchester
+https://jmp2.uk/plu-65ba4db63ef47d000837b535.m3u8
+#EXTINF:-1 tvg-id="Medium.se@NO" tvg-name="Medium" tvg-logo="https://images.pluto.tv/channels/68f0f54ca362b63a8df4d5a9/colorLogoPNG_1760622009795.png" group-title="Peliculas - Drama y Series",Medium
+https://jmp2.uk/plu-68f0f602a362b63a8df4efb4.m3u8
+#EXTINF:-1 tvg-id="MissionImpossible.se@NO" tvg-name="Mission Impossible" tvg-logo="https://images.pluto.tv/channels/6478a9e4f77b61000817034b/colorLogoPNG.png" group-title="Peliculas - Drama y Series",Mission Impossible
+https://jmp2.uk/plu-639b4eb4da3fda0008036f6e.m3u8
+#EXTINF:-1 tvg-id="NordiskkrimfraViaplay.se@NO" tvg-name="Nordisk krim fra Viaplay" tvg-logo="https://images.pluto.tv/channels/64eca23c9c1e390008524ae6/colorLogoPNG.png" group-title="Peliculas - Drama y Series",Nordisk krim fra Viaplay
+https://jmp2.uk/plu-64eca23c9c1e390008524ae6.m3u8
+#EXTINF:-1 tvg-id="Numb3rs.se@NO" tvg-name="Numb3rs" tvg-logo="https://images.pluto.tv/channels/642e94c1af2bd90008852697/colorLogoPNG_1756716763207.png" group-title="Peliculas - Drama y Series",Numb3rs
+https://jmp2.uk/plu-63dbe78051f5d000083e9249.m3u8
+#EXTINF:-1 tvg-id="PlutoTVAction.se@NO" tvg-name="Pluto TV Action" tvg-logo="https://images.pluto.tv/channels/61c095861782bd000780e0ba/colorLogoPNG.png" group-title="Peliculas - Drama y Series",Pluto TV Action
+https://jmp2.uk/plu-61c1e270489a9c000874d209.m3u8
+#EXTINF:-1 tvg-id="PlutoTVHorror.se@NO" tvg-name="Pluto TV Horror" tvg-logo="https://images.pluto.tv/channels/63a1c9790cc44a0007dc8857/colorLogoPNG.png" group-title="Peliculas - Drama y Series",Pluto TV Horror
+https://jmp2.uk/plu-63a19cb7847a090007f230d7.m3u8
+#EXTINF:-1 tvg-id="PlutoTVOvernaturlig.se@NO" tvg-name="Pluto TV Overnaturlig" tvg-logo="https://images.pluto.tv/channels/61c1e74354d923000731bf7c/colorLogoPNG.png" group-title="Peliculas - Drama y Series",Pluto TV Overnaturlig
+https://jmp2.uk/plu-61c1e74354d923000731bf7c.m3u8
+#EXTINF:-1 tvg-id="PlutoTVSciFi.se@NO" tvg-name="Pluto TV Sci-Fi" tvg-logo="https://images.pluto.tv/channels/60ed498c4248a400077c0b9d/colorLogoPNG.png" group-title="Peliculas - Drama y Series",Pluto TV Sci-Fi
+https://jmp2.uk/plu-61f957e051cca800076f2358.m3u8
+#EXTINF:-1 tvg-id="PlutoTVTrueCrime.se@NO" tvg-name="Pluto TV True Crime" tvg-logo="https://images.pluto.tv/channels/615333098185f00008715a56/colorLogoPNG.png" group-title="Peliculas - Drama y Series",Pluto TV True Crime
+https://jmp2.uk/plu-61c1e51354d923000731bf78.m3u8
+#EXTINF:-1 tvg-id="PlutoTVWildWest.se@NO" tvg-name="Pluto TV Wild West" tvg-logo="https://images.pluto.tv/channels/68c01732b3900870ec74766f/colorLogoPNG_1761917904777.png" group-title="Peliculas - Drama y Series",Pluto TV Wild West
+https://jmp2.uk/plu-68c01785b3900870ec7480e4.m3u8
+#EXTINF:-1 tvg-id="Rawhide.se@NO" tvg-name="Rawhide" tvg-logo="https://images.pluto.tv/channels/6964ba787e92438c2754e924/colorLogoPNG_1768209194548.png" group-title="Peliculas - Drama y Series",Rawhide
+https://jmp2.uk/plu-6964baa63dfd98e10945ac51.m3u8
 #EXTINF:-1 tvg-id="RuntimeEspanol.mx" tvg-name="Runtime Español" tvg-logo="" group-title="Peliculas - Drama y Series",Runtime Español
 https://stream.ads.ottera.tv/playlist.m3u8?network_id=2649
 #EXTINF:-1 tvg-id="RuntimeFilms.mx" tvg-name="Runtime Films" tvg-logo="" group-title="Peliculas - Drama y Series",Runtime Films
 https://stream.ads.ottera.tv/playlist.m3u8?network_id=2153
 #EXTINF:-1 tvg-id="RuntimeLatino.mx" tvg-name="Runtime Latino" tvg-logo="" group-title="Peliculas - Drama y Series",Runtime Latino
 https://stream.ads.ottera.tv/playlist.m3u8?network_id=2154
+#EXTINF:-1 tvg-id="Scorpion.se@NO" tvg-name="Scorpion" tvg-logo="https://images.pluto.tv/channels/63a1caefc8d285000799e8af/colorLogoPNG.png" group-title="Peliculas - Drama y Series",Scorpion
+https://jmp2.uk/plu-63a1c959d9dd51000825d659.m3u8
+#EXTINF:-1 tvg-id="SkjonnhetsfellenDanmark.se@NO" tvg-name="Skjønnhetsfellen Danmark" tvg-logo="https://images.pluto.tv/channels/643810f2e8a4aa0008ccf575/colorLogoPNG.png" group-title="Peliculas - Drama y Series",Skjønnhetsfellen Danmark
+https://jmp2.uk/plu-643810f2e8a4aa0008ccf575.m3u8
+#EXTINF:-1 tvg-id="StarTrekTheOriginalSeries.se@NO" tvg-name="Star Trek: The Original Series" tvg-logo="https://images.pluto.tv/channels/693add137e308621c051e733/colorLogoPNG_1765465486347.png" group-title="Peliculas - Drama y Series",Star Trek: The Original Series
+https://jmp2.uk/plu-693addd62bf6cf7414c4b2fc.m3u8
+#EXTINF:-1 tvg-id="TheLWord.se@NO" tvg-name="The L Word" tvg-logo="https://images.pluto.tv/channels/693ae48864476d678e9b6235/colorLogoPNG_1768226798170.png" group-title="Peliculas - Drama y Series",The L Word
+https://jmp2.uk/plu-693ae4b616c2bba998852c21.m3u8
+#EXTINF:-1 tvg-id="TheNewDetectives.se@NO" tvg-name="The New Detectives" tvg-logo="https://images.pluto.tv/channels/618147d2a814250007b42916/colorLogoPNG.png" group-title="Peliculas - Drama y Series",The New Detectives
+https://jmp2.uk/plu-6181511c1e13690007b143c2.m3u8
+#EXTINF:-1 tvg-id="TheTwilightZone.se@NO" tvg-name="The Twilight Zone" tvg-logo="https://images.pluto.tv/channels/6512ec9f3a0d700008db4f0c/colorLogoPNG.png" group-title="Peliculas - Drama y Series",The Twilight Zone
+https://jmp2.uk/plu-6512d3a0bdcb19000799cc82.m3u8
+#EXTINF:-1 tvg-id="TheWildWildWest.se@NO" tvg-name="The Wild Wild West" tvg-logo="https://images.pluto.tv/channels/6964bc3806d76f50db3e315e/colorLogoPNG_1768230352673.png" group-title="Peliculas - Drama y Series",The Wild Wild West
+https://jmp2.uk/plu-6964bca2a6c400fd418854a2.m3u8
+#EXTINF:-1 tvg-id="UngaMammor.se@NO" tvg-name="Unga Mammor" tvg-logo="https://images.pluto.tv/channels/61c1e1c445b45d0007aad03e/colorLogoPNG.png" group-title="Peliculas - Drama y Series",Unga Mammor
+https://jmp2.uk/plu-61c1e1c445b45d0007aad03e.m3u8
+#EXTINF:-1 tvg-id="Wildfire.se@NO" tvg-name="Wildfire" tvg-logo="https://images.pluto.tv/channels/62b9b63d3bbe9000073c0a2d/colorLogoPNG.png" group-title="Peliculas - Drama y Series",Wildfire
+https://jmp2.uk/plu-62beb7d7fbf54600076abc7b.m3u8
 #EXTINF:-1 tvg-id="DisneyJrLatinAmerica.ar@NorthHD" tvg-name="Disney Jr. Latin America North HD (1080p)" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/e/e3/2024_Disney_Jr._Logo.svg" group-title="Peliculas - Familiar",Disney Jr. Latin America North HD (1080p)
 http://190.11.225.124:5000/live/disney_jr_hd/playlist.m3u8
 #EXTINF:-1 tvg-id="EstrellaGames.us@SD" tvg-name="Estrella Games (1080p)" tvg-logo="https://i.imgur.com/Z52nEnH.png" group-title="Peliculas - Familiar",Estrella Games (1080p)
@@ -279,12 +415,26 @@ http://179.60.51.134:8888/NICK-JR/index.m3u8
 http://45.166.93.156:9999/play/a0f3/index.m3u8
 #EXTINF:-1 tvg-id="ElChavoTV.mx@HD" tvg-name="El Chavo TV (720p)" tvg-logo="https://gia.tv/streams/pptv/211465.png" group-title="Peliculas - Familiar",El Chavo TV (720p)
 https://live20.bozztv.com/giatvplayout7/giatv-211465/playlist.m3u8
+#EXTINF:-1 tvg-id="PlutoTVJuniorklubben.se@NO" tvg-name="Pluto TV Juniorklubben (720p)" tvg-logo="https://images.pluto.tv/channels/61c09a78bd194c0008decc28/colorLogoPNG_1748329348443.png" group-title="Peliculas - Familiar",Pluto TV Juniorklubben (720p)
+https://jmp2.uk/plu-61c1d459fbb4b50007d24647.m3u8
+#EXTINF:-1 tvg-id="PlutoTVKlassisketegnefilmer.se@NO" tvg-name="Pluto TV Klassiske tegnefilmer (720p)" tvg-logo="https://images.pluto.tv/channels/67f508f68ddd60c57dc44766/colorLogoPNG_1748955225113.png" group-title="Peliculas - Familiar",Pluto TV Klassiske tegnefilmer (720p)
+https://jmp2.uk/plu-67f508f68ddd60c57dc44766.m3u8
+#EXTINF:-1 tvg-id="PlutoTVUngdomsserier.se@NO" tvg-name="Pluto TV Ungdomsserier (720p)" tvg-logo="https://images.pluto.tv/channels/67f3fb1cdea1c5e0d588ac1b/colorLogoPNG_1748270797322.png" group-title="Peliculas - Familiar",Pluto TV Ungdomsserier (720p)
+https://jmp2.uk/plu-67f3fb7d07d2ba4121bd0c8b.m3u8
+#EXTINF:-1 tvg-id="TotallyTurtles.se@NO" tvg-name="Totally Turtles (720p)" tvg-logo="https://images.pluto.tv/channels/61c0bbd95df1da0007bed5a0/colorLogoPNG.png" group-title="Peliculas - Familiar",Totally Turtles (720p)
+https://jmp2.uk/plu-61c1da718a80a4000704013e.m3u8
 #EXTINF:-1 tvg-id="DisneyChannelLatinAmerica.ar@North" tvg-name="Disney Channel Latin America North (576p)" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/f/ff/2024_Disney_Channel_text_logo.svg" group-title="Peliculas - Familiar",Disney Channel Latin America North (576p)
 http://138.121.15.230:9002/DISNEY-CHANNEL/index.m3u8
+#EXTINF:-1 tvg-id="iCarly.se@NO" tvg-name="iCarly" tvg-logo="https://images.pluto.tv/channels/61c0b9aab7facb0007913908/colorLogoPNG.png" group-title="Peliculas - Familiar",iCarly
+https://jmp2.uk/plu-61c1d9b31a9c310008f8ee57.m3u8
 #EXTINF:-1 tvg-id="TUDN.mx" tvg-name="TUDN (1080p)" tvg-logo="" group-title="Deportes",TUDN (1080p)
 https://streaming.alwaysdata.net/tudn.php
 #EXTINF:-1 tvg-id="TVCuatro43.mx@SD" tvg-name="TV Cuatro 4.3 (1080p)" tvg-logo="https://i.imgur.com/Of044Jx.png" group-title="Deportes",TV Cuatro 4.3 (1080p)
 https://5ca3e84a76d30.streamlock.net/tv43gto/tv43gto.smil/.m3u8
+#EXTINF:-1 tvg-id="PlutoTVSnooker900.se@NO" tvg-name="Pluto TV Snooker 900 (720p)" tvg-logo="https://images.pluto.tv/channels/68ac5543a1ac0c90f2c8943e/colorLogoPNG_1760517341343.png" group-title="Deportes",Pluto TV Snooker 900 (720p)
+https://jmp2.uk/plu-68ac55fe3efb41cd979a6877.m3u8
+#EXTINF:-1 tvg-id="PlutoTVSport.se@NO" tvg-name="Pluto TV Sport" tvg-logo="https://images.pluto.tv/channels/6357f3de3643ba0007bc0b50/colorLogoPNG_1746816938506.png" group-title="Deportes",Pluto TV Sport
+https://jmp2.uk/plu-6357f33cb51d2d00077927c6.m3u8
 #EXTINF:-1 tvg-id="WPT.mx" tvg-name="WPT" tvg-logo="" group-title="Deportes",WPT
 https://stream.ads.ottera.tv/playlist.m3u8?network_id=5504
 #EXTINF:-1 tvg-id="CreaLaTV.mx@SD" tvg-name="CreaLaTV (1080p)" tvg-logo="https://i.imgur.com/Bnjj29f.png" group-title="Entretenimiento",CreaLaTV (1080p)
@@ -293,6 +443,8 @@ https://stream.crealatv.com/live.m3u8
 https://video2.lhdserver.es/despiertatv/live.m3u8
 #EXTINF:-1 tvg-id="MTVLatinAmerica.us@Panregional" tvg-name="MTV Latin America (1080p)" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/MTV_2021_%28brand_version%29.svg/960px-MTV_2021_%28brand_version%29.svg.png" group-title="Entretenimiento",MTV Latin America (1080p)
 http://179.60.51.134:8888/MTV/index.m3u8
+#EXTINF:-1 tvg-id="TVOstfold.no@SD" tvg-name="TV Østfold (1080p)" tvg-logo="https://i.ibb.co/HHxGQGD/TVO-kanalbanner-page-0002-1-removebg-preview-300x94.png" group-title="Entretenimiento",TV Østfold (1080p)
+https://streamnorge.com:8088/hls/tvo.m3u8
 #EXTINF:-1 tvg-id="VBMediaTV.mx@SD" tvg-name="VB Media TV (1080p)" tvg-logo="https://i.imgur.com/5qlVblr.png" group-title="Entretenimiento",VB Media TV (1080p)
 https://capomo01-enitv.eninetworks.com/locales_vbmedia_publico/index.m3u8
 #EXTINF:-1 tvg-id="ZAZ.mx@SD" tvg-name="ZAZ (1080p)" tvg-logo="" group-title="Entretenimiento",ZAZ (1080p)
@@ -301,30 +453,88 @@ https://cloud.fastchannel.es/mic/manifiest/hls/zaztv/zaztv.m3u8
 https://stream8.mexiserver.com:19360/conectatvx/conectatvx.m3u8
 #EXTINF:-1 tvg-id="ExpresaTV.mx@SD" tvg-name="Expresa TV (720p)" tvg-logo="https://i.imgur.com/kFVVGrg.png" group-title="Entretenimiento",Expresa TV (720p)
 https://5ca9af4645e15.streamlock.net/teleradio/smil:teleradio.smil/playlist.m3u8
+#EXTINF:-1 tvg-id="Frikanalen.no@SD" tvg-name="Frikanalen (720p)" tvg-logo="https://i.imgur.com/rY3Owxl.png" group-title="Entretenimiento",Frikanalen (720p)
+https://frikanalen.no/stream/index.m3u8
 #EXTINF:-1 tvg-id="GikTVMX.mx@SD" tvg-name="GikTVMX (720p)" tvg-logo="https://i.imgur.com/Gwz78jZ.png" group-title="Entretenimiento",GikTVMX (720p)
 https://pistream.ddns.net/hls/stream.m3u8
+#EXTINF:-1 tvg-id="MTVDating.se@NO" tvg-name="MTV Dating (720p)" tvg-logo="https://images.pluto.tv/channels/6851407c21f49d1b9d177493/colorLogoPNG_1750843393149.png" group-title="Entretenimiento",MTV Dating (720p)
+https://jmp2.uk/plu-685140bd21f49d1b9d177e21.m3u8
+#EXTINF:-1 tvg-id="MTVRidiculousness.se@NO" tvg-name="MTV Ridiculousness (720p)" tvg-logo="https://images.pluto.tv/channels/62cd9641393d8400076f34db/colorLogoPNG_1762770639864.png" group-title="Entretenimiento",MTV Ridiculousness (720p)
+https://jmp2.uk/plu-62cd9e0d10bb020007005628.m3u8
+#EXTINF:-1 tvg-id="MTVTeenMom.se@NO" tvg-name="MTV Teen Mom (720p)" tvg-logo="https://images.pluto.tv/channels/61c092157e1b8b0007372a35/colorLogoPNG_1748001686588.png" group-title="Entretenimiento",MTV Teen Mom (720p)
+https://jmp2.uk/plu-61c1df62b7672a0007b6c9ba.m3u8
 #EXTINF:-1 tvg-id="PresumiendoMexico.mx@SD" tvg-name="Presumiendo México (720p)" tvg-logo="https://i.imgur.com/bFG4Rqz.png" group-title="Entretenimiento",Presumiendo México (720p)
 https://60417ddeaf0d9.streamlock.net/telemetrika/smil:telemetrika.smil/playlist.m3u8
 #EXTINF:-1 tvg-id="RalyTV.mx@SD" tvg-name="Raly TV (720p)" tvg-logo="https://i.imgur.com/W8a1dIa.png" group-title="Entretenimiento",Raly TV (720p)
 https://cloudvideo.servers10.com:8081/8072/index.m3u8
-#EXTINF:-1 tvg-id="XHUNESTDT.mx@SD" tvg-name="Señal España (XHUNES-TDT) (720p)" tvg-logo="https://i.imgur.com/LbZkdca.png" group-title="Entretenimiento",Señal España (XHUNES-TDT) (720p)
-https://tv91.hostingnuclear.com:19360/xhunestv/xhunestv.m3u8
 #EXTINF:-1 tvg-id="TELE6.bo@SD" tvg-name="TELE 6 (720p)" tvg-logo="https://i.imgur.com/p7tt72X.png" group-title="Entretenimiento",TELE 6 (720p)
 https://lbgo.bozztv.com/ssh101/ssh101/tele6/playlist.m3u8
 #EXTINF:-1 tvg-id="TeleplaySureste.mx@SD" tvg-name="Teleplay Sureste (720p)" tvg-logo="https://i.imgur.com/MeV5N08.png" group-title="Entretenimiento",Teleplay Sureste (720p)
 https://player.tvstream.mx/livestream/teleplay/livehd/playlist.m3u8
+#EXTINF:-1 tvg-id="Teleritmo.mx@SD" tvg-name="Teleritmo (720p) [Not 24/7]" tvg-logo="https://i.imgur.com/9s380Bz.png" group-title="Entretenimiento",Teleritmo (720p) [Not 24/7]
+https://mdstrm.com/live-stream-playlist/57b4dc126338448314449d0c.m3u8
 #EXTINF:-1 tvg-id="ThePetCollective.us@Mexico" tvg-name="The Pet Collective International (720p)" tvg-logo="https://i.imgur.com/yH7n2dF.png" group-title="Entretenimiento",The Pet Collective International (720p)
 https://the-pet-collective-international-mx.samsung.wurl.tv/playlist.m3u8
 #EXTINF:-1 tvg-id="TVMigrante.mx@SD" tvg-name="TV Migrante (720p)" tvg-logo="https://i.imgur.com/tVgkiJF.png" group-title="Entretenimiento",TV Migrante (720p)
 https://s5.mexside.net:1936/tvmigrante/tvmigrante/playlist.m3u8
+#EXTINF:-1 tvg-id="TVModum.no@SD" tvg-name="TV Modum (720p)" tvg-logo="https://i.imgur.com/kljua5X.png" group-title="Entretenimiento",TV Modum (720p)
+https://cdn010.panaccess.com/5677_streams/TVMODUM/index.m3u8
 #EXTINF:-1 tvg-id="TeleplaySureste.mx" tvg-name="Teleplay Sureste (360p)" tvg-logo="" group-title="Entretenimiento",Teleplay Sureste (360p)
 https://player.tvstream.mx/livestream/teleplay/livesd/playlist.m3u8
 #EXTINF:-1 tvg-id="PSN.mx@SD" tvg-name="PSN (288p)" tvg-logo="https://i.imgur.com/7i7GkSL.png" group-title="Entretenimiento",PSN (288p)
 https://srspsn.live/live/livestream.m3u8
+#EXTINF:-1 tvg-id="APlus.mx@SD" tvg-name="A+ [Geo-blocked]" tvg-logo="https://i.imgur.com/TWk9gfd.png" group-title="Entretenimiento",A+ [Geo-blocked]
+https://mdstrm.com/live-stream-playlist/60b56be1000ea50835fa1e63.m3u8
+#EXTINF:-1 tvg-id="AreYouTheOne.se@NO" tvg-name="Are You The One?" tvg-logo="https://images.pluto.tv/channels/61c091c39863900007ac9e8f/colorLogoPNG.png" group-title="Entretenimiento",Are You The One?
+https://jmp2.uk/plu-61c1db8ed6d97900076ea15c.m3u8
+#EXTINF:-1 tvg-id="BestofMTV.se@NO" tvg-name="Best of MTV" tvg-logo="https://images.pluto.tv/channels/632aff5e44111b00076ad9b1/colorLogoPNG_1767773210944.png" group-title="Entretenimiento",Best of MTV
+https://jmp2.uk/plu-632afc466699570007ed1106.m3u8
+#EXTINF:-1 tvg-id="BestofTheDrewBarrymoreShow.se@NO" tvg-name="Best of The Drew Barrymore Show" tvg-logo="https://images.pluto.tv/channels/62beb692cda2b10007d5fd76/colorLogoPNG.png" group-title="Entretenimiento",Best of The Drew Barrymore Show
+https://jmp2.uk/plu-630478cfdb5a4a0007ec255e.m3u8
+#EXTINF:-1 tvg-id="Boligjakten.se@NO" tvg-name="Boligjakten" tvg-logo="https://images.pluto.tv/channels/61c1dc21b9587d0007e3fc15/colorLogoPNG.png" group-title="Entretenimiento",Boligjakten
+https://jmp2.uk/plu-61c1dc21b9587d0007e3fc15.m3u8
+#EXTINF:-1 tvg-id="CampKulinaris.se@NO" tvg-name="Camp Kulinaris" tvg-logo="https://images.pluto.tv/channels/61c1dce2fb9ae40007d0ac15/colorLogoPNG.png" group-title="Entretenimiento",Camp Kulinaris
+https://jmp2.uk/plu-61c1dce2fb9ae40007d0ac15.m3u8
+#EXTINF:-1 tvg-id="Charterfeber.se@NO" tvg-name="Charterfeber" tvg-logo="https://images.pluto.tv/channels/61c1dda0fe470d00080f85b8/colorLogoPNG.png" group-title="Entretenimiento",Charterfeber
+https://jmp2.uk/plu-61c1dda0fe470d00080f85b8.m3u8
+#EXTINF:-1 tvg-id="EventyrligOppussing.se@NO" tvg-name="Eventyrlig Oppussing" tvg-logo="https://images.pluto.tv/channels/61c1de93244e500007581d69/colorLogoPNG.png" group-title="Entretenimiento",Eventyrlig Oppussing
+https://jmp2.uk/plu-61c1de93244e500007581d69.m3u8
+#EXTINF:-1 tvg-id="MTVExOnTheBeach.se@NO" tvg-name="Ex On The Beach" tvg-logo="https://images.pluto.tv/channels/61c0909b872c650008ed42e4/colorLogoPNG.png" group-title="Entretenimiento",Ex On The Beach
+https://jmp2.uk/plu-61c1d66518447e000717e4c2.m3u8
+#EXTINF:-1 tvg-id="GeordieShore.se@NO" tvg-name="Geordie Shore" tvg-logo="https://images.pluto.tv/channels/6442512cee6a2f0008d3351f/colorLogoPNG.png" group-title="Entretenimiento",Geordie Shore
+https://jmp2.uk/plu-64424a1d5a0cd500083ed27c.m3u8
+#EXTINF:-1 tvg-id="JerseyShore.se@NO" tvg-name="Jersey Shore" tvg-logo="https://images.pluto.tv/channels/6442508e5a0cd500083edd3c/colorLogoPNG.png" group-title="Entretenimiento",Jersey Shore
+https://jmp2.uk/plu-64424b21e1979c0008379681.m3u8
+#EXTINF:-1 tvg-id="JerseyShoreFamilyVacation.se@NO" tvg-name="Jersey Shore Family Vacation" tvg-logo="https://images.pluto.tv/channels/6728c831c7626f0008b28127/colorLogoPNG.png" group-title="Entretenimiento",Jersey Shore Family Vacation
+https://jmp2.uk/plu-6728c87cc7626f0008b28149.m3u8
+#EXTINF:-1 tvg-id="Luksusfellen.se@NO" tvg-name="Luksusfellen" tvg-logo="https://images.pluto.tv/channels/61c1e060197fe600073c1ffb/colorLogoPNG.png" group-title="Entretenimiento",Luksusfellen
+https://jmp2.uk/plu-61c1e060197fe600073c1ffb.m3u8
+#EXTINF:-1 tvg-id="MTVCatfish.se@NO" tvg-name="MTV Catfish" tvg-logo="https://images.pluto.tv/channels/6177fe76691b2e000702c7fc/colorLogoPNG_1750864554364.png" group-title="Entretenimiento",MTV Catfish
+https://jmp2.uk/plu-61781a52a3638a00078fa57e.m3u8
+#EXTINF:-1 tvg-id="MTVReality.se@NO" tvg-name="MTV Reality" tvg-logo="https://images.pluto.tv/channels/685137f4a1e091e16f2dd471/colorLogoPNG_1780301718240.png" group-title="Entretenimiento",MTV Reality
+https://jmp2.uk/plu-68513950f212bedacf8ec48f.m3u8
+#EXTINF:-1 tvg-id="ParadiseHotel.se@NO" tvg-name="Paradise Hotel" tvg-logo="https://images.pluto.tv/channels/61c19af83fae0a00078c8918/colorLogoPNG.png" group-title="Entretenimiento",Paradise Hotel
+https://jmp2.uk/plu-61c1db901346480007b7c345.m3u8
+#EXTINF:-1 tvg-id="PimpMyRide.se@NO" tvg-name="Pimp My Ride" tvg-logo="https://images.pluto.tv/channels/61c091343bf4940007803e03/colorLogoPNG.png" group-title="Entretenimiento",Pimp My Ride
+https://jmp2.uk/plu-61c1d6e1f5acaf0007f8381d.m3u8
+#EXTINF:-1 tvg-id="RidiculousnessNyeepisoder.se@NO" tvg-name="Ridiculousness Nye episoder" tvg-logo="https://images.pluto.tv/channels/68dfa1a7fae18f8db6218222/colorLogoPNG_1762510989212.png" group-title="Entretenimiento",Ridiculousness Nye episoder
+https://jmp2.uk/plu-68dfa1a7fae18f8db6218222.m3u8
+#EXTINF:-1 tvg-id="SvenskaTruckers.se@NO" tvg-name="Svenske Truckers" tvg-logo="https://images.pluto.tv/channels/61f128f68a1dfc00086470af/colorLogoPNG.png" group-title="Entretenimiento",Svenske Truckers
+https://jmp2.uk/plu-645cc855e1979c000875ee47.m3u8
+#EXTINF:-1 tvg-id="TheDailyShow.se@NO" tvg-name="The Daily Show" tvg-logo="https://images.pluto.tv/channels/65c096d23ba51e0008305a75/colorLogoPNG.png" group-title="Entretenimiento",The Daily Show
+https://jmp2.uk/plu-65c0973311ced7000808d255.m3u8
+#EXTINF:-1 tvg-id="MTVTheHills.se@NO" tvg-name="The Hills" tvg-logo="https://images.pluto.tv/channels/61c09039ebd75200072587f9/colorLogoPNG.png" group-title="Entretenimiento",The Hills
+https://jmp2.uk/plu-61c1d56f28e94c0007827bdb.m3u8
+#EXTINF:-1 tvg-id="TheMillers.se@NO" tvg-name="The Millers" tvg-logo="https://images.pluto.tv/channels/69afeefa0a7f2095e768401c/colorLogoPNG_1776168453662.png" group-title="Entretenimiento",The Millers
+https://jmp2.uk/plu-69afef233bd16a4ed07108e9.m3u8
+#EXTINF:-1 tvg-id="BAMOSTV.mx@SD" tvg-name="BAMOS TV (1080p) [Not 24/7]" tvg-logo="https://i.imgur.com/ntK4D64.png" group-title="Otros",BAMOS TV (1080p) [Not 24/7]
+https://video2.getstreamhosting.com:19360/8092/8092.m3u8
 #EXTINF:-1 tvg-id="MonteMaria.mx@SD" tvg-name="Monte Maria (1080p)" tvg-logo="https://i.imgur.com/0rMHbbM.png" group-title="Otros",Monte Maria (1080p)
 https://5ca9af4645e15.streamlock.net/montemaria/videomontemaria/playlist.m3u8
 #EXTINF:-1 tvg-id="AlcanceTV.mx@SD" tvg-name="Alcance TV (720p)" tvg-logo="https://i.imgur.com/5nYjRlb.png" group-title="Otros",Alcance TV (720p)
 https://5bf8041cb3fed.streamlock.net/AlcanceTV/AlcanceTV/playlist.m3u8
+#EXTINF:-1 tvg-id="CanalMotor.no@SD" tvg-name="Canal Motor (720p)" tvg-logo="https://i.imgur.com/nCAt3QN.png" group-title="Otros",Canal Motor (720p)
+https://digicom.hls.iptvdc.com/canalmotor/index.m3u8
 #EXTINF:-1 tvg-id="TuristikTV.mx@SD" tvg-name="Turistik TV (720p)" tvg-logo="https://i.imgur.com/g9j0ze8.png" group-title="Otros",Turistik TV (720p)
 https://cdn1.cef-technology.com/stream_web/turistik/playlist.m3u8
 #EXTINF:-1 tvg-id="WeatherSpy.mx@SD" tvg-name="WeatherSpy (720p)" tvg-logo="https://i.imgur.com/KIEKOt1.png" group-title="Otros",WeatherSpy (720p)
@@ -333,5 +543,53 @@ https://jukin-weatherspy-2-mx.samsung.wurl.tv/playlist.m3u8
 https://1601580044.rsc.cdn77.org/live/_jcn_/amlst:Mariavision/master.m3u8
 #EXTINF:-1 tvg-id="PSNCanal452.mx@SD" tvg-name="PSN Canal 45.2 (288p)" tvg-logo="https://i.imgur.com/7i7GkSL.png" group-title="Otros",PSN Canal 45.2 (288p)
 https://srspsn2.live/live/livestream.m3u8
+#EXTINF:-1 tvg-id="Boligkjopiblinde.se@NO" tvg-name="Boligkjøp i blinde" tvg-logo="https://images.pluto.tv/channels/63c6a1c46d126a000760b91c/colorLogoPNG.png" group-title="Otros",Boligkjøp i blinde
+https://jmp2.uk/plu-63c6a1c46d126a000760b91c.m3u8
+#EXTINF:-1 tvg-id="BroadCity.se@NO" tvg-name="Broad City" tvg-logo="https://images.pluto.tv/channels/65cba73611ced700082123bc/colorLogoPNG.png" group-title="Otros",Broad City
+https://jmp2.uk/plu-65cba778ec452d0008acbe86.m3u8
+#EXTINF:-1 tvg-id="CarolineintheCity.se@NO" tvg-name="Caroline in the City" tvg-logo="https://images.pluto.tv/channels/66a7aa44cd0d31000843942b/colorLogoPNG.png" group-title="Otros",Caroline in the City
+https://jmp2.uk/plu-66a7aac9d512590008ab2dcb.m3u8
+#EXTINF:-1 tvg-id="ChappellesShow.se@NO" tvg-name="Chappelle's Show" tvg-logo="https://images.pluto.tv/channels/65e976ad0d456100082d9b74/colorLogoPNG.png" group-title="Otros",Chappelle's Show
+https://jmp2.uk/plu-65e977a618036500082ec972.m3u8
+#EXTINF:-1 tvg-id="Cheers.se@NO" tvg-name="Cheers" tvg-logo="https://images.pluto.tv/channels/642e9575af2bd900088527dd/colorLogoPNG.png" group-title="Otros",Cheers
+https://jmp2.uk/plu-63e389dcc111bc0008ee5b8c.m3u8
+#EXTINF:-1 tvg-id="CrazyExGirlfriend.se@NO" tvg-name="Crazy Ex-Girlfriend" tvg-logo="https://images.pluto.tv/channels/693ae5660eedebc8d5db6579/colorLogoPNG_1770039249880.png" group-title="Otros",Crazy Ex-Girlfriend
+https://jmp2.uk/plu-693ae58fc2d0f38be38df821.m3u8
+#EXTINF:-1 tvg-id="EverybodyHatesChris.se@NO" tvg-name="Everybody Hates Chris" tvg-logo="https://images.pluto.tv/channels/63a1cab19ab2df0007bf1c8b/colorLogoPNG.png" group-title="Otros",Everybody Hates Chris
+https://jmp2.uk/plu-697b5a6c9567bf7b5f71a350.m3u8
+#EXTINF:-1 tvg-id="FamilyTies.se@NO" tvg-name="Family Ties" tvg-logo="https://images.pluto.tv/channels/654a4a3ef91d250008ac089b/colorLogoPNG.png" group-title="Otros",Family Ties
+https://jmp2.uk/plu-654a4f7bf9cc8200086877d5.m3u8
+#EXTINF:-1 tvg-id="KeyPeele.se@NO" tvg-name="Key & Peele" tvg-logo="https://images.pluto.tv/channels/65cba715dc10a40008034917/colorLogoPNG.png" group-title="Otros",Key & Peele
+https://jmp2.uk/plu-65cba7573ba51e00084d76e1.m3u8
+#EXTINF:-1 tvg-id="ManwithaPlan.se@NO" tvg-name="Man with a Plan" tvg-logo="https://images.pluto.tv/channels/678f88bb272ded16b1558c5e/colorLogoPNG.png" group-title="Otros",Man with a Plan
+https://jmp2.uk/plu-6825eeeeb19ce6d4a34ebb2a.m3u8
+#EXTINF:-1 tvg-id="PlutoTVMotor.se@NO" tvg-name="Pluto TV Motor" tvg-logo="https://images.pluto.tv/channels/68ac51dede4a734954b5a67a/colorLogoPNG_1761126157471.png" group-title="Otros",Pluto TV Motor
+https://jmp2.uk/plu-68ac52b05190a45dc990ee39.m3u8
+#EXTINF:-1 tvg-id="PlutoTVVerdenskrigene.se@NO" tvg-name="Pluto TV Verdenskrigene" tvg-logo="https://images.pluto.tv/channels/677d397b60fbeb00084b0bff/colorLogoPNG_1759437735629.png" group-title="Otros",Pluto TV Verdenskrigene
+https://jmp2.uk/plu-677d3a424bd63600082f7baf.m3u8
+#EXTINF:-1 tvg-id="Reno911.se@NO" tvg-name="Reno 911" tvg-logo="https://images.pluto.tv/channels/65e9766eec9fda0008cb418a/colorLogoPNG.png" group-title="Otros",Reno 911
+https://jmp2.uk/plu-65e977874e01740008c9fb4c.m3u8
+#EXTINF:-1 tvg-id="SabrinatheTeenageWitch.se@NO" tvg-name="Sabrina the Teenage Witch" tvg-logo="https://images.pluto.tv/channels/6512ecf63a0d700008db506a/colorLogoPNG.png" group-title="Otros",Sabrina the Teenage Witch
+https://jmp2.uk/plu-6512d3c96a84140008513ff5.m3u8
+#EXTINF:-1 tvg-id="SouthPark.se@NO" tvg-name="South Park" tvg-logo="https://images.pluto.tv/channels/61c098df897b9d00070375c8/colorLogoPNG_1754471522651.png" group-title="Otros",South Park
+https://jmp2.uk/plu-61c1e88cd168ea0007068133.m3u8
+#EXTINF:-1 tvg-id="SouthParkArmageddon.se@NO" tvg-name="South Park Armageddon" tvg-logo="https://images.pluto.tv/channels/660bff28516d260008479e23/colorLogoPNG.png" group-title="Otros",South Park Armageddon
+https://jmp2.uk/plu-660bff5724e1d000085b7c07.m3u8
+#EXTINF:-1 tvg-id="SouthParkRockinOut.se@NO" tvg-name="South Park Rockin' Out" tvg-logo="https://images.pluto.tv/channels/664f132c8ea5560008ce4d86/colorLogoPNG.png" group-title="Otros",South Park Rockin' Out
+https://jmp2.uk/plu-664f1370f78a8500092df452.m3u8
+#EXTINF:-1 tvg-id="SouthParkButtersCollection.se@NO" tvg-name="South Park: Butters Collection" tvg-logo="https://images.pluto.tv/channels/65d87a66ec9fda0008a5ac11/colorLogoPNG.png" group-title="Otros",South Park: Butters Collection
+https://jmp2.uk/plu-65d87fcb66eec8000887f4aa.m3u8
+#EXTINF:-1 tvg-id="SouthParkCartmanCollection.se@NO" tvg-name="South Park: Cartman Collection" tvg-logo="https://images.pluto.tv/channels/65d87a058145cb0008265c2e/colorLogoPNG.png" group-title="Otros",South Park: Cartman Collection
+https://jmp2.uk/plu-65d87fa0f7f0af0008b2358b.m3u8
+#EXTINF:-1 tvg-id="SouthParkIntotheStars.se@NO" tvg-name="South Park: Into the Stars" tvg-logo="https://images.pluto.tv/channels/664f0eaa8ce31100088036bd/colorLogoPNG.png" group-title="Otros",South Park: Into the Stars
+https://jmp2.uk/plu-664f0ecc41af640008e37b43.m3u8
+#EXTINF:-1 tvg-id="SouthParkKennyCollection.se@NO" tvg-name="South Park: Kenny Collection" tvg-logo="https://images.pluto.tv/channels/65d879bd0d4561000805d190/colorLogoPNG.png" group-title="Otros",South Park: Kenny Collection
+https://jmp2.uk/plu-65d87f53ec9fda0008a5b810.m3u8
+#EXTINF:-1 tvg-id="SouthParkKyleCollection.se@NO" tvg-name="South Park: Kyle Collection" tvg-logo="https://images.pluto.tv/channels/65d87a908145cb0008265c6d/colorLogoPNG.png" group-title="Otros",South Park: Kyle Collection
+https://jmp2.uk/plu-65d88004ec9fda0008a5b8b3.m3u8
+#EXTINF:-1 tvg-id="SouthParkStanCollection.se@NO" tvg-name="South Park: Stan Collection" tvg-logo="https://images.pluto.tv/channels/65d879e266eec8000887e91b/colorLogoPNG.png" group-title="Otros",South Park: Stan Collection
+https://jmp2.uk/plu-65d87f7a28730900088e7fbf.m3u8
 #EXTINF:-1 tvg-id="test.bigbuckbunny" tvg-name="Stream de Prueba (Big Buck Bunny)" tvg-logo="" group-title="Otros",Stream de Prueba (Big Buck Bunny)
 https://mux.dev
+#EXTINF:-1 tvg-id="Tosh0.se@NO" tvg-name="Tosh.0" tvg-logo="https://images.pluto.tv/channels/65e977042873090008b48be9/colorLogoPNG.png" group-title="Otros",Tosh.0
+https://jmp2.uk/plu-65e977c48b24c8000805b9ef.m3u8
