@@ -6,12 +6,15 @@ sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "scripts"))
 
 from generate_trending_vod import (  # noqa: E402
     CLOUD_GROUP_NAME,
+    DEFAULT_EPISODE,
+    DEFAULT_SEASON,
     TEMPLATE_MOVIE,
     TEMPLATE_TV,
     TRENDING_VOD,
     build_templated_url,
     build_vod_item,
     load_env_overrides,
+    normalize_media_type,
     resolve_templates,
     run,
 )
@@ -24,6 +27,7 @@ def test_trending_vod_contiene_50_titulos():
 def test_resolve_templates_usa_defaults_inocuos_si_no_hay_config(monkeypatch):
     monkeypatch.delenv("VOD_TEMPLATE_MOVIE", raising=False)
     monkeypatch.delenv("VOD_TEMPLATE_TV", raising=False)
+    monkeypatch.setattr("generate_trending_vod.load_env_overrides", lambda env_path=None: {})
 
     movie_template, tv_template = resolve_templates({})
 
@@ -31,7 +35,8 @@ def test_resolve_templates_usa_defaults_inocuos_si_no_hay_config(monkeypatch):
     assert tv_template == TEMPLATE_TV
 
 
-def test_resolve_templates_acepta_override_desde_config():
+def test_resolve_templates_acepta_override_desde_config(monkeypatch):
+    monkeypatch.setattr("generate_trending_vod.load_env_overrides", lambda env_path=None: {})
     movie_template, tv_template = resolve_templates(
         {
             "vod_template_movie": "https://vod.example/movie/{id}",
@@ -43,7 +48,8 @@ def test_resolve_templates_acepta_override_desde_config():
     assert tv_template == "https://vod.example/tv/{id}"
 
 
-def test_resolve_templates_acepta_claves_mayusculas_desde_config():
+def test_resolve_templates_acepta_claves_mayusculas_desde_config(monkeypatch):
+    monkeypatch.setattr("generate_trending_vod.load_env_overrides", lambda env_path=None: {})
     movie_template, tv_template = resolve_templates(
         {
             "VOD_TEMPLATE_MOVIE": "https://vod.example/movie/{id}",
@@ -72,6 +78,7 @@ def test_load_env_overrides_lee_dotenv(tmp_path):
 def test_resolve_templates_acepta_custom_routing_rules(monkeypatch):
     monkeypatch.delenv("VOD_TEMPLATE_MOVIE", raising=False)
     monkeypatch.delenv("VOD_TEMPLATE_TV", raising=False)
+    monkeypatch.setattr("generate_trending_vod.load_env_overrides", lambda env_path=None: {})
 
     movie_template, tv_template = resolve_templates(
         {
@@ -91,17 +98,23 @@ def test_resolve_templates_acepta_custom_routing_rules(monkeypatch):
 def test_build_templated_url_formatea_movie_y_series():
     movie_url = build_templated_url(
         {"media_type": "movie", "tmdb_id": "123"},
-        "https://example.test/movie/{id}",
-        "https://example.test/tv/{id}",
+        "https://example.test/movie/{id}?s={season}&e={episode}",
+        "https://example.test/tv/{id}?s={season}&e={episode}",
     )
     series_url = build_templated_url(
         {"media_type": "series", "tmdb_id": "456"},
-        "https://example.test/movie/{id}",
-        "https://example.test/tv/{id}",
+        "https://example.test/movie/{id}?s={season}&e={episode}",
+        "https://example.test/tv/{id}?s={season}&e={episode}",
     )
 
-    assert movie_url == "https://example.test/movie/123"
-    assert series_url == "https://example.test/tv/456/1/1"
+    assert movie_url == f"https://example.test/movie/123?s={DEFAULT_SEASON}&e={DEFAULT_EPISODE}"
+    assert series_url == f"https://example.test/tv/456?s={DEFAULT_SEASON}&e={DEFAULT_EPISODE}"
+
+
+def test_normalize_media_type_distingue_movie_y_series():
+    assert normalize_media_type({"media_type": "movie"}) == "movie"
+    assert normalize_media_type({"media_type": "series"}) == "series"
+    assert normalize_media_type({"media_type": "tv"}) == "series"
 
 
 def test_build_vod_item_genera_ruteo_template_y_enlaces_legales_de_referencia():

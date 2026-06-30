@@ -1,11 +1,11 @@
 # Estado de canales
 
-Última revisión UTC: `2026-06-30T10:58:24Z`
+Última revisión UTC: `2026-06-30T11:25:46Z`
 
 - Canales totales: **228**
-- Canales vivos: **174**
+- Canales vivos: **173**
 - Canales inestables: **6**
-- Canales muertos: **48**
+- Canales muertos: **49**
 
 | Canal | Grupo | País | Estado | Código | Error |
 |---|---|---|---|---|---|
@@ -92,7 +92,7 @@
 | TV UG (1080p) [Not 24/7] | Familia y TV Abierta | MX | ✅ Vivo | 200 |  |
 | UMTV (1080p) [Not 24/7] | Familia y TV Abierta | MX | ✅ Vivo | 200 |  |
 | Unison TV (1080p) [Not 24/7] | Familia y TV Abierta | MX | ✅ Vivo | 200 |  |
-| Univision Latin America (1080p) | Familia y TV Abierta | MX | ✅ Vivo | 200 |  |
+| Univision Latin America (1080p) | Familia y TV Abierta | MX | ❌ Muerto | 404 | HTTP 404 |
 | California Medios TV (720p) | Familia y TV Abierta | MX | ❌ Muerto | 404 | HTTP 404 |
 | Canal 10 Cancún (720p) [Not 24/7] | Familia y TV Abierta | MX | ❌ Muerto | - | Timeout |
 | Canal 10 Chiapas (720p) | Familia y TV Abierta | MX | ✅ Vivo | 200 |  |
@@ -113,7 +113,7 @@
 | Canal 44 Ciudad Juárez (720p) [Not 24/7] | Familia y TV Abierta | MX | ✅ Vivo | 200 |  |
 | Imagen TV+ (720p) | Familia y TV Abierta | MX | ✅ Vivo | 200 |  |
 | IMRyT Morelos TV (720p) | Familia y TV Abierta | MX | ❌ Muerto | 404 | HTTP 404 |
-| Ingenio TV (720p) | Familia y TV Abierta | MX | ❌ Muerto | - | Timeout |
+| Ingenio TV (720p) | Familia y TV Abierta | MX | ❌ Muerto | - | Cannot connect to host aprende-usea.streaming.media.azure.net:443 ssl:False [getaddrinfo failed] |
 | Jalisco TV (720p) | Familia y TV Abierta | MX | ✅ Vivo | 200 |  |
 | Lobo TV (720p) | Familia y TV Abierta | MX | ✅ Vivo | 200 |  |
 | Mexiquense TV (720p) | Familia y TV Abierta | MX | ✅ Vivo | 200 |  |
@@ -228,7 +228,7 @@
 | A+ [Geo-blocked] | Entretenimiento | MX | ✅ Vivo | 200 |  |
 | NASA TV Public | Entretenimiento | US | ❌ Muerto | - | Cannot connect to host akamaized.net:443 ssl:False [getaddrinfo failed] |
 | Telehit Musica | Entretenimiento | MX | ❌ Muerto | 403 | HTTP 403 |
-| BAMOS TV (1080p) [Not 24/7] | Otros | MX | ❌ Muerto | - | Timeout |
+| BAMOS TV (1080p) [Not 24/7] | Otros | MX | ❌ Muerto | 404 | HTTP 404 |
 | Monte Maria (1080p) | Otros | MX | ✅ Vivo | 200 |  |
 | Radio y Televisión Crisol de la Alegría (1080p) [Not 24/7] | Otros | MX | ❌ Muerto | 404 | HTTP 404 |
 | Alcance TV (720p) | Otros | MX | ✅ Vivo | 200 |  |

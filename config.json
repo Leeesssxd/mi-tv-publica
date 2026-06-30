@@ -1,6 +1,6 @@
 {
-  "VOD_TEMPLATE_MOVIE": "https://vidsrc.win/{id}",
-  "VOD_TEMPLATE_TV": "https://vidsrc.win/{id}",
+  "VOD_TEMPLATE_MOVIE": "https://vidsrc.win/watch/{id}",
+  "VOD_TEMPLATE_TV": "https://vidsrc.win/watch/{id}?s={season}&e={episode}",
   "timeout_seconds": 10,
   "max_concurrency": 5,
   "user_agent": "MiTVPublicaBot/1.0 (+https://github.com)",

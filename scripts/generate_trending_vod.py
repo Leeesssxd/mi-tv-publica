@@ -24,6 +24,10 @@ CONFIG_FILE = ROOT_DIR / "config.json"
 CLOUD_GROUP_NAME = "Mi Catálogo Cloud"
 TEMPLATE_MOVIE = os.getenv("VOD_TEMPLATE_MOVIE", "https://localhost/movie/{id}")
 TEMPLATE_TV = os.getenv("VOD_TEMPLATE_TV", "https://localhost/tv/{id}")
+DEFAULT_SEASON = 1
+DEFAULT_EPISODE = 1
+MOVIE_MEDIA_TYPE = "movie"
+SERIES_MEDIA_TYPES = {"series", "tv"}
 
 TRENDING_VOD: list[dict[str, Any]] = [
     {"name": "The Bear", "media_type": "series", "year": 2022, "imdb_id": "tt14452776", "tmdb_id": "136315"},
@@ -119,7 +123,7 @@ def save_sources_payload(payload: Any, sources_path: Path = SOURCES_FILE) -> Non
 
 
 def tmdb_path(item: dict[str, Any]) -> str:
-    kind = "movie" if item["media_type"] == "movie" else "tv"
+    kind = "movie" if normalize_media_type(item) == MOVIE_MEDIA_TYPE else "tv"
     return f"https://www.themoviedb.org/{kind}/{item['tmdb_id']}"
 
 
@@ -131,6 +135,15 @@ def youtube_search_path(item: dict[str, Any]) -> str:
     query = f"{item['name']} {item['year']} trailer oficial"
     from urllib.parse import quote_plus
     return f"https://www.youtube.com/results?search_query={quote_plus(query)}"
+
+
+def normalize_media_type(item: dict[str, Any]) -> str:
+    media_type = str(item.get("media_type") or "").strip().casefold()
+    if media_type == MOVIE_MEDIA_TYPE:
+        return MOVIE_MEDIA_TYPE
+    if media_type in SERIES_MEDIA_TYPES:
+        return "series"
+    raise ValueError(f"media_type no soportado: {item.get('media_type')}")
 
 
 def resolve_templates(config: dict[str, Any] | None = None) -> tuple[str, str]:
@@ -166,13 +179,17 @@ def resolve_templates(config: dict[str, Any] | None = None) -> tuple[str, str]:
 
 
 def build_templated_url(item: dict[str, Any], movie_template: str, tv_template: str) -> str:
-    media_type = str(item.get("media_type") or "").strip().casefold()
+    media_type = normalize_media_type(item)
     tmdb_id = str(item["tmdb_id"]).strip()
-    if media_type == "movie":
-        return movie_template.format(id=tmdb_id)
-    if media_type in {"series", "tv"}:
-        return f"{tv_template.format(id=tmdb_id).rstrip('/')}/1/1"
-    raise ValueError(f"media_type no soportado: {item.get('media_type')}")
+    template_values = {
+        "id": tmdb_id,
+        "tmdb_id": tmdb_id,
+        "season": DEFAULT_SEASON,
+        "episode": DEFAULT_EPISODE,
+    }
+    if media_type == MOVIE_MEDIA_TYPE:
+        return movie_template.format(**template_values)
+    return tv_template.format(**template_values)
 
 
 def build_vod_item(
@@ -180,7 +197,8 @@ def build_vod_item(
     movie_template: str = TEMPLATE_MOVIE,
     tv_template: str = TEMPLATE_TV,
 ) -> dict[str, Any]:
-    suffix = "Pelicula" if item["media_type"] == "movie" else "Serie"
+    normalized_media_type = normalize_media_type(item)
+    suffix = "Pelicula" if normalized_media_type == MOVIE_MEDIA_TYPE else "Serie"
     templated_url = build_templated_url(item, movie_template, tv_template)
     route_is_placeholder = "localhost" in templated_url.casefold()
     return {
@@ -190,7 +208,7 @@ def build_vod_item(
         "url": templated_url,
         "logo": "",
         "tvg_id": item["imdb_id"],
-        "media_type": item["media_type"],
+        "media_type": normalized_media_type,
         "catalog_kind": suffix,
         "imdb_id": item["imdb_id"],
         "tmdb_id": item["tmdb_id"],
