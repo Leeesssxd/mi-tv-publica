@@ -1913,7 +1913,7 @@
         "name": "The Bear (2022)",
         "group": "Mi Catálogo Cloud",
         "country": "ZZ",
-        "url": "https://www.themoviedb.org/tv/136315",
+        "url": "https://vidsrc.pm136315/1/1",
         "logo": "",
         "tvg_id": "tt14452776",
         "media_type": "series",
@@ -1924,13 +1924,14 @@
         "reference_url": "https://www.themoviedb.org/tv/136315",
         "imdb_url": "https://www.imdb.com/title/tt14452776/",
         "trailer_search_url": "https://www.youtube.com/results?search_query=The+Bear+2022+trailer+oficial",
-        "availability": "metadata_only"
+        "availability": "templated_routing",
+        "routing_mode": "configured"
       },
       {
         "name": "House of the Dragon (2022)",
         "group": "Mi Catálogo Cloud",
         "country": "ZZ",
-        "url": "https://www.themoviedb.org/tv/94997",
+        "url": "https://vidsrc.pm94997/1/1",
         "logo": "",
         "tvg_id": "tt11198330",
         "media_type": "series",
@@ -1941,13 +1942,14 @@
         "reference_url": "https://www.themoviedb.org/tv/94997",
         "imdb_url": "https://www.imdb.com/title/tt11198330/",
         "trailer_search_url": "https://www.youtube.com/results?search_query=House+of+the+Dragon+2022+trailer+oficial",
-        "availability": "metadata_only"
+        "availability": "templated_routing",
+        "routing_mode": "configured"
       },
       {
         "name": "The Last of Us (2023)",
         "group": "Mi Catálogo Cloud",
         "country": "ZZ",
-        "url": "https://www.themoviedb.org/tv/100088",
+        "url": "https://vidsrc.pm100088/1/1",
         "logo": "",
         "tvg_id": "tt3581920",
         "media_type": "series",
@@ -1958,13 +1960,14 @@
         "reference_url": "https://www.themoviedb.org/tv/100088",
         "imdb_url": "https://www.imdb.com/title/tt3581920/",
         "trailer_search_url": "https://www.youtube.com/results?search_query=The+Last+of+Us+2023+trailer+oficial",
-        "availability": "metadata_only"
+        "availability": "templated_routing",
+        "routing_mode": "configured"
       },
       {
         "name": "Andor (2022)",
         "group": "Mi Catálogo Cloud",
         "country": "ZZ",
-        "url": "https://www.themoviedb.org/tv/83867",
+        "url": "https://vidsrc.pm83867/1/1",
         "logo": "",
         "tvg_id": "tt9253284",
         "media_type": "series",
@@ -1975,13 +1978,14 @@
         "reference_url": "https://www.themoviedb.org/tv/83867",
         "imdb_url": "https://www.imdb.com/title/tt9253284/",
         "trailer_search_url": "https://www.youtube.com/results?search_query=Andor+2022+trailer+oficial",
-        "availability": "metadata_only"
+        "availability": "templated_routing",
+        "routing_mode": "configured"
       },
       {
         "name": "Severance (2022)",
         "group": "Mi Catálogo Cloud",
         "country": "ZZ",
-        "url": "https://www.themoviedb.org/tv/95396",
+        "url": "https://vidsrc.pm95396/1/1",
         "logo": "",
         "tvg_id": "tt11280740",
         "media_type": "series",
@@ -1992,13 +1996,14 @@
         "reference_url": "https://www.themoviedb.org/tv/95396",
         "imdb_url": "https://www.imdb.com/title/tt11280740/",
         "trailer_search_url": "https://www.youtube.com/results?search_query=Severance+2022+trailer+oficial",
-        "availability": "metadata_only"
+        "availability": "templated_routing",
+        "routing_mode": "configured"
       },
       {
         "name": "Fallout (2024)",
         "group": "Mi Catálogo Cloud",
         "country": "ZZ",
-        "url": "https://www.themoviedb.org/tv/106379",
+        "url": "https://vidsrc.pm106379/1/1",
         "logo": "",
         "tvg_id": "tt12637874",
         "media_type": "series",
@@ -2009,13 +2014,14 @@
         "reference_url": "https://www.themoviedb.org/tv/106379",
         "imdb_url": "https://www.imdb.com/title/tt12637874/",
         "trailer_search_url": "https://www.youtube.com/results?search_query=Fallout+2024+trailer+oficial",
-        "availability": "metadata_only"
+        "availability": "templated_routing",
+        "routing_mode": "configured"
       },
       {
         "name": "Shogun (2024)",
         "group": "Mi Catálogo Cloud",
         "country": "ZZ",
-        "url": "https://www.themoviedb.org/tv/126308",
+        "url": "https://vidsrc.pm126308/1/1",
         "logo": "",
         "tvg_id": "tt2788316",
         "media_type": "series",
@@ -2026,13 +2032,14 @@
         "reference_url": "https://www.themoviedb.org/tv/126308",
         "imdb_url": "https://www.imdb.com/title/tt2788316/",
         "trailer_search_url": "https://www.youtube.com/results?search_query=Shogun+2024+trailer+oficial",
-        "availability": "metadata_only"
+        "availability": "templated_routing",
+        "routing_mode": "configured"
       },
       {
         "name": "The White Lotus (2021)",
         "group": "Mi Catálogo Cloud",
         "country": "ZZ",
-        "url": "https://www.themoviedb.org/tv/111803",
+        "url": "https://vidsrc.pm111803/1/1",
         "logo": "",
         "tvg_id": "tt13406094",
         "media_type": "series",
@@ -2043,13 +2050,14 @@
         "reference_url": "https://www.themoviedb.org/tv/111803",
         "imdb_url": "https://www.imdb.com/title/tt13406094/",
         "trailer_search_url": "https://www.youtube.com/results?search_query=The+White+Lotus+2021+trailer+oficial",
-        "availability": "metadata_only"
+        "availability": "templated_routing",
+        "routing_mode": "configured"
       },
       {
         "name": "The Boys (2019)",
         "group": "Mi Catálogo Cloud",
         "country": "ZZ",
-        "url": "https://www.themoviedb.org/tv/76479",
+        "url": "https://vidsrc.pm76479/1/1",
         "logo": "",
         "tvg_id": "tt1190634",
         "media_type": "series",
@@ -2060,13 +2068,14 @@
         "reference_url": "https://www.themoviedb.org/tv/76479",
         "imdb_url": "https://www.imdb.com/title/tt1190634/",
         "trailer_search_url": "https://www.youtube.com/results?search_query=The+Boys+2019+trailer+oficial",
-        "availability": "metadata_only"
+        "availability": "templated_routing",
+        "routing_mode": "configured"
       },
       {
         "name": "Bridgerton (2020)",
         "group": "Mi Catálogo Cloud",
         "country": "ZZ",
-        "url": "https://www.themoviedb.org/tv/91239",
+        "url": "https://vidsrc.pm91239/1/1",
         "logo": "",
         "tvg_id": "tt8740790",
         "media_type": "series",
@@ -2077,13 +2086,14 @@
         "reference_url": "https://www.themoviedb.org/tv/91239",
         "imdb_url": "https://www.imdb.com/title/tt8740790/",
         "trailer_search_url": "https://www.youtube.com/results?search_query=Bridgerton+2020+trailer+oficial",
-        "availability": "metadata_only"
+        "availability": "templated_routing",
+        "routing_mode": "configured"
       },
       {
         "name": "Wednesday (2022)",
         "group": "Mi Catálogo Cloud",
         "country": "ZZ",
-        "url": "https://www.themoviedb.org/tv/119051",
+        "url": "https://vidsrc.pm119051/1/1",
         "logo": "",
         "tvg_id": "tt13443470",
         "media_type": "series",
@@ -2094,13 +2104,14 @@
         "reference_url": "https://www.themoviedb.org/tv/119051",
         "imdb_url": "https://www.imdb.com/title/tt13443470/",
         "trailer_search_url": "https://www.youtube.com/results?search_query=Wednesday+2022+trailer+oficial",
-        "availability": "metadata_only"
+        "availability": "templated_routing",
+        "routing_mode": "configured"
       },
       {
         "name": "True Detective (2014)",
         "group": "Mi Catálogo Cloud",
         "country": "ZZ",
-        "url": "https://www.themoviedb.org/tv/46648",
+        "url": "https://vidsrc.pm46648/1/1",
         "logo": "",
         "tvg_id": "tt2356777",
         "media_type": "series",
@@ -2111,13 +2122,14 @@
         "reference_url": "https://www.themoviedb.org/tv/46648",
         "imdb_url": "https://www.imdb.com/title/tt2356777/",
         "trailer_search_url": "https://www.youtube.com/results?search_query=True+Detective+2014+trailer+oficial",
-        "availability": "metadata_only"
+        "availability": "templated_routing",
+        "routing_mode": "configured"
       },
       {
         "name": "The Gentlemen (2024)",
         "group": "Mi Catálogo Cloud",
         "country": "ZZ",
-        "url": "https://www.themoviedb.org/tv/236994",
+        "url": "https://vidsrc.pm236994/1/1",
         "logo": "",
         "tvg_id": "tt13210838",
         "media_type": "series",
@@ -2128,13 +2140,14 @@
         "reference_url": "https://www.themoviedb.org/tv/236994",
         "imdb_url": "https://www.imdb.com/title/tt13210838/",
         "trailer_search_url": "https://www.youtube.com/results?search_query=The+Gentlemen+2024+trailer+oficial",
-        "availability": "metadata_only"
+        "availability": "templated_routing",
+        "routing_mode": "configured"
       },
       {
         "name": "Ripley (2024)",
         "group": "Mi Catálogo Cloud",
         "country": "ZZ",
-        "url": "https://www.themoviedb.org/tv/138575",
+        "url": "https://vidsrc.pm138575/1/1",
         "logo": "",
         "tvg_id": "tt11016042",
         "media_type": "series",
@@ -2145,13 +2158,14 @@
         "reference_url": "https://www.themoviedb.org/tv/138575",
         "imdb_url": "https://www.imdb.com/title/tt11016042/",
         "trailer_search_url": "https://www.youtube.com/results?search_query=Ripley+2024+trailer+oficial",
-        "availability": "metadata_only"
+        "availability": "templated_routing",
+        "routing_mode": "configured"
       },
       {
         "name": "3 Body Problem (2024)",
         "group": "Mi Catálogo Cloud",
         "country": "ZZ",
-        "url": "https://www.themoviedb.org/tv/100757",
+        "url": "https://vidsrc.pm100757/1/1",
         "logo": "",
         "tvg_id": "tt13016388",
         "media_type": "series",
@@ -2162,13 +2176,14 @@
         "reference_url": "https://www.themoviedb.org/tv/100757",
         "imdb_url": "https://www.imdb.com/title/tt13016388/",
         "trailer_search_url": "https://www.youtube.com/results?search_query=3+Body+Problem+2024+trailer+oficial",
-        "availability": "metadata_only"
+        "availability": "templated_routing",
+        "routing_mode": "configured"
       },
       {
         "name": "Presumed Innocent (2024)",
         "group": "Mi Catálogo Cloud",
         "country": "ZZ",
-        "url": "https://www.themoviedb.org/tv/158572",
+        "url": "https://vidsrc.pm158572/1/1",
         "logo": "",
         "tvg_id": "tt17677860",
         "media_type": "series",
@@ -2179,13 +2194,14 @@
         "reference_url": "https://www.themoviedb.org/tv/158572",
         "imdb_url": "https://www.imdb.com/title/tt17677860/",
         "trailer_search_url": "https://www.youtube.com/results?search_query=Presumed+Innocent+2024+trailer+oficial",
-        "availability": "metadata_only"
+        "availability": "templated_routing",
+        "routing_mode": "configured"
       },
       {
         "name": "The Penguin (2024)",
         "group": "Mi Catálogo Cloud",
         "country": "ZZ",
-        "url": "https://www.themoviedb.org/tv/194764",
+        "url": "https://vidsrc.pm194764/1/1",
         "logo": "",
         "tvg_id": "tt15435876",
         "media_type": "series",
@@ -2196,13 +2212,14 @@
         "reference_url": "https://www.themoviedb.org/tv/194764",
         "imdb_url": "https://www.imdb.com/title/tt15435876/",
         "trailer_search_url": "https://www.youtube.com/results?search_query=The+Penguin+2024+trailer+oficial",
-        "availability": "metadata_only"
+        "availability": "templated_routing",
+        "routing_mode": "configured"
       },
       {
         "name": "Nobody Wants This (2024)",
         "group": "Mi Catálogo Cloud",
         "country": "ZZ",
-        "url": "https://www.themoviedb.org/tv/243106",
+        "url": "https://vidsrc.pm243106/1/1",
         "logo": "",
         "tvg_id": "tt28052847",
         "media_type": "series",
@@ -2213,13 +2230,14 @@
         "reference_url": "https://www.themoviedb.org/tv/243106",
         "imdb_url": "https://www.imdb.com/title/tt28052847/",
         "trailer_search_url": "https://www.youtube.com/results?search_query=Nobody+Wants+This+2024+trailer+oficial",
-        "availability": "metadata_only"
+        "availability": "templated_routing",
+        "routing_mode": "configured"
       },
       {
         "name": "The Substance (2024)",
         "group": "Mi Catálogo Cloud",
         "country": "ZZ",
-        "url": "https://www.themoviedb.org/movie/933260",
+        "url": "https://vidsrc.pm933260",
         "logo": "",
         "tvg_id": "tt17526714",
         "media_type": "movie",
@@ -2230,13 +2248,14 @@
         "reference_url": "https://www.themoviedb.org/movie/933260",
         "imdb_url": "https://www.imdb.com/title/tt17526714/",
         "trailer_search_url": "https://www.youtube.com/results?search_query=The+Substance+2024+trailer+oficial",
-        "availability": "metadata_only"
+        "availability": "templated_routing",
+        "routing_mode": "configured"
       },
       {
         "name": "Dune: Part Two (2024)",
         "group": "Mi Catálogo Cloud",
         "country": "ZZ",
-        "url": "https://www.themoviedb.org/movie/693134",
+        "url": "https://vidsrc.pm693134",
         "logo": "",
         "tvg_id": "tt15239678",
         "media_type": "movie",
@@ -2247,13 +2266,14 @@
         "reference_url": "https://www.themoviedb.org/movie/693134",
         "imdb_url": "https://www.imdb.com/title/tt15239678/",
         "trailer_search_url": "https://www.youtube.com/results?search_query=Dune%3A+Part+Two+2024+trailer+oficial",
-        "availability": "metadata_only"
+        "availability": "templated_routing",
+        "routing_mode": "configured"
       },
       {
         "name": "Inside Out 2 (2024)",
         "group": "Mi Catálogo Cloud",
         "country": "ZZ",
-        "url": "https://www.themoviedb.org/movie/1022789",
+        "url": "https://vidsrc.pm1022789",
         "logo": "",
         "tvg_id": "tt22022452",
         "media_type": "movie",
@@ -2264,13 +2284,14 @@
         "reference_url": "https://www.themoviedb.org/movie/1022789",
         "imdb_url": "https://www.imdb.com/title/tt22022452/",
         "trailer_search_url": "https://www.youtube.com/results?search_query=Inside+Out+2+2024+trailer+oficial",
-        "availability": "metadata_only"
+        "availability": "templated_routing",
+        "routing_mode": "configured"
       },
       {
         "name": "Civil War (2024)",
         "group": "Mi Catálogo Cloud",
         "country": "ZZ",
-        "url": "https://www.themoviedb.org/movie/929590",
+        "url": "https://vidsrc.pm929590",
         "logo": "",
         "tvg_id": "tt17279496",
         "media_type": "movie",
@@ -2281,13 +2302,14 @@
         "reference_url": "https://www.themoviedb.org/movie/929590",
         "imdb_url": "https://www.imdb.com/title/tt17279496/",
         "trailer_search_url": "https://www.youtube.com/results?search_query=Civil+War+2024+trailer+oficial",
-        "availability": "metadata_only"
+        "availability": "templated_routing",
+        "routing_mode": "configured"
       },
       {
         "name": "Furiosa: A Mad Max Saga (2024)",
         "group": "Mi Catálogo Cloud",
         "country": "ZZ",
-        "url": "https://www.themoviedb.org/movie/786892",
+        "url": "https://vidsrc.pm786892",
         "logo": "",
         "tvg_id": "tt12037194",
         "media_type": "movie",
@@ -2298,13 +2320,14 @@
         "reference_url": "https://www.themoviedb.org/movie/786892",
         "imdb_url": "https://www.imdb.com/title/tt12037194/",
         "trailer_search_url": "https://www.youtube.com/results?search_query=Furiosa%3A+A+Mad+Max+Saga+2024+trailer+oficial",
-        "availability": "metadata_only"
+        "availability": "templated_routing",
+        "routing_mode": "configured"
       },
       {
         "name": "Kingdom of the Planet of the Apes (2024)",
         "group": "Mi Catálogo Cloud",
         "country": "ZZ",
-        "url": "https://www.themoviedb.org/movie/653346",
+        "url": "https://vidsrc.pm653346",
         "logo": "",
         "tvg_id": "tt11389872",
         "media_type": "movie",
@@ -2315,13 +2338,14 @@
         "reference_url": "https://www.themoviedb.org/movie/653346",
         "imdb_url": "https://www.imdb.com/title/tt11389872/",
         "trailer_search_url": "https://www.youtube.com/results?search_query=Kingdom+of+the+Planet+of+the+Apes+2024+trailer+oficial",
-        "availability": "metadata_only"
+        "availability": "templated_routing",
+        "routing_mode": "configured"
       },
       {
         "name": "Deadpool & Wolverine (2024)",
         "group": "Mi Catálogo Cloud",
         "country": "ZZ",
-        "url": "https://www.themoviedb.org/movie/533535",
+        "url": "https://vidsrc.pm533535",
         "logo": "",
         "tvg_id": "tt6263850",
         "media_type": "movie",
@@ -2332,13 +2356,14 @@
         "reference_url": "https://www.themoviedb.org/movie/533535",
         "imdb_url": "https://www.imdb.com/title/tt6263850/",
         "trailer_search_url": "https://www.youtube.com/results?search_query=Deadpool+%26+Wolverine+2024+trailer+oficial",
-        "availability": "metadata_only"
+        "availability": "templated_routing",
+        "routing_mode": "configured"
       },
       {
         "name": "Twisters (2024)",
         "group": "Mi Catálogo Cloud",
         "country": "ZZ",
-        "url": "https://www.themoviedb.org/movie/718821",
+        "url": "https://vidsrc.pm718821",
         "logo": "",
         "tvg_id": "tt12584954",
         "media_type": "movie",
@@ -2349,13 +2374,14 @@
         "reference_url": "https://www.themoviedb.org/movie/718821",
         "imdb_url": "https://www.imdb.com/title/tt12584954/",
         "trailer_search_url": "https://www.youtube.com/results?search_query=Twisters+2024+trailer+oficial",
-        "availability": "metadata_only"
+        "availability": "templated_routing",
+        "routing_mode": "configured"
       },
       {
         "name": "Beetlejuice Beetlejuice (2024)",
         "group": "Mi Catálogo Cloud",
         "country": "ZZ",
-        "url": "https://www.themoviedb.org/movie/917496",
+        "url": "https://vidsrc.pm917496",
         "logo": "",
         "tvg_id": "tt2049403",
         "media_type": "movie",
@@ -2366,13 +2392,14 @@
         "reference_url": "https://www.themoviedb.org/movie/917496",
         "imdb_url": "https://www.imdb.com/title/tt2049403/",
         "trailer_search_url": "https://www.youtube.com/results?search_query=Beetlejuice+Beetlejuice+2024+trailer+oficial",
-        "availability": "metadata_only"
+        "availability": "templated_routing",
+        "routing_mode": "configured"
       },
       {
         "name": "Alien: Romulus (2024)",
         "group": "Mi Catálogo Cloud",
         "country": "ZZ",
-        "url": "https://www.themoviedb.org/movie/945961",
+        "url": "https://vidsrc.pm945961",
         "logo": "",
         "tvg_id": "tt18412256",
         "media_type": "movie",
@@ -2383,13 +2410,14 @@
         "reference_url": "https://www.themoviedb.org/movie/945961",
         "imdb_url": "https://www.imdb.com/title/tt18412256/",
         "trailer_search_url": "https://www.youtube.com/results?search_query=Alien%3A+Romulus+2024+trailer+oficial",
-        "availability": "metadata_only"
+        "availability": "templated_routing",
+        "routing_mode": "configured"
       },
       {
         "name": "The Wild Robot (2024)",
         "group": "Mi Catálogo Cloud",
         "country": "ZZ",
-        "url": "https://www.themoviedb.org/movie/1184918",
+        "url": "https://vidsrc.pm1184918",
         "logo": "",
         "tvg_id": "tt29623480",
         "media_type": "movie",
@@ -2400,13 +2428,14 @@
         "reference_url": "https://www.themoviedb.org/movie/1184918",
         "imdb_url": "https://www.imdb.com/title/tt29623480/",
         "trailer_search_url": "https://www.youtube.com/results?search_query=The+Wild+Robot+2024+trailer+oficial",
-        "availability": "metadata_only"
+        "availability": "templated_routing",
+        "routing_mode": "configured"
       },
       {
         "name": "Flow (2024)",
         "group": "Mi Catálogo Cloud",
         "country": "ZZ",
-        "url": "https://www.themoviedb.org/movie/823219",
+        "url": "https://vidsrc.pm823219",
         "logo": "",
         "tvg_id": "tt4772188",
         "media_type": "movie",
@@ -2417,13 +2446,14 @@
         "reference_url": "https://www.themoviedb.org/movie/823219",
         "imdb_url": "https://www.imdb.com/title/tt4772188/",
         "trailer_search_url": "https://www.youtube.com/results?search_query=Flow+2024+trailer+oficial",
-        "availability": "metadata_only"
+        "availability": "templated_routing",
+        "routing_mode": "configured"
       },
       {
         "name": "Anora (2024)",
         "group": "Mi Catálogo Cloud",
         "country": "ZZ",
-        "url": "https://www.themoviedb.org/movie/1064213",
+        "url": "https://vidsrc.pm1064213",
         "logo": "",
         "tvg_id": "tt28607951",
         "media_type": "movie",
@@ -2434,13 +2464,14 @@
         "reference_url": "https://www.themoviedb.org/movie/1064213",
         "imdb_url": "https://www.imdb.com/title/tt28607951/",
         "trailer_search_url": "https://www.youtube.com/results?search_query=Anora+2024+trailer+oficial",
-        "availability": "metadata_only"
+        "availability": "templated_routing",
+        "routing_mode": "configured"
       },
       {
         "name": "Challengers (2024)",
         "group": "Mi Catálogo Cloud",
         "country": "ZZ",
-        "url": "https://www.themoviedb.org/movie/937287",
+        "url": "https://vidsrc.pm937287",
         "logo": "",
         "tvg_id": "tt16426418",
         "media_type": "movie",
@@ -2451,13 +2482,14 @@
         "reference_url": "https://www.themoviedb.org/movie/937287",
         "imdb_url": "https://www.imdb.com/title/tt16426418/",
         "trailer_search_url": "https://www.youtube.com/results?search_query=Challengers+2024+trailer+oficial",
-        "availability": "metadata_only"
+        "availability": "templated_routing",
+        "routing_mode": "configured"
       },
       {
         "name": "The Fall Guy (2024)",
         "group": "Mi Catálogo Cloud",
         "country": "ZZ",
-        "url": "https://www.themoviedb.org/movie/746036",
+        "url": "https://vidsrc.pm746036",
         "logo": "",
         "tvg_id": "tt1684562",
         "media_type": "movie",
@@ -2468,13 +2500,14 @@
         "reference_url": "https://www.themoviedb.org/movie/746036",
         "imdb_url": "https://www.imdb.com/title/tt1684562/",
         "trailer_search_url": "https://www.youtube.com/results?search_query=The+Fall+Guy+2024+trailer+oficial",
-        "availability": "metadata_only"
+        "availability": "templated_routing",
+        "routing_mode": "configured"
       },
       {
         "name": "A Quiet Place: Day One (2024)",
         "group": "Mi Catálogo Cloud",
         "country": "ZZ",
-        "url": "https://www.themoviedb.org/movie/762441",
+        "url": "https://vidsrc.pm762441",
         "logo": "",
         "tvg_id": "tt13433802",
         "media_type": "movie",
@@ -2485,13 +2518,14 @@
         "reference_url": "https://www.themoviedb.org/movie/762441",
         "imdb_url": "https://www.imdb.com/title/tt13433802/",
         "trailer_search_url": "https://www.youtube.com/results?search_query=A+Quiet+Place%3A+Day+One+2024+trailer+oficial",
-        "availability": "metadata_only"
+        "availability": "templated_routing",
+        "routing_mode": "configured"
       },
       {
         "name": "Longlegs (2024)",
         "group": "Mi Catálogo Cloud",
         "country": "ZZ",
-        "url": "https://www.themoviedb.org/movie/1226578",
+        "url": "https://vidsrc.pm1226578",
         "logo": "",
         "tvg_id": "tt23468450",
         "media_type": "movie",
@@ -2502,13 +2536,14 @@
         "reference_url": "https://www.themoviedb.org/movie/1226578",
         "imdb_url": "https://www.imdb.com/title/tt23468450/",
         "trailer_search_url": "https://www.youtube.com/results?search_query=Longlegs+2024+trailer+oficial",
-        "availability": "metadata_only"
+        "availability": "templated_routing",
+        "routing_mode": "configured"
       },
       {
         "name": "Gladiator II (2024)",
         "group": "Mi Catálogo Cloud",
         "country": "ZZ",
-        "url": "https://www.themoviedb.org/movie/558449",
+        "url": "https://vidsrc.pm558449",
         "logo": "",
         "tvg_id": "tt9218128",
         "media_type": "movie",
@@ -2519,13 +2554,14 @@
         "reference_url": "https://www.themoviedb.org/movie/558449",
         "imdb_url": "https://www.imdb.com/title/tt9218128/",
         "trailer_search_url": "https://www.youtube.com/results?search_query=Gladiator+II+2024+trailer+oficial",
-        "availability": "metadata_only"
+        "availability": "templated_routing",
+        "routing_mode": "configured"
       },
       {
         "name": "Wicked (2024)",
         "group": "Mi Catálogo Cloud",
         "country": "ZZ",
-        "url": "https://www.themoviedb.org/movie/402431",
+        "url": "https://vidsrc.pm402431",
         "logo": "",
         "tvg_id": "tt1262426",
         "media_type": "movie",
@@ -2536,13 +2572,14 @@
         "reference_url": "https://www.themoviedb.org/movie/402431",
         "imdb_url": "https://www.imdb.com/title/tt1262426/",
         "trailer_search_url": "https://www.youtube.com/results?search_query=Wicked+2024+trailer+oficial",
-        "availability": "metadata_only"
+        "availability": "templated_routing",
+        "routing_mode": "configured"
       },
       {
         "name": "Moana 2 (2024)",
         "group": "Mi Catálogo Cloud",
         "country": "ZZ",
-        "url": "https://www.themoviedb.org/movie/1241982",
+        "url": "https://vidsrc.pm1241982",
         "logo": "",
         "tvg_id": "tt13622970",
         "media_type": "movie",
@@ -2553,13 +2590,14 @@
         "reference_url": "https://www.themoviedb.org/movie/1241982",
         "imdb_url": "https://www.imdb.com/title/tt13622970/",
         "trailer_search_url": "https://www.youtube.com/results?search_query=Moana+2+2024+trailer+oficial",
-        "availability": "metadata_only"
+        "availability": "templated_routing",
+        "routing_mode": "configured"
       },
       {
         "name": "Sonic the Hedgehog 3 (2024)",
         "group": "Mi Catálogo Cloud",
         "country": "ZZ",
-        "url": "https://www.themoviedb.org/movie/939243",
+        "url": "https://vidsrc.pm939243",
         "logo": "",
         "tvg_id": "tt18259086",
         "media_type": "movie",
@@ -2570,13 +2608,14 @@
         "reference_url": "https://www.themoviedb.org/movie/939243",
         "imdb_url": "https://www.imdb.com/title/tt18259086/",
         "trailer_search_url": "https://www.youtube.com/results?search_query=Sonic+the+Hedgehog+3+2024+trailer+oficial",
-        "availability": "metadata_only"
+        "availability": "templated_routing",
+        "routing_mode": "configured"
       },
       {
         "name": "Mickey 17 (2025)",
         "group": "Mi Catálogo Cloud",
         "country": "ZZ",
-        "url": "https://www.themoviedb.org/movie/696506",
+        "url": "https://vidsrc.pm696506",
         "logo": "",
         "tvg_id": "tt12299608",
         "media_type": "movie",
@@ -2587,13 +2626,14 @@
         "reference_url": "https://www.themoviedb.org/movie/696506",
         "imdb_url": "https://www.imdb.com/title/tt12299608/",
         "trailer_search_url": "https://www.youtube.com/results?search_query=Mickey+17+2025+trailer+oficial",
-        "availability": "metadata_only"
+        "availability": "templated_routing",
+        "routing_mode": "configured"
       },
       {
         "name": "Superman (2025)",
         "group": "Mi Catálogo Cloud",
         "country": "ZZ",
-        "url": "https://www.themoviedb.org/movie/1061474",
+        "url": "https://vidsrc.pm1061474",
         "logo": "",
         "tvg_id": "tt5950044",
         "media_type": "movie",
@@ -2604,13 +2644,14 @@
         "reference_url": "https://www.themoviedb.org/movie/1061474",
         "imdb_url": "https://www.imdb.com/title/tt5950044/",
         "trailer_search_url": "https://www.youtube.com/results?search_query=Superman+2025+trailer+oficial",
-        "availability": "metadata_only"
+        "availability": "templated_routing",
+        "routing_mode": "configured"
       },
       {
         "name": "The Fantastic Four: First Steps (2025)",
         "group": "Mi Catálogo Cloud",
         "country": "ZZ",
-        "url": "https://www.themoviedb.org/movie/617126",
+        "url": "https://vidsrc.pm617126",
         "logo": "",
         "tvg_id": "tt10676052",
         "media_type": "movie",
@@ -2621,13 +2662,14 @@
         "reference_url": "https://www.themoviedb.org/movie/617126",
         "imdb_url": "https://www.imdb.com/title/tt10676052/",
         "trailer_search_url": "https://www.youtube.com/results?search_query=The+Fantastic+Four%3A+First+Steps+2025+trailer+oficial",
-        "availability": "metadata_only"
+        "availability": "templated_routing",
+        "routing_mode": "configured"
       },
       {
         "name": "Mission: Impossible - The Final Reckoning (2025)",
         "group": "Mi Catálogo Cloud",
         "country": "ZZ",
-        "url": "https://www.themoviedb.org/movie/575265",
+        "url": "https://vidsrc.pm575265",
         "logo": "",
         "tvg_id": "tt9603208",
         "media_type": "movie",
@@ -2638,13 +2680,14 @@
         "reference_url": "https://www.themoviedb.org/movie/575265",
         "imdb_url": "https://www.imdb.com/title/tt9603208/",
         "trailer_search_url": "https://www.youtube.com/results?search_query=Mission%3A+Impossible+-+The+Final+Reckoning+2025+trailer+oficial",
-        "availability": "metadata_only"
+        "availability": "templated_routing",
+        "routing_mode": "configured"
       },
       {
         "name": "Elio (2025)",
         "group": "Mi Catálogo Cloud",
         "country": "ZZ",
-        "url": "https://www.themoviedb.org/movie/1022787",
+        "url": "https://vidsrc.pm1022787",
         "logo": "",
         "tvg_id": "tt22773644",
         "media_type": "movie",
@@ -2655,13 +2698,14 @@
         "reference_url": "https://www.themoviedb.org/movie/1022787",
         "imdb_url": "https://www.imdb.com/title/tt22773644/",
         "trailer_search_url": "https://www.youtube.com/results?search_query=Elio+2025+trailer+oficial",
-        "availability": "metadata_only"
+        "availability": "templated_routing",
+        "routing_mode": "configured"
       },
       {
         "name": "Jurassic World Rebirth (2025)",
         "group": "Mi Catálogo Cloud",
         "country": "ZZ",
-        "url": "https://www.themoviedb.org/movie/1234821",
+        "url": "https://vidsrc.pm1234821",
         "logo": "",
         "tvg_id": "tt31036941",
         "media_type": "movie",
@@ -2672,13 +2716,14 @@
         "reference_url": "https://www.themoviedb.org/movie/1234821",
         "imdb_url": "https://www.imdb.com/title/tt31036941/",
         "trailer_search_url": "https://www.youtube.com/results?search_query=Jurassic+World+Rebirth+2025+trailer+oficial",
-        "availability": "metadata_only"
+        "availability": "templated_routing",
+        "routing_mode": "configured"
       },
       {
         "name": "Captain America: Brave New World (2025)",
         "group": "Mi Catálogo Cloud",
         "country": "ZZ",
-        "url": "https://www.themoviedb.org/movie/822119",
+        "url": "https://vidsrc.pm822119",
         "logo": "",
         "tvg_id": "tt14513804",
         "media_type": "movie",
@@ -2689,13 +2734,14 @@
         "reference_url": "https://www.themoviedb.org/movie/822119",
         "imdb_url": "https://www.imdb.com/title/tt14513804/",
         "trailer_search_url": "https://www.youtube.com/results?search_query=Captain+America%3A+Brave+New+World+2025+trailer+oficial",
-        "availability": "metadata_only"
+        "availability": "templated_routing",
+        "routing_mode": "configured"
       },
       {
         "name": "Thunderbolts* (2025)",
         "group": "Mi Catálogo Cloud",
         "country": "ZZ",
-        "url": "https://www.themoviedb.org/movie/986056",
+        "url": "https://vidsrc.pm986056",
         "logo": "",
         "tvg_id": "tt20969586",
         "media_type": "movie",
@@ -2706,13 +2752,14 @@
         "reference_url": "https://www.themoviedb.org/movie/986056",
         "imdb_url": "https://www.imdb.com/title/tt20969586/",
         "trailer_search_url": "https://www.youtube.com/results?search_query=Thunderbolts%2A+2025+trailer+oficial",
-        "availability": "metadata_only"
+        "availability": "templated_routing",
+        "routing_mode": "configured"
       },
       {
         "name": "Avatar: Fire and Ash (2025)",
         "group": "Mi Catálogo Cloud",
         "country": "ZZ",
-        "url": "https://www.themoviedb.org/movie/83533",
+        "url": "https://vidsrc.pm83533",
         "logo": "",
         "tvg_id": "tt1757678",
         "media_type": "movie",
@@ -2723,13 +2770,14 @@
         "reference_url": "https://www.themoviedb.org/movie/83533",
         "imdb_url": "https://www.imdb.com/title/tt1757678/",
         "trailer_search_url": "https://www.youtube.com/results?search_query=Avatar%3A+Fire+and+Ash+2025+trailer+oficial",
-        "availability": "metadata_only"
+        "availability": "templated_routing",
+        "routing_mode": "configured"
       },
       {
         "name": "The Batman Part II (2026)",
         "group": "Mi Catálogo Cloud",
         "country": "ZZ",
-        "url": "https://www.themoviedb.org/movie/1061473",
+        "url": "https://vidsrc.pm1061473",
         "logo": "",
         "tvg_id": "tt19850008",
         "media_type": "movie",
@@ -2740,13 +2788,14 @@
         "reference_url": "https://www.themoviedb.org/movie/1061473",
         "imdb_url": "https://www.imdb.com/title/tt19850008/",
         "trailer_search_url": "https://www.youtube.com/results?search_query=The+Batman+Part+II+2026+trailer+oficial",
-        "availability": "metadata_only"
+        "availability": "templated_routing",
+        "routing_mode": "configured"
       },
       {
         "name": "Wake Up Dead Man: A Knives Out Mystery (2025)",
         "group": "Mi Catálogo Cloud",
         "country": "ZZ",
-        "url": "https://www.themoviedb.org/movie/1093237",
+        "url": "https://vidsrc.pm1093237",
         "logo": "",
         "tvg_id": "tt29622761",
         "media_type": "movie",
@@ -2757,7 +2806,8 @@
         "reference_url": "https://www.themoviedb.org/movie/1093237",
         "imdb_url": "https://www.imdb.com/title/tt29622761/",
         "trailer_search_url": "https://www.youtube.com/results?search_query=Wake+Up+Dead+Man%3A+A+Knives+Out+Mystery+2025+trailer+oficial",
-        "availability": "metadata_only"
+        "availability": "templated_routing",
+        "routing_mode": "configured"
       }
     ]
   }

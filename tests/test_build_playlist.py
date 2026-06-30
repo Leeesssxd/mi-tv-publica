@@ -112,6 +112,70 @@ def test_load_channels_acepta_payload_multinivel_y_deduplica_por_url(tmp_path):
     assert [channel.name for channel in channels] == ["Base", "DeporTV Oficial"]
 
 
+def test_load_channels_omite_items_metadata_only_del_catalogo_cloud(tmp_path):
+    data = {
+        "channels": [
+            {"name": "Base", "url": "https://a.com/x.m3u8", "group": "General"},
+        ],
+        "cloud_catalog": {
+            "name": "Mi Catálogo Cloud",
+            "items": [
+                {
+                    "name": "Movie One (2024)",
+                    "url": "https://www.themoviedb.org/movie/1",
+                    "group": "Mi Catálogo Cloud",
+                    "availability": "metadata_only",
+                }
+            ],
+        },
+    }
+    sources_file = tmp_path / "channels.json"
+    sources_file.write_text(json.dumps(data), encoding="utf-8")
+
+    channels = load_channels(sources_file)
+
+    assert [channel.name for channel in channels] == ["Base"]
+
+
+def test_load_channels_omite_items_templated_routing_y_localhost(tmp_path):
+    data = {
+        "channels": [
+            {"name": "Base", "url": "https://a.com/x.m3u8", "group": "General"},
+            {
+                "name": "Serie Template",
+                "url": "https://localhost/tv/456/1/1",
+                "group": "Mi Catálogo Cloud",
+                "availability": "templated_routing",
+            },
+        ]
+    }
+    sources_file = tmp_path / "channels.json"
+    sources_file.write_text(json.dumps(data), encoding="utf-8")
+
+    channels = load_channels(sources_file)
+
+    assert [channel.name for channel in channels] == ["Base"]
+
+
+def test_load_channels_conserva_items_templated_routing_configurados(tmp_path):
+    data = {
+        "channels": [
+            {
+                "name": "Movie Template Configurado",
+                "url": "https://vod.example/movie/123",
+                "group": "Mi Catálogo Cloud",
+                "availability": "templated_routing",
+            }
+        ]
+    }
+    sources_file = tmp_path / "channels.json"
+    sources_file.write_text(json.dumps(data), encoding="utf-8")
+
+    channels = load_channels(sources_file)
+
+    assert [channel.name for channel in channels] == ["Movie Template Configurado"]
+
+
 # ---------------------------------------------------------------------------
 # Orden de canales
 # ---------------------------------------------------------------------------

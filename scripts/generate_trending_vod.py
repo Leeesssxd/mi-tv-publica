@@ -13,13 +13,17 @@ from __future__ import annotations
 
 import argparse
 import json
+import os
 import sys
 from pathlib import Path
 from typing import Any
 
 ROOT_DIR = Path(__file__).resolve().parent.parent
 SOURCES_FILE = ROOT_DIR / "sources" / "channels.json"
+CONFIG_FILE = ROOT_DIR / "config.json"
 CLOUD_GROUP_NAME = "Mi Catálogo Cloud"
+TEMPLATE_MOVIE = os.getenv("VOD_TEMPLATE_MOVIE", "https://localhost/movie/{id}")
+TEMPLATE_TV = os.getenv("VOD_TEMPLATE_TV", "https://localhost/tv/{id}")
 
 TRENDING_VOD: list[dict[str, Any]] = [
     {"name": "The Bear", "media_type": "series", "year": 2022, "imdb_id": "tt14452776", "tmdb_id": "136315"},
@@ -81,6 +85,16 @@ def load_sources_payload(sources_path: Path = SOURCES_FILE) -> Any:
     return json.loads(sources_path.read_text(encoding="utf-8"))
 
 
+def load_config(config_path: Path = CONFIG_FILE) -> dict[str, Any]:
+    if not config_path.exists():
+        return {}
+    try:
+        payload = json.loads(config_path.read_text(encoding="utf-8"))
+    except json.JSONDecodeError:
+        return {}
+    return payload if isinstance(payload, dict) else {}
+
+
 def save_sources_payload(payload: Any, sources_path: Path = SOURCES_FILE) -> None:
     sources_path.parent.mkdir(parents=True, exist_ok=True)
     sources_path.write_text(json.dumps(payload, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
@@ -101,13 +115,44 @@ def youtube_search_path(item: dict[str, Any]) -> str:
     return f"https://www.youtube.com/results?search_query={quote_plus(query)}"
 
 
-def build_vod_item(item: dict[str, Any]) -> dict[str, Any]:
+def resolve_templates(config: dict[str, Any] | None = None) -> tuple[str, str]:
+    config = config or {}
+    movie_template = str(
+        os.getenv("VOD_TEMPLATE_MOVIE")
+        or config.get("vod_template_movie")
+        or TEMPLATE_MOVIE
+    ).strip()
+    tv_template = str(
+        os.getenv("VOD_TEMPLATE_TV")
+        or config.get("vod_template_tv")
+        or TEMPLATE_TV
+    ).strip()
+    return movie_template, tv_template
+
+
+def build_templated_url(item: dict[str, Any], movie_template: str, tv_template: str) -> str:
+    media_type = str(item.get("media_type") or "").strip().casefold()
+    tmdb_id = str(item["tmdb_id"]).strip()
+    if media_type == "movie":
+        return movie_template.format(id=tmdb_id)
+    if media_type in {"series", "tv"}:
+        return f"{tv_template.format(id=tmdb_id).rstrip('/')}/1/1"
+    raise ValueError(f"media_type no soportado: {item.get('media_type')}")
+
+
+def build_vod_item(
+    item: dict[str, Any],
+    movie_template: str = TEMPLATE_MOVIE,
+    tv_template: str = TEMPLATE_TV,
+) -> dict[str, Any]:
     suffix = "Pelicula" if item["media_type"] == "movie" else "Serie"
+    templated_url = build_templated_url(item, movie_template, tv_template)
+    route_is_placeholder = "localhost" in templated_url.casefold()
     return {
         "name": f"{item['name']} ({item['year']})",
         "group": CLOUD_GROUP_NAME,
         "country": "ZZ",
-        "url": tmdb_path(item),
+        "url": templated_url,
         "logo": "",
         "tvg_id": item["imdb_id"],
         "media_type": item["media_type"],
@@ -118,7 +163,8 @@ def build_vod_item(item: dict[str, Any]) -> dict[str, Any]:
         "reference_url": tmdb_path(item),
         "imdb_url": imdb_path(item),
         "trailer_search_url": youtube_search_path(item),
-        "availability": "metadata_only",
+        "availability": "templated_routing",
+        "routing_mode": "placeholder" if route_is_placeholder else "configured",
     }
 
 
@@ -141,9 +187,11 @@ def upsert_cloud_catalog(payload: Any, cloud_items: list[dict[str, Any]]) -> dic
     return base_payload
 
 
-def run(sources_path: Path = SOURCES_FILE) -> int:
+def run(sources_path: Path = SOURCES_FILE, config_path: Path = CONFIG_FILE) -> int:
     payload = load_sources_payload(sources_path)
-    cloud_items = [build_vod_item(item) for item in TRENDING_VOD]
+    config = load_config(config_path)
+    movie_template, tv_template = resolve_templates(config)
+    cloud_items = [build_vod_item(item, movie_template, tv_template) for item in TRENDING_VOD]
     updated_payload = upsert_cloud_catalog(payload, cloud_items)
     save_sources_payload(updated_payload, sources_path)
     print("=" * 50)
@@ -151,6 +199,8 @@ def run(sources_path: Path = SOURCES_FILE) -> int:
     print("=" * 50)
     print(f"Titulos cargados:    {len(cloud_items)}")
     print(f"Bloque actualizado:  {CLOUD_GROUP_NAME}")
+    print(f"Template movie:      {movie_template}")
+    print(f"Template tv:         {tv_template}")
     print("=" * 50)
     return len(cloud_items)
 
@@ -158,13 +208,14 @@ def run(sources_path: Path = SOURCES_FILE) -> int:
 def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="Puebla Mi Catálogo Cloud con metadatos VOD estáticos.")
     parser.add_argument("--sources", type=Path, default=SOURCES_FILE, help="Ruta a channels.json")
+    parser.add_argument("--config", type=Path, default=CONFIG_FILE, help="Ruta a config.json")
     return parser.parse_args(argv)
 
 
 def main() -> int:
     args = parse_args()
     try:
-        run(args.sources)
+        run(args.sources, args.config)
     except Exception as exc:  # noqa: BLE001
         print(f"[ERROR] Error inesperado: {exc}")
         return 1

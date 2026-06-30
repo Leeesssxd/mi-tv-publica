@@ -1,6 +1,6 @@
 # Estado de canales
 
-Última revisión UTC: `2026-06-30T08:35:04Z`
+Última revisión UTC: `2026-06-30T08:55:17Z`
 
 - Canales totales: **228**
 - Canales vivos: **174**

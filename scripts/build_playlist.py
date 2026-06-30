@@ -328,6 +328,14 @@ class Channel:
         )
 
 
+def _is_non_playable_catalog_entry(raw: dict[str, Any]) -> bool:
+    availability = str(raw.get("availability") or "").strip().casefold()
+    if availability == "metadata_only":
+        return True
+    url = str(raw.get("url") or "").strip().casefold()
+    return availability == "templated_routing" and "localhost" in url
+
+
 @dataclass
 class ChannelStatus:
     name: str
@@ -371,6 +379,8 @@ def load_channels(sources_path: Path = SOURCES_FILE) -> list[Channel]:
     seen_urls: set[str] = set()
     for index, raw in enumerate(raw_list):
         try:
+            if _is_non_playable_catalog_entry(raw):
+                continue
             channel = Channel.from_dict(raw)
             normalized_url = channel.url.casefold()
             if normalized_url in seen_urls:
