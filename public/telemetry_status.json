@@ -1,18 +1,28 @@
 {
-  "generated_at": "2026-06-30T20:47:26Z",
-  "total_sources": 1,
-  "healthy_sources": 0,
+  "generated_at": "2026-06-30T21:44:44Z",
+  "total_sources": 2,
+  "healthy_sources": 1,
   "quarantined_sources": 0,
   "sources": [
     {
+      "source_env": "",
+      "group": "Privados Cloud",
+      "country": "ALL",
+      "source_url_hint": "http://magiz.net:8080/get.php",
+      "status": "success",
+      "http_status": 200,
+      "quarantined": false,
+      "consecutive_failures": 0
+    },
+    {
       "source_env": "PRIVATE_SOURCE_1",
-      "group": "Privados",
+      "group": "Deportes Locales",
       "country": "ALL",
       "source_url_hint": "",
       "status": "missing_env",
       "http_status": null,
       "quarantined": false,
-      "consecutive_failures": 1
+      "consecutive_failures": 0
     }
   ]
 }
