@@ -41,6 +41,7 @@ ENV_FILE = ROOT_DIR / ".env"
 ENV_EXAMPLE_FILE = ROOT_DIR / ".env.example"
 PUBLIC_DIR = ROOT_DIR / "public"
 TELEMETRY_STATUS_FILE = PUBLIC_DIR / "telemetry_status.json"
+SECRET_UPSTREAM_POOLS_ENV = "SECRET_UPSTREAM_POOLS"
 DEFAULT_SOURCE_URL = "https://iptv-org.github.io/iptv/countries/mx.m3u"
 DEFAULT_IPTVORG_CHANNELS_URL = "https://iptv-org.github.io/api/channels.json"
 DEFAULT_SECONDARY_SOURCES: list[dict[str, Any]] = [
@@ -137,6 +138,9 @@ def ensure_env_example_file(env_example_path: Path | None = None) -> None:
         "# Variables locales para fuentes privadas autorizadas",
         "PRIVATE_SOURCE_1=http://provider.example:8080/get.php?username=USER1&password=PASS1&type=m3u_plus",
         "PRIVATE_SOURCE_2=http://provider.example:8080/get.php?username=USER2&password=PASS2&type=m3u_plus",
+        "",
+        "# Solo para GitHub Actions: lista JSON de fuentes remotas autorizadas.",
+        '# SECRET_UPSTREAM_POOLS=["http://provider.example/feed.m3u", {"source_url": "http://provider.example/extra.m3u", "group": "Privados", "country": "ALL"}]',
     ]
     env_example_path.write_text("\n".join(lines) + "\n", encoding="utf-8")
 
@@ -206,6 +210,31 @@ def resolve_source_url(source_spec: dict[str, Any], env_values: dict[str, str]) 
     if source_env:
         return str(env_values.get(source_env) or os.getenv(source_env) or "").strip()
     return str(source_spec.get("source_url") or "").strip()
+
+
+def load_secret_upstream_pools(secret_value: str | None) -> list[dict[str, Any]]:
+    if not secret_value:
+        return []
+    try:
+        payload = json.loads(secret_value)
+    except json.JSONDecodeError as exc:
+        print(f"[WARN] {SECRET_UPSTREAM_POOLS_ENV} invalido, se omite: {exc}")
+        return []
+
+    if not isinstance(payload, list):
+        print(f"[WARN] {SECRET_UPSTREAM_POOLS_ENV} debe contener una lista JSON, se omite.")
+        return []
+
+    resolved: list[dict[str, Any]] = []
+    for item in payload:
+        if isinstance(item, str):
+            url = item.strip()
+            if url:
+                resolved.append({"source_url": url, "group": "Privados Cloud", "country": "ALL"})
+            continue
+        if isinstance(item, dict):
+            resolved.append(item)
+    return resolved
 
 
 def load_quarantine_state(quarantine_path: Path | None = None) -> dict[str, dict[str, Any]]:
@@ -1121,8 +1150,11 @@ async def run(
             print(describe_source_error("Fuente secundaria", batch_url, exc))
             continue
 
-    local_source_specs = ensure_local_private_sources_file(LOCAL_PRIVATE_SOURCES_FILE)
-    for source_spec in local_source_specs:
+    private_source_specs = [
+        *load_secret_upstream_pools(os.getenv(SECRET_UPSTREAM_POOLS_ENV)),
+        *ensure_local_private_sources_file(LOCAL_PRIVATE_SOURCES_FILE),
+    ]
+    for source_spec in private_source_specs:
         fingerprint = build_source_fingerprint(source_spec, resolve_source_url(source_spec, env_values))
         quarantine_entry = quarantine_state.get(fingerprint) or {}
         resolved_local_url = resolve_source_url(source_spec, env_values)

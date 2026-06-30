@@ -33,6 +33,7 @@ from scrape_channels import (  # noqa: E402
     load_any_cached_path,
     load_cached_text,
     load_env_file,
+    load_secret_upstream_pools,
     merge_channels,
     normalize_url,
     normalize_source_url,
@@ -86,6 +87,21 @@ def test_load_env_file_parsea_variables_simples(tmp_path):
         "PRIVATE_SOURCE_1": "http://example.com/feed",
         "OTRA": "valor",
     }
+
+
+def test_load_secret_upstream_pools_admite_urls_y_diccionarios():
+    payload = load_secret_upstream_pools(
+        json.dumps(
+            [
+                "http://example.com/feed.m3u",
+                {"source_url": "http://example.com/extra.m3u", "group": "Privados", "country": "ALL"},
+            ]
+        )
+    )
+    assert payload == [
+        {"source_url": "http://example.com/feed.m3u", "group": "Privados Cloud", "country": "ALL"},
+        {"source_url": "http://example.com/extra.m3u", "group": "Privados", "country": "ALL"},
+    ]
 
 
 def test_resolve_source_url_usa_source_env(monkeypatch):

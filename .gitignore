@@ -11,3 +11,6 @@ venv/
 *.log
 sources/local_private_sources.private.json
 sources/*private*secret*.json
+sources/local_private_sources.json
+sources/channels.json
+sources/quarantine_sources.json

@@ -1,11 +1,11 @@
 # Estado de canales
 
-Última revisión UTC: `2026-06-30T20:42:21Z`
+Última revisión UTC: `2026-06-30T20:49:19Z`
 
 - Canales totales: **348**
-- Canales vivos: **293**
+- Canales vivos: **292**
 - Canales inestables: **6**
-- Canales muertos: **49**
+- Canales muertos: **50**
 
 | Canal | Grupo | País | Estado | Código | Error |
 |---|---|---|---|---|---|
@@ -80,7 +80,7 @@
 | Sistema Michoacano de TV (1080p) [Not 24/7] | Familia y TV Abierta | MX | ✅ Vivo | 200 |  |
 | SQCS Canal 4 (1080p) | Familia y TV Abierta | MX | ✅ Vivo | 200 |  |
 | Super Channel 12 (1080p) | Familia y TV Abierta | MX | ✅ Vivo | 200 |  |
-| Tele Yucatan (1080p) [Geo-blocked] | Familia y TV Abierta | MX | ✅ Vivo | 200 |  |
+| Tele Yucatan (1080p) [Geo-blocked] | Familia y TV Abierta | MX | ❌ Muerto | 404 | HTTP 404 |
 | Telemax (XEWH-TDT) (1080p) | Familia y TV Abierta | MX | ✅ Vivo | 200 |  |
 | TV BUAP (1080p) | Familia y TV Abierta | MX | ✅ Vivo | 200 |  |
 | TV Cuatro 4.1 (1080p) | Familia y TV Abierta | MX | ✅ Vivo | 200 |  |
