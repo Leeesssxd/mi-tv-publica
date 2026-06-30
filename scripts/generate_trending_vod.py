@@ -119,11 +119,13 @@ def resolve_templates(config: dict[str, Any] | None = None) -> tuple[str, str]:
     config = config or {}
     movie_template = str(
         os.getenv("VOD_TEMPLATE_MOVIE")
+        or config.get("VOD_TEMPLATE_MOVIE")
         or config.get("vod_template_movie")
         or TEMPLATE_MOVIE
     ).strip()
     tv_template = str(
         os.getenv("VOD_TEMPLATE_TV")
+        or config.get("VOD_TEMPLATE_TV")
         or config.get("vod_template_tv")
         or TEMPLATE_TV
     ).strip()

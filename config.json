@@ -1,4 +1,6 @@
 {
+  "VOD_TEMPLATE_MOVIE": "https://vidsrc.win/{id}",
+  "VOD_TEMPLATE_TV": "https://vidsrc.win/{id}",
   "timeout_seconds": 10,
   "max_concurrency": 5,
   "user_agent": "MiTVPublicaBot/1.0 (+https://github.com)",
@@ -68,11 +70,9 @@
     "ITV Deportes",
     "AyM Sports",
     "TyC Sports",
-   "DeporTV",
+    "DeporTV",
     "Sports",
     "Comedy",
     "Movies"
-  ],
-  "VOD_TEMPLATE_MOVIE": "https://vidsrc.win/{id}",
-  "VOD_TEMPLATE_TV": "https://vidsrc.win/{id}"
+  ]
 }

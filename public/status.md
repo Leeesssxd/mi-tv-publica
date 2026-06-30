@@ -1,6 +1,6 @@
 # Estado de canales
 
-Última revisión UTC: `2026-06-30T09:24:26Z`
+Última revisión UTC: `2026-06-30T10:28:05Z`
 
 - Canales totales: **228**
 - Canales vivos: **174**
@@ -206,7 +206,7 @@
 | MTV Latin America (1080p) | Entretenimiento | MX | ✅ Vivo | 200 |  |
 | VB Media TV (1080p) | Entretenimiento | MX | ✅ Vivo | 200 |  |
 | ZAZ (1080p) | Entretenimiento | MX | ✅ Vivo | 200 |  |
-| 15TV (720p) [Not 24/7] | Entretenimiento | MX | ❌ Muerto | - | Cannot connect to host cdn.fastocloud.com:443 ssl:False [getaddrinfo failed] |
+| 15TV (720p) [Not 24/7] | Entretenimiento | MX | ❌ Muerto | - | Timeout |
 | Conecta TV (720p) | Entretenimiento | MX | ✅ Vivo | 200 |  |
 | Eclipse TV (720p) | Entretenimiento | MX | ❌ Muerto | 404 | HTTP 404 |
 | Expresa TV (720p) | Entretenimiento | MX | ✅ Vivo | 200 |  |

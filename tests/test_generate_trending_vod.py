@@ -42,6 +42,18 @@ def test_resolve_templates_acepta_override_desde_config():
     assert tv_template == "https://vod.example/tv/{id}"
 
 
+def test_resolve_templates_acepta_claves_mayusculas_desde_config():
+    movie_template, tv_template = resolve_templates(
+        {
+            "VOD_TEMPLATE_MOVIE": "https://vod.example/movie/{id}",
+            "VOD_TEMPLATE_TV": "https://vod.example/tv/{id}",
+        }
+    )
+
+    assert movie_template == "https://vod.example/movie/{id}"
+    assert tv_template == "https://vod.example/tv/{id}"
+
+
 def test_build_templated_url_formatea_movie_y_series():
     movie_url = build_templated_url(
         {"media_type": "movie", "tmdb_id": "123"},

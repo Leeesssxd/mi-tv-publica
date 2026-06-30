@@ -1,0 +1,1 @@
+import re, pathlib; p = pathlib.Path('scripts/build_playlist.py'); t = p.read_text(encoding='utf-8'); t_mod = re.sub(r'def _is_non_playable_catalog_entry\(raw:\s*dict\[str,\s*Any\]\)\s*-\>\s*bool:.*?(return\s+\w+)', 'def _is_non_playable_catalog_entry(raw: dict[str, Any]) -    return False', t, flags=re.DOTALL); p.write_text(t_mod, encoding='utf-8') 

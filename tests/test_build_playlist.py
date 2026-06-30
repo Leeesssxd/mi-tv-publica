@@ -23,6 +23,7 @@ from build_playlist import (  # noqa: E402
     classify_group,
     has_playable_channels,
     load_channels,
+    load_config,
     regroup_statuses,
     sort_statuses,
     write_outputs,
@@ -174,6 +175,29 @@ def test_load_channels_conserva_items_templated_routing_configurados(tmp_path):
     channels = load_channels(sources_file)
 
     assert [channel.name for channel in channels] == ["Movie Template Configurado"]
+
+
+def test_load_config_conserva_custom_routing_rules_si_es_dict(tmp_path):
+    config_file = tmp_path / "config.json"
+    config_file.write_text(
+        json.dumps({"custom_routing_rules": {"catalog_cloud": {"enabled": True}}}),
+        encoding="utf-8",
+    )
+
+    config = load_config(config_file)
+
+    assert config["custom_routing_rules"] == {"catalog_cloud": {"enabled": True}}
+
+
+def test_load_config_ignora_custom_routing_rules_invalido(tmp_path, capsys):
+    config_file = tmp_path / "config.json"
+    config_file.write_text(json.dumps({"custom_routing_rules": ["bad"]}), encoding="utf-8")
+
+    config = load_config(config_file)
+
+    assert config["custom_routing_rules"] == {}
+    captured = capsys.readouterr()
+    assert "custom_routing_rules invalido" in captured.out
 
 
 # ---------------------------------------------------------------------------

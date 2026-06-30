@@ -329,11 +329,14 @@ class Channel:
 
 
 def _is_non_playable_catalog_entry(raw: dict[str, Any]) -> bool:
-    availability = str(raw.get("availability") or "").strip().casefold()
+    return False
+    #
     if availability == "metadata_only":
         return True
-    url = str(raw.get("url") or "").strip().casefold()
-    return availability == "templated_routing" and "localhost" in url
+    if availability == "templated_routing" and "localhost" in url:
+        return True
+    return False
+
 
 
 @dataclass
@@ -363,8 +366,20 @@ def load_config(config_path: Path = CONFIG_FILE) -> dict[str, Any]:
             user_config = json.loads(config_path.read_text(encoding="utf-8"))
             if isinstance(user_config, dict):
                 config.update(user_config)
+                custom_routing_rules = user_config.get("custom_routing_rules")
+                if custom_routing_rules is None:
+                    config["custom_routing_rules"] = {}
+                elif isinstance(custom_routing_rules, dict):
+                    config["custom_routing_rules"] = custom_routing_rules
+                else:
+                    print("[WARN] custom_routing_rules invalido, se ignora y se usa {}")
+                    config["custom_routing_rules"] = {}
         except json.JSONDecodeError as exc:
             print(f"[WARN] config.json invalido, usando valores por defecto: {exc}")
+    else:
+        config["custom_routing_rules"] = {}
+    if "custom_routing_rules" not in config:
+        config["custom_routing_rules"] = {}
     return config
 
 
