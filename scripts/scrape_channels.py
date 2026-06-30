@@ -73,19 +73,54 @@ def load_config(config_path: Path = CONFIG_FILE) -> dict[str, Any]:
     return config
 
 
-def load_channels_raw(sources_path: Path = SOURCES_FILE) -> list[dict[str, Any]]:
+def load_sources_payload(sources_path: Path = SOURCES_FILE) -> Any:
     if not sources_path.exists():
         return []
 
-    raw = json.loads(sources_path.read_text(encoding="utf-8"))
-    if not isinstance(raw, list):
-        raise ValueError("sources/channels.json debe contener una lista JSON")
-    return raw
+    return json.loads(sources_path.read_text(encoding="utf-8"))
+
+
+def _extract_channel_entries(payload: Any) -> list[dict[str, Any]]:
+    if isinstance(payload, list):
+        return [item for item in payload if isinstance(item, dict)]
+
+    if not isinstance(payload, dict):
+        raise ValueError("sources/channels.json debe contener una lista o un objeto compatible")
+
+    extracted: list[dict[str, Any]] = []
+
+    def visit(value: Any) -> None:
+        if isinstance(value, list):
+            for item in value:
+                if isinstance(item, dict):
+                    if "name" in item and "url" in item:
+                        extracted.append(item)
+                    else:
+                        for nested in item.values():
+                            visit(nested)
+        elif isinstance(value, dict):
+            if "name" in value and "url" in value:
+                extracted.append(value)
+            else:
+                for nested in value.values():
+                    visit(nested)
+
+    visit(payload)
+    return extracted
+
+
+def load_channels_raw(sources_path: Path = SOURCES_FILE) -> list[dict[str, Any]]:
+    return _extract_channel_entries(load_sources_payload(sources_path))
 
 
 def save_channels_raw(channels: list[dict[str, Any]], sources_path: Path = SOURCES_FILE) -> None:
     sources_path.parent.mkdir(parents=True, exist_ok=True)
     sources_path.write_text(json.dumps(channels, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+
+
+def save_sources_payload(payload: Any, sources_path: Path = SOURCES_FILE) -> None:
+    sources_path.parent.mkdir(parents=True, exist_ok=True)
+    sources_path.write_text(json.dumps(payload, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
 
 
 def normalize_url(url: str) -> str:
@@ -622,14 +657,19 @@ async def run(
         )
         detected_count = len(discovered_channels)
 
-    existing_channels = load_channels_raw(sources_path)
+    payload = load_sources_payload(sources_path)
+    existing_channels = _extract_channel_entries(payload)
     merged_channels, added = merge_channels(
         existing_channels,
         discovered_channels,
         default_group=default_group,
         default_country=default_country,
     )
-    save_channels_raw(merged_channels, sources_path)
+    if isinstance(payload, dict) and isinstance(payload.get("channels"), list):
+        payload["channels"] = merged_channels
+        save_sources_payload(payload, sources_path)
+    else:
+        save_channels_raw(merged_channels, sources_path)
 
     print("=" * 50)
     print("Resumen de importacion de canales")
