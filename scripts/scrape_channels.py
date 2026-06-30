@@ -51,9 +51,59 @@ DEFAULT_SECONDARY_SOURCES: list[dict[str, Any]] = [
         "country": "MX",
     },
     {
+        "source_url": "https://iptv-org.github.io/iptv/countries/ar.m3u",
+        "group": "Importados",
+        "country": "AR",
+    },
+    {
+        "source_url": "https://iptv-org.github.io/iptv/countries/bo.m3u",
+        "group": "Importados",
+        "country": "BO",
+    },
+    {
+        "source_url": "https://iptv-org.github.io/iptv/countries/cl.m3u",
+        "group": "Importados",
+        "country": "CL",
+    },
+    {
+        "source_url": "https://iptv-org.github.io/iptv/countries/co.m3u",
+        "group": "Importados",
+        "country": "CO",
+    },
+    {
+        "source_url": "https://iptv-org.github.io/iptv/countries/cr.m3u",
+        "group": "Importados",
+        "country": "CR",
+    },
+    {
+        "source_url": "https://iptv-org.github.io/iptv/countries/ec.m3u",
+        "group": "Importados",
+        "country": "EC",
+    },
+    {
+        "source_url": "https://iptv-org.github.io/iptv/countries/es.m3u",
+        "group": "Importados",
+        "country": "ES",
+    },
+    {
         "source_url": "https://iptv-org.github.io/iptv/countries/no.m3u",
         "group": "Deportes Públicos Internacionales",
         "country": "NO",
+    },
+    {
+        "source_url": "https://iptv-org.github.io/iptv/countries/pe.m3u",
+        "group": "Importados",
+        "country": "PE",
+    },
+    {
+        "source_url": "https://iptv-org.github.io/iptv/countries/py.m3u",
+        "group": "Importados",
+        "country": "PY",
+    },
+    {
+        "source_url": "https://iptv-org.github.io/iptv/countries/uy.m3u",
+        "group": "Importados",
+        "country": "UY",
     },
 ]
 DEFAULT_LOCAL_PRIVATE_SOURCES: list[dict[str, str]] = [
@@ -1501,6 +1551,7 @@ async def run(
     print("Resumen de importacion de canales")
     print("=" * 50)
     print(f"URL origen:         {resolved_source_url}")
+    print(f"Fuentes procesadas: {len(attempted_sources)}")
     print(f"Registros leidos:   {total_detected}")
     print(f"Nuevos agregados:   {total_added}")
     print(f"Total en sources:   {len(merged_channels)}")

@@ -18,9 +18,59 @@
       "country": "MX"
     },
     {
+      "source_url": "https://iptv-org.github.io/iptv/countries/ar.m3u",
+      "group": "Importados",
+      "country": "AR"
+    },
+    {
+      "source_url": "https://iptv-org.github.io/iptv/countries/bo.m3u",
+      "group": "Importados",
+      "country": "BO"
+    },
+    {
+      "source_url": "https://iptv-org.github.io/iptv/countries/cl.m3u",
+      "group": "Importados",
+      "country": "CL"
+    },
+    {
+      "source_url": "https://iptv-org.github.io/iptv/countries/co.m3u",
+      "group": "Importados",
+      "country": "CO"
+    },
+    {
+      "source_url": "https://iptv-org.github.io/iptv/countries/cr.m3u",
+      "group": "Importados",
+      "country": "CR"
+    },
+    {
+      "source_url": "https://iptv-org.github.io/iptv/countries/ec.m3u",
+      "group": "Importados",
+      "country": "EC"
+    },
+    {
+      "source_url": "https://iptv-org.github.io/iptv/countries/es.m3u",
+      "group": "Importados",
+      "country": "ES"
+    },
+    {
       "source_url": "https://iptv-org.github.io/iptv/countries/no.m3u",
       "group": "Deportes Públicos Internacionales",
       "country": "NO"
+    },
+    {
+      "source_url": "https://iptv-org.github.io/iptv/countries/pe.m3u",
+      "group": "Importados",
+      "country": "PE"
+    },
+    {
+      "source_url": "https://iptv-org.github.io/iptv/countries/py.m3u",
+      "group": "Importados",
+      "country": "PY"
+    },
+    {
+      "source_url": "https://iptv-org.github.io/iptv/countries/uy.m3u",
+      "group": "Importados",
+      "country": "UY"
     }
   ],
   "sort_by": ["group", "name"],
@@ -94,14 +144,14 @@
     "Comedy",
     "Movies"
   ],
-  "target_playlist_size": 700,
+  "target_playlist_size": 1200,
   "target_group_quotas": {
-    "Familia y TV Abierta": 180,
-    "Peliculas - Cine": 170,
-    "Peliculas - Drama y Series": 110,
-    "Deportes": 140,
-    "Noticias": 50,
-    "Entretenimiento": 50,
-    "Otros": 30
+    "Familia y TV Abierta": 300,
+    "Peliculas - Cine": 260,
+    "Peliculas - Drama y Series": 180,
+    "Deportes": 180,
+    "Noticias": 110,
+    "Entretenimiento": 110,
+    "Otros": 60
   }
 }
