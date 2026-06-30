@@ -9,6 +9,7 @@ import asyncio
 import json
 import sys
 from pathlib import Path
+from types import SimpleNamespace
 
 import pytest
 
@@ -27,17 +28,24 @@ from scrape_channels import (  # noqa: E402
     file_looks_like_m3u,
     file_looks_like_json,
     infer_country,
+    is_supported_playlist_url,
     iter_text_chunks,
+    load_any_cached_path,
     load_cached_text,
+    load_env_file,
     merge_channels,
     normalize_url,
+    normalize_source_url,
     parse_json_teles_channel_json,
     parse_extinf_line,
     parse_generic_channel_json,
     parse_iptv_org_streams,
     parse_m3u_file,
+    resolve_source_url,
     run,
     save_cached_text,
+    update_quarantine_entry,
+    write_telemetry_report,
 )
 
 
@@ -69,6 +77,20 @@ def test_ensure_local_private_sources_file_lo_crea_si_no_existe(tmp_path):
 
     assert local_file.exists()
     assert payload == DEFAULT_LOCAL_PRIVATE_SOURCES
+
+
+def test_load_env_file_parsea_variables_simples(tmp_path):
+    env_file = tmp_path / ".env"
+    env_file.write_text("PRIVATE_SOURCE_1=http://example.com/feed\nOTRA=valor\n", encoding="utf-8")
+    assert load_env_file(env_file) == {
+        "PRIVATE_SOURCE_1": "http://example.com/feed",
+        "OTRA": "valor",
+    }
+
+
+def test_resolve_source_url_usa_source_env(monkeypatch):
+    monkeypatch.setenv("PRIVATE_SOURCE_9", "http://example.com/env.m3u")
+    assert resolve_source_url({"source_env": "PRIVATE_SOURCE_9"}, {}) == "http://example.com/env.m3u"
 
 
 def test_ensure_local_private_sources_file_omite_json_invalido(tmp_path, capsys):
@@ -105,6 +127,19 @@ def test_normalize_url_recorta_basura_final():
     assert normalize_url(" https://example.com/a.m3u8'); ") == "https://example.com/a.m3u8"
 
 
+def test_normalize_source_url_homologa_mayusculas_y_basura_final():
+    assert (
+        normalize_source_url(" HTTP://Example.com/Feed.m3u?x=1); ")
+        == "http://example.com/feed.m3u?x=1"
+    )
+
+
+def test_is_supported_playlist_url_acepta_http_y_https_sin_extension():
+    assert is_supported_playlist_url("http://provider.example:8080/get.php?username=u&password=p&type=m3u_plus") is True
+    assert is_supported_playlist_url("https://provider.example/live/12345") is True
+    assert is_supported_playlist_url("udp://239.0.0.1:1234") is False
+
+
 def test_iter_text_chunks_parte_payload_grande():
     chunks = list(iter_text_chunks("abcdefghij", 4))
     assert chunks == ["abcd", "efgh", "ij"]
@@ -131,6 +166,37 @@ def test_parse_m3u_file_convierte_a_formato_local(tmp_path):
             "url": "https://stream.example.com/live.m3u8",
             "logo": "https://img/logo.png",
             "tvg_id": "abc.us",
+        },
+        {
+            "name": "Canal Dos",
+            "group": "Sports",
+            "country": "",
+            "url": "https://stream.example.com/other.mp4",
+            "logo": "",
+            "tvg_id": "",
+        },
+    ]
+
+
+def test_parse_m3u_file_acepta_urls_http_sin_extension_m3u8(tmp_path):
+    m3u_file = tmp_path / "index.m3u"
+    m3u_file.write_text(
+        "#EXTM3U\n"
+        '#EXTINF:-1 group-title="Privados",Canal Premium\n'
+        "http://provider.example:8080/live/usuario/clave/12345\n",
+        encoding="utf-8",
+    )
+
+    channels = parse_m3u_file(m3u_file)
+
+    assert channels == [
+        {
+            "name": "Canal Premium",
+            "group": "Privados",
+            "country": "",
+            "url": "http://provider.example:8080/live/usuario/clave/12345",
+            "logo": "",
+            "tvg_id": "",
         }
     ]
 
@@ -511,6 +577,48 @@ def test_cache_roundtrip(tmp_path):
     assert cached == "contenido"
 
 
+def test_load_cached_path_encuentra_cache_m3u_por_hash(tmp_path):
+    from scrape_channels import cache_path_for_url, load_cached_path
+
+    url = "https://example.com/fuente.m3u"
+    cached_path = cache_path_for_url(url, tmp_path).with_suffix(".m3u")
+    cached_path.write_text("#EXTM3U\n", encoding="utf-8")
+
+    assert load_any_cached_path(url, tmp_path) == cached_path
+    assert load_cached_path(url, ttl_seconds=60, cache_dir=tmp_path) == cached_path
+
+
+def test_update_quarantine_entry_cuarentena_tras_tres_restrictivos():
+    state: dict[str, dict[str, object]] = {}
+    source_spec = {"source_env": "PRIVATE_SOURCE_1", "group": "Privados", "country": "ALL"}
+    for _ in range(3):
+        entry = update_quarantine_entry(
+            state,
+            "env:PRIVATE_SOURCE_1",
+            source_spec,
+            "http://example.com/private",
+            status="error",
+            http_status=403,
+        )
+    assert entry["consecutive_failures"] == 3
+    assert entry["quarantined"] is True
+
+
+def test_write_telemetry_report_genera_json(tmp_path):
+    report_file = tmp_path / "telemetry_status.json"
+    write_telemetry_report(
+        [
+            {"status": "success", "quarantined": False},
+            {"status": "error", "quarantined": True},
+        ],
+        report_file,
+    )
+    payload = json.loads(report_file.read_text(encoding="utf-8"))
+    assert payload["total_sources"] == 2
+    assert payload["healthy_sources"] == 1
+    assert payload["quarantined_sources"] == 1
+
+
 def test_default_source_url_apunta_a_iptv_org():
     assert DEFAULT_SOURCE_URL == "https://iptv-org.github.io/iptv/countries/mx.m3u"
 
@@ -609,12 +717,14 @@ def test_run_omite_fuente_local_caida_y_sigue_con_pipeline(tmp_path, monkeypatch
     local_sources_path.write_text(
         json.dumps(
             [
-                {"source_url": "http://127.0.0", "group": "Deportes Locales", "country": "ALL"},
-                {"source_url": "http://127.0.0.1/feed.m3u", "group": "Deportes Locales", "country": "ALL"},
+                {"source_env": "PRIVATE_SOURCE_1", "group": "Deportes Locales", "country": "ALL"},
+                {"source_env": "PRIVATE_SOURCE_2", "group": "Deportes Locales", "country": "ALL"},
             ]
         ),
         encoding="utf-8",
     )
+    monkeypatch.setenv("PRIVATE_SOURCE_1", "http://127.0.0")
+    monkeypatch.setenv("PRIVATE_SOURCE_2", "http://127.0.0.1/feed.m3u")
 
     calls: list[str] = []
 
@@ -668,3 +778,184 @@ def test_run_omite_fuente_local_caida_y_sigue_con_pipeline(tmp_path, monkeypatch
     assert len(payload["channels"]) == 2
     captured = capsys.readouterr()
     assert "Fuente local omitida" in captured.out
+
+
+def test_run_reporta_403_local_como_rechazo_de_origen(tmp_path, monkeypatch, capsys):
+    import scrape_channels
+
+    sources_path = tmp_path / "channels.json"
+    sources_path.write_text(json.dumps({"channels": []}), encoding="utf-8")
+    config_path = tmp_path / "config.json"
+    config_path.write_text(json.dumps({"secondary_sources": []}), encoding="utf-8")
+    local_sources_path = tmp_path / "local_private_sources.json"
+    local_sources_path.write_text(
+        json.dumps(
+            [
+                {"source_env": "PRIVATE_SOURCE_1", "group": "Privados", "country": "ALL"},
+            ]
+        ),
+        encoding="utf-8",
+    )
+    monkeypatch.setenv("PRIVATE_SOURCE_1", "http://provider.example/forbidden")
+
+    async def fake_import_single_source(
+        source_url,
+        sources_path,
+        config,
+        *,
+        default_group,
+        default_country,
+        metadata_url=None,
+        category_filter=None,
+    ):
+        if source_url == "https://primary.example/list.m3u":
+            return 1, 0
+        raise scrape_channels.aiohttp.ClientResponseError(
+            request_info=SimpleNamespace(real_url=source_url),
+            history=(),
+            status=403,
+            message="Acceso prohibido por el origen (403).",
+            headers=None,
+        )
+
+    monkeypatch.setattr(scrape_channels, "import_single_source", fake_import_single_source)
+    monkeypatch.setattr(scrape_channels, "LOCAL_PRIVATE_SOURCES_FILE", local_sources_path)
+
+    asyncio.run(
+        run(
+            "https://primary.example/list.m3u",
+            sources_path,
+            config_path,
+            default_group="Base",
+            default_country="MX",
+        )
+    )
+
+    captured = capsys.readouterr()
+    assert "Fuente local rechazada por el origen" in captured.out
+
+
+def test_run_deduplica_fuentes_repetidas_entre_config_y_archivo_local(tmp_path, monkeypatch):
+    import scrape_channels
+
+    sources_path = tmp_path / "channels.json"
+    sources_path.write_text(json.dumps({"channels": []}), encoding="utf-8")
+    config_path = tmp_path / "config.json"
+    repeated_url = "http://provider.example/get.php?username=u&password=p&type=m3u_plus"
+    config_path.write_text(
+        json.dumps(
+            {
+                "secondary_sources": [
+                    {"source_url": repeated_url, "group": "Importados", "country": "ALL"},
+                ]
+            }
+        ),
+        encoding="utf-8",
+    )
+    local_sources_path = tmp_path / "local_private_sources.json"
+    local_sources_path.write_text(
+        json.dumps(
+            [
+                {"source_url": repeated_url, "group": "Privados", "country": "ALL"},
+            ]
+        ),
+        encoding="utf-8",
+    )
+
+    calls: list[str] = []
+
+    async def fake_import_single_source(
+        source_url,
+        sources_path,
+        config,
+        *,
+        default_group,
+        default_country,
+        metadata_url=None,
+        category_filter=None,
+    ):
+        calls.append(source_url)
+        return 1, 0
+
+    monkeypatch.setattr(scrape_channels, "import_single_source", fake_import_single_source)
+    monkeypatch.setattr(scrape_channels, "LOCAL_PRIVATE_SOURCES_FILE", local_sources_path)
+
+    asyncio.run(
+        run(
+            "https://primary.example/list.m3u",
+            sources_path,
+            config_path,
+            default_group="Base",
+            default_country="MX",
+        )
+    )
+
+    assert calls == [
+        "https://primary.example/list.m3u",
+        repeated_url,
+    ]
+
+
+def test_run_genera_telemetria_y_cuarentena_tras_tres_403(tmp_path, monkeypatch):
+    import scrape_channels
+
+    sources_path = tmp_path / "channels.json"
+    sources_path.write_text(json.dumps({"channels": []}), encoding="utf-8")
+    config_path = tmp_path / "config.json"
+    config_path.write_text(json.dumps({"secondary_sources": []}), encoding="utf-8")
+    local_sources_path = tmp_path / "local_private_sources.json"
+    local_sources_path.write_text(
+        json.dumps(
+            [
+                {"source_env": "PRIVATE_SOURCE_1", "group": "Privados", "country": "ALL"},
+            ]
+        ),
+        encoding="utf-8",
+    )
+    telemetry_path = tmp_path / "telemetry_status.json"
+    quarantine_path = tmp_path / "quarantine_sources.json"
+
+    monkeypatch.setenv("PRIVATE_SOURCE_1", "http://provider.example/forbidden")
+    monkeypatch.setattr(scrape_channels, "LOCAL_PRIVATE_SOURCES_FILE", local_sources_path)
+    monkeypatch.setattr(scrape_channels, "TELEMETRY_STATUS_FILE", telemetry_path)
+    monkeypatch.setattr(scrape_channels, "QUARANTINE_SOURCES_FILE", quarantine_path)
+
+    async def fake_import_single_source(
+        source_url,
+        sources_path,
+        config,
+        *,
+        default_group,
+        default_country,
+        metadata_url=None,
+        category_filter=None,
+    ):
+        if source_url == "https://primary.example/list.m3u":
+            return 1, 0
+        raise scrape_channels.aiohttp.ClientResponseError(
+            request_info=SimpleNamespace(real_url=source_url),
+            history=(),
+            status=403,
+            message="Acceso prohibido por el origen (403).",
+            headers=None,
+        )
+
+    monkeypatch.setattr(scrape_channels, "import_single_source", fake_import_single_source)
+
+    for _ in range(3):
+        asyncio.run(
+            run(
+                "https://primary.example/list.m3u",
+                sources_path,
+                config_path,
+                default_group="Base",
+                default_country="MX",
+            )
+        )
+
+    telemetry_payload = json.loads(telemetry_path.read_text(encoding="utf-8"))
+    quarantine_payload = json.loads(quarantine_path.read_text(encoding="utf-8"))
+    assert telemetry_payload["total_sources"] == 1
+    assert telemetry_payload["sources"][0]["consecutive_failures"] == 3
+    assert telemetry_payload["sources"][0]["quarantined"] is True
+    assert quarantine_payload["env:PRIVATE_SOURCE_1"]["quarantined"] is True

@@ -34,8 +34,13 @@ import aiohttp
 ROOT_DIR = Path(__file__).resolve().parent.parent
 SOURCES_FILE = ROOT_DIR / "sources" / "channels.json"
 LOCAL_PRIVATE_SOURCES_FILE = ROOT_DIR / "sources" / "local_private_sources.json"
+QUARANTINE_SOURCES_FILE = ROOT_DIR / "sources" / "quarantine_sources.json"
 CONFIG_FILE = ROOT_DIR / "config.json"
 CACHE_DIR = ROOT_DIR / ".cache" / "sources"
+ENV_FILE = ROOT_DIR / ".env"
+ENV_EXAMPLE_FILE = ROOT_DIR / ".env.example"
+PUBLIC_DIR = ROOT_DIR / "public"
+TELEMETRY_STATUS_FILE = PUBLIC_DIR / "telemetry_status.json"
 DEFAULT_SOURCE_URL = "https://iptv-org.github.io/iptv/countries/mx.m3u"
 DEFAULT_IPTVORG_CHANNELS_URL = "https://iptv-org.github.io/api/channels.json"
 DEFAULT_SECONDARY_SOURCES: list[dict[str, Any]] = [
@@ -52,7 +57,7 @@ DEFAULT_SECONDARY_SOURCES: list[dict[str, Any]] = [
 ]
 DEFAULT_LOCAL_PRIVATE_SOURCES: list[dict[str, str]] = [
     {
-        "source_url": "http://127.0.0",
+        "source_env": "PRIVATE_SOURCE_1",
         "group": "Deportes Locales",
         "country": "ALL",
     }
@@ -80,6 +85,8 @@ ATTR_PATTERN = re.compile(r'([a-zA-Z0-9_-]+)="([^"]*)"')
 TVG_ID_COUNTRY_PATTERN = re.compile(r"\.([A-Za-z]{2})(?:$|[@._-])")
 RETRIABLE_STATUS_CODES = {429, 503}
 M3U_HEADER = "#EXTM3U"
+RESTRICTIVE_STATUS_CODES = {401, 403, 503}
+QUARANTINE_THRESHOLD = 3
 
 
 def detect_payload_kind(text: str) -> str:
@@ -101,6 +108,37 @@ def load_config(config_path: Path = CONFIG_FILE) -> dict[str, Any]:
         except json.JSONDecodeError as exc:
             print(f"[WARN] config.json invalido, usando valores por defecto: {exc}")
     return config
+
+
+def load_env_file(env_path: Path | None = None) -> dict[str, str]:
+    env_path = env_path or ENV_FILE
+    if not env_path.exists():
+        return {}
+
+    resolved: dict[str, str] = {}
+    for raw_line in env_path.read_text(encoding="utf-8", errors="ignore").splitlines():
+        line = raw_line.strip()
+        if not line or line.startswith("#") or "=" not in line:
+            continue
+        key, value = line.split("=", 1)
+        key = key.strip()
+        value = value.strip().strip('"').strip("'")
+        if key:
+            resolved[key] = value
+    return resolved
+
+
+def ensure_env_example_file(env_example_path: Path | None = None) -> None:
+    env_example_path = env_example_path or ENV_EXAMPLE_FILE
+    if env_example_path.exists():
+        return
+
+    lines = [
+        "# Variables locales para fuentes privadas autorizadas",
+        "PRIVATE_SOURCE_1=http://provider.example:8080/get.php?username=USER1&password=PASS1&type=m3u_plus",
+        "PRIVATE_SOURCE_2=http://provider.example:8080/get.php?username=USER2&password=PASS2&type=m3u_plus",
+    ]
+    env_example_path.write_text("\n".join(lines) + "\n", encoding="utf-8")
 
 
 def load_sources_payload(sources_path: Path = SOURCES_FILE) -> Any:
@@ -132,7 +170,125 @@ def ensure_local_private_sources_file(
         print("[WARN] local_private_sources.json debe contener una lista, se omite.")
         return []
 
-    return [item for item in payload if isinstance(item, dict)]
+    sanitized_items: list[dict[str, str]] = []
+    mutated = False
+    next_env_index = 1
+
+    for item in payload:
+        if not isinstance(item, dict):
+            continue
+        candidate = dict(item)
+        raw_url = str(candidate.get("source_url") or "").strip()
+        source_env = str(candidate.get("source_env") or "").strip()
+        if raw_url and not source_env:
+            candidate.pop("source_url", None)
+            candidate["source_env"] = f"PRIVATE_SOURCE_{next_env_index}"
+            next_env_index += 1
+            mutated = True
+        elif source_env.startswith("PRIVATE_SOURCE_"):
+            try:
+                next_env_index = max(next_env_index, int(source_env.removeprefix("PRIVATE_SOURCE_")) + 1)
+            except ValueError:
+                pass
+        sanitized_items.append(candidate)
+
+    if mutated:
+        local_sources_path.write_text(
+            json.dumps(sanitized_items, indent=2, ensure_ascii=False) + "\n",
+            encoding="utf-8",
+        )
+
+    return sanitized_items
+
+
+def resolve_source_url(source_spec: dict[str, Any], env_values: dict[str, str]) -> str:
+    source_env = str(source_spec.get("source_env") or "").strip()
+    if source_env:
+        return str(env_values.get(source_env) or os.getenv(source_env) or "").strip()
+    return str(source_spec.get("source_url") or "").strip()
+
+
+def load_quarantine_state(quarantine_path: Path | None = None) -> dict[str, dict[str, Any]]:
+    quarantine_path = quarantine_path or QUARANTINE_SOURCES_FILE
+    if not quarantine_path.exists():
+        return {}
+    try:
+        payload = json.loads(quarantine_path.read_text(encoding="utf-8"))
+    except json.JSONDecodeError:
+        return {}
+    if not isinstance(payload, dict):
+        return {}
+    return {
+        str(key): value
+        for key, value in payload.items()
+        if isinstance(value, dict)
+    }
+
+
+def save_quarantine_state(state: dict[str, dict[str, Any]], quarantine_path: Path | None = None) -> None:
+    quarantine_path = quarantine_path or QUARANTINE_SOURCES_FILE
+    quarantine_path.parent.mkdir(parents=True, exist_ok=True)
+    quarantine_path.write_text(json.dumps(state, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+
+
+def build_source_fingerprint(source_spec: dict[str, Any], resolved_url: str) -> str:
+    source_env = str(source_spec.get("source_env") or "").strip()
+    if source_env:
+        return f"env:{source_env}"
+    return normalize_source_url(resolved_url)
+
+
+def extract_http_status(exc: Exception) -> int | None:
+    if isinstance(exc, aiohttp.ClientResponseError):
+        return int(exc.status)
+    return None
+
+
+def update_quarantine_entry(
+    state: dict[str, dict[str, Any]],
+    fingerprint: str,
+    source_spec: dict[str, Any],
+    resolved_url: str,
+    *,
+    status: str,
+    http_status: int | None,
+) -> dict[str, Any]:
+    entry = dict(state.get(fingerprint) or {})
+    entry["source_env"] = str(source_spec.get("source_env") or "").strip()
+    entry["group"] = str(source_spec.get("group") or "").strip()
+    entry["country"] = str(source_spec.get("country") or "").strip()
+    entry["source_url_hint"] = resolved_url.split("?", 1)[0] if resolved_url else ""
+    entry["last_status"] = status
+    entry["last_http_status"] = http_status
+    entry["updated_at"] = time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime())
+    if http_status in RESTRICTIVE_STATUS_CODES:
+        entry["consecutive_failures"] = int(entry.get("consecutive_failures") or 0) + 1
+    elif status == "success":
+        entry["consecutive_failures"] = 0
+        entry["quarantined"] = False
+    else:
+        entry["consecutive_failures"] = int(entry.get("consecutive_failures") or 0)
+
+    if int(entry.get("consecutive_failures") or 0) >= QUARANTINE_THRESHOLD:
+        entry["quarantined"] = True
+    else:
+        entry.setdefault("quarantined", False)
+
+    state[fingerprint] = entry
+    return entry
+
+
+def write_telemetry_report(records: list[dict[str, Any]], output_path: Path | None = None) -> None:
+    output_path = output_path or TELEMETRY_STATUS_FILE
+    output_path.parent.mkdir(parents=True, exist_ok=True)
+    payload = {
+        "generated_at": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
+        "total_sources": len(records),
+        "healthy_sources": sum(1 for item in records if item.get("status") == "success"),
+        "quarantined_sources": sum(1 for item in records if item.get("quarantined")),
+        "sources": records,
+    }
+    output_path.write_text(json.dumps(payload, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
 
 
 def _extract_channel_entries(payload: Any) -> list[dict[str, Any]]:
@@ -190,6 +346,22 @@ def save_sources_payload(payload: Any, sources_path: Path = SOURCES_FILE) -> Non
 def normalize_url(url: str) -> str:
     cleaned = html.unescape((url or "").strip())
     return cleaned.rstrip(".,;)]}>\"'")
+
+
+def is_supported_playlist_url(url: str) -> bool:
+    normalized = normalize_url(url)
+    parsed = urlparse(normalized)
+    return parsed.scheme in {"http", "https"} and bool(parsed.netloc)
+
+
+def normalize_source_url(url: str) -> str:
+    return normalize_url(url).casefold()
+
+
+def describe_source_error(prefix: str, source_url: str, exc: Exception) -> str:
+    if isinstance(exc, aiohttp.ClientResponseError) and exc.status in {401, 403}:
+        return f"[INFO] {prefix} rechazada por el origen: {source_url} -> HTTP {exc.status} ({exc.message})"
+    return f"[WARN] {prefix} omitida por fallo de red o parsing: {source_url} -> {exc}"
 
 
 def iter_text_chunks(text: str, chunk_size: int) -> Iterator[str]:
@@ -296,7 +468,7 @@ def parse_m3u_file(file_path: Path) -> list[dict[str, Any]]:
                 continue
             if line.startswith("#"):
                 continue
-            if pending_attrs and M3U8_URL_PATTERN.fullmatch(normalize_url(line)):
+            if pending_attrs and is_supported_playlist_url(line):
                 channel = build_channel_record_from_extinf(pending_attrs, line)
                 channel["name"] = ensure_unique_name(str(channel.get("name", "")).strip(), used_names)
                 channels.append(channel)
@@ -734,9 +906,21 @@ def cache_path_for_url(source_url: str, cache_dir: Path = CACHE_DIR) -> Path:
     return cache_dir / f"{digest}.cache"
 
 
+def load_any_cached_path(source_url: str, cache_dir: Path = CACHE_DIR) -> Path | None:
+    cache_stub = cache_path_for_url(source_url, cache_dir)
+    if cache_stub.exists():
+        return cache_stub
+
+    matches = sorted(cache_dir.glob(f"{cache_stub.stem}.*"), key=lambda item: item.stat().st_mtime, reverse=True)
+    for match in matches:
+        if match.is_file():
+            return match
+    return None
+
+
 def load_cached_path(source_url: str, ttl_seconds: int, cache_dir: Path = CACHE_DIR) -> Path | None:
-    cache_path = cache_path_for_url(source_url, cache_dir)
-    if not cache_path.exists():
+    cache_path = load_any_cached_path(source_url, cache_dir)
+    if cache_path is None or not cache_path.exists():
         return None
 
     age_seconds = time.time() - cache_path.stat().st_mtime
@@ -784,6 +968,17 @@ async def fetch_source_to_cache(source_url: str, config: dict[str, Any]) -> Path
                             message="No autorizado por el origen (401)",
                             headers=response.headers,
                         )
+                    if response.status == 403:
+                        raise aiohttp.ClientResponseError(
+                            response.request_info,
+                            response.history,
+                            status=response.status,
+                            message=(
+                                "Acceso prohibido por el origen (403). "
+                                "La URL fue alcanzada, pero el proveedor rechazo la solicitud."
+                            ),
+                            headers=response.headers,
+                        )
                     if response.status in RETRIABLE_STATUS_CODES and attempt < attempts:
                         await asyncio.sleep(backoff_base * (2 ** (attempt - 1)))
                         continue
@@ -799,13 +994,25 @@ async def fetch_source_to_cache(source_url: str, config: dict[str, Any]) -> Path
                     cache_path.write_text(response_text, encoding="utf-8")
                     return cache_path
             except asyncio.TimeoutError:
+                stale_cached = load_any_cached_path(source_url)
+                if stale_cached is not None:
+                    print(f"[INFO] Reutilizando cache vencido para {source_url} tras timeout.")
+                    return stale_cached
                 if attempt < attempts:
                     await asyncio.sleep(backoff_base * (2 ** (attempt - 1)))
                     continue
                 raise
             except aiohttp.ClientResponseError:
+                stale_cached = load_any_cached_path(source_url)
+                if stale_cached is not None:
+                    print(f"[INFO] Reutilizando cache vencido para {source_url} tras HTTP rechazado.")
+                    return stale_cached
                 raise
             except aiohttp.ClientError:
+                stale_cached = load_any_cached_path(source_url)
+                if stale_cached is not None:
+                    print(f"[INFO] Reutilizando cache vencido para {source_url} tras fallo de red.")
+                    return stale_cached
                 if attempt < attempts:
                     await asyncio.sleep(backoff_base * (2 ** (attempt - 1)))
                     continue
@@ -871,7 +1078,12 @@ async def run(
     metadata_url: str | None = None,
 ) -> int:
     config = load_config(config_path)
+    ensure_env_example_file()
+    env_values = load_env_file()
+    quarantine_state = load_quarantine_state()
+    telemetry_records: list[dict[str, Any]] = []
     resolved_source_url = source_url or DEFAULT_SOURCE_URL
+    attempted_sources = {normalize_source_url(resolved_source_url)}
     detected_count, added = await import_single_source(
         resolved_source_url,
         sources_path,
@@ -889,8 +1101,10 @@ async def run(
         if not isinstance(source_spec, dict):
             continue
         batch_url = str(source_spec.get("source_url") or "").strip()
-        if not batch_url or batch_url == resolved_source_url:
+        normalized_batch_url = normalize_source_url(batch_url)
+        if not batch_url or normalized_batch_url in attempted_sources:
             continue
+        attempted_sources.add(normalized_batch_url)
         try:
             batch_detected, batch_added = await import_single_source(
                 batch_url,
@@ -904,15 +1118,42 @@ async def run(
             total_detected += batch_detected
             total_added += batch_added
         except Exception as exc:  # noqa: BLE001
-            print(f"[WARN] Fuente secundaria omitida por fallo de red o parsing: {batch_url} -> {exc}")
+            print(describe_source_error("Fuente secundaria", batch_url, exc))
             continue
 
     local_source_specs = ensure_local_private_sources_file(LOCAL_PRIVATE_SOURCES_FILE)
     for source_spec in local_source_specs:
+        fingerprint = build_source_fingerprint(source_spec, resolve_source_url(source_spec, env_values))
+        quarantine_entry = quarantine_state.get(fingerprint) or {}
+        resolved_local_url = resolve_source_url(source_spec, env_values)
+        telemetry_record = {
+            "source_env": str(source_spec.get("source_env") or "").strip(),
+            "group": str(source_spec.get("group") or "").strip(),
+            "country": str(source_spec.get("country") or "").strip(),
+            "source_url_hint": resolved_local_url.split("?", 1)[0] if resolved_local_url else "",
+            "status": "skipped",
+            "http_status": None,
+            "quarantined": bool(quarantine_entry.get("quarantined")),
+            "consecutive_failures": int(quarantine_entry.get("consecutive_failures") or 0),
+        }
         try:
-            batch_url = str(source_spec.get("source_url") or "").strip()
+            batch_url = resolved_local_url
+            normalized_batch_url = normalize_source_url(batch_url)
             if not batch_url:
+                telemetry_record["status"] = "missing_env"
+                telemetry_records.append(telemetry_record)
                 continue
+            if bool(quarantine_entry.get("quarantined")):
+                telemetry_record["status"] = "quarantined"
+                telemetry_record["quarantined"] = True
+                telemetry_records.append(telemetry_record)
+                print(f"[INFO] Fuente local en cuarentena, se omite: {telemetry_record['source_env'] or telemetry_record['source_url_hint']}")
+                continue
+            if normalized_batch_url in attempted_sources:
+                telemetry_record["status"] = "duplicate"
+                telemetry_records.append(telemetry_record)
+                continue
+            attempted_sources.add(normalized_batch_url)
             batch_detected, batch_added = await import_single_source(
                 batch_url,
                 sources_path,
@@ -924,11 +1165,40 @@ async def run(
             )
             total_detected += batch_detected
             total_added += batch_added
+            updated_entry = update_quarantine_entry(
+                quarantine_state,
+                fingerprint,
+                source_spec,
+                batch_url,
+                status="success",
+                http_status=200,
+            )
+            telemetry_record["status"] = "success"
+            telemetry_record["http_status"] = 200
+            telemetry_record["consecutive_failures"] = int(updated_entry.get("consecutive_failures") or 0)
+            telemetry_record["quarantined"] = bool(updated_entry.get("quarantined"))
         except Exception as exc:  # noqa: BLE001
-            print(f"[WARN] Fuente local omitida por fallo de red o parsing: {source_spec.get('source_url')} -> {exc}")
-            continue
+            http_status = extract_http_status(exc)
+            updated_entry = update_quarantine_entry(
+                quarantine_state,
+                fingerprint,
+                source_spec,
+                batch_url,
+                status="error",
+                http_status=http_status,
+            )
+            telemetry_record["status"] = "error"
+            telemetry_record["http_status"] = http_status
+            telemetry_record["consecutive_failures"] = int(updated_entry.get("consecutive_failures") or 0)
+            telemetry_record["quarantined"] = bool(updated_entry.get("quarantined"))
+            print(describe_source_error("Fuente local", telemetry_record["source_env"] or batch_url, exc))
+            if telemetry_record["quarantined"]:
+                print(f"[INFO] Fuente local movida a cuarentena: {telemetry_record['source_env'] or telemetry_record['source_url_hint']}")
+        telemetry_records.append(telemetry_record)
 
     merged_channels = _extract_channel_entries(load_sources_payload(sources_path))
+    save_quarantine_state(quarantine_state)
+    write_telemetry_report(telemetry_records)
 
     print("=" * 50)
     print("Resumen de importacion de canales")

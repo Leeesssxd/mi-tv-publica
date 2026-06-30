@@ -1,11 +1,11 @@
 # Estado de canales
 
-Última revisión UTC: `2026-06-30T19:44:09Z`
+Última revisión UTC: `2026-06-30T20:42:21Z`
 
 - Canales totales: **348**
-- Canales vivos: **291**
+- Canales vivos: **293**
 - Canales inestables: **6**
-- Canales muertos: **51**
+- Canales muertos: **49**
 
 | Canal | Grupo | País | Estado | Código | Error |
 |---|---|---|---|---|---|
@@ -95,7 +95,7 @@
 | UMTV (1080p) [Not 24/7] | Familia y TV Abierta | MX | ✅ Vivo | 200 |  |
 | Unison TV (1080p) [Not 24/7] | Familia y TV Abierta | MX | ✅ Vivo | 200 |  |
 | Univision Latin America (1080p) | Familia y TV Abierta | MX | ✅ Vivo | 200 |  |
-| California Medios TV (720p) | Familia y TV Abierta | MX | ✅ Vivo | 200 |  |
+| California Medios TV (720p) | Familia y TV Abierta | MX | ❌ Muerto | 404 | HTTP 404 |
 | Canal 10 Cancún (720p) [Not 24/7] | Familia y TV Abierta | MX | ❌ Muerto | - | Timeout |
 | Canal 10 Chiapas (720p) | Familia y TV Abierta | MX | ✅ Vivo | 200 |  |
 | Canal 13 Bajío (720p) [Not 24/7] | Familia y TV Abierta | MX | ❌ Muerto | 404 | HTTP 404 |
@@ -155,7 +155,7 @@
 | Canal 6 CDMX (FAST) | Familia y TV Abierta | MX | ✅ Vivo | 200 |  |
 | Canal 66 | Familia y TV Abierta | MX | ✅ Vivo | 200 |  |
 | Canal 7 Neuquén | Familia y TV Abierta | AR | ✅ Vivo | 200 |  |
-| Canal 99 Miramar | Familia y TV Abierta | AR | ❌ Muerto | - | Cannot connect to host vivo.solumedia.com:19360 ssl:False [getaddrinfo failed] |
+| Canal 99 Miramar | Familia y TV Abierta | AR | ✅ Vivo | 200 |  |
 | Canal Provincial | Familia y TV Abierta | AR | ✅ Vivo | 200 |  |
 | El Trece | Familia y TV Abierta | AR | ✅ Vivo | 200 |  |
 | MVS TV | Familia y TV Abierta | MX | ✅ Vivo | 200 |  |
@@ -247,12 +247,12 @@
 | Estrella Games (1080p) | Peliculas - Familiar | MX | ✅ Vivo | 200 |  |
 | Nick Jr. Latin America (1080p) | Peliculas - Familiar | MX | ✅ Vivo | 200 |  |
 | Disney Channel Latin America Mexico (720p) | Peliculas - Familiar | MX | ✅ Vivo | 200 |  |
-| El Chavo TV (720p) | Peliculas - Familiar | MX | ❌ Muerto | 502 | HTTP 502 |
+| El Chavo TV (720p) | Peliculas - Familiar | MX | ✅ Vivo | 200 |  |
 | Pluto TV Juniorklubben (720p) | Peliculas - Familiar | SE | ✅ Vivo | 200 |  |
 | Pluto TV Klassiske tegnefilmer (720p) | Peliculas - Familiar | SE | ✅ Vivo | 200 |  |
 | Pluto TV Tegnefilm (720p) | Peliculas - Familiar | SE | ✅ Vivo | 200 |  |
 | Pluto TV Ungdomsserier (720p) | Peliculas - Familiar | SE | ✅ Vivo | 200 |  |
-| SvampeBob Firkant (720p) | Peliculas - Familiar | SE | ❌ Muerto | 404 | HTTP 404 |
+| SvampeBob Firkant (720p) | Peliculas - Familiar | SE | ✅ Vivo | 200 |  |
 | Totally Turtles (720p) | Peliculas - Familiar | SE | ✅ Vivo | 200 |  |
 | Disney Channel Latin America North (576p) | Peliculas - Familiar | MX | ✅ Vivo | 200 |  |
 | iCarly | Peliculas - Familiar | SE | ✅ Vivo | 200 |  |

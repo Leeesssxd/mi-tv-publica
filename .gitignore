@@ -3,7 +3,11 @@ __pycache__/
 .venv/
 venv/
 .env
+.env.local
+.env.*.local
 .pytest_cache/
 .cache/
 .DS_Store
 *.log
+sources/local_private_sources.private.json
+sources/*private*secret*.json

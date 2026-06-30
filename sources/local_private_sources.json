@@ -1,7 +1,37 @@
 [
   {
-    "source_url": "http://127.0.0",
-    "group": "Deportes Locales",
+    "source_env": "PRIVATE_SOURCE_1",
+    "group": "Privados Locales",
+    "country": "ALL"
+  },
+  {
+    "source_env": "PRIVATE_SOURCE_2",
+    "group": "Privados Locales",
+    "country": "ALL"
+  },
+  {
+    "source_env": "PRIVATE_SOURCE_3",
+    "group": "Privados Locales",
+    "country": "ALL"
+  },
+  {
+    "source_env": "PRIVATE_SOURCE_4",
+    "group": "Privados Locales",
+    "country": "ALL"
+  },
+  {
+    "source_env": "PRIVATE_SOURCE_5",
+    "group": "Privados Locales",
+    "country": "ALL"
+  },
+  {
+    "source_env": "PRIVATE_SOURCE_6",
+    "group": "Privados Locales",
+    "country": "ALL"
+  },
+  {
+    "source_env": "PRIVATE_SOURCE_7",
+    "group": "Privados Locales",
     "country": "ALL"
   }
 ]
