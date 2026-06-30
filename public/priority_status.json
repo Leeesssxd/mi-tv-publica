@@ -1,0 +1,278 @@
+{
+  "generated_at": "2026-06-30T22:33:20Z",
+  "requested_total": 44,
+  "found_total": 32,
+  "missing_total": 12,
+  "found": [
+    {
+      "requested": "Azteca Uno",
+      "matched_name": "Azteca Uno",
+      "group": "Familia y TV Abierta",
+      "country": "MX",
+      "state": "alive",
+      "url": "https://mdstrm.com/live-stream-playlist/609b243156cca108312822a6.m3u8"
+    },
+    {
+      "requested": "Canal 5",
+      "matched_name": "Canal 5 (1080p)",
+      "group": "Familia y TV Abierta",
+      "country": "MX",
+      "state": "alive",
+      "url": "http://190.11.225.124:5000/live/canal5_hd/playlist.m3u8"
+    },
+    {
+      "requested": "Azteca 7",
+      "matched_name": "Azteca 7",
+      "group": "Familia y TV Abierta",
+      "country": "MX",
+      "state": "alive",
+      "url": "https://mdstrm.com/live-stream-playlist/609ad46a7a441137107d7a81.m3u8"
+    },
+    {
+      "requested": "Las Estrellas",
+      "matched_name": "Las Estrellas (1080p)",
+      "group": "Familia y TV Abierta",
+      "country": "MX",
+      "state": "alive",
+      "url": "https://channel01-onlymex.akamaized.net/hls/live/2022749/event01/index.m3u8"
+    },
+    {
+      "requested": "TUDN",
+      "matched_name": "TUDN (1080p)",
+      "group": "Deportes",
+      "country": "MX",
+      "state": "alive",
+      "url": "https://streaming.alwaysdata.net/tudn.php"
+    },
+    {
+      "requested": "TV Pública",
+      "matched_name": "TV Pública",
+      "group": "Familia y TV Abierta",
+      "country": "AR",
+      "state": "alive",
+      "url": "http://playcom.trapemn.tv:1935/transcoderip/tvpublica.stream/playlist.m3u8"
+    },
+    {
+      "requested": "Azteca Internacional",
+      "matched_name": "Azteca Internacional (1080p)",
+      "group": "Familia y TV Abierta",
+      "country": "MX",
+      "state": "alive",
+      "url": "https://azt-mun.otteravision.com/azt/mun/mun.m3u8"
+    },
+    {
+      "requested": "Milenio",
+      "matched_name": "Milenio Television (720p)",
+      "group": "Noticias",
+      "country": "MX",
+      "state": "alive",
+      "url": "https://mdstrm.com/live-stream-playlist/610178c7db32a4112d994650.m3u8"
+    },
+    {
+      "requested": "Telediario Now",
+      "matched_name": "Telediario Now",
+      "group": "Noticias",
+      "country": "MX",
+      "state": "alive",
+      "url": "https://stream.ads.ottera.tv/playlist.m3u8?network_id=11014"
+    },
+    {
+      "requested": "Multimedios",
+      "matched_name": "Multimedios Bajío (720p) [Not 24/7]",
+      "group": "Noticias",
+      "country": "MX",
+      "state": "alive",
+      "url": "https://mdstrm.com/live-stream-playlist/5d4b0fec848918070128c8cb.m3u8"
+    },
+    {
+      "requested": "Canal 26",
+      "matched_name": "Canal 26 Aguascalientes (1080p)",
+      "group": "Familia y TV Abierta",
+      "country": "MX",
+      "state": "alive",
+      "url": "https://60417ddeaf0d9.streamlock.net/telemetrika3/smil:telemetrika3.smil/playlist.m3u8"
+    },
+    {
+      "requested": "TN",
+      "matched_name": "TN",
+      "group": "Noticias",
+      "country": "AR",
+      "state": "alive",
+      "url": "http://playcom.trapemn.tv:1935/transcoderip/tn.stream/playlist.m3u8"
+    },
+    {
+      "requested": "C4 En Alerta",
+      "matched_name": "C4 En Alerta",
+      "group": "Noticias",
+      "country": "MX",
+      "state": "alive",
+      "url": "https://stream.ads.ottera.tv/playlist.m3u8?network_id=6404"
+    },
+    {
+      "requested": "MX Nuestro Cine",
+      "matched_name": "MX Nuestro Cine",
+      "group": "Peliculas - Cine",
+      "country": "MX",
+      "state": "alive",
+      "url": "https://5fc584f3f19c9.streamlock.net/canal222/smil:canal222.smil/playlist.m3u8"
+    },
+    {
+      "requested": "Golden",
+      "matched_name": "Golden (240p)",
+      "group": "Peliculas - Cine",
+      "country": "MX",
+      "state": "alive",
+      "url": "https://rpn.bozztv.com/gusa/gusa-goldentv/index.m3u8"
+    },
+    {
+      "requested": "Runtime Acción",
+      "matched_name": "Runtime Acción",
+      "group": "Peliculas - Accion",
+      "country": "MX",
+      "state": "alive",
+      "url": "https://stream.ads.ottera.tv/playlist.m3u8?network_id=2550"
+    },
+    {
+      "requested": "Runtime Cine y Series",
+      "matched_name": "Runtime Cine y Series",
+      "group": "Peliculas - Drama y Series",
+      "country": "MX",
+      "state": "alive",
+      "url": "https://stream.ads.ottera.tv/playlist.m3u8?network_id=2152"
+    },
+    {
+      "requested": "Runtime Comedia",
+      "matched_name": "Runtime Comedia",
+      "group": "Peliculas - Comedia",
+      "country": "MX",
+      "state": "alive",
+      "url": "https://stream.ads.ottera.tv/playlist.m3u8?network_id=2551"
+    },
+    {
+      "requested": "Runtime Familia",
+      "matched_name": "Runtime Familia",
+      "group": "Peliculas - Familiar",
+      "country": "MX",
+      "state": "alive",
+      "url": "https://stream.ads.ottera.tv/playlist.m3u8?network_id=3528"
+    },
+    {
+      "requested": "Corazón Fast",
+      "matched_name": "Corazón Fast",
+      "group": "Peliculas - Drama y Series",
+      "country": "MX",
+      "state": "alive",
+      "url": "https://stream.ads.ottera.tv/playlist.m3u8?network_id=4826"
+    },
+    {
+      "requested": "RTVE La 1 Oficial",
+      "matched_name": "RTVE La 1 Oficial (720p)",
+      "group": "Deportes Públicos Internacionales",
+      "country": "ES",
+      "state": "alive",
+      "url": "https://rtvelivestream.rtve.es/rtvesec/la1/la1_main_dvr.m3u8"
+    },
+    {
+      "requested": "RTVE La 2 Oficial",
+      "matched_name": "RTVE La 2 Oficial (720p)",
+      "group": "Deportes Públicos Internacionales",
+      "country": "ES",
+      "state": "alive",
+      "url": "https://rtvelivestream.rtve.es/rtvesec/la2/la2_main_dvr.m3u8"
+    },
+    {
+      "requested": "RTVE 24 Horas Oficial",
+      "matched_name": "RTVE 24 Horas Oficial (720p)",
+      "group": "Deportes Públicos Internacionales",
+      "country": "ES",
+      "state": "alive",
+      "url": "https://rtvelivestream.rtve.es/rtvesec/24h/24h_main_dvr.m3u8"
+    },
+    {
+      "requested": "RTVE Teledeporte Oficial",
+      "matched_name": "RTVE Teledeporte Oficial (720p)",
+      "group": "Deportes Públicos Internacionales",
+      "country": "ES",
+      "state": "alive",
+      "url": "https://rtvelivestream.rtve.es/rtvesec/tdp/tdp_main_dvr.m3u8"
+    },
+    {
+      "requested": "TV Brasil Oficial",
+      "matched_name": "TV Brasil Oficial (720p)",
+      "group": "Deportes Públicos Internacionales",
+      "country": "BR",
+      "state": "alive",
+      "url": "https://tvbrasil-stream.ebc.com.br/index.m3u8"
+    },
+    {
+      "requested": "Claro Sports",
+      "matched_name": "Claro Sports (720p)",
+      "group": "Deportes",
+      "country": "MX",
+      "state": "alive",
+      "url": "https://jmp2.uk/plu-6320d2755e54db000783fd87.m3u8"
+    },
+    {
+      "requested": "ITV Deportes",
+      "matched_name": "ITV Deportes (720p)",
+      "group": "Deportes",
+      "country": "MX",
+      "state": "alive",
+      "url": "https://thm-it-roku.otteravision.com/thm/it/it.m3u8"
+    },
+    {
+      "requested": "AyM Sports",
+      "matched_name": "AyM Sports",
+      "group": "Deportes",
+      "country": "MX",
+      "state": "alive",
+      "url": "https://stream.ads.ottera.tv/playlist.m3u8?network_id=5106"
+    },
+    {
+      "requested": "TyC Sports",
+      "matched_name": "TyC Sports",
+      "group": "Deportes",
+      "country": "AR",
+      "state": "alive",
+      "url": "https://amg26268-amg26268c14-freelivesports-emea-10267.playouts.now.amagi.tv/ts-us-e2-n2/playlist/amg26268-sportsstudio-tycsports-freelivesportsemea/playlist.m3u8"
+    },
+    {
+      "requested": "Sports",
+      "matched_name": "Claro Sports (720p)",
+      "group": "Deportes",
+      "country": "MX",
+      "state": "alive",
+      "url": "https://jmp2.uk/plu-6320d2755e54db000783fd87.m3u8"
+    },
+    {
+      "requested": "Comedy",
+      "matched_name": "Comedy Central Latin America (1080p)",
+      "group": "Peliculas - Comedia",
+      "country": "MX",
+      "state": "alive",
+      "url": "http://181.119.93.83:8000/play/a1di/index.m3u8"
+    },
+    {
+      "requested": "Movies",
+      "matched_name": "Star Trek Movies",
+      "group": "Peliculas - Cine",
+      "country": "SE",
+      "state": "alive",
+      "url": "https://jmp2.uk/plu-6400c228498393000878a9b7.m3u8"
+    }
+  ],
+  "missing": [
+    "ViX",
+    "Vix",
+    "DSPORTS",
+    "D Sports",
+    "S Sports",
+    "Canal 7 eSports",
+    "Canal 13 Michoacán",
+    "Once México",
+    "Filmex",
+    "DeporTV Oficial Internacional",
+    "TV Pública Argentina Oficial",
+    "DeporTV"
+  ]
+}

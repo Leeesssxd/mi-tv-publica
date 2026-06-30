@@ -152,6 +152,9 @@ https://raw.githubusercontent.com/Leeesssxd/mi-tv-publica/main/public/status.jso
 Estado Markdown:
 https://raw.githubusercontent.com/Leeesssxd/mi-tv-publica/main/public/status.md
 
+Prioridades encontradas/faltantes:
+https://raw.githubusercontent.com/Leeesssxd/mi-tv-publica/main/public/priority_status.md
+
 Telemetría privada:
 https://raw.githubusercontent.com/Leeesssxd/mi-tv-publica/main/public/telemetry_status.json
 ```

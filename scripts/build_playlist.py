@@ -84,6 +84,18 @@ DIRECT_VOD_EXTENSIONS = (".m3u8", ".mp4", ".m4v", ".mpd", ".ts", ".webm", ".aac"
 
 RETRIABLE_STATUS_CODES = {429, 503}
 QUALITY_PATTERN = re.compile(r"(\d{3,4})p", re.IGNORECASE)
+DEFAULT_PRIORITY_ALIASES: dict[str, tuple[str, ...]] = {
+    "azteca uno": ("azteca uno", "azteca 1"),
+    "canal 5": ("canal 5",),
+    "azteca 7": ("azteca 7", "azteca siete"),
+    "las estrellas": ("las estrellas", "canal de las estrellas"),
+    "tudn": ("tudn",),
+    "vix": ("vix", "vix premium", "vix deportes"),
+    "dsports": ("dsports", "dsport", "d sports", "directv sports", "dsportplus", "dsport plus"),
+    "d sports": ("d sports", "dsports", "dsport", "directv sports", "dsportplus", "dsport plus"),
+    "s sports": ("s sports",),
+    "canal 7 esports": ("canal 7 esports", "canal 7 e-sports", "esports"),
+}
 
 FAMILY_PATTERNS = (
     "azteca uno",
@@ -860,8 +872,10 @@ def _priority_rank(status: ChannelStatus, priority_channels: list[str]) -> int:
 
     for index, pattern in enumerate(priority_channels):
         normalized_pattern = _normalize_name(pattern)
-        if normalized_pattern and (
-            normalized_pattern in normalized_name or normalized_pattern in normalized_group
+        aliases = DEFAULT_PRIORITY_ALIASES.get(normalized_pattern, (normalized_pattern,))
+        if any(
+            alias and (alias in normalized_name or alias in normalized_group)
+            for alias in aliases
         ):
             return index
     return len(priority_channels)
@@ -1114,6 +1128,82 @@ def build_status_json(statuses: list[ChannelStatus]) -> str:
     return json.dumps(payload, indent=2, ensure_ascii=False) + "\n"
 
 
+def build_priority_summary(statuses: list[ChannelStatus], priority_channels: list[str]) -> dict[str, Any]:
+    found: list[dict[str, Any]] = []
+    missing: list[str] = []
+
+    for pattern in priority_channels:
+        normalized_pattern = _normalize_name(pattern)
+        aliases = DEFAULT_PRIORITY_ALIASES.get(normalized_pattern, (normalized_pattern,))
+        match = next(
+            (
+                status for status in statuses
+                if any(
+                    alias and (
+                        alias in _normalize_name(status.name)
+                        or alias in _normalize_name(status.group)
+                    )
+                    for alias in aliases
+                )
+            ),
+            None,
+        )
+        if match is None:
+            missing.append(pattern)
+            continue
+        found.append(
+            {
+                "requested": pattern,
+                "matched_name": match.name,
+                "group": match.group,
+                "country": match.country,
+                "state": match.state,
+                "url": match.url,
+            }
+        )
+
+    return {
+        "generated_at": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
+        "requested_total": len(priority_channels),
+        "found_total": len(found),
+        "missing_total": len(missing),
+        "found": found,
+        "missing": missing,
+    }
+
+
+def build_priority_summary_markdown(priority_summary: dict[str, Any]) -> str:
+    lines = [
+        "# Prioridades de canales",
+        "",
+        f"Última revisión UTC: `{priority_summary['generated_at']}`",
+        "",
+        f"- Prioridades solicitadas: **{priority_summary['requested_total']}**",
+        f"- Prioridades encontradas: **{priority_summary['found_total']}**",
+        f"- Prioridades faltantes: **{priority_summary['missing_total']}**",
+        "",
+        "| Pedido | Coincidencia | Grupo | País | Estado |",
+        "|---|---|---|---|---|",
+    ]
+
+    for item in priority_summary["found"]:
+        lines.append(
+            f"| {item['requested']} | {item['matched_name']} | {item['group']} | {item['country']} | {item['state']} |"
+        )
+
+    if priority_summary["missing"]:
+        lines.extend(
+            [
+                "",
+                "## Faltantes",
+                "",
+            ]
+        )
+        lines.extend(f"- {item}" for item in priority_summary["missing"])
+
+    return "\n".join(lines) + "\n"
+
+
 def build_status_markdown(statuses: list[ChannelStatus]) -> str:
     now = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
     total = len(statuses)
@@ -1148,7 +1238,11 @@ def build_status_markdown(statuses: list[ChannelStatus]) -> str:
     return "\n".join(lines) + "\n"
 
 
-def write_outputs(statuses: list[ChannelStatus], public_dir: Path = PUBLIC_DIR) -> bool:
+def write_outputs(
+    statuses: list[ChannelStatus],
+    public_dir: Path = PUBLIC_DIR,
+    priority_channels: list[str] | None = None,
+) -> bool:
     public_dir.mkdir(parents=True, exist_ok=True)
     playlist_path = public_dir / "playlist.m3u"
     fallback_used = False
@@ -1166,6 +1260,15 @@ def write_outputs(statuses: list[ChannelStatus], public_dir: Path = PUBLIC_DIR) 
 
     (public_dir / "status.json").write_text(build_status_json(statuses), encoding="utf-8")
     (public_dir / "status.md").write_text(build_status_markdown(statuses), encoding="utf-8")
+    priority_summary = build_priority_summary(statuses, priority_channels or [])
+    (public_dir / "priority_status.json").write_text(
+        json.dumps(priority_summary, indent=2, ensure_ascii=False) + "\n",
+        encoding="utf-8",
+    )
+    (public_dir / "priority_status.md").write_text(
+        build_priority_summary_markdown(priority_summary),
+        encoding="utf-8",
+    )
     return fallback_used
 
 
@@ -1204,6 +1307,7 @@ def print_summary(statuses: list[ChannelStatus]) -> None:
 
 async def run(sources_path: Path, public_dir: Path, config_path: Path) -> list[ChannelStatus]:
     config = load_config(config_path)
+    priority_channels = list(config.get("priority_channels", []))
     channels = load_channels(sources_path)
     cloud_catalog_items = load_cloud_catalog_items(sources_path)
     vod_statuses = await check_all_vod_items(cloud_catalog_items, config)
@@ -1218,16 +1322,16 @@ async def run(sources_path: Path, public_dir: Path, config_path: Path) -> list[C
             statuses,
             list(config["sort_by"]),
             group_order=list(config.get("group_order", [])),
-            priority_channels=list(config.get("priority_channels", [])),
+            priority_channels=priority_channels,
         )
         statuses = select_curated_statuses(
             statuses,
             target_size=int(config.get("target_playlist_size", 500)),
             group_quotas=dict(config.get("target_group_quotas", {})),
-            priority_channels=list(config.get("priority_channels", [])),
+            priority_channels=priority_channels,
         )
 
-    fallback_used = write_outputs(statuses, public_dir)
+    fallback_used = write_outputs(statuses, public_dir, priority_channels=priority_channels)
     write_vod_output(cloud_catalog_items, vod_statuses, public_dir)
     if fallback_used:
         print("[WARN] Se conservo la ultima playlist valida por una caida masiva del upstream.")

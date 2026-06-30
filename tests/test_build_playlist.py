@@ -19,6 +19,8 @@ from build_playlist import (  # noqa: E402
     ChannelStatus,
     VodStatus,
     build_m3u,
+    build_priority_summary,
+    build_priority_summary_markdown,
     build_vod_browser_links,
     build_status_json,
     build_status_markdown,
@@ -378,6 +380,21 @@ def test_sort_statuses_prefiere_vivos_y_mx_entre_empates():
     ]
 
 
+def test_sort_statuses_usa_aliases_de_prioridad_para_dsports():
+    statuses = [
+        make_status("DSPORTPLUS", "Entretenimiento", True, country="ALL"),
+        make_status("Otro Canal", "Entretenimiento", True),
+    ]
+
+    ordered = sort_statuses(
+        statuses,
+        ["group", "name"],
+        priority_channels=["DSPORTS"],
+    )
+
+    assert [status.name for status in ordered] == ["DSPORTPLUS", "Otro Canal"]
+
+
 def test_classify_group_ubica_canales_en_secciones_usuario():
     assert classify_group("Azteca Uno", "General") == "Familia y TV Abierta"
     assert classify_group("Milenio Televisión (720p)", "News") == "Noticias"
@@ -469,6 +486,46 @@ def test_build_m3u_expone_urls_de_respaldo_como_entradas_visibles():
 
     assert "Canal 5 (1080p) [Respaldo 1]" in m3u
     assert "https://example.com/backup.m3u8" in m3u
+
+
+def test_build_priority_summary_reporta_encontrados_y_faltantes():
+    statuses = [
+        make_status("Azteca Uno", "Familia y TV Abierta", True),
+        make_status("DSPORTPLUS", "Deportes", True, country="ALL"),
+    ]
+
+    summary = build_priority_summary(statuses, ["Azteca Uno", "DSPORTS", "ViX"])
+
+    assert summary["found_total"] == 2
+    assert summary["missing_total"] == 1
+    assert summary["missing"] == ["ViX"]
+    assert summary["found"][1]["matched_name"] == "DSPORTPLUS"
+
+
+def test_build_priority_summary_markdown_contiene_faltantes():
+    summary = {
+        "generated_at": "2026-06-30T00:00:00Z",
+        "requested_total": 2,
+        "found_total": 1,
+        "missing_total": 1,
+        "found": [
+            {
+                "requested": "Azteca Uno",
+                "matched_name": "Azteca Uno",
+                "group": "Familia y TV Abierta",
+                "country": "MX",
+                "state": "alive",
+                "url": "https://example.com/a.m3u8",
+            }
+        ],
+        "missing": ["ViX"],
+    }
+
+    md = build_priority_summary_markdown(summary)
+
+    assert "Azteca Uno" in md
+    assert "## Faltantes" in md
+    assert "- ViX" in md
 
 
 def test_build_m3u_es_valido_y_tiene_extinf_y_url():

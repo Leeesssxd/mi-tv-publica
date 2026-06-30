@@ -1,9 +1,9 @@
 # Estado de canales
 
-Última revisión UTC: `2026-06-30T22:28:37Z`
+Última revisión UTC: `2026-06-30T22:33:20Z`
 
-- Canales totales: **295**
-- Canales vivos: **289**
+- Canales totales: **297**
+- Canales vivos: **291**
 - Canales inestables: **6**
 - Canales muertos: **0**
 
@@ -140,6 +140,7 @@
 | Estrella Games (1080p) | Peliculas - Familiar | MX | ✅ Vivo | 200 |  |
 | Nick Jr. Latin America (1080p) | Peliculas - Familiar | MX | ✅ Vivo | 200 |  |
 | Disney Channel Latin America Mexico (720p) | Peliculas - Familiar | MX | ✅ Vivo | 200 |  |
+| El Chavo TV (720p) | Peliculas - Familiar | MX | ✅ Vivo | 200 |  |
 | Disney Channel Latin America North (576p) | Peliculas - Familiar | MX | ✅ Vivo | 200 |  |
 | TV Cuatro 4.3 (1080p) | Deportes | MX | ✅ Vivo | 200 |  |
 | WPT | Deportes | MX | ✅ Vivo | 200 |  |
@@ -176,7 +177,6 @@
 | 5TV Corrientes (480p) [Not 24/7] | Familia y TV Abierta | AR | ✅ Vivo | 200 |  |
 | America TV | Familia y TV Abierta | AR | ✅ Vivo | 200 |  |
 | Bravo TV | Familia y TV Abierta | AR | ✅ Vivo | 200 |  |
-| Canal 7 Neuquén | Familia y TV Abierta | AR | ✅ Vivo | 200 |  |
 | Canal 99 Miramar | Familia y TV Abierta | AR | ✅ Vivo | 200 |  |
 | Canal Provincial | Familia y TV Abierta | AR | ✅ Vivo | 200 |  |
 | El Trece | Familia y TV Abierta | AR | ✅ Vivo | 200 |  |
@@ -233,7 +233,9 @@
 | Wildfire | Peliculas - Drama y Series | SE | ✅ Vivo | 200 |  |
 | Pluto TV Juniorklubben (720p) | Peliculas - Familiar | SE | ✅ Vivo | 200 |  |
 | Pluto TV Klassiske tegnefilmer (720p) | Peliculas - Familiar | SE | ✅ Vivo | 200 |  |
+| Pluto TV Tegnefilm (720p) | Peliculas - Familiar | SE | ✅ Vivo | 200 |  |
 | Pluto TV Ungdomsserier (720p) | Peliculas - Familiar | SE | ✅ Vivo | 200 |  |
+| SvampeBob Firkant (720p) | Peliculas - Familiar | SE | ✅ Vivo | 200 |  |
 | Totally Turtles (720p) | Peliculas - Familiar | SE | ✅ Vivo | 200 |  |
 | iCarly | Peliculas - Familiar | SE | ✅ Vivo | 200 |  |
 | Pluto TV Snooker 900 (720p) | Deportes | SE | ✅ Vivo | 200 |  |
