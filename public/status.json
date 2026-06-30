@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-06-30T22:03:38Z",
-  "total": 275,
+  "generated_at": "2026-06-30T22:10:21Z",
+  "total": 276,
   "alive": 272,
-  "unstable": 3,
+  "unstable": 4,
   "dead": 0,
   "channels": [
     {
@@ -16,7 +16,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:01:47Z"
+      "checked_at": "2026-06-30T22:08:28Z"
     },
     {
       "name": "CreaLaTV (1080p)",
@@ -29,7 +29,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:01:22Z"
+      "checked_at": "2026-06-30T22:08:06Z"
     },
     {
       "name": "MTV Latin America (1080p)",
@@ -42,7 +42,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:01:33Z"
+      "checked_at": "2026-06-30T22:08:15Z"
     },
     {
       "name": "TV Østfold (1080p)",
@@ -55,7 +55,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:02:35Z"
+      "checked_at": "2026-06-30T22:09:16Z"
     },
     {
       "name": "VB Media TV (1080p)",
@@ -68,7 +68,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:01:55Z"
+      "checked_at": "2026-06-30T22:08:36Z"
     },
     {
       "name": "ZAZ (1080p)",
@@ -81,7 +81,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:01:55Z"
+      "checked_at": "2026-06-30T22:08:36Z"
     },
     {
       "name": "8NTV (1080p)",
@@ -94,7 +94,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:01:11Z"
+      "checked_at": "2026-06-30T22:07:55Z"
     },
     {
       "name": "Azteca Internacional (1080p)",
@@ -107,7 +107,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:01:13Z"
+      "checked_at": "2026-06-30T22:07:55Z"
     },
     {
       "name": "B15 Fresnillo (1080p)",
@@ -120,7 +120,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:01:13Z"
+      "checked_at": "2026-06-30T22:07:56Z"
     },
     {
       "name": "B15 Zacatecas (1080p)",
@@ -133,7 +133,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:01:13Z"
+      "checked_at": "2026-06-30T22:07:56Z"
     },
     {
       "name": "Canal 10 Durango (1080p)",
@@ -146,7 +146,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:01:14Z"
+      "checked_at": "2026-06-30T22:07:58Z"
     },
     {
       "name": "Canal 26 Aguascalientes (1080p)",
@@ -159,7 +159,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:01:18Z"
+      "checked_at": "2026-06-30T22:08:01Z"
     },
     {
       "name": "Canal 5 (1080p)",
@@ -172,7 +172,20 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:01:14Z"
+      "checked_at": "2026-06-30T22:07:58Z"
+    },
+    {
+      "name": "Capital 21 (1080p) [Not 24/7]",
+      "group": "Familia y TV Abierta",
+      "country": "MX",
+      "url": "https://video.cdmx.gob.mx/redes/stream.m3u8",
+      "logo": "https://i.imgur.com/8ign49i.png",
+      "tvg_id": "Capital21.mx@SD",
+      "alive": false,
+      "status_code": 200,
+      "error": "Handshake correcto pero contenido inestable (C21ti202)",
+      "state": "unstable",
+      "checked_at": "2026-06-30T22:08:04Z"
     },
     {
       "name": "Estrella TV (1080p)",
@@ -185,7 +198,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:01:27Z"
+      "checked_at": "2026-06-30T22:08:09Z"
     },
     {
       "name": "ICRTV Colima (1080p)",
@@ -198,7 +211,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:01:29Z"
+      "checked_at": "2026-06-30T22:08:10Z"
     },
     {
       "name": "IERTBCS Canal 8 La Paz (1080p) [Not 24/7]",
@@ -211,7 +224,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:01:30Z"
+      "checked_at": "2026-06-30T22:08:12Z"
     },
     {
       "name": "IERTBCS Canal 8.2 La Paz (1080p) [Not 24/7]",
@@ -224,7 +237,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:01:29Z"
+      "checked_at": "2026-06-30T22:08:11Z"
     },
     {
       "name": "Nayarit Comunica (1080p)",
@@ -237,7 +250,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:01:36Z"
+      "checked_at": "2026-06-30T22:08:18Z"
     },
     {
       "name": "RCG TV (1080p)",
@@ -250,7 +263,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:01:39Z"
+      "checked_at": "2026-06-30T22:08:21Z"
     },
     {
       "name": "RTQ Querétaro (1080p)",
@@ -263,7 +276,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:01:40Z"
+      "checked_at": "2026-06-30T22:08:22Z"
     },
     {
       "name": "SIPSE TV 8.1 (1080p) [Not 24/7]",
@@ -276,7 +289,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:01:41Z"
+      "checked_at": "2026-06-30T22:08:22Z"
     },
     {
       "name": "SIPSE TVCUN 8.1 (1080p) [Not 24/7]",
@@ -289,7 +302,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:01:41Z"
+      "checked_at": "2026-06-30T22:08:23Z"
     },
     {
       "name": "Sistema Michoacano de TV (1080p) [Not 24/7]",
@@ -302,7 +315,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:01:41Z"
+      "checked_at": "2026-06-30T22:08:23Z"
     },
     {
       "name": "SQCS Canal 4 (1080p)",
@@ -315,7 +328,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:01:42Z"
+      "checked_at": "2026-06-30T22:08:23Z"
     },
     {
       "name": "Super Channel 12 (1080p)",
@@ -328,7 +341,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:01:43Z"
+      "checked_at": "2026-06-30T22:08:24Z"
     },
     {
       "name": "Tele Yucatan (1080p) [Geo-blocked]",
@@ -341,7 +354,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:01:44Z"
+      "checked_at": "2026-06-30T22:08:24Z"
     },
     {
       "name": "Telemax (XEWH-TDT) (1080p)",
@@ -354,7 +367,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:01:44Z"
+      "checked_at": "2026-06-30T22:08:25Z"
     },
     {
       "name": "TV Cuatro 4.1 (1080p)",
@@ -367,7 +380,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:01:47Z"
+      "checked_at": "2026-06-30T22:08:28Z"
     },
     {
       "name": "TV Cuatro 4.2 (1080p)",
@@ -380,7 +393,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:01:48Z"
+      "checked_at": "2026-06-30T22:08:29Z"
     },
     {
       "name": "TV Cuatro 4.3 (1080p)",
@@ -393,7 +406,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:01:48Z"
+      "checked_at": "2026-06-30T22:08:29Z"
     },
     {
       "name": "TV Cuatro 4.4 (1080p)",
@@ -406,7 +419,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:01:48Z"
+      "checked_at": "2026-06-30T22:08:29Z"
     },
     {
       "name": "TV Mar La Paz (1080p)",
@@ -419,7 +432,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:01:50Z"
+      "checked_at": "2026-06-30T22:08:31Z"
     },
     {
       "name": "TV Mar Los Cabos (1080p)",
@@ -432,7 +445,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:01:49Z"
+      "checked_at": "2026-06-30T22:08:31Z"
     },
     {
       "name": "TV Mar Puerto Vallarta (1080p)",
@@ -445,7 +458,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:01:50Z"
+      "checked_at": "2026-06-30T22:08:31Z"
     },
     {
       "name": "TV UG (1080p) [Not 24/7]",
@@ -458,7 +471,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:01:51Z"
+      "checked_at": "2026-06-30T22:08:31Z"
     },
     {
       "name": "UMTV (1080p) [Not 24/7]",
@@ -471,7 +484,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:01:54Z"
+      "checked_at": "2026-06-30T22:08:35Z"
     },
     {
       "name": "Unison TV (1080p) [Not 24/7]",
@@ -484,7 +497,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:01:54Z"
+      "checked_at": "2026-06-30T22:08:35Z"
     },
     {
       "name": "Estrella News (1080p)",
@@ -497,7 +510,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:01:26Z"
+      "checked_at": "2026-06-30T22:08:09Z"
     },
     {
       "name": "Notigram TV (XHFGL-TDT) (1080p)",
@@ -510,7 +523,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:01:37Z"
+      "checked_at": "2026-06-30T22:08:18Z"
     },
     {
       "name": "BAMOS TV (1080p) [Not 24/7]",
@@ -523,7 +536,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:01:13Z"
+      "checked_at": "2026-06-30T22:07:57Z"
     },
     {
       "name": "Monte Maria (1080p)",
@@ -536,7 +549,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:01:33Z"
+      "checked_at": "2026-06-30T22:08:15Z"
     },
     {
       "name": "Filmex (Xumo) (1080p) [Geo-blocked]",
@@ -549,7 +562,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:01:28Z"
+      "checked_at": "2026-06-30T22:08:11Z"
     },
     {
       "name": "Filmex Clásico (1080p) [Geo-blocked]",
@@ -562,7 +575,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:01:27Z"
+      "checked_at": "2026-06-30T22:08:10Z"
     },
     {
       "name": "Popcorn Central (1080p)",
@@ -575,7 +588,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:01:38Z"
+      "checked_at": "2026-06-30T22:08:18Z"
     },
     {
       "name": "Comedy Central Latin America (1080p)",
@@ -588,7 +601,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:01:21Z"
+      "checked_at": "2026-06-30T22:08:05Z"
     },
     {
       "name": "Disney Jr. Latin America North HD (1080p)",
@@ -601,7 +614,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:01:24Z"
+      "checked_at": "2026-06-30T22:08:07Z"
     },
     {
       "name": "Estrella Games (1080p)",
@@ -614,7 +627,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:01:26Z"
+      "checked_at": "2026-06-30T22:08:09Z"
     },
     {
       "name": "Nick Jr. Latin America (1080p)",
@@ -627,7 +640,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:01:36Z"
+      "checked_at": "2026-06-30T22:08:17Z"
     },
     {
       "name": "ITV Deportes (720p)",
@@ -640,7 +653,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:01:32Z"
+      "checked_at": "2026-06-30T22:08:13Z"
     },
     {
       "name": "Pluto TV Snooker 900 (720p)",
@@ -653,7 +666,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:02:23Z"
+      "checked_at": "2026-06-30T22:09:04Z"
     },
     {
       "name": "Conecta TV (720p)",
@@ -666,7 +679,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:01:21Z"
+      "checked_at": "2026-06-30T22:08:05Z"
     },
     {
       "name": "Expresa TV (720p)",
@@ -679,7 +692,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:01:27Z"
+      "checked_at": "2026-06-30T22:08:09Z"
     },
     {
       "name": "Frikanalen (720p)",
@@ -692,7 +705,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:02:07Z"
+      "checked_at": "2026-06-30T22:08:48Z"
     },
     {
       "name": "GikTVMX (720p)",
@@ -705,7 +718,7 @@
       "status_code": 200,
       "error": "Handshake correcto pero contenido inestable (text/plain; charset=utf-8)",
       "state": "unstable",
-      "checked_at": "2026-06-30T22:01:29Z"
+      "checked_at": "2026-06-30T22:08:10Z"
     },
     {
       "name": "MTV Dating (720p)",
@@ -718,7 +731,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:02:14Z"
+      "checked_at": "2026-06-30T22:08:54Z"
     },
     {
       "name": "MTV Ridiculousness (720p)",
@@ -731,7 +744,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:02:14Z"
+      "checked_at": "2026-06-30T22:08:55Z"
     },
     {
       "name": "MTV Teen Mom (720p)",
@@ -744,7 +757,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:02:14Z"
+      "checked_at": "2026-06-30T22:08:55Z"
     },
     {
       "name": "Presumiendo México (720p)",
@@ -757,7 +770,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:01:38Z"
+      "checked_at": "2026-06-30T22:08:19Z"
     },
     {
       "name": "Raly TV (720p)",
@@ -770,7 +783,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:01:40Z"
+      "checked_at": "2026-06-30T22:08:21Z"
     },
     {
       "name": "TELE 6 (720p)",
@@ -783,7 +796,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:01:43Z"
+      "checked_at": "2026-06-30T22:08:25Z"
     },
     {
       "name": "The Pet Collective International (720p)",
@@ -796,7 +809,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:01:45Z"
+      "checked_at": "2026-06-30T22:08:26Z"
     },
     {
       "name": "TV Migrante (720p)",
@@ -809,7 +822,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:01:50Z"
+      "checked_at": "2026-06-30T22:08:32Z"
     },
     {
       "name": "TV Modum (720p)",
@@ -822,7 +835,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:02:36Z"
+      "checked_at": "2026-06-30T22:09:16Z"
     },
     {
       "name": "Canal 10 Chiapas (720p)",
@@ -835,7 +848,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:01:14Z"
+      "checked_at": "2026-06-30T22:07:58Z"
     },
     {
       "name": "Canal 15 ILCE Summa Sabres (720p)",
@@ -848,7 +861,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:01:17Z"
+      "checked_at": "2026-06-30T22:08:01Z"
     },
     {
       "name": "Canal 22 Nacional (720p) [Geo-blocked]",
@@ -861,7 +874,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:01:18Z"
+      "checked_at": "2026-06-30T22:08:02Z"
     },
     {
       "name": "Canal 33 Tijuana (720p)",
@@ -874,7 +887,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:01:19Z"
+      "checked_at": "2026-06-30T22:08:02Z"
     },
     {
       "name": "Canal 44 Chihuahua (720p) [Not 24/7]",
@@ -887,7 +900,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:01:19Z"
+      "checked_at": "2026-06-30T22:08:02Z"
     },
     {
       "name": "Canal 44 Ciudad Juárez (720p) [Not 24/7]",
@@ -900,7 +913,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:01:20Z"
+      "checked_at": "2026-06-30T22:08:03Z"
     },
     {
       "name": "Imagen TV+ (720p)",
@@ -913,7 +926,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:01:31Z"
+      "checked_at": "2026-06-30T22:08:12Z"
     },
     {
       "name": "Jalisco TV (720p)",
@@ -926,7 +939,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:01:31Z"
+      "checked_at": "2026-06-30T22:08:13Z"
     },
     {
       "name": "Lobo TV (720p)",
@@ -939,7 +952,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:01:33Z"
+      "checked_at": "2026-06-30T22:08:14Z"
     },
     {
       "name": "Mexiquense TV (720p)",
@@ -952,7 +965,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:01:32Z"
+      "checked_at": "2026-06-30T22:08:14Z"
     },
     {
       "name": "Nueve TV San Luís Potosí (720p)",
@@ -965,7 +978,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:01:37Z"
+      "checked_at": "2026-06-30T22:08:18Z"
     },
     {
       "name": "RTG (720p)",
@@ -978,7 +991,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:01:39Z"
+      "checked_at": "2026-06-30T22:08:21Z"
     },
     {
       "name": "SET Televisión Canal 26.1 (720p) [Not 24/7]",
@@ -991,7 +1004,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:01:41Z"
+      "checked_at": "2026-06-30T22:08:22Z"
     },
     {
       "name": "SET Televisión Canal 26.2 (720p) [Not 24/7]",
@@ -1004,7 +1017,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:01:41Z"
+      "checked_at": "2026-06-30T22:08:22Z"
     },
     {
       "name": "SIZART Canal 24 (XHZHZ-TDT) (720p)",
@@ -1017,7 +1030,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:01:42Z"
+      "checked_at": "2026-06-30T22:08:23Z"
     },
     {
       "name": "TRC Televisión (720p)",
@@ -1030,7 +1043,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:01:46Z"
+      "checked_at": "2026-06-30T22:08:26Z"
     },
     {
       "name": "TV Lobo Durango (720p)",
@@ -1043,7 +1056,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:01:49Z"
+      "checked_at": "2026-06-30T22:08:30Z"
     },
     {
       "name": "TV Nuevo León Canal 28 (XHMNL-TDT) (720p)",
@@ -1056,7 +1069,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:01:50Z"
+      "checked_at": "2026-06-30T22:08:31Z"
     },
     {
       "name": "TV UJAT (XHUJAT-TDT) (720p) [Not 24/7]",
@@ -1069,7 +1082,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:01:51Z"
+      "checked_at": "2026-06-30T22:08:32Z"
     },
     {
       "name": "TVP Culiacán (720p) [Not 24/7]",
@@ -1082,7 +1095,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:01:52Z"
+      "checked_at": "2026-06-30T22:08:32Z"
     },
     {
       "name": "TVP Los Mochis (720p) [Not 24/7]",
@@ -1095,7 +1108,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:01:52Z"
+      "checked_at": "2026-06-30T22:08:33Z"
     },
     {
       "name": "TVP Mazatlán (720p) [Not 24/7]",
@@ -1108,7 +1121,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:01:52Z"
+      "checked_at": "2026-06-30T22:08:34Z"
     },
     {
       "name": "TVP Obregón (720p) [Not 24/7]",
@@ -1121,7 +1134,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:01:52Z"
+      "checked_at": "2026-06-30T22:08:34Z"
     },
     {
       "name": "Ultra TV Puebla (720p) [Not 24/7]",
@@ -1134,7 +1147,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:01:54Z"
+      "checked_at": "2026-06-30T22:08:34Z"
     },
     {
       "name": "Visión Televisión (720p)",
@@ -1147,7 +1160,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:01:56Z"
+      "checked_at": "2026-06-30T22:08:36Z"
     },
     {
       "name": "ADN 40 (720p)",
@@ -1160,7 +1173,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:01:12Z"
+      "checked_at": "2026-06-30T22:07:55Z"
     },
     {
       "name": "AMX Noticias (720p) [Not 24/7]",
@@ -1173,7 +1186,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:01:11Z"
+      "checked_at": "2026-06-30T22:07:55Z"
     },
     {
       "name": "Canal Parlamento del Congreso de Jalisco (720p) [Not 24/7]",
@@ -1186,7 +1199,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:01:20Z"
+      "checked_at": "2026-06-30T22:08:04Z"
     },
     {
       "name": "Justicia TV (720p)",
@@ -1199,7 +1212,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:01:31Z"
+      "checked_at": "2026-06-30T22:08:13Z"
     },
     {
       "name": "Milenio Televisión (720p)",
@@ -1212,7 +1225,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:01:34Z"
+      "checked_at": "2026-06-30T22:08:14Z"
     },
     {
       "name": "Alcance TV (720p)",
@@ -1225,7 +1238,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:01:11Z"
+      "checked_at": "2026-06-30T22:07:54Z"
     },
     {
       "name": "Canal Motor (720p)",
@@ -1238,7 +1251,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:02:02Z"
+      "checked_at": "2026-06-30T22:08:43Z"
     },
     {
       "name": "Turistik TV (720p)",
@@ -1251,7 +1264,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:01:47Z"
+      "checked_at": "2026-06-30T22:08:28Z"
     },
     {
       "name": "WeatherSpy (720p)",
@@ -1264,7 +1277,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:01:55Z"
+      "checked_at": "2026-06-30T22:08:36Z"
     },
     {
       "name": "MyTime Movie Network Mexico (720p)",
@@ -1277,7 +1290,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:01:35Z"
+      "checked_at": "2026-06-30T22:08:18Z"
     },
     {
       "name": "Bondi Rescue (720p)",
@@ -1290,7 +1303,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:02:00Z"
+      "checked_at": "2026-06-30T22:08:42Z"
     },
     {
       "name": "Car Chase (720p)",
@@ -1303,7 +1316,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:02:02Z"
+      "checked_at": "2026-06-30T22:08:43Z"
     },
     {
       "name": "Disney Channel Latin America Mexico (720p)",
@@ -1316,7 +1329,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:01:23Z"
+      "checked_at": "2026-06-30T22:08:06Z"
     },
     {
       "name": "El Chavo TV (720p)",
@@ -1329,7 +1342,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:01:25Z"
+      "checked_at": "2026-06-30T22:08:08Z"
     },
     {
       "name": "Pluto TV Juniorklubben (720p)",
@@ -1342,7 +1355,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:02:20Z"
+      "checked_at": "2026-06-30T22:08:59Z"
     },
     {
       "name": "Pluto TV Klassiske tegnefilmer (720p)",
@@ -1355,7 +1368,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:02:21Z"
+      "checked_at": "2026-06-30T22:09:01Z"
     },
     {
       "name": "Pluto TV Tegnefilm (720p)",
@@ -1368,7 +1381,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:02:24Z"
+      "checked_at": "2026-06-30T22:09:04Z"
     },
     {
       "name": "Pluto TV Ungdomsserier (720p)",
@@ -1381,20 +1394,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:02:24Z"
-    },
-    {
-      "name": "SvampeBob Firkant (720p)",
-      "group": "Peliculas - Familiar",
-      "country": "SE",
-      "url": "https://jmp2.uk/plu-61c1d59a244e500007581861.m3u8",
-      "logo": "https://images.pluto.tv/channels/61c09ac98a80a4000703f992/colorLogoPNG.png",
-      "tvg_id": "SvampeBobFirkant.se@NO",
-      "alive": true,
-      "status_code": 200,
-      "error": null,
-      "state": "alive",
-      "checked_at": "2026-06-30T22:02:32Z"
+      "checked_at": "2026-06-30T22:09:04Z"
     },
     {
       "name": "Totally Turtles (720p)",
@@ -1407,7 +1407,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:02:35Z"
+      "checked_at": "2026-06-30T22:09:16Z"
     },
     {
       "name": "Disney Channel Latin America North (576p)",
@@ -1420,7 +1420,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:01:23Z"
+      "checked_at": "2026-06-30T22:08:07Z"
     },
     {
       "name": "Panico (576p)",
@@ -1433,7 +1433,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:01:37Z"
+      "checked_at": "2026-06-30T22:08:19Z"
     },
     {
       "name": "TVMÁS (XHGV-TDT) (360p) [Not 24/7]",
@@ -1446,7 +1446,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:01:51Z"
+      "checked_at": "2026-06-30T22:08:33Z"
     },
     {
       "name": "Tlaxcala Televisión (360p) [Not 24/7]",
@@ -1459,7 +1459,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:01:46Z"
+      "checked_at": "2026-06-30T22:08:27Z"
     },
     {
       "name": "María Visión Mexico (360p) [Not 24/7]",
@@ -1472,7 +1472,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:01:32Z"
+      "checked_at": "2026-06-30T22:08:15Z"
     },
     {
       "name": "Radiotele Morelia (352p)",
@@ -1485,7 +1485,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:01:39Z"
+      "checked_at": "2026-06-30T22:08:20Z"
     },
     {
       "name": "PSN (288p)",
@@ -1498,7 +1498,7 @@
       "status_code": 200,
       "error": "Handshake correcto pero contenido inestable (text/plain; charset=utf-8)",
       "state": "unstable",
-      "checked_at": "2026-06-30T22:01:38Z"
+      "checked_at": "2026-06-30T22:08:20Z"
     },
     {
       "name": "PSN Canal 45.2 (288p)",
@@ -1511,7 +1511,7 @@
       "status_code": 200,
       "error": "Handshake correcto pero contenido inestable (text/plain; charset=utf-8)",
       "state": "unstable",
-      "checked_at": "2026-06-30T22:01:38Z"
+      "checked_at": "2026-06-30T22:08:19Z"
     },
     {
       "name": "DSPORTS2",
@@ -1524,7 +1524,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:02:39Z"
+      "checked_at": "2026-06-30T22:09:19Z"
     },
     {
       "name": "ESPN",
@@ -1537,7 +1537,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:02:41Z"
+      "checked_at": "2026-06-30T22:09:20Z"
     },
     {
       "name": "ESPN PREMIUN",
@@ -1550,7 +1550,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:02:40Z"
+      "checked_at": "2026-06-30T22:09:20Z"
     },
     {
       "name": "ESPN2",
@@ -1563,7 +1563,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:02:41Z"
+      "checked_at": "2026-06-30T22:09:21Z"
     },
     {
       "name": "ESPN3",
@@ -1576,7 +1576,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:02:41Z"
+      "checked_at": "2026-06-30T22:09:21Z"
     },
     {
       "name": "ESPN4",
@@ -1589,7 +1589,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:02:42Z"
+      "checked_at": "2026-06-30T22:09:22Z"
     },
     {
       "name": "ESPN5",
@@ -1602,7 +1602,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:02:41Z"
+      "checked_at": "2026-06-30T22:09:22Z"
     },
     {
       "name": "ESPN6",
@@ -1615,7 +1615,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:02:42Z"
+      "checked_at": "2026-06-30T22:09:22Z"
     },
     {
       "name": "ESPN7",
@@ -1628,7 +1628,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:02:43Z"
+      "checked_at": "2026-06-30T22:09:22Z"
     },
     {
       "name": "Movistar Deportes HD",
@@ -1641,7 +1641,20 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:02:39Z"
+      "checked_at": "2026-06-30T22:09:19Z"
+    },
+    {
+      "name": "Pluto TV Sport",
+      "group": "Deportes",
+      "country": "SE",
+      "url": "https://jmp2.uk/plu-6357f33cb51d2d00077927c6.m3u8",
+      "logo": "https://images.pluto.tv/channels/6357f3de3643ba0007bc0b50/colorLogoPNG_1746816938506.png",
+      "tvg_id": "PlutoTVSport.se@NO",
+      "alive": true,
+      "status_code": 200,
+      "error": null,
+      "state": "alive",
+      "checked_at": "2026-06-30T22:09:03Z"
     },
     {
       "name": "TNT SPORTS HD",
@@ -1654,7 +1667,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:02:43Z"
+      "checked_at": "2026-06-30T22:09:23Z"
     },
     {
       "name": "TyC Sports",
@@ -1667,7 +1680,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:02:40Z"
+      "checked_at": "2026-06-30T22:09:19Z"
     },
     {
       "name": "Via X Sports",
@@ -1680,7 +1693,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:02:43Z"
+      "checked_at": "2026-06-30T22:09:24Z"
     },
     {
       "name": "Are You The One?",
@@ -1693,7 +1706,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:01:57Z"
+      "checked_at": "2026-06-30T22:08:38Z"
     },
     {
       "name": "Best of MTV",
@@ -1706,7 +1719,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:01:59Z"
+      "checked_at": "2026-06-30T22:08:40Z"
     },
     {
       "name": "Best of The Drew Barrymore Show",
@@ -1719,7 +1732,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:01:58Z"
+      "checked_at": "2026-06-30T22:08:40Z"
     },
     {
       "name": "Boligjakten",
@@ -1732,7 +1745,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:01:59Z"
+      "checked_at": "2026-06-30T22:08:40Z"
     },
     {
       "name": "Camp Kulinaris",
@@ -1745,7 +1758,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:02:01Z"
+      "checked_at": "2026-06-30T22:08:42Z"
     },
     {
       "name": "Charterfeber",
@@ -1758,7 +1771,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:02:03Z"
+      "checked_at": "2026-06-30T22:08:44Z"
     },
     {
       "name": "Comedy Central HD",
@@ -1771,7 +1784,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:03:25Z"
+      "checked_at": "2026-06-30T22:10:06Z"
     },
     {
       "name": "E! Entertainment TV",
@@ -1784,7 +1797,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:03:23Z"
+      "checked_at": "2026-06-30T22:10:06Z"
     },
     {
       "name": "Eventyrlig Oppussing",
@@ -1797,7 +1810,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:02:06Z"
+      "checked_at": "2026-06-30T22:08:46Z"
     },
     {
       "name": "Ex On The Beach",
@@ -1810,7 +1823,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:02:05Z"
+      "checked_at": "2026-06-30T22:08:47Z"
     },
     {
       "name": "Geordie Shore",
@@ -1823,7 +1836,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:02:07Z"
+      "checked_at": "2026-06-30T22:08:47Z"
     },
     {
       "name": "Jersey Shore",
@@ -1836,7 +1849,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:02:08Z"
+      "checked_at": "2026-06-30T22:08:50Z"
     },
     {
       "name": "Jersey Shore Family Vacation",
@@ -1849,7 +1862,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:02:08Z"
+      "checked_at": "2026-06-30T22:08:50Z"
     },
     {
       "name": "Luksusfellen",
@@ -1862,7 +1875,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:02:10Z"
+      "checked_at": "2026-06-30T22:08:51Z"
     },
     {
       "name": "MTV Catfish",
@@ -1875,7 +1888,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:02:13Z"
+      "checked_at": "2026-06-30T22:08:54Z"
     },
     {
       "name": "MTV HD",
@@ -1888,7 +1901,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:03:25Z"
+      "checked_at": "2026-06-30T22:10:07Z"
     },
     {
       "name": "MTV Reality",
@@ -1901,7 +1914,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:02:14Z"
+      "checked_at": "2026-06-30T22:08:55Z"
     },
     {
       "name": "Nick Music",
@@ -1914,7 +1927,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:03:24Z"
+      "checked_at": "2026-06-30T22:10:07Z"
     },
     {
       "name": "Paradise Hotel",
@@ -1927,7 +1940,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:02:17Z"
+      "checked_at": "2026-06-30T22:08:57Z"
     },
     {
       "name": "Pimp My Ride",
@@ -1940,7 +1953,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:02:17Z"
+      "checked_at": "2026-06-30T22:08:58Z"
     },
     {
       "name": "Ridiculousness Nye episoder",
@@ -1953,7 +1966,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:02:26Z"
+      "checked_at": "2026-06-30T22:09:06Z"
     },
     {
       "name": "Svenske Truckers",
@@ -1966,7 +1979,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:02:33Z"
+      "checked_at": "2026-06-30T22:09:11Z"
     },
     {
       "name": "The Daily Show",
@@ -1979,7 +1992,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:02:33Z"
+      "checked_at": "2026-06-30T22:09:13Z"
     },
     {
       "name": "The Hills",
@@ -1992,7 +2005,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:02:33Z"
+      "checked_at": "2026-06-30T22:09:13Z"
     },
     {
       "name": "The Millers",
@@ -2005,7 +2018,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:02:34Z"
+      "checked_at": "2026-06-30T22:09:14Z"
     },
     {
       "name": "Canal 13 HD",
@@ -2018,7 +2031,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:02:37Z"
+      "checked_at": "2026-06-30T22:09:17Z"
     },
     {
       "name": "h_894,strp/tve_logo_concept___2nd_version_by_appledroidyt_dd4haha-pre.png\" group-title=\"GENERAL\",TVE",
@@ -2031,7 +2044,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:02:38Z"
+      "checked_at": "2026-06-30T22:09:18Z"
     },
     {
       "name": "Las Estrellas HD",
@@ -2044,7 +2057,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:02:37Z"
+      "checked_at": "2026-06-30T22:09:18Z"
     },
     {
       "name": "Stingray Concerts HD",
@@ -2057,7 +2070,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:02:39Z"
+      "checked_at": "2026-06-30T22:09:19Z"
     },
     {
       "name": "Tele Saltillo",
@@ -2070,7 +2083,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:01:43Z"
+      "checked_at": "2026-06-30T22:08:25Z"
     },
     {
       "name": "Tele UV [Not 24/7]",
@@ -2083,7 +2096,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:01:44Z"
+      "checked_at": "2026-06-30T22:08:25Z"
     },
     {
       "name": "CNN INTERNATIONAL",
@@ -2096,7 +2109,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:03:24Z"
+      "checked_at": "2026-06-30T22:10:05Z"
     },
     {
       "name": "America TV HD",
@@ -2109,7 +2122,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:03:26Z"
+      "checked_at": "2026-06-30T22:10:08Z"
     },
     {
       "name": "AMERICA TV HYO",
@@ -2122,7 +2135,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:03:27Z"
+      "checked_at": "2026-06-30T22:10:09Z"
     },
     {
       "name": "Animal Planet HD",
@@ -2135,7 +2148,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:03:37Z"
+      "checked_at": "2026-06-30T22:10:19Z"
     },
     {
       "name": "ATV",
@@ -2148,7 +2161,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:03:29Z"
+      "checked_at": "2026-06-30T22:10:09Z"
     },
     {
       "name": "Beavis and Butt-Head",
@@ -2161,7 +2174,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:01:57Z"
+      "checked_at": "2026-06-30T22:08:39Z"
     },
     {
       "name": "BETHEL",
@@ -2174,7 +2187,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:03:25Z"
+      "checked_at": "2026-06-30T22:10:07Z"
     },
     {
       "name": "Boligkjøp i blinde",
@@ -2187,7 +2200,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:01:59Z"
+      "checked_at": "2026-06-30T22:08:40Z"
     },
     {
       "name": "Broad City",
@@ -2200,7 +2213,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:02:00Z"
+      "checked_at": "2026-06-30T22:08:41Z"
     },
     {
       "name": "Canal N",
@@ -2213,7 +2226,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:03:31Z"
+      "checked_at": "2026-06-30T22:10:13Z"
     },
     {
       "name": "Caroline in the City",
@@ -2226,7 +2239,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:02:02Z"
+      "checked_at": "2026-06-30T22:08:44Z"
     },
     {
       "name": "Chappelle's Show",
@@ -2239,7 +2252,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:02:02Z"
+      "checked_at": "2026-06-30T22:08:44Z"
     },
     {
       "name": "Cheers",
@@ -2252,7 +2265,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:02:03Z"
+      "checked_at": "2026-06-30T22:08:44Z"
     },
     {
       "name": "Crazy Ex-Girlfriend",
@@ -2265,7 +2278,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:02:05Z"
+      "checked_at": "2026-06-30T22:08:45Z"
     },
     {
       "name": "Discovery H&H HD",
@@ -2278,7 +2291,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:03:38Z"
+      "checked_at": "2026-06-30T22:10:19Z"
     },
     {
       "name": "Discovery HD",
@@ -2291,7 +2304,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:03:38Z"
+      "checked_at": "2026-06-30T22:10:21Z"
     },
     {
       "name": "Discovery Theater HD",
@@ -2304,7 +2317,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:03:38Z"
+      "checked_at": "2026-06-30T22:10:21Z"
     },
     {
       "name": "DSPORTPLUS",
@@ -2317,7 +2330,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:03:32Z"
+      "checked_at": "2026-06-30T22:10:15Z"
     },
     {
       "name": "DTV SPORT",
@@ -2330,7 +2343,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:03:32Z"
+      "checked_at": "2026-06-30T22:10:14Z"
     },
     {
       "name": "Everybody Hates Chris",
@@ -2343,7 +2356,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:02:05Z"
+      "checked_at": "2026-06-30T22:08:47Z"
     },
     {
       "name": "Family Ties",
@@ -2356,7 +2369,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:02:06Z"
+      "checked_at": "2026-06-30T22:08:47Z"
     },
     {
       "name": "GLOBAL",
@@ -2369,7 +2382,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:03:30Z"
+      "checked_at": "2026-06-30T22:10:12Z"
     },
     {
       "name": "History 2 HD",
@@ -2382,7 +2395,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:03:36Z"
+      "checked_at": "2026-06-30T22:10:19Z"
     },
     {
       "name": "History Channel HD",
@@ -2395,7 +2408,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:03:36Z"
+      "checked_at": "2026-06-30T22:10:18Z"
     },
     {
       "name": "IPE",
@@ -2408,7 +2421,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:03:29Z"
+      "checked_at": "2026-06-30T22:10:12Z"
     },
     {
       "name": "KDNA 15",
@@ -2421,7 +2434,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:03:29Z"
+      "checked_at": "2026-06-30T22:10:11Z"
     },
     {
       "name": "Key & Peele",
@@ -2434,7 +2447,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:02:10Z"
+      "checked_at": "2026-06-30T22:08:50Z"
     },
     {
       "name": "Latina HD",
@@ -2447,7 +2460,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:03:27Z"
+      "checked_at": "2026-06-30T22:10:11Z"
     },
     {
       "name": "LIGA 1 MAX",
@@ -2460,7 +2473,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:03:32Z"
+      "checked_at": "2026-06-30T22:10:14Z"
     },
     {
       "name": "LOVE NATURE",
@@ -2473,7 +2486,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:03:37Z"
+      "checked_at": "2026-06-30T22:10:19Z"
     },
     {
       "name": "Man with a Plan",
@@ -2486,7 +2499,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:02:11Z"
+      "checked_at": "2026-06-30T22:08:51Z"
     },
     {
       "name": "Movistar Plus",
@@ -2499,7 +2512,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:03:33Z"
+      "checked_at": "2026-06-30T22:10:15Z"
     },
     {
       "name": "MÆsChic",
@@ -2512,7 +2525,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:03:34Z"
+      "checked_at": "2026-06-30T22:10:15Z"
     },
     {
       "name": "Nat Geo HD",
@@ -2525,7 +2538,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:03:37Z"
+      "checked_at": "2026-06-30T22:10:20Z"
     },
     {
       "name": "Panamericana",
@@ -2538,7 +2551,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:03:27Z"
+      "checked_at": "2026-06-30T22:10:09Z"
     },
     {
       "name": "Pasiones HD",
@@ -2551,7 +2564,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:03:34Z"
+      "checked_at": "2026-06-30T22:10:18Z"
     },
     {
       "name": "Pluto TV Motor",
@@ -2564,7 +2577,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:02:22Z"
+      "checked_at": "2026-06-30T22:09:01Z"
     },
     {
       "name": "Pluto TV Verdenskrigene",
@@ -2577,7 +2590,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:02:25Z"
+      "checked_at": "2026-06-30T22:09:04Z"
     },
     {
       "name": "Reno 911",
@@ -2590,7 +2603,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:02:26Z"
+      "checked_at": "2026-06-30T22:09:06Z"
     },
     {
       "name": "RPP",
@@ -2603,7 +2616,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:03:30Z"
+      "checked_at": "2026-06-30T22:10:12Z"
     },
     {
       "name": "Sabrina the Teenage Witch",
@@ -2616,7 +2629,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:02:26Z"
+      "checked_at": "2026-06-30T22:09:06Z"
     },
     {
       "name": "South Park",
@@ -2629,7 +2642,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:02:28Z"
+      "checked_at": "2026-06-30T22:09:08Z"
     },
     {
       "name": "South Park Armageddon",
@@ -2642,7 +2655,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:02:28Z"
+      "checked_at": "2026-06-30T22:09:07Z"
     },
     {
       "name": "South Park Rockin' Out",
@@ -2655,7 +2668,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:02:28Z"
+      "checked_at": "2026-06-30T22:09:07Z"
     },
     {
       "name": "South Park: Butters Collection",
@@ -2668,7 +2681,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:02:29Z"
+      "checked_at": "2026-06-30T22:09:09Z"
     },
     {
       "name": "South Park: Cartman Collection",
@@ -2681,7 +2694,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:02:30Z"
+      "checked_at": "2026-06-30T22:09:09Z"
     },
     {
       "name": "South Park: Into the Stars",
@@ -2694,7 +2707,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:02:29Z"
+      "checked_at": "2026-06-30T22:09:09Z"
     },
     {
       "name": "South Park: Kenny Collection",
@@ -2707,7 +2720,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:02:30Z"
+      "checked_at": "2026-06-30T22:09:09Z"
     },
     {
       "name": "South Park: Kyle Collection",
@@ -2720,7 +2733,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:02:31Z"
+      "checked_at": "2026-06-30T22:09:09Z"
     },
     {
       "name": "South Park: Stan Collection",
@@ -2733,7 +2746,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:02:31Z"
+      "checked_at": "2026-06-30T22:09:11Z"
     },
     {
       "name": "Telemundo",
@@ -2746,7 +2759,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:03:34Z"
+      "checked_at": "2026-06-30T22:10:16Z"
     },
     {
       "name": "Telenovelas",
@@ -2759,7 +2772,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:03:35Z"
+      "checked_at": "2026-06-30T22:10:17Z"
     },
     {
       "name": "TNT Novelas HD",
@@ -2772,7 +2785,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:03:36Z"
+      "checked_at": "2026-06-30T22:10:18Z"
     },
     {
       "name": "Tosh.0",
@@ -2785,7 +2798,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:02:35Z"
+      "checked_at": "2026-06-30T22:09:14Z"
     },
     {
       "name": "TV PERU",
@@ -2798,7 +2811,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:03:26Z"
+      "checked_at": "2026-06-30T22:10:08Z"
     },
     {
       "name": "UNITEL TV",
@@ -2811,7 +2824,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:03:25Z"
+      "checked_at": "2026-06-30T22:10:07Z"
     },
     {
       "name": "AXN Latin America Mexico",
@@ -2824,7 +2837,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:01:12Z"
+      "checked_at": "2026-06-30T22:07:56Z"
     },
     {
       "name": "Cinecanal HD",
@@ -2837,7 +2850,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:02:43Z"
+      "checked_at": "2026-06-30T22:09:24Z"
     },
     {
       "name": "Cinemax HD",
@@ -2850,7 +2863,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:02:45Z"
+      "checked_at": "2026-06-30T22:09:25Z"
     },
     {
       "name": "Films&Arts",
@@ -2863,7 +2876,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:02:44Z"
+      "checked_at": "2026-06-30T22:09:26Z"
     },
     {
       "name": "GOLDEN EDGE",
@@ -2876,7 +2889,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:02:44Z"
+      "checked_at": "2026-06-30T22:09:24Z"
     },
     {
       "name": "Golden HD",
@@ -2889,7 +2902,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:02:44Z"
+      "checked_at": "2026-06-30T22:09:24Z"
     },
     {
       "name": "Merry Christmas from Viafree",
@@ -2902,7 +2915,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:02:12Z"
+      "checked_at": "2026-06-30T22:08:53Z"
     },
     {
       "name": "NonStop Kung Fu",
@@ -2915,7 +2928,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:02:14Z"
+      "checked_at": "2026-06-30T22:08:56Z"
     },
     {
       "name": "Pluto TV Bud & Terence",
@@ -2928,7 +2941,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:02:20Z"
+      "checked_at": "2026-06-30T22:08:58Z"
     },
     {
       "name": "Pluto TV Film",
@@ -2941,7 +2954,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:02:19Z"
+      "checked_at": "2026-06-30T22:08:59Z"
     },
     {
       "name": "Pluto TV Harlequin",
@@ -2954,7 +2967,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:02:19Z"
+      "checked_at": "2026-06-30T22:08:59Z"
     },
     {
       "name": "Pluto TV John Wayne",
@@ -2967,7 +2980,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:02:19Z"
+      "checked_at": "2026-06-30T22:09:02Z"
     },
     {
       "name": "Pluto TV Komedie",
@@ -2980,7 +2993,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:02:21Z"
+      "checked_at": "2026-06-30T22:09:01Z"
     },
     {
       "name": "Pluto TV Kultfilmer",
@@ -2993,7 +3006,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:02:21Z"
+      "checked_at": "2026-06-30T22:09:01Z"
     },
     {
       "name": "Pluto TV Romantikk",
@@ -3006,7 +3019,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:02:23Z"
+      "checked_at": "2026-06-30T22:09:02Z"
     },
     {
       "name": "Star Trek Movies",
@@ -3019,7 +3032,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:02:33Z"
+      "checked_at": "2026-06-30T22:09:12Z"
     },
     {
       "name": "Viafree Movies",
@@ -3032,7 +3045,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:02:38Z"
+      "checked_at": "2026-06-30T22:09:17Z"
     },
     {
       "name": "7th Heaven",
@@ -3045,7 +3058,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:01:56Z"
+      "checked_at": "2026-06-30T22:08:38Z"
     },
     {
       "name": "America's Next Top Model",
@@ -3058,7 +3071,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:01:57Z"
+      "checked_at": "2026-06-30T22:08:38Z"
     },
     {
       "name": "ATRES SERIES HD",
@@ -3071,7 +3084,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:03:23Z"
+      "checked_at": "2026-06-30T22:10:06Z"
     },
     {
       "name": "Auction Hunters",
@@ -3084,7 +3097,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:01:57Z"
+      "checked_at": "2026-06-30T22:08:38Z"
     },
     {
       "name": "Becker",
@@ -3097,7 +3110,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:01:57Z"
+      "checked_at": "2026-06-30T22:08:39Z"
     },
     {
       "name": "BET",
@@ -3110,7 +3123,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:01:59Z"
+      "checked_at": "2026-06-30T22:08:40Z"
     },
     {
       "name": "Britain's Next Top Model",
@@ -3123,7 +3136,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:02:00Z"
+      "checked_at": "2026-06-30T22:08:41Z"
     },
     {
       "name": "Bull",
@@ -3136,7 +3149,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:02:01Z"
+      "checked_at": "2026-06-30T22:08:42Z"
     },
     {
       "name": "Dallas Cowboys Cheerleaders",
@@ -3149,7 +3162,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:02:03Z"
+      "checked_at": "2026-06-30T22:08:46Z"
     },
     {
       "name": "Dating Naked UK",
@@ -3162,7 +3175,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:02:04Z"
+      "checked_at": "2026-06-30T22:08:46Z"
     },
     {
       "name": "Diagnosis Murder",
@@ -3175,7 +3188,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:02:04Z"
+      "checked_at": "2026-06-30T22:08:45Z"
     },
     {
       "name": "Doc Martin",
@@ -3188,7 +3201,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:02:05Z"
+      "checked_at": "2026-06-30T22:08:45Z"
     },
     {
       "name": "Happy Days",
@@ -3201,7 +3214,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:02:06Z"
+      "checked_at": "2026-06-30T22:08:48Z"
     },
     {
       "name": "House of Lies",
@@ -3214,7 +3227,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:02:08Z"
+      "checked_at": "2026-06-30T22:08:49Z"
     },
     {
       "name": "JAG",
@@ -3227,7 +3240,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:02:08Z"
+      "checked_at": "2026-06-30T22:08:50Z"
     },
     {
       "name": "Judge Judy",
@@ -3240,7 +3253,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:02:09Z"
+      "checked_at": "2026-06-30T22:08:50Z"
     },
     {
       "name": "Luksusfellen Sverige",
@@ -3253,7 +3266,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:02:10Z"
+      "checked_at": "2026-06-30T22:08:51Z"
     },
     {
       "name": "MacGyver",
@@ -3266,7 +3279,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:02:10Z"
+      "checked_at": "2026-06-30T22:08:51Z"
     },
     {
       "name": "Matlock",
@@ -3279,7 +3292,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:02:12Z"
+      "checked_at": "2026-06-30T22:08:52Z"
     },
     {
       "name": "McLeods døtre & Grantchester",
@@ -3292,7 +3305,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:02:12Z"
+      "checked_at": "2026-06-30T22:08:52Z"
     },
     {
       "name": "Medium",
@@ -3305,7 +3318,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:02:12Z"
+      "checked_at": "2026-06-30T22:08:53Z"
     },
     {
       "name": "Mission Impossible",
@@ -3318,7 +3331,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:02:12Z"
+      "checked_at": "2026-06-30T22:08:54Z"
     },
     {
       "name": "Nordisk krim fra Viaplay",
@@ -3331,7 +3344,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:02:18Z"
+      "checked_at": "2026-06-30T22:08:56Z"
     },
     {
       "name": "Numb3rs",
@@ -3344,7 +3357,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:02:16Z"
+      "checked_at": "2026-06-30T22:08:58Z"
     },
     {
       "name": "Pluto TV Action",
@@ -3357,7 +3370,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:02:18Z"
+      "checked_at": "2026-06-30T22:08:57Z"
     },
     {
       "name": "Pluto TV Horror",
@@ -3370,7 +3383,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:02:20Z"
+      "checked_at": "2026-06-30T22:09:00Z"
     },
     {
       "name": "Pluto TV Overnaturlig",
@@ -3383,7 +3396,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:02:22Z"
+      "checked_at": "2026-06-30T22:09:03Z"
     },
     {
       "name": "Pluto TV Sci-Fi",
@@ -3396,7 +3409,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:02:23Z"
+      "checked_at": "2026-06-30T22:09:03Z"
     },
     {
       "name": "Pluto TV True Crime",
@@ -3409,7 +3422,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:02:25Z"
+      "checked_at": "2026-06-30T22:09:04Z"
     },
     {
       "name": "Pluto TV Wild West",
@@ -3422,7 +3435,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:02:25Z"
+      "checked_at": "2026-06-30T22:09:05Z"
     },
     {
       "name": "Rawhide",
@@ -3435,7 +3448,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:02:25Z"
+      "checked_at": "2026-06-30T22:09:06Z"
     },
     {
       "name": "Scorpion",
@@ -3448,7 +3461,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:02:29Z"
+      "checked_at": "2026-06-30T22:09:08Z"
     },
     {
       "name": "Skjønnhetsfellen Danmark",
@@ -3461,7 +3474,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:02:27Z"
+      "checked_at": "2026-06-30T22:09:07Z"
     },
     {
       "name": "Star Trek: The Original Series",
@@ -3474,7 +3487,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:02:31Z"
+      "checked_at": "2026-06-30T22:09:11Z"
     },
     {
       "name": "The L Word",
@@ -3487,7 +3500,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:02:34Z"
+      "checked_at": "2026-06-30T22:09:13Z"
     },
     {
       "name": "The New Detectives",
@@ -3500,7 +3513,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:02:34Z"
+      "checked_at": "2026-06-30T22:09:14Z"
     },
     {
       "name": "The Twilight Zone",
@@ -3513,7 +3526,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:02:34Z"
+      "checked_at": "2026-06-30T22:09:14Z"
     },
     {
       "name": "The Wild Wild West",
@@ -3526,7 +3539,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:02:35Z"
+      "checked_at": "2026-06-30T22:09:15Z"
     },
     {
       "name": "TNT Series HD",
@@ -3539,7 +3552,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:03:23Z"
+      "checked_at": "2026-06-30T22:10:05Z"
     },
     {
       "name": "Unga Mammor",
@@ -3552,7 +3565,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:02:37Z"
+      "checked_at": "2026-06-30T22:09:16Z"
     },
     {
       "name": "Wildfire",
@@ -3565,7 +3578,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:02:37Z"
+      "checked_at": "2026-06-30T22:09:21Z"
     },
     {
       "name": "iCarly",
@@ -3578,7 +3591,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:02:07Z"
+      "checked_at": "2026-06-30T22:08:49Z"
     }
   ]
 }

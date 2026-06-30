@@ -1,10 +1,10 @@
 # Estado de canales
 
-Última revisión UTC: `2026-06-30T22:03:38Z`
+Última revisión UTC: `2026-06-30T22:10:21Z`
 
-- Canales totales: **275**
+- Canales totales: **276**
 - Canales vivos: **272**
-- Canales inestables: **3**
+- Canales inestables: **4**
 - Canales muertos: **0**
 
 | Canal | Grupo | País | Estado | Código | Error |
@@ -22,6 +22,7 @@
 | Canal 10 Durango (1080p) | Familia y TV Abierta | MX | ✅ Vivo | 200 |  |
 | Canal 26 Aguascalientes (1080p) | Familia y TV Abierta | MX | ✅ Vivo | 200 |  |
 | Canal 5 (1080p) | Familia y TV Abierta | MX | ✅ Vivo | 200 |  |
+| Capital 21 (1080p) [Not 24/7] | Familia y TV Abierta | MX | ⚠️ Inestable | 200 | Handshake correcto pero contenido inestable (C21ti202) |
 | Estrella TV (1080p) | Familia y TV Abierta | US | ✅ Vivo | 200 |  |
 | ICRTV Colima (1080p) | Familia y TV Abierta | MX | ✅ Vivo | 200 |  |
 | IERTBCS Canal 8 La Paz (1080p) [Not 24/7] | Familia y TV Abierta | MX | ✅ Vivo | 200 |  |
@@ -115,7 +116,6 @@
 | Pluto TV Klassiske tegnefilmer (720p) | Peliculas - Familiar | SE | ✅ Vivo | 200 |  |
 | Pluto TV Tegnefilm (720p) | Peliculas - Familiar | SE | ✅ Vivo | 200 |  |
 | Pluto TV Ungdomsserier (720p) | Peliculas - Familiar | SE | ✅ Vivo | 200 |  |
-| SvampeBob Firkant (720p) | Peliculas - Familiar | SE | ✅ Vivo | 200 |  |
 | Totally Turtles (720p) | Peliculas - Familiar | SE | ✅ Vivo | 200 |  |
 | Disney Channel Latin America North (576p) | Peliculas - Familiar | AR | ✅ Vivo | 200 |  |
 | Panico (576p) | Peliculas - Terror | MX | ✅ Vivo | 200 |  |
@@ -135,6 +135,7 @@
 | ESPN6 | Deportes | ALL | ✅ Vivo | 200 |  |
 | ESPN7 | Deportes | ALL | ✅ Vivo | 200 |  |
 | Movistar Deportes HD | Deportes | ALL | ✅ Vivo | 200 |  |
+| Pluto TV Sport | Deportes | SE | ✅ Vivo | 200 |  |
 | TNT SPORTS HD | Deportes | ALL | ✅ Vivo | 200 |  |
 | TyC Sports | Deportes | ALL | ✅ Vivo | 200 |  |
 | Via X Sports | Deportes | ALL | ✅ Vivo | 200 |  |

@@ -25,6 +25,8 @@ https://5e50264bd6766.streamlock.net/canal10durango/videocanal10durango/playlist
 https://60417ddeaf0d9.streamlock.net/telemetrika3/smil:telemetrika3.smil/playlist.m3u8
 #EXTINF:-1 tvg-id="Canal5.mx@SD" tvg-name="Canal 5 (1080p)" tvg-logo="https://i.imgur.com/uZdVSoW.png" group-title="Familia y TV Abierta",Canal 5 (1080p)
 http://190.11.225.124:5000/live/canal5_hd/playlist.m3u8
+#EXTINF:-1 tvg-id="Capital21.mx@SD" tvg-name="Capital 21 (1080p) [Not 24/7]" tvg-logo="https://i.imgur.com/8ign49i.png" group-title="Familia y TV Abierta",Capital 21 (1080p) [Not 24/7]
+https://video.cdmx.gob.mx/redes/stream.m3u8
 #EXTINF:-1 tvg-id="EstrellaTV.us@SD" tvg-name="Estrella TV (1080p)" tvg-logo="https://i.imgur.com/IZxjnyp.png" group-title="Familia y TV Abierta",Estrella TV (1080p)
 https://estrellatv-oando.amagi.tv/playlist.m3u8
 #EXTINF:-1 tvg-id="IcrtvColima.mx@SD" tvg-name="ICRTV Colima (1080p)" tvg-logo="https://i.imgur.com/iUks0ot.png" group-title="Familia y TV Abierta",ICRTV Colima (1080p)
@@ -211,8 +213,6 @@ https://jmp2.uk/plu-67f508f68ddd60c57dc44766.m3u8
 https://jmp2.uk/plu-61c1e914bf8c520007a93ff1.m3u8
 #EXTINF:-1 tvg-id="PlutoTVUngdomsserier.se@NO" tvg-name="Pluto TV Ungdomsserier (720p)" tvg-logo="https://images.pluto.tv/channels/67f3fb1cdea1c5e0d588ac1b/colorLogoPNG_1748270797322.png" group-title="Peliculas - Familiar",Pluto TV Ungdomsserier (720p)
 https://jmp2.uk/plu-67f3fb7d07d2ba4121bd0c8b.m3u8
-#EXTINF:-1 tvg-id="SvampeBobFirkant.se@NO" tvg-name="SvampeBob Firkant (720p)" tvg-logo="https://images.pluto.tv/channels/61c09ac98a80a4000703f992/colorLogoPNG.png" group-title="Peliculas - Familiar",SvampeBob Firkant (720p)
-https://jmp2.uk/plu-61c1d59a244e500007581861.m3u8
 #EXTINF:-1 tvg-id="TotallyTurtles.se@NO" tvg-name="Totally Turtles (720p)" tvg-logo="https://images.pluto.tv/channels/61c0bbd95df1da0007bed5a0/colorLogoPNG.png" group-title="Peliculas - Familiar",Totally Turtles (720p)
 https://jmp2.uk/plu-61c1da718a80a4000704013e.m3u8
 #EXTINF:-1 tvg-id="DisneyChannelLatinAmerica.ar@North" tvg-name="Disney Channel Latin America North (576p)" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/f/ff/2024_Disney_Channel_text_logo.svg" group-title="Peliculas - Familiar",Disney Channel Latin America North (576p)
@@ -251,6 +251,8 @@ http://magiz.net:80/play/FXkMUu4wdk8CdqjZdfy4q1B8hmiEawbuzNaCMihQ7Js/ts
 http://magiz.net:80/play/ugIRXIl7mc3znpLyu9JjTRbdn66X6K3_NuWAlgueNuU/ts
 #EXTINF:-1 tvg-id="" tvg-name="Movistar Deportes HD" tvg-logo="https://download.logo.wine/logo/Movistar_Deportes/Movistar_Deportes-Logo.wine.png" group-title="Deportes",Movistar Deportes HD
 http://magiz.net:80/play/w1YBn58mzHh1DqkutWUkyA/ts
+#EXTINF:-1 tvg-id="PlutoTVSport.se@NO" tvg-name="Pluto TV Sport" tvg-logo="https://images.pluto.tv/channels/6357f3de3643ba0007bc0b50/colorLogoPNG_1746816938506.png" group-title="Deportes",Pluto TV Sport
+https://jmp2.uk/plu-6357f33cb51d2d00077927c6.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="TNT SPORTS HD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/4/46/TNT_Sports_Logo_Vertical_%282017%29.png" group-title="Deportes",TNT SPORTS HD
 http://magiz.net:80/play/EQmHhwGMfY3ETMLkURiBzg/ts
 #EXTINF:-1 tvg-id="" tvg-name="TyC Sports" tvg-logo="https://tse1.mm.bing.net/th/id/OIP.slMZowiKozlSiWhXMhQzbwHaBj?pid=Api&P=0&h=180" group-title="Deportes",TyC Sports
