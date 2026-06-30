@@ -1,0 +1,23 @@
+{
+  "timeout_seconds": 10,
+  "max_concurrency": 5,
+  "user_agent": "MiTVPublicaBot/1.0 (+https://github.com)",
+  "accept_language": "es-MX,es;q=0.9,en;q=0.6",
+  "retry_attempts": 3,
+  "retry_backoff_base_seconds": 1.0,
+  "jitter_min_seconds": 0.5,
+  "jitter_max_seconds": 1.5,
+  "cache_ttl_seconds": 21600,
+  "chunk_size_bytes": 65536,
+  "sort_by": ["group", "name"],
+  "priority_channels": [
+    "Canal 5",
+    "Azteca 7",
+    "Azteca Deportes",
+    "Deportes",
+    "Las Estrellas",
+    "Azteca 1",
+    "Canal 13 Michoacán",
+    "Milenio"
+  ]
+}
