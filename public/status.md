@@ -1,11 +1,11 @@
 # Estado de canales
 
-Última revisión UTC: `2026-06-30T08:04:02Z`
+Última revisión UTC: `2026-06-30T08:16:46Z`
 
 - Canales totales: **228**
-- Canales vivos: **173**
+- Canales vivos: **174**
 - Canales inestables: **6**
-- Canales muertos: **49**
+- Canales muertos: **48**
 
 | Canal | Grupo | País | Estado | Código | Error |
 |---|---|---|---|---|---|
@@ -195,7 +195,7 @@
 | Estrella Games (1080p) | Peliculas - Familiar | MX | ✅ Vivo | 200 |  |
 | Nick Jr. Latin America (1080p) | Peliculas - Familiar | MX | ✅ Vivo | 200 |  |
 | Disney Channel Latin America Mexico (720p) | Peliculas - Familiar | MX | ✅ Vivo | 200 |  |
-| El Chavo TV (720p) | Peliculas - Familiar | MX | ❌ Muerto | 502 | HTTP 502 |
+| El Chavo TV (720p) | Peliculas - Familiar | MX | ✅ Vivo | 200 |  |
 | Disney Channel Latin America North (576p) | Peliculas - Familiar | MX | ✅ Vivo | 200 |  |
 | TUDN (1080p) | Deportes | MX | ✅ Vivo | 200 |  |
 | TV Cuatro 4.3 (1080p) | Deportes | MX | ✅ Vivo | 200 |  |
