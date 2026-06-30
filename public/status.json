@@ -1,83 +1,37 @@
 {
-  "generated_at": "2026-06-30T22:33:20Z",
-  "total": 297,
-  "alive": 291,
-  "unstable": 6,
+  "generated_at": "2026-06-30T22:39:09Z",
+  "total": 276,
+  "alive": 272,
+  "unstable": 4,
   "dead": 0,
   "channels": [
-    {
-      "name": "Azteca Uno",
-      "group": "Familia y TV Abierta",
-      "country": "MX",
-      "url": "https://mdstrm.com/live-stream-playlist/609b243156cca108312822a6.m3u8",
-      "backup_urls": [],
-      "logo": "https://static.wikia.nocookie.net/logopedia/images/5/58/Logo_Azteca_Uno_2023.png",
-      "tvg_id": "AztecaUno.mx",
-      "alive": true,
-      "status_code": 200,
-      "error": null,
-      "state": "alive",
-      "checked_at": "2026-06-30T22:31:39Z"
-    },
     {
       "name": "Canal 5 (1080p)",
       "group": "Familia y TV Abierta",
       "country": "MX",
       "url": "http://190.11.225.124:5000/live/canal5_hd/playlist.m3u8",
-      "backup_urls": [
-        "http://45.5.119.43:4000/play/a05o/index.m3u8"
-      ],
+      "backup_urls": [],
       "logo": "https://i.imgur.com/uZdVSoW.png",
       "tvg_id": "Canal5.mx@SD",
       "alive": true,
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:31:37Z"
+      "checked_at": "2026-06-30T22:36:53Z"
     },
     {
-      "name": "Canal 5 (720p)",
+      "name": "Las Estrellas HD",
       "group": "Familia y TV Abierta",
-      "country": "MX",
-      "url": "http://45.5.119.43:4000/play/a05o/index.m3u8",
+      "country": "ALL",
+      "url": "http://magiz.net:80/play/cZqnYgA9VONuXbpzri7saw/ts",
       "backup_urls": [],
-      "logo": "",
-      "tvg_id": "Canal5.mx",
+      "logo": "https://upload.wikimedia.org/wikipedia/commons/4/4f/Las_Estrellas_logo_%282016%29.png",
+      "tvg_id": "",
       "alive": true,
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:31:37Z"
-    },
-    {
-      "name": "Azteca 7",
-      "group": "Familia y TV Abierta",
-      "country": "MX",
-      "url": "https://mdstrm.com/live-stream-playlist/609ad46a7a441137107d7a81.m3u8",
-      "backup_urls": [],
-      "logo": "",
-      "tvg_id": "Azteca7.mx",
-      "alive": true,
-      "status_code": 200,
-      "error": null,
-      "state": "alive",
-      "checked_at": "2026-06-30T22:31:38Z"
-    },
-    {
-      "name": "Las Estrellas (1080p)",
-      "group": "Familia y TV Abierta",
-      "country": "MX",
-      "url": "https://channel01-onlymex.akamaized.net/hls/live/2022749/event01/index.m3u8",
-      "backup_urls": [
-        "http://bantel-cdn1.iptvperu.tv:1935/btnscrtn/Canal_Las_Estrellas.stream/playlist.m3u8"
-      ],
-      "logo": "https://i.imgur.com/g5ShxZ7.png",
-      "tvg_id": "LasEstrellas.mx@SD",
-      "alive": true,
-      "status_code": 200,
-      "error": null,
-      "state": "alive",
-      "checked_at": "2026-06-30T22:31:39Z"
+      "checked_at": "2026-06-30T22:38:10Z"
     },
     {
       "name": "TUDN (1080p)",
@@ -85,27 +39,41 @@
       "country": "MX",
       "url": "https://streaming.alwaysdata.net/tudn.php",
       "backup_urls": [],
-      "logo": "",
-      "tvg_id": "TUDN.mx",
+      "logo": "https://i.imgur.com/oT5CAvd.png",
+      "tvg_id": "TUDN.mx@SD",
       "alive": true,
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:32:04Z"
+      "checked_at": "2026-06-30T22:37:22Z"
     },
     {
-      "name": "TV Pública",
-      "group": "Familia y TV Abierta",
-      "country": "AR",
-      "url": "http://playcom.trapemn.tv:1935/transcoderip/tvpublica.stream/playlist.m3u8",
+      "name": "DSPORTS2",
+      "group": "Deportes",
+      "country": "ALL",
+      "url": "http://magiz.net:80/play/qJ8t22WBILgdxRB_orpYhyTRaTqk3iE3d3O6gmoegNo/ts",
       "backup_urls": [],
       "logo": "",
-      "tvg_id": "TVPublica.ar",
+      "tvg_id": "",
       "alive": true,
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:32:32Z"
+      "checked_at": "2026-06-30T22:38:10Z"
+    },
+    {
+      "name": "DSPORTPLUS",
+      "group": "Otros",
+      "country": "ALL",
+      "url": "http://magiz.net:80/play/iSOImNMCOIriJFlDTKaHoD-aWiVZj-0MKP9CPK1Lrcg/ts",
+      "backup_urls": [],
+      "logo": "",
+      "tvg_id": "",
+      "alive": true,
+      "status_code": 200,
+      "error": null,
+      "state": "alive",
+      "checked_at": "2026-06-30T22:39:04Z"
     },
     {
       "name": "Azteca Internacional (1080p)",
@@ -119,35 +87,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:32:05Z"
-    },
-    {
-      "name": "Azteca Internacional (720p)",
-      "group": "Familia y TV Abierta",
-      "country": "MX",
-      "url": "https://jmp2.uk/plu-646cce4d1593940008a33f09.m3u8",
-      "backup_urls": [],
-      "logo": "",
-      "tvg_id": "AztecaInternacional.mx",
-      "alive": true,
-      "status_code": 200,
-      "error": null,
-      "state": "alive",
-      "checked_at": "2026-06-30T22:32:13Z"
-    },
-    {
-      "name": "Milenio Television (720p)",
-      "group": "Noticias",
-      "country": "MX",
-      "url": "https://mdstrm.com/live-stream-playlist/610178c7db32a4112d994650.m3u8",
-      "backup_urls": [],
-      "logo": "",
-      "tvg_id": "MilenioTelevision.mx",
-      "alive": true,
-      "status_code": 200,
-      "error": null,
-      "state": "alive",
-      "checked_at": "2026-06-30T22:31:39Z"
+      "checked_at": "2026-06-30T22:36:51Z"
     },
     {
       "name": "Milenio Televisión (720p)",
@@ -161,133 +101,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:31:41Z"
-    },
-    {
-      "name": "Telediario Now",
-      "group": "Noticias",
-      "country": "MX",
-      "url": "https://stream.ads.ottera.tv/playlist.m3u8?network_id=11014",
-      "backup_urls": [],
-      "logo": "",
-      "tvg_id": "TelediarioNow.mx",
-      "alive": true,
-      "status_code": 200,
-      "error": null,
-      "state": "alive",
-      "checked_at": "2026-06-30T22:31:40Z"
-    },
-    {
-      "name": "Multimedios Bajío (720p) [Not 24/7]",
-      "group": "Noticias",
-      "country": "MX",
-      "url": "https://mdstrm.com/live-stream-playlist/5d4b0fec848918070128c8cb.m3u8",
-      "backup_urls": [],
-      "logo": "https://i.imgur.com/4IGzNdq.png",
-      "tvg_id": "MultimediosBajio.mx@SD",
-      "alive": true,
-      "status_code": 200,
-      "error": null,
-      "state": "alive",
-      "checked_at": "2026-06-30T22:32:18Z"
-    },
-    {
-      "name": "Multimedios CDMX (720p) [Not 24/7]",
-      "group": "Noticias",
-      "country": "MX",
-      "url": "https://mdstrm.com/live-stream-playlist/5f2d9d6ff17144074bd8a284.m3u8",
-      "backup_urls": [],
-      "logo": "https://i.imgur.com/4IGzNdq.png",
-      "tvg_id": "MultimediosCDMX.mx@SD",
-      "alive": true,
-      "status_code": 200,
-      "error": null,
-      "state": "alive",
-      "checked_at": "2026-06-30T22:32:20Z"
-    },
-    {
-      "name": "Multimedios Ciudad Juárez (720p) [Not 24/7]",
-      "group": "Noticias",
-      "country": "MX",
-      "url": "https://mdstrm.com/live-stream-playlist/5d9e440d675235586a92be7f.m3u8",
-      "backup_urls": [],
-      "logo": "https://i.imgur.com/4IGzNdq.png",
-      "tvg_id": "MultimediosCiudadJuarez.mx@SD",
-      "alive": true,
-      "status_code": 200,
-      "error": null,
-      "state": "alive",
-      "checked_at": "2026-06-30T22:32:19Z"
-    },
-    {
-      "name": "Multimedios Guadalajara (720p) [Not 24/7]",
-      "group": "Noticias",
-      "country": "MX",
-      "url": "https://mdstrm.com/live-stream-playlist/5c54d38ca392a5119bb0aa0d.m3u8",
-      "backup_urls": [],
-      "logo": "https://i.imgur.com/4IGzNdq.png",
-      "tvg_id": "MultimediosGuadalajara.mx@SD",
-      "alive": true,
-      "status_code": 200,
-      "error": null,
-      "state": "alive",
-      "checked_at": "2026-06-30T22:32:20Z"
-    },
-    {
-      "name": "Multimedios Laguna (720p) [Not 24/7]",
-      "group": "Noticias",
-      "country": "MX",
-      "url": "https://mdstrm.com/live-stream-playlist/57bf686a61ff39e1085d43e1.m3u8",
-      "backup_urls": [],
-      "logo": "https://i.imgur.com/4IGzNdq.png",
-      "tvg_id": "MultimediosLaguna.mx@SD",
-      "alive": true,
-      "status_code": 200,
-      "error": null,
-      "state": "alive",
-      "checked_at": "2026-06-30T22:32:19Z"
-    },
-    {
-      "name": "Multimedios Monterrey (720p) [Not 24/7]",
-      "group": "Noticias",
-      "country": "MX",
-      "url": "https://mdstrm.com/live-stream-playlist/57b4dbf5dbbfc8f16bb63ce1.m3u8",
-      "backup_urls": [],
-      "logo": "https://i.imgur.com/4IGzNdq.png",
-      "tvg_id": "MultimediosMonterrey.mx@SD",
-      "alive": true,
-      "status_code": 200,
-      "error": null,
-      "state": "alive",
-      "checked_at": "2026-06-30T22:32:21Z"
-    },
-    {
-      "name": "Multimedios Puebla (720p) [Not 24/7]",
-      "group": "Noticias",
-      "country": "MX",
-      "url": "https://mdstrm.com/live-stream-playlist/5d56ed29c92dd106ff01543b.m3u8",
-      "backup_urls": [],
-      "logo": "https://i.imgur.com/4IGzNdq.png",
-      "tvg_id": "MultimediosPuebla.mx@SD",
-      "alive": true,
-      "status_code": 200,
-      "error": null,
-      "state": "alive",
-      "checked_at": "2026-06-30T22:32:20Z"
-    },
-    {
-      "name": "Multimedios Saltillo (720p) [Not 24/7]",
-      "group": "Noticias",
-      "country": "MX",
-      "url": "https://mdstrm.com/live-stream-playlist/5d5d51a4e9a40e25f4a0332c.m3u8",
-      "backup_urls": [],
-      "logo": "https://i.imgur.com/4IGzNdq.png",
-      "tvg_id": "MultimediosSaltillo.mx@SD",
-      "alive": true,
-      "status_code": 200,
-      "error": null,
-      "state": "alive",
-      "checked_at": "2026-06-30T22:32:21Z"
+      "checked_at": "2026-06-30T22:37:10Z"
     },
     {
       "name": "Canal 26 Aguascalientes (1080p)",
@@ -301,7 +115,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:31:44Z"
+      "checked_at": "2026-06-30T22:36:58Z"
     },
     {
       "name": "SET Televisión Canal 26.1 (720p) [Not 24/7]",
@@ -315,7 +129,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:31:50Z"
+      "checked_at": "2026-06-30T22:37:17Z"
     },
     {
       "name": "SET Televisión Canal 26.2 (720p) [Not 24/7]",
@@ -329,231 +143,133 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:31:50Z"
+      "checked_at": "2026-06-30T22:37:17Z"
     },
     {
-      "name": "Canal 26",
-      "group": "Noticias",
-      "country": "AR",
-      "url": "https://stream-gtlc.telecentro.net.ar/hls/canal26hls/main.m3u8",
-      "backup_urls": [],
-      "logo": "",
-      "tvg_id": "Canal26.ar",
-      "alive": true,
-      "status_code": 200,
-      "error": null,
-      "state": "alive",
-      "checked_at": "2026-06-30T22:31:57Z"
-    },
-    {
-      "name": "TN",
-      "group": "Noticias",
-      "country": "AR",
-      "url": "http://playcom.trapemn.tv:1935/transcoderip/tn.stream/playlist.m3u8",
-      "backup_urls": [],
-      "logo": "",
-      "tvg_id": "TN.ar",
-      "alive": true,
-      "status_code": 200,
-      "error": null,
-      "state": "alive",
-      "checked_at": "2026-06-30T22:31:59Z"
-    },
-    {
-      "name": "C4 En Alerta",
-      "group": "Noticias",
-      "country": "MX",
-      "url": "https://stream.ads.ottera.tv/playlist.m3u8?network_id=6404",
-      "backup_urls": [],
-      "logo": "",
-      "tvg_id": "C4EnAlerta.mx",
-      "alive": true,
-      "status_code": 200,
-      "error": null,
-      "state": "alive",
-      "checked_at": "2026-06-30T22:31:40Z"
-    },
-    {
-      "name": "MX Nuestro Cine",
-      "group": "Peliculas - Cine",
-      "country": "MX",
-      "url": "https://5fc584f3f19c9.streamlock.net/canal222/smil:canal222.smil/playlist.m3u8",
-      "backup_urls": [],
-      "logo": "",
-      "tvg_id": "MXNuestroCine.mx",
-      "alive": true,
-      "status_code": 200,
-      "error": null,
-      "state": "alive",
-      "checked_at": "2026-06-30T22:31:40Z"
-    },
-    {
-      "name": "Golden (240p)",
-      "group": "Peliculas - Cine",
-      "country": "MX",
-      "url": "https://rpn.bozztv.com/gusa/gusa-goldentv/index.m3u8",
-      "backup_urls": [],
-      "logo": "",
-      "tvg_id": "Golden.mx",
-      "alive": true,
-      "status_code": 200,
-      "error": null,
-      "state": "alive",
-      "checked_at": "2026-06-30T22:32:29Z"
-    },
-    {
-      "name": "Runtime Acción",
-      "group": "Peliculas - Accion",
-      "country": "MX",
-      "url": "https://stream.ads.ottera.tv/playlist.m3u8?network_id=2550",
-      "backup_urls": [],
-      "logo": "",
-      "tvg_id": "RuntimeAccion.mx",
-      "alive": true,
-      "status_code": 200,
-      "error": null,
-      "state": "alive",
-      "checked_at": "2026-06-30T22:31:40Z"
-    },
-    {
-      "name": "Runtime Cine y Series",
+      "name": "TNT Series HD",
       "group": "Peliculas - Drama y Series",
-      "country": "MX",
-      "url": "https://stream.ads.ottera.tv/playlist.m3u8?network_id=2152",
+      "country": "ALL",
+      "url": "http://magiz.net:80/play/SPCLKBq-gzysw_gR7sGdaA/ts",
       "backup_urls": [],
-      "logo": "",
-      "tvg_id": "RuntimeCineSeries.mx",
+      "logo": "https://upload.wikimedia.org/wikipedia/commons/8/86/TNT_Series.png",
+      "tvg_id": "",
       "alive": true,
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:31:41Z"
+      "checked_at": "2026-06-30T22:38:12Z"
     },
     {
-      "name": "Runtime Comedia",
-      "group": "Peliculas - Comedia",
-      "country": "MX",
-      "url": "https://stream.ads.ottera.tv/playlist.m3u8?network_id=2551",
-      "backup_urls": [],
-      "logo": "",
-      "tvg_id": "RuntimeComedia.mx",
-      "alive": true,
-      "status_code": 200,
-      "error": null,
-      "state": "alive",
-      "checked_at": "2026-06-30T22:31:42Z"
-    },
-    {
-      "name": "Runtime Familia",
-      "group": "Peliculas - Familiar",
-      "country": "MX",
-      "url": "https://stream.ads.ottera.tv/playlist.m3u8?network_id=3528",
-      "backup_urls": [],
-      "logo": "",
-      "tvg_id": "RuntimeFamilia.mx",
-      "alive": true,
-      "status_code": 200,
-      "error": null,
-      "state": "alive",
-      "checked_at": "2026-06-30T22:31:41Z"
-    },
-    {
-      "name": "Corazón Fast",
-      "group": "Peliculas - Drama y Series",
-      "country": "MX",
-      "url": "https://stream.ads.ottera.tv/playlist.m3u8?network_id=4826",
-      "backup_urls": [],
-      "logo": "",
-      "tvg_id": "CorazonFast.mx",
-      "alive": true,
-      "status_code": 200,
-      "error": null,
-      "state": "alive",
-      "checked_at": "2026-06-30T22:31:42Z"
-    },
-    {
-      "name": "RTVE La 1 Oficial (720p)",
-      "group": "Deportes Públicos Internacionales",
-      "country": "ES",
-      "url": "https://rtvelivestream.rtve.es/rtvesec/la1/la1_main_dvr.m3u8",
-      "backup_urls": [],
-      "logo": "",
-      "tvg_id": "RTVELa1.es",
-      "alive": true,
-      "status_code": 200,
-      "error": null,
-      "state": "alive",
-      "checked_at": "2026-06-30T22:32:37Z"
-    },
-    {
-      "name": "RTVE La 2 Oficial (720p)",
-      "group": "Deportes Públicos Internacionales",
-      "country": "ES",
-      "url": "https://rtvelivestream.rtve.es/rtvesec/la2/la2_main_dvr.m3u8",
-      "backup_urls": [],
-      "logo": "",
-      "tvg_id": "RTVELa2.es",
-      "alive": true,
-      "status_code": 200,
-      "error": null,
-      "state": "alive",
-      "checked_at": "2026-06-30T22:32:37Z"
-    },
-    {
-      "name": "RTVE 24 Horas Oficial (720p)",
-      "group": "Deportes Públicos Internacionales",
-      "country": "ES",
-      "url": "https://rtvelivestream.rtve.es/rtvesec/24h/24h_main_dvr.m3u8",
-      "backup_urls": [],
-      "logo": "",
-      "tvg_id": "RTVE24H.es",
-      "alive": true,
-      "status_code": 200,
-      "error": null,
-      "state": "alive",
-      "checked_at": "2026-06-30T22:32:37Z"
-    },
-    {
-      "name": "RTVE Teledeporte Oficial (720p)",
-      "group": "Deportes Públicos Internacionales",
-      "country": "ES",
-      "url": "https://rtvelivestream.rtve.es/rtvesec/tdp/tdp_main_dvr.m3u8",
-      "backup_urls": [],
-      "logo": "",
-      "tvg_id": "RTVETeledeporte.es",
-      "alive": true,
-      "status_code": 200,
-      "error": null,
-      "state": "alive",
-      "checked_at": "2026-06-30T22:32:38Z"
-    },
-    {
-      "name": "TV Brasil Oficial (720p)",
-      "group": "Deportes Públicos Internacionales",
-      "country": "BR",
-      "url": "https://tvbrasil-stream.ebc.com.br/index.m3u8",
-      "backup_urls": [],
-      "logo": "",
-      "tvg_id": "TVBrasil.br",
-      "alive": true,
-      "status_code": 200,
-      "error": null,
-      "state": "alive",
-      "checked_at": "2026-06-30T22:32:39Z"
-    },
-    {
-      "name": "Claro Sports (720p)",
+      "name": "TNT SPORTS HD",
       "group": "Deportes",
-      "country": "MX",
-      "url": "https://jmp2.uk/plu-6320d2755e54db000783fd87.m3u8",
+      "country": "ALL",
+      "url": "http://magiz.net:80/play/EQmHhwGMfY3ETMLkURiBzg/ts",
       "backup_urls": [],
-      "logo": "",
-      "tvg_id": "ClaroSports.mx",
+      "logo": "https://upload.wikimedia.org/wikipedia/commons/4/46/TNT_Sports_Logo_Vertical_%282017%29.png",
+      "tvg_id": "",
       "alive": true,
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:31:43Z"
+      "checked_at": "2026-06-30T22:38:10Z"
+    },
+    {
+      "name": "EWTN",
+      "group": "Otros",
+      "country": "ALL",
+      "url": "http://magiz.net:80/play/vuF3wbz4sc02EU-_OFXt9A/ts",
+      "backup_urls": [],
+      "logo": "https://logo.iptveditor.com/ewtn.png",
+      "tvg_id": "",
+      "alive": true,
+      "status_code": 200,
+      "error": null,
+      "state": "alive",
+      "checked_at": "2026-06-30T22:38:14Z"
+    },
+    {
+      "name": "TNT HD",
+      "group": "Otros",
+      "country": "ALL",
+      "url": "http://magiz.net:80/play/lgf5z8XZqKS0v9cpyiA-FA/ts",
+      "backup_urls": [],
+      "logo": "https://w7.pngwing.com/pngs/648/482/png-transparent-tnt-logo-television-channel-turner-broadcasting-system-stress-free-television-text-logo.png",
+      "tvg_id": "",
+      "alive": true,
+      "status_code": 200,
+      "error": null,
+      "state": "alive",
+      "checked_at": "2026-06-30T22:38:13Z"
+    },
+    {
+      "name": "TNT Novelas HD",
+      "group": "Otros",
+      "country": "ALL",
+      "url": "http://magiz.net:80/play/BVT0lEGTKCG3FGs6Dhh5Zw/ts",
+      "backup_urls": [],
+      "logo": "https://upload.wikimedia.org/wikipedia/commons/3/3a/Logo_TNT_Novelas.png",
+      "tvg_id": "",
+      "alive": true,
+      "status_code": 200,
+      "error": null,
+      "state": "alive",
+      "checked_at": "2026-06-30T22:38:13Z"
+    },
+    {
+      "name": "GOLDEN EDGE",
+      "group": "Peliculas - Cine",
+      "country": "ALL",
+      "url": "http://magiz.net:80/play/8088eGTuQ6-S28hV-JIj2w/ts",
+      "backup_urls": [],
+      "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Logo_Golden_TV.svg/640px-Logo_Golden_TV.svg.png",
+      "tvg_id": "",
+      "alive": true,
+      "status_code": 200,
+      "error": null,
+      "state": "alive",
+      "checked_at": "2026-06-30T22:38:11Z"
+    },
+    {
+      "name": "Golden HD",
+      "group": "Peliculas - Cine",
+      "country": "ALL",
+      "url": "http://magiz.net:80/play/QbnmXdidPZA9RIcz2BOq4w/ts",
+      "backup_urls": [],
+      "logo": "https://logo.iptveditor.com/golden.png",
+      "tvg_id": "",
+      "alive": true,
+      "status_code": 200,
+      "error": null,
+      "state": "alive",
+      "checked_at": "2026-06-30T22:38:12Z"
+    },
+    {
+      "name": "Filmex (Xumo) (1080p) [Geo-blocked]",
+      "group": "Peliculas - Cine",
+      "country": "MX",
+      "url": "https://filmex-filmex-xumo.amagi.tv/playlist.m3u8",
+      "backup_urls": [],
+      "logo": "https://i.imgur.com/Hiz2OyC.png",
+      "tvg_id": "Filmex.mx@SD",
+      "alive": true,
+      "status_code": 200,
+      "error": null,
+      "state": "alive",
+      "checked_at": "2026-06-30T22:37:05Z"
+    },
+    {
+      "name": "Filmex Clásico (1080p) [Geo-blocked]",
+      "group": "Peliculas - Cine",
+      "country": "MX",
+      "url": "https://filmex-filmexclasico-xumo.amagi.tv/playlist.m3u8",
+      "backup_urls": [],
+      "logo": "https://i.imgur.com/D3dj4mv.png",
+      "tvg_id": "FilmexClasico.mx@SD",
+      "alive": true,
+      "status_code": 200,
+      "error": null,
+      "state": "alive",
+      "checked_at": "2026-06-30T22:37:06Z"
     },
     {
       "name": "ITV Deportes (720p)",
@@ -567,54 +283,54 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:31:43Z"
-    },
-    {
-      "name": "ITV Deportes (720p)",
-      "group": "Deportes",
-      "country": "MX",
-      "url": "https://jmp2.uk/plu-63f7e3f9dff38e00082a57af.m3u8",
-      "backup_urls": [],
-      "logo": "",
-      "tvg_id": "ITVDeportes.mx",
-      "alive": true,
-      "status_code": 200,
-      "error": null,
-      "state": "alive",
-      "checked_at": "2026-06-30T22:31:44Z"
-    },
-    {
-      "name": "AyM Sports",
-      "group": "Deportes",
-      "country": "MX",
-      "url": "https://stream.ads.ottera.tv/playlist.m3u8?network_id=5106",
-      "backup_urls": [],
-      "logo": "",
-      "tvg_id": "AyMSports.mx",
-      "alive": true,
-      "status_code": 200,
-      "error": null,
-      "state": "alive",
-      "checked_at": "2026-06-30T22:31:43Z"
+      "checked_at": "2026-06-30T22:37:08Z"
     },
     {
       "name": "TyC Sports",
       "group": "Deportes",
-      "country": "AR",
-      "url": "https://amg26268-amg26268c14-freelivesports-emea-10267.playouts.now.amagi.tv/ts-us-e2-n2/playlist/amg26268-sportsstudio-tycsports-freelivesportsemea/playlist.m3u8",
+      "country": "ALL",
+      "url": "http://magiz.net:80/play/dDyDMxAe26s6HKZ5pgAHevMHSgOihSEGOuNHftX566M/ts",
       "backup_urls": [],
-      "logo": "",
-      "tvg_id": "TyCSports.ar",
+      "logo": "https://tse1.mm.bing.net/th/id/OIP.slMZowiKozlSiWhXMhQzbwHaBj?pid=Api&P=0&h=180",
+      "tvg_id": "",
       "alive": true,
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:31:44Z"
+      "checked_at": "2026-06-30T22:38:10Z"
+    },
+    {
+      "name": "Via X Sports",
+      "group": "Deportes",
+      "country": "ALL",
+      "url": "http://magiz.net:80/play/WWCm5njDJ3g9Ig3rQGy17P146zIf-Ww5YRU8I_W_qEU/ts",
+      "backup_urls": [],
+      "logo": "https://canalviax.com/wp-content/uploads/elementor/thumbs/Logo-Canal-ViaX-Footer-Web-v3-q7pzosw4gffbqodn1byaw4aatkbglxt4y7hfwyk71o.png",
+      "tvg_id": "",
+      "alive": true,
+      "status_code": 200,
+      "error": null,
+      "state": "alive",
+      "checked_at": "2026-06-30T22:38:12Z"
+    },
+    {
+      "name": "Comedy Central HD",
+      "group": "Entretenimiento",
+      "country": "ALL",
+      "url": "http://magiz.net:80/play/hzTKByDp9aytfqW4f49aXg/ts",
+      "backup_urls": [],
+      "logo": "https://logo.iptveditor.com/comedycentral.png",
+      "tvg_id": "",
+      "alive": true,
+      "status_code": 200,
+      "error": null,
+      "state": "alive",
+      "checked_at": "2026-06-30T22:38:11Z"
     },
     {
       "name": "Comedy Central Latin America (1080p)",
       "group": "Peliculas - Comedia",
-      "country": "MX",
+      "country": "US",
       "url": "http://181.119.93.83:8000/play/a1di/index.m3u8",
       "backup_urls": [],
       "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Comedy_Central_2018.svg/960px-Comedy_Central_2018.svg.png",
@@ -623,7 +339,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:31:44Z"
+      "checked_at": "2026-06-30T22:37:00Z"
     },
     {
       "name": "Star Trek Movies",
@@ -637,7 +353,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:33:14Z"
+      "checked_at": "2026-06-30T22:38:04Z"
     },
     {
       "name": "Viafree Movies",
@@ -651,7 +367,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:33:19Z"
+      "checked_at": "2026-06-30T22:38:09Z"
     },
     {
       "name": "8NTV (1080p)",
@@ -665,7 +381,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:31:44Z"
+      "checked_at": "2026-06-30T22:36:51Z"
     },
     {
       "name": "B15 Fresnillo (1080p)",
@@ -679,7 +395,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:32:05Z"
+      "checked_at": "2026-06-30T22:36:52Z"
     },
     {
       "name": "B15 Zacatecas (1080p)",
@@ -693,7 +409,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:32:05Z"
+      "checked_at": "2026-06-30T22:36:52Z"
     },
     {
       "name": "Canal 10 Durango (1080p)",
@@ -707,21 +423,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:32:06Z"
-    },
-    {
-      "name": "Estrella TV (1080p)",
-      "group": "Familia y TV Abierta",
-      "country": "MX",
-      "url": "https://estrellatv-oando.amagi.tv/playlist.m3u8",
-      "backup_urls": [],
-      "logo": "https://i.imgur.com/IZxjnyp.png",
-      "tvg_id": "EstrellaTV.us@SD",
-      "alive": true,
-      "status_code": 200,
-      "error": null,
-      "state": "alive",
-      "checked_at": "2026-06-30T22:32:07Z"
+      "checked_at": "2026-06-30T22:36:54Z"
     },
     {
       "name": "ICRTV Colima (1080p)",
@@ -735,7 +437,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:32:33Z"
+      "checked_at": "2026-06-30T22:37:06Z"
     },
     {
       "name": "IERTBCS Canal 8 La Paz (1080p) [Not 24/7]",
@@ -749,7 +451,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:32:07Z"
+      "checked_at": "2026-06-30T22:37:07Z"
     },
     {
       "name": "IERTBCS Canal 8.2 La Paz (1080p) [Not 24/7]",
@@ -763,7 +465,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:32:08Z"
+      "checked_at": "2026-06-30T22:37:06Z"
     },
     {
       "name": "Nayarit Comunica (1080p)",
@@ -777,7 +479,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:31:45Z"
+      "checked_at": "2026-06-30T22:37:13Z"
     },
     {
       "name": "RCG TV (1080p)",
@@ -791,7 +493,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:31:45Z"
+      "checked_at": "2026-06-30T22:37:15Z"
     },
     {
       "name": "RTQ Querétaro (1080p)",
@@ -805,7 +507,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:31:46Z"
+      "checked_at": "2026-06-30T22:37:16Z"
     },
     {
       "name": "SIPSE TV 8.1 (1080p) [Not 24/7]",
@@ -819,7 +521,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:31:45Z"
+      "checked_at": "2026-06-30T22:37:17Z"
     },
     {
       "name": "SIPSE TVCUN 8.1 (1080p) [Not 24/7]",
@@ -833,7 +535,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:31:45Z"
+      "checked_at": "2026-06-30T22:37:18Z"
     },
     {
       "name": "Sistema Michoacano de TV (1080p) [Not 24/7]",
@@ -847,7 +549,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:31:46Z"
+      "checked_at": "2026-06-30T22:37:17Z"
     },
     {
       "name": "SQCS Canal 4 (1080p)",
@@ -861,7 +563,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:32:08Z"
+      "checked_at": "2026-06-30T22:37:18Z"
     },
     {
       "name": "Super Channel 12 (1080p)",
@@ -875,7 +577,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:31:46Z"
+      "checked_at": "2026-06-30T22:37:18Z"
     },
     {
       "name": "Tele Yucatan (1080p) [Geo-blocked]",
@@ -889,7 +591,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:31:47Z"
+      "checked_at": "2026-06-30T22:37:19Z"
     },
     {
       "name": "Telemax (XEWH-TDT) (1080p)",
@@ -903,21 +605,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:31:47Z"
-    },
-    {
-      "name": "TV BUAP (1080p)",
-      "group": "Familia y TV Abierta",
-      "country": "MX",
-      "url": "https://tvenvivo.buap.mx/livestream/stream/index.m3u8",
-      "backup_urls": [],
-      "logo": "https://i.imgur.com/hHrIn0r.png",
-      "tvg_id": "TVBUAP.mx@SD",
-      "alive": true,
-      "status_code": 200,
-      "error": null,
-      "state": "alive",
-      "checked_at": "2026-06-30T22:31:48Z"
+      "checked_at": "2026-06-30T22:37:20Z"
     },
     {
       "name": "TV Cuatro 4.1 (1080p)",
@@ -931,21 +619,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:32:09Z"
-    },
-    {
-      "name": "TV Cuatro 4.1 (1080p)",
-      "group": "Familia y TV Abierta",
-      "country": "MX",
-      "url": "https://5ca3e84a76d30.streamlock.net/tv4gto/tv4gto.smil/.m3u8",
-      "backup_urls": [],
-      "logo": "",
-      "tvg_id": "TVCuatro41.mx",
-      "alive": true,
-      "status_code": 200,
-      "error": null,
-      "state": "alive",
-      "checked_at": "2026-06-30T22:32:09Z"
+      "checked_at": "2026-06-30T22:37:23Z"
     },
     {
       "name": "TV Cuatro 4.2 (1080p)",
@@ -959,7 +633,21 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:32:09Z"
+      "checked_at": "2026-06-30T22:37:23Z"
+    },
+    {
+      "name": "TV Cuatro 4.3 (1080p)",
+      "group": "Familia y TV Abierta",
+      "country": "MX",
+      "url": "https://5ca3e84a76d30.streamlock.net/tv43gto/tv43gto.smil/.m3u8",
+      "backup_urls": [],
+      "logo": "https://i.imgur.com/Of044Jx.png",
+      "tvg_id": "TVCuatro43.mx@SD",
+      "alive": true,
+      "status_code": 200,
+      "error": null,
+      "state": "alive",
+      "checked_at": "2026-06-30T22:37:24Z"
     },
     {
       "name": "TV Cuatro 4.4 (1080p)",
@@ -973,7 +661,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:32:09Z"
+      "checked_at": "2026-06-30T22:37:24Z"
     },
     {
       "name": "TV Mar La Paz (1080p)",
@@ -987,7 +675,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:32:10Z"
+      "checked_at": "2026-06-30T22:37:25Z"
     },
     {
       "name": "TV Mar Los Cabos (1080p)",
@@ -1001,7 +689,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:32:10Z"
+      "checked_at": "2026-06-30T22:37:25Z"
     },
     {
       "name": "TV Mar Puerto Vallarta (1080p)",
@@ -1015,7 +703,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:32:10Z"
+      "checked_at": "2026-06-30T22:37:25Z"
     },
     {
       "name": "TV UG (1080p) [Not 24/7]",
@@ -1029,7 +717,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:32:10Z"
+      "checked_at": "2026-06-30T22:37:27Z"
     },
     {
       "name": "UMTV (1080p) [Not 24/7]",
@@ -1043,7 +731,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:32:11Z"
+      "checked_at": "2026-06-30T22:37:29Z"
     },
     {
       "name": "Unison TV (1080p) [Not 24/7]",
@@ -1057,21 +745,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:32:11Z"
-    },
-    {
-      "name": "Univision Latin America (1080p)",
-      "group": "Familia y TV Abierta",
-      "country": "MX",
-      "url": "http://138.121.15.230:9002/UNIVISION/index.m3u8",
-      "backup_urls": [],
-      "logo": "",
-      "tvg_id": "UnivisionLatinAmerica.mx",
-      "alive": true,
-      "status_code": 200,
-      "error": null,
-      "state": "alive",
-      "checked_at": "2026-06-30T22:32:11Z"
+      "checked_at": "2026-06-30T22:37:29Z"
     },
     {
       "name": "Canal 10 Chiapas (720p)",
@@ -1085,7 +759,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:31:47Z"
+      "checked_at": "2026-06-30T22:36:53Z"
     },
     {
       "name": "Canal 15 ILCE Summa Sabres (720p)",
@@ -1099,7 +773,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:32:16Z"
+      "checked_at": "2026-06-30T22:36:56Z"
     },
     {
       "name": "Canal 22 Nacional (720p) [Geo-blocked]",
@@ -1113,7 +787,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:31:47Z"
+      "checked_at": "2026-06-30T22:36:57Z"
     },
     {
       "name": "Canal 33 Tijuana (720p)",
@@ -1127,7 +801,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:32:33Z"
+      "checked_at": "2026-06-30T22:36:58Z"
     },
     {
       "name": "Canal 44 Chihuahua (720p) [Not 24/7]",
@@ -1141,7 +815,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:31:48Z"
+      "checked_at": "2026-06-30T22:36:59Z"
     },
     {
       "name": "Canal 44 Ciudad Juárez (720p) [Not 24/7]",
@@ -1155,7 +829,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:31:48Z"
+      "checked_at": "2026-06-30T22:36:58Z"
     },
     {
       "name": "Imagen TV+ (720p)",
@@ -1169,7 +843,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:31:49Z"
+      "checked_at": "2026-06-30T22:37:07Z"
     },
     {
       "name": "Jalisco TV (720p)",
@@ -1183,7 +857,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:31:49Z"
+      "checked_at": "2026-06-30T22:37:08Z"
     },
     {
       "name": "Lobo TV (720p)",
@@ -1197,7 +871,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:32:18Z"
+      "checked_at": "2026-06-30T22:37:09Z"
     },
     {
       "name": "Mexiquense TV (720p)",
@@ -1211,7 +885,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:31:49Z"
+      "checked_at": "2026-06-30T22:37:09Z"
     },
     {
       "name": "Nueve TV San Luís Potosí (720p)",
@@ -1225,7 +899,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:32:21Z"
+      "checked_at": "2026-06-30T22:37:13Z"
     },
     {
       "name": "RTG (720p)",
@@ -1239,7 +913,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:32:22Z"
+      "checked_at": "2026-06-30T22:37:16Z"
     },
     {
       "name": "SIZART Canal 24 (XHZHZ-TDT) (720p)",
@@ -1253,7 +927,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:32:23Z"
+      "checked_at": "2026-06-30T22:37:18Z"
     },
     {
       "name": "TRC Televisión (720p)",
@@ -1267,7 +941,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:32:25Z"
+      "checked_at": "2026-06-30T22:37:21Z"
     },
     {
       "name": "TV Lobo Durango (720p)",
@@ -1281,7 +955,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:32:25Z"
+      "checked_at": "2026-06-30T22:37:24Z"
     },
     {
       "name": "TV Nuevo León Canal 28 (XHMNL-TDT) (720p)",
@@ -1295,7 +969,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:31:50Z"
+      "checked_at": "2026-06-30T22:37:26Z"
     },
     {
       "name": "TV UJAT (XHUJAT-TDT) (720p) [Not 24/7]",
@@ -1309,7 +983,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:32:26Z"
+      "checked_at": "2026-06-30T22:37:27Z"
     },
     {
       "name": "TVP Culiacán (720p) [Not 24/7]",
@@ -1323,7 +997,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:31:50Z"
+      "checked_at": "2026-06-30T22:37:27Z"
     },
     {
       "name": "TVP Los Mochis (720p) [Not 24/7]",
@@ -1337,7 +1011,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:31:51Z"
+      "checked_at": "2026-06-30T22:37:27Z"
     },
     {
       "name": "TVP Mazatlán (720p) [Not 24/7]",
@@ -1351,7 +1025,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:31:50Z"
+      "checked_at": "2026-06-30T22:37:28Z"
     },
     {
       "name": "TVP Obregón (720p) [Not 24/7]",
@@ -1365,7 +1039,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:31:51Z"
+      "checked_at": "2026-06-30T22:37:28Z"
     },
     {
       "name": "Ultra TV Puebla (720p) [Not 24/7]",
@@ -1379,7 +1053,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:32:26Z"
+      "checked_at": "2026-06-30T22:37:28Z"
     },
     {
       "name": "Visión Televisión (720p)",
@@ -1393,21 +1067,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:32:26Z"
-    },
-    {
-      "name": "XEIPN-TDT (720p)",
-      "group": "Familia y TV Abierta",
-      "country": "MX",
-      "url": "https://s5.mexside.net:1936/stream/stream/index.m3u8",
-      "backup_urls": [],
-      "logo": "",
-      "tvg_id": "XEIPNTDT.mx",
-      "alive": true,
-      "status_code": 200,
-      "error": null,
-      "state": "alive",
-      "checked_at": "2026-06-30T22:32:26Z"
+      "checked_at": "2026-06-30T22:37:29Z"
     },
     {
       "name": "Tlaxcala Televisión (360p) [Not 24/7]",
@@ -1421,21 +1081,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:32:28Z"
-    },
-    {
-      "name": "TVMÁS (XHGV-TDT) (360p) [Not 24/7]",
-      "group": "Familia y TV Abierta",
-      "country": "MX",
-      "url": "https://5ca9af4645e15.streamlock.net/rtv/videortv/playlist.m3u8",
-      "backup_urls": [],
-      "logo": "https://i.imgur.com/15kcNRb.png",
-      "tvg_id": "XHGVTDT.mx@SD",
-      "alive": true,
-      "status_code": 200,
-      "error": null,
-      "state": "alive",
-      "checked_at": "2026-06-30T22:32:28Z"
+      "checked_at": "2026-06-30T22:37:21Z"
     },
     {
       "name": "Radiotele Morelia (352p)",
@@ -1449,147 +1095,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:32:28Z"
-    },
-    {
-      "name": "Antena TV",
-      "group": "Familia y TV Abierta",
-      "country": "MX",
-      "url": "https://5ca9af4645e15.streamlock.net:443/grd/videogrd/playlist.m3u8",
-      "backup_urls": [],
-      "logo": "",
-      "tvg_id": "AntenaTV.mx",
-      "alive": true,
-      "status_code": 200,
-      "error": null,
-      "state": "alive",
-      "checked_at": "2026-06-30T22:32:29Z"
-    },
-    {
-      "name": "C9NTV",
-      "group": "Familia y TV Abierta",
-      "country": "MX",
-      "url": "https://cloudvideo.servers10.com:8081/8030/index.m3u8",
-      "backup_urls": [],
-      "logo": "",
-      "tvg_id": "C9NTV.mx",
-      "alive": true,
-      "status_code": 200,
-      "error": null,
-      "state": "alive",
-      "checked_at": "2026-06-30T22:32:29Z"
-    },
-    {
-      "name": "Canal 11",
-      "group": "Familia y TV Abierta",
-      "country": "MX",
-      "url": "https://s5.mexside.net:1936/stream/stream/playlist.m3u8",
-      "backup_urls": [],
-      "logo": "https://mxplus.tv/img/logos/canales/white/canal-11.png",
-      "tvg_id": "canal-11",
-      "alive": true,
-      "status_code": 200,
-      "error": null,
-      "state": "alive",
-      "checked_at": "2026-06-30T22:31:52Z"
-    },
-    {
-      "name": "Canal 12 Iguala",
-      "group": "Familia y TV Abierta",
-      "country": "MX",
-      "url": "https://lbgo.bozztv.com/ssh101/ssh101/ochotv/playlist.m3u8",
-      "backup_urls": [],
-      "logo": "",
-      "tvg_id": "Canal12Iguala.mx",
-      "alive": true,
-      "status_code": 200,
-      "error": null,
-      "state": "alive",
-      "checked_at": "2026-06-30T22:32:30Z"
-    },
-    {
-      "name": "Canal 14",
-      "group": "Familia y TV Abierta",
-      "country": "MX",
-      "url": "https://s5.mexside.net:1936/canal14/canal14/playlist.m3u8",
-      "backup_urls": [],
-      "logo": "https://mxplus.tv/img/logos/canales/white/canal-14.png",
-      "tvg_id": "canal-14",
-      "alive": true,
-      "status_code": 200,
-      "error": null,
-      "state": "alive",
-      "checked_at": "2026-06-30T22:31:53Z"
-    },
-    {
-      "name": "Canal 21",
-      "group": "Familia y TV Abierta",
-      "country": "MX",
-      "url": "https://s5.mexside.net:1936/respaldo/respaldo/playlist.m3u8",
-      "backup_urls": [],
-      "logo": "https://mxplus.tv/img/logos/canales/white/capital.png",
-      "tvg_id": "canal-21",
-      "alive": true,
-      "status_code": 200,
-      "error": null,
-      "state": "alive",
-      "checked_at": "2026-06-30T22:31:52Z"
-    },
-    {
-      "name": "Canal 22",
-      "group": "Familia y TV Abierta",
-      "country": "MX",
-      "url": "https://5fc584f3f19c9.streamlock.net/canal22/videocanal22/chunklist_w432012015.m3u8",
-      "backup_urls": [],
-      "logo": "https://mxplus.tv/img/logos/canales/white/canal-22.png",
-      "tvg_id": "canal-22",
-      "alive": true,
-      "status_code": 200,
-      "error": null,
-      "state": "alive",
-      "checked_at": "2026-06-30T22:31:53Z"
-    },
-    {
-      "name": "Canal 6 CDMX (FAST)",
-      "group": "Familia y TV Abierta",
-      "country": "MX",
-      "url": "https://stream.ads.ottera.tv/playlist.m3u8?network_id=6405",
-      "backup_urls": [],
-      "logo": "",
-      "tvg_id": "Canal6CDMX.mx",
-      "alive": true,
-      "status_code": 200,
-      "error": null,
-      "state": "alive",
-      "checked_at": "2026-06-30T22:31:54Z"
-    },
-    {
-      "name": "Canal 66",
-      "group": "Familia y TV Abierta",
-      "country": "MX",
-      "url": "https://5ca3e84a76d30.streamlock.net:443/canal66/videocanal66/playlist.m3u8",
-      "backup_urls": [],
-      "logo": "",
-      "tvg_id": "canal66.mx",
-      "alive": true,
-      "status_code": 200,
-      "error": null,
-      "state": "alive",
-      "checked_at": "2026-06-30T22:31:53Z"
-    },
-    {
-      "name": "MVS TV",
-      "group": "Familia y TV Abierta",
-      "country": "MX",
-      "url": "https://dish.akamaized.net/Content/HLS_HLS_CLR/Live/channel(mvs)/variant.m3u8",
-      "backup_urls": [],
-      "logo": "",
-      "tvg_id": "MVSTV.mx",
-      "alive": true,
-      "status_code": 200,
-      "error": null,
-      "state": "alive",
-      "checked_at": "2026-06-30T22:31:54Z"
+      "checked_at": "2026-06-30T22:37:15Z"
     },
     {
       "name": "Tele Saltillo",
@@ -1603,7 +1109,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:31:55Z"
+      "checked_at": "2026-06-30T22:37:20Z"
     },
     {
       "name": "Tele UV [Not 24/7]",
@@ -1617,35 +1123,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:32:31Z"
-    },
-    {
-      "name": "TV de Puebla",
-      "group": "Familia y TV Abierta",
-      "country": "MX",
-      "url": "https://5d0d1d7a6be9e.streamlock.net/sicom/canal1/chunklist_w2123636069.m3u8",
-      "backup_urls": [],
-      "logo": "https://mxplus.tv/img/logos/canales/white/tv-puebla.png",
-      "tvg_id": "tv-puebla",
-      "alive": true,
-      "status_code": 200,
-      "error": null,
-      "state": "alive",
-      "checked_at": "2026-06-30T22:31:55Z"
-    },
-    {
-      "name": "TV UNAM",
-      "group": "Familia y TV Abierta",
-      "country": "MX",
-      "url": "https://5fc584f3f19c9.streamlock.net/tvunam/videotvunam/chunklist_w1874753134_DVR.m3u8",
-      "backup_urls": [],
-      "logo": "https://mxplus.tv/img/logos/canales/white/tv-unam.png",
-      "tvg_id": "tv-unam",
-      "alive": true,
-      "status_code": 200,
-      "error": null,
-      "state": "alive",
-      "checked_at": "2026-06-30T22:31:55Z"
+      "checked_at": "2026-06-30T22:37:19Z"
     },
     {
       "name": "Popcorn Central (1080p)",
@@ -1659,7 +1137,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:31:59Z"
+      "checked_at": "2026-06-30T22:37:13Z"
     },
     {
       "name": "MyTime Movie Network Mexico (720p)",
@@ -1673,91 +1151,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:32:00Z"
-    },
-    {
-      "name": "AXN Latin America Mexico",
-      "group": "Peliculas - Cine",
-      "country": "MX",
-      "url": "http://190.11.225.124:5000/live/axn_hd/playlist.m3u8",
-      "backup_urls": [],
-      "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/AXN_logo_%282015%29.svg/960px-AXN_logo_%282015%29.svg.png",
-      "tvg_id": "AXNLatinAmerica.us@Mexico",
-      "alive": true,
-      "status_code": 200,
-      "error": null,
-      "state": "alive",
-      "checked_at": "2026-06-30T22:32:00Z"
-    },
-    {
-      "name": "De Pelicula Latin America",
-      "group": "Peliculas - Cine",
-      "country": "MX",
-      "url": "http://181.119.93.83:8000/play/a1jw/index.m3u8",
-      "backup_urls": [],
-      "logo": "",
-      "tvg_id": "DePeliculaLatinAmerica.mx",
-      "alive": true,
-      "status_code": 200,
-      "error": null,
-      "state": "alive",
-      "checked_at": "2026-06-30T22:32:00Z"
-    },
-    {
-      "name": "Runtime Español",
-      "group": "Peliculas - Drama y Series",
-      "country": "MX",
-      "url": "https://stream.ads.ottera.tv/playlist.m3u8?network_id=2649",
-      "backup_urls": [],
-      "logo": "",
-      "tvg_id": "RuntimeEspanol.mx",
-      "alive": true,
-      "status_code": 200,
-      "error": null,
-      "state": "alive",
-      "checked_at": "2026-06-30T22:32:01Z"
-    },
-    {
-      "name": "Runtime Films",
-      "group": "Peliculas - Drama y Series",
-      "country": "MX",
-      "url": "https://stream.ads.ottera.tv/playlist.m3u8?network_id=2153",
-      "backup_urls": [],
-      "logo": "",
-      "tvg_id": "RuntimeFilms.mx",
-      "alive": true,
-      "status_code": 200,
-      "error": null,
-      "state": "alive",
-      "checked_at": "2026-06-30T22:32:02Z"
-    },
-    {
-      "name": "Runtime Latino",
-      "group": "Peliculas - Drama y Series",
-      "country": "MX",
-      "url": "https://stream.ads.ottera.tv/playlist.m3u8?network_id=2154",
-      "backup_urls": [],
-      "logo": "",
-      "tvg_id": "RuntimeLatino.mx",
-      "alive": true,
-      "status_code": 200,
-      "error": null,
-      "state": "alive",
-      "checked_at": "2026-06-30T22:32:02Z"
-    },
-    {
-      "name": "Runtime Crimen",
-      "group": "Peliculas - Crimen",
-      "country": "MX",
-      "url": "https://stream.ads.ottera.tv/playlist.m3u8?network_id=3533",
-      "backup_urls": [],
-      "logo": "",
-      "tvg_id": "RuntimeCrimen.mx",
-      "alive": true,
-      "status_code": 200,
-      "error": null,
-      "state": "alive",
-      "checked_at": "2026-06-30T22:32:01Z"
+      "checked_at": "2026-06-30T22:37:12Z"
     },
     {
       "name": "Panico (576p)",
@@ -1771,147 +1165,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:32:01Z"
-    },
-    {
-      "name": "Runtime Terror",
-      "group": "Peliculas - Terror",
-      "country": "MX",
-      "url": "https://stream.ads.ottera.tv/playlist.m3u8?network_id=3529",
-      "backup_urls": [],
-      "logo": "",
-      "tvg_id": "RuntimeTerror.mx",
-      "alive": true,
-      "status_code": 200,
-      "error": null,
-      "state": "alive",
-      "checked_at": "2026-06-30T22:32:02Z"
-    },
-    {
-      "name": "Disney Jr. Latin America North HD (1080p)",
-      "group": "Peliculas - Familiar",
-      "country": "MX",
-      "url": "http://190.11.225.124:5000/live/disney_jr_hd/playlist.m3u8",
-      "backup_urls": [],
-      "logo": "https://upload.wikimedia.org/wikipedia/commons/e/e3/2024_Disney_Jr._Logo.svg",
-      "tvg_id": "DisneyJrLatinAmerica.ar@NorthHD",
-      "alive": true,
-      "status_code": 200,
-      "error": null,
-      "state": "alive",
-      "checked_at": "2026-06-30T22:32:03Z"
-    },
-    {
-      "name": "Estrella Games (1080p)",
-      "group": "Peliculas - Familiar",
-      "country": "MX",
-      "url": "https://estrella-games-oando.amagi.tv/playlist.m3u8",
-      "backup_urls": [],
-      "logo": "https://i.imgur.com/Z52nEnH.png",
-      "tvg_id": "EstrellaGames.us@SD",
-      "alive": true,
-      "status_code": 200,
-      "error": null,
-      "state": "alive",
-      "checked_at": "2026-06-30T22:32:03Z"
-    },
-    {
-      "name": "Nick Jr. Latin America (1080p)",
-      "group": "Peliculas - Familiar",
-      "country": "MX",
-      "url": "http://179.60.51.134:8888/NICK-JR/index.m3u8",
-      "backup_urls": [],
-      "logo": "https://i.imgur.com/KT4tdQs.png",
-      "tvg_id": "NickJrLatinAmerica.us@Panregional",
-      "alive": true,
-      "status_code": 200,
-      "error": null,
-      "state": "alive",
-      "checked_at": "2026-06-30T22:32:03Z"
-    },
-    {
-      "name": "Disney Channel Latin America Mexico (720p)",
-      "group": "Peliculas - Familiar",
-      "country": "MX",
-      "url": "http://45.166.93.156:9999/play/a0f3/index.m3u8",
-      "backup_urls": [],
-      "logo": "https://upload.wikimedia.org/wikipedia/commons/f/ff/2024_Disney_Channel_text_logo.svg",
-      "tvg_id": "DisneyChannelLatinAmerica.ar@Mexico",
-      "alive": true,
-      "status_code": 200,
-      "error": null,
-      "state": "alive",
-      "checked_at": "2026-06-30T22:32:03Z"
-    },
-    {
-      "name": "El Chavo TV (720p)",
-      "group": "Peliculas - Familiar",
-      "country": "MX",
-      "url": "https://live20.bozztv.com/giatvplayout7/giatv-211465/playlist.m3u8",
-      "backup_urls": [],
-      "logo": "https://gia.tv/streams/pptv/211465.png",
-      "tvg_id": "ElChavoTV.mx@HD",
-      "alive": true,
-      "status_code": 200,
-      "error": null,
-      "state": "alive",
-      "checked_at": "2026-06-30T22:32:04Z"
-    },
-    {
-      "name": "Disney Channel Latin America North (576p)",
-      "group": "Peliculas - Familiar",
-      "country": "MX",
-      "url": "http://138.121.15.230:9002/DISNEY-CHANNEL/index.m3u8",
-      "backup_urls": [],
-      "logo": "https://upload.wikimedia.org/wikipedia/commons/f/ff/2024_Disney_Channel_text_logo.svg",
-      "tvg_id": "DisneyChannelLatinAmerica.ar@North",
-      "alive": true,
-      "status_code": 200,
-      "error": null,
-      "state": "alive",
-      "checked_at": "2026-06-30T22:32:04Z"
-    },
-    {
-      "name": "TV Cuatro 4.3 (1080p)",
-      "group": "Deportes",
-      "country": "MX",
-      "url": "https://5ca3e84a76d30.streamlock.net/tv43gto/tv43gto.smil/.m3u8",
-      "backup_urls": [],
-      "logo": "https://i.imgur.com/Of044Jx.png",
-      "tvg_id": "TVCuatro43.mx@SD",
-      "alive": true,
-      "status_code": 200,
-      "error": null,
-      "state": "alive",
-      "checked_at": "2026-06-30T22:32:04Z"
-    },
-    {
-      "name": "WPT",
-      "group": "Deportes",
-      "country": "MX",
-      "url": "https://stream.ads.ottera.tv/playlist.m3u8?network_id=5504",
-      "backup_urls": [],
-      "logo": "",
-      "tvg_id": "WPT.mx",
-      "alive": true,
-      "status_code": 200,
-      "error": null,
-      "state": "alive",
-      "checked_at": "2026-06-30T22:32:06Z"
-    },
-    {
-      "name": "Estrella News (1080p)",
-      "group": "Noticias",
-      "country": "MX",
-      "url": "https://estrella-news-oando.amagi.tv/playlist.m3u8",
-      "backup_urls": [],
-      "logo": "https://i.imgur.com/HRrkhLq.png",
-      "tvg_id": "EstrellaNews.us@SD",
-      "alive": true,
-      "status_code": 200,
-      "error": null,
-      "state": "alive",
-      "checked_at": "2026-06-30T22:31:57Z"
+      "checked_at": "2026-06-30T22:37:13Z"
     },
     {
       "name": "Notigram TV (XHFGL-TDT) (1080p)",
@@ -1925,7 +1179,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:32:08Z"
+      "checked_at": "2026-06-30T22:37:12Z"
     },
     {
       "name": "ADN 40 (720p)",
@@ -1939,7 +1193,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:31:57Z"
+      "checked_at": "2026-06-30T22:36:52Z"
     },
     {
       "name": "AMX Noticias (720p) [Not 24/7]",
@@ -1953,7 +1207,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:31:56Z"
+      "checked_at": "2026-06-30T22:36:51Z"
     },
     {
       "name": "Canal Parlamento del Congreso de Jalisco (720p) [Not 24/7]",
@@ -1967,7 +1221,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:31:55Z"
+      "checked_at": "2026-06-30T22:36:59Z"
     },
     {
       "name": "Justicia TV (720p)",
@@ -1981,49 +1235,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:31:56Z"
-    },
-    {
-      "name": "TeleFórmula (720p)",
-      "group": "Noticias",
-      "country": "MX",
-      "url": "https://mdstrm.com/live-stream-playlist/62f2c855f7981b5a5a2d8763.m3u8",
-      "backup_urls": [],
-      "logo": "https://i.imgur.com/y0a0xwY.png",
-      "tvg_id": "TeleFormula.mx@SD",
-      "alive": true,
-      "status_code": 200,
-      "error": null,
-      "state": "alive",
-      "checked_at": "2026-06-30T22:31:57Z"
-    },
-    {
-      "name": "Canal del Congreso 45.1",
-      "group": "Noticias",
-      "country": "MX",
-      "url": "https://ccstreaming.packet.mx/WebRTCAppEE/streams/45.1_kd5oiNTTWO0gEOFc431277834.m3u8",
-      "backup_urls": [],
-      "logo": "https://i.imgur.com/xAC6gQO.png",
-      "tvg_id": "CanaldelCongreso451.mx@SD",
-      "alive": true,
-      "status_code": 200,
-      "error": null,
-      "state": "alive",
-      "checked_at": "2026-06-30T22:31:58Z"
-    },
-    {
-      "name": "TeleFormula",
-      "group": "Noticias",
-      "country": "MX",
-      "url": "https://jmp2.uk/plu-63d2c140c111bc0008cb890b.m3u8",
-      "backup_urls": [],
-      "logo": "",
-      "tvg_id": "TeleFormula.mx",
-      "alive": true,
-      "status_code": 200,
-      "error": null,
-      "state": "alive",
-      "checked_at": "2026-06-30T22:31:59Z"
+      "checked_at": "2026-06-30T22:37:08Z"
     },
     {
       "name": "CreaLaTV (1080p)",
@@ -2037,21 +1249,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:32:07Z"
-    },
-    {
-      "name": "MTV Latin America (1080p)",
-      "group": "Entretenimiento",
-      "country": "MX",
-      "url": "http://179.60.51.134:8888/MTV/index.m3u8",
-      "backup_urls": [],
-      "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/MTV_2021_%28brand_version%29.svg/960px-MTV_2021_%28brand_version%29.svg.png",
-      "tvg_id": "MTVLatinAmerica.us@Panregional",
-      "alive": true,
-      "status_code": 200,
-      "error": null,
-      "state": "alive",
-      "checked_at": "2026-06-30T22:32:08Z"
+      "checked_at": "2026-06-30T22:37:01Z"
     },
     {
       "name": "VB Media TV (1080p)",
@@ -2065,7 +1263,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:32:12Z"
+      "checked_at": "2026-06-30T22:37:29Z"
     },
     {
       "name": "ZAZ (1080p)",
@@ -2079,7 +1277,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:32:12Z"
+      "checked_at": "2026-06-30T22:37:30Z"
     },
     {
       "name": "Conecta TV (720p)",
@@ -2093,7 +1291,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:32:16Z"
+      "checked_at": "2026-06-30T22:37:00Z"
     },
     {
       "name": "Expresa TV (720p)",
@@ -2107,7 +1305,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:32:17Z"
+      "checked_at": "2026-06-30T22:37:04Z"
     },
     {
       "name": "Presumiendo México (720p)",
@@ -2121,7 +1319,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:32:21Z"
+      "checked_at": "2026-06-30T22:37:14Z"
     },
     {
       "name": "Raly TV (720p)",
@@ -2135,21 +1333,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:32:23Z"
-    },
-    {
-      "name": "TELE 6 (720p)",
-      "group": "Entretenimiento",
-      "country": "MX",
-      "url": "https://lbgo.bozztv.com/ssh101/ssh101/tele6/playlist.m3u8",
-      "backup_urls": [],
-      "logo": "https://i.imgur.com/p7tt72X.png",
-      "tvg_id": "TELE6.bo@SD",
-      "alive": true,
-      "status_code": 200,
-      "error": null,
-      "state": "alive",
-      "checked_at": "2026-06-30T22:32:24Z"
+      "checked_at": "2026-06-30T22:37:15Z"
     },
     {
       "name": "Teleplay Sureste (720p)",
@@ -2163,35 +1347,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:32:24Z"
-    },
-    {
-      "name": "Teleritmo (720p) [Not 24/7]",
-      "group": "Entretenimiento",
-      "country": "MX",
-      "url": "https://mdstrm.com/live-stream-playlist/57b4dc126338448314449d0c.m3u8",
-      "backup_urls": [],
-      "logo": "https://i.imgur.com/9s380Bz.png",
-      "tvg_id": "Teleritmo.mx@SD",
-      "alive": true,
-      "status_code": 200,
-      "error": null,
-      "state": "alive",
-      "checked_at": "2026-06-30T22:32:24Z"
-    },
-    {
-      "name": "The Pet Collective International (720p)",
-      "group": "Entretenimiento",
-      "country": "MX",
-      "url": "https://the-pet-collective-international-mx.samsung.wurl.tv/playlist.m3u8",
-      "backup_urls": [],
-      "logo": "https://i.imgur.com/yH7n2dF.png",
-      "tvg_id": "ThePetCollective.us@Mexico",
-      "alive": true,
-      "status_code": 200,
-      "error": null,
-      "state": "alive",
-      "checked_at": "2026-06-30T22:32:25Z"
+      "checked_at": "2026-06-30T22:37:26Z"
     },
     {
       "name": "TV Migrante (720p)",
@@ -2205,35 +1361,21 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:32:25Z"
+      "checked_at": "2026-06-30T22:37:26Z"
     },
     {
-      "name": "Teleplay Sureste (360p)",
+      "name": "TVMÁS (XHGV-TDT) (360p) [Not 24/7]",
       "group": "Entretenimiento",
       "country": "MX",
-      "url": "https://player.tvstream.mx/livestream/teleplay/livesd/playlist.m3u8",
+      "url": "https://5ca9af4645e15.streamlock.net/rtv/videortv/playlist.m3u8",
       "backup_urls": [],
-      "logo": "",
-      "tvg_id": "TeleplaySureste.mx",
+      "logo": "https://i.imgur.com/15kcNRb.png",
+      "tvg_id": "XHGVTDT.mx@SD",
       "alive": true,
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:32:28Z"
-    },
-    {
-      "name": "A+ [Geo-blocked]",
-      "group": "Entretenimiento",
-      "country": "MX",
-      "url": "https://mdstrm.com/live-stream-playlist/60b56be1000ea50835fa1e63.m3u8",
-      "backup_urls": [],
-      "logo": "https://i.imgur.com/TWk9gfd.png",
-      "tvg_id": "APlus.mx@SD",
-      "alive": true,
-      "status_code": 200,
-      "error": null,
-      "state": "alive",
-      "checked_at": "2026-06-30T22:32:30Z"
+      "checked_at": "2026-06-30T22:37:27Z"
     },
     {
       "name": "BAMOS TV (1080p) [Not 24/7]",
@@ -2247,7 +1389,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:32:32Z"
+      "checked_at": "2026-06-30T22:36:52Z"
     },
     {
       "name": "Monte Maria (1080p)",
@@ -2261,7 +1403,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:32:32Z"
+      "checked_at": "2026-06-30T22:37:10Z"
     },
     {
       "name": "Alcance TV (720p)",
@@ -2275,7 +1417,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:32:34Z"
+      "checked_at": "2026-06-30T22:36:50Z"
     },
     {
       "name": "Turistik TV (720p)",
@@ -2289,7 +1431,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:32:34Z"
+      "checked_at": "2026-06-30T22:37:22Z"
     },
     {
       "name": "WeatherSpy (720p)",
@@ -2303,7 +1445,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:32:34Z"
+      "checked_at": "2026-06-30T22:37:29Z"
     },
     {
       "name": "María Visión Mexico (360p) [Not 24/7]",
@@ -2317,105 +1459,679 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:32:33Z"
+      "checked_at": "2026-06-30T22:37:09Z"
     },
     {
-      "name": "5TV Corrientes (480p) [Not 24/7]",
+      "name": "Canal 13 HD",
       "group": "Familia y TV Abierta",
-      "country": "AR",
-      "url": "https://617c5175c970b.streamlock.net:4444/tvcinco/live1/playlist.m3u8",
+      "country": "ALL",
+      "url": "http://magiz.net:80/play/eai2RT1bCkwXKwCMPAz8iA/ts",
       "backup_urls": [],
-      "logo": "",
-      "tvg_id": "5tv.ar",
+      "logo": "https://logo.iptveditor.com/canal1.png",
+      "tvg_id": "",
       "alive": true,
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:32:35Z"
+      "checked_at": "2026-06-30T22:38:13Z"
     },
     {
-      "name": "America TV",
+      "name": "h_894,strp/tve_logo_concept___2nd_version_by_appledroidyt_dd4haha-pre.png\" group-title=\"GENERAL\",TVE",
       "group": "Familia y TV Abierta",
-      "country": "AR",
-      "url": "https://prepublish.f.qaotic.net/a07/americahls-100056/playlist_720p.m3u8",
+      "country": "ALL",
+      "url": "http://magiz.net:80/play/SOVI2Jk7z12nO12ttCF2fw/ts",
       "backup_urls": [],
       "logo": "",
-      "tvg_id": "AmericaTV.ar",
+      "tvg_id": "",
       "alive": true,
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:31:53Z"
+      "checked_at": "2026-06-30T22:38:13Z"
     },
     {
-      "name": "Bravo TV",
+      "name": "Stingray Concerts HD",
       "group": "Familia y TV Abierta",
-      "country": "AR",
-      "url": "https://redirector.rudo.video/hls-video/c54ac2799874375c81c1672abb700870537c5223/bravo/bravo.smil/playlist.m3u8",
+      "country": "ALL",
+      "url": "http://magiz.net:80/play/w6DV56sWCL83fDKC_FC8Ow/ts",
       "backup_urls": [],
-      "logo": "",
-      "tvg_id": "BravoTV.ar",
+      "logo": "https://logo.iptveditor.com/stingrayiconcerts.png",
+      "tvg_id": "",
       "alive": true,
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:31:53Z"
+      "checked_at": "2026-06-30T22:38:15Z"
     },
     {
-      "name": "Canal 99 Miramar",
-      "group": "Familia y TV Abierta",
-      "country": "AR",
-      "url": "https://vivo.solumedia.com:19360/cardinal/cardinal.m3u8",
+      "name": "Cinecanal HD",
+      "group": "Peliculas - Cine",
+      "country": "ALL",
+      "url": "http://magiz.net:80/play/zucjsigWNm0kcgTKkTgBVw/ts",
       "backup_urls": [],
-      "logo": "",
-      "tvg_id": "Canal99Miramar.ar",
+      "logo": "https://logo.iptveditor.com/cinecanal.png",
+      "tvg_id": "",
       "alive": true,
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:32:37Z"
+      "checked_at": "2026-06-30T22:38:17Z"
     },
     {
-      "name": "Canal Provincial",
-      "group": "Familia y TV Abierta",
-      "country": "AR",
-      "url": "https://streaming.telered.com.ar/provincial/streaming/mystream.m3u8",
+      "name": "Cinemax HD",
+      "group": "Peliculas - Cine",
+      "country": "ALL",
+      "url": "http://magiz.net:80/play/R9EbG-pXk7VaRmIslLGWVw/ts",
       "backup_urls": [],
-      "logo": "",
-      "tvg_id": "CanalProvincial.ar",
+      "logo": "https://logo.iptveditor.com/cinemax.png",
+      "tvg_id": "",
       "alive": true,
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:32:36Z"
+      "checked_at": "2026-06-30T22:38:17Z"
     },
     {
-      "name": "El Trece",
-      "group": "Familia y TV Abierta",
-      "country": "AR",
-      "url": "https://livetrx01.vodgc.net/eltrecetv/index.m3u8",
+      "name": "Films&Arts",
+      "group": "Peliculas - Cine",
+      "country": "ALL",
+      "url": "http://magiz.net:80/play/WPcva3EB28-km272XPTYeIB9614R9oQPPiRpHONux6A/ts",
       "backup_urls": [],
-      "logo": "",
-      "tvg_id": "ElTrece.ar",
+      "logo": "https://revistamomentos.co/wp-content/uploads/2017/06/Logo-Film-Arts.png",
+      "tvg_id": "",
       "alive": true,
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:31:55Z"
+      "checked_at": "2026-06-30T22:38:18Z"
     },
     {
-      "name": "TV Publica Marcos Paz",
-      "group": "Familia y TV Abierta",
-      "country": "AR",
-      "url": "https://online.radiomelody.com.ar:2443/hls/mediospublicos.m3u8",
+      "name": "ATRES SERIES HD",
+      "group": "Peliculas - Drama y Series",
+      "country": "ALL",
+      "url": "http://magiz.net:80/play/QT5k49IEN8EnuOKYejh8mw/ts",
       "backup_urls": [],
-      "logo": "",
-      "tvg_id": "TVPublicaMarcosPaz.ar",
+      "logo": "https://logo.iptveditor.com/atreseries.png",
+      "tvg_id": "",
       "alive": true,
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:31:55Z"
+      "checked_at": "2026-06-30T22:38:55Z"
+    },
+    {
+      "name": "ESPN",
+      "group": "Deportes",
+      "country": "ALL",
+      "url": "http://magiz.net:80/play/QnOHd0X6c_PI4yfH-YTLHKs1yWtsI25pvgNb4uVroww/ts",
+      "backup_urls": [],
+      "logo": "https://logosmarcas.net/wp-content/uploads/2020/12/ESPN-Logo.png",
+      "tvg_id": "",
+      "alive": true,
+      "status_code": 200,
+      "error": null,
+      "state": "alive",
+      "checked_at": "2026-06-30T22:38:15Z"
+    },
+    {
+      "name": "ESPN PREMIUN",
+      "group": "Deportes",
+      "country": "ALL",
+      "url": "http://magiz.net:80/play/RTkJyUSmMFOgbvxQ_chnzTTaeh6yUPvU7WA1Bkn8oF4/ts",
+      "backup_urls": [],
+      "logo": "https://upload.wikimedia.org/wikipedia/commons/d/db/ESPN_Premium_logo.png",
+      "tvg_id": "",
+      "alive": true,
+      "status_code": 200,
+      "error": null,
+      "state": "alive",
+      "checked_at": "2026-06-30T22:38:15Z"
+    },
+    {
+      "name": "ESPN2",
+      "group": "Deportes",
+      "country": "ALL",
+      "url": "http://magiz.net:80/play/4icVWiiWv0six5UYxy6QM4uZcICAQV02QDGWvEgXIIA/ts",
+      "backup_urls": [],
+      "logo": "https://www.freepnglogos.com/uploads/espn-png-logo/espn2-png-logo-4.png",
+      "tvg_id": "",
+      "alive": true,
+      "status_code": 200,
+      "error": null,
+      "state": "alive",
+      "checked_at": "2026-06-30T22:38:15Z"
+    },
+    {
+      "name": "ESPN3",
+      "group": "Deportes",
+      "country": "ALL",
+      "url": "http://magiz.net:80/play/eYclaeE172wgVTHt8LIzhNjpiBIQ1D9YjbPfzoeqKmo/ts",
+      "backup_urls": [],
+      "logo": "http://magiz.net:80/images/ykgjTXniHjeet6pU1dhU9ubbvu8s3wPm5wjbz-kGNOrMQFen_N9nQB4DLkpRvPWisdFZAU8VrO8xIWtrOdThrTresEv784x87AcC0QCE8JE.png",
+      "tvg_id": "",
+      "alive": true,
+      "status_code": 200,
+      "error": null,
+      "state": "alive",
+      "checked_at": "2026-06-30T22:38:16Z"
+    },
+    {
+      "name": "ESPN4",
+      "group": "Deportes",
+      "country": "ALL",
+      "url": "http://magiz.net:80/play/Fak9Hbs6803bC99Y8fz9DSmJHw8VfWm_Ic0o-4zBzQU/ts",
+      "backup_urls": [],
+      "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/ESPN_4_logo.svg/2560px-ESPN_4_logo.svg.png",
+      "tvg_id": "",
+      "alive": true,
+      "status_code": 200,
+      "error": null,
+      "state": "alive",
+      "checked_at": "2026-06-30T22:38:16Z"
+    },
+    {
+      "name": "ESPN5",
+      "group": "Deportes",
+      "country": "ALL",
+      "url": "http://magiz.net:80/play/TBPq6Kby5CmPlAxPndexwaW-fnw2YcKsL60_k2bTwsM/ts",
+      "backup_urls": [],
+      "logo": "https://espnpressroom.com/us/files/2017/10/Horizontal-on-White-small-1.png",
+      "tvg_id": "",
+      "alive": true,
+      "status_code": 200,
+      "error": null,
+      "state": "alive",
+      "checked_at": "2026-06-30T22:38:16Z"
+    },
+    {
+      "name": "ESPN6",
+      "group": "Deportes",
+      "country": "ALL",
+      "url": "http://magiz.net:80/play/FXkMUu4wdk8CdqjZdfy4q1B8hmiEawbuzNaCMihQ7Js/ts",
+      "backup_urls": [],
+      "logo": "https://storingschecker.nl/img/bedrijven/espn-6.svg",
+      "tvg_id": "",
+      "alive": true,
+      "status_code": 200,
+      "error": null,
+      "state": "alive",
+      "checked_at": "2026-06-30T22:38:17Z"
+    },
+    {
+      "name": "ESPN7",
+      "group": "Deportes",
+      "country": "ALL",
+      "url": "http://magiz.net:80/play/ugIRXIl7mc3znpLyu9JjTRbdn66X6K3_NuWAlgueNuU/ts",
+      "backup_urls": [],
+      "logo": "https://television-libre.tv/img/espn7.png",
+      "tvg_id": "",
+      "alive": true,
+      "status_code": 200,
+      "error": null,
+      "state": "alive",
+      "checked_at": "2026-06-30T22:38:17Z"
+    },
+    {
+      "name": "Movistar Deportes HD",
+      "group": "Deportes",
+      "country": "ALL",
+      "url": "http://magiz.net:80/play/w1YBn58mzHh1DqkutWUkyA/ts",
+      "backup_urls": [],
+      "logo": "https://download.logo.wine/logo/Movistar_Deportes/Movistar_Deportes-Logo.wine.png",
+      "tvg_id": "",
+      "alive": true,
+      "status_code": 200,
+      "error": null,
+      "state": "alive",
+      "checked_at": "2026-06-30T22:38:14Z"
+    },
+    {
+      "name": "CNN INTERNATIONAL",
+      "group": "Noticias",
+      "country": "ALL",
+      "url": "http://magiz.net:80/play/smZlyAyCeFvVLtI0b1Zmfw/ts",
+      "backup_urls": [],
+      "logo": "https://upload.wikimedia.org/wikipedia/commons/0/04/Logo_cnnchile.png",
+      "tvg_id": "",
+      "alive": true,
+      "status_code": 200,
+      "error": null,
+      "state": "alive",
+      "checked_at": "2026-06-30T22:38:56Z"
+    },
+    {
+      "name": "E! Entertainment TV",
+      "group": "Entretenimiento",
+      "country": "ALL",
+      "url": "http://magiz.net:80/play/43oA7mosZZ_QfPyacr0wZw/ts",
+      "backup_urls": [],
+      "logo": "https://logo.iptveditor.com/eentertainm.png",
+      "tvg_id": "",
+      "alive": true,
+      "status_code": 200,
+      "error": null,
+      "state": "alive",
+      "checked_at": "2026-06-30T22:38:56Z"
+    },
+    {
+      "name": "MTV HD",
+      "group": "Entretenimiento",
+      "country": "ALL",
+      "url": "http://magiz.net:80/play/xAdvpjPI-84yn7IEXeN0Ig/ts",
+      "backup_urls": [],
+      "logo": "https://logo.iptveditor.com/mtv.png",
+      "tvg_id": "",
+      "alive": true,
+      "status_code": 200,
+      "error": null,
+      "state": "alive",
+      "checked_at": "2026-06-30T22:38:57Z"
+    },
+    {
+      "name": "Nick Music",
+      "group": "Entretenimiento",
+      "country": "ALL",
+      "url": "http://magiz.net:80/play/2J9uF6Dt_05KQ9zIpVnOHg/ts",
+      "backup_urls": [],
+      "logo": "https://upload.wikimedia.org/wikipedia/commons/3/3d/NickMusic_Logo.png",
+      "tvg_id": "",
+      "alive": true,
+      "status_code": 200,
+      "error": null,
+      "state": "alive",
+      "checked_at": "2026-06-30T22:38:57Z"
+    },
+    {
+      "name": "America TV HD",
+      "group": "Otros",
+      "country": "ALL",
+      "url": "http://magiz.net:80/play/pekTmPI3oQkyYMI7tfjByQ/ts",
+      "backup_urls": [],
+      "logo": "https://upload.wikimedia.org/wikipedia/commons/a/ab/Am%C3%A9rica_Televisi%C3%B3n_logo_2016.png",
+      "tvg_id": "",
+      "alive": true,
+      "status_code": 200,
+      "error": null,
+      "state": "alive",
+      "checked_at": "2026-06-30T22:38:58Z"
+    },
+    {
+      "name": "AMERICA TV HYO",
+      "group": "Otros",
+      "country": "ALL",
+      "url": "http://magiz.net:80/play/7c-W6k90Oxx_7xmf8DXGSqnatUCqw9C9JXJqNWoHqbw/ts",
+      "backup_urls": [],
+      "logo": "https://upload.wikimedia.org/wikipedia/commons/a/ab/Am%C3%A9rica_Televisi%C3%B3n_logo_2016.png",
+      "tvg_id": "",
+      "alive": true,
+      "status_code": 200,
+      "error": null,
+      "state": "alive",
+      "checked_at": "2026-06-30T22:38:59Z"
+    },
+    {
+      "name": "Animal Planet HD",
+      "group": "Otros",
+      "country": "ALL",
+      "url": "http://magiz.net:80/play/FVVk-R-NcU0mPbJfwfRUDA/ts",
+      "backup_urls": [],
+      "logo": "https://upload.wikimedia.org/wikipedia/commons/3/3e/Animal_Planet.png",
+      "tvg_id": "",
+      "alive": true,
+      "status_code": 200,
+      "error": null,
+      "state": "alive",
+      "checked_at": "2026-06-30T22:39:09Z"
+    },
+    {
+      "name": "ATV",
+      "group": "Otros",
+      "country": "ALL",
+      "url": "http://magiz.net:80/play/Ae681sAjoCwHFKMDTdfFcQ/ts",
+      "backup_urls": [],
+      "logo": "https://upload.wikimedia.org/wikipedia/commons/0/0e/ATV_logo_2020.png",
+      "tvg_id": "",
+      "alive": true,
+      "status_code": 200,
+      "error": null,
+      "state": "alive",
+      "checked_at": "2026-06-30T22:39:01Z"
+    },
+    {
+      "name": "BETHEL",
+      "group": "Otros",
+      "country": "ALL",
+      "url": "http://magiz.net:80/play/4GgxH8R3P3-VX9rQWxscismCvs5UBEcr64H_VbDcMUA/ts",
+      "backup_urls": [],
+      "logo": "https://e7.pngegg.com/pngimages/31/791/png-clipart-radio-station-radio-bethel-cochabamba-internet-radio-television-radio-station-radio-bethel-thumbnail.png",
+      "tvg_id": "",
+      "alive": true,
+      "status_code": 200,
+      "error": null,
+      "state": "alive",
+      "checked_at": "2026-06-30T22:38:58Z"
+    },
+    {
+      "name": "Canal N",
+      "group": "Otros",
+      "country": "ALL",
+      "url": "http://magiz.net:80/play/HVwG2jOeSlaDHfiOg6g3GA/ts",
+      "backup_urls": [],
+      "logo": "https://logo.iptveditor.com/canaln.png",
+      "tvg_id": "",
+      "alive": true,
+      "status_code": 200,
+      "error": null,
+      "state": "alive",
+      "checked_at": "2026-06-30T22:39:04Z"
+    },
+    {
+      "name": "Discovery H&H HD",
+      "group": "Otros",
+      "country": "ALL",
+      "url": "http://magiz.net:80/play/JSu-hrOCLwSGuS4UWwklrA/ts",
+      "backup_urls": [],
+      "logo": "https://logo.iptveditor.com/discoveryh&h.png",
+      "tvg_id": "",
+      "alive": true,
+      "status_code": 200,
+      "error": null,
+      "state": "alive",
+      "checked_at": "2026-06-30T22:39:09Z"
+    },
+    {
+      "name": "DTV SPORT",
+      "group": "Otros",
+      "country": "ALL",
+      "url": "http://magiz.net:80/play/Z7vxR-Ajj8IwIk0mMGntQyR_rSE0CkzzUeRoZagpryg/ts",
+      "backup_urls": [],
+      "logo": "https://upload.wikimedia.org/wikipedia/commons/2/22/DirectTV-logo.png",
+      "tvg_id": "",
+      "alive": true,
+      "status_code": 200,
+      "error": null,
+      "state": "alive",
+      "checked_at": "2026-06-30T22:39:04Z"
+    },
+    {
+      "name": "GLOBAL",
+      "group": "Otros",
+      "country": "ALL",
+      "url": "http://magiz.net:80/play/yHO3Khg8IbVMIjIPRhel0Q/ts",
+      "backup_urls": [],
+      "logo": "https://e7.pngegg.com/pngimages/696/785/png-clipart-gtv-logo-television-channel-trademark-global-network-television-text.png",
+      "tvg_id": "",
+      "alive": true,
+      "status_code": 200,
+      "error": null,
+      "state": "alive",
+      "checked_at": "2026-06-30T22:39:01Z"
+    },
+    {
+      "name": "History 2 HD",
+      "group": "Otros",
+      "country": "ALL",
+      "url": "http://magiz.net:80/play/Ibr1sJHdp1V9auErpAA97A/ts",
+      "backup_urls": [],
+      "logo": "https://upload.wikimedia.org/wikipedia/commons/a/a3/History2Logo2019.png",
+      "tvg_id": "",
+      "alive": true,
+      "status_code": 200,
+      "error": null,
+      "state": "alive",
+      "checked_at": "2026-06-30T22:39:08Z"
+    },
+    {
+      "name": "History Channel HD",
+      "group": "Otros",
+      "country": "ALL",
+      "url": "http://magiz.net:80/play/_k3x5mwoInk-ilbQ1_XS2g/ts",
+      "backup_urls": [],
+      "logo": "https://logo.iptveditor.com/historychannel.png",
+      "tvg_id": "",
+      "alive": true,
+      "status_code": 200,
+      "error": null,
+      "state": "alive",
+      "checked_at": "2026-06-30T22:39:07Z"
+    },
+    {
+      "name": "IPE",
+      "group": "Otros",
+      "country": "ALL",
+      "url": "http://magiz.net:80/play/XYPRw4FQaEvds8zaaAjEYkVpfQRG9eFR6Urtzn3eNVA/ts",
+      "backup_urls": [],
+      "logo": "",
+      "tvg_id": "",
+      "alive": true,
+      "status_code": 200,
+      "error": null,
+      "state": "alive",
+      "checked_at": "2026-06-30T22:39:01Z"
+    },
+    {
+      "name": "KDNA 15",
+      "group": "Otros",
+      "country": "ALL",
+      "url": "http://magiz.net:80/play/3LT0GDBivdHTlh01OZiP5X2ZK380vmGXjH-OZvALDDE/ts",
+      "backup_urls": [],
+      "logo": "https://i.ytimg.com/vi/n6GrphyS3Ds/hqdefault.jpg",
+      "tvg_id": "",
+      "alive": true,
+      "status_code": 200,
+      "error": null,
+      "state": "alive",
+      "checked_at": "2026-06-30T22:39:02Z"
+    },
+    {
+      "name": "Latina HD",
+      "group": "Otros",
+      "country": "ALL",
+      "url": "http://magiz.net:80/play/H-jJuuTZXlDj7s-VqRIzvA/ts",
+      "backup_urls": [],
+      "logo": "https://brandlogo.org/wp-content/uploads/2024/11/Latina-Television-Logo-2024.png",
+      "tvg_id": "",
+      "alive": true,
+      "status_code": 200,
+      "error": null,
+      "state": "alive",
+      "checked_at": "2026-06-30T22:38:59Z"
+    },
+    {
+      "name": "LIGA 1 MAX",
+      "group": "Otros",
+      "country": "ALL",
+      "url": "http://magiz.net:80/play/v3AchMA6ceaqyXBLxo3jXMtjkV-asawJm2nHPYZAFGc/ts",
+      "backup_urls": [],
+      "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9tgYOiGUUMIhYuzjwtiib8jSIXfoDRXA1mQ&s",
+      "tvg_id": "",
+      "alive": true,
+      "status_code": 200,
+      "error": null,
+      "state": "alive",
+      "checked_at": "2026-06-30T22:39:03Z"
+    },
+    {
+      "name": "LOVE NATURE",
+      "group": "Otros",
+      "country": "ALL",
+      "url": "http://magiz.net:80/play/_GojzVKLWOdLIRsToJQ2ZekpNdMdVzxCzUGBJ0VjZdw/ts",
+      "backup_urls": [],
+      "logo": "https://tv.lovenature.com/wp-content/uploads/2023/03/Love-Nature-Logo.png",
+      "tvg_id": "",
+      "alive": true,
+      "status_code": 200,
+      "error": null,
+      "state": "alive",
+      "checked_at": "2026-06-30T22:39:09Z"
+    },
+    {
+      "name": "Movistar Plus",
+      "group": "Otros",
+      "country": "ALL",
+      "url": "http://magiz.net:80/play/vX9913lQG0Z0KL1Irdsh4g/ts",
+      "backup_urls": [],
+      "logo": "https://upload.wikimedia.org/wikipedia/commons/d/d9/Movistar%2B_Logo.png",
+      "tvg_id": "",
+      "alive": true,
+      "status_code": 200,
+      "error": null,
+      "state": "alive",
+      "checked_at": "2026-06-30T22:39:04Z"
+    },
+    {
+      "name": "MÆsChic",
+      "group": "Otros",
+      "country": "ALL",
+      "url": "http://magiz.net:80/play/oTSSv0hwVcD4SgplfO2MPA/ts",
+      "backup_urls": [],
+      "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Logo_M%C3%A1s_Chic_(canal_de_televisi%C3%B3n).svg/1280px-Logo_M%C3%A1s_Chic_(canal_de_televisi%C3%B3n).svg.png",
+      "tvg_id": "",
+      "alive": true,
+      "status_code": 200,
+      "error": null,
+      "state": "alive",
+      "checked_at": "2026-06-30T22:39:06Z"
+    },
+    {
+      "name": "Nat Geo HD",
+      "group": "Otros",
+      "country": "ALL",
+      "url": "http://magiz.net:80/play/tdlxKidExNdXdaVT8WHwjw/ts",
+      "backup_urls": [],
+      "logo": "https://upload.wikimedia.org/wikipedia/commons/2/22/Nat_Geo_HD.png",
+      "tvg_id": "",
+      "alive": true,
+      "status_code": 200,
+      "error": null,
+      "state": "alive",
+      "checked_at": "2026-06-30T22:39:09Z"
+    },
+    {
+      "name": "Panamericana",
+      "group": "Otros",
+      "country": "ALL",
+      "url": "http://magiz.net:80/play/mRmfn1Ip5L-S7HVjzZ92wA/ts",
+      "backup_urls": [],
+      "logo": "https://upload.wikimedia.org/wikipedia/commons/2/26/Panamericana_tv_2009.png",
+      "tvg_id": "",
+      "alive": true,
+      "status_code": 200,
+      "error": null,
+      "state": "alive",
+      "checked_at": "2026-06-30T22:38:59Z"
+    },
+    {
+      "name": "Pasiones HD",
+      "group": "Otros",
+      "country": "ALL",
+      "url": "http://magiz.net:80/play/V6kT6KseqPsYBpycPSTt7A/ts",
+      "backup_urls": [],
+      "logo": "https://logowik.com/content/uploads/images/pasiones-tv1683.jpg",
+      "tvg_id": "",
+      "alive": true,
+      "status_code": 200,
+      "error": null,
+      "state": "alive",
+      "checked_at": "2026-06-30T22:39:06Z"
+    },
+    {
+      "name": "RPP",
+      "group": "Otros",
+      "country": "ALL",
+      "url": "http://magiz.net:80/play/q9yfTdpw-kZK0vSY0kIovQ/ts",
+      "backup_urls": [],
+      "logo": "https://upload.wikimedia.org/wikipedia/commons/3/36/RPP_logo.png",
+      "tvg_id": "",
+      "alive": true,
+      "status_code": 200,
+      "error": null,
+      "state": "alive",
+      "checked_at": "2026-06-30T22:39:02Z"
+    },
+    {
+      "name": "Telemundo",
+      "group": "Otros",
+      "country": "ALL",
+      "url": "http://magiz.net:80/play/aG6vDeEzQcjBcj1I6zAH8A/ts",
+      "backup_urls": [],
+      "logo": "https://logo.iptveditor.com/telemundo.png",
+      "tvg_id": "",
+      "alive": true,
+      "status_code": 200,
+      "error": null,
+      "state": "alive",
+      "checked_at": "2026-06-30T22:39:06Z"
+    },
+    {
+      "name": "Telenovelas",
+      "group": "Otros",
+      "country": "ALL",
+      "url": "http://magiz.net:80/play/5TXzaMGQ5om7N671LvZ3cw/ts",
+      "backup_urls": [],
+      "logo": "https://upload.wikimedia.org/wikipedia/commons/0/01/Logo_tlnovelas_feb2019.png",
+      "tvg_id": "",
+      "alive": true,
+      "status_code": 200,
+      "error": null,
+      "state": "alive",
+      "checked_at": "2026-06-30T22:39:06Z"
+    },
+    {
+      "name": "TV PERU",
+      "group": "Otros",
+      "country": "ALL",
+      "url": "http://magiz.net:80/play/dWgSkZo6iCDBW8m_sYDPXw/ts",
+      "backup_urls": [],
+      "logo": "https://upload.wikimedia.org/wikipedia/commons/5/50/LOGO_TV_PERU_2012.png",
+      "tvg_id": "",
+      "alive": true,
+      "status_code": 200,
+      "error": null,
+      "state": "alive",
+      "checked_at": "2026-06-30T22:38:58Z"
+    },
+    {
+      "name": "UNITEL TV",
+      "group": "Otros",
+      "country": "ALL",
+      "url": "http://magiz.net:80/play/N0xhvjxE0tmHcuXI44wvs1ycCb7ZvFu7fQpRmtuE6as/ts",
+      "backup_urls": [],
+      "logo": "https://1.bp.blogspot.com/-omRgAHMA2fg/Xx6D1w54RsI/AAAAAAAAKjU/W-SSKvoQbbcFU7nhQsm5PmD9jZp2h0OMQCLcBGAsYHQ/s1600/unitel.png",
+      "tvg_id": "",
+      "alive": true,
+      "status_code": 200,
+      "error": null,
+      "state": "alive",
+      "checked_at": "2026-06-30T22:38:57Z"
+    },
+    {
+      "name": "Estrella TV (1080p)",
+      "group": "Familia y TV Abierta",
+      "country": "US",
+      "url": "https://estrellatv-oando.amagi.tv/playlist.m3u8",
+      "backup_urls": [],
+      "logo": "https://i.imgur.com/IZxjnyp.png",
+      "tvg_id": "EstrellaTV.us@SD",
+      "alive": true,
+      "status_code": 200,
+      "error": null,
+      "state": "alive",
+      "checked_at": "2026-06-30T22:37:05Z"
+    },
+    {
+      "name": "AXN Latin America Mexico",
+      "group": "Peliculas - Cine",
+      "country": "US",
+      "url": "http://190.11.225.124:5000/live/axn_hd/playlist.m3u8",
+      "backup_urls": [],
+      "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/AXN_logo_%282015%29.svg/960px-AXN_logo_%282015%29.svg.png",
+      "tvg_id": "AXNLatinAmerica.us@Mexico",
+      "alive": true,
+      "status_code": 200,
+      "error": null,
+      "state": "alive",
+      "checked_at": "2026-06-30T22:36:51Z"
     },
     {
       "name": "Merry Christmas from Viafree",
@@ -2429,7 +2145,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:32:58Z"
+      "checked_at": "2026-06-30T22:37:47Z"
     },
     {
       "name": "NonStop Kung Fu",
@@ -2443,7 +2159,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:32:59Z"
+      "checked_at": "2026-06-30T22:37:49Z"
     },
     {
       "name": "Pluto TV Bud & Terence",
@@ -2457,7 +2173,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:33:02Z"
+      "checked_at": "2026-06-30T22:37:52Z"
     },
     {
       "name": "Pluto TV Film",
@@ -2471,7 +2187,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:33:02Z"
+      "checked_at": "2026-06-30T22:37:53Z"
     },
     {
       "name": "Pluto TV Harlequin",
@@ -2485,7 +2201,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:33:03Z"
+      "checked_at": "2026-06-30T22:37:53Z"
     },
     {
       "name": "Pluto TV John Wayne",
@@ -2499,7 +2215,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:33:03Z"
+      "checked_at": "2026-06-30T22:37:53Z"
     },
     {
       "name": "Pluto TV Komedie",
@@ -2513,7 +2229,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:33:04Z"
+      "checked_at": "2026-06-30T22:37:54Z"
     },
     {
       "name": "Pluto TV Kultfilmer",
@@ -2527,7 +2243,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:33:05Z"
+      "checked_at": "2026-06-30T22:37:55Z"
     },
     {
       "name": "Pluto TV Romantikk",
@@ -2541,7 +2257,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:33:06Z"
+      "checked_at": "2026-06-30T22:37:55Z"
     },
     {
       "name": "Bondi Rescue (720p)",
@@ -2555,7 +2271,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:32:43Z"
+      "checked_at": "2026-06-30T22:37:34Z"
     },
     {
       "name": "Car Chase (720p)",
@@ -2569,7 +2285,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:32:45Z"
+      "checked_at": "2026-06-30T22:37:36Z"
     },
     {
       "name": "7th Heaven",
@@ -2583,7 +2299,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:32:39Z"
+      "checked_at": "2026-06-30T22:37:31Z"
     },
     {
       "name": "America's Next Top Model",
@@ -2597,7 +2313,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:32:39Z"
+      "checked_at": "2026-06-30T22:37:31Z"
     },
     {
       "name": "Auction Hunters",
@@ -2611,7 +2327,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:32:41Z"
+      "checked_at": "2026-06-30T22:37:31Z"
     },
     {
       "name": "Becker",
@@ -2625,7 +2341,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:32:40Z"
+      "checked_at": "2026-06-30T22:37:33Z"
     },
     {
       "name": "BET",
@@ -2639,7 +2355,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:32:42Z"
+      "checked_at": "2026-06-30T22:37:33Z"
     },
     {
       "name": "Britain's Next Top Model",
@@ -2653,7 +2369,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:32:43Z"
+      "checked_at": "2026-06-30T22:37:35Z"
     },
     {
       "name": "Bull",
@@ -2667,7 +2383,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:32:44Z"
+      "checked_at": "2026-06-30T22:37:35Z"
     },
     {
       "name": "Dallas Cowboys Cheerleaders",
@@ -2681,7 +2397,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:32:47Z"
+      "checked_at": "2026-06-30T22:37:38Z"
     },
     {
       "name": "Dating Naked UK",
@@ -2695,7 +2411,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:32:47Z"
+      "checked_at": "2026-06-30T22:37:38Z"
     },
     {
       "name": "Diagnosis Murder",
@@ -2709,7 +2425,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:32:48Z"
+      "checked_at": "2026-06-30T22:37:40Z"
     },
     {
       "name": "Doc Martin",
@@ -2723,7 +2439,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:32:48Z"
+      "checked_at": "2026-06-30T22:37:40Z"
     },
     {
       "name": "Happy Days",
@@ -2737,7 +2453,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:32:51Z"
+      "checked_at": "2026-06-30T22:37:41Z"
     },
     {
       "name": "House of Lies",
@@ -2751,7 +2467,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:32:51Z"
+      "checked_at": "2026-06-30T22:37:42Z"
     },
     {
       "name": "JAG",
@@ -2765,7 +2481,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:32:53Z"
+      "checked_at": "2026-06-30T22:37:43Z"
     },
     {
       "name": "Judge Judy",
@@ -2779,7 +2495,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:32:53Z"
+      "checked_at": "2026-06-30T22:37:44Z"
     },
     {
       "name": "Luksusfellen Sverige",
@@ -2793,7 +2509,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:32:54Z"
+      "checked_at": "2026-06-30T22:37:45Z"
     },
     {
       "name": "MacGyver",
@@ -2807,7 +2523,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:32:54Z"
+      "checked_at": "2026-06-30T22:37:45Z"
     },
     {
       "name": "Matlock",
@@ -2821,7 +2537,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:32:54Z"
+      "checked_at": "2026-06-30T22:37:45Z"
     },
     {
       "name": "McLeods døtre & Grantchester",
@@ -2835,7 +2551,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:32:55Z"
+      "checked_at": "2026-06-30T22:37:47Z"
     },
     {
       "name": "Medium",
@@ -2849,7 +2565,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:32:55Z"
+      "checked_at": "2026-06-30T22:37:47Z"
     },
     {
       "name": "Mission Impossible",
@@ -2863,7 +2579,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:32:56Z"
+      "checked_at": "2026-06-30T22:37:47Z"
     },
     {
       "name": "Nordisk krim fra Viaplay",
@@ -2877,7 +2593,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:32:59Z"
+      "checked_at": "2026-06-30T22:37:49Z"
     },
     {
       "name": "Numb3rs",
@@ -2891,7 +2607,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:33:00Z"
+      "checked_at": "2026-06-30T22:37:50Z"
     },
     {
       "name": "Pluto TV Action",
@@ -2905,7 +2621,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:33:01Z"
+      "checked_at": "2026-06-30T22:37:52Z"
     },
     {
       "name": "Pluto TV Horror",
@@ -2919,7 +2635,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:33:04Z"
+      "checked_at": "2026-06-30T22:37:53Z"
     },
     {
       "name": "Pluto TV Overnaturlig",
@@ -2933,7 +2649,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:33:05Z"
+      "checked_at": "2026-06-30T22:37:55Z"
     },
     {
       "name": "Pluto TV Sci-Fi",
@@ -2947,7 +2663,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:33:06Z"
+      "checked_at": "2026-06-30T22:37:56Z"
     },
     {
       "name": "Pluto TV True Crime",
@@ -2961,7 +2677,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:33:08Z"
+      "checked_at": "2026-06-30T22:37:57Z"
     },
     {
       "name": "Pluto TV Wild West",
@@ -2975,7 +2691,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:33:08Z"
+      "checked_at": "2026-06-30T22:37:59Z"
     },
     {
       "name": "Rawhide",
@@ -2989,7 +2705,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:33:09Z"
+      "checked_at": "2026-06-30T22:37:59Z"
     },
     {
       "name": "Scorpion",
@@ -3003,7 +2719,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:33:10Z"
+      "checked_at": "2026-06-30T22:38:01Z"
     },
     {
       "name": "Skjønnhetsfellen Danmark",
@@ -3017,7 +2733,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:33:10Z"
+      "checked_at": "2026-06-30T22:38:01Z"
     },
     {
       "name": "Star Trek: The Original Series",
@@ -3031,7 +2747,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:33:13Z"
+      "checked_at": "2026-06-30T22:38:05Z"
     },
     {
       "name": "The L Word",
@@ -3045,7 +2761,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:33:15Z"
+      "checked_at": "2026-06-30T22:38:07Z"
     },
     {
       "name": "The New Detectives",
@@ -3059,7 +2775,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:33:17Z"
+      "checked_at": "2026-06-30T22:38:07Z"
     },
     {
       "name": "The Twilight Zone",
@@ -3073,7 +2789,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:33:17Z"
+      "checked_at": "2026-06-30T22:38:06Z"
     },
     {
       "name": "The Wild Wild West",
@@ -3087,7 +2803,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:33:17Z"
+      "checked_at": "2026-06-30T22:38:07Z"
     },
     {
       "name": "Unga Mammor",
@@ -3101,7 +2817,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:33:18Z"
+      "checked_at": "2026-06-30T22:38:08Z"
     },
     {
       "name": "Wildfire",
@@ -3115,7 +2831,63 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:33:20Z"
+      "checked_at": "2026-06-30T22:38:10Z"
+    },
+    {
+      "name": "Disney Jr. Latin America North HD (1080p)",
+      "group": "Peliculas - Familiar",
+      "country": "AR",
+      "url": "http://190.11.225.124:5000/live/disney_jr_hd/playlist.m3u8",
+      "backup_urls": [],
+      "logo": "https://upload.wikimedia.org/wikipedia/commons/e/e3/2024_Disney_Jr._Logo.svg",
+      "tvg_id": "DisneyJrLatinAmerica.ar@NorthHD",
+      "alive": true,
+      "status_code": 200,
+      "error": null,
+      "state": "alive",
+      "checked_at": "2026-06-30T22:37:03Z"
+    },
+    {
+      "name": "Estrella Games (1080p)",
+      "group": "Peliculas - Familiar",
+      "country": "US",
+      "url": "https://estrella-games-oando.amagi.tv/playlist.m3u8",
+      "backup_urls": [],
+      "logo": "https://i.imgur.com/Z52nEnH.png",
+      "tvg_id": "EstrellaGames.us@SD",
+      "alive": true,
+      "status_code": 200,
+      "error": null,
+      "state": "alive",
+      "checked_at": "2026-06-30T22:37:04Z"
+    },
+    {
+      "name": "Nick Jr. Latin America (1080p)",
+      "group": "Peliculas - Familiar",
+      "country": "US",
+      "url": "http://179.60.51.134:8888/NICK-JR/index.m3u8",
+      "backup_urls": [],
+      "logo": "https://i.imgur.com/KT4tdQs.png",
+      "tvg_id": "NickJrLatinAmerica.us@Panregional",
+      "alive": true,
+      "status_code": 200,
+      "error": null,
+      "state": "alive",
+      "checked_at": "2026-06-30T22:37:12Z"
+    },
+    {
+      "name": "Disney Channel Latin America Mexico (720p)",
+      "group": "Peliculas - Familiar",
+      "country": "AR",
+      "url": "http://45.166.93.156:9999/play/a0f3/index.m3u8",
+      "backup_urls": [],
+      "logo": "https://upload.wikimedia.org/wikipedia/commons/f/ff/2024_Disney_Channel_text_logo.svg",
+      "tvg_id": "DisneyChannelLatinAmerica.ar@Mexico",
+      "alive": true,
+      "status_code": 200,
+      "error": null,
+      "state": "alive",
+      "checked_at": "2026-06-30T22:37:01Z"
     },
     {
       "name": "Pluto TV Juniorklubben (720p)",
@@ -3129,7 +2901,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:33:03Z"
+      "checked_at": "2026-06-30T22:37:54Z"
     },
     {
       "name": "Pluto TV Klassiske tegnefilmer (720p)",
@@ -3143,7 +2915,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:33:04Z"
+      "checked_at": "2026-06-30T22:37:54Z"
     },
     {
       "name": "Pluto TV Tegnefilm (720p)",
@@ -3157,7 +2929,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:33:07Z"
+      "checked_at": "2026-06-30T22:37:58Z"
     },
     {
       "name": "Pluto TV Ungdomsserier (720p)",
@@ -3171,7 +2943,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:33:07Z"
+      "checked_at": "2026-06-30T22:37:57Z"
     },
     {
       "name": "SvampeBob Firkant (720p)",
@@ -3185,7 +2957,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:33:14Z"
+      "checked_at": "2026-06-30T22:38:05Z"
     },
     {
       "name": "Totally Turtles (720p)",
@@ -3199,7 +2971,21 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:33:18Z"
+      "checked_at": "2026-06-30T22:38:08Z"
+    },
+    {
+      "name": "Disney Channel Latin America North (576p)",
+      "group": "Peliculas - Familiar",
+      "country": "AR",
+      "url": "http://138.121.15.230:9002/DISNEY-CHANNEL/index.m3u8",
+      "backup_urls": [],
+      "logo": "https://upload.wikimedia.org/wikipedia/commons/f/ff/2024_Disney_Channel_text_logo.svg",
+      "tvg_id": "DisneyChannelLatinAmerica.ar@North",
+      "alive": true,
+      "status_code": 200,
+      "error": null,
+      "state": "alive",
+      "checked_at": "2026-06-30T22:37:02Z"
     },
     {
       "name": "iCarly",
@@ -3213,7 +2999,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:32:51Z"
+      "checked_at": "2026-06-30T22:37:42Z"
     },
     {
       "name": "Pluto TV Snooker 900 (720p)",
@@ -3227,7 +3013,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:33:06Z"
+      "checked_at": "2026-06-30T22:37:57Z"
     },
     {
       "name": "Pluto TV Sport",
@@ -3241,105 +3027,35 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:33:06Z"
+      "checked_at": "2026-06-30T22:37:59Z"
     },
     {
-      "name": "24/7 Canal de Noticias",
+      "name": "Estrella News (1080p)",
       "group": "Noticias",
-      "country": "AR",
-      "url": "https://panel.host-live.com:19360/cn247tv/cn247tv.m3u8",
+      "country": "US",
+      "url": "https://estrella-news-oando.amagi.tv/playlist.m3u8",
       "backup_urls": [],
-      "logo": "",
-      "tvg_id": "247CanaldeNoticias.ar",
+      "logo": "https://i.imgur.com/HRrkhLq.png",
+      "tvg_id": "EstrellaNews.us@SD",
       "alive": true,
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:32:35Z"
+      "checked_at": "2026-06-30T22:37:04Z"
     },
     {
-      "name": "Canal E",
-      "group": "Noticias",
-      "country": "AR",
-      "url": "https://unlimited1-us.dps.live/perfiltv/perfiltv.smil/playlist.m3u8",
+      "name": "MTV Latin America (1080p)",
+      "group": "Entretenimiento",
+      "country": "US",
+      "url": "http://179.60.51.134:8888/MTV/index.m3u8",
       "backup_urls": [],
-      "logo": "",
-      "tvg_id": "CanalE.ar",
+      "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/MTV_2021_%28brand_version%29.svg/960px-MTV_2021_%28brand_version%29.svg.png",
+      "tvg_id": "MTVLatinAmerica.us@Panregional",
       "alive": true,
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:31:58Z"
-    },
-    {
-      "name": "Canal TDC",
-      "group": "Noticias",
-      "country": "AR",
-      "url": "https://tdcserver.com:19360/tdconlione-2/tdconlione-2.m3u8",
-      "backup_urls": [],
-      "logo": "",
-      "tvg_id": "CanalTDC.ar",
-      "alive": true,
-      "status_code": 200,
-      "error": null,
-      "state": "alive",
-      "checked_at": "2026-06-30T22:32:37Z"
-    },
-    {
-      "name": "Catamarca TV",
-      "group": "Noticias",
-      "country": "AR",
-      "url": "https://stream.arcast.com.ar/canal7catamarca/ngrp:canal7catamarca_all/playlist.m3u8?DVR=",
-      "backup_urls": [],
-      "logo": "",
-      "tvg_id": "CatamarcaTV.ar",
-      "alive": true,
-      "status_code": 200,
-      "error": null,
-      "state": "alive",
-      "checked_at": "2026-06-30T22:32:36Z"
-    },
-    {
-      "name": "La Nacion +",
-      "group": "Noticias",
-      "country": "AR",
-      "url": "http://playcom.trapemn.tv:1935/transcoderip/lanacionplus.stream/playlist.m3u8",
-      "backup_urls": [],
-      "logo": "",
-      "tvg_id": "LaNacionPlus.ar",
-      "alive": true,
-      "status_code": 200,
-      "error": null,
-      "state": "alive",
-      "checked_at": "2026-06-30T22:31:58Z"
-    },
-    {
-      "name": "Mercurio Noticias",
-      "group": "Noticias",
-      "country": "AR",
-      "url": "https://videostream.shockmedia.com.ar/hls/mercuriotv/mercuriotv.m3u8",
-      "backup_urls": [],
-      "logo": "",
-      "tvg_id": "MercurioNoticias.ar",
-      "alive": true,
-      "status_code": 200,
-      "error": null,
-      "state": "alive",
-      "checked_at": "2026-06-30T22:32:36Z"
-    },
-    {
-      "name": "Net TV",
-      "group": "Noticias",
-      "country": "AR",
-      "url": "https://unlimited1-us.dps.live/nettv/nettv.smil/nettv/livestream1/chunks.m3u8",
-      "backup_urls": [],
-      "logo": "https://upload.wikimedia.org/wikipedia/commons/a/a5/Net_TV_logo.png",
-      "tvg_id": "net-tv",
-      "alive": true,
-      "status_code": 200,
-      "error": null,
-      "state": "alive",
-      "checked_at": "2026-06-30T22:32:35Z"
+      "checked_at": "2026-06-30T22:37:11Z"
     },
     {
       "name": "TV Østfold (1080p)",
@@ -3353,7 +3069,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:33:19Z"
+      "checked_at": "2026-06-30T22:38:08Z"
     },
     {
       "name": "Frikanalen (720p)",
@@ -3367,7 +3083,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:32:50Z"
+      "checked_at": "2026-06-30T22:37:41Z"
     },
     {
       "name": "MTV Dating (720p)",
@@ -3381,7 +3097,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:32:57Z"
+      "checked_at": "2026-06-30T22:37:48Z"
     },
     {
       "name": "MTV Ridiculousness (720p)",
@@ -3395,7 +3111,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:32:58Z"
+      "checked_at": "2026-06-30T22:37:48Z"
     },
     {
       "name": "MTV Teen Mom (720p)",
@@ -3409,7 +3125,35 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:32:58Z"
+      "checked_at": "2026-06-30T22:37:49Z"
+    },
+    {
+      "name": "TELE 6 (720p)",
+      "group": "Entretenimiento",
+      "country": "BO",
+      "url": "https://lbgo.bozztv.com/ssh101/ssh101/tele6/playlist.m3u8",
+      "backup_urls": [],
+      "logo": "https://i.imgur.com/p7tt72X.png",
+      "tvg_id": "TELE6.bo@SD",
+      "alive": true,
+      "status_code": 200,
+      "error": null,
+      "state": "alive",
+      "checked_at": "2026-06-30T22:37:19Z"
+    },
+    {
+      "name": "The Pet Collective International (720p)",
+      "group": "Entretenimiento",
+      "country": "US",
+      "url": "https://the-pet-collective-international-mx.samsung.wurl.tv/playlist.m3u8",
+      "backup_urls": [],
+      "logo": "https://i.imgur.com/yH7n2dF.png",
+      "tvg_id": "ThePetCollective.us@Mexico",
+      "alive": true,
+      "status_code": 200,
+      "error": null,
+      "state": "alive",
+      "checked_at": "2026-06-30T22:37:20Z"
     },
     {
       "name": "TV Modum (720p)",
@@ -3423,7 +3167,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:33:18Z"
+      "checked_at": "2026-06-30T22:38:08Z"
     },
     {
       "name": "Are You The One?",
@@ -3437,7 +3181,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:32:40Z"
+      "checked_at": "2026-06-30T22:37:32Z"
     },
     {
       "name": "Best of MTV",
@@ -3451,7 +3195,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:32:41Z"
+      "checked_at": "2026-06-30T22:37:33Z"
     },
     {
       "name": "Best of The Drew Barrymore Show",
@@ -3465,7 +3209,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:32:41Z"
+      "checked_at": "2026-06-30T22:37:33Z"
     },
     {
       "name": "Boligjakten",
@@ -3479,7 +3223,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:32:42Z"
+      "checked_at": "2026-06-30T22:37:33Z"
     },
     {
       "name": "Camp Kulinaris",
@@ -3493,7 +3237,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:32:45Z"
+      "checked_at": "2026-06-30T22:37:36Z"
     },
     {
       "name": "Charterfeber",
@@ -3507,7 +3251,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:32:46Z"
+      "checked_at": "2026-06-30T22:37:37Z"
     },
     {
       "name": "Eventyrlig Oppussing",
@@ -3521,7 +3265,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:32:51Z"
+      "checked_at": "2026-06-30T22:37:41Z"
     },
     {
       "name": "Ex On The Beach",
@@ -3535,7 +3279,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:32:49Z"
+      "checked_at": "2026-06-30T22:37:40Z"
     },
     {
       "name": "Geordie Shore",
@@ -3549,7 +3293,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:32:51Z"
+      "checked_at": "2026-06-30T22:37:43Z"
     },
     {
       "name": "Jersey Shore",
@@ -3563,7 +3307,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:32:53Z"
+      "checked_at": "2026-06-30T22:37:42Z"
     },
     {
       "name": "Jersey Shore Family Vacation",
@@ -3577,7 +3321,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:32:53Z"
+      "checked_at": "2026-06-30T22:37:44Z"
     },
     {
       "name": "Luksusfellen",
@@ -3591,21 +3335,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:32:53Z"
-    },
-    {
-      "name": "MTV Catfish",
-      "group": "Entretenimiento",
-      "country": "SE",
-      "url": "https://jmp2.uk/plu-61781a52a3638a00078fa57e.m3u8",
-      "backup_urls": [],
-      "logo": "https://images.pluto.tv/channels/6177fe76691b2e000702c7fc/colorLogoPNG_1750864554364.png",
-      "tvg_id": "MTVCatfish.se@NO",
-      "alive": true,
-      "status_code": 200,
-      "error": null,
-      "state": "alive",
-      "checked_at": "2026-06-30T22:32:56Z"
+      "checked_at": "2026-06-30T22:37:44Z"
     },
     {
       "name": "MTV Reality",
@@ -3619,7 +3349,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:32:57Z"
+      "checked_at": "2026-06-30T22:37:48Z"
     },
     {
       "name": "Paradise Hotel",
@@ -3633,7 +3363,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:33:01Z"
+      "checked_at": "2026-06-30T22:37:51Z"
     },
     {
       "name": "Pimp My Ride",
@@ -3647,7 +3377,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:33:01Z"
+      "checked_at": "2026-06-30T22:37:52Z"
     },
     {
       "name": "Ridiculousness Nye episoder",
@@ -3661,7 +3391,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:33:09Z"
+      "checked_at": "2026-06-30T22:38:00Z"
     },
     {
       "name": "Svenske Truckers",
@@ -3675,7 +3405,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:33:15Z"
+      "checked_at": "2026-06-30T22:38:05Z"
     },
     {
       "name": "The Daily Show",
@@ -3689,7 +3419,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:33:15Z"
+      "checked_at": "2026-06-30T22:38:05Z"
     },
     {
       "name": "The Hills",
@@ -3703,7 +3433,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:33:16Z"
+      "checked_at": "2026-06-30T22:38:05Z"
     },
     {
       "name": "The Millers",
@@ -3717,7 +3447,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:33:16Z"
+      "checked_at": "2026-06-30T22:38:06Z"
     },
     {
       "name": "Canal Motor (720p)",
@@ -3731,7 +3461,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:32:45Z"
+      "checked_at": "2026-06-30T22:37:36Z"
     },
     {
       "name": "Beavis and Butt-Head",
@@ -3745,7 +3475,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:32:41Z"
+      "checked_at": "2026-06-30T22:37:32Z"
     },
     {
       "name": "Boligkjøp i blinde",
@@ -3759,7 +3489,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:32:42Z"
+      "checked_at": "2026-06-30T22:37:35Z"
     },
     {
       "name": "Broad City",
@@ -3773,7 +3503,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:32:43Z"
+      "checked_at": "2026-06-30T22:37:34Z"
     },
     {
       "name": "Caroline in the City",
@@ -3787,7 +3517,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:32:44Z"
+      "checked_at": "2026-06-30T22:37:37Z"
     },
     {
       "name": "Chappelle's Show",
@@ -3801,7 +3531,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:32:46Z"
+      "checked_at": "2026-06-30T22:37:37Z"
     },
     {
       "name": "Cheers",
@@ -3815,7 +3545,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:32:46Z"
+      "checked_at": "2026-06-30T22:37:38Z"
     },
     {
       "name": "Crazy Ex-Girlfriend",
@@ -3829,7 +3559,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:32:47Z"
+      "checked_at": "2026-06-30T22:37:38Z"
     },
     {
       "name": "Everybody Hates Chris",
@@ -3843,7 +3573,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:32:50Z"
+      "checked_at": "2026-06-30T22:37:40Z"
     },
     {
       "name": "Family Ties",
@@ -3857,7 +3587,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:32:50Z"
+      "checked_at": "2026-06-30T22:37:42Z"
     },
     {
       "name": "Key & Peele",
@@ -3871,7 +3601,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:32:52Z"
+      "checked_at": "2026-06-30T22:37:44Z"
     },
     {
       "name": "Man with a Plan",
@@ -3885,7 +3615,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:32:54Z"
+      "checked_at": "2026-06-30T22:37:45Z"
     },
     {
       "name": "Pluto TV Motor",
@@ -3899,7 +3629,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:33:05Z"
+      "checked_at": "2026-06-30T22:37:55Z"
     },
     {
       "name": "Pluto TV Verdenskrigene",
@@ -3913,7 +3643,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:33:07Z"
+      "checked_at": "2026-06-30T22:37:58Z"
     },
     {
       "name": "Reno 911",
@@ -3927,7 +3657,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:33:09Z"
+      "checked_at": "2026-06-30T22:37:59Z"
     },
     {
       "name": "Sabrina the Teenage Witch",
@@ -3941,7 +3671,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:33:10Z"
+      "checked_at": "2026-06-30T22:38:00Z"
     },
     {
       "name": "South Park",
@@ -3955,7 +3685,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:33:10Z"
+      "checked_at": "2026-06-30T22:38:00Z"
     },
     {
       "name": "South Park Armageddon",
@@ -3969,7 +3699,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:33:11Z"
+      "checked_at": "2026-06-30T22:38:02Z"
     },
     {
       "name": "South Park Rockin' Out",
@@ -3983,7 +3713,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:33:12Z"
+      "checked_at": "2026-06-30T22:38:02Z"
     },
     {
       "name": "South Park: Butters Collection",
@@ -3997,7 +3727,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:33:11Z"
+      "checked_at": "2026-06-30T22:38:02Z"
     },
     {
       "name": "South Park: Cartman Collection",
@@ -4011,7 +3741,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:33:11Z"
+      "checked_at": "2026-06-30T22:38:02Z"
     },
     {
       "name": "South Park: Into the Stars",
@@ -4025,7 +3755,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:33:12Z"
+      "checked_at": "2026-06-30T22:38:03Z"
     },
     {
       "name": "South Park: Kenny Collection",
@@ -4039,7 +3769,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:33:12Z"
+      "checked_at": "2026-06-30T22:38:03Z"
     },
     {
       "name": "South Park: Kyle Collection",
@@ -4053,7 +3783,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:33:13Z"
+      "checked_at": "2026-06-30T22:38:04Z"
     },
     {
       "name": "South Park: Stan Collection",
@@ -4067,7 +3797,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:33:13Z"
+      "checked_at": "2026-06-30T22:38:03Z"
     },
     {
       "name": "Tosh.0",
@@ -4081,7 +3811,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "checked_at": "2026-06-30T22:33:17Z"
+      "checked_at": "2026-06-30T22:38:07Z"
     },
     {
       "name": "Capital 21 (1080p) [Not 24/7]",
@@ -4095,21 +3825,7 @@
       "status_code": 200,
       "error": "Handshake correcto pero contenido inestable (C21ti202)",
       "state": "unstable",
-      "checked_at": "2026-06-30T22:31:44Z"
-    },
-    {
-      "name": "Canal 22 Mexico",
-      "group": "Familia y TV Abierta",
-      "country": "MX",
-      "url": "https://canal22.org.mx",
-      "backup_urls": [],
-      "logo": "",
-      "tvg_id": "canal22.mx",
-      "alive": false,
-      "status_code": 200,
-      "error": "Handshake correcto pero contenido inestable (text/html)",
-      "state": "unstable",
-      "checked_at": "2026-06-30T22:31:54Z"
+      "checked_at": "2026-06-30T22:37:01Z"
     },
     {
       "name": "GikTVMX (720p)",
@@ -4123,7 +3839,7 @@
       "status_code": 200,
       "error": "Handshake correcto pero contenido inestable (text/plain; charset=utf-8)",
       "state": "unstable",
-      "checked_at": "2026-06-30T22:32:17Z"
+      "checked_at": "2026-06-30T22:37:06Z"
     },
     {
       "name": "PSN (288p)",
@@ -4137,7 +3853,7 @@
       "status_code": 200,
       "error": "Handshake correcto pero contenido inestable (text/plain; charset=utf-8)",
       "state": "unstable",
-      "checked_at": "2026-06-30T22:32:29Z"
+      "checked_at": "2026-06-30T22:37:14Z"
     },
     {
       "name": "PSN Canal 45.2 (288p)",
@@ -4151,21 +3867,7 @@
       "status_code": 200,
       "error": "Handshake correcto pero contenido inestable (text/plain; charset=utf-8)",
       "state": "unstable",
-      "checked_at": "2026-06-30T22:32:34Z"
-    },
-    {
-      "name": "Stream de Prueba (Big Buck Bunny)",
-      "group": "Otros",
-      "country": "ZZ",
-      "url": "https://mux.dev",
-      "backup_urls": [],
-      "logo": "",
-      "tvg_id": "test.bigbuckbunny",
-      "alive": false,
-      "status_code": 200,
-      "error": "Handshake correcto pero contenido inestable (text/html; charset=utf-8)",
-      "state": "unstable",
-      "checked_at": "2026-06-30T22:32:39Z"
+      "checked_at": "2026-06-30T22:37:14Z"
     }
   ]
 }
