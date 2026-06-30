@@ -140,6 +140,22 @@ https://raw.githubusercontent.com/TU_USUARIO/mi-tv-publica/main/public/playlist.
 
 Reemplaza `TU_USUARIO` por tu usuario real de GitHub.
 
+Para este repo, los links quedan así:
+
+```text
+Playlist VLC:
+https://raw.githubusercontent.com/Leeesssxd/mi-tv-publica/main/public/playlist.m3u
+
+Estado JSON:
+https://raw.githubusercontent.com/Leeesssxd/mi-tv-publica/main/public/status.json
+
+Estado Markdown:
+https://raw.githubusercontent.com/Leeesssxd/mi-tv-publica/main/public/status.md
+
+Telemetría privada:
+https://raw.githubusercontent.com/Leeesssxd/mi-tv-publica/main/public/telemetry_status.json
+```
+
 ### En VLC (computadora)
 
 1. Abre VLC.
