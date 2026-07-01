@@ -83,6 +83,7 @@
     "Peliculas - Crimen",
     "Peliculas - Terror",
     "Peliculas - Familiar",
+    "Documentales y Cultura",
     "Deportes",
     "Noticias",
     "Entretenimiento",
@@ -99,6 +100,15 @@
     "allowed_audio_codecs": ["mp4a.40.2"]
   },
   "priority_channels": [
+    "Canal 5 Televisa",
+    "Canal 5 (1080p)",
+    "Azteca 7",
+    "Azteca Uno",
+    "Las Estrellas (1080p)",
+    "Imagen TV+ (720p)",
+    "TUDN (1080p)",
+    "Claro Sports (720p)",
+    "Azteca Internacional (1080p)",
     "Azteca Uno",
     "Canal 5",
     "Azteca 7",
@@ -147,11 +157,17 @@
   "target_playlist_size": 1200,
   "target_group_quotas": {
     "Familia y TV Abierta": 300,
-    "Peliculas - Cine": 260,
+    "Peliculas - Cine": 240,
     "Peliculas - Drama y Series": 180,
-    "Deportes": 180,
-    "Noticias": 110,
-    "Entretenimiento": 110,
-    "Otros": 60
+    "Peliculas - Accion": 70,
+    "Peliculas - Comedia": 60,
+    "Peliculas - Crimen": 50,
+    "Peliculas - Terror": 50,
+    "Peliculas - Familiar": 50,
+    "Documentales y Cultura": 90,
+    "Deportes": 170,
+    "Noticias": 90,
+    "Entretenimiento": 100,
+    "Otros": 50
   }
 }

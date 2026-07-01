@@ -1,10 +1,10 @@
 # Estado del Dial
 
-Última revisión UTC: `2026-07-01T00:35:03Z`
+Última revisión UTC: `2026-07-01T04:55:00Z`
 
-- Posiciones pedidas: **140**
-- Posiciones cubiertas: **27**
-- Posiciones faltantes: **113**
+- Posiciones pedidas: **154**
+- Posiciones cubiertas: **29**
+- Posiciones faltantes: **125**
 
 | Pedido | Coincidencia | Grupo | País | Estado |
 |---|---|---|---|---|
@@ -13,8 +13,10 @@
 | LAS_ESTRELLAS_HD | Las Estrellas | Familia y TV Abierta | MX | alive |
 | IMAGEN_TV_HD | Imagen TV+ (720p) | Familia y TV Abierta | MX | alive |
 | CANAL_5_LOCAL_HD | Canal 5 Televisa | Familia y TV Abierta | MX | alive |
-| CANAL_6_HD | Canal 6 CDMX (FAST) | Familia y TV Abierta | MX | alive |
 | AZTECA_7_HD | Azteca 7 | Familia y TV Abierta | MX | alive |
+| TUDN_HD | TUDN | Deportes | MX | alive |
+| CLARO_SPORTS_HD | Claro Sports (720p) | Deportes | MX | alive |
+| CANAL_6_HD | Canal 6 CDMX (FAST) | Familia y TV Abierta | MX | alive |
 | CANAL_14_HD | Canal 14 | Familia y TV Abierta | MX | alive |
 | JALISCO_TV_HD | Jalisco TV (720p) | Familia y TV Abierta | MX | alive |
 | TV_UNAM_SD | TV UNAM | Familia y TV Abierta | MX | alive |
@@ -34,12 +36,24 @@
 | DISNEY_CHANNEL_HD | Disney Channel Latin America Mexico (720p) | Peliculas - Familiar | MX | alive |
 | AYM_SPORTS_HD | AyM Sports | Deportes | MX | alive |
 | LAS_HD | Dallas Cowboys Cheerleaders | Peliculas - Drama y Series | SE | alive |
-| CLARO_SPORTS_HD | Claro Sports (720p) | Deportes | MX | alive |
+| PANICO_DELAY_SD | Panico (576p) | Peliculas - Terror | MX | alive |
 
 ## Faltantes
 
 - Básico Plus
 - BARKER_CHANNEL_HD
+- VIX_DEPORTES_HD
+- VIX_PREMIUM_HD
+- FIFA_PLUS_HD
+- DSPORTS_HD
+- DSPORTS_2_HD
+- DSPORTS_PLUS_HD
+- AZTECA_DEPORTES_NETWORK_HD
+- FOX_SPORTS_HD
+- ESPN_HD
+- ESPN_2_HD
+- ESPN_3_HD
+- ESPN_4_HD
 - CANAL_4_GDL_HD
 - MÁS_VISIÓN_HD
 - NU9VE_HD
@@ -124,10 +138,10 @@
 - MEGA_SPORTS_1_HD
 - AZTECA_DEPORTES_NETWORK_HD
 - PX_SPORTS_HD
+- CLARO_SPORTS_HD
 - WWB_SD
 - CINEMA_PLATINO_DELAY_SD
 - CINEMA_PLATINO_HD
-- PANICO_DELAY_SD
 - PANICO_HD
 - SONY_MOVIES
 - EUROPA_EUROPA_HD

@@ -33,7 +33,7 @@ import aiohttp
 
 DEFAULT_CONFIG: dict[str, Any] = {
     "timeout_seconds": 10,
-    "max_concurrency": 5,
+    "max_concurrency": 120,
     "user_agent": "MiTVPublicaBot/1.0 (+https://github.com)",
     "accept_language": "es-MX,es;q=0.9,en;q=0.6",
     "sort_by": ["group", "name"],
@@ -53,6 +53,8 @@ DEFAULT_CONFIG: dict[str, Any] = {
     "retry_backoff_base_seconds": 1.0,
     "jitter_min_seconds": 0.5,
     "jitter_max_seconds": 1.5,
+    "status_cache_ttl_seconds": 86400,
+    "head_first": True,
     "stream_selection": {
         "mode": "strict",
         "min_width": 1920,
@@ -68,6 +70,7 @@ ROOT_DIR = Path(__file__).resolve().parent.parent
 SOURCES_FILE = ROOT_DIR / "sources" / "channels.json"
 PUBLIC_DIR = ROOT_DIR / "public"
 CONFIG_FILE = ROOT_DIR / "config.json"
+STATUS_CACHE_FILE = PUBLIC_DIR / "status_cache.json"
 VOD_PLAYLIST_FILE = PUBLIC_DIR / "vod_playlist.m3u"
 VOD_STATUS_FILE = PUBLIC_DIR / "vod_status.json"
 VOD_STATUS_MD_FILE = PUBLIC_DIR / "vod_status.md"
@@ -112,10 +115,24 @@ REQUESTED_CATALOG_ORDER = [
     "AZTECA_UNO_HD",
     "LAS_ESTRELLAS_HD",
     "IMAGEN_TV_HD",
-    "CANAL_4_GDL_HD",
     "CANAL_5_LOCAL_HD",
-    "CANAL_6_HD",
     "AZTECA_7_HD",
+    "TUDN_HD",
+    "VIX_DEPORTES_HD",
+    "VIX_PREMIUM_HD",
+    "FIFA_PLUS_HD",
+    "DSPORTS_HD",
+    "DSPORTS_2_HD",
+    "DSPORTS_PLUS_HD",
+    "AZTECA_DEPORTES_NETWORK_HD",
+    "CLARO_SPORTS_HD",
+    "FOX_SPORTS_HD",
+    "ESPN_HD",
+    "ESPN_2_HD",
+    "ESPN_3_HD",
+    "ESPN_4_HD",
+    "CANAL_4_GDL_HD",
+    "CANAL_6_HD",
     "MÁS_VISIÓN_HD",
     "NU9VE_HD",
     "QUIERO_TV_HD",
@@ -253,9 +270,17 @@ CATALOG_ORDER_ALIASES: dict[str, tuple[str, ...]] = {
     "las estrellas hd": ("las estrellas",),
     "imagen tv hd": ("imagen tv+", "imagen tv"),
     "canal 4 gdl hd": ("tv cuatro 4.1", "canal 4 guadalajara"),
-    "canal 5 local hd": ("canal 5 televisa", "canal 5 (1080p)", "canal 5 (720p)"),
+    "canal 5 local hd": ("canal 5 televisa", "canal 5 hd", "canal 5", "canal 5 (1080p)", "canal 5 (720p)"),
     "canal 6 hd": ("canal 6 cdmx",),
-    "azteca 7 hd": ("azteca 7",),
+    "azteca 7 hd": ("azteca 7", "azteca siete"),
+    "tudn hd": ("tudn",),
+    "vix deportes hd": ("vix deportes", "vix sports", "vix"),
+    "vix premium hd": ("vix premium", "vix"),
+    "fifa plus hd": ("fifa+", "fifa plus"),
+    "dsports hd": ("dsports", "d sports", "directv sports"),
+    "dsports 2 hd": ("dsports 2", "d sports 2"),
+    "dsports plus hd": ("dsports plus", "d sports plus", "dsportplus", "dsport plus"),
+    "fox sports hd": ("fox sports",),
     "once tv hd": ("once méxico", "once mexico"),
     "canal 13 hd": ("canal 13 michoacán", "canal 13 michoacan", "canal 13"),
     "canal 14 hd": ("canal 14",),
@@ -506,6 +531,37 @@ MOVIE_FAMILY_PATTERNS = (
     "kids",
     "estrella games",
 )
+DOCUMENTARY_PATTERNS = (
+    "discovery",
+    "history",
+    "nat geo",
+    "national geographic",
+    "animal planet",
+    "food network",
+    "hgtv",
+    "tlc",
+    "film & arts",
+    "film&arts",
+    "dw latinoamérica",
+    "dw latinoamerica",
+    "tv5 monde",
+    "docu",
+    "science",
+)
+LOW_PRIORITY_LANGUAGE_PATTERNS = (
+    "english",
+    "uk ",
+    "us entertainment",
+    "mandarin",
+    "chinese",
+    "china",
+    "russian",
+    "rusia",
+    "рус",
+    "turk",
+    "turkish",
+    "hindi",
+)
 
 GROUP_FAMILIA = "Familia y TV Abierta"
 GROUP_NEWS = "Noticias"
@@ -516,6 +572,7 @@ GROUP_MOVIES_CRIME = "Peliculas - Crimen"
 GROUP_MOVIES_HORROR = "Peliculas - Terror"
 GROUP_MOVIES_DRAMA = "Peliculas - Drama y Series"
 GROUP_MOVIES_FAMILY = "Peliculas - Familiar"
+GROUP_DOCUMENTARIES = "Documentales y Cultura"
 GROUP_SPORTS_PUBLIC = "Deportes Públicos Internacionales"
 GROUP_SPORTS = "Deportes"
 GROUP_ENTERTAINMENT = "Entretenimiento"
@@ -530,6 +587,7 @@ CANONICAL_GROUPS = {
     GROUP_MOVIES_HORROR,
     GROUP_MOVIES_DRAMA,
     GROUP_MOVIES_FAMILY,
+    GROUP_DOCUMENTARIES,
     GROUP_SPORTS_PUBLIC,
     GROUP_SPORTS,
     GROUP_ENTERTAINMENT,
@@ -760,6 +818,100 @@ def load_cloud_catalog_items(sources_path: Path = SOURCES_FILE) -> list[dict[str
     return [item for item in items if isinstance(item, dict)]
 
 
+def _channel_signature(channel: Channel) -> str:
+    urls = [channel.url.casefold(), *[backup.casefold() for backup in channel.backup_urls]]
+    return "|".join(sorted(dict.fromkeys(urls)))
+
+
+def _status_signature(status: ChannelStatus) -> str:
+    urls = [status.url.casefold(), *[backup.casefold() for backup in status.backup_urls]]
+    return "|".join(sorted(dict.fromkeys(urls)))
+
+
+def _parse_checked_at(value: str) -> datetime | None:
+    if not value:
+        return None
+    try:
+        return datetime.strptime(value, "%Y-%m-%dT%H:%M:%SZ").replace(tzinfo=timezone.utc)
+    except ValueError:
+        return None
+
+
+def load_status_cache(cache_path: Path = STATUS_CACHE_FILE) -> dict[str, dict[str, Any]]:
+    if not cache_path.exists():
+        return {}
+
+    try:
+        payload = json.loads(cache_path.read_text(encoding="utf-8"))
+    except json.JSONDecodeError:
+        return {}
+
+    if not isinstance(payload, dict):
+        return {}
+    entries = payload.get("channels")
+    if not isinstance(entries, list):
+        return {}
+
+    cached: dict[str, dict[str, Any]] = {}
+    for raw in entries:
+        if not isinstance(raw, dict):
+            continue
+        url = str(raw.get("url") or "").strip().casefold()
+        if not url:
+            continue
+        cached[url] = raw
+    return cached
+
+
+def save_status_cache(statuses: list[ChannelStatus], cache_path: Path = STATUS_CACHE_FILE) -> None:
+    cache_path.parent.mkdir(parents=True, exist_ok=True)
+    serialized_channels: list[dict[str, Any]] = []
+    for status in statuses:
+        payload = status.to_dict()
+        payload["signature"] = _status_signature(status)
+        serialized_channels.append(payload)
+    payload = {
+        "updated_at": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
+        "channels": serialized_channels,
+    }
+    cache_path.write_text(json.dumps(payload, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+
+
+def _cached_status_is_fresh(
+    channel: Channel,
+    cached_entry: dict[str, Any] | None,
+    ttl_seconds: int,
+    now: datetime,
+) -> bool:
+    if not cached_entry:
+        return False
+    if str(cached_entry.get("state") or "") not in {"alive", "unstable"}:
+        return False
+    if str(cached_entry.get("signature") or "") != _channel_signature(channel):
+        return False
+    checked_at = _parse_checked_at(str(cached_entry.get("checked_at") or ""))
+    if checked_at is None:
+        return False
+    return (now - checked_at).total_seconds() <= ttl_seconds
+
+
+def _status_from_cache(channel: Channel, cached_entry: dict[str, Any]) -> ChannelStatus:
+    return ChannelStatus(
+        name=channel.name,
+        group=channel.group,
+        country=channel.country,
+        url=str(cached_entry.get("url") or channel.url),
+        backup_urls=list(cached_entry.get("backup_urls") or channel.backup_urls),
+        logo=channel.logo,
+        tvg_id=channel.tvg_id,
+        alive=bool(cached_entry.get("alive")),
+        status_code=cached_entry.get("status_code"),
+        error=cached_entry.get("error"),
+        state=str(cached_entry.get("state") or "dead"),
+        checked_at=str(cached_entry.get("checked_at") or datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")),
+    )
+
+
 def _looks_playable(content_type: str) -> bool:
     content_type = (content_type or "").lower()
     if not content_type:
@@ -832,20 +984,30 @@ async def _request_channel_candidate(
 ) -> tuple[int | None, str, str | None]:
     attempts = int(config.get("retry_attempts", 3))
     backoff_base = float(config.get("retry_backoff_base_seconds", 1.0))
+    preferred_methods = ["HEAD", "GET"] if bool(config.get("head_first", True)) else ["GET"]
+    retryable_method_fallback = {400, 403, 405, 406, 500, 501}
 
     for attempt in range(1, attempts + 1):
         await _sleep_with_jitter(config)
         try:
-            async with session.get(
-                url,
-                allow_redirects=True,
-                ssl=False,
-            ) as response:
-                content_type = response.headers.get("Content-Type", "")
-                if response.status in RETRIABLE_STATUS_CODES and attempt < attempts:
-                    await asyncio.sleep(backoff_base * (2 ** (attempt - 1)))
-                    continue
-                return response.status, content_type, None
+            for method in preferred_methods:
+                request = session.head if method == "HEAD" else session.get
+                async with request(
+                    url,
+                    allow_redirects=True,
+                    ssl=False,
+                ) as response:
+                    content_type = response.headers.get("Content-Type", "")
+                    if method == "GET":
+                        await response.content.read(1)
+                    if response.status in RETRIABLE_STATUS_CODES and attempt < attempts:
+                        await asyncio.sleep(backoff_base * (2 ** (attempt - 1)))
+                        break
+                    if method == "HEAD" and response.status in retryable_method_fallback:
+                        continue
+                    return response.status, content_type, None
+            else:
+                continue
         except asyncio.TimeoutError:
             return None, "", "Timeout"
         except aiohttp.ClientError as exc:
@@ -923,15 +1085,49 @@ async def check_channel(
 
 
 async def check_all_channels(
-    channels: list[Channel], config: dict[str, Any]
+    channels: list[Channel],
+    config: dict[str, Any],
+    *,
+    cache_path: Path = STATUS_CACHE_FILE,
 ) -> list[ChannelStatus]:
+    now = datetime.now(timezone.utc)
+    ttl_seconds = int(config.get("status_cache_ttl_seconds", 86400))
+    cached_statuses = load_status_cache(cache_path)
+    reusable_statuses: dict[str, ChannelStatus] = {}
+    channels_to_check: list[Channel] = []
+
+    for channel in channels:
+        cached_entry = cached_statuses.get(channel.url.casefold())
+        if _cached_status_is_fresh(channel, cached_entry, ttl_seconds, now):
+            reusable_statuses[channel.url.casefold()] = _status_from_cache(channel, cached_entry)
+            continue
+        channels_to_check.append(channel)
+
+    if not channels_to_check:
+        return [reusable_statuses[channel.url.casefold()] for channel in channels if channel.url.casefold() in reusable_statuses]
+
     timeout = aiohttp.ClientTimeout(total=float(config["timeout_seconds"]))
     headers = _build_headers(config)
     semaphore = asyncio.Semaphore(int(config["max_concurrency"]))
 
     async with aiohttp.ClientSession(timeout=timeout, headers=headers) as session:
-        tasks = [check_channel(session, ch, semaphore, config) for ch in channels]
-        return await asyncio.gather(*tasks)
+        tasks = [check_channel(session, ch, semaphore, config) for ch in channels_to_check]
+        checked_statuses = await asyncio.gather(*tasks)
+
+    checked_by_url = {
+        channel.url.casefold(): status
+        for channel, status in zip(channels_to_check, checked_statuses, strict=False)
+    }
+    combined: list[ChannelStatus] = []
+    for channel in channels:
+        normalized_url = channel.url.casefold()
+        if normalized_url in reusable_statuses:
+            combined.append(reusable_statuses[normalized_url])
+            continue
+        status = checked_by_url.get(normalized_url)
+        if status is not None:
+            combined.append(status)
+    return combined
 
 
 async def _request_vod_item(
@@ -1067,6 +1263,15 @@ def _normalize_name(value: str) -> str:
 def _quality_score(name: str) -> int:
     match = QUALITY_PATTERN.search(name or "")
     if not match:
+        normalized = _normalize_name(name)
+        if "uhd" in normalized or "4k" in normalized:
+            return 2160
+        if "fhd" in normalized or "full hd" in normalized:
+            return 1080
+        if "hd" in normalized:
+            return 720
+        if "sd" in normalized:
+            return 480
         return 0
     return int(match.group(1))
 
@@ -1175,6 +1380,13 @@ def _country_rank(status: ChannelStatus) -> int:
     return 2
 
 
+def _language_tail_rank(status: ChannelStatus) -> int:
+    haystack = _normalize_name(f"{status.name} {status.group} {status.country}")
+    if any(pattern in haystack for pattern in LOW_PRIORITY_LANGUAGE_PATTERNS):
+        return 1
+    return 0
+
+
 def _matches_any(value: str, patterns: tuple[str, ...]) -> bool:
     return any(pattern in value for pattern in patterns)
 
@@ -1190,6 +1402,8 @@ def classify_group(name: str, current_group: str) -> str:
         return GROUP_FAMILIA
     if _matches_any(haystack, NEWS_PATTERNS):
         return GROUP_NEWS
+    if _matches_any(haystack, DOCUMENTARY_PATTERNS):
+        return GROUP_DOCUMENTARIES
     if _matches_any(haystack, SPORTS_PATTERNS):
         return GROUP_SPORTS
     if _matches_any(haystack, MOVIE_ACTION_PATTERNS):
@@ -1217,6 +1431,68 @@ def regroup_statuses(statuses: list[ChannelStatus]) -> list[ChannelStatus]:
     return [replace(status, group=classify_group(status.name, status.group)) for status in statuses]
 
 
+def _identity_name(name: str) -> str:
+    normalized = _normalize_name(name)
+    normalized = re.sub(r"\([^)]*\)", " ", normalized)
+    normalized = re.sub(r"\b(uhd|fhd|hd|sd|4k|1080p|720p|480p|backup|respaldo|latam|latino|mx|us|usa|es)\b", " ", normalized)
+    normalized = re.sub(r"\s+", " ", normalized).strip()
+    return normalized
+
+
+def _status_identity_key(status: ChannelStatus) -> tuple[str, str]:
+    normalized_name = _identity_name(_canonical_display_name(status.name, status.tvg_id))
+    for canonical, aliases in DEFAULT_PRIORITY_ALIASES.items():
+        if any(alias and alias in normalized_name for alias in aliases):
+            normalized_name = canonical
+            break
+    if status.group == GROUP_FAMILIA and normalized_name:
+        return ("family-name", normalized_name)
+    if normalized_name:
+        return ("name", f"{normalized_name}|{_normalize_name(status.group)}")
+    if status.tvg_id.strip():
+        return ("tvg", _normalize_name(status.tvg_id))
+    return ("url", status.url.casefold())
+
+
+def _status_preference_key(status: ChannelStatus, priority_channels: list[str]) -> tuple[int, ...]:
+    normalized_name = _normalize_name(status.name)
+    return (
+        -1 if status.state == "alive" else 0,
+        -1 if _normalize_name(status.country) == "mx" else 0,
+        -1 if _priority_rank(status, priority_channels) < len(priority_channels) else 0,
+        _priority_rank(status, priority_channels),
+        -_quality_score(status.name),
+        0 if " hd" in normalized_name or normalized_name.endswith("hd") else 1,
+        0 if "(" not in status.name else 1,
+        0 if status.tvg_id else 1,
+    )
+
+
+def dedupe_statuses_by_identity(
+    statuses: list[ChannelStatus],
+    priority_channels: list[str] | None = None,
+) -> list[ChannelStatus]:
+    priorities = priority_channels or []
+    best_by_identity: dict[tuple[str, str], ChannelStatus] = {}
+
+    for status in statuses:
+        identity = _status_identity_key(status)
+        existing = best_by_identity.get(identity)
+        if existing is None or _status_preference_key(status, priorities) < _status_preference_key(existing, priorities):
+            best_by_identity[identity] = status
+            existing = status
+        if existing is not None and existing is best_by_identity[identity]:
+            merged_backups = list(existing.backup_urls)
+            seen_backups = {item.casefold() for item in merged_backups}
+            for backup_url in status.backup_urls:
+                if backup_url.casefold() not in seen_backups and backup_url.casefold() != existing.url.casefold():
+                    seen_backups.add(backup_url.casefold())
+                    merged_backups.append(backup_url)
+            best_by_identity[identity] = replace(existing, backup_urls=merged_backups)
+
+    return list(best_by_identity.values())
+
+
 def sort_statuses(
     statuses: list[ChannelStatus],
     sort_by: list[str],
@@ -1234,6 +1510,7 @@ def sort_statuses(
             _priority_rank(status, priorities),
             _priority_exact_bonus(status, priorities),
             _state_rank(status),
+            _language_tail_rank(status),
             _country_rank(status),
             _group_rank(status, ordered_groups),
             -_quality_score(status.name),
@@ -1665,22 +1942,32 @@ async def run(sources_path: Path, public_dir: Path, config_path: Path) -> list[C
     if not channels:
         print("[WARN] No hay canales validos en sources/channels.json")
         statuses: list[ChannelStatus] = []
+        validated_statuses: list[ChannelStatus] = []
     else:
-        statuses = await check_all_channels(channels, config)
-        statuses = regroup_statuses(statuses)
-        statuses = sort_statuses(
-            statuses,
+        validated_statuses = await check_all_channels(
+            channels,
+            config,
+            cache_path=public_dir / STATUS_CACHE_FILE.name,
+        )
+        validated_statuses = regroup_statuses(validated_statuses)
+        validated_statuses = dedupe_statuses_by_identity(
+            validated_statuses,
+            priority_channels=priority_channels,
+        )
+        validated_statuses = sort_statuses(
+            validated_statuses,
             list(config["sort_by"]),
             group_order=list(config.get("group_order", [])),
             priority_channels=priority_channels,
             catalog_order=catalog_order,
         )
         statuses = select_curated_statuses(
-            statuses,
+            validated_statuses,
             target_size=int(config.get("target_playlist_size", 500)),
             group_quotas=dict(config.get("target_group_quotas", {})),
             priority_channels=priority_channels,
         )
+    save_status_cache(validated_statuses, public_dir / STATUS_CACHE_FILE.name)
 
     fallback_used = write_outputs(
         statuses,

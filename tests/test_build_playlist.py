@@ -6,8 +6,10 @@ M3U/Markdown/JSON, orden y limpieza de campos) usando objetos ChannelStatus
 construidos a mano en lugar de hacer peticiones HTTP reales.
 """
 
+import asyncio
 import json
 import sys
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
 import pytest
@@ -32,9 +34,12 @@ from build_playlist import (  # noqa: E402
     classify_group,
     has_playable_channels,
     _classify_vod_transport,
+    check_all_channels,
+    dedupe_statuses_by_identity,
     load_channels,
     load_cloud_catalog_items,
     load_config,
+    save_status_cache,
     regroup_statuses,
     select_curated_statuses,
     sort_statuses,
@@ -294,6 +299,71 @@ def test_select_curated_statuses_conserva_prioritarios_antes_del_recorte():
         "Las Estrellas HD",
         "TUDN (1080p)",
     ]
+
+
+def test_classify_group_manda_discovery_a_documentales():
+    assert classify_group("Discovery Channel HD", "General") == "Documentales y Cultura"
+
+
+def test_dedupe_statuses_by_identity_conserva_mejor_version_del_mismo_canal():
+    deduped = dedupe_statuses_by_identity(
+        [
+            make_status("Canal 5 (720p)", "Familia y TV Abierta", True, tvg_id=""),
+            make_status("Canal 5 HD", "Familia y TV Abierta", True, tvg_id=""),
+        ],
+        priority_channels=["Canal 5"],
+    )
+
+    assert len(deduped) == 1
+    assert deduped[0].name == "Canal 5 HD"
+
+
+def test_check_all_channels_reutiliza_cache_estable_y_revalida_caidos(tmp_path, monkeypatch):
+    import build_playlist
+
+    cached_alive = make_status(
+        "Canal Cacheado",
+        "Familia y TV Abierta",
+        True,
+        url="https://example.com/cacheado.m3u8",
+        checked_at=datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
+    )
+    cached_dead = make_status(
+        "Canal Caido",
+        "Deportes",
+        False,
+        url="https://example.com/caido.m3u8",
+        checked_at=(datetime.now(timezone.utc) - timedelta(hours=1)).strftime("%Y-%m-%dT%H:%M:%SZ"),
+        state="dead",
+        status_code=404,
+        error="HTTP 404",
+    )
+    cache_path = tmp_path / "status_cache.json"
+    save_status_cache([cached_alive, cached_dead], cache_path)
+
+    calls: list[str] = []
+
+    async def fake_check_channel(session, channel, semaphore, config):
+        calls.append(channel.url)
+        return make_status(channel.name, channel.group, True, url=channel.url, country=channel.country)
+
+    monkeypatch.setattr(build_playlist, "check_channel", fake_check_channel)
+
+    channels = [
+        Channel.from_dict({"name": "Canal Cacheado", "group": "General", "country": "MX", "url": "https://example.com/cacheado.m3u8"}),
+        Channel.from_dict({"name": "Canal Caido", "group": "General", "country": "MX", "url": "https://example.com/caido.m3u8"}),
+    ]
+
+    statuses = asyncio.run(
+        check_all_channels(
+            channels,
+            {"timeout_seconds": 1, "max_concurrency": 10, "user_agent": "pytest", "accept_language": "es", "status_cache_ttl_seconds": 86400},
+            cache_path=cache_path,
+        )
+    )
+
+    assert [status.name for status in statuses] == ["Canal Cacheado", "Canal Caido"]
+    assert calls == ["https://example.com/caido.m3u8"]
 
 
 def test_load_config_conserva_custom_routing_rules_si_es_dict(tmp_path):

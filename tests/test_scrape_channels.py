@@ -21,6 +21,7 @@ from scrape_channels import (  # noqa: E402
     DEFAULT_SECONDARY_SOURCES,
     DEFAULT_SOURCE_URL,
     curate_private_channels,
+    dedupe_discovered_channels,
     detect_payload_kind,
     ensure_local_private_sources_file,
     ensure_unique_name,
@@ -43,6 +44,7 @@ from scrape_channels import (  # noqa: E402
     parse_generic_channel_json,
     parse_iptv_org_streams,
     parse_m3u_file,
+    should_keep_channel_by_geo,
     resolve_source_url,
     run,
     save_cached_text,
@@ -232,6 +234,31 @@ def test_curate_private_channels_prioriza_mx_deportes_y_filtra_adultos():
 
     assert [item["name"] for item in curated] == ["Canal 5 MX", "ESPN Deportes", "Movie Gold"]
     assert [item["group"] for item in curated] == ["Familia y TV Abierta", "Deportes", "Peliculas - Cine"]
+
+
+def test_should_keep_channel_by_geo_rescata_mundial_y_filtra_paises_bloqueados():
+    assert should_keep_channel_by_geo(
+        {"name": "Mundial ESPN 4K", "group": "Sports", "country": "TR", "tvg_id": "", "url": "https://a"}
+    ) is True
+    assert should_keep_channel_by_geo(
+        {"name": "Turkey Sports", "group": "Sports", "country": "TR", "tvg_id": "", "url": "https://b"}
+    ) is False
+    assert should_keep_channel_by_geo(
+        {"name": "Canal 5 Televisa", "group": "TV Abierta", "country": "MX", "tvg_id": "canal5.mx", "url": "https://c"}
+    ) is True
+
+
+def test_dedupe_discovered_channels_conserva_el_mejor_candidato_por_url():
+    deduped = dedupe_discovered_channels(
+        [
+            {"name": "Generic Sports", "group": "Sports", "country": "ALL", "url": "https://stream.example/live.m3u8", "logo": "", "tvg_id": ""},
+            {"name": "TUDN MX", "group": "Sports", "country": "MX", "url": "https://stream.example/live.m3u8", "logo": "https://img/logo.png", "tvg_id": "tudn.mx"},
+        ],
+        priority_patterns=["TUDN"],
+    )
+
+    assert len(deduped) == 1
+    assert deduped[0]["name"] == "TUDN MX"
 
 
 def test_parse_m3u_file_asegura_nombres_unicos_en_cargas_masivas(tmp_path):
@@ -719,9 +746,8 @@ def test_run_omite_fuente_secundaria_caida_y_sigue_con_las_demas(tmp_path, monke
 
     calls: list[str] = []
 
-    async def fake_import_single_source(
+    async def fake_discover_single_source(
         source_url,
-        sources_path,
         config,
         *,
         default_group,
@@ -735,21 +761,21 @@ def test_run_omite_fuente_secundaria_caida_y_sigue_con_las_demas(tmp_path, monke
         calls.append(source_url)
         if "bad.example" in source_url:
             raise Exception("getaddrinfo failed")
-        payload = json.loads(sources_path.read_text(encoding="utf-8"))
-        payload["channels"].append(
-            {
-                "name": "Canal Bueno",
-                "group": default_group,
-                "country": default_country,
-                "url": "https://good.example/live.m3u8",
-                "logo": "",
-                "tvg_id": "",
-            }
+        return (
+            [
+                {
+                    "name": "Canal Bueno",
+                    "group": default_group,
+                    "country": default_country,
+                    "url": f"https://good.example/{len(calls)}.m3u8",
+                    "logo": "",
+                    "tvg_id": "",
+                }
+            ],
+            1,
         )
-        sources_path.write_text(json.dumps(payload), encoding="utf-8")
-        return 1, 1
 
-    monkeypatch.setattr(scrape_channels, "import_single_source", fake_import_single_source)
+    monkeypatch.setattr(scrape_channels, "discover_single_source", fake_discover_single_source)
     monkeypatch.setattr(scrape_channels, "LOCAL_PRIVATE_SOURCES_FILE", local_sources_path)
 
     added = asyncio.run(
@@ -797,9 +823,8 @@ def test_run_omite_fuente_local_caida_y_sigue_con_pipeline(tmp_path, monkeypatch
 
     calls: list[str] = []
 
-    async def fake_import_single_source(
+    async def fake_discover_single_source(
         source_url,
-        sources_path,
         config,
         *,
         default_group,
@@ -813,21 +838,21 @@ def test_run_omite_fuente_local_caida_y_sigue_con_pipeline(tmp_path, monkeypatch
         calls.append(source_url)
         if source_url == "http://127.0.0":
             raise Exception("handshake failed")
-        payload = json.loads(sources_path.read_text(encoding="utf-8"))
-        payload["channels"].append(
-            {
-                "name": "Canal Local",
-                "group": default_group,
-                "country": default_country,
-                "url": "http://127.0.0.1/live.m3u8",
-                "logo": "",
-                "tvg_id": "",
-            }
+        return (
+            [
+                {
+                    "name": "Canal Local",
+                    "group": default_group,
+                    "country": default_country,
+                    "url": f"http://127.0.0.1/live-{len(calls)}.m3u8",
+                    "logo": "",
+                    "tvg_id": "",
+                }
+            ],
+            1,
         )
-        sources_path.write_text(json.dumps(payload), encoding="utf-8")
-        return 1, 1
 
-    monkeypatch.setattr(scrape_channels, "import_single_source", fake_import_single_source)
+    monkeypatch.setattr(scrape_channels, "discover_single_source", fake_discover_single_source)
     monkeypatch.setattr(scrape_channels, "LOCAL_PRIVATE_SOURCES_FILE", local_sources_path)
 
     added = asyncio.run(
@@ -871,9 +896,8 @@ def test_run_reporta_403_local_como_rechazo_de_origen(tmp_path, monkeypatch, cap
     monkeypatch.setenv("PRIVATE_SOURCE_1", "http://provider.example/forbidden")
     monkeypatch.setattr(scrape_channels, "QUARANTINE_SOURCES_FILE", tmp_path / "quarantine_sources.json")
 
-    async def fake_import_single_source(
+    async def fake_discover_single_source(
         source_url,
-        sources_path,
         config,
         *,
         default_group,
@@ -885,7 +909,7 @@ def test_run_reporta_403_local_como_rechazo_de_origen(tmp_path, monkeypatch, cap
         curate_private=False,
     ):
         if source_url == "https://primary.example/list.m3u":
-            return 1, 0
+            return ([], 1)
         raise scrape_channels.aiohttp.ClientResponseError(
             request_info=SimpleNamespace(real_url=source_url),
             history=(),
@@ -894,7 +918,7 @@ def test_run_reporta_403_local_como_rechazo_de_origen(tmp_path, monkeypatch, cap
             headers=None,
         )
 
-    monkeypatch.setattr(scrape_channels, "import_single_source", fake_import_single_source)
+    monkeypatch.setattr(scrape_channels, "discover_single_source", fake_discover_single_source)
     monkeypatch.setattr(scrape_channels, "LOCAL_PRIVATE_SOURCES_FILE", local_sources_path)
 
     asyncio.run(
@@ -940,9 +964,8 @@ def test_run_deduplica_fuentes_repetidas_entre_config_y_archivo_local(tmp_path, 
 
     calls: list[str] = []
 
-    async def fake_import_single_source(
+    async def fake_discover_single_source(
         source_url,
-        sources_path,
         config,
         *,
         default_group,
@@ -954,9 +977,9 @@ def test_run_deduplica_fuentes_repetidas_entre_config_y_archivo_local(tmp_path, 
         curate_private=False,
     ):
         calls.append(source_url)
-        return 1, 0
+        return ([], 1)
 
-    monkeypatch.setattr(scrape_channels, "import_single_source", fake_import_single_source)
+    monkeypatch.setattr(scrape_channels, "discover_single_source", fake_discover_single_source)
     monkeypatch.setattr(scrape_channels, "LOCAL_PRIVATE_SOURCES_FILE", local_sources_path)
 
     asyncio.run(
@@ -999,9 +1022,8 @@ def test_run_genera_telemetria_y_cuarentena_tras_tres_403(tmp_path, monkeypatch)
     monkeypatch.setattr(scrape_channels, "TELEMETRY_STATUS_FILE", telemetry_path)
     monkeypatch.setattr(scrape_channels, "QUARANTINE_SOURCES_FILE", quarantine_path)
 
-    async def fake_import_single_source(
+    async def fake_discover_single_source(
         source_url,
-        sources_path,
         config,
         *,
         default_group,
@@ -1013,7 +1035,7 @@ def test_run_genera_telemetria_y_cuarentena_tras_tres_403(tmp_path, monkeypatch)
         curate_private=False,
     ):
         if source_url == "https://primary.example/list.m3u":
-            return 1, 0
+            return ([], 1)
         raise scrape_channels.aiohttp.ClientResponseError(
             request_info=SimpleNamespace(real_url=source_url),
             history=(),
@@ -1022,7 +1044,7 @@ def test_run_genera_telemetria_y_cuarentena_tras_tres_403(tmp_path, monkeypatch)
             headers=None,
         )
 
-    monkeypatch.setattr(scrape_channels, "import_single_source", fake_import_single_source)
+    monkeypatch.setattr(scrape_channels, "discover_single_source", fake_discover_single_source)
 
     for _ in range(3):
         asyncio.run(

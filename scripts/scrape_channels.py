@@ -116,7 +116,7 @@ DEFAULT_LOCAL_PRIVATE_SOURCES: list[dict[str, str]] = [
 
 DEFAULT_CONFIG: dict[str, Any] = {
     "timeout_seconds": 20,
-    "max_concurrency": 3,
+    "max_concurrency": 6,
     "user_agent": "MiTVPublicaBot/1.0 (+https://github.com)",
     "accept_language": "es-MX,es;q=0.9,en;q=0.6",
     "retry_attempts": 3,
@@ -127,6 +127,8 @@ DEFAULT_CONFIG: dict[str, Any] = {
     "chunk_size_bytes": 65536,
     "max_secret_sources": 1,
     "max_private_channels_per_source": 1200,
+    "geo_filter_enabled": True,
+    "global_source_aggregate_limit": 150000,
 }
 
 M3U8_URL_PATTERN = re.compile(
@@ -228,6 +230,66 @@ ENTERTAINMENT_PATTERNS = (
     "telehit",
     "variedades",
 )
+GEO_RESCUE_PATTERNS = (
+    "vix",
+    "dsports",
+    "d sports",
+    "tudn",
+    "espn",
+    "fox sports",
+    "mundial",
+)
+GEO_WHITELIST_COUNTRIES = {"MX", "AR", "CL", "CO", "PE", "LATAM", "US", "USA", "ES"}
+GEO_BLACKLIST_COUNTRIES = {
+    "TR",
+    "TUR",
+    "IN",
+    "CN",
+    "CH",
+    "RU",
+    "BR",
+    "PT",
+    "AE",
+    "SA",
+    "QA",
+    "KW",
+    "OM",
+    "BH",
+    "JO",
+    "IQ",
+    "IR",
+    "SY",
+    "LB",
+    "IL",
+    "EG",
+    "DZ",
+    "MA",
+    "TN",
+    "PK",
+    "BD",
+    "UA",
+    "BY",
+    "RS",
+    "RO",
+    "BG",
+    "PL",
+    "CZ",
+    "SK",
+    "HU",
+}
+GEO_WHITELIST_TEXT_PATTERN = re.compile(
+    r"\b(?:mx|mex|mexico|latam|latino|latina|latinoamerica|latin america|"
+    r"arg|argentina|cl|chile|co|colombia|pe|peru|es|espana|spain|us|usa|"
+    r"united states|español|espanol|televisa|azteca|estrellas|tudn|vix)\b",
+    re.IGNORECASE,
+)
+GEO_BLACKLIST_TEXT_PATTERN = re.compile(
+    r"\b(?:turk|turkey|turkiye|hindi|india|indian|china|chinese|arab|arabic|"
+    r"saudi|emirates|dubai|qatar|russia|russian|ukraine|ukrainian|belarus|"
+    r"serbia|croatia|romania|romanian|bulgaria|bulgarian|poland|polish|"
+    r"hungary|hungarian|czech|brazil|brasil|brazilian|portugal|portuguese)\b",
+    re.IGNORECASE,
+)
 
 
 def detect_payload_kind(text: str) -> str:
@@ -246,6 +308,152 @@ def _normalized_text(*parts: str) -> str:
 def _matches_any_pattern(text: str, patterns: tuple[str, ...] | list[str]) -> bool:
     normalized = text.casefold()
     return any(pattern.casefold() in normalized for pattern in patterns)
+
+
+def _candidate_country_markers(item: dict[str, Any]) -> set[str]:
+    markers: set[str] = set()
+    explicit_country = str(item.get("country") or "").strip().upper()
+    if explicit_country:
+        markers.add(explicit_country)
+
+    tvg_id = str(item.get("tvg_id") or "").strip()
+    inferred_country = infer_country({"tvg-id": tvg_id}, str(item.get("group") or ""))
+    if inferred_country:
+        markers.add(inferred_country.upper())
+
+    return markers
+
+
+def _candidate_geo_text(item: dict[str, Any]) -> str:
+    return _normalized_text(
+        str(item.get("name") or ""),
+        str(item.get("group") or ""),
+        str(item.get("country") or ""),
+        str(item.get("tvg_id") or ""),
+    )
+
+
+def is_geo_rescue_candidate(item: dict[str, Any]) -> bool:
+    return _matches_any_pattern(_candidate_geo_text(item), GEO_RESCUE_PATTERNS)
+
+
+def should_keep_channel_by_geo(item: dict[str, Any]) -> bool:
+    if is_geo_rescue_candidate(item):
+        return True
+
+    country_markers = _candidate_country_markers(item)
+    if country_markers & GEO_BLACKLIST_COUNTRIES:
+        return False
+    if country_markers & GEO_WHITELIST_COUNTRIES:
+        return True
+
+    text = _candidate_geo_text(item)
+    if GEO_BLACKLIST_TEXT_PATTERN.search(text):
+        return False
+    if GEO_WHITELIST_TEXT_PATTERN.search(text):
+        return True
+
+    return False
+
+
+def normalize_discovered_item(
+    item: dict[str, Any] | str,
+    *,
+    default_group: str,
+    default_country: str,
+) -> dict[str, Any] | None:
+    if isinstance(item, str):
+        normalized_url = normalize_url(item)
+        if not normalized_url:
+            return None
+        return {
+            "name": build_channel_name(normalized_url, set()),
+            "group": default_group,
+            "country": default_country,
+            "url": normalized_url,
+            "logo": "",
+            "tvg_id": "",
+        }
+
+    normalized_url = normalize_url(str(item.get("url") or ""))
+    if not normalized_url:
+        return None
+    return {
+        "name": str(item.get("name") or "").strip(),
+        "group": (str(item.get("group") or "").strip() or default_group),
+        "country": (str(item.get("country") or "").strip() or default_country),
+        "url": normalized_url,
+        "logo": str(item.get("logo") or "").strip(),
+        "tvg_id": str(item.get("tvg_id") or "").strip(),
+    }
+
+
+def filter_discovered_channels(
+    discovered_channels: list[dict[str, Any] | str],
+    *,
+    default_group: str,
+    default_country: str,
+    geo_filter_enabled: bool = True,
+) -> list[dict[str, Any]]:
+    filtered: list[dict[str, Any]] = []
+    for raw_item in discovered_channels:
+        item = normalize_discovered_item(
+            raw_item,
+            default_group=default_group,
+            default_country=default_country,
+        )
+        if item is None:
+            continue
+        if is_low_trust_channel(item):
+            continue
+        if geo_filter_enabled and not should_keep_channel_by_geo(item):
+            continue
+        filtered.append(item)
+    return filtered
+
+
+def discovered_channel_hash(item: dict[str, Any]) -> str:
+    normalized_url = normalize_url(str(item.get("url") or ""))
+    return hashlib.sha256(normalized_url.encode("utf-8")).hexdigest()
+
+
+def discovered_channel_preference_score(
+    item: dict[str, Any],
+    priority_patterns: list[str] | None = None,
+) -> int:
+    score = curated_channel_score(item, priority_patterns)
+    if is_geo_rescue_candidate(item):
+        score += 250
+    if str(item.get("country") or "").strip().upper() in {"MX", "US", "USA"}:
+        score += 25
+    if str(item.get("tvg_id") or "").strip():
+        score += 10
+    if str(item.get("logo") or "").strip():
+        score += 5
+    return score
+
+
+def dedupe_discovered_channels(
+    discovered_channels: list[dict[str, Any]],
+    *,
+    priority_patterns: list[str] | None = None,
+) -> list[dict[str, Any]]:
+    best_by_hash: dict[str, dict[str, Any]] = {}
+    for item in discovered_channels:
+        item_hash = discovered_channel_hash(item)
+        existing = best_by_hash.get(item_hash)
+        if existing is None:
+            best_by_hash[item_hash] = item
+            continue
+        if discovered_channel_preference_score(item, priority_patterns) > discovered_channel_preference_score(
+            existing,
+            priority_patterns,
+        ):
+            best_by_hash[item_hash] = item
+
+    deduped = list(best_by_hash.values())
+    deduped.sort(key=lambda candidate: discovered_channel_preference_score(candidate, priority_patterns), reverse=True)
+    return deduped
 
 
 def load_config(config_path: Path = CONFIG_FILE) -> dict[str, Any]:
@@ -1141,9 +1349,8 @@ def merge_channels(
     return merged, added
 
 
-async def import_single_source(
+async def discover_single_source(
     source_url: str,
-    sources_path: Path,
     config: dict[str, Any],
     *,
     default_group: str,
@@ -1153,7 +1360,7 @@ async def import_single_source(
     max_channels: int | None = None,
     preferred_primary_patterns: list[str] | None = None,
     curate_private: bool = False,
-) -> tuple[int, int]:
+) -> tuple[list[dict[str, Any]], int]:
     cached_file = await fetch_source_to_cache(source_url, config)
 
     if file_looks_like_m3u(cached_file):
@@ -1195,19 +1402,52 @@ async def import_single_source(
         )
         detected_count = len(discovered_channels)
 
+    normalized_channels = filter_discovered_channels(
+        discovered_channels,
+        default_group=default_group,
+        default_country=default_country,
+        geo_filter_enabled=bool(config.get("geo_filter_enabled", True)),
+    )
+
     if curate_private:
-        discovered_channels = curate_private_channels(
-            discovered_channels,
+        normalized_channels = curate_private_channels(
+            normalized_channels,
             max_items=max_channels or int(DEFAULT_CONFIG["max_private_channels_per_source"]),
             priority_patterns=preferred_primary_patterns,
         )
     else:
-        discovered_channels = limit_discovered_channels(
-            discovered_channels,
-            max_items=max_channels,
+        normalized_channels = limit_discovered_channels(
+            normalized_channels,
+            max_items=max_channels or int(config.get("global_source_aggregate_limit", 150000)),
         )
-    detected_count = len(discovered_channels)
+    detected_count = len(normalized_channels)
+    return normalized_channels, detected_count
 
+
+async def import_single_source(
+    source_url: str,
+    sources_path: Path,
+    config: dict[str, Any],
+    *,
+    default_group: str,
+    default_country: str,
+    metadata_url: str | None = None,
+    category_filter: list[str] | None = None,
+    max_channels: int | None = None,
+    preferred_primary_patterns: list[str] | None = None,
+    curate_private: bool = False,
+) -> tuple[int, int]:
+    discovered_channels, detected_count = await discover_single_source(
+        source_url,
+        config,
+        default_group=default_group,
+        default_country=default_country,
+        metadata_url=metadata_url,
+        category_filter=category_filter,
+        max_channels=max_channels,
+        preferred_primary_patterns=preferred_primary_patterns,
+        curate_private=curate_private,
+    )
     payload = load_sources_payload(sources_path)
     existing_channels = _extract_channel_entries(payload)
     merged_channels, added = merge_channels(
@@ -1425,19 +1665,20 @@ async def run(
     telemetry_records: list[dict[str, Any]] = []
     resolved_source_url = source_url or DEFAULT_SOURCE_URL
     attempted_sources = {normalize_source_url(resolved_source_url)}
-    detected_count, added = await import_single_source(
+    aggregated_discovered: list[dict[str, Any]] = []
+
+    primary_discovered, detected_count = await discover_single_source(
         resolved_source_url,
-        sources_path,
         config,
         default_group=default_group,
         default_country=default_country,
         metadata_url=metadata_url,
     )
+    aggregated_discovered.extend(primary_discovered)
 
     secondary_sources = config.get("secondary_sources")
     source_batch = secondary_sources if isinstance(secondary_sources, list) else DEFAULT_SECONDARY_SOURCES
     total_detected = detected_count
-    total_added = added
     for source_spec in source_batch:
         if not isinstance(source_spec, dict):
             continue
@@ -1447,17 +1688,16 @@ async def run(
             continue
         attempted_sources.add(normalized_batch_url)
         try:
-            batch_detected, batch_added = await import_single_source(
+            batch_discovered, batch_detected = await discover_single_source(
                 batch_url,
-                sources_path,
                 config,
                 default_group=str(source_spec.get("group") or default_group).strip() or default_group,
                 default_country=str(source_spec.get("country") or default_country).strip(),
                 metadata_url=source_spec.get("metadata_url"),
                 category_filter=source_spec.get("categories") if isinstance(source_spec.get("categories"), list) else None,
             )
+            aggregated_discovered.extend(batch_discovered)
             total_detected += batch_detected
-            total_added += batch_added
         except Exception as exc:  # noqa: BLE001
             print(describe_source_error("Fuente secundaria", batch_url, exc))
             continue
@@ -1498,9 +1738,8 @@ async def run(
                 telemetry_records.append(telemetry_record)
                 continue
             attempted_sources.add(normalized_batch_url)
-            batch_detected, batch_added = await import_single_source(
+            batch_discovered, batch_detected = await discover_single_source(
                 batch_url,
-                sources_path,
                 config,
                 default_group=str(source_spec.get("group") or default_group).strip() or default_group,
                 default_country=str(source_spec.get("country") or default_country).strip(),
@@ -1510,8 +1749,8 @@ async def run(
                 preferred_primary_patterns=list(config.get("priority_channels", [])),
                 curate_private=True,
             )
+            aggregated_discovered.extend(batch_discovered)
             total_detected += batch_detected
-            total_added += batch_added
             updated_entry = update_quarantine_entry(
                 quarantine_state,
                 fingerprint,
@@ -1543,7 +1782,25 @@ async def run(
                 print(f"[INFO] Fuente local movida a cuarentena: {telemetry_record['source_env'] or telemetry_record['source_url_hint']}")
         telemetry_records.append(telemetry_record)
 
-    merged_channels = _extract_channel_entries(load_sources_payload(sources_path))
+    payload = load_sources_payload(sources_path)
+    existing_channels = _extract_channel_entries(payload)
+    deduped_global = dedupe_discovered_channels(
+        aggregated_discovered,
+        priority_patterns=list(config.get("priority_channels", [])),
+    )
+    merged_channels, total_added = merge_channels(
+        existing_channels,
+        deduped_global,
+        default_group=default_group,
+        default_country=default_country,
+        preferred_primary_patterns=list(config.get("priority_channels", [])),
+    )
+    if isinstance(payload, dict) and isinstance(payload.get("channels"), list):
+        payload["channels"] = merged_channels
+        save_sources_payload(payload, sources_path)
+    else:
+        save_channels_raw(merged_channels, sources_path)
+
     save_quarantine_state(quarantine_state)
     write_telemetry_report(telemetry_records)
 

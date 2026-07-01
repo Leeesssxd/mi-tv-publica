@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-07-01T00:35:03Z",
-  "requested_total": 140,
-  "found_total": 27,
-  "missing_total": 113,
+  "generated_at": "2026-07-01T04:55:00Z",
+  "requested_total": 154,
+  "found_total": 29,
+  "missing_total": 125,
   "found": [
     {
       "requested": "Conecta",
@@ -45,20 +45,36 @@
       "url": "http://190.11.225.124:5000/live/canal5_hd/playlist.m3u8"
     },
     {
-      "requested": "CANAL_6_HD",
-      "matched_name": "Canal 6 CDMX (FAST)",
-      "group": "Familia y TV Abierta",
-      "country": "MX",
-      "state": "alive",
-      "url": "https://stream.ads.ottera.tv/playlist.m3u8?network_id=6405"
-    },
-    {
       "requested": "AZTECA_7_HD",
       "matched_name": "Azteca 7",
       "group": "Familia y TV Abierta",
       "country": "MX",
       "state": "alive",
       "url": "https://mdstrm.com/live-stream-playlist/609ad46a7a441137107d7a81.m3u8"
+    },
+    {
+      "requested": "TUDN_HD",
+      "matched_name": "TUDN",
+      "group": "Deportes",
+      "country": "MX",
+      "state": "alive",
+      "url": "https://streaming.alwaysdata.net/tudn.php"
+    },
+    {
+      "requested": "CLARO_SPORTS_HD",
+      "matched_name": "Claro Sports (720p)",
+      "group": "Deportes",
+      "country": "MX",
+      "state": "alive",
+      "url": "https://jmp2.uk/plu-6320d2755e54db000783fd87.m3u8"
+    },
+    {
+      "requested": "CANAL_6_HD",
+      "matched_name": "Canal 6 CDMX (FAST)",
+      "group": "Familia y TV Abierta",
+      "country": "MX",
+      "state": "alive",
+      "url": "https://stream.ads.ottera.tv/playlist.m3u8?network_id=6405"
     },
     {
       "requested": "CANAL_14_HD",
@@ -213,17 +229,29 @@
       "url": "https://jmp2.uk/plu-64e77016324d190008291c13.m3u8"
     },
     {
-      "requested": "CLARO_SPORTS_HD",
-      "matched_name": "Claro Sports (720p)",
-      "group": "Deportes",
+      "requested": "PANICO_DELAY_SD",
+      "matched_name": "Panico (576p)",
+      "group": "Peliculas - Terror",
       "country": "MX",
       "state": "alive",
-      "url": "https://jmp2.uk/plu-6320d2755e54db000783fd87.m3u8"
+      "url": "http://181.78.8.199:8000/play/a0bt/index.m3u8"
     }
   ],
   "missing": [
     "Básico Plus",
     "BARKER_CHANNEL_HD",
+    "VIX_DEPORTES_HD",
+    "VIX_PREMIUM_HD",
+    "FIFA_PLUS_HD",
+    "DSPORTS_HD",
+    "DSPORTS_2_HD",
+    "DSPORTS_PLUS_HD",
+    "AZTECA_DEPORTES_NETWORK_HD",
+    "FOX_SPORTS_HD",
+    "ESPN_HD",
+    "ESPN_2_HD",
+    "ESPN_3_HD",
+    "ESPN_4_HD",
     "CANAL_4_GDL_HD",
     "MÁS_VISIÓN_HD",
     "NU9VE_HD",
@@ -308,10 +336,10 @@
     "MEGA_SPORTS_1_HD",
     "AZTECA_DEPORTES_NETWORK_HD",
     "PX_SPORTS_HD",
+    "CLARO_SPORTS_HD",
     "WWB_SD",
     "CINEMA_PLATINO_DELAY_SD",
     "CINEMA_PLATINO_HD",
-    "PANICO_DELAY_SD",
     "PANICO_HD",
     "SONY_MOVIES",
     "EUROPA_EUROPA_HD",
