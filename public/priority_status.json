@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-07-01T05:11:30Z",
+  "generated_at": "2026-07-01T06:43:27Z",
   "requested_total": 53,
-  "found_total": 20,
-  "missing_total": 33,
+  "found_total": 19,
+  "missing_total": 34,
   "found": [
     {
       "requested": "Canal 5 Televisa",
@@ -155,14 +155,6 @@
       "country": "US",
       "state": "alive",
       "url": "http://181.119.93.83:8000/play/a1di/index.m3u8"
-    },
-    {
-      "requested": "Movies",
-      "matched_name": "like Gecko) Chrome/149.0.0.0 Safari/537.3\" group-title=\"Movies\",AXN (1080p)",
-      "group": "Entretenimiento",
-      "country": "ES",
-      "state": "alive",
-      "url": "http://cdn.haititivi.com/AXN/index.m3u8"
     }
   ],
   "missing": [
@@ -198,6 +190,7 @@
     "TV Brasil Oficial",
     "Claro Sports",
     "AyM Sports",
-    "DeporTV"
+    "DeporTV",
+    "Movies"
   ]
 }

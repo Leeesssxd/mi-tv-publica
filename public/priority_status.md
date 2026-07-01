@@ -1,10 +1,10 @@
 # Prioridades de canales
 
-Última revisión UTC: `2026-07-01T05:11:30Z`
+Última revisión UTC: `2026-07-01T06:43:27Z`
 
 - Prioridades solicitadas: **53**
-- Prioridades encontradas: **20**
-- Prioridades faltantes: **33**
+- Prioridades encontradas: **19**
+- Prioridades faltantes: **34**
 
 | Pedido | Coincidencia | Grupo | País | Estado |
 |---|---|---|---|---|
@@ -27,7 +27,6 @@
 | TyC Sports | TyC Sports (1080p) | Deportes | AR | alive |
 | Sports | DSPORTS2 | Deportes | ALL | alive |
 | Comedy | Comedy Central Latin America (1080p) | Peliculas - Comedia | US | alive |
-| Movies | like Gecko) Chrome/149.0.0.0 Safari/537.3" group-title="Movies",AXN (1080p) | Entretenimiento | ES | alive |
 
 ## Faltantes
 
@@ -64,3 +63,4 @@
 - Claro Sports
 - AyM Sports
 - DeporTV
+- Movies

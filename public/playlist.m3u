@@ -57,8 +57,6 @@ https://live-scjn.ovp-vivaro.digital/ovp-origin/638a22b47746d/playlist.m3u8
 https://mdstrm.com/live-stream-playlist/62f2c855f7981b5a5a2d8763.m3u8
 #EXTINF:-1 tvg-id="UniversalTVLatinAmerica.us@Panregional" tvg-name="Universal TV Latin America (1080p)" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Universal_TV_logo.svg/960px-Universal_TV_logo.svg.png" group-title="Entretenimiento",Universal TV Latin America (1080p)
 http://138.121.15.230:9002/UNIVERSAL-CHANNEL/index.m3u8
-#EXTINF:-1 tvg-id="AXN.es@SD" tvg-name="like Gecko) Chrome/149.0.0.0 Safari/537.3' group-title='Movies',AXN (1080p)" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/AXN_logo_%282015%29.svg/960px-AXN_logo_%282015%29.svg.png" group-title="Entretenimiento",like Gecko) Chrome/149.0.0.0 Safari/537.3' group-title='Movies',AXN (1080p)
-http://cdn.haititivi.com/AXN/index.m3u8
 #EXTINF:-1 tvg-id="AXNLatinAmerica.us@Mexico" tvg-name="AXN Latin America Mexico" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/AXN_logo_%282015%29.svg/960px-AXN_logo_%282015%29.svg.png" group-title="Peliculas - Cine",AXN Latin America Mexico
 http://190.11.225.124:5000/live/axn_hd/playlist.m3u8
 #EXTINF:-1 tvg-id="AXNLatinAmerica.us@South" tvg-name="AXN Latin America South" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/AXN_logo_%282015%29.svg/960px-AXN_logo_%282015%29.svg.png" group-title="Peliculas - Cine",AXN Latin America South
@@ -213,6 +211,8 @@ https://60417ddeaf0d9.streamlock.net/telemetrika3/smil:telemetrika3.smil/playlis
 https://5d0d1d7a6be9e.streamlock.net/sicom/canal1/playlist.m3u8
 #EXTINF:-1 tvg-id="XHPBZCTDT2.mx@SD" tvg-name="SET Televisión Canal 26.2 (720p) [Not 24/7]" tvg-logo="https://i.imgur.com/dbJKErB.png" group-title="Familia y TV Abierta",SET Televisión Canal 26.2 (720p) [Not 24/7]
 https://5d0d1d7a6be9e.streamlock.net/sicom/canal2/playlist.m3u8
+#EXTINF:-1 tvg-id="RTN.ar@SD" tvg-name="RTN (Neuquén) (720p) [Not 24/7]" tvg-logo="https://i.imgur.com/8xqYg4C.png" group-title="Noticias",RTN (Neuquén) (720p) [Not 24/7]
+https://media.neuquen.gov.ar/rtn/television/media.m3u8
 #EXTINF:-1 tvg-id="TNE.cl@SD" tvg-name="TNE (720p) [Not 24/7]" tvg-logo="https://i.imgur.com/8QbvXva.png" group-title="Noticias",TNE (720p) [Not 24/7]
 https://v2.tustreaming.cl/tnetv/index.m3u8
 #EXTINF:-1 tvg-id="MTNATV.cl@SD" tvg-name="MTNA TV" tvg-logo="https://i.imgur.com/v7SA92F.png" group-title="Noticias",MTNA TV
@@ -465,8 +465,6 @@ https://jmp2.uk/plu-5f6a38eaa5b68b0007a00e7a.m3u8
 https://jmp2.uk/plu-5f1ac8f49205650007bc15f1.m3u8
 #EXTINF:-1 tvg-id="PlutoTVSeriescriminales.de@ES" tvg-name="Pluto TV Series criminales" tvg-logo="https://images.pluto.tv/channels/65cf6ab58145cb0008129ca8/colorLogoPNG.png" group-title="Peliculas - Drama y Series",Pluto TV Series criminales
 https://jmp2.uk/plu-65cf6ab58145cb0008129ca8.m3u8
-#EXTINF:-1 tvg-id="PlutoTVSeriesSciFi.de@ES" tvg-name="Pluto TV Series Sci-Fi" tvg-logo="https://images.pluto.tv/channels/65ddec1ef7f0af0008be4b65/colorLogoPNG.png" group-title="Peliculas - Drama y Series",Pluto TV Series Sci-Fi
-https://jmp2.uk/plu-65ddec1ef7f0af0008be4b65.m3u8
 #EXTINF:-1 tvg-id="PlutoTVZombies.de@ES" tvg-name="Pluto TV Zombies" tvg-logo="https://images.pluto.tv/channels/65786888b228b7000843ad9a/colorLogoPNG.png" group-title="Peliculas - Drama y Series",Pluto TV Zombies
 https://jmp2.uk/plu-65786888b228b7000843ad9a.m3u8
 #EXTINF:-1 tvg-id="Sintetasnohayparaiso.us@Spain" tvg-name="Sin Tetas No Hay Paraíso" tvg-logo="https://i.imgur.com/fpwU2IQ.png" group-title="Peliculas - Drama y Series",Sin Tetas No Hay Paraíso
@@ -479,8 +477,6 @@ https://jmp2.uk/plu-68de3db35fc0afe85de0b843.m3u8
 https://jmp2.uk/plu-5f1ac8099c49f600076579b2.m3u8
 #EXTINF:-1 tvg-id="PlutoTVComediamadeinSpain.de@ES" tvg-name="Pluto TV Comedia made in Spain" tvg-logo="https://images.pluto.tv/channels/5f1abce155a03d0007718834/colorLogoPNG.png" group-title="Peliculas - Comedia",Pluto TV Comedia made in Spain
 https://jmp2.uk/plu-5f1abce155a03d0007718834.m3u8
-#EXTINF:-1 tvg-id="PlutoTVComediasRomanticas.de@ES" tvg-name="Pluto TV Comedias Románticas" tvg-logo="https://images.pluto.tv/channels/655b5d865812e80008843bd1/colorLogoPNG_1747044085522.png" group-title="Peliculas - Comedia",Pluto TV Comedias Románticas
-https://jmp2.uk/plu-655b5d865812e80008843bd1.m3u8
 #EXTINF:-1 tvg-id="XtremaTerror.ar@SD" tvg-name="Xtrema Terror" tvg-logo="https://i.imgur.com/FcaTUym.png" group-title="Peliculas - Terror",Xtrema Terror
 https://stmv6.voxtvhd.com.br/cineterror/cineterror/playlist.m3u8
 #EXTINF:-1 tvg-id="BabyTV.uk@Spain" tvg-name="BabyTV Spain (1080p)" tvg-logo="https://i.imgur.com/4BDJ5FT.png" group-title="Peliculas - Familiar",BabyTV Spain (1080p)
@@ -517,6 +513,8 @@ https://shls-live-ak.akamaized.net/out/v1/b06a89a463764d3688cda337d40dc5bf/index
 https://tv.alterna.ar/stream/hls/live.m3u8
 #EXTINF:-1 tvg-id="CrimenHistoria.es@SD" tvg-name="Crimen & Historia (720p)" tvg-logo="https://images.pluto.tv/channels/64ddcbb14c5ed80008fad416/colorLogoPNG.png" group-title="Documentales y Cultura",Crimen & Historia (720p)
 https://jmp2.uk/plu-64ddcbb14c5ed80008fad416.m3u8
+#EXTINF:-1 tvg-id="PlutoTVHistoria.de@ES" tvg-name="Pluto TV Historia (720p)" tvg-logo="https://images.pluto.tv/channels/61cd7b49543066000713b620/colorLogoPNG.png" group-title="Documentales y Cultura",Pluto TV Historia (720p)
+https://jmp2.uk/plu-61cd7b49543066000713b620.m3u8
 #EXTINF:-1 tvg-id="ArchivosForenses.us@Spain" tvg-name="Archivos Forenses" tvg-logo="https://i.imgur.com/Pxrl9Ug.png" group-title="Documentales y Cultura",Archivos Forenses
 https://jmp2.uk/plu-5f984f4a09e92d0007d74647.m3u8
 #EXTINF:-1 tvg-id="PlutoTVAnimales.de@ES" tvg-name="Pluto TV Animales" tvg-logo="https://images.pluto.tv/channels/600ae6a78d801e0007117d21/colorLogoPNG.png" group-title="Documentales y Cultura",Pluto TV Animales
@@ -589,6 +587,8 @@ https://unlimited1-us.dps.live/airedesantafetv/airedesantafetv.smil/playlist.m3u
 https://unlimited6-cl.dps.live/atv/atv.smil/playlist.m3u8
 #EXTINF:-1 tvg-id="ArabiTV.es@SD" tvg-name="Arabí TV (1080p)" tvg-logo="https://i.ibb.co/9Vp9Ghg/LOGO-WEB-ARABI-TV-3.png" group-title="Entretenimiento",Arabí TV (1080p)
 https://streamtv2.elitecomunicacion.cloud:3628/live/arabitv2025live.m3u8
+#EXTINF:-1 tvg-id="Canal2Misiones.ar@SD" tvg-name="Canal 2 Misiones (1080p)" tvg-logo="https://i.imgur.com/YqTNXDf.png" group-title="Entretenimiento",Canal 2 Misiones (1080p)
+https://nd106.republicaservers.com:4433/hls/canal2misioness/index.m3u8
 #EXTINF:-1 tvg-id="Canal3LaPampa.ar@SD" tvg-name="Canal 3 La Pampa (1080p)" tvg-logo="https://i.imgur.com/SsNFudZ.png" group-title="Entretenimiento",Canal 3 La Pampa (1080p)
 https://stream.arcast.com.ar/c3lapampa/ngrp:c3lapampa_all/playlist.m3u8
 #EXTINF:-1 tvg-id="Canal7Neuquen.ar@SD" tvg-name="Canal 7 Neuquén (1080p)" tvg-logo="https://i.ibb.co/BrvQsWm/C7neuquenlogo2023.png" group-title="Entretenimiento",Canal 7 Neuquén (1080p)
@@ -639,6 +639,8 @@ https://sc3.wasidata.com/Genios2_1902/video.m3u8
 https://cdn3.wowza.com/1/RERMR282dnU5eE5Z/OHY0dVFs/hls/live/playlist.m3u8
 #EXTINF:-1 tvg-id="Historia.es@SD" tvg-name="Historia (1080p)" tvg-logo="https://i.imgur.com/VUy8xIG.png" group-title="Entretenimiento",Historia (1080p)
 https://d1k3vzh2ivy22k.cloudfront.net/Historia.m3u8
+#EXTINF:-1 tvg-id="ImperialTelevision.pe@SD" tvg-name="Imperial Television (1080p)" tvg-logo="https://i.imgur.com/eYXqkyN.png" group-title="Entretenimiento",Imperial Television (1080p)
+https://sc1.wasidata.com/Imperial/index.m3u8
 #EXTINF:-1 tvg-id="InteralmeriaTV.es@SD" tvg-name="Interalmeria TV (1080p)" tvg-logo="https://i.imgur.com/ulSkAjZ.png" group-title="Entretenimiento",Interalmeria TV (1080p)
 https://interalmeria.tv/directo/live.m3u8
 #EXTINF:-1 tvg-id="IquiqueTV.cl@SD" tvg-name="Iquique TV (1080p)" tvg-logo="https://i.imgur.com/ZpXXLox.png" group-title="Entretenimiento",Iquique TV (1080p)
@@ -703,6 +705,8 @@ https://inforedvos.lcdn.claro.net.co/Content/HLS_HLS_DIR/Live/channel(REDMASHDWE
 https://amixtv.com:8081/rikutv/index.m3u8
 #EXTINF:-1 tvg-id="RadioBocairentTV.es@SD" tvg-name="Ràdio Bocairent TV (1080p) [Not 24/7]" tvg-logo="https://i.imgur.com/MzUQtrl.png" group-title="Entretenimiento",Ràdio Bocairent TV (1080p) [Not 24/7]
 http://185.81.77.4/BocairentTV/index.m3u8
+#EXTINF:-1 tvg-id="SalsaGordaTelevision.co@SD" tvg-name="Salsa Gorda Television (1080p) [Not 24/7]" tvg-logo="https://i.imgur.com/3IhYd7G.jpg" group-title="Entretenimiento",Salsa Gorda Television (1080p) [Not 24/7]
+https://live20.bozztv.com/akamaissh101/ssh101/qMUAZEy/playlist.m3u8
 #EXTINF:-1 tvg-id="SanPedroTV.ar@SD" tvg-name="San Pedro TV (1080p) [Not 24/7]" tvg-logo="https://i.imgur.com/UkpXogr.png" group-title="Entretenimiento",San Pedro TV (1080p) [Not 24/7]
 https://iptv.ixfo.com.ar:30443/live/sanpedrotv/playlist.m3u8
 #EXTINF:-1 tvg-id="STZTelebista.es@SD" tvg-name="STZ Telebista (1080p)" tvg-logo="https://i.imgur.com/rFQuAEv.png" group-title="Entretenimiento",STZ Telebista (1080p)
@@ -771,8 +775,6 @@ https://live-evg8.tv360.bitel.com.pe/bitel/andinatvSRT/playlist.m3u8
 https://cloudpro.servidoresdestream.com:8081/8010/index.m3u8
 #EXTINF:-1 tvg-id="ApocalipsisTVD.cl@SD" tvg-name="Apocalipsis TVD (720p)" tvg-logo="https://i.imgur.com/XNrYx1n.png" group-title="Entretenimiento",Apocalipsis TVD (720p)
 https://us.streaminghd.cl/apocalipsistvd/video.m3u8
-#EXTINF:-1 tvg-id="ArpegioTV.pe@SD" tvg-name="Arpegio TV (720p)" tvg-logo="https://i.imgur.com/mxnKK1a.png" group-title="Entretenimiento",Arpegio TV (720p)
-https://live-evg8.tv360.bitel.com.pe/bitel/arpegioSRT/playlist.m3u8
 #EXTINF:-1 tvg-id="AsiriTV.pe@SD" tvg-name="AsiriTV (720p) [Not 24/7]" tvg-logo="https://i.imgur.com/7bGVFBa.png" group-title="Entretenimiento",AsiriTV (720p) [Not 24/7]
 https://video2.lhdserver.es/asiritv/live.m3u8
 #EXTINF:-1 tvg-id="AtacamaTV.cl@SD" tvg-name="Atacama TV (Copiapó) (720p) [Not 24/7]" tvg-logo="https://i.postimg.cc/rwS082hL/atacama-tv.png" group-title="Entretenimiento",Atacama TV (Copiapó) (720p) [Not 24/7]
@@ -839,6 +841,8 @@ https://jmp2.uk/plu-68224482c5d53e1351aaf2f2.m3u8
 http://131.221.41.94/hls/canal2.m3u8
 #EXTINF:-1 tvg-id="CanalLocal.cl@SD" tvg-name="Canal Local (720p)" tvg-logo="https://i.imgur.com/ReZXqWR.png" group-title="Entretenimiento",Canal Local (720p)
 https://v2.tustreaming.cl/canallocalcl/index.m3u8
+#EXTINF:-1 tvg-id="CANALMTelevision.pe@SD" tvg-name="CANAL M Television (720p)" tvg-logo="https://i.imgur.com/EcdNFuJ.png" group-title="Entretenimiento",CANAL M Television (720p)
+https://live-evg10.tv360.bitel.com.pe/bitel/anqaratv/playlist.m3u8
 #EXTINF:-1 tvg-id="CanalMundoVision.co@SD" tvg-name="Canal Mundo Visión (720p) [Not 24/7]" tvg-logo="https://i.imgur.com/zRqfJuj.png" group-title="Entretenimiento",Canal Mundo Visión (720p) [Not 24/7]
 https://movil.ejeserver.com/live/mundovisiontv.m3u8
 #EXTINF:-1 tvg-id="CanalMalagaRTV.es@SD" tvg-name="Canal Málaga RTV (720p) [Not 24/7]" tvg-logo="https://i.imgur.com/QSUOxtM.png" group-title="Entretenimiento",Canal Málaga RTV (720p) [Not 24/7]
@@ -855,6 +859,8 @@ https://live-evg7.tv360.bitel.com.pe/bitel/casmatvSRT-TRA/playlist.m3u8
 https://stream.arcast.com.ar/canal7catamarca/ngrp:canal7catamarca_all/playlist.m3u8?DVR=
 #EXTINF:-1 tvg-id="ChacoTV.ar@SD" tvg-name="Chaco TV (720p) [Not 24/7]" tvg-logo="https://i.imgur.com/b6RerDw.png" group-title="Entretenimiento",Chaco TV (720p) [Not 24/7]
 https://wowzasrv.chaco.gov.ar/Streamtv/chacotv/playlist.m3u8
+#EXTINF:-1 tvg-id="CharapaTV.pe@SD" tvg-name="Charapa TV (720p)" tvg-logo="https://i.imgur.com/tFRmMkf.png" group-title="Entretenimiento",Charapa TV (720p)
+https://live-evg10.tv360.bitel.com.pe/bitel/charapatvSRT/playlist.m3u8
 #EXTINF:-1 tvg-id="ChileChannel.cl@SD" tvg-name="Chile Channel (720p)" tvg-logo="https://i.imgur.com/F1it6fh.png" group-title="Entretenimiento",Chile Channel (720p)
 https://v2.tustreaming.cl/chilechannel/index.m3u8
 #EXTINF:-1 tvg-id="CiudadesdelOcioTV.es@SD" tvg-name="Ciudades Del Ocio TV (720p)" tvg-logo="https://i.imgur.com/CTQgqsM.png" group-title="Entretenimiento",Ciudades Del Ocio TV (720p)
@@ -891,8 +897,6 @@ https://streaming-1.eltorotv.com/lb0/eltorotv-streaming-web/index.m3u8
 https://cloudvideo.servers10.com:8081/8022/index.m3u8
 #EXTINF:-1 tvg-id="EsTuTele.es@SD" tvg-name="EsTuTele (720p)" tvg-logo="https://i.imgur.com/bsAbcmC.png" group-title="Entretenimiento",EsTuTele (720p)
 https://cloud.streamingconnect.tv/hls/estutele/estutele.m3u8
-#EXTINF:-1 tvg-id="FolkloreTV.pe@SD" tvg-name="Folklore TV (720p)" tvg-logo="https://i.imgur.com/QdOGJes.png" group-title="Entretenimiento",Folklore TV (720p)
-https://play.folkloretv.pe/StreamSD/index.m3u8
 #EXTINF:-1 tvg-id="Frecuencia7TV.cl@SD" tvg-name="Frecuencia 7 TV (720p)" tvg-logo="https://i.imgur.com/ZhwmWXD.png" group-title="Entretenimiento",Frecuencia 7 TV (720p)
 https://v2.tustreaming.cl/frecuencia7/index.m3u8
 #EXTINF:-1 tvg-id="Girovisual.cl@SD" tvg-name="Girovisual (720p)" tvg-logo="https://i.imgur.com/BYBMuhf.png" group-title="Entretenimiento",Girovisual (720p)
@@ -933,8 +937,6 @@ https://ontvcable.streamottmas.workers.dev/ontvcable.m3u8
 https://v1.tustreaming.cl/margamargatv/index.m3u8
 #EXTINF:-1 tvg-id="MasMusicaFM.co@SD" tvg-name="MasMusica FM (720p)" tvg-logo="https://i.imgur.com/tCg7owd.png" group-title="Entretenimiento",MasMusica FM (720p)
 https://movil.ejeserver.com/live/masmusica.m3u8
-#EXTINF:-1 tvg-id="MediaTV.pe@SD" tvg-name="Media TV (720p)" tvg-logo="https://i.imgur.com/BAaR5T5.png" group-title="Entretenimiento",Media TV (720p)
-https://live-evg5.tv360.bitel.com.pe/bitel/mediatv/playlist.m3u8
 #EXTINF:-1 tvg-id="MegaTVJaen.pe@SD" tvg-name="Mega TV Jaen (720p)" tvg-logo="https://i.imgur.com/zK1YcpJ.png" group-title="Entretenimiento",Mega TV Jaen (720p)
 https://live-evg5.tv360.bitel.com.pe/bitel/megatv/playlist.m3u8
 #EXTINF:-1 tvg-id="MetroTV.ar@SD" tvg-name="Metro TV (720p)" tvg-logo="https://i.imgur.com/7f7M7zl.png" group-title="Entretenimiento",Metro TV (720p)
@@ -1011,6 +1013,8 @@ https://videoserver.tmcreativos.com:19360/radiomaster/radiomaster.m3u8
 https://vivo.solumedia.com:19360/realpolitik/realpolitik.m3u8
 #EXTINF:-1 tvg-id="RadioRumbaTV.pe@SD" tvg-name="Radio Rumba TV (720p)" tvg-logo="https://i.imgur.com/BYcxI03.png" group-title="Entretenimiento",Radio Rumba TV (720p)
 https://live-evg7.tv360.bitel.com.pe/bitel/rumba/playlist.m3u8
+#EXTINF:-1 tvg-id="RadioTVNeuquen.ar@SD" tvg-name="Radio TV Neuquén (720p) [Not 24/7]" tvg-logo="https://i.imgur.com/HXBLozl.png" group-title="Entretenimiento",Radio TV Neuquén (720p) [Not 24/7]
+https://media.neuquen.gov.ar/rtn/television/playlist.m3u8
 #EXTINF:-1 tvg-id="RadioTVOriente.pe@SD" tvg-name="RadioTV Oriente (720p)" tvg-logo="https://i.imgur.com/iHaFLHX.png" group-title="Entretenimiento",RadioTV Oriente (720p)
 https://live.obslivestream.com/tvoriente/index.m3u8
 #EXTINF:-1 tvg-id="RealTelevision.pe@SD" tvg-name="Real Television (720p)" tvg-logo="https://i.imgur.com/7KECyh5.jpeg" group-title="Entretenimiento",Real Television (720p)
@@ -1027,8 +1031,6 @@ https://videoserver.tmcreativos.com:19360/rnyurimaguas/rnyurimaguas.m3u8
 https://rtvelivestream.rtve.es/rtvesec/rne/rne_para_todos_main.m3u8
 #EXTINF:-1 tvg-id="ROTVValencia.es@SD" tvg-name="ROTV Valencia (720p)" tvg-logo="https://i.imgur.com/0TDnVQ4.png" group-title="Entretenimiento",ROTV Valencia (720p)
 https://rotv.romediavalencia.com:3839/live/rotvlive.m3u8
-#EXTINF:-1 tvg-id="RumbaMixTV.pe@SD" tvg-name="RumbaMix TV (720p)" tvg-logo="https://i.imgur.com/rwA3HIp.png" group-title="Entretenimiento",RumbaMix TV (720p)
-https://live-evg5.tv360.bitel.com.pe/bitel/mixtvSRT/playlist.m3u8
 #EXTINF:-1 tvg-id="SantaMariaTelevision.cl@SD" tvg-name="Santa María Televisión (720p) [Not 24/7]" tvg-logo="https://i.imgur.com/SnbGpoK.png" group-title="Entretenimiento",Santa María Televisión (720p) [Not 24/7]
 https://pantera1-100gb-cl-movistar.dps.live/smtv/smtv.smil/playlist.m3u8
 #EXTINF:-1 tvg-id="SicardiTV.ar@SD" tvg-name="Sicardi TV (720p)" tvg-logo="https://i.imgur.com/W2EUIL2.png" group-title="Entretenimiento",Sicardi TV (720p)
@@ -1055,12 +1057,16 @@ https://live20.bozztv.com/giatv/giatv-teleposadaso01/teleposadaso01/playlist.m3u
 https://video.telesafor.com/hls/video.m3u8
 #EXTINF:-1 tvg-id="Telebolivar.co@SD" tvg-name="Telebolívar (720p)" tvg-logo="https://i.imgur.com/dYhnVoV.png" group-title="Entretenimiento",Telebolívar (720p)
 https://live20.bozztv.com/akamaissh101/ssh101/telebolivar/playlist.m3u8
+#EXTINF:-1 tvg-id="TeleCentro.pe@SD" tvg-name="TeleCentro (720p)" tvg-logo="https://i.imgur.com/g61TdZ3.png" group-title="Entretenimiento",TeleCentro (720p)
+https://live-evg7.tv360.bitel.com.pe/bitel/telecentro/playlist.m3u8
 #EXTINF:-1 tvg-id="TelecolorYurimaguas.pe@SD" tvg-name="Telecolor Yurimaguas (720p) [Not 24/7]" tvg-logo="https://i.imgur.com/Ug6XNIU.png" group-title="Entretenimiento",Telecolor Yurimaguas (720p) [Not 24/7]
 https://live.obslivestream.com/telecolormux/index.m3u8
 #EXTINF:-1 tvg-id="Teleganes.es@SD" tvg-name="Teleganés (720p)" tvg-logo="https://i.imgur.com/BXyplMX.png" group-title="Entretenimiento",Teleganés (720p)
 https://nlb2-live.emitstream.com/hls/5z6oj7ziwxzfnj78vg2m/master.m3u8
 #EXTINF:-1 tvg-id="Telelima.pe@SD" tvg-name="Telelima (720p)" tvg-logo="https://i.imgur.com/HzWRvXc.png" group-title="Entretenimiento",Telelima (720p)
 https://live-evg11.tv360.bitel.com.pe/bitel/telelimaSRT/playlist.m3u8
+#EXTINF:-1 tvg-id="Teleselva.pe@SD" tvg-name="Teleselva (720p)" tvg-logo="https://i.imgur.com/cu7hTn8.png" group-title="Entretenimiento",Teleselva (720p)
+https://live-evg7.tv360.bitel.com.pe/bitel/teleselva/playlist.m3u8
 #EXTINF:-1 tvg-id="TelesystemTV.pe@SD" tvg-name="Telesystem TV (720p)" tvg-logo="https://i.imgur.com/CI4CNgL.jpeg" group-title="Entretenimiento",Telesystem TV (720p)
 https://live-evg5.tv360.bitel.com.pe/bitel/telesystemSRT/playlist.m3u8
 #EXTINF:-1 tvg-id="TelevisionTarapoto.pe@SD" tvg-name="Television Tarapoto (720p)" tvg-logo="https://i.imgur.com/Dzen7sh.png" group-title="Entretenimiento",Television Tarapoto (720p)
@@ -1105,8 +1111,6 @@ https://eu1.servers10.com:8081/8166/index.m3u8
 https://streamtv.onliv3.online:1936/karibtv/karibtv/playlist.m3u8
 #EXTINF:-1 tvg-id="UcayalinadeTelevision.pe@SD" tvg-name="Ucayalina de Television (720p)" tvg-logo="https://i.imgur.com/jBhfcqy.png" group-title="Entretenimiento",Ucayalina de Television (720p)
 https://live-evg11.tv360.bitel.com.pe/bitel/utv/playlist.m3u8
-#EXTINF:-1 tvg-id="UchuTV.pe@SD" tvg-name="Uchu TV (720p)" tvg-logo="https://i.imgur.com/xYGkUR9.png" group-title="Entretenimiento",Uchu TV (720p)
-https://live-evg11.tv360.bitel.com.pe/bitel/ucayalitvSRT/playlist.m3u8
 #EXTINF:-1 tvg-id="UCVTV.cl@SD" tvg-name="UCV TV (720p)" tvg-logo="https://i.postimg.cc/jjGpZf4T/UCV-Logo.png" group-title="Entretenimiento",UCV TV (720p)
 https://unlimited2-cl-isp.dps.live/ucvtv2/ucvtv2.smil/playlist.m3u8
 #EXTINF:-1 tvg-id="Unetev.cl@SD" tvg-name="Unetev (720p)" tvg-logo="https://i.imgur.com/6OPajke.png" group-title="Entretenimiento",Unetev (720p)
@@ -1217,6 +1221,8 @@ https://5940924978228.streamlock.net/j_Directo2/mp4:j_Directo2/playlist.m3u8
 https://5c0956165db0b.streamlock.net:8090/directo/_definst_/lancelot.television/master.m3u8
 #EXTINF:-1 tvg-id="SenalPeruTV.pe@SD" tvg-name="Señal Perú TV (404p) [Not 24/7]" tvg-logo="https://i.imgur.com/1q0R6R9.png" group-title="Entretenimiento",Señal Perú TV (404p) [Not 24/7]
 https://livestream.perucast.com/hls/stream.m3u8
+#EXTINF:-1 tvg-id="Canal10Emporda.es@SD" tvg-name="Canal 10 Empordà (360p) [Not 24/7]" tvg-logo="https://i.imgur.com/ojQ6wzX.png" group-title="Entretenimiento",Canal 10 Empordà (360p) [Not 24/7]
+https://ventdelnord.tv:8080/escala/directe.m3u8
 #EXTINF:-1 tvg-id="CanalLatino54.cl@SD" tvg-name="Canal Latino 54 (360p)" tvg-logo="https://i.imgur.com/mKUQoX7.png" group-title="Entretenimiento",Canal Latino 54 (360p)
 https://videostream.chileservidores.com:8081/latina/index.m3u8
 #EXTINF:-1 tvg-id="CanalProvincial.ar@SD" tvg-name="Canal Provincial (360p)" tvg-logo="https://i.imgur.com/bXHHtcb.png" group-title="Entretenimiento",Canal Provincial (360p)
@@ -1285,8 +1291,6 @@ https://streamconex.com:19360/villamaza/villamaza.m3u8
 https://video2.lhdserver.es/canal9cosespu/live.m3u8
 #EXTINF:-1 tvg-id="Canal99Miramar.ar@SD" tvg-name="Canal 99 Miramar" tvg-logo="https://i.imgur.com/PblsZxz.jpeg" group-title="Entretenimiento",Canal 99 Miramar
 https://vivo.solumedia.com:19360/cardinal/cardinal.m3u8
-#EXTINF:-1 tvg-id="CanalPulpoTV.ar@SD" tvg-name="Canal Pulpo TV" tvg-logo="https://new.opencaster.com/uploads/logos/logo_306_1756336707.png" group-title="Entretenimiento",Canal Pulpo TV
-https://vs20.live.opencaster.com/canalpulpotv_bdeee6e2/index.m3u8
 #EXTINF:-1 tvg-id="CaracolaTV.cl@SD" tvg-name="Caracola TV" tvg-logo="https://i.imgur.com/QGvfqug.png" group-title="Entretenimiento",Caracola TV
 https://wifispeed.trapemn.tv:1936/comunales/caracola-tv/chunks.m3u8
 #EXTINF:-1 tvg-id="CarasTV.ar@SD" tvg-name="Caras TV" tvg-logo="https://i.imgur.com/7dl4yQY.jpeg" group-title="Entretenimiento",Caras TV
@@ -1321,8 +1325,6 @@ https://5eaccbab48461.streamlock.net:1936/8074/8074/playlist.m3u8
 https://stmv2.voxtvhd.com.br/evavision/evavision/playlist.m3u8
 #EXTINF:-1 tvg-id="FiestaTV.co@SD" tvg-name="Fiesta TV" tvg-logo="https://i.imgur.com/42wImV2.png" group-title="Entretenimiento",Fiesta TV
 https://panelvideo1.intermediahost.co:3286/live/ruzfpkqklive.m3u8
-#EXTINF:-1 tvg-id="ForoTV.pe@SD" tvg-name="Foro TV" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTarTiQHz2Pl0Bpx9g7JV_eaz4V4f61wtGyRw&s" group-title="Entretenimiento",Foro TV
-https://mc.servidor.stream:19360/8274/8274.m3u8
 #EXTINF:-1 tvg-id="HuilaTV.co@SD" tvg-name="Huila TV" tvg-logo="https://i.imgur.com/hFlGHNZ.png" group-title="Entretenimiento",Huila TV
 https://server.asilivehd.com:3333/live/huilatvlive.m3u8
 #EXTINF:-1 tvg-id="InterradioTV.cl@SD" tvg-name="Interradio TV" tvg-logo="https://i.imgur.com/3875n4G.png" group-title="Entretenimiento",Interradio TV
@@ -1495,8 +1497,6 @@ https://streamer1.streamhost.org/salive/logosH/master.m3u8
 https://limited2.todostreaming.es/live/m95-livestream.m3u8
 #EXTINF:-1 tvg-id="NCTV.cl@SD" tvg-name="NCTV (1080p)" tvg-logo="https://i.imgur.com/oo5vDBv.png" group-title="Otros",NCTV (1080p)
 https://pantera1-100gb-cl-movistar.dps.live/nctv/nctv.smil/playlist.m3u8
-#EXTINF:-1 tvg-id="NegociosTV.es@SD" tvg-name="Negocios TV (1080p)" tvg-logo="https://m.media-amazon.com/images/I/21HEgSJn2gL.png" group-title="Otros",Negocios TV (1080p)
-https://streaming013.gestec-video.com/hls/negociostv.m3u8
 #EXTINF:-1 tvg-id="Noticiero90Minutos.co@SD" tvg-name="Noticiero 90 Minutos (1080p)" tvg-logo="https://i.imgur.com/ThaRRCN.png" group-title="Otros",Noticiero 90 Minutos (1080p)
 https://play.cdn.enetres.net/621B146D29C541AFB1507809F038F471021/021/playlist.m3u8
 #EXTINF:-1 tvg-id="RPPTV.pe@SD" tvg-name="RPP TV (1080p)" tvg-logo="https://i.imgur.com/oBz3CgE.png" group-title="Otros",RPP TV (1080p)
@@ -1529,6 +1529,8 @@ https://ztnr.rtve.es/ztnr/5473142.m3u8
 https://ztnr.rtve.es/ztnr/4952053.m3u8
 #EXTINF:-1 tvg-id="CanalISB.cl@SD" tvg-name="Canal ISB (Iglesia San Bernardo) (720p)" tvg-logo="https://i.imgur.com/cQ4ggTw.png" group-title="Otros",Canal ISB (Iglesia San Bernardo) (720p)
 https://unlimited1-us.dps.live/isb/isb.smil/playlist.m3u8
+#EXTINF:-1 tvg-id="CanalPyC.co@SD" tvg-name="Canal PyC (720p)" tvg-logo="https://i.imgur.com/3qxBDhV.png" group-title="Otros",Canal PyC (720p)
+https://live20.bozztv.com/akamaissh101/ssh101/pyctelevision/playlist.m3u8
 #EXTINF:-1 tvg-id="CanalSur2.es@SD" tvg-name="Canal Sur Andalucía 2 (720p)" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Canal_Sur_2_-_2017_logo.png/500px-Canal_Sur_2_-_2017_logo.png" group-title="Otros",Canal Sur Andalucía 2 (720p)
 https://cdnlive.codev8.net/rtvalive/smil:channel22.smil/playlist.m3u8
 #EXTINF:-1 tvg-id="CiudadMagica.ar@SD" tvg-name="Ciudad Magica (720p)" tvg-logo="https://i.imgur.com/HJkSz2U.png" group-title="Otros",Ciudad Magica (720p)
