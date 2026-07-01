@@ -1,6 +1,6 @@
 # Estado de canales
 
-Última revisión UTC: `2026-07-01T00:50:55Z`
+Última revisión UTC: `2026-07-01T02:12:16Z`
 
 - Canales totales: **1200**
 - Canales vivos: **1200**
@@ -130,7 +130,6 @@
 | Estrella TV (1080p) | Familia y TV Abierta | US | ✅ Vivo | 200 |  |
 | Red America TV (1080p) | Familia y TV Abierta | BO | ✅ Vivo | 200 |  |
 | TV Publica (1080p) | Familia y TV Abierta | AR | ✅ Vivo | 200 |  |
-| Canal 11 de la Costa (720p) | Familia y TV Abierta | AR | ✅ Vivo | 200 |  |
 | Canal 21 Huancayo (720p) | Familia y TV Abierta | PE | ✅ Vivo | 200 |  |
 | Radio America TV (720p) | Familia y TV Abierta | CL | ✅ Vivo | 200 |  |
 | VR Canal 21 Nasca (720p) | Familia y TV Abierta | PE | ✅ Vivo | 200 |  |
@@ -203,7 +202,6 @@
 | BET | Peliculas - Drama y Series | SE | ✅ Vivo | 200 |  |
 | Britain's Next Top Model | Peliculas - Drama y Series | SE | ✅ Vivo | 200 |  |
 | Bull | Peliculas - Drama y Series | SE | ✅ Vivo | 200 |  |
-| Curro Jiménez | Peliculas - Drama y Series | US | ✅ Vivo | 200 |  |
 | Dating Naked UK | Peliculas - Drama y Series | SE | ✅ Vivo | 200 |  |
 | Diagnosis Murder | Peliculas - Drama y Series | SE | ✅ Vivo | 200 |  |
 | Doc Martin | Peliculas - Drama y Series | SE | ✅ Vivo | 200 |  |
@@ -270,11 +268,11 @@
 | Red Bull TV ES (1080p) | Deportes | AT | ✅ Vivo | 200 |  |
 | FIFA+ Hispanic America (720p) | Deportes | UK | ✅ Vivo | 200 |  |
 | FIFA+ Spain (720p) | Deportes | UK | ✅ Vivo | 200 |  |
-| FTV (720p) | Deportes | BO | ✅ Vivo | 200 |  |
 | Gol (720p) | Deportes | ES | ✅ Vivo | 200 |  |
 | Ovacion TV (720p) [Not 24/7] | Deportes | PE | ✅ Vivo | 200 |  |
 | Pluto TV Snooker 900 (720p) | Deportes | DE | ✅ Vivo | 200 |  |
 | Pluto TV Snooker 900 (720p) (2) | Deportes | SE | ✅ Vivo | 200 |  |
+| Sqala TV (720p) | Deportes | PE | ✅ Vivo | 200 |  |
 | Teledeporte (720p) [Geo-blocked] | Deportes | ES | ✅ Vivo | 200 |  |
 | Teletrak (720p) | Deportes | CL | ✅ Vivo | 200 |  |
 | Turf Movil (720p) | Deportes | CL | ✅ Vivo | 200 |  |
@@ -325,6 +323,7 @@
 | E! Entertainment TV | Entretenimiento | ALL | ✅ Vivo | 200 |  |
 | TV Usach (720p) | Entretenimiento | CL | ✅ Vivo | 200 |  |
 | Antena 3 Internacional | Entretenimiento | ES | ✅ Vivo | 200 |  |
+| TVenLinea (1080p) | Entretenimiento | PE | ✅ Vivo | 200 |  |
 | TVE Internacional Europe (576p) [Geo-blocked] | Entretenimiento | ES | ✅ Vivo | 200 |  |
 | Red TVE Ventanas (432p) | Entretenimiento | EC | ✅ Vivo | 200 |  |
 | Portalfoxmix | Entretenimiento | CL | ✅ Vivo | 200 |  |
@@ -365,7 +364,6 @@
 | Canal 2 de Ushuaia (1080p) | Entretenimiento | AR | ✅ Vivo | 200 |  |
 | Canal 2 Misiones (1080p) | Entretenimiento | AR | ✅ Vivo | 200 |  |
 | Canal 3 La Pampa (1080p) | Entretenimiento | AR | ✅ Vivo | 200 |  |
-| Canal 7 Neuquén (1080p) | Entretenimiento | AR | ✅ Vivo | 200 |  |
 | Canal 7 Salta (1080p) | Entretenimiento | AR | ✅ Vivo | 200 |  |
 | Canal 8 Vision TV (1080p) | Entretenimiento | PY | ✅ Vivo | 200 |  |
 | Canal 9 Bío Bío Televisión (1080p) [Not 24/7] | Entretenimiento | CL | ✅ Vivo | 200 |  |
@@ -577,10 +575,8 @@
 | Ultra Casanare TV (1080p) [Not 24/7] | Entretenimiento | CO | ✅ Vivo | 200 |  |
 | UniRadio TV (1080p) | Entretenimiento | PY | ✅ Vivo | 200 |  |
 | Unitel (1080p) | Entretenimiento | PE | ✅ Vivo | 200 |  |
-| Univalle Televisión (1080p) | Entretenimiento | BO | ✅ Vivo | 200 |  |
 | Unsion TV (1080p) | Entretenimiento | EC | ✅ Vivo | 200 |  |
 | Venus Media (1080p) | Entretenimiento | PY | ✅ Vivo | 200 |  |
-| Villa Elisa Radio TV (1080p) | Entretenimiento | PY | ✅ Vivo | 200 |  |
 | VitoTVO (1080p) | Entretenimiento | EC | ✅ Vivo | 200 |  |
 | Vive TV Colombia (1080p) | Entretenimiento | CO | ✅ Vivo | 200 |  |
 | VIVO TV (1080p) | Entretenimiento | UY | ✅ Vivo | 200 |  |
@@ -599,6 +595,7 @@
 | Almaya TV (720p) | Entretenimiento | PY | ✅ Vivo | 200 |  |
 | Altura TV (720p) | Entretenimiento | PE | ✅ Vivo | 200 |  |
 | Amaga Television (720p) | Entretenimiento | CO | ✅ Vivo | 200 |  |
+| Amazonica TV (720p) | Entretenimiento | PE | ✅ Vivo | 200 |  |
 | América Estéreo Ibarra (720p) | Entretenimiento | EC | ✅ Vivo | 200 |  |
 | ANC Television (720p) | Entretenimiento | CO | ✅ Vivo | 200 |  |
 | Andina RTV (720p) | Entretenimiento | PE | ✅ Vivo | 200 |  |
@@ -609,7 +606,6 @@
 | Arpegio TV (720p) | Entretenimiento | PE | ✅ Vivo | 200 |  |
 | AsiriTV (720p) [Not 24/7] | Entretenimiento | PE | ✅ Vivo | 200 |  |
 | Atacama TV (Copiapó) (720p) [Not 24/7] | Entretenimiento | CL | ✅ Vivo | 200 |  |
-| Atlantis Radio TV (720p) | Entretenimiento | PE | ✅ Vivo | 200 |  |
 | Auténtica Televisión (720p) [Not 24/7] | Entretenimiento | PE | ✅ Vivo | 200 |  |
 | Aysen TV (720p) | Entretenimiento | CL | ✅ Vivo | 200 |  |
 | Azahares Radio Multimedia (720p) | Entretenimiento | AR | ✅ Vivo | 200 |  |
@@ -675,7 +671,6 @@
 | Dac TV (720p) | Entretenimiento | PE | ✅ Vivo | 200 |  |
 | Dance FM (720p) | Entretenimiento | CL | ✅ Vivo | 200 |  |
 | Dismar Radio TV (720p) | Entretenimiento | PY | ✅ Vivo | 200 |  |
-| Doble C Television (720p) | Entretenimiento | PE | ✅ Vivo | 200 |  |
 | DTV (720p) | Entretenimiento | PE | ✅ Vivo | 200 |  |
 | Décima TV (Ancud) (720p) | Entretenimiento | CL | ✅ Vivo | 200 |  |
 | Educa TV (720p) [Not 24/7] | Entretenimiento | EC | ✅ Vivo | 200 |  |
@@ -732,6 +727,7 @@
 | Mijas 3.40TV (720p) | Entretenimiento | ES | ✅ Vivo | 200 |  |
 | MitosTV (720p) | Entretenimiento | PE | ✅ Vivo | 200 |  |
 | MiTV (720p) | Entretenimiento | PY | ✅ Vivo | 200 |  |
+| MTV Catfish TV Show (720p) | Entretenimiento | DE | ✅ Vivo | 200 |  |
 | MTV Dating (720p) | Entretenimiento | DE | ✅ Vivo | 200 |  |
 | MTV Dating (720p) (2) | Entretenimiento | SE | ✅ Vivo | 200 |  |
 | MTV Reality (720p) | Entretenimiento | DE | ✅ Vivo | 200 |  |
@@ -764,7 +760,6 @@
 | POP World TV (720p) | Entretenimiento | ES | ✅ Vivo | 200 |  |
 | Power Max Radio TV (720p) | Entretenimiento | AR | ✅ Vivo | 200 |  |
 | Prattel TV (720p) | Entretenimiento | PE | ✅ Vivo | 200 |  |
-| RA Television (720p) | Entretenimiento | BO | ✅ Vivo | 200 |  |
 | Radio 3 (720p) | Entretenimiento | ES | ✅ Vivo | 200 |  |
 | Radio Bonita 106.7 (720p) | Entretenimiento | EC | ✅ Vivo | 200 |  |
 | Radio Carnaval TV (720p) [Not 24/7] | Entretenimiento | ES | ✅ Vivo | 200 |  |
@@ -788,27 +783,26 @@
 | RNE para todos (720p) | Entretenimiento | ES | ✅ Vivo | 200 |  |
 | ROTV Valencia (720p) | Entretenimiento | ES | ✅ Vivo | 200 |  |
 | RTP (720p) | Entretenimiento | PE | ✅ Vivo | 200 |  |
-| RTV Norte (720p) | Entretenimiento | BO | ✅ Vivo | 200 |  |
 | RTV Riobamba (720p) [Not 24/7] | Entretenimiento | EC | ✅ Vivo | 200 |  |
 | RumbaMix TV (720p) | Entretenimiento | PE | ✅ Vivo | 200 |  |
 | Santa María Televisión (720p) [Not 24/7] | Entretenimiento | CL | ✅ Vivo | 200 |  |
 | Sarapiqui TV (720p) [Not 24/7] | Entretenimiento | CR | ✅ Vivo | 200 |  |
-| SelvaTV (720p) | Entretenimiento | PE | ✅ Vivo | 200 |  |
 | Sicardi TV (720p) | Entretenimiento | AR | ✅ Vivo | 200 |  |
 | Sol Música (720p) | Entretenimiento | ES | ✅ Vivo | 200 |  |
 | Sol TV (720p) | Entretenimiento | BO | ✅ Vivo | 200 |  |
 | Solar Television (720p) | Entretenimiento | PE | ✅ Vivo | 200 |  |
 | Sono Onda TV (720p) | Entretenimiento | EC | ✅ Vivo | 200 |  |
 | SOY Plancha TV (720p) | Entretenimiento | CR | ✅ Vivo | 200 |  |
-| SPC Canal 15 (720p) | Entretenimiento | BO | ✅ Vivo | 200 |  |
 | SpektraTV (720p) | Entretenimiento | ES | ✅ Vivo | 200 |  |
 | Stgo.TV (720p) | Entretenimiento | CL | ✅ Vivo | 200 |  |
 | Studio Pasco TV (720p) | Entretenimiento | PE | ✅ Vivo | 200 |  |
 | Super Canal (720p) | Entretenimiento | PE | ✅ Vivo | 200 |  |
 | Supermúsica TV (720p) | Entretenimiento | CO | ✅ Vivo | 200 |  |
+| TDI Colombia (720p) | Entretenimiento | CO | ✅ Vivo | 200 |  |
 | TDtv (720p) | Entretenimiento | CR | ✅ Vivo | 200 |  |
 | TELE 6 (720p) | Entretenimiento | BO | ✅ Vivo | 200 |  |
 | Tele Fe Bolivia (720p) | Entretenimiento | BO | ✅ Vivo | 200 |  |
+| Tele Mocoa Canal 10 (720p) | Entretenimiento | CO | ✅ Vivo | 200 |  |
 | Tele Posadas (720p) | Entretenimiento | AR | ✅ Vivo | 200 |  |
 | Tele Safor (720p) [Not 24/7] | Entretenimiento | ES | ✅ Vivo | 200 |  |
 | Tele Uno (720p) [Not 24/7] | Entretenimiento | CR | ✅ Vivo | 200 |  |
@@ -824,7 +818,6 @@
 | Teleselva (720p) | Entretenimiento | PE | ✅ Vivo | 200 |  |
 | TeleSUR Costa Rica (720p) [Not 24/7] | Entretenimiento | CR | ✅ Vivo | 200 |  |
 | Telesystem TV (720p) | Entretenimiento | PE | ✅ Vivo | 200 |  |
-| Television Azanaque (720p) | Entretenimiento | BO | ✅ Vivo | 200 |  |
 | Television Tarapoto (720p) | Entretenimiento | PE | ✅ Vivo | 200 |  |
 | Televisión Aranda (720p) | Entretenimiento | ES | ✅ Vivo | 200 |  |
 | Telpin TV Canal 2 HD (720p) | Entretenimiento | AR | ✅ Vivo | 200 |  |
@@ -896,6 +889,7 @@
 | ATB La Paz (614p) [Not 24/7] | Entretenimiento | BO | ✅ Vivo | 200 |  |
 | Reyali (614p) | Entretenimiento | CO | ✅ Vivo | 200 |  |
 | 360 RFTV (576p) [Geo-blocked] | Entretenimiento | CR | ✅ Vivo | 200 |  |
+| 7 TeleValencia (576p) | Entretenimiento | ES | ✅ Vivo | 200 |  |
 | 8 La Marina TV (576p) | Entretenimiento | ES | ✅ Vivo | 200 |  |
 | Alacantí TV (576p) [Not 24/7] | Entretenimiento | ES | ✅ Vivo | 200 |  |
 | Alcarria TV (576p) [Not 24/7] | Entretenimiento | ES | ✅ Vivo | 200 |  |
@@ -926,6 +920,7 @@
 | Red CCTV (480p) | Entretenimiento | BO | ✅ Vivo | 200 |  |
 | SoloBáilalo (480p) | Entretenimiento | CL | ✅ Vivo | 200 |  |
 | T-Vinet (480p) | Entretenimiento | CL | ✅ Vivo | 200 |  |
+| TV3 La Plata (480p) | Entretenimiento | CO | ✅ Vivo | 200 |  |
 | Urola Telebista (416p) | Entretenimiento | ES | ✅ Vivo | 200 |  |
 | Lancelot TV (404p) | Entretenimiento | ES | ✅ Vivo | 200 |  |
 | Señal Perú TV (404p) [Not 24/7] | Entretenimiento | PE | ✅ Vivo | 200 |  |
@@ -1008,7 +1003,6 @@
 | F10 HD [Geo-blocked] | Entretenimiento | BO | ✅ Vivo | 200 |  |
 | Fiesta TV | Entretenimiento | CO | ✅ Vivo | 200 |  |
 | Foro TV | Entretenimiento | PE | ✅ Vivo | 200 |  |
-| Galactica TV | Entretenimiento | PE | ✅ Vivo | 200 |  |
 | Gaviota TV | Entretenimiento | EC | ✅ Vivo | 200 |  |
 | Gen | Entretenimiento | PY | ✅ Vivo | 200 |  |
 | Geordie Shore | Entretenimiento | SE | ✅ Vivo | 200 |  |
@@ -1018,7 +1012,6 @@
 | Itel TV Canal 2 | Entretenimiento | AR | ✅ Vivo | 200 |  |
 | Jersey Shore | Entretenimiento | SE | ✅ Vivo | 200 |  |
 | Jersey Shore Family Vacation | Entretenimiento | SE | ✅ Vivo | 200 |  |
-| Kora TV | Entretenimiento | PE | ✅ Vivo | 200 |  |
 | La Chilena TV | Entretenimiento | CL | ✅ Vivo | 200 |  |
 | La Granja TV | Entretenimiento | CL | ✅ Vivo | 200 |  |
 | La Metro TV | Entretenimiento | CL | ✅ Vivo | 200 |  |
@@ -1040,6 +1033,7 @@
 | Misiones Cuatro | Entretenimiento | AR | ✅ Vivo | 200 |  |
 | Monumental TV | Entretenimiento | PY | ✅ Vivo | 200 |  |
 | MTV Catfish | Entretenimiento | SE | ✅ Vivo | 200 |  |
+| MTV Embarazada a los 16 | Entretenimiento | DE | ✅ Vivo | 200 |  |
 | MTV Geordies | Entretenimiento | DE | ✅ Vivo | 200 |  |
 | MTV Jerseys | Entretenimiento | DE | ✅ Vivo | 200 |  |
 | MTV Originals | Entretenimiento | DE | ✅ Vivo | 200 |  |
@@ -1053,9 +1047,9 @@
 | Palenque TV | Entretenimiento | BO | ✅ Vivo | 200 |  |
 | Panche Television | Entretenimiento | CO | ✅ Vivo | 200 |  |
 | Paradise Hotel | Entretenimiento | SE | ✅ Vivo | 200 |  |
-| Planeta Channel | Entretenimiento | EC | ✅ Vivo | 200 |  |
 | Pluto TV Gasolina | Entretenimiento | DE | ✅ Vivo | 200 |  |
 | Pluto TV Impacto | Entretenimiento | DE | ✅ Vivo | 200 |  |
+| Pluto TV Orgullo | Entretenimiento | DE | ✅ Vivo | 200 |  |
 | Polar TV | Entretenimiento | CL | ✅ Vivo | 200 |  |
 | PowerHD | Entretenimiento | AR | ✅ Vivo | 200 |  |
 | Primavera 15 | Entretenimiento | PE | ✅ Vivo | 200 |  |
@@ -1125,6 +1119,7 @@
 | NatureTime Finland (1080p) | Otros | CA | ✅ Vivo | 200 |  |
 | NCTV (1080p) | Otros | CL | ✅ Vivo | 200 |  |
 | Negocios TV (1080p) | Otros | ES | ✅ Vivo | 200 |  |
+| Noticiero 90 Minutos (1080p) | Otros | CO | ✅ Vivo | 200 |  |
 | NPY (1080p) | Otros | PY | ✅ Vivo | 200 |  |
 | Radio TV El Arca del Pacto (1080p) | Otros | PY | ✅ Vivo | 200 |  |
 | RCC TV (1080p) [Not 24/7] | Otros | PY | ✅ Vivo | 200 |  |
@@ -1149,7 +1144,6 @@
 | Canal 24 Horas Catalunya (720p) | Otros | ES | ✅ Vivo | 200 |  |
 | Canal ISB (Iglesia San Bernardo) (720p) | Otros | CL | ✅ Vivo | 200 |  |
 | Canal Motor (720p) | Otros | NO | ✅ Vivo | 200 |  |
-| Canal PyC (720p) | Otros | CO | ✅ Vivo | 200 |  |
 | Canal Sur Andalucía 2 (720p) | Otros | ES | ✅ Vivo | 200 |  |
 | Ciudad Magica (720p) | Otros | AR | ✅ Vivo | 200 |  |
 | CN3 Television (720p) | Otros | BO | ✅ Vivo | 200 |  |
@@ -1209,3 +1203,9 @@
 | Norte Informativo TV (240p) | Otros | CR | ✅ Vivo | 200 |  |
 | Agenda Minera TV | Otros | BO | ✅ Vivo | 200 |  |
 | Archivos Forenses | Otros | US | ✅ Vivo | 200 |  |
+| Beavis and Butt-Head | Otros | SE | ✅ Vivo | 200 |  |
+| Boligkjøp i blinde | Otros | SE | ✅ Vivo | 200 |  |
+| Broad City | Otros | SE | ✅ Vivo | 200 |  |
+| Canal Luz | Otros | AR | ✅ Vivo | 200 |  |
+| Canal Orbe 21 | Otros | AR | ✅ Vivo | 200 |  |
+| Canal Pro | Otros | PY | ✅ Vivo | 200 |  |

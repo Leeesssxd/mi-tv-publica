@@ -1,6 +1,6 @@
 # Prioridades de canales
 
-Última revisión UTC: `2026-07-01T00:50:56Z`
+Última revisión UTC: `2026-07-01T02:12:16Z`
 
 - Prioridades solicitadas: **44**
 - Prioridades encontradas: **16**
