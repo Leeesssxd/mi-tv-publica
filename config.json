@@ -11,6 +11,8 @@
   "jitter_max_seconds": 1.5,
   "cache_ttl_seconds": 21600,
   "chunk_size_bytes": 65536,
+  "max_secret_sources": 8,
+  "max_private_channels_per_source": 1200,
   "secondary_sources": [
     {
       "source_url": "https://raw.githubusercontent.com/Alplox/json-teles/main/canales.json",

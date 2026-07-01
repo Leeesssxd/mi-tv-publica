@@ -20,11 +20,15 @@ from scrape_channels import (  # noqa: E402
     DEFAULT_LOCAL_PRIVATE_SOURCES,
     DEFAULT_SECONDARY_SOURCES,
     DEFAULT_SOURCE_URL,
+    build_discovered_mirrors_payload,
+    collect_channels_from_m3u_lines,
     curate_private_channels,
     dedupe_discovered_channels,
     detect_payload_kind,
+    discover_github_recursive_mirrors,
     ensure_local_private_sources_file,
     ensure_unique_name,
+    extract_structured_candidates_from_text,
     extract_m3u8_links,
     extract_text_links_from_file,
     file_looks_like_m3u,
@@ -34,20 +38,24 @@ from scrape_channels import (  # noqa: E402
     iter_text_chunks,
     load_any_cached_path,
     load_cached_text,
+    load_discovered_mirrors_pool,
     load_env_file,
     load_secret_upstream_pools,
     merge_channels,
+    normalize_and_match_advanced,
     normalize_url,
     normalize_source_url,
     parse_json_teles_channel_json,
     parse_extinf_line,
     parse_generic_channel_json,
+    is_excluded_regional_variant,
     parse_iptv_org_streams,
     parse_m3u_file,
     should_keep_channel_by_geo,
     resolve_source_url,
     run,
     save_cached_text,
+    save_discovered_mirrors_payload,
     update_quarantine_entry,
     write_telemetry_report,
 )
@@ -105,6 +113,223 @@ def test_load_secret_upstream_pools_admite_urls_y_diccionarios():
         {"source_url": "http://example.com/feed.m3u", "group": "Privados Cloud", "country": "ALL"},
         {"source_url": "http://example.com/extra.m3u", "group": "Privados", "country": "ALL"},
     ]
+
+
+def test_load_discovered_mirrors_pool_normaliza_diales_y_prioriza_mx(tmp_path):
+    mirrors_file = tmp_path / "discovered_mirrors.json"
+    mirrors_file.write_text(
+        json.dumps(
+            {
+                "105": [
+                    {"url": "https://example.com/all.m3u8", "geo": "ALL", "verified": False},
+                    {"url": "https://example.com/mx.m3u8", "geo": "MX", "verified": False},
+                ]
+            }
+        ),
+        encoding="utf-8",
+    )
+
+    payload = load_discovered_mirrors_pool(mirrors_file)
+
+    assert [item["url"] for item in payload] == [
+        "https://example.com/mx.m3u8",
+        "https://example.com/all.m3u8",
+    ]
+    assert all(item["tvg_id"] == "CANAL_5_LOCAL_HD" for item in payload)
+    assert payload[0]["source"] == "discovered_mirrors"
+
+
+def test_load_discovered_mirrors_pool_aplica_normalizador_avanzado_al_raw_name(tmp_path):
+    mirrors_file = tmp_path / "discovered_mirrors.json"
+    mirrors_file.write_text(
+        json.dumps(
+            {
+                "302": [
+                    {"url": "https://example.com/espn3.m3u8", "geo": "MX", "raw_name": "ESPN 3 Mexico 1080p", "verified": False},
+                ]
+            }
+        ),
+        encoding="utf-8",
+    )
+
+    payload = load_discovered_mirrors_pool(mirrors_file)
+
+    assert payload[0]["tvg_id"] == "ESPN_3_HD"
+    assert payload[0]["name"] == "ESPN 3 Mexico 1080p"
+
+
+def test_load_discovered_mirrors_pool_omite_dominio_mac_tv_live(tmp_path):
+    mirrors_file = tmp_path / "discovered_mirrors.json"
+    mirrors_file.write_text(
+        json.dumps(
+            {
+                "105": [
+                    {"url": "https://mac-tv.live/live/canal5.m3u8", "geo": "MX", "verified": False},
+                    {"url": "https://example.com/canal5.m3u8", "geo": "MX", "verified": False},
+                ]
+            }
+        ),
+        encoding="utf-8",
+    )
+
+    payload = load_discovered_mirrors_pool(mirrors_file)
+
+    assert [item["url"] for item in payload] == ["https://example.com/canal5.m3u8"]
+
+
+def test_extract_structured_candidates_from_text_extrae_canales_y_fuentes_anidadas():
+    text = "\n".join(
+        [
+            "#EXTM3U",
+            '#EXTINF:-1,ESPN 3 Mexico 1080p',
+            "https://streams.example/espn3.m3u8",
+            "https://raw.githubusercontent.com/user/repo/main/lista.m3u",
+        ]
+    )
+
+    candidates, nested_sources = extract_structured_candidates_from_text(text)
+
+    assert candidates == [{"raw_name": "ESPN 3 Mexico 1080p", "url": "https://streams.example/espn3.m3u8"}]
+    assert "https://raw.githubusercontent.com/user/repo/main/lista.m3u" in nested_sources
+
+
+def test_collect_channels_from_m3u_lines_descarta_temprano_lo_ajeno_a_grilla():
+    lines = iter(
+        [
+            "#EXTM3U\n",
+            "#EXTINF:-1,Canal Irrelevante Internacional\n",
+            "https://example.com/irrelevante.m3u8\n",
+            "#EXTINF:-1,ESPN 3 Mexico 1080p\n",
+            "https://example.com/espn3.m3u8\n",
+        ]
+    )
+
+    channels = collect_channels_from_m3u_lines(
+        lines,
+        default_group="Privados",
+        default_country="ALL",
+        early_filter=True,
+    )
+
+    assert len(channels) == 1
+    assert channels[0]["tvg_id"] == "ESPN_3_HD"
+    assert channels[0]["url"] == "https://example.com/espn3.m3u8"
+
+
+def test_collect_channels_from_m3u_lines_omite_mac_tv_live():
+    lines = iter(
+        [
+            "#EXTM3U\n",
+            "#EXTINF:-1,Canal 5 Mexico\n",
+            "https://mac-tv.live/live/canal5.m3u8\n",
+            "#EXTINF:-1,Canal 5 Mexico\n",
+            "https://example.com/canal5.m3u8\n",
+        ]
+    )
+
+    channels = collect_channels_from_m3u_lines(
+        lines,
+        default_group="Privados",
+        default_country="MX",
+        early_filter=True,
+    )
+
+    assert [channel["url"] for channel in channels] == ["https://example.com/canal5.m3u8"]
+
+
+def test_build_discovered_mirrors_payload_agrupa_por_dial():
+    payload = build_discovered_mirrors_payload(
+        [
+            {"raw_name": "ESPN 3 Mexico 1080p", "url": "https://streams.example/espn3.m3u8"},
+            {"raw_name": "CNN International", "url": "https://streams.example/cnni.m3u8"},
+        ]
+    )
+
+    assert payload["306"][0]["raw_name"] == "ESPN 3 Mexico 1080p"
+    assert payload["162"][0]["raw_name"] == "CNN International"
+
+
+def test_discover_github_recursive_mirrors_respeta_profundidad_y_unifica_resultado(monkeypatch):
+    import scrape_channels
+
+    payloads = {
+        "https://api.github.com/search/code?q=iptv+test": json.dumps(
+            {
+                "items": [
+                    {"html_url": "https://github.com/user/repo/blob/main/lista.m3u"},
+                ]
+            }
+        ),
+        "https://raw.githubusercontent.com/user/repo/main/lista.m3u": "\n".join(
+            [
+                "#EXTM3U",
+                "#EXTINF:-1,ESPN 3 Mexico 1080p",
+                "https://streams.example/espn3.m3u8",
+                "https://raw.githubusercontent.com/user/repo/main/extra.m3u",
+            ]
+        ),
+        "https://raw.githubusercontent.com/user/repo/main/extra.m3u": "\n".join(
+            [
+                "#EXTM3U",
+                "#EXTINF:-1,CNN International",
+                "https://streams.example/cnni.m3u8",
+            ]
+        ),
+    }
+
+    async def fake_fetch_remote_text(session, source_url, config):
+        return payloads.get(source_url, "")
+
+    monkeypatch.setattr(scrape_channels, "fetch_remote_text", fake_fetch_remote_text)
+
+    payload = asyncio.run(
+        discover_github_recursive_mirrors(
+            {
+                "timeout_seconds": 1,
+                "retry_attempts": 1,
+                "retry_backoff_base_seconds": 0,
+                "jitter_min_seconds": 0,
+                "jitter_max_seconds": 0,
+                "user_agent": "pytest",
+                "accept_language": "es",
+                "github_crawler_enabled": True,
+                "github_crawler_max_depth": 3,
+                "github_crawler_max_follow_urls": 10,
+                "github_crawler_max_candidates": 10,
+                "github_search_terms": ["iptv test"],
+            }
+        )
+    )
+
+    assert payload["306"][0]["url"] == "https://streams.example/espn3.m3u8"
+    assert payload["162"][0]["url"] == "https://streams.example/cnni.m3u8"
+
+
+def test_normalize_and_match_advanced_resuelve_clusters_pedidos():
+    assert normalize_and_match_advanced("CN") == "CARTOON_NETWORK_HD"
+    assert normalize_and_match_advanced("Cartoonito HD") == "CARTOONITO_HD"
+    assert normalize_and_match_advanced("Nick Jr MX 720p") == "NICK_JR_HD"
+    assert normalize_and_match_advanced("Nick HD") == "NICKELODEON_HD"
+    assert normalize_and_match_advanced("Disney Jr Latino") == "DISNEY_JR_HD"
+    assert normalize_and_match_advanced("Disney Channel 1080p") == "DISNEY_CHANNEL_HD"
+    assert normalize_and_match_advanced("Baby First") == "BABY_FIRST_HD"
+    assert normalize_and_match_advanced("Baby TV") == "BABY_TV_SD"
+    assert normalize_and_match_advanced("Star Channel") == "STAR_CHANNEL_HD"
+    assert normalize_and_match_advanced("Sony Movies") == "SONY_MOVIES"
+    assert normalize_and_match_advanced("Sony HD") == "SONY_HD"
+    assert normalize_and_match_advanced("Studio Universal") == "STUDIO_UNIVERSAL_HD"
+    assert normalize_and_match_advanced("Universal TV") == "UNIVERSAL_TV_HD"
+    assert normalize_and_match_advanced("Cinema Platino 2") == "CINEMA_PLATINO_2_SD"
+    assert normalize_and_match_advanced("Cinema Platino") == "CINEMA_PLATINO_HD"
+    assert normalize_and_match_advanced("Cine Canal") == "CINECANAL_HD"
+    assert normalize_and_match_advanced("ESPN 4 MX") == "ESPN_4_HD"
+    assert normalize_and_match_advanced("TVC Deportes 2") == "TVC_DEPORTES_2_HD"
+    assert normalize_and_match_advanced("Claro Sports") == "CLARO_SPORTS_HD"
+    assert normalize_and_match_advanced("Meganoticias MX") == "MEGANOTICIAS_MX_HD"
+    assert normalize_and_match_advanced("Meganoticias") == "MEGANOTICIAS_HD"
+    assert normalize_and_match_advanced("CNN en Español") == "CNNE_HD"
+    assert normalize_and_match_advanced("CNN International") == "CNNI_HD"
+    assert normalize_and_match_advanced("CNN") == "CNN_HD"
 
 
 def test_resolve_source_url_usa_source_env(monkeypatch):
@@ -259,6 +484,15 @@ def test_dedupe_discovered_channels_conserva_el_mejor_candidato_por_url():
 
     assert len(deduped) == 1
     assert deduped[0]["name"] == "TUDN MX"
+
+
+def test_is_excluded_regional_variant_descarta_canal_5_cozumel():
+    assert is_excluded_regional_variant(
+        {"name": "Canal 5 TV Cozumel (1080p)", "group": "Familia", "country": "MX", "tvg_id": "", "url": "https://a"}
+    ) is True
+    assert is_excluded_regional_variant(
+        {"name": "Canal 5 Televisa", "group": "Familia", "country": "MX", "tvg_id": "", "url": "https://b"}
+    ) is False
 
 
 def test_parse_m3u_file_asegura_nombres_unicos_en_cargas_masivas(tmp_path):
@@ -657,6 +891,46 @@ def test_merge_channels_promueve_prioritario_a_primario_y_conserva_backup():
     assert merged[0]["backup_url"] == "https://example.com/public.m3u8"
 
 
+def test_merge_channels_usa_identidad_de_dial_para_unificar_aliases():
+    existing = [
+        {
+            "name": "Canal 5 Televisa",
+            "group": "Familia y TV Abierta",
+            "country": "MX",
+            "url": "https://example.com/public.m3u8",
+            "logo": "",
+            "tvg_id": "",
+        }
+    ]
+
+    merged, added = merge_channels(
+        existing,
+        [
+            {
+                "name": "Canal 5 (1080p)",
+                "group": "Familia y TV Abierta",
+                "country": "MX",
+                "url": "https://example.com/mirror.m3u8",
+                "logo": "",
+                "tvg_id": "",
+            }
+        ],
+    )
+
+    assert added == 1
+    assert len(merged) == 1
+    preserved_urls = {merged[0]["url"]}
+    backup_value = merged[0].get("backup_url")
+    if isinstance(backup_value, list):
+        preserved_urls.update(backup_value)
+    elif backup_value:
+        preserved_urls.add(backup_value)
+    assert preserved_urls == {
+        "https://example.com/public.m3u8",
+        "https://example.com/mirror.m3u8",
+    }
+
+
 def test_ensure_unique_name_agrega_sufijo_si_ya_existe():
     used_names = {"canal demo"}
     assert ensure_unique_name("Canal Demo", used_names) == "Canal Demo (2)"
@@ -996,6 +1270,61 @@ def test_run_deduplica_fuentes_repetidas_entre_config_y_archivo_local(tmp_path, 
         "https://primary.example/list.m3u",
         repeated_url,
     ]
+
+
+def test_run_inyecta_discovered_mirrors_antes_de_deduplicar(tmp_path, monkeypatch):
+    import scrape_channels
+
+    sources_path = tmp_path / "channels.json"
+    sources_path.write_text(json.dumps({"channels": []}), encoding="utf-8")
+    config_path = tmp_path / "config.json"
+    config_path.write_text(json.dumps({"secondary_sources": []}), encoding="utf-8")
+    local_sources_path = tmp_path / "local_private_sources.json"
+    local_sources_path.write_text("[]", encoding="utf-8")
+    mirrors_path = tmp_path / "discovered_mirrors.json"
+    mirrors_path.write_text(
+        json.dumps(
+            {
+                "105": [
+                    {"url": "https://mirror.example/canal5.m3u8", "geo": "MX", "verified": False},
+                ]
+            }
+        ),
+        encoding="utf-8",
+    )
+
+    async def fake_discover_single_source(
+        source_url,
+        config,
+        *,
+        default_group,
+        default_country,
+        metadata_url=None,
+        category_filter=None,
+        max_channels=None,
+        preferred_primary_patterns=None,
+        curate_private=False,
+    ):
+        return ([], 0)
+
+    monkeypatch.setattr(scrape_channels, "discover_single_source", fake_discover_single_source)
+    monkeypatch.setattr(scrape_channels, "LOCAL_PRIVATE_SOURCES_FILE", local_sources_path)
+    monkeypatch.setattr(scrape_channels, "DISCOVERED_MIRRORS_FILE", mirrors_path)
+
+    added = asyncio.run(
+        run(
+            "https://primary.example/list.m3u",
+            sources_path,
+            config_path,
+            default_group="Base",
+            default_country="MX",
+        )
+    )
+
+    assert added == 1
+    payload = json.loads(sources_path.read_text(encoding="utf-8"))
+    assert payload["channels"][0]["url"] == "https://mirror.example/canal5.m3u8"
+    assert payload["channels"][0]["tvg_id"] == "CANAL_5_LOCAL_HD"
 
 
 def test_run_genera_telemetria_y_cuarentena_tras_tres_403(tmp_path, monkeypatch):

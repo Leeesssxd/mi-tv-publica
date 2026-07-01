@@ -25,9 +25,10 @@ import random
 import re
 import sys
 import time
+from dataclasses import dataclass, field
 from pathlib import Path
 from typing import Any, Iterator
-from urllib.parse import urlparse
+from urllib.parse import quote_plus, urlparse
 
 import aiohttp
 
@@ -41,6 +42,7 @@ ENV_FILE = ROOT_DIR / ".env"
 ENV_EXAMPLE_FILE = ROOT_DIR / ".env.example"
 PUBLIC_DIR = ROOT_DIR / "public"
 TELEMETRY_STATUS_FILE = PUBLIC_DIR / "telemetry_status.json"
+DISCOVERED_MIRRORS_FILE = ROOT_DIR / "sources" / "discovered_mirrors.json"
 SECRET_UPSTREAM_POOLS_ENV = "SECRET_UPSTREAM_POOLS"
 DEFAULT_SOURCE_URL = "https://iptv-org.github.io/iptv/countries/mx.m3u"
 DEFAULT_IPTVORG_CHANNELS_URL = "https://iptv-org.github.io/api/channels.json"
@@ -125,14 +127,29 @@ DEFAULT_CONFIG: dict[str, Any] = {
     "jitter_max_seconds": 1.5,
     "cache_ttl_seconds": 21600,
     "chunk_size_bytes": 65536,
-    "max_secret_sources": 1,
+    "max_secret_sources": 8,
     "max_private_channels_per_source": 1200,
     "geo_filter_enabled": True,
     "global_source_aggregate_limit": 150000,
+    "github_crawler_enabled": True,
+    "github_crawler_max_depth": 3,
+    "github_crawler_max_seed_urls": 16,
+    "github_crawler_max_follow_urls": 120,
+    "github_crawler_max_candidates": 400,
+    "github_search_terms": [
+        "iptv mexico m3u",
+        "iptv deportes m3u",
+        "canales mexico m3u",
+        "githubusercontent m3u mexico",
+    ],
 }
 
 M3U8_URL_PATTERN = re.compile(
     r"https?://[^\s\"'<>()\[\]]+?\.m3u8(?:\?[^\s\"'<>()\[\]]*)?",
+    re.IGNORECASE,
+)
+TEXT_URL_PATTERN = re.compile(
+    r"https?://[^\s\"'<>()\[\]]+",
     re.IGNORECASE,
 )
 EXTINF_PATTERN = re.compile(r"^#EXTINF:-?\d+\s*(?P<attrs>.*?),(?P<name>.*)$")
@@ -240,6 +257,8 @@ GEO_RESCUE_PATTERNS = (
     "mundial",
 )
 GEO_WHITELIST_COUNTRIES = {"MX", "AR", "CL", "CO", "PE", "LATAM", "US", "USA", "ES"}
+MX_TEXT_PATTERN = re.compile(r"\b(mx|mex|mexico|mexico city|cdmx)\b", re.IGNORECASE)
+EXCLUDED_STREAM_DOMAINS = ("mac-tv.live",)
 GEO_BLACKLIST_COUNTRIES = {
     "TR",
     "TUR",
@@ -290,6 +309,104 @@ GEO_BLACKLIST_TEXT_PATTERN = re.compile(
     r"hungary|hungarian|czech|brazil|brasil|brazilian|portugal|portuguese)\b",
     re.IGNORECASE,
 )
+CANONICAL_VARIANT_EXCLUSIONS: dict[str, tuple[str, ...]] = {
+    "canal 5": ("cozumel", "tv cozumel", "xej", "juárez", "juarez"),
+}
+TOP_FIXED_PRIORITY = [
+    "Azteca Uno",
+    "Las Estrellas",
+    "Imagen TV",
+    "Canal 5 Televisa",
+    "Azteca 7",
+    "TUDN",
+    "ViX",
+    "DSPORTS",
+    "FIFA+",
+    "Claro Sports",
+    "FOX Sports",
+    "ESPN",
+]
+DIAL_MASTER_GRID: dict[int, str] = {
+    100: "BARKER_CHANNEL_HD", 101: "AZTECA_UNO_HD", 102: "LAS_ESTRELLAS_HD", 103: "IMAGEN_TV_HD",
+    104: "CANAL_4_GDL_HD", 105: "CANAL_5_LOCAL_HD", 106: "CANAL_6_HD", 107: "AZTECA_7_HD",
+    108: "MÁS_VISIÓN_HD", 109: "NU9VE_HD", 110: "QUIERO_TV_HD", 111: "ONCE_TV_HD",
+    113: "CANAL_13_HD", 114: "CANAL_14_HD", 117: "JALISCO_TV_HD", 120: "TV_UNAM_SD",
+    122: "CANAL_22_SD", 125: "CANAL_22.2_SD", 135: "APRENDE_+_SD", 140: "ADN_40_SD",
+    141: "A+_SD", 144: "CANAL_44_UDG_HD", 145: "CANAL_DEL_CONGRESO_SD", 146: "JUSTICIA_TV_SD",
+    150: "MEGANOTICIAS_MX_HD", 151: "MEGANOTICIAS_HD", 152: "AZTECA_UNO_DELAY_SD", 153: "TELEFÓRMULA_HD",
+    154: "CNNE_HD", 155: "MILENIO_TV_HD", 156: "MVSTV_SD", 157: "EL_FINANCIERO_BLOOMBERG_HD",
+    160: "MEGANOTICIAS_MX_DELAY_SD", 161: "CNN_HD", 162: "CNNI_HD", 163: "FOX_NEWS_HD",
+    164: "BBC_NEWS_HD", 165: "DW_LATINOAMÉRICA_SD", 167: "TV5_MONDE_SD",
+    202: "STAR_CHANNEL_HD", 204: "FX_HD", 206: "UNIVERSAL_TV_HD", 207: "AMC_HD",
+    208: "TNT_NOVELAS_HD", 209: "AXN_HD", 210: "SONY_HD", 211: "TNT_SERIES_HD",
+    212: "WARNER_CHANNEL_HD", 213: "ID_HD", 214: "TELEMUNDO_HD", 215: "A&E_HD",
+    216: "E!_HD", 217: "ATRESERIES_HD", 218: "USA_HD", 219: "COMEDY_CENTRAL_HD",
+    220: "CORAZÓN_HD", 223: "EL_GOURMET_HD", 224: "MAS_CHIC_SD", 225: "DISCOVERY_H&H_HD",
+    226: "PASIONES_HD", 228: "LIFETIME_HD", 230: "SPACE_HD", 232: "ANTENA_3",
+    233: "ADULT_SWIM_HD", 234: "AZTECA_INTERNACIONAL_HD", 235: "HOLA_TV_HD", 236: "TVE_HD",
+    249: "NICK_JR_HD", 250: "CARTOON_NETWORK_HD", 251: "DISNEY_JR_HD", 252: "CARTOONITO_HD",
+    256: "NICKELODEON_HD", 258: "DISCOVERY_KIDS_HD", 260: "DISNEY_CHANNEL_HD", 261: "TOONCAST_HD",
+    262: "BABY_FIRST_HD", 263: "BABY_TV_SD", 267: "ONCE_NIÑOS_SD",
+    270: "DISCOVERY_CHANNEL_HD", 271: "DISCOVERY_SCIENCE_HD", 272: "TLC", 273: "HGTV_HD",
+    274: "FOOD_NETWORK_HD", 275: "DISCOVERY_TURBO_HD", 276: "DISCOVERY_THEATER_HD", 277: "HISTORY_2_HD",
+    278: "HISTORY_CHANNEL_HD", 279: "DISCOVERY_WORLD_HD", 280: "NAT_GEO_HD", 282: "ANIMAL_PLANET_HD",
+    290: "MARIAVISION_SD", 292: "EWTN_SD", 293: "ESNE_SD", 294: "ENLACE_SD",
+    297: "FILM_&_ARTS_HD", 301: "FOX", 302: "ESPN_HD", 303: "TVC_DEPORTES_HD",
+    304: "ESPN_2_HD", 305: "TVC_DEPORTES_2_HD", 306: "ESPN_3_HD", 308: "ESPN_4_HD",
+    311: "NBA_HD", 312: "NFL_HD", 313: "GOLF_CHANNEL_HD", 317: "MEGA_SPORTS_1_HD",
+    320: "AYM_SPORTS_HD", 321: "LAS_HD", 322: "AZTECA_DEPORTES_NETWORK_HD", 323: "PX_SPORTS_HD",
+    324: "CLARO_SPORTS_HD", 329: "WWB_SD",
+    401: "CINEMA_PLATINO_DELAY_SD", 402: "CINEMA_PLATINO_HD", 403: "PANICO_DELAY_SD", 404: "PANICO_HD",
+    405: "SONY_MOVIES", 406: "EUROPA_EUROPA_HD", 408: "STUDIO_UNIVERSAL_HD", 409: "CINEMAX_HD",
+    410: "TNT_HD", 415: "CINEMA_PLATINO_2_DELAY_SD", 416: "CINEMA_PLATINO_2_SD", 419: "CMC_DELAY_SD",
+    420: "CMC_SD", 422: "EUROCHANNEL_SD", 424: "TCM_HD", 426: "CINE_LATINO_SD",
+    428: "MULTICINEMA_HD", 430: "MULTIPREMIER_HD", 431: "CINECANAL_HD", 432: "CÍNEMA_HD",
+    602: "VIDEO_ROLA_HD", 622: "CLIC_HD", 624: "HTV_HD", 626: "BEAT_BOX_SD",
+    628: "VR_PLUS_HD", 632: "EXA_TV_HD", 1405: "SONY_MOVIES_ALT",
+}
+TOP_FIXED_ALIASES: dict[str, tuple[str, ...]] = {
+    "Azteca Uno": ("azteca uno", "azteca 1"),
+    "Las Estrellas": ("las estrellas", "canal de las estrellas"),
+    "Imagen TV": ("imagen tv", "imagen tv+"),
+    "Canal 5 Televisa": ("canal 5 televisa", "canal 5"),
+    "Azteca 7": ("azteca 7", "azteca siete"),
+    "TUDN": ("tudn",),
+    "ViX": ("vix", "vix deportes", "vix premium"),
+    "DSPORTS": ("dsports", "d sports", "directv sports", "dsportplus", "dsport plus"),
+    "FIFA+": ("fifa+", "fifa plus"),
+    "Claro Sports": ("claro sports",),
+    "FOX Sports": ("fox sports",),
+    "ESPN": ("espn",),
+}
+STRONG_VARIANT_BLACKLIST: dict[str, tuple[re.Pattern[str], ...]] = {
+    "Canal 5 Televisa": (
+        re.compile(r"\bcozumel\b", re.IGNORECASE),
+        re.compile(r"\btv cozumel\b", re.IGNORECASE),
+        re.compile(r"\bxhg\w*\b", re.IGNORECASE),
+        re.compile(r"\bregional\b", re.IGNORECASE),
+        re.compile(r"\blocal\b", re.IGNORECASE),
+    ),
+    "Las Estrellas": (
+        re.compile(r"\bxhg\w*\b", re.IGNORECASE),
+        re.compile(r"\bregional\b", re.IGNORECASE),
+        re.compile(r"\blocal\b", re.IGNORECASE),
+    ),
+    "Azteca Uno": (
+        re.compile(r"\bxhg\w*\b", re.IGNORECASE),
+        re.compile(r"\bregional\b", re.IGNORECASE),
+    ),
+    "Imagen TV": (
+        re.compile(r"\bregional\b", re.IGNORECASE),
+        re.compile(r"\blocal\b", re.IGNORECASE),
+    ),
+    "Azteca 7": (
+        re.compile(r"\bregional\b", re.IGNORECASE),
+        re.compile(r"\blocal\b", re.IGNORECASE),
+    ),
+}
+QUALITY_PATTERN = re.compile(r"(\d{3,4})p", re.IGNORECASE)
+GITHUB_RAW_HOSTS = ("raw.githubusercontent.com", "gist.githubusercontent.com")
+GITHUB_HTML_HOSTS = ("github.com",)
 
 
 def detect_payload_kind(text: str) -> str:
@@ -303,6 +420,396 @@ def detect_payload_kind(text: str) -> str:
 
 def _normalized_text(*parts: str) -> str:
     return " ".join(part.strip().casefold() for part in parts if part).strip()
+
+
+def _matches_canonical_alias(normalized_name: str, alias: str) -> bool:
+    pattern = re.compile(rf"^(?:{re.escape(alias)})(?:$|\s|\()", re.IGNORECASE)
+    return bool(pattern.search(normalized_name))
+
+
+def _normalize_catalog_label(label: str) -> str:
+    normalized = _normalized_text(
+        label.replace("_", " ").replace("&amp;", "&").replace("&", " and ").replace("+", " plus ")
+    )
+    normalized = re.sub(r"\b(hd|sd|alt)\b", " ", normalized)
+    normalized = re.sub(r"\bdelay\b", " ", normalized)
+    normalized = re.sub(r"\blocal\b", " ", normalized)
+    return re.sub(r"\s+", " ", normalized).strip()
+
+
+def _dial_aliases(label: str) -> tuple[str, ...]:
+    normalized = _normalize_catalog_label(label)
+    explicit = {
+        "barker channel": ("barker channel", "conecta", "conecta tv", "básico plus", "basico plus"),
+        "azteca uno": ("azteca uno", "azteca 1"),
+        "las estrellas": ("las estrellas", "canal de las estrellas"),
+        "imagen tv": ("imagen tv", "imagen tv+"),
+        "canal 4 gdl": ("tv cuatro 4.1", "canal 4 guadalajara"),
+        "canal 5": ("canal 5 televisa", "canal 5 hd", "canal 5"),
+        "canal 6": ("canal 6 cdmx",),
+        "azteca 7": ("azteca 7", "azteca siete"),
+        "tudn": ("tudn",),
+        "vix deportes": ("vix deportes", "vix sports", "vix"),
+        "vix premium": ("vix premium", "vix"),
+        "fifa plus": ("fifa+", "fifa plus"),
+        "dsports": ("dsports", "d sports", "directv sports"),
+        "dsports 2": ("dsports 2", "d sports 2"),
+        "dsports plus": ("dsports plus", "d sports plus", "dsportplus", "dsport plus"),
+        "fox sports": ("fox sports",),
+        "once tv": ("once méxico", "once mexico"),
+        "canal 13": ("canal 13 michoacán", "canal 13 michoacan", "canal 13"),
+        "canal 14": ("canal 14",),
+        "jalisco tv": ("jalisco tv",),
+        "tv unam": ("tv unam",),
+        "canal 22": ("canal 22 nacional", "canal 22 mexico", "canal 22"),
+        "adn 40": ("adn 40",),
+        "canal 44 udg": ("udg tv canal 44", "canal 44"),
+        "canal del congreso": ("canal del congreso", "canal parlamento del congreso"),
+        "justicia tv": ("justicia tv",),
+        "telefórmula": ("teleformula", "telefórmula"),
+        "milenio tv": ("milenio",),
+        "mvstv": ("mvs tv",),
+        "azteca internacional": ("azteca internacional",),
+        "nick jr": ("nick jr",),
+        "disney jr": ("disney jr",),
+        "disney channel": ("disney channel",),
+        "mariavision": ("maría visión", "maria visión", "mariavision"),
+        "film and arts": ("film&arts", "film & arts"),
+        "tvc deportes": ("tv cuatro 4.3",),
+        "tvc deportes 2": ("tv cuatro 4.3",),
+        "aym sports": ("aym sports",),
+        "claro sports": ("claro sports",),
+        "panico": ("panico",),
+        "cinemax": ("cinemax",),
+        "tnt": ("tnt hd", "tnt"),
+        "cinecanal": ("cinecanal",),
+        "clic": ("clic",),
+        "htv": ("htv",),
+        "exa tv": ("exa tv",),
+        "sony movies": ("sony movies",),
+    }.get(normalized)
+    if explicit:
+        return explicit
+    return (normalized,)
+
+
+def _preprocess_raw_name(raw_name: str) -> str:
+    normalized = (raw_name or "").casefold()
+    normalized = normalized.replace("+", " plus ")
+    normalized = re.sub(r"[^a-z0-9+\s]+", " ", normalized)
+    normalized = re.sub(
+        r"\b(?:hd|sd|fhd|uhd|4k|1080p|720p|latino|lat|es|mx|mexico)\b",
+        " ",
+        normalized,
+        flags=re.IGNORECASE,
+    )
+    return re.sub(r"\s+", " ", normalized).strip()
+
+
+def normalize_and_match_advanced(raw_name: str) -> str:
+    normalized = _preprocess_raw_name(raw_name)
+    raw_lower = (raw_name or "").casefold()
+    if not normalized:
+        return ""
+
+    if re.search(r"\bcartoonito\b", normalized):
+        return "CARTOONITO_HD"
+
+    if re.search(r"\b(cartoon|cn)\b", normalized):
+        if re.search(r"\bnetwork\b", normalized) or normalized == "cn":
+            return "CARTOON_NETWORK_HD"
+
+    if re.search(r"\bnick\b", normalized):
+        if re.search(r"\bjr\b", normalized):
+            return "NICK_JR_HD"
+        return "NICKELODEON_HD"
+
+    if re.search(r"\bdisney\b", normalized):
+        if re.search(r"\bjr\b", normalized):
+            return "DISNEY_JR_HD"
+        return "DISNEY_CHANNEL_HD"
+
+    if re.search(r"\bbaby\b", normalized):
+        if re.search(r"\bfirst\b", normalized):
+            return "BABY_FIRST_HD"
+        if re.search(r"\btv\b", normalized):
+            return "BABY_TV_SD"
+
+    if re.search(r"\bstar\b", normalized) and re.search(r"\b(channel|ch|action|class)\b", normalized):
+        return "STAR_CHANNEL_HD"
+
+    if re.search(r"\bsony\b", normalized):
+        if re.search(r"\b(movie|movies|cine)\b", normalized):
+            return "SONY_MOVIES"
+        return "SONY_HD"
+
+    if re.search(r"\buniversal\b", normalized):
+        if re.search(r"\bstudio\b", normalized):
+            return "STUDIO_UNIVERSAL_HD"
+        return "UNIVERSAL_TV_HD"
+
+    if re.search(r"\b(cinema|cine)\b", normalized):
+        if re.search(r"\bplatino\b", normalized):
+            if re.search(r"\b2\b", normalized):
+                return "CINEMA_PLATINO_2_SD"
+            return "CINEMA_PLATINO_HD"
+        if re.search(r"\bcanal\b", normalized):
+            return "CINECANAL_HD"
+        if re.search(r"\blatino\b", raw_lower):
+            return "CINE_LATINO_SD"
+
+    if re.search(r"\bespn\b", normalized):
+        if re.search(r"\b4\b", normalized):
+            return "ESPN_4_HD"
+        if re.search(r"\b3\b", normalized):
+            return "ESPN_3_HD"
+        if re.search(r"\b2\b", normalized):
+            return "ESPN_2_HD"
+        return "ESPN_HD"
+
+    if re.search(r"\btvc\b", normalized) and re.search(r"\bdeporte", normalized):
+        if re.search(r"\b2\b", normalized):
+            return "TVC_DEPORTES_2_HD"
+        return "TVC_DEPORTES_HD"
+
+    if re.search(r"\bclaro\b", normalized) and re.search(r"\bsport", normalized):
+        return "CLARO_SPORTS_HD"
+
+    if re.search(r"\bmeganoticia", normalized):
+        if re.search(r"\bmx\b", raw_lower):
+            return "MEGANOTICIAS_MX_HD"
+        return "MEGANOTICIAS_HD"
+
+    if re.search(r"\bcnn\b", normalized) or re.search(r"\bcnne\b|\bcnni\b", normalized):
+        if re.search(r"\b(cnne|espanol|español|en espanol|en español)\b", raw_lower):
+            return "CNNE_HD"
+        if re.search(r"\b(cnni|international)\b", raw_lower):
+            return "CNNI_HD"
+        return "CNN_HD"
+
+    return ""
+
+
+def is_followable_playlist_reference(url: str) -> bool:
+    normalized_url = normalize_url(url)
+    if not normalized_url.startswith(("http://", "https://")):
+        return False
+    parsed = urlparse(normalized_url)
+    host = (parsed.netloc or "").casefold()
+    path = (parsed.path or "").casefold()
+    if host in GITHUB_RAW_HOSTS and path.endswith((".m3u", ".m3u8", ".json", ".txt")):
+        return True
+    if host in GITHUB_HTML_HOSTS and "/raw/" in path:
+        return True
+    if path.endswith((".m3u", ".m3u8", ".json")):
+        return True
+    return False
+
+
+def build_github_search_urls(config: dict[str, Any]) -> list[str]:
+    terms = config.get("github_search_terms", DEFAULT_CONFIG["github_search_terms"])
+    if not isinstance(terms, list):
+        return []
+    urls: list[str] = []
+    for term in terms[: int(config.get("github_crawler_max_seed_urls", 16))]:
+        raw_term = str(term).strip()
+        if not raw_term:
+            continue
+        urls.append(f"https://api.github.com/search/code?q={quote_plus(raw_term)}")
+    return urls
+
+
+def _extract_named_stream_candidates_from_m3u(text: str) -> list[dict[str, str]]:
+    candidates: list[dict[str, str]] = []
+    pending_name = ""
+    for raw_line in text.splitlines():
+        line = raw_line.strip()
+        if not line:
+            continue
+        if line.startswith("#EXTINF:"):
+            attrs = parse_extinf_line(line)
+            pending_name = str((attrs or {}).get("name") or "").strip()
+            continue
+        if line.startswith("#"):
+            continue
+        if line.startswith(("http://", "https://")) and pending_name:
+            candidates.append({"raw_name": pending_name, "url": normalize_url(line)})
+            pending_name = ""
+    return candidates
+
+
+def _extract_named_stream_candidates_from_json_payload(payload: Any) -> list[dict[str, str]]:
+    candidates: list[dict[str, str]] = []
+
+    def visit(value: Any, context_name: str = "") -> None:
+        if isinstance(value, dict):
+            candidate_name = str(
+                value.get("name")
+                or value.get("title")
+                or value.get("channel")
+                or value.get("label")
+                or context_name
+                or ""
+            ).strip()
+            candidate_url = normalize_url(str(value.get("url") or value.get("src") or value.get("file") or "").strip())
+            if candidate_name and candidate_url.startswith(("http://", "https://")):
+                candidates.append({"raw_name": candidate_name, "url": candidate_url})
+            for nested in value.values():
+                visit(nested, candidate_name)
+            return
+        if isinstance(value, list):
+            for item in value:
+                visit(item, context_name)
+
+    visit(payload)
+    return candidates
+
+
+def extract_structured_candidates_from_text(text: str) -> tuple[list[dict[str, str]], list[str]]:
+    stripped = (text or "").lstrip("\ufeff").strip()
+    nested_sources: list[str] = []
+    seen_nested: set[str] = set()
+
+    for match in TEXT_URL_PATTERN.findall(text or ""):
+        normalized = normalize_url(match)
+        if is_followable_playlist_reference(normalized) and normalized not in seen_nested:
+            seen_nested.add(normalized)
+            nested_sources.append(normalized)
+
+    if detect_payload_kind(stripped) == "m3u":
+        return _extract_named_stream_candidates_from_m3u(text), nested_sources
+
+    if detect_payload_kind(stripped) == "json":
+        try:
+            payload = json.loads(text)
+        except json.JSONDecodeError:
+            return [], nested_sources
+        return _extract_named_stream_candidates_from_json_payload(payload), nested_sources
+
+    return [], nested_sources
+
+
+def build_discovered_mirrors_payload(candidates: list[dict[str, str]]) -> dict[str, list[dict[str, Any]]]:
+    payload: dict[str, list[dict[str, Any]]] = {}
+    seen_per_dial: dict[str, set[str]] = {}
+
+    for candidate in candidates:
+        raw_name = str(candidate.get("raw_name") or "").strip()
+        url = normalize_url(str(candidate.get("url") or "").strip())
+        if not raw_name or not url:
+            continue
+        matched_label = normalize_and_match_advanced(raw_name)
+        if not matched_label or matched_label not in DIAL_MASTER_GRID.values():
+            continue
+        dial = next((key for key, value in DIAL_MASTER_GRID.items() if value == matched_label), None)
+        if dial is None:
+            continue
+        dial_key = str(dial)
+        seen_urls = seen_per_dial.setdefault(dial_key, set())
+        if url.casefold() in seen_urls:
+            continue
+        seen_urls.add(url.casefold())
+        payload.setdefault(dial_key, []).append(
+            {
+                "url": url,
+                "raw_name": raw_name,
+                "geo": "MX" if re.search(r"\b(mx|mexico|mex)\b", raw_name, re.IGNORECASE) else "ALL",
+                "verified": False,
+            }
+        )
+
+    for dial_key, items in payload.items():
+        items.sort(key=lambda item: (str(item.get("geo") or "").upper() != "MX", str(item.get("url") or "").casefold()))
+    return payload
+
+
+def _dial_grid_label(item: dict[str, Any]) -> str | None:
+    advanced_match = normalize_and_match_advanced(str(item.get("name") or ""))
+    if advanced_match:
+        return advanced_match
+
+    normalized_name = _normalized_text(str(item.get("name") or ""))
+    normalized_tvg_id = _normalized_text(str(item.get("tvg_id") or ""))
+    for label in DIAL_MASTER_GRID.values():
+        normalized_label = _normalize_catalog_label(label)
+        if normalized_tvg_id and normalized_tvg_id == normalized_label:
+            return label
+        if any(alias and _matches_canonical_alias(normalized_name, alias) for alias in _dial_aliases(label)):
+            return label
+    return None
+
+
+def _top_priority_name(item: dict[str, Any]) -> str | None:
+    grid_label = _dial_grid_label(item)
+    if grid_label == "AZTECA_UNO_HD":
+        return "Azteca Uno"
+    if grid_label == "LAS_ESTRELLAS_HD":
+        return "Las Estrellas"
+    if grid_label == "IMAGEN_TV_HD":
+        return "Imagen TV"
+    if grid_label == "CANAL_5_LOCAL_HD":
+        return "Canal 5 Televisa"
+    if grid_label == "AZTECA_7_HD":
+        return "Azteca 7"
+    if grid_label == "TUDN_HD":
+        return "TUDN"
+    if grid_label in {"VIX_DEPORTES_HD", "VIX_PREMIUM_HD"}:
+        return "ViX"
+    if grid_label in {"DSPORTS_HD", "DSPORTS_2_HD", "DSPORTS_PLUS_HD"}:
+        return "DSPORTS"
+    if grid_label == "FIFA_PLUS_HD":
+        return "FIFA+"
+    if grid_label == "CLARO_SPORTS_HD":
+        return "Claro Sports"
+    if grid_label == "FOX_SPORTS_HD":
+        return "FOX Sports"
+    if grid_label in {"ESPN_HD", "ESPN_2_HD", "ESPN_3_HD", "ESPN_4_HD"}:
+        return "ESPN"
+    return None
+
+
+def _quality_score(name: str) -> int:
+    match = QUALITY_PATTERN.search(name or "")
+    if match:
+        return int(match.group(1))
+    normalized = _normalized_text(name)
+    if "4k" in normalized or "uhd" in normalized:
+        return 2160
+    if "1080" in normalized or "full hd" in normalized or "fhd" in normalized:
+        return 1080
+    if "hd" in normalized:
+        return 720
+    if "sd" in normalized:
+        return 480
+    return 0
+
+
+def _identity_name(name: str) -> str:
+    normalized = _normalized_text(name)
+    normalized = re.sub(r"\([^)]*\)", " ", normalized)
+    normalized = re.sub(r"\b(uhd|fhd|hd|sd|4k|1080p|720p|480p|latam|latino|mx|us|usa|es)\b", " ", normalized)
+    return re.sub(r"\s+", " ", normalized).strip()
+
+
+def _discovered_identity_key(item: dict[str, Any]) -> tuple[str, str]:
+    dial_label = _dial_grid_label(item)
+    if dial_label is not None:
+        return ("dial", dial_label)
+
+    canonical_name = _top_priority_name(item)
+    if canonical_name is not None:
+        return ("top", canonical_name)
+
+    tvg_id = _normalized_text(str(item.get("tvg_id") or ""))
+    if tvg_id:
+        return ("tvg", tvg_id)
+
+    normalized_name = _identity_name(str(item.get("name") or ""))
+    normalized_group = _normalized_text(str(item.get("group") or ""))
+    normalized_country = _normalized_text(str(item.get("country") or ""))
+    if normalized_name:
+        return ("name", f"{normalized_name}|{normalized_group}|{normalized_country}")
+    return ("url", normalize_url(str(item.get("url") or "")).casefold())
 
 
 def _matches_any_pattern(text: str, patterns: tuple[str, ...] | list[str]) -> bool:
@@ -335,6 +842,25 @@ def _candidate_geo_text(item: dict[str, Any]) -> str:
 
 def is_geo_rescue_candidate(item: dict[str, Any]) -> bool:
     return _matches_any_pattern(_candidate_geo_text(item), GEO_RESCUE_PATTERNS)
+
+
+def is_excluded_regional_variant(item: dict[str, Any]) -> bool:
+    normalized_text = _candidate_geo_text(item)
+    for canonical_name, excluded_tokens in CANONICAL_VARIANT_EXCLUSIONS.items():
+        if canonical_name not in normalized_text:
+            continue
+        if any(token in normalized_text for token in excluded_tokens):
+            return True
+    for patterns in STRONG_VARIANT_BLACKLIST.values():
+        if any(pattern.search(normalized_text) for pattern in patterns):
+            canonical_match = any(
+                alias and _matches_canonical_alias(normalized_text, alias)
+                for aliases in TOP_FIXED_ALIASES.values()
+                for alias in aliases
+            )
+            if canonical_match:
+                return True
+    return False
 
 
 def should_keep_channel_by_geo(item: dict[str, Any]) -> bool:
@@ -406,6 +932,8 @@ def filter_discovered_channels(
             continue
         if is_low_trust_channel(item):
             continue
+        if is_excluded_regional_variant(item):
+            continue
         if geo_filter_enabled and not should_keep_channel_by_geo(item):
             continue
         filtered.append(item)
@@ -433,26 +961,75 @@ def discovered_channel_preference_score(
     return score
 
 
+def discovered_channel_preference_key(
+    item: dict[str, Any],
+    priority_patterns: list[str] | None = None,
+) -> tuple[int, int, int, int, str, str]:
+    dial_label = _dial_grid_label(item)
+    canonical_name = _top_priority_name(item)
+    mx_preferred = 0 if str(item.get("country") or "").strip().upper() == "MX" else 1
+    return (
+        0 if dial_label is not None else 1,
+        0 if canonical_name is not None else 1,
+        mx_preferred,
+        -discovered_channel_preference_score(item, priority_patterns),
+        -_quality_score(str(item.get("name") or "")),
+        _normalized_text(str(item.get("name") or "")),
+        normalize_url(str(item.get("url") or "")).casefold(),
+    )
+
+
+def discovered_channel_primary_merit(
+    item: dict[str, Any],
+    priority_patterns: list[str] | None = None,
+) -> tuple[int, int, int, int, int]:
+    dial_label = _dial_grid_label(item)
+    canonical_name = _top_priority_name(item)
+    mx_preferred = 0 if str(item.get("country") or "").strip().upper() == "MX" else 1
+    return (
+        0 if dial_label is not None else 1,
+        0 if canonical_name is not None else 1,
+        mx_preferred,
+        -discovered_channel_preference_score(item, priority_patterns),
+        -_quality_score(str(item.get("name") or "")),
+    )
+
+
 def dedupe_discovered_channels(
     discovered_channels: list[dict[str, Any]],
     *,
     priority_patterns: list[str] | None = None,
 ) -> list[dict[str, Any]]:
-    best_by_hash: dict[str, dict[str, Any]] = {}
+    best_by_url: dict[str, dict[str, Any]] = {}
     for item in discovered_channels:
-        item_hash = discovered_channel_hash(item)
-        existing = best_by_hash.get(item_hash)
-        if existing is None:
-            best_by_hash[item_hash] = item
+        normalized_url = normalize_url(str(item.get("url") or "")).casefold()
+        if not normalized_url:
             continue
-        if discovered_channel_preference_score(item, priority_patterns) > discovered_channel_preference_score(
+        existing = best_by_url.get(normalized_url)
+        if existing is None or discovered_channel_preference_key(item, priority_patterns) < discovered_channel_preference_key(
             existing,
             priority_patterns,
         ):
-            best_by_hash[item_hash] = item
+            best_by_url[normalized_url] = item
 
-    deduped = list(best_by_hash.values())
-    deduped.sort(key=lambda candidate: discovered_channel_preference_score(candidate, priority_patterns), reverse=True)
+    best_by_identity: dict[tuple[str, str], dict[str, Any]] = {}
+    for item in sorted(
+        best_by_url.values(),
+        key=lambda candidate: (
+            _discovered_identity_key(candidate),
+            discovered_channel_preference_key(candidate, priority_patterns),
+        ),
+    ):
+        identity = _discovered_identity_key(item)
+        existing = best_by_identity.get(identity)
+        if existing is None or discovered_channel_preference_key(item, priority_patterns) < discovered_channel_preference_key(
+            existing,
+            priority_patterns,
+        ):
+            best_by_identity[identity] = item
+
+    deduped = list(best_by_identity.values())
+    deduped.sort(key=lambda candidate: discovered_channel_preference_key(candidate, priority_patterns))
     return deduped
 
 
@@ -507,6 +1084,83 @@ def load_sources_payload(sources_path: Path = SOURCES_FILE) -> Any:
         return []
 
     return json.loads(sources_path.read_text(encoding="utf-8"))
+
+
+def save_discovered_mirrors_payload(
+    payload: dict[str, list[dict[str, Any]]],
+    mirrors_path: Path | None = None,
+) -> None:
+    mirrors_path = mirrors_path or DISCOVERED_MIRRORS_FILE
+    mirrors_path.parent.mkdir(parents=True, exist_ok=True)
+    mirrors_path.write_text(json.dumps(payload, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+
+
+def _dial_label_to_display_name(label: str) -> str:
+    normalized = (
+        label.replace("_", " ")
+        .replace("PLUS", "+")
+        .replace(" and ", " & ")
+        .strip()
+    )
+    normalized = re.sub(r"\b(HD|SD|ALT|DELAY)\b", " ", normalized, flags=re.IGNORECASE)
+    return re.sub(r"\s+", " ", normalized).strip() or label
+
+
+def load_discovered_mirrors_pool(
+    mirrors_path: Path | None = None,
+) -> list[dict[str, Any]]:
+    mirrors_path = mirrors_path or DISCOVERED_MIRRORS_FILE
+    if not mirrors_path.exists():
+        return []
+
+    try:
+        payload = json.loads(mirrors_path.read_text(encoding="utf-8"))
+    except json.JSONDecodeError as exc:
+        print(f"[WARN] discovered_mirrors.json invalido, se omite: {exc}")
+        return []
+
+    if not isinstance(payload, dict):
+        print("[WARN] discovered_mirrors.json debe contener un objeto por dial, se omite.")
+        return []
+
+    discovered: list[dict[str, Any]] = []
+    for raw_dial, entries in sorted(payload.items(), key=lambda item: int(str(item[0])) if str(item[0]).isdigit() else 999999):
+        try:
+            dial = int(str(raw_dial).strip())
+        except ValueError:
+            continue
+        grid_label = DIAL_MASTER_GRID.get(dial)
+        if grid_label is None or not isinstance(entries, list):
+            continue
+        for entry in sorted(
+            [item for item in entries if isinstance(item, dict)],
+            key=lambda item: (
+                str(item.get("geo") or "").strip().upper() != "MX",
+                normalize_url(str(item.get("url") or "")).casefold(),
+            ),
+        ):
+            url = normalize_url(str(entry.get("url") or ""))
+            if not url or is_excluded_stream_url(url):
+                continue
+            raw_name = str(entry.get("raw_name") or entry.get("name") or "").strip()
+            matched_label = normalize_and_match_advanced(raw_name) if raw_name else ""
+            label = matched_label or grid_label
+            if label not in DIAL_MASTER_GRID.values():
+                continue
+            display_name = raw_name or _dial_label_to_display_name(label)
+            country = str(entry.get("geo") or entry.get("country") or "").strip().upper() or "ALL"
+            candidate = {
+                "name": display_name,
+                "group": categorize_curated_channel({"name": display_name, "group": "", "country": country}),
+                "country": country,
+                "url": url,
+                "logo": "",
+                "tvg_id": label,
+                "verified": bool(entry.get("verified")),
+                "source": "discovered_mirrors",
+            }
+            discovered.append(candidate)
+    return discovered
 
 
 def ensure_local_private_sources_file(
@@ -687,6 +1341,114 @@ def write_telemetry_report(records: list[dict[str, Any]], output_path: Path | No
     output_path.write_text(json.dumps(payload, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
 
 
+async def fetch_remote_text(
+    session: aiohttp.ClientSession,
+    source_url: str,
+    config: dict[str, Any],
+) -> str:
+    attempts = int(config.get("retry_attempts", 3))
+    backoff_base = float(config.get("retry_backoff_base_seconds", 1.0))
+
+    for attempt in range(1, attempts + 1):
+        await sleep_with_jitter(config)
+        try:
+            async with session.get(source_url, allow_redirects=True, ssl=False) as response:
+                if response.status in RETRIABLE_STATUS_CODES and attempt < attempts:
+                    await asyncio.sleep(backoff_base * (2 ** (attempt - 1)))
+                    continue
+                if response.status >= 400:
+                    return ""
+                return await response.text(errors="ignore")
+        except aiohttp.ClientError:
+            if attempt < attempts:
+                await asyncio.sleep(backoff_base * (2 ** (attempt - 1)))
+                continue
+            return ""
+        except asyncio.TimeoutError:
+            return ""
+    return ""
+
+
+def _extract_github_api_seed_urls(payload: Any) -> list[str]:
+    urls: list[str] = []
+    seen: set[str] = set()
+    if not isinstance(payload, dict):
+        return urls
+    for item in payload.get("items") or []:
+        if not isinstance(item, dict):
+            continue
+        html_url = normalize_url(str(item.get("html_url") or ""))
+        if "/blob/" in html_url:
+            raw_url = html_url.replace("https://github.com/", "https://raw.githubusercontent.com/").replace("/blob/", "/")
+            if is_followable_playlist_reference(raw_url) and raw_url not in seen:
+                seen.add(raw_url)
+                urls.append(raw_url)
+    return urls
+
+
+async def discover_github_recursive_mirrors(
+    config: dict[str, Any],
+    *,
+    session: aiohttp.ClientSession | None = None,
+) -> dict[str, list[dict[str, Any]]]:
+    if not bool(config.get("github_crawler_enabled", True)):
+        return {}
+
+    timeout = aiohttp.ClientTimeout(total=float(config["timeout_seconds"]))
+    headers = build_headers(config)
+    owns_session = session is None
+    active_session = session or aiohttp.ClientSession(timeout=timeout, headers=headers)
+
+    max_depth = int(config.get("github_crawler_max_depth", 3))
+    max_follow_urls = int(config.get("github_crawler_max_follow_urls", 120))
+    max_candidates = int(config.get("github_crawler_max_candidates", 400))
+
+    queue: list[tuple[str, int]] = [(url, 0) for url in build_github_search_urls(config)]
+    visited: set[str] = set()
+    candidates: list[dict[str, str]] = []
+
+    try:
+        while queue and len(visited) < max_follow_urls and len(candidates) < max_candidates:
+            current_url, depth = queue.pop(0)
+            normalized_current = normalize_url(current_url)
+            if not normalized_current or normalized_current in visited or depth > max_depth:
+                continue
+            visited.add(normalized_current)
+
+            response_text = await fetch_remote_text(active_session, normalized_current, config)
+            if not response_text:
+                continue
+
+            if normalized_current.startswith("https://api.github.com/search/code?"):
+                try:
+                    api_payload = json.loads(response_text)
+                except json.JSONDecodeError:
+                    continue
+                for seed_url in _extract_github_api_seed_urls(api_payload):
+                    if seed_url not in visited and len(queue) < max_follow_urls:
+                        queue.append((seed_url, depth))
+                continue
+
+            structured_candidates, nested_sources = extract_structured_candidates_from_text(response_text)
+            candidates.extend(structured_candidates[: max_candidates - len(candidates)])
+
+            if depth >= max_depth:
+                continue
+            for nested_url in nested_sources:
+                normalized_nested = normalize_url(nested_url)
+                if (
+                    normalized_nested
+                    and normalized_nested not in visited
+                    and len(queue) < max_follow_urls
+                ):
+                    queue.append((normalized_nested, depth + 1))
+    finally:
+        if owns_session:
+            await active_session.close()
+
+    return build_discovered_mirrors_payload(candidates)
+
+
 def _extract_channel_entries(payload: Any) -> list[dict[str, Any]]:
     if isinstance(payload, list):
         return [item for item in payload if isinstance(item, dict)]
@@ -849,28 +1611,115 @@ def build_channel_record_from_extinf(attrs: dict[str, str], url: str) -> dict[st
     }
 
 
-def parse_m3u_file(file_path: Path) -> list[dict[str, Any]]:
-    channels: list[dict[str, Any]] = []
+def is_excluded_stream_url(url: str) -> bool:
+    host = (urlparse(normalize_url(url)).netloc or "").casefold()
+    return any(domain in host for domain in EXCLUDED_STREAM_DOMAINS)
+
+
+def _is_mx_candidate_text(*parts: str) -> bool:
+    haystack = " ".join(part for part in parts if part).strip()
+    return bool(MX_TEXT_PATTERN.search(haystack))
+
+
+@dataclass
+class M3UCollector:
+    used_names: set[str] = field(default_factory=set)
+    default_group: str = "General"
+    default_country: str = ""
+    early_filter: bool = False
+    max_channels: int | None = None
+    channels: list[dict[str, Any]] = field(default_factory=list)
     pending_attrs: dict[str, str] | None = None
-    used_names: set[str] = set()
+    pending_match: str = ""
+    pending_keep: bool = False
+    pending_is_mx: bool = False
 
+    def process_line(self, raw_line: str) -> bool:
+        line = raw_line.strip()
+        if not line:
+            return False
+
+        if line.startswith("#EXTINF"):
+            self.pending_attrs = parse_extinf_line(line)
+            raw_name = str((self.pending_attrs or {}).get("name") or "").strip()
+            matched_label = normalize_and_match_advanced(raw_name) if self.early_filter else ""
+            inferred_country = infer_country(self.pending_attrs or {}, str((self.pending_attrs or {}).get("group-title") or ""))
+            self.pending_is_mx = _is_mx_candidate_text(
+                raw_name,
+                str((self.pending_attrs or {}).get("group-title") or ""),
+                str((self.pending_attrs or {}).get("tvg-id") or ""),
+                inferred_country,
+                self.default_country,
+            )
+            self.pending_match = matched_label
+            self.pending_keep = (not self.early_filter) or bool(matched_label) or self.pending_is_mx
+            return False
+
+        if line.startswith("#"):
+            return False
+
+        if not self.pending_attrs:
+            return False
+
+        if not is_supported_playlist_url(line):
+            self.pending_attrs = None
+            self.pending_match = ""
+            self.pending_keep = False
+            self.pending_is_mx = False
+            return False
+
+        channel_url = normalize_url(line)
+        if is_excluded_stream_url(channel_url):
+            self.pending_attrs = None
+            self.pending_match = ""
+            self.pending_keep = False
+            self.pending_is_mx = False
+            return False
+
+        if self.pending_keep:
+            channel = build_channel_record_from_extinf(self.pending_attrs, channel_url)
+            if channel.get("group") == "General" and self.default_group:
+                channel["group"] = self.default_group
+            if not channel.get("country"):
+                channel["country"] = "MX" if self.pending_is_mx else self.default_country
+            if self.pending_match:
+                channel["tvg_id"] = self.pending_match
+            channel["name"] = ensure_unique_name(str(channel.get("name", "")).strip(), self.used_names)
+            self.channels.append(channel)
+            if self.max_channels is not None and len(self.channels) >= self.max_channels:
+                self.pending_attrs = None
+                return True
+
+        self.pending_attrs = None
+        self.pending_match = ""
+        self.pending_keep = False
+        self.pending_is_mx = False
+        return False
+
+
+def collect_channels_from_m3u_lines(
+    lines: Iterator[str],
+    *,
+    default_group: str = "General",
+    default_country: str = "",
+    early_filter: bool = False,
+    max_channels: int | None = None,
+) -> list[dict[str, Any]]:
+    collector = M3UCollector(
+        default_group=default_group,
+        default_country=default_country,
+        early_filter=early_filter,
+        max_channels=max_channels,
+    )
+    for raw_line in lines:
+        if collector.process_line(raw_line):
+            break
+    return collector.channels
+
+
+def parse_m3u_file(file_path: Path) -> list[dict[str, Any]]:
     with file_path.open("r", encoding="utf-8", errors="ignore") as handle:
-        for raw_line in handle:
-            line = raw_line.strip()
-            if not line:
-                continue
-            if line.startswith("#EXTINF"):
-                pending_attrs = parse_extinf_line(line)
-                continue
-            if line.startswith("#"):
-                continue
-            if pending_attrs and is_supported_playlist_url(line):
-                channel = build_channel_record_from_extinf(pending_attrs, line)
-                channel["name"] = ensure_unique_name(str(channel.get("name", "")).strip(), used_names)
-                channels.append(channel)
-            pending_attrs = None
-
-    return channels
+        return collect_channels_from_m3u_lines(handle)
 
 
 def file_looks_like_json(file_path: Path) -> bool:
@@ -1277,14 +2126,17 @@ def merge_channels(
             candidate_name = str(candidate.get("name", "")).strip().casefold()
             candidate_country = str(candidate.get("country", "")).strip().casefold()
             candidate_tvg_id = str(candidate.get("tvg_id", "")).strip().casefold()
+            candidate_identity = _discovered_identity_key(candidate)
             for existing_item in merged:
                 if not isinstance(existing_item, dict):
                     continue
                 existing_tvg_id = str(existing_item.get("tvg_id", "")).strip().casefold()
                 existing_name = str(existing_item.get("name", "")).strip().casefold()
                 existing_country = str(existing_item.get("country", "")).strip().casefold()
+                existing_identity = _discovered_identity_key(existing_item)
                 same_channel = bool(
                     (candidate_tvg_id and existing_tvg_id and candidate_tvg_id == existing_tvg_id)
+                    or candidate_identity == existing_identity
                     or (
                         not candidate_tvg_id
                         and not existing_tvg_id
@@ -1302,12 +2154,31 @@ def merge_channels(
                 if normalized_url in {existing_primary, existing_backup}:
                     failover_match = "duplicate"
                     break
+                existing_as_candidate = {
+                    "name": str(existing_item.get("name") or ""),
+                    "group": str(existing_item.get("group") or ""),
+                    "country": str(existing_item.get("country") or ""),
+                    "url": existing_primary,
+                    "logo": str(existing_item.get("logo") or ""),
+                    "tvg_id": str(existing_item.get("tvg_id") or ""),
+                }
                 candidate_text = _normalized_text(
                     str(candidate.get("name") or ""),
                     str(candidate.get("group") or ""),
                     str(candidate.get("tvg_id") or ""),
                 )
-                if preferred_primary_patterns and _matches_any_pattern(candidate_text, tuple(preferred_primary_patterns)):
+                candidate_matches_preferred = bool(
+                    preferred_primary_patterns
+                    and _matches_any_pattern(candidate_text, tuple(preferred_primary_patterns))
+                )
+                candidate_is_better = candidate_matches_preferred or discovered_channel_primary_merit(
+                    candidate,
+                    preferred_primary_patterns,
+                ) < discovered_channel_primary_merit(
+                    existing_as_candidate,
+                    preferred_primary_patterns,
+                )
+                if candidate_is_better:
                     old_primary = existing_primary
                     existing_item["url"] = normalized_url
                     backup_values = [old_primary, existing_backup]
@@ -1328,8 +2199,17 @@ def merge_channels(
                     added += 1
                     failover_match = "promoted_to_primary"
                     break
-                if not existing_item.get("backup_url"):
-                    existing_item["backup_url"] = normalized_url
+                backup_values = existing_item.get("backup_url")
+                if isinstance(backup_values, list):
+                    merged_backups = [normalize_url(str(value)) for value in backup_values]
+                elif backup_values:
+                    merged_backups = [normalize_url(str(backup_values))]
+                else:
+                    merged_backups = []
+                if normalized_url not in merged_backups:
+                    merged_backups.append(normalized_url)
+                    merged_backups = [value for value in merged_backups if value and value != existing_primary]
+                    existing_item["backup_url"] = merged_backups if len(merged_backups) > 1 else merged_backups[0]
                     existing_urls.add(normalized_url)
                     added += 1
                     failover_match = "promoted_to_backup"
@@ -1346,6 +2226,17 @@ def merge_channels(
         existing_urls.add(normalized_url)
         added += 1
 
+    merged.sort(
+        key=lambda candidate: (
+            0 if _dial_grid_label(candidate) is not None else 1,
+            next((dial for dial, label in DIAL_MASTER_GRID.items() if label == _dial_grid_label(candidate)), 999999),
+            0 if _top_priority_name(candidate) is not None else 1,
+            TOP_FIXED_PRIORITY.index(_top_priority_name(candidate)) if _top_priority_name(candidate) is not None else len(TOP_FIXED_PRIORITY),
+            _normalized_text(str(candidate.get("group") or "")),
+            _normalized_text(str(candidate.get("name") or "")),
+            normalize_url(str(candidate.get("url") or "")).casefold(),
+        )
+    )
     return merged, added
 
 
@@ -1361,6 +2252,27 @@ async def discover_single_source(
     preferred_primary_patterns: list[str] | None = None,
     curate_private: bool = False,
 ) -> tuple[list[dict[str, Any]], int]:
+    if curate_private:
+        discovered_channels, detected_count = await discover_large_m3u_source(
+            source_url,
+            config,
+            default_group=default_group,
+            default_country=default_country,
+            max_channels=max_channels or int(DEFAULT_CONFIG["max_private_channels_per_source"]),
+        )
+        normalized_channels = filter_discovered_channels(
+            discovered_channels,
+            default_group=default_group,
+            default_country=default_country,
+            geo_filter_enabled=bool(config.get("geo_filter_enabled", True)),
+        )
+        normalized_channels = curate_private_channels(
+            normalized_channels,
+            max_items=max_channels or int(DEFAULT_CONFIG["max_private_channels_per_source"]),
+            priority_patterns=preferred_primary_patterns,
+        )
+        return normalized_channels, len(normalized_channels)
+
     cached_file = await fetch_source_to_cache(source_url, config)
 
     if file_looks_like_m3u(cached_file):
@@ -1409,13 +2321,7 @@ async def discover_single_source(
         geo_filter_enabled=bool(config.get("geo_filter_enabled", True)),
     )
 
-    if curate_private:
-        normalized_channels = curate_private_channels(
-            normalized_channels,
-            max_items=max_channels or int(DEFAULT_CONFIG["max_private_channels_per_source"]),
-            priority_patterns=preferred_primary_patterns,
-        )
-    else:
+    if not curate_private:
         normalized_channels = limit_discovered_channels(
             normalized_channels,
             max_items=max_channels or int(config.get("global_source_aggregate_limit", 150000)),
@@ -1628,6 +2534,57 @@ def file_looks_like_text(file_path: Path) -> bool:
     return True
 
 
+async def discover_large_m3u_source(
+    source_url: str,
+    config: dict[str, Any],
+    *,
+    default_group: str,
+    default_country: str,
+    max_channels: int | None = None,
+) -> tuple[list[dict[str, Any]], int]:
+    timeout = aiohttp.ClientTimeout(total=float(config["timeout_seconds"]))
+    headers = build_headers(config)
+    attempts = int(config.get("retry_attempts", 3))
+    backoff_base = float(config.get("retry_backoff_base_seconds", 1.0))
+
+    async with aiohttp.ClientSession(timeout=timeout, headers=headers) as session:
+        for attempt in range(1, attempts + 1):
+            await sleep_with_jitter(config)
+            try:
+                async with session.get(source_url, allow_redirects=True, ssl=False) as response:
+                    if response.status in RETRIABLE_STATUS_CODES and attempt < attempts:
+                        await asyncio.sleep(backoff_base * (2 ** (attempt - 1)))
+                        continue
+                    response.raise_for_status()
+
+                    collector = M3UCollector(
+                        default_group=default_group,
+                        default_country=default_country,
+                        early_filter=True,
+                        max_channels=max_channels,
+                    )
+                    while True:
+                        raw_line = await response.content.readline()
+                        if not raw_line:
+                            break
+                        if collector.process_line(raw_line.decode("utf-8", errors="ignore")):
+                            break
+
+                    return collector.channels, len(collector.channels)
+            except asyncio.TimeoutError:
+                if attempt < attempts:
+                    await asyncio.sleep(backoff_base * (2 ** (attempt - 1)))
+                    continue
+                raise
+            except aiohttp.ClientError:
+                if attempt < attempts:
+                    await asyncio.sleep(backoff_base * (2 ** (attempt - 1)))
+                    continue
+                raise
+
+    return [], 0
+
+
 def extract_text_links_from_file(file_path: Path, chunk_size: int) -> list[str]:
     seen: set[str] = set()
     links: list[str] = []
@@ -1662,6 +2619,10 @@ async def run(
     ensure_env_example_file()
     env_values = load_env_file()
     quarantine_state = load_quarantine_state()
+    discovered_mirrors_payload = await discover_github_recursive_mirrors(config)
+    if discovered_mirrors_payload:
+        save_discovered_mirrors_payload(discovered_mirrors_payload)
+    discovered_mirror_pool = load_discovered_mirrors_pool()
     telemetry_records: list[dict[str, Any]] = []
     resolved_source_url = source_url or DEFAULT_SOURCE_URL
     attempted_sources = {normalize_source_url(resolved_source_url)}
@@ -1781,6 +2742,8 @@ async def run(
             if telemetry_record["quarantined"]:
                 print(f"[INFO] Fuente local movida a cuarentena: {telemetry_record['source_env'] or telemetry_record['source_url_hint']}")
         telemetry_records.append(telemetry_record)
+
+    aggregated_discovered.extend(discovered_mirror_pool)
 
     payload = load_sources_payload(sources_path)
     existing_channels = _extract_channel_entries(payload)

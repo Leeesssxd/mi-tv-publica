@@ -20,6 +20,7 @@ from __future__ import annotations
 import argparse
 import asyncio
 import json
+import time
 import random
 import re
 import sys
@@ -27,7 +28,7 @@ from dataclasses import asdict, dataclass, field, replace
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
-from urllib.parse import urlparse
+from urllib.parse import urljoin, urlparse
 
 import aiohttp
 
@@ -55,6 +56,9 @@ DEFAULT_CONFIG: dict[str, Any] = {
     "jitter_max_seconds": 1.5,
     "status_cache_ttl_seconds": 86400,
     "head_first": True,
+    "ttfb_limit_ms": 1500,
+    "probe_first_segment": True,
+    "vlc_network_caching_ms": 2000,
     "stream_selection": {
         "mode": "strict",
         "min_width": 1920,
@@ -70,7 +74,7 @@ ROOT_DIR = Path(__file__).resolve().parent.parent
 SOURCES_FILE = ROOT_DIR / "sources" / "channels.json"
 PUBLIC_DIR = ROOT_DIR / "public"
 CONFIG_FILE = ROOT_DIR / "config.json"
-STATUS_CACHE_FILE = PUBLIC_DIR / "status_cache.json"
+STATUS_CACHE_FILE = ROOT_DIR / ".cache" / "delta_validation" / "status_cache.json"
 VOD_PLAYLIST_FILE = PUBLIC_DIR / "vod_playlist.m3u"
 VOD_STATUS_FILE = PUBLIC_DIR / "vod_status.json"
 VOD_STATUS_MD_FILE = PUBLIC_DIR / "vod_status.md"
@@ -108,163 +112,47 @@ CANONICAL_DISPLAY_BY_TVG_ID: dict[str, str] = {
     "lasestrellaslatinamerica.mx": "Las Estrellas",
     "tudn.mx": "TUDN",
 }
-REQUESTED_CATALOG_ORDER = [
-    "Conecta",
-    "Básico Plus",
-    "BARKER_CHANNEL_HD",
-    "AZTECA_UNO_HD",
-    "LAS_ESTRELLAS_HD",
-    "IMAGEN_TV_HD",
-    "CANAL_5_LOCAL_HD",
-    "AZTECA_7_HD",
-    "TUDN_HD",
-    "VIX_DEPORTES_HD",
-    "VIX_PREMIUM_HD",
-    "FIFA_PLUS_HD",
-    "DSPORTS_HD",
-    "DSPORTS_2_HD",
-    "DSPORTS_PLUS_HD",
-    "AZTECA_DEPORTES_NETWORK_HD",
-    "CLARO_SPORTS_HD",
-    "FOX_SPORTS_HD",
-    "ESPN_HD",
-    "ESPN_2_HD",
-    "ESPN_3_HD",
-    "ESPN_4_HD",
-    "CANAL_4_GDL_HD",
-    "CANAL_6_HD",
-    "MÁS_VISIÓN_HD",
-    "NU9VE_HD",
-    "QUIERO_TV_HD",
-    "ONCE_TV_HD",
-    "CANAL_13_HD",
-    "CANAL_14_HD",
-    "JALISCO_TV_HD",
-    "TV_UNAM_SD",
-    "CANAL_22_SD",
-    "CANAL_22.2_SD",
-    "APRENDE_+_SD",
-    "ADN_40_SD",
-    "A+_SD",
-    "CANAL_44_UDG_HD",
-    "CANAL_DEL_CONGRESO_SD",
-    "JUSTICIA_TV_SD",
-    "MEGANOTICIAS_MX_HD",
-    "MEGANOTICIAS_HD",
-    "AZTECA_UNO_DELAY_SD",
-    "TELEFÓRMULA_HD",
-    "CNNE_HD",
-    "MILENIO_TV_HD",
-    "MVSTV_SD",
-    "EL_FINANCIERO_BLOOMBERG_HD",
-    "MEGANOTICIAS_MX_DELAY_SD",
-    "CNN_HD",
-    "CNNI_HD",
-    "FOX_NEWS_HD",
-    "BBC_NEWS_HD",
-    "DW_LATINOAMÉRICA_SD",
-    "TV5_MONDE_SD",
-    "STAR_CHANNEL_HD",
-    "FX_HD",
-    "UNIVERSAL_TV_HD",
-    "AMC_HD",
-    "TNT_NOVELAS_HD",
-    "AXN_HD",
-    "SONY_HD",
-    "TNT_SERIES_HD",
-    "WARNER_CHANNEL_HD",
-    "ID_HD",
-    "TELEMUNDO_HD",
-    "A&E_HD",
-    "E!_HD",
-    "ATRESERIES_HD",
-    "USA_HD",
-    "COMEDY_CENTRAL_HD",
-    "CORAZÓN_HD",
-    "EL_GOURMET_HD",
-    "MAS_CHIC_SD",
-    "DISCOVERY_H&H_HD",
-    "PASIONES_HD",
-    "LIFETIME_HD",
-    "SPACE_HD",
-    "ANTENA_3",
-    "ADULT_SWIM_HD",
-    "AZTECA_INTERNACIONAL_HD",
-    "HOLA_TV_HD",
-    "TVE_HD",
-    "NICK_JR_HD",
-    "CARTOON_NETWORK_HD",
-    "DISNEY_JR_HD",
-    "CARTOONITO_HD",
-    "NICKELODEON_HD",
-    "DISCOVERY_KIDS_HD",
-    "DISNEY_CHANNEL_HD",
-    "TOONCAST_HD",
-    "BABY_FIRST_HD",
-    "BABY_TV_SD",
-    "ONCE_NIÑOS_SD",
-    "DISCOVERY_CHANNEL_HD",
-    "DISCOVERY_SCIENCE_HD",
-    "TLC",
-    "HGTV_HD",
-    "FOOD_NETWORK_HD",
-    "DISCOVERY_TURBO_HD",
-    "DISCOVERY_THEATER_HD",
-    "HISTORY_2_HD",
-    "HISTORY_CHANNEL_HD",
-    "DISCOVERY_WORLD_HD",
-    "NAT_GEO_HD",
-    "ANIMAL_PLANET_HD",
-    "MARIAVISION_SD",
-    "EWTN_SD",
-    "ESNE_SD",
-    "ENLACE_SD",
-    "FILM_&_ARTS_HD",
-    "FOX",
-    "ESPN_HD",
-    "TVC_DEPORTES_HD",
-    "ESPN_2_HD",
-    "TVC_DEPORTES_2_HD",
-    "ESPN_3_HD",
-    "ESPN_4_HD",
-    "NBA_HD",
-    "NFL_HD",
-    "GOLF_CHANNEL_HD",
-    "MEGA_SPORTS_1_HD",
-    "AYM_SPORTS_HD",
-    "LAS_HD",
-    "AZTECA_DEPORTES_NETWORK_HD",
-    "PX_SPORTS_HD",
-    "CLARO_SPORTS_HD",
-    "WWB_SD",
-    "CINEMA_PLATINO_DELAY_SD",
-    "CINEMA_PLATINO_HD",
-    "PANICO_DELAY_SD",
-    "PANICO_HD",
-    "SONY_MOVIES",
-    "EUROPA_EUROPA_HD",
-    "STUDIO_UNIVERSAL_HD",
-    "CINEMAX_HD",
-    "TNT_HD",
-    "CINEMA_PLATINO_2_DELAY_SD",
-    "CINEMA_PLATINO_2_SD",
-    "CMC_DELAY_SD",
-    "CMC_SD",
-    "EUROCHANNEL_SD",
-    "TCM_HD",
-    "CINE_LATINO_SD",
-    "MULTICINEMA_HD",
-    "MULTIPREMIER_HD",
-    "CINECANAL_HD",
-    "CÍNEMA_HD",
-    "VIDEO_ROLA_HD",
-    "CLIC_HD",
-    "HTV_HD",
-    "BEAT_BOX_SD",
-    "VR_PLUS_HD",
-    "EXA_TV_HD",
-]
+DIAL_MASTER_GRID: dict[int, str] = {
+    100: "BARKER_CHANNEL_HD", 101: "AZTECA_UNO_HD", 102: "LAS_ESTRELLAS_HD", 103: "IMAGEN_TV_HD",
+    104: "CANAL_4_GDL_HD", 105: "CANAL_5_LOCAL_HD", 106: "CANAL_6_HD", 107: "AZTECA_7_HD",
+    108: "MÁS_VISIÓN_HD", 109: "NU9VE_HD", 110: "QUIERO_TV_HD", 111: "ONCE_TV_HD",
+    113: "CANAL_13_HD", 114: "CANAL_14_HD", 117: "JALISCO_TV_HD", 120: "TV_UNAM_SD",
+    122: "CANAL_22_SD", 125: "CANAL_22.2_SD", 135: "APRENDE_+_SD", 140: "ADN_40_SD",
+    141: "A+_SD", 144: "CANAL_44_UDG_HD", 145: "CANAL_DEL_CONGRESO_SD", 146: "JUSTICIA_TV_SD",
+    150: "MEGANOTICIAS_MX_HD", 151: "MEGANOTICIAS_HD", 152: "AZTECA_UNO_DELAY_SD", 153: "TELEFÓRMULA_HD",
+    154: "CNNE_HD", 155: "MILENIO_TV_HD", 156: "MVSTV_SD", 157: "EL_FINANCIERO_BLOOMBERG_HD",
+    160: "MEGANOTICIAS_MX_DELAY_SD", 161: "CNN_HD", 162: "CNNI_HD", 163: "FOX_NEWS_HD",
+    164: "BBC_NEWS_HD", 165: "DW_LATINOAMÉRICA_SD", 167: "TV5_MONDE_SD",
+    202: "STAR_CHANNEL_HD", 204: "FX_HD", 206: "UNIVERSAL_TV_HD", 207: "AMC_HD",
+    208: "TNT_NOVELAS_HD", 209: "AXN_HD", 210: "SONY_HD", 211: "TNT_SERIES_HD",
+    212: "WARNER_CHANNEL_HD", 213: "ID_HD", 214: "TELEMUNDO_HD", 215: "A&E_HD",
+    216: "E!_HD", 217: "ATRESERIES_HD", 218: "USA_HD", 219: "COMEDY_CENTRAL_HD",
+    220: "CORAZÓN_HD", 223: "EL_GOURMET_HD", 224: "MAS_CHIC_SD", 225: "DISCOVERY_H&H_HD",
+    226: "PASIONES_HD", 228: "LIFETIME_HD", 230: "SPACE_HD", 232: "ANTENA_3",
+    233: "ADULT_SWIM_HD", 234: "AZTECA_INTERNACIONAL_HD", 235: "HOLA_TV_HD", 236: "TVE_HD",
+    249: "NICK_JR_HD", 250: "CARTOON_NETWORK_HD", 251: "DISNEY_JR_HD", 252: "CARTOONITO_HD",
+    256: "NICKELODEON_HD", 258: "DISCOVERY_KIDS_HD", 260: "DISNEY_CHANNEL_HD", 261: "TOONCAST_HD",
+    262: "BABY_FIRST_HD", 263: "BABY_TV_SD", 267: "ONCE_NIÑOS_SD",
+    270: "DISCOVERY_CHANNEL_HD", 271: "DISCOVERY_SCIENCE_HD", 272: "TLC", 273: "HGTV_HD",
+    274: "FOOD_NETWORK_HD", 275: "DISCOVERY_TURBO_HD", 276: "DISCOVERY_THEATER_HD", 277: "HISTORY_2_HD",
+    278: "HISTORY_CHANNEL_HD", 279: "DISCOVERY_WORLD_HD", 280: "NAT_GEO_HD", 282: "ANIMAL_PLANET_HD",
+    290: "MARIAVISION_SD", 292: "EWTN_SD", 293: "ESNE_SD", 294: "ENLACE_SD",
+    297: "FILM_&_ARTS_HD", 301: "FOX", 302: "ESPN_HD", 303: "TVC_DEPORTES_HD",
+    304: "ESPN_2_HD", 305: "TVC_DEPORTES_2_HD", 306: "ESPN_3_HD", 308: "ESPN_4_HD",
+    311: "NBA_HD", 312: "NFL_HD", 313: "GOLF_CHANNEL_HD", 317: "MEGA_SPORTS_1_HD",
+    320: "AYM_SPORTS_HD", 321: "LAS_HD", 322: "AZTECA_DEPORTES_NETWORK_HD", 323: "PX_SPORTS_HD",
+    324: "CLARO_SPORTS_HD", 329: "WWB_SD",
+    401: "CINEMA_PLATINO_DELAY_SD", 402: "CINEMA_PLATINO_HD", 403: "PANICO_DELAY_SD", 404: "PANICO_HD",
+    405: "SONY_MOVIES", 406: "EUROPA_EUROPA_HD", 408: "STUDIO_UNIVERSAL_HD", 409: "CINEMAX_HD",
+    410: "TNT_HD", 415: "CINEMA_PLATINO_2_DELAY_SD", 416: "CINEMA_PLATINO_2_SD", 419: "CMC_DELAY_SD",
+    420: "CMC_SD", 422: "EUROCHANNEL_SD", 424: "TCM_HD", 426: "CINE_LATINO_SD",
+    428: "MULTICINEMA_HD", 430: "MULTIPREMIER_HD", 431: "CINECANAL_HD", 432: "CÍNEMA_HD",
+    602: "VIDEO_ROLA_HD", 622: "CLIC_HD", 624: "HTV_HD", 626: "BEAT_BOX_SD",
+    628: "VR_PLUS_HD", 632: "EXA_TV_HD", 1405: "SONY_MOVIES_ALT",
+}
+REQUESTED_CATALOG_ORDER = [DIAL_MASTER_GRID[dial] for dial in sorted(DIAL_MASTER_GRID)]
 CATALOG_ORDER_ALIASES: dict[str, tuple[str, ...]] = {
+    "barker channel": ("barker channel", "conecta", "conecta tv", "básico plus", "basico plus"),
     "conecta": ("conecta tv",),
     "azteca uno hd": ("azteca uno",),
     "las estrellas hd": ("las estrellas",),
@@ -311,6 +199,7 @@ CATALOG_ORDER_ALIASES: dict[str, tuple[str, ...]] = {
     "clic hd": ("clic",),
     "htv hd": ("htv",),
     "exa tv hd": ("exa tv",),
+    "sony movies alt": ("sony movies",),
 }
 WORLD_CUP_CHANNEL_ALIASES = (
     "tudn",
@@ -326,6 +215,63 @@ WORLD_CUP_CHANNEL_ALIASES = (
     "fox sports",
     "espn",
 )
+HARD_PRIORITY_BLOCK = [
+    "Azteca Uno",
+    "Las Estrellas",
+    "Imagen TV",
+    "Canal 5 Televisa",
+    "Azteca 7",
+    "TUDN",
+    "ViX",
+    "DSPORTS",
+    "FIFA+",
+    "Claro Sports",
+    "FOX Sports",
+    "ESPN",
+]
+HARD_PRIORITY_ALIASES: dict[str, tuple[str, ...]] = {
+    "Azteca Uno": ("azteca uno", "azteca 1"),
+    "Las Estrellas": ("las estrellas", "canal de las estrellas", "las estrellas hd"),
+    "Imagen TV": ("imagen tv", "imagen tv+"),
+    "Canal 5 Televisa": ("canal 5 televisa", "canal 5"),
+    "Azteca 7": ("azteca 7", "azteca siete"),
+    "TUDN": ("tudn",),
+    "ViX": ("vix", "vix premium", "vix deportes"),
+    "DSPORTS": ("dsports", "d sports", "directv sports", "dsportplus", "dsport plus"),
+    "FIFA+": ("fifa+", "fifa plus"),
+    "Claro Sports": ("claro sports",),
+    "FOX Sports": ("fox sports",),
+    "ESPN": ("espn",),
+}
+REGIONAL_VARIANT_EXCLUSIONS: dict[str, tuple[str, ...]] = {
+    "Canal 5 Televisa": ("cozumel", "tv cozumel", "xej", "juárez", "juarez"),
+}
+HARD_PRIORITY_EXCLUSION_PATTERNS: dict[str, tuple[re.Pattern[str], ...]] = {
+    "Azteca Uno": (
+        re.compile(r"\bregional\b", re.IGNORECASE),
+        re.compile(r"\bxhg\w*\b", re.IGNORECASE),
+    ),
+    "Las Estrellas": (
+        re.compile(r"\bregional\b", re.IGNORECASE),
+        re.compile(r"\blocal\b", re.IGNORECASE),
+        re.compile(r"\bxhg\w*\b", re.IGNORECASE),
+    ),
+    "Imagen TV": (
+        re.compile(r"\bregional\b", re.IGNORECASE),
+        re.compile(r"\blocal\b", re.IGNORECASE),
+    ),
+    "Canal 5 Televisa": (
+        re.compile(r"\bcozumel\b", re.IGNORECASE),
+        re.compile(r"\bregional\b", re.IGNORECASE),
+        re.compile(r"\blocal\b", re.IGNORECASE),
+        re.compile(r"\btv cozumel\b", re.IGNORECASE),
+        re.compile(r"\bxhg\w*\b", re.IGNORECASE),
+    ),
+    "Azteca 7": (
+        re.compile(r"\bregional\b", re.IGNORECASE),
+        re.compile(r"\blocal\b", re.IGNORECASE),
+    ),
+}
 
 FAMILY_PATTERNS = (
     "azteca uno",
@@ -686,6 +632,7 @@ class ChannelStatus:
     status_code: int | None
     error: str | None
     state: str = "dead"
+    ttfb_ms: int | None = None
     checked_at: str = field(
         default_factory=lambda: datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
     )
@@ -961,6 +908,7 @@ def _make_status(
     state: str,
     status_code: int | None,
     error: str | None,
+    ttfb_ms: int | None = None,
 ) -> ChannelStatus:
     return ChannelStatus(
         name=channel.name,
@@ -974,6 +922,7 @@ def _make_status(
         state=state,
         status_code=status_code,
         error=error,
+        ttfb_ms=ttfb_ms,
     )
 
 
@@ -981,23 +930,26 @@ async def _request_channel_candidate(
     session: aiohttp.ClientSession,
     url: str,
     config: dict[str, Any],
-) -> tuple[int | None, str, str | None]:
+) -> tuple[int | None, str, str | None, int | None]:
     attempts = int(config.get("retry_attempts", 3))
     backoff_base = float(config.get("retry_backoff_base_seconds", 1.0))
-    preferred_methods = ["HEAD", "GET"] if bool(config.get("head_first", True)) else ["GET"]
+    preferred_methods = ["GET", "HEAD"] if bool(config.get("head_first", True)) else ["GET"]
     retryable_method_fallback = {400, 403, 405, 406, 500, 501}
+    ttfb_limit_ms = int(config.get("ttfb_limit_ms", 1500))
 
     for attempt in range(1, attempts + 1):
         await _sleep_with_jitter(config)
         try:
             for method in preferred_methods:
                 request = session.head if method == "HEAD" else session.get
+                start = time.perf_counter()
                 async with request(
                     url,
                     allow_redirects=True,
                     ssl=False,
                 ) as response:
                     content_type = response.headers.get("Content-Type", "")
+                    ttfb_ms = int((time.perf_counter() - start) * 1000)
                     if method == "GET":
                         await response.content.read(1)
                     if response.status in RETRIABLE_STATUS_CODES and attempt < attempts:
@@ -1005,17 +957,56 @@ async def _request_channel_candidate(
                         break
                     if method == "HEAD" and response.status in retryable_method_fallback:
                         continue
-                    return response.status, content_type, None
+                    if ttfb_ms > ttfb_limit_ms:
+                        return response.status, content_type, f"TTFB alto ({ttfb_ms} ms)", ttfb_ms
+                    return response.status, content_type, None, ttfb_ms
             else:
                 continue
         except asyncio.TimeoutError:
-            return None, "", "Timeout"
+            return None, "", "Timeout", None
         except aiohttp.ClientError as exc:
-            return None, "", str(exc)
+            return None, "", str(exc), None
         except Exception as exc:  # noqa: BLE001
-            return None, "", f"Error inesperado: {exc}"
+            return None, "", f"Error inesperado: {exc}", None
 
-    return None, "", "Agotado tras reintentos"
+    return None, "", "Agotado tras reintentos", None
+
+
+async def _probe_first_segment(
+    session: aiohttp.ClientSession,
+    manifest_url: str,
+    config: dict[str, Any],
+) -> str | None:
+    if not bool(config.get("probe_first_segment", True)):
+        return None
+    if ".m3u8" not in manifest_url.casefold():
+        return None
+
+    try:
+        async with session.get(manifest_url, allow_redirects=True, ssl=False) as response:
+            if response.status < 200 or response.status >= 400:
+                return None
+            manifest_text = await response.text(errors="ignore")
+        segment_url = ""
+        for line in manifest_text.splitlines():
+            stripped = line.strip()
+            if not stripped or stripped.startswith("#"):
+                continue
+            segment_url = urljoin(str(response.url), stripped)
+            break
+        if not segment_url:
+            return None
+        start = time.perf_counter()
+        async with session.get(segment_url, allow_redirects=True, ssl=False) as segment_response:
+            await segment_response.content.read(1)
+            if segment_response.status < 200 or segment_response.status >= 400:
+                return f"Segmento inicial inválido (HTTP {segment_response.status})"
+        segment_ttfb_ms = int((time.perf_counter() - start) * 1000)
+        if segment_ttfb_ms > int(config.get("ttfb_limit_ms", 1500)):
+            return f"Primer segmento lento ({segment_ttfb_ms} ms)"
+    except Exception as exc:  # noqa: BLE001
+        return f"Fallo al probar primer segmento: {exc}"
+    return None
 
 
 async def _request_channel(
@@ -1028,7 +1019,7 @@ async def _request_channel(
     last_error: str | None = None
 
     for index, candidate_url in enumerate(candidate_urls):
-        status_code, content_type, error = await _request_channel_candidate(session, candidate_url, config)
+        status_code, content_type, error, ttfb_ms = await _request_channel_candidate(session, candidate_url, config)
         last_status_code = status_code
         last_error = error
 
@@ -1041,9 +1032,33 @@ async def _request_channel(
                 state="dead",
                 status_code=None,
                 error=error,
+                ttfb_ms=ttfb_ms,
             )
 
         if 200 <= status_code < 400:
+            if error:
+                if index < len(candidate_urls) - 1:
+                    continue
+                return _make_status(
+                    channel,
+                    active_url=candidate_url,
+                    state="dead",
+                    status_code=status_code,
+                    error=error,
+                    ttfb_ms=ttfb_ms,
+                )
+            segment_probe_error = await _probe_first_segment(session, candidate_url, config)
+            if segment_probe_error:
+                if index < len(candidate_urls) - 1:
+                    continue
+                return _make_status(
+                    channel,
+                    active_url=candidate_url,
+                    state="dead",
+                    status_code=status_code,
+                    error=segment_probe_error,
+                    ttfb_ms=ttfb_ms,
+                )
             if _looks_playable(content_type):
                 return _make_status(
                     channel,
@@ -1051,6 +1066,7 @@ async def _request_channel(
                     state="alive",
                     status_code=status_code,
                     error=None,
+                    ttfb_ms=ttfb_ms,
                 )
             return _make_status(
                 channel,
@@ -1058,6 +1074,7 @@ async def _request_channel(
                 state="unstable",
                 status_code=status_code,
                 error=f"Handshake correcto pero contenido inestable ({content_type or 'sin content-type'})",
+                ttfb_ms=ttfb_ms,
             )
 
         if index < len(candidate_urls) - 1:
@@ -1069,6 +1086,7 @@ async def _request_channel(
             state="dead",
             status_code=status_code,
             error=f"HTTP {status_code}",
+            ttfb_ms=ttfb_ms,
         )
 
     return _make_status(channel, state="dead", status_code=last_status_code, error=last_error)
@@ -1260,6 +1278,22 @@ def _normalize_name(value: str) -> str:
     return " ".join((value or "").casefold().split())
 
 
+def _canonical_aliases(canonical_name: str) -> tuple[str, ...]:
+    return HARD_PRIORITY_ALIASES.get(canonical_name, (_normalize_name(canonical_name),))
+
+
+def _matches_canonical_alias(normalized_name: str, alias: str) -> bool:
+    pattern = re.compile(rf"^(?:{re.escape(alias)})(?:$|\s|\()", re.IGNORECASE)
+    return bool(pattern.search(normalized_name))
+
+
+def _is_excluded_priority_variant(canonical_name: str, normalized_name: str) -> bool:
+    legacy_exclusions = REGIONAL_VARIANT_EXCLUSIONS.get(canonical_name, ())
+    if any(token in normalized_name for token in legacy_exclusions):
+        return True
+    return any(pattern.search(normalized_name) for pattern in HARD_PRIORITY_EXCLUSION_PATTERNS.get(canonical_name, ()))
+
+
 def _quality_score(name: str) -> int:
     match = QUALITY_PATTERN.search(name or "")
     if not match:
@@ -1302,7 +1336,63 @@ def _catalog_aliases(label: str) -> tuple[str, ...]:
     return (normalized,)
 
 
+def _dial_label_for_status(status: ChannelStatus) -> str | None:
+    normalized_name = _normalize_name(_canonical_display_name(status.name, status.tvg_id))
+    normalized_tvg_id = _normalize_name(status.tvg_id)
+
+    for label in REQUESTED_CATALOG_ORDER:
+        normalized_label = _normalize_catalog_label(label)
+        aliases = _catalog_aliases(label)
+        if normalized_tvg_id and normalized_tvg_id == normalized_label:
+            return label
+        if any(alias and _matches_canonical_alias(normalized_name, alias) for alias in aliases):
+            return label
+    return None
+
+
+def _dial_rank(status: ChannelStatus) -> int:
+    label = _dial_label_for_status(status)
+    if label is None:
+        return len(REQUESTED_CATALOG_ORDER)
+    return REQUESTED_CATALOG_ORDER.index(label)
+
+
+def _status_dial_preference_key(status: ChannelStatus) -> tuple[int, ...]:
+    return (
+        _state_rank(status),
+        _country_rank(status),
+        status.ttfb_ms if status.ttfb_ms is not None else 999999,
+        -_quality_score(status.name),
+        _normalize_name(status.name),
+        status.url.casefold(),
+    )
+
+
+def _select_dial_matches(
+    statuses: list[ChannelStatus],
+) -> tuple[dict[str, ChannelStatus], dict[str, list[ChannelStatus]], list[ChannelStatus]]:
+    candidates_by_label: dict[str, list[ChannelStatus]] = {}
+    remainder: list[ChannelStatus] = []
+
+    for status in statuses:
+        label = _dial_label_for_status(status)
+        if label is None:
+            remainder.append(status)
+            continue
+        candidates_by_label.setdefault(label, []).append(status)
+
+    best_by_label: dict[str, ChannelStatus] = {}
+    for label, candidates in candidates_by_label.items():
+        best_by_label[label] = min(candidates, key=_status_dial_preference_key)
+
+    return best_by_label, candidates_by_label, remainder
+
+
 def _catalog_order_rank(status: ChannelStatus, catalog_order: list[str]) -> tuple[int, int]:
+    dial_label = _dial_label_for_status(status)
+    if dial_label is not None and dial_label in catalog_order:
+        return (catalog_order.index(dial_label), 1)
+
     normalized_name = _normalize_name(status.name)
     world_cup_insert_at = next(
         (index for index, label in enumerate(catalog_order) if _normalize_catalog_label(label) == "azteca 7"),
@@ -1352,6 +1442,23 @@ def _priority_rank(status: ChannelStatus, priority_channels: list[str]) -> int:
         ):
             return index
     return len(priority_channels)
+
+
+def _hard_priority_name(status: ChannelStatus) -> str | None:
+    normalized_name = _normalize_name(_canonical_display_name(status.name, status.tvg_id))
+    for canonical_name, aliases in HARD_PRIORITY_ALIASES.items():
+        if any(alias and _matches_canonical_alias(normalized_name, alias) for alias in aliases):
+            if _is_excluded_priority_variant(canonical_name, normalized_name):
+                return None
+            return canonical_name
+    return None
+
+
+def _hard_priority_rank(status: ChannelStatus) -> int:
+    canonical_name = _hard_priority_name(status)
+    if canonical_name is None:
+        return len(HARD_PRIORITY_BLOCK)
+    return HARD_PRIORITY_BLOCK.index(canonical_name)
 
 
 def _group_rank(status: ChannelStatus, group_order: list[str]) -> int:
@@ -1461,10 +1568,14 @@ def _status_preference_key(status: ChannelStatus, priority_channels: list[str]) 
         -1 if _normalize_name(status.country) == "mx" else 0,
         -1 if _priority_rank(status, priority_channels) < len(priority_channels) else 0,
         _priority_rank(status, priority_channels),
+        status.ttfb_ms if status.ttfb_ms is not None else 999999,
         -_quality_score(status.name),
         0 if " hd" in normalized_name or normalized_name.endswith("hd") else 1,
         0 if "(" not in status.name else 1,
         0 if status.tvg_id else 1,
+        0 if not _is_excluded_priority_variant(_hard_priority_name(status) or "", normalized_name) else 1,
+        normalized_name,
+        status.url.casefold(),
     )
 
 
@@ -1475,7 +1586,16 @@ def dedupe_statuses_by_identity(
     priorities = priority_channels or []
     best_by_identity: dict[tuple[str, str], ChannelStatus] = {}
 
-    for status in statuses:
+    ordered_statuses = sorted(
+        statuses,
+        key=lambda status: (
+            _status_identity_key(status),
+            _status_preference_key(status, priorities),
+            status.url.casefold(),
+        ),
+    )
+
+    for status in ordered_statuses:
         identity = _status_identity_key(status)
         existing = best_by_identity.get(identity)
         if existing is None or _status_preference_key(status, priorities) < _status_preference_key(existing, priorities):
@@ -1493,6 +1613,61 @@ def dedupe_statuses_by_identity(
     return list(best_by_identity.values())
 
 
+def purge_false_positive_variants(statuses: list[ChannelStatus]) -> list[ChannelStatus]:
+    filtered: list[ChannelStatus] = []
+    for status in statuses:
+        canonical_name = _hard_priority_name(status)
+        normalized_name = _normalize_name(status.name)
+        if canonical_name is None and "canal 5" in normalized_name:
+            if _is_excluded_priority_variant("Canal 5 Televisa", normalized_name):
+                continue
+        filtered.append(status)
+    return filtered
+
+
+def partition_hard_priority_block(
+    statuses: list[ChannelStatus],
+    *,
+    dedupe_urls: bool = True,
+) -> tuple[list[ChannelStatus], list[ChannelStatus]]:
+    priority_candidates: dict[str, list[ChannelStatus]] = {}
+    remainder: list[ChannelStatus] = []
+
+    for status in statuses:
+        canonical_name = _hard_priority_name(status)
+        if canonical_name is None:
+            remainder.append(status)
+            continue
+        priority_candidates.setdefault(canonical_name, []).append(status)
+
+    ordered_top: list[ChannelStatus] = []
+    spillover_priority: list[ChannelStatus] = []
+    for canonical_name in HARD_PRIORITY_BLOCK:
+        candidates = priority_candidates.get(canonical_name, [])
+        if not candidates:
+            continue
+        best = min(candidates, key=lambda status: _status_preference_key(status, HARD_PRIORITY_BLOCK))
+        ordered_top.append(best)
+        for candidate in candidates:
+            if candidate is not best:
+                spillover_priority.append(candidate)
+
+    if dedupe_urls:
+        selected_urls = {status.url.casefold() for status in ordered_top}
+        final_remainder = [
+            *[status for status in spillover_priority if status.url.casefold() not in selected_urls],
+            *[status for status in remainder if status.url.casefold() not in selected_urls],
+        ]
+    else:
+        final_remainder = [*spillover_priority, *remainder]
+    return ordered_top, final_remainder
+
+
+def enforce_hard_priority_block(statuses: list[ChannelStatus]) -> list[ChannelStatus]:
+    ordered_top, final_remainder = partition_hard_priority_block(statuses)
+    return [*ordered_top, *final_remainder]
+
+
 def sort_statuses(
     statuses: list[ChannelStatus],
     sort_by: list[str],
@@ -1503,6 +1678,7 @@ def sort_statuses(
     priorities = priority_channels or []
     ordered_groups = group_order or []
     requested_catalog_order = catalog_order or REQUESTED_CATALOG_ORDER
+    ordered_top, remainder = partition_hard_priority_block(statuses, dedupe_urls=False)
 
     def sort_key(status: ChannelStatus) -> tuple:
         return (
@@ -1517,7 +1693,7 @@ def sort_statuses(
             *tuple(str(getattr(status, field_name, "")).lower() for field_name in sort_by),
         )
 
-    return sorted(statuses, key=sort_key)
+    return [*ordered_top, *sorted(remainder, key=sort_key)]
 
 
 def select_curated_statuses(
@@ -1539,7 +1715,31 @@ def select_curated_statuses(
     selected: list[ChannelStatus] = []
     selected_urls: set[str] = set()
 
-    for status in playable:
+    best_by_label, _, dial_remainder = _select_dial_matches(playable)
+    for label in REQUESTED_CATALOG_ORDER:
+        status = best_by_label.get(label)
+        if status is None:
+            continue
+        if status.url in selected_urls:
+            continue
+        selected.append(status)
+        selected_urls.add(status.url)
+        if len(selected) >= target_size:
+            return selected[:target_size]
+
+    top_block, remainder = partition_hard_priority_block(dial_remainder)
+
+    for status in top_block:
+        if status.url in selected_urls:
+            continue
+        selected.append(status)
+        selected_urls.add(status.url)
+        if len(selected) >= target_size:
+            return selected[:target_size]
+
+    for status in remainder:
+        if _hard_priority_name(status) is not None:
+            continue
         if _priority_rank(status, priorities) >= len(priorities):
             continue
         if status.url in selected_urls:
@@ -1557,7 +1757,7 @@ def select_curated_statuses(
             selected_urls.add(status.url)
 
     if len(selected) < target_size:
-        for status in playable:
+        for status in remainder:
             if status.url in selected_urls:
                 continue
             selected.append(status)
@@ -1574,24 +1774,49 @@ def _escape_m3u_field(value: str) -> str:
 
 def build_m3u(statuses: list[ChannelStatus]) -> str:
     lines = ["#EXTM3U"]
-    for status in statuses:
+    playable = [status for status in statuses if status.state in {"alive", "unstable"}]
+    best_by_label, _, remainder = _select_dial_matches(playable)
+    ordered_statuses = [best_by_label[label] for label in REQUESTED_CATALOG_ORDER if label in best_by_label]
+    selected_urls = {status.url.casefold() for status in ordered_statuses}
+    ordered_statuses.extend(
+        sorted(
+            [status for status in remainder if status.url.casefold() not in selected_urls],
+            key=lambda status: (
+                _group_rank(status, []),
+                _normalize_name(status.group),
+                _normalize_name(status.name),
+                status.url.casefold(),
+            ),
+        )
+    )
+
+    for status in ordered_statuses:
         if status.state not in {"alive", "unstable"}:
             continue
         name = _escape_m3u_field(status.name)
         group = _escape_m3u_field(status.group)
-        tvg_id = _escape_m3u_field(status.tvg_id)
+        dial_label = _dial_label_for_status(status)
+        tvg_id = _escape_m3u_field(dial_label or status.tvg_id)
         logo = _escape_m3u_field(status.logo)
+        dial_attributes = ""
+        if dial_label is not None:
+            dial_number = next(dial for dial, label in DIAL_MASTER_GRID.items() if label == dial_label)
+            dial_attributes = f' tvg-chno="{dial_number}"'
         extinf = (
-            f'#EXTINF:-1 tvg-id="{tvg_id}" tvg-name="{name}" '
+            f'#EXTINF:-1 tvg-id="{tvg_id}" tvg-name="{name}"{dial_attributes} '
             f'tvg-logo="{logo}" group-title="{group}",{name}'
         )
         lines.append(extinf)
+        lines.append("#EXTVLCOPT:network-caching=2000")
+        lines.append("#EXTVLCOPT:http-reconnect=true")
         lines.append(status.url)
         for backup_index, backup_url in enumerate(status.backup_urls, start=1):
             backup_name = _escape_m3u_field(f"{status.name} [Respaldo {backup_index}]")
             lines.append(
-                f'#EXTINF:-1 tvg-id="{tvg_id}" tvg-name="{backup_name}" tvg-logo="{logo}" group-title="{group}",{backup_name}'
+                f'#EXTINF:-1 tvg-id="{tvg_id}" tvg-name="{backup_name}"{dial_attributes} tvg-logo="{logo}" group-title="{group}",{backup_name}'
             )
+            lines.append("#EXTVLCOPT:network-caching=2000")
+            lines.append("#EXTVLCOPT:http-reconnect=true")
             lines.append(backup_url)
     return "\n".join(lines) + "\n"
 
@@ -1722,43 +1947,52 @@ def build_priority_summary(statuses: list[ChannelStatus], priority_channels: lis
 
 
 def build_catalog_summary(statuses: list[ChannelStatus], catalog_order: list[str]) -> dict[str, Any]:
+    best_by_label, candidates_by_label, _ = _select_dial_matches(statuses)
     found: list[dict[str, Any]] = []
     missing: list[str] = []
-    used_urls: set[str] = set()
+    entries: list[dict[str, Any]] = []
 
-    for label in catalog_order:
-        aliases = _catalog_aliases(label)
-        match = next(
-            (
-                status
-                for status in statuses
-                if status.url not in used_urls
-                and any(alias and alias in _normalize_name(status.name) for alias in aliases)
-            ),
-            None,
-        )
+    for dial_number, label in sorted(DIAL_MASTER_GRID.items()):
+        match = best_by_label.get(label)
         if match is None:
             missing.append(label)
+            entries.append(
+                {
+                    "dial": dial_number,
+                    "requested": label,
+                    "tvg_id": label,
+                    "reserved": True,
+                    "matched_name": None,
+                    "group": None,
+                    "country": None,
+                    "state": "reserved",
+                    "url": None,
+                }
+            )
             continue
-        used_urls.add(match.url)
-        found.append(
-            {
-                "requested": label,
-                "matched_name": match.name,
-                "group": match.group,
-                "country": match.country,
-                "state": match.state,
-                "url": match.url,
-            }
-        )
+        entry = {
+            "dial": dial_number,
+            "requested": label,
+            "tvg_id": label,
+            "reserved": match.state not in {"alive", "unstable"},
+            "matched_name": match.name,
+            "group": match.group,
+            "country": match.country,
+            "state": match.state,
+            "url": match.url,
+            "candidate_count": len(candidates_by_label.get(label, [])),
+        }
+        found.append(entry)
+        entries.append(entry)
 
     return {
         "generated_at": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
-        "requested_total": len(catalog_order),
+        "requested_total": len(DIAL_MASTER_GRID),
         "found_total": len(found),
         "missing_total": len(missing),
         "found": found,
         "missing": missing,
+        "entries": entries,
     }
 
 
@@ -1772,13 +2006,14 @@ def build_catalog_summary_markdown(summary: dict[str, Any]) -> str:
         f"- Posiciones cubiertas: **{summary['found_total']}**",
         f"- Posiciones faltantes: **{summary['missing_total']}**",
         "",
-        "| Pedido | Coincidencia | Grupo | País | Estado |",
+        "| Dial | Pedido | Coincidencia | País | Estado |",
         "|---|---|---|---|---|",
     ]
 
-    for item in summary["found"]:
+    for item in summary.get("entries", summary["found"]):
+        matched_name = item["matched_name"] or "Reservado"
         lines.append(
-            f"| {item['requested']} | {item['matched_name']} | {item['group']} | {item['country']} | {item['state']} |"
+            f"| {item['dial']} | {item['requested']} | {matched_name} | {item['country'] or '-'} | {item['state']} |"
         )
 
     if summary["missing"]:
@@ -1947,13 +2182,15 @@ async def run(sources_path: Path, public_dir: Path, config_path: Path) -> list[C
         validated_statuses = await check_all_channels(
             channels,
             config,
-            cache_path=public_dir / STATUS_CACHE_FILE.name,
+            cache_path=STATUS_CACHE_FILE,
         )
         validated_statuses = regroup_statuses(validated_statuses)
+        validated_statuses = purge_false_positive_variants(validated_statuses)
         validated_statuses = dedupe_statuses_by_identity(
             validated_statuses,
             priority_channels=priority_channels,
         )
+        validated_statuses = enforce_hard_priority_block(validated_statuses)
         validated_statuses = sort_statuses(
             validated_statuses,
             list(config["sort_by"]),
@@ -1967,7 +2204,7 @@ async def run(sources_path: Path, public_dir: Path, config_path: Path) -> list[C
             group_quotas=dict(config.get("target_group_quotas", {})),
             priority_channels=priority_channels,
         )
-    save_status_cache(validated_statuses, public_dir / STATUS_CACHE_FILE.name)
+    save_status_cache(validated_statuses, STATUS_CACHE_FILE)
 
     fallback_used = write_outputs(
         statuses,

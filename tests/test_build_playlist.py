@@ -36,6 +36,8 @@ from build_playlist import (  # noqa: E402
     _classify_vod_transport,
     check_all_channels,
     dedupe_statuses_by_identity,
+    enforce_hard_priority_block,
+    purge_false_positive_variants,
     load_channels,
     load_cloud_catalog_items,
     load_config,
@@ -295,9 +297,9 @@ def test_select_curated_statuses_conserva_prioritarios_antes_del_recorte():
 
     assert [status.name for status in selected] == [
         "Azteca Uno",
-        "Canal 5 (1080p)",
         "Las Estrellas HD",
-        "TUDN (1080p)",
+        "Canal 5 (1080p)",
+        "Azteca 7",
     ]
 
 
@@ -316,6 +318,30 @@ def test_dedupe_statuses_by_identity_conserva_mejor_version_del_mismo_canal():
 
     assert len(deduped) == 1
     assert deduped[0].name == "Canal 5 HD"
+
+
+def test_purge_false_positive_variants_descarta_canal_5_cozumel():
+    filtered = purge_false_positive_variants(
+        [
+            make_status("Canal 5 TV Cozumel (1080p)", "Familia y TV Abierta", True),
+            make_status("Canal 5 Televisa", "Familia y TV Abierta", True),
+        ]
+    )
+
+    assert [status.name for status in filtered] == ["Canal 5 Televisa"]
+
+
+def test_enforce_hard_priority_block_fuerza_bloque_superior():
+    ordered = enforce_hard_priority_block(
+        [
+            make_status("ESPN", "Deportes", True),
+            make_status("Otro Canal", "Otros", True),
+            make_status("Canal 5 Televisa", "Familia y TV Abierta", True),
+            make_status("Azteca Uno", "Familia y TV Abierta", True),
+        ]
+    )
+
+    assert [status.name for status in ordered[:3]] == ["Azteca Uno", "Canal 5 Televisa", "ESPN"]
 
 
 def test_check_all_channels_reutiliza_cache_estable_y_revalida_caidos(tmp_path, monkeypatch):
@@ -592,6 +618,8 @@ def test_build_m3u_solo_incluye_canales_vivos():
     assert "Vivo" in m3u
     assert "Muerto" not in m3u
     assert m3u.startswith("#EXTM3U")
+    assert "#EXTVLCOPT:network-caching=2000" in m3u
+    assert "#EXTVLCOPT:http-reconnect=true" in m3u
 
 
 def test_build_m3u_tambien_incluye_canales_inestables():
@@ -667,11 +695,22 @@ def test_build_catalog_summary_reporta_encontrados_y_faltantes():
         make_status("Canal 5 Televisa", "Familia y TV Abierta", True),
     ]
 
-    summary = build_catalog_summary(statuses, ["Conecta", "CANAL_5_LOCAL_HD", "ESPN_HD"])
+    summary = build_catalog_summary(statuses, ["BARKER_CHANNEL_HD", "CANAL_5_LOCAL_HD", "ESPN_HD"])
 
     assert summary["found_total"] == 2
-    assert summary["missing_total"] == 1
-    assert summary["missing"] == ["ESPN_HD"]
+    assert "ESPN_HD" in summary["missing"]
+    assert any(entry["dial"] == 100 and entry["matched_name"] == "Conecta TV (720p)" for entry in summary["entries"])
+
+
+def test_build_catalog_summary_reserva_dial_sin_stream_activo():
+    summary = build_catalog_summary([], ["BARKER_CHANNEL_HD"])
+
+    reserved = next(entry for entry in summary["entries"] if entry["requested"] == "BARKER_CHANNEL_HD")
+
+    assert reserved["dial"] == 100
+    assert reserved["reserved"] is True
+    assert reserved["state"] == "reserved"
+    assert reserved["matched_name"] is None
 
 
 def test_build_catalog_summary_markdown_contiene_faltantes():
@@ -680,9 +719,22 @@ def test_build_catalog_summary_markdown_contiene_faltantes():
         "requested_total": 2,
         "found_total": 1,
         "missing_total": 1,
+        "entries": [
+            {
+                "dial": 100,
+                "requested": "BARKER_CHANNEL_HD",
+                "matched_name": "Conecta TV (720p)",
+                "group": "Entretenimiento",
+                "country": "MX",
+                "state": "alive",
+                "url": "https://example.com/a.m3u8",
+                "reserved": False,
+            }
+        ],
         "found": [
             {
-                "requested": "Conecta",
+                "dial": 100,
+                "requested": "BARKER_CHANNEL_HD",
                 "matched_name": "Conecta TV (720p)",
                 "group": "Entretenimiento",
                 "country": "MX",
@@ -696,6 +748,7 @@ def test_build_catalog_summary_markdown_contiene_faltantes():
     md = build_catalog_summary_markdown(summary)
 
     assert "Conecta TV (720p)" in md
+    assert "| 100 | BARKER_CHANNEL_HD |" in md
     assert "## Faltantes" in md
     assert "- ESPN_HD" in md
 
@@ -706,7 +759,18 @@ def test_build_m3u_es_valido_y_tiene_extinf_y_url():
     lines = m3u.strip().split("\n")
     assert lines[0] == "#EXTM3U"
     assert lines[1].startswith("#EXTINF:-1")
-    assert lines[2].startswith("https://")
+    assert lines[2] == "#EXTVLCOPT:network-caching=2000"
+    assert lines[3] == "#EXTVLCOPT:http-reconnect=true"
+    assert lines[4].startswith("https://")
+
+
+def test_build_m3u_inyecta_tvg_chno_y_tvg_id_forzado_para_dial():
+    status = make_status("Canal 5 Televisa", "Familia y TV Abierta", True, tvg_id="canal5.mx")
+
+    m3u = build_m3u([status])
+
+    assert 'tvg-id="CANAL_5_LOCAL_HD"' in m3u
+    assert 'tvg-chno="105"' in m3u
 
 
 def test_build_m3u_limpia_comillas_problematicas():
