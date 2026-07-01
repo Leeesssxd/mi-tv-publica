@@ -1,24 +1,61 @@
 # Estado de canales
 
-Última revisión UTC: `2026-07-01T00:18:25Z`
+Última revisión UTC: `2026-07-01T00:29:28Z`
 
-- Canales totales: **298**
-- Canales vivos: **292**
+- Canales totales: **297**
+- Canales vivos: **291**
 - Canales inestables: **6**
 - Canales muertos: **0**
 
 | Canal | Grupo | País | Estado | Código | Error |
 |---|---|---|---|---|---|
+| Conecta TV (720p) | Entretenimiento | MX | ✅ Vivo | 200 |  |
 | Azteca Uno | Familia y TV Abierta | MX | ✅ Vivo | 200 |  |
+| Las Estrellas | Familia y TV Abierta | MX | ✅ Vivo | 200 |  |
+| Imagen TV+ (720p) | Familia y TV Abierta | MX | ✅ Vivo | 200 |  |
 | Canal 5 Televisa | Familia y TV Abierta | MX | ✅ Vivo | 200 |  |
 | Canal 5 Televisa | Familia y TV Abierta | MX | ✅ Vivo | 200 |  |
 | Canal 5 TV Cozumel (1080p) | Familia y TV Abierta | MX | ✅ Vivo | 200 |  |
+| Canal 6 CDMX (FAST) | Familia y TV Abierta | MX | ✅ Vivo | 200 |  |
+| Canal 66 | Familia y TV Abierta | MX | ✅ Vivo | 200 |  |
 | Azteca 7 | Familia y TV Abierta | MX | ✅ Vivo | 200 |  |
-| Las Estrellas | Familia y TV Abierta | MX | ✅ Vivo | 200 |  |
 | TUDN | Deportes | MX | ✅ Vivo | 200 |  |
-| TV Pública | Familia y TV Abierta | AR | ✅ Vivo | 200 |  |
+| Claro Sports (720p) | Deportes | MX | ✅ Vivo | 200 |  |
+| ITV Deportes (720p) | Deportes | MX | ✅ Vivo | 200 |  |
+| ITV Deportes (720p) | Deportes | MX | ✅ Vivo | 200 |  |
+| AyM Sports | Deportes | MX | ✅ Vivo | 200 |  |
+| TyC Sports | Deportes | AR | ✅ Vivo | 200 |  |
+| Canal 14 | Familia y TV Abierta | MX | ✅ Vivo | 200 |  |
+| Jalisco TV (720p) | Familia y TV Abierta | MX | ✅ Vivo | 200 |  |
+| TV UNAM | Familia y TV Abierta | MX | ✅ Vivo | 200 |  |
+| Canal 22 Nacional (720p) [Geo-blocked] | Familia y TV Abierta | MX | ✅ Vivo | 200 |  |
+| Canal 22 | Familia y TV Abierta | MX | ✅ Vivo | 200 |  |
+| Canal 22 Mexico | Familia y TV Abierta | MX | ⚠️ Inestable | 200 | Handshake correcto pero contenido inestable (text/html) |
+| ADN 40 (720p) | Noticias | MX | ✅ Vivo | 200 |  |
+| Canal del Congreso 45.1 | Noticias | MX | ✅ Vivo | 200 |  |
+| Justicia TV (720p) | Noticias | MX | ✅ Vivo | 200 |  |
+| TeleFórmula (720p) | Noticias | MX | ✅ Vivo | 200 |  |
+| AXN Latin America Mexico | Peliculas - Cine | MX | ✅ Vivo | 200 |  |
+| Rawhide | Peliculas - Drama y Series | SE | ✅ Vivo | 200 |  |
+| MTV Ridiculousness (720p) | Entretenimiento | SE | ✅ Vivo | 200 |  |
+| Pimp My Ride | Entretenimiento | SE | ✅ Vivo | 200 |  |
+| Ridiculousness Nye episoder | Entretenimiento | SE | ✅ Vivo | 200 |  |
+| Comedy Central Latin America (1080p) | Peliculas - Comedia | MX | ✅ Vivo | 200 |  |
+| Corazón Fast | Peliculas - Drama y Series | MX | ✅ Vivo | 200 |  |
 | Azteca Internacional (1080p) | Familia y TV Abierta | MX | ✅ Vivo | 200 |  |
 | Azteca Internacional (720p) | Familia y TV Abierta | MX | ✅ Vivo | 200 |  |
+| RTVE La 1 Oficial (720p) | Deportes Públicos Internacionales | ES | ✅ Vivo | 200 |  |
+| RTVE La 2 Oficial (720p) | Deportes Públicos Internacionales | ES | ✅ Vivo | 200 |  |
+| RTVE 24 Horas Oficial (720p) | Deportes Públicos Internacionales | ES | ✅ Vivo | 200 |  |
+| RTVE Teledeporte Oficial (720p) | Deportes Públicos Internacionales | ES | ✅ Vivo | 200 |  |
+| Nick Jr. Latin America (1080p) | Peliculas - Familiar | MX | ✅ Vivo | 200 |  |
+| Disney Jr. Latin America North HD (1080p) | Peliculas - Familiar | MX | ✅ Vivo | 200 |  |
+| Disney Channel Latin America Mexico (720p) | Peliculas - Familiar | MX | ✅ Vivo | 200 |  |
+| Disney Channel Latin America North (576p) | Peliculas - Familiar | MX | ✅ Vivo | 200 |  |
+| Dallas Cowboys Cheerleaders | Peliculas - Drama y Series | SE | ✅ Vivo | 200 |  |
+| Pluto TV Klassiske tegnefilmer (720p) | Peliculas - Familiar | SE | ✅ Vivo | 200 |  |
+| Panico (576p) | Peliculas - Terror | MX | ✅ Vivo | 200 |  |
+| TV Pública | Familia y TV Abierta | AR | ✅ Vivo | 200 |  |
 | Milenio Television (720p) | Noticias | MX | ✅ Vivo | 200 |  |
 | Milenio Televisión (720p) | Noticias | MX | ✅ Vivo | 200 |  |
 | Telediario Now | Noticias | MX | ✅ Vivo | 200 |  |
@@ -42,18 +79,7 @@
 | Runtime Cine y Series | Peliculas - Drama y Series | MX | ✅ Vivo | 200 |  |
 | Runtime Comedia | Peliculas - Comedia | MX | ✅ Vivo | 200 |  |
 | Runtime Familia | Peliculas - Familiar | MX | ✅ Vivo | 200 |  |
-| Corazón Fast | Peliculas - Drama y Series | MX | ✅ Vivo | 200 |  |
-| RTVE La 1 Oficial (720p) | Deportes Públicos Internacionales | ES | ✅ Vivo | 200 |  |
-| RTVE La 2 Oficial (720p) | Deportes Públicos Internacionales | ES | ✅ Vivo | 200 |  |
-| RTVE 24 Horas Oficial (720p) | Deportes Públicos Internacionales | ES | ✅ Vivo | 200 |  |
-| RTVE Teledeporte Oficial (720p) | Deportes Públicos Internacionales | ES | ✅ Vivo | 200 |  |
 | TV Brasil Oficial (720p) | Deportes Públicos Internacionales | BR | ✅ Vivo | 200 |  |
-| Claro Sports (720p) | Deportes | MX | ✅ Vivo | 200 |  |
-| ITV Deportes (720p) | Deportes | MX | ✅ Vivo | 200 |  |
-| ITV Deportes (720p) | Deportes | MX | ✅ Vivo | 200 |  |
-| AyM Sports | Deportes | MX | ✅ Vivo | 200 |  |
-| TyC Sports | Deportes | AR | ✅ Vivo | 200 |  |
-| Comedy Central Latin America (1080p) | Peliculas - Comedia | MX | ✅ Vivo | 200 |  |
 | Star Trek Movies | Peliculas - Cine | SE | ✅ Vivo | 200 |  |
 | Viafree Movies | Peliculas - Cine | SE | ✅ Vivo | 200 |  |
 | 8NTV (1080p) | Familia y TV Abierta | MX | ✅ Vivo | 200 |  |
@@ -88,11 +114,9 @@
 | Univision Latin America (1080p) | Familia y TV Abierta | MX | ✅ Vivo | 200 |  |
 | Canal 10 Chiapas (720p) | Familia y TV Abierta | MX | ✅ Vivo | 200 |  |
 | Canal 15 ILCE Summa Sabres (720p) | Familia y TV Abierta | MX | ✅ Vivo | 200 |  |
-| Canal 22 Nacional (720p) [Geo-blocked] | Familia y TV Abierta | MX | ✅ Vivo | 200 |  |
 | Canal 33 Tijuana (720p) | Familia y TV Abierta | MX | ✅ Vivo | 200 |  |
 | Canal 44 Chihuahua (720p) [Not 24/7] | Familia y TV Abierta | MX | ✅ Vivo | 200 |  |
 | Canal 44 Ciudad Juárez (720p) [Not 24/7] | Familia y TV Abierta | MX | ✅ Vivo | 200 |  |
-| Jalisco TV (720p) | Familia y TV Abierta | MX | ✅ Vivo | 200 |  |
 | Lobo TV (720p) | Familia y TV Abierta | MX | ✅ Vivo | 200 |  |
 | Mexiquense TV (720p) | Familia y TV Abierta | MX | ✅ Vivo | 200 |  |
 | Nueve TV San Luís Potosí (720p) | Familia y TV Abierta | MX | ✅ Vivo | 200 |  |
@@ -116,48 +140,31 @@
 | C9NTV | Familia y TV Abierta | MX | ✅ Vivo | 200 |  |
 | Canal 11 | Familia y TV Abierta | MX | ✅ Vivo | 200 |  |
 | Canal 12 Iguala | Familia y TV Abierta | MX | ✅ Vivo | 200 |  |
-| Canal 14 | Familia y TV Abierta | MX | ✅ Vivo | 200 |  |
 | Canal 21 | Familia y TV Abierta | MX | ✅ Vivo | 200 |  |
-| Canal 22 | Familia y TV Abierta | MX | ✅ Vivo | 200 |  |
-| Canal 6 CDMX (FAST) | Familia y TV Abierta | MX | ✅ Vivo | 200 |  |
-| Canal 66 | Familia y TV Abierta | MX | ✅ Vivo | 200 |  |
 | MVS TV | Familia y TV Abierta | MX | ✅ Vivo | 200 |  |
 | Tele Saltillo | Familia y TV Abierta | MX | ✅ Vivo | 200 |  |
 | Tele UV [Not 24/7] | Familia y TV Abierta | MX | ✅ Vivo | 200 |  |
 | TV de Puebla | Familia y TV Abierta | MX | ✅ Vivo | 200 |  |
-| TV UNAM | Familia y TV Abierta | MX | ✅ Vivo | 200 |  |
 | Popcorn Central (1080p) | Peliculas - Cine | MX | ✅ Vivo | 200 |  |
 | MyTime Movie Network Mexico (720p) | Peliculas - Cine | MX | ✅ Vivo | 200 |  |
-| AXN Latin America Mexico | Peliculas - Cine | MX | ✅ Vivo | 200 |  |
 | De Pelicula Latin America | Peliculas - Cine | MX | ✅ Vivo | 200 |  |
 | Runtime Español | Peliculas - Drama y Series | MX | ✅ Vivo | 200 |  |
 | Runtime Films | Peliculas - Drama y Series | MX | ✅ Vivo | 200 |  |
 | Runtime Latino | Peliculas - Drama y Series | MX | ✅ Vivo | 200 |  |
 | Runtime Crimen | Peliculas - Crimen | MX | ✅ Vivo | 200 |  |
-| Panico (576p) | Peliculas - Terror | MX | ✅ Vivo | 200 |  |
 | Runtime Terror | Peliculas - Terror | MX | ✅ Vivo | 200 |  |
-| Disney Jr. Latin America North HD (1080p) | Peliculas - Familiar | MX | ✅ Vivo | 200 |  |
 | Estrella Games (1080p) | Peliculas - Familiar | MX | ✅ Vivo | 200 |  |
-| Nick Jr. Latin America (1080p) | Peliculas - Familiar | MX | ✅ Vivo | 200 |  |
-| Disney Channel Latin America Mexico (720p) | Peliculas - Familiar | MX | ✅ Vivo | 200 |  |
-| El Chavo TV (720p) | Peliculas - Familiar | MX | ✅ Vivo | 200 |  |
-| Disney Channel Latin America North (576p) | Peliculas - Familiar | MX | ✅ Vivo | 200 |  |
 | TV Cuatro 4.3 (1080p) | Deportes | MX | ✅ Vivo | 200 |  |
 | WPT | Deportes | MX | ✅ Vivo | 200 |  |
 | Estrella News (1080p) | Noticias | MX | ✅ Vivo | 200 |  |
 | Notigram TV (XHFGL-TDT) (1080p) | Noticias | MX | ✅ Vivo | 200 |  |
-| ADN 40 (720p) | Noticias | MX | ✅ Vivo | 200 |  |
 | AMX Noticias (720p) [Not 24/7] | Noticias | MX | ✅ Vivo | 200 |  |
 | Canal Parlamento del Congreso de Jalisco (720p) [Not 24/7] | Noticias | MX | ✅ Vivo | 200 |  |
-| Justicia TV (720p) | Noticias | MX | ✅ Vivo | 200 |  |
-| TeleFórmula (720p) | Noticias | MX | ✅ Vivo | 200 |  |
-| Canal del Congreso 45.1 | Noticias | MX | ✅ Vivo | 200 |  |
 | TeleFormula | Noticias | MX | ✅ Vivo | 200 |  |
 | CreaLaTV (1080p) | Entretenimiento | MX | ✅ Vivo | 200 |  |
 | MTV Latin America (1080p) | Entretenimiento | MX | ✅ Vivo | 200 |  |
 | VB Media TV (1080p) | Entretenimiento | MX | ✅ Vivo | 200 |  |
 | ZAZ (1080p) | Entretenimiento | MX | ✅ Vivo | 200 |  |
-| Conecta TV (720p) | Entretenimiento | MX | ✅ Vivo | 200 |  |
 | Expresa TV (720p) | Entretenimiento | MX | ✅ Vivo | 200 |  |
 | Presumiendo México (720p) | Entretenimiento | MX | ✅ Vivo | 200 |  |
 | Raly TV (720p) | Entretenimiento | MX | ✅ Vivo | 200 |  |
@@ -200,7 +207,6 @@
 | BET | Peliculas - Drama y Series | SE | ✅ Vivo | 200 |  |
 | Britain's Next Top Model | Peliculas - Drama y Series | SE | ✅ Vivo | 200 |  |
 | Bull | Peliculas - Drama y Series | SE | ✅ Vivo | 200 |  |
-| Dallas Cowboys Cheerleaders | Peliculas - Drama y Series | SE | ✅ Vivo | 200 |  |
 | Dating Naked UK | Peliculas - Drama y Series | SE | ✅ Vivo | 200 |  |
 | Diagnosis Murder | Peliculas - Drama y Series | SE | ✅ Vivo | 200 |  |
 | Doc Martin | Peliculas - Drama y Series | SE | ✅ Vivo | 200 |  |
@@ -222,7 +228,6 @@
 | Pluto TV Sci-Fi | Peliculas - Drama y Series | SE | ✅ Vivo | 200 |  |
 | Pluto TV True Crime | Peliculas - Drama y Series | SE | ✅ Vivo | 200 |  |
 | Pluto TV Wild West | Peliculas - Drama y Series | SE | ✅ Vivo | 200 |  |
-| Rawhide | Peliculas - Drama y Series | SE | ✅ Vivo | 200 |  |
 | Scorpion | Peliculas - Drama y Series | SE | ✅ Vivo | 200 |  |
 | Skjønnhetsfellen Danmark | Peliculas - Drama y Series | SE | ✅ Vivo | 200 |  |
 | Star Trek: The Original Series | Peliculas - Drama y Series | SE | ✅ Vivo | 200 |  |
@@ -233,7 +238,6 @@
 | Unga Mammor | Peliculas - Drama y Series | SE | ✅ Vivo | 200 |  |
 | Wildfire | Peliculas - Drama y Series | SE | ✅ Vivo | 200 |  |
 | Pluto TV Juniorklubben (720p) | Peliculas - Familiar | SE | ✅ Vivo | 200 |  |
-| Pluto TV Klassiske tegnefilmer (720p) | Peliculas - Familiar | SE | ✅ Vivo | 200 |  |
 | Pluto TV Tegnefilm (720p) | Peliculas - Familiar | SE | ✅ Vivo | 200 |  |
 | Pluto TV Ungdomsserier (720p) | Peliculas - Familiar | SE | ✅ Vivo | 200 |  |
 | SvampeBob Firkant (720p) | Peliculas - Familiar | SE | ✅ Vivo | 200 |  |
@@ -251,7 +255,6 @@
 | TV Østfold (1080p) | Entretenimiento | NO | ✅ Vivo | 200 |  |
 | Frikanalen (720p) | Entretenimiento | NO | ✅ Vivo | 200 |  |
 | MTV Dating (720p) | Entretenimiento | SE | ✅ Vivo | 200 |  |
-| MTV Ridiculousness (720p) | Entretenimiento | SE | ✅ Vivo | 200 |  |
 | MTV Teen Mom (720p) | Entretenimiento | SE | ✅ Vivo | 200 |  |
 | TV Modum (720p) | Entretenimiento | NO | ✅ Vivo | 200 |  |
 | Are You The One? | Entretenimiento | SE | ✅ Vivo | 200 |  |
@@ -266,11 +269,8 @@
 | Jersey Shore | Entretenimiento | SE | ✅ Vivo | 200 |  |
 | Jersey Shore Family Vacation | Entretenimiento | SE | ✅ Vivo | 200 |  |
 | Luksusfellen | Entretenimiento | SE | ✅ Vivo | 200 |  |
-| MTV Catfish | Entretenimiento | SE | ✅ Vivo | 200 |  |
 | MTV Reality | Entretenimiento | SE | ✅ Vivo | 200 |  |
 | Paradise Hotel | Entretenimiento | SE | ✅ Vivo | 200 |  |
-| Pimp My Ride | Entretenimiento | SE | ✅ Vivo | 200 |  |
-| Ridiculousness Nye episoder | Entretenimiento | SE | ✅ Vivo | 200 |  |
 | Svenske Truckers | Entretenimiento | SE | ✅ Vivo | 200 |  |
 | The Daily Show | Entretenimiento | SE | ✅ Vivo | 200 |  |
 | The Hills | Entretenimiento | SE | ✅ Vivo | 200 |  |
@@ -302,7 +302,6 @@
 | South Park: Stan Collection | Otros | SE | ✅ Vivo | 200 |  |
 | Tosh.0 | Otros | SE | ✅ Vivo | 200 |  |
 | Capital 21 (1080p) [Not 24/7] | Familia y TV Abierta | MX | ⚠️ Inestable | 200 | Handshake correcto pero contenido inestable (C21ti202) |
-| Canal 22 Mexico | Familia y TV Abierta | MX | ⚠️ Inestable | 200 | Handshake correcto pero contenido inestable (text/html) |
 | GikTVMX (720p) | Entretenimiento | MX | ⚠️ Inestable | 200 | Handshake correcto pero contenido inestable (text/plain; charset=utf-8) |
 | PSN (288p) | Entretenimiento | MX | ⚠️ Inestable | 200 | Handshake correcto pero contenido inestable (text/plain; charset=utf-8) |
 | PSN Canal 45.2 (288p) | Otros | MX | ⚠️ Inestable | 200 | Handshake correcto pero contenido inestable (text/plain; charset=utf-8) |

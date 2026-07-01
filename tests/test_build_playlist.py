@@ -422,6 +422,40 @@ def test_sort_statuses_prefiere_nombre_principal_sobre_version_regional():
     assert [status.name for status in ordered] == ["Canal 5 Televisa", "Canal 5 TV Cozumel (1080p)"]
 
 
+def test_sort_statuses_respeta_orden_fijo_de_catalogo():
+    statuses = [
+        make_status("Jalisco TV (720p)", "Familia y TV Abierta", True),
+        make_status("Azteca Uno", "Familia y TV Abierta", True),
+        make_status("Canal 5 Televisa", "Familia y TV Abierta", True),
+        make_status("Las Estrellas", "Familia y TV Abierta", True),
+    ]
+
+    ordered = sort_statuses(statuses, ["group", "name"])
+
+    assert [status.name for status in ordered] == [
+        "Azteca Uno",
+        "Las Estrellas",
+        "Canal 5 Televisa",
+        "Jalisco TV (720p)",
+    ]
+
+
+def test_sort_statuses_inserta_bloque_mundial_despues_de_azteca_7():
+    statuses = [
+        make_status("Azteca 7", "Familia y TV Abierta", True),
+        make_status("TUDN", "Deportes", True),
+        make_status("Claro Sports (720p)", "Deportes", True),
+        make_status("Jalisco TV (720p)", "Familia y TV Abierta", True),
+    ]
+
+    ordered = sort_statuses(statuses, ["group", "name"])
+
+    names = [status.name for status in ordered]
+    assert names[0] == "Azteca 7"
+    assert names.index("TUDN") < names.index("Jalisco TV (720p)")
+    assert names.index("Claro Sports (720p)") < names.index("Jalisco TV (720p)")
+
+
 def test_classify_group_ubica_canales_en_secciones_usuario():
     assert classify_group("Azteca Uno", "General") == "Familia y TV Abierta"
     assert classify_group("Milenio Televisión (720p)", "News") == "Noticias"

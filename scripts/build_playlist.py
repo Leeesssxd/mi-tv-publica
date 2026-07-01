@@ -105,6 +105,202 @@ CANONICAL_DISPLAY_BY_TVG_ID: dict[str, str] = {
     "lasestrellaslatinamerica.mx": "Las Estrellas",
     "tudn.mx": "TUDN",
 }
+REQUESTED_CATALOG_ORDER = [
+    "Conecta",
+    "Básico Plus",
+    "BARKER_CHANNEL_HD",
+    "AZTECA_UNO_HD",
+    "LAS_ESTRELLAS_HD",
+    "IMAGEN_TV_HD",
+    "CANAL_4_GDL_HD",
+    "CANAL_5_LOCAL_HD",
+    "CANAL_6_HD",
+    "AZTECA_7_HD",
+    "MÁS_VISIÓN_HD",
+    "NU9VE_HD",
+    "QUIERO_TV_HD",
+    "ONCE_TV_HD",
+    "CANAL_13_HD",
+    "CANAL_14_HD",
+    "JALISCO_TV_HD",
+    "TV_UNAM_SD",
+    "CANAL_22_SD",
+    "CANAL_22.2_SD",
+    "APRENDE_+_SD",
+    "ADN_40_SD",
+    "A+_SD",
+    "CANAL_44_UDG_HD",
+    "CANAL_DEL_CONGRESO_SD",
+    "JUSTICIA_TV_SD",
+    "MEGANOTICIAS_MX_HD",
+    "MEGANOTICIAS_HD",
+    "AZTECA_UNO_DELAY_SD",
+    "TELEFÓRMULA_HD",
+    "CNNE_HD",
+    "MILENIO_TV_HD",
+    "MVSTV_SD",
+    "EL_FINANCIERO_BLOOMBERG_HD",
+    "MEGANOTICIAS_MX_DELAY_SD",
+    "CNN_HD",
+    "CNNI_HD",
+    "FOX_NEWS_HD",
+    "BBC_NEWS_HD",
+    "DW_LATINOAMÉRICA_SD",
+    "TV5_MONDE_SD",
+    "STAR_CHANNEL_HD",
+    "FX_HD",
+    "UNIVERSAL_TV_HD",
+    "AMC_HD",
+    "TNT_NOVELAS_HD",
+    "AXN_HD",
+    "SONY_HD",
+    "TNT_SERIES_HD",
+    "WARNER_CHANNEL_HD",
+    "ID_HD",
+    "TELEMUNDO_HD",
+    "A&E_HD",
+    "E!_HD",
+    "ATRESERIES_HD",
+    "USA_HD",
+    "COMEDY_CENTRAL_HD",
+    "CORAZÓN_HD",
+    "EL_GOURMET_HD",
+    "MAS_CHIC_SD",
+    "DISCOVERY_H&H_HD",
+    "PASIONES_HD",
+    "LIFETIME_HD",
+    "SPACE_HD",
+    "ANTENA_3",
+    "ADULT_SWIM_HD",
+    "AZTECA_INTERNACIONAL_HD",
+    "HOLA_TV_HD",
+    "TVE_HD",
+    "NICK_JR_HD",
+    "CARTOON_NETWORK_HD",
+    "DISNEY_JR_HD",
+    "CARTOONITO_HD",
+    "NICKELODEON_HD",
+    "DISCOVERY_KIDS_HD",
+    "DISNEY_CHANNEL_HD",
+    "TOONCAST_HD",
+    "BABY_FIRST_HD",
+    "BABY_TV_SD",
+    "ONCE_NIÑOS_SD",
+    "DISCOVERY_CHANNEL_HD",
+    "DISCOVERY_SCIENCE_HD",
+    "TLC",
+    "HGTV_HD",
+    "FOOD_NETWORK_HD",
+    "DISCOVERY_TURBO_HD",
+    "DISCOVERY_THEATER_HD",
+    "HISTORY_2_HD",
+    "HISTORY_CHANNEL_HD",
+    "DISCOVERY_WORLD_HD",
+    "NAT_GEO_HD",
+    "ANIMAL_PLANET_HD",
+    "MARIAVISION_SD",
+    "EWTN_SD",
+    "ESNE_SD",
+    "ENLACE_SD",
+    "FILM_&_ARTS_HD",
+    "FOX",
+    "ESPN_HD",
+    "TVC_DEPORTES_HD",
+    "ESPN_2_HD",
+    "TVC_DEPORTES_2_HD",
+    "ESPN_3_HD",
+    "ESPN_4_HD",
+    "NBA_HD",
+    "NFL_HD",
+    "GOLF_CHANNEL_HD",
+    "MEGA_SPORTS_1_HD",
+    "AYM_SPORTS_HD",
+    "LAS_HD",
+    "AZTECA_DEPORTES_NETWORK_HD",
+    "PX_SPORTS_HD",
+    "CLARO_SPORTS_HD",
+    "WWB_SD",
+    "CINEMA_PLATINO_DELAY_SD",
+    "CINEMA_PLATINO_HD",
+    "PANICO_DELAY_SD",
+    "PANICO_HD",
+    "SONY_MOVIES",
+    "EUROPA_EUROPA_HD",
+    "STUDIO_UNIVERSAL_HD",
+    "CINEMAX_HD",
+    "TNT_HD",
+    "CINEMA_PLATINO_2_DELAY_SD",
+    "CINEMA_PLATINO_2_SD",
+    "CMC_DELAY_SD",
+    "CMC_SD",
+    "EUROCHANNEL_SD",
+    "TCM_HD",
+    "CINE_LATINO_SD",
+    "MULTICINEMA_HD",
+    "MULTIPREMIER_HD",
+    "CINECANAL_HD",
+    "CÍNEMA_HD",
+    "VIDEO_ROLA_HD",
+    "CLIC_HD",
+    "HTV_HD",
+    "BEAT_BOX_SD",
+    "VR_PLUS_HD",
+    "EXA_TV_HD",
+]
+CATALOG_ORDER_ALIASES: dict[str, tuple[str, ...]] = {
+    "conecta": ("conecta tv",),
+    "azteca uno hd": ("azteca uno",),
+    "las estrellas hd": ("las estrellas",),
+    "imagen tv hd": ("imagen tv+", "imagen tv"),
+    "canal 4 gdl hd": ("tv cuatro 4.1", "canal 4 guadalajara"),
+    "canal 5 local hd": ("canal 5 televisa", "canal 5 (1080p)", "canal 5 (720p)"),
+    "canal 6 hd": ("canal 6 cdmx",),
+    "azteca 7 hd": ("azteca 7",),
+    "once tv hd": ("once méxico", "once mexico"),
+    "canal 13 hd": ("canal 13 michoacán", "canal 13 michoacan", "canal 13"),
+    "canal 14 hd": ("canal 14",),
+    "jalisco tv hd": ("jalisco tv",),
+    "tv unam sd": ("tv unam",),
+    "canal 22 sd": ("canal 22 nacional", "canal 22 mexico", "canal 22"),
+    "adn 40 sd": ("adn 40",),
+    "canal 44 udg hd": ("udg tv canal 44", "canal 44"),
+    "canal del congreso sd": ("canal del congreso", "canal parlamento del congreso"),
+    "justicia tv sd": ("justicia tv",),
+    "telefórmula hd": ("teleformula", "telefórmula"),
+    "milenio tv hd": ("milenio",),
+    "mvstv sd": ("mvs tv",),
+    "azteca internacional hd": ("azteca internacional",),
+    "nick jr hd": ("nick jr",),
+    "disney jr hd": ("disney jr",),
+    "disney channel hd": ("disney channel",),
+    "mariavision sd": ("maría visión", "maria visión", "mariavision"),
+    "film & arts hd": ("film&arts", "film & arts"),
+    "tvc deportes hd": ("tv cuatro 4.3",),
+    "tvc deportes 2 hd": ("tv cuatro 4.3",),
+    "aym sports hd": ("aym sports",),
+    "claro sports hd": ("claro sports",),
+    "panico hd": ("panico",),
+    "cinemax hd": ("cinemax",),
+    "tnt hd": ("tnt hd",),
+    "cinecanal hd": ("cinecanal",),
+    "clic hd": ("clic",),
+    "htv hd": ("htv",),
+    "exa tv hd": ("exa tv",),
+}
+WORLD_CUP_CHANNEL_ALIASES = (
+    "tudn",
+    "vix",
+    "dsports",
+    "d sports",
+    "claro sports",
+    "aym sports",
+    "itv deportes",
+    "tyc sports",
+    "deportv",
+    "tvc deportes",
+    "fox sports",
+    "espn",
+)
 
 FAMILY_PATTERNS = (
     "azteca uno",
@@ -882,6 +1078,43 @@ def _canonical_display_name(name: str, tvg_id: str) -> str:
     return name
 
 
+def _normalize_catalog_label(label: str) -> str:
+    normalized = _normalize_name(
+        label.replace("_", " ").replace("&amp;", "&").replace("&", " and ").replace("+", " plus ")
+    )
+    normalized = re.sub(r"\b(hd|sd)\b", " ", normalized)
+    normalized = re.sub(r"\bdelay\b", " ", normalized)
+    normalized = re.sub(r"\blocal\b", " ", normalized)
+    normalized = re.sub(r"\s+", " ", normalized).strip()
+    return normalized
+
+
+def _catalog_aliases(label: str) -> tuple[str, ...]:
+    normalized = _normalize_catalog_label(label)
+    explicit = CATALOG_ORDER_ALIASES.get(normalized)
+    if explicit:
+        return explicit
+    return (normalized,)
+
+
+def _catalog_order_rank(status: ChannelStatus, catalog_order: list[str]) -> tuple[int, int]:
+    normalized_name = _normalize_name(status.name)
+    world_cup_insert_at = next(
+        (index for index, label in enumerate(catalog_order) if _normalize_catalog_label(label) == "azteca 7"),
+        -1,
+    )
+
+    if world_cup_insert_at >= 0 and any(alias in normalized_name for alias in WORLD_CUP_CHANNEL_ALIASES):
+        return (world_cup_insert_at + 1, 0)
+
+    for index, label in enumerate(catalog_order):
+        aliases = _catalog_aliases(label)
+        if any(alias and alias in normalized_name for alias in aliases):
+            return (index, 1)
+
+    return (len(catalog_order) + 1, 1)
+
+
 def _priority_exact_bonus(status: ChannelStatus, priority_channels: list[str]) -> int:
     normalized_name = _normalize_name(status.name)
 
@@ -989,12 +1222,15 @@ def sort_statuses(
     sort_by: list[str],
     group_order: list[str] | None = None,
     priority_channels: list[str] | None = None,
+    catalog_order: list[str] | None = None,
 ) -> list[ChannelStatus]:
     priorities = priority_channels or []
     ordered_groups = group_order or []
+    requested_catalog_order = catalog_order or REQUESTED_CATALOG_ORDER
 
     def sort_key(status: ChannelStatus) -> tuple:
         return (
+            *_catalog_order_rank(status, requested_catalog_order),
             _priority_rank(status, priorities),
             _priority_exact_bonus(status, priorities),
             _state_rank(status),
@@ -1359,6 +1595,7 @@ async def run(sources_path: Path, public_dir: Path, config_path: Path) -> list[C
             list(config["sort_by"]),
             group_order=list(config.get("group_order", [])),
             priority_channels=priority_channels,
+            catalog_order=list(config.get("catalog_channel_order", REQUESTED_CATALOG_ORDER)),
         )
         statuses = select_curated_statuses(
             statuses,
