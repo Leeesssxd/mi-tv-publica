@@ -19,6 +19,8 @@ from build_playlist import (  # noqa: E402
     ChannelStatus,
     VodStatus,
     build_m3u,
+    build_catalog_summary,
+    build_catalog_summary_markdown,
     build_priority_summary,
     build_priority_summary_markdown,
     build_vod_browser_links,
@@ -587,6 +589,45 @@ def test_build_priority_summary_markdown_contiene_faltantes():
     assert "Azteca Uno" in md
     assert "## Faltantes" in md
     assert "- ViX" in md
+
+
+def test_build_catalog_summary_reporta_encontrados_y_faltantes():
+    statuses = [
+        make_status("Conecta TV (720p)", "Entretenimiento", True),
+        make_status("Canal 5 Televisa", "Familia y TV Abierta", True),
+    ]
+
+    summary = build_catalog_summary(statuses, ["Conecta", "CANAL_5_LOCAL_HD", "ESPN_HD"])
+
+    assert summary["found_total"] == 2
+    assert summary["missing_total"] == 1
+    assert summary["missing"] == ["ESPN_HD"]
+
+
+def test_build_catalog_summary_markdown_contiene_faltantes():
+    summary = {
+        "generated_at": "2026-07-01T00:00:00Z",
+        "requested_total": 2,
+        "found_total": 1,
+        "missing_total": 1,
+        "found": [
+            {
+                "requested": "Conecta",
+                "matched_name": "Conecta TV (720p)",
+                "group": "Entretenimiento",
+                "country": "MX",
+                "state": "alive",
+                "url": "https://example.com/a.m3u8",
+            }
+        ],
+        "missing": ["ESPN_HD"],
+    }
+
+    md = build_catalog_summary_markdown(summary)
+
+    assert "Conecta TV (720p)" in md
+    assert "## Faltantes" in md
+    assert "- ESPN_HD" in md
 
 
 def test_build_m3u_es_valido_y_tiene_extinf_y_url():

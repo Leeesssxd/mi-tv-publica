@@ -1444,6 +1444,73 @@ def build_priority_summary(statuses: list[ChannelStatus], priority_channels: lis
     }
 
 
+def build_catalog_summary(statuses: list[ChannelStatus], catalog_order: list[str]) -> dict[str, Any]:
+    found: list[dict[str, Any]] = []
+    missing: list[str] = []
+    used_urls: set[str] = set()
+
+    for label in catalog_order:
+        aliases = _catalog_aliases(label)
+        match = next(
+            (
+                status
+                for status in statuses
+                if status.url not in used_urls
+                and any(alias and alias in _normalize_name(status.name) for alias in aliases)
+            ),
+            None,
+        )
+        if match is None:
+            missing.append(label)
+            continue
+        used_urls.add(match.url)
+        found.append(
+            {
+                "requested": label,
+                "matched_name": match.name,
+                "group": match.group,
+                "country": match.country,
+                "state": match.state,
+                "url": match.url,
+            }
+        )
+
+    return {
+        "generated_at": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
+        "requested_total": len(catalog_order),
+        "found_total": len(found),
+        "missing_total": len(missing),
+        "found": found,
+        "missing": missing,
+    }
+
+
+def build_catalog_summary_markdown(summary: dict[str, Any]) -> str:
+    lines = [
+        "# Estado del Dial",
+        "",
+        f"Última revisión UTC: `{summary['generated_at']}`",
+        "",
+        f"- Posiciones pedidas: **{summary['requested_total']}**",
+        f"- Posiciones cubiertas: **{summary['found_total']}**",
+        f"- Posiciones faltantes: **{summary['missing_total']}**",
+        "",
+        "| Pedido | Coincidencia | Grupo | País | Estado |",
+        "|---|---|---|---|---|",
+    ]
+
+    for item in summary["found"]:
+        lines.append(
+            f"| {item['requested']} | {item['matched_name']} | {item['group']} | {item['country']} | {item['state']} |"
+        )
+
+    if summary["missing"]:
+        lines.extend(["", "## Faltantes", ""])
+        lines.extend(f"- {item}" for item in summary["missing"])
+
+    return "\n".join(lines) + "\n"
+
+
 def build_priority_summary_markdown(priority_summary: dict[str, Any]) -> str:
     lines = [
         "# Prioridades de canales",
@@ -1514,6 +1581,7 @@ def write_outputs(
     statuses: list[ChannelStatus],
     public_dir: Path = PUBLIC_DIR,
     priority_channels: list[str] | None = None,
+    catalog_order: list[str] | None = None,
 ) -> bool:
     public_dir.mkdir(parents=True, exist_ok=True)
     playlist_path = public_dir / "playlist.m3u"
@@ -1539,6 +1607,15 @@ def write_outputs(
     )
     (public_dir / "priority_status.md").write_text(
         build_priority_summary_markdown(priority_summary),
+        encoding="utf-8",
+    )
+    catalog_summary = build_catalog_summary(statuses, catalog_order or REQUESTED_CATALOG_ORDER)
+    (public_dir / "dial_status.json").write_text(
+        json.dumps(catalog_summary, indent=2, ensure_ascii=False) + "\n",
+        encoding="utf-8",
+    )
+    (public_dir / "dial_status.md").write_text(
+        build_catalog_summary_markdown(catalog_summary),
         encoding="utf-8",
     )
     return fallback_used
@@ -1580,6 +1657,7 @@ def print_summary(statuses: list[ChannelStatus]) -> None:
 async def run(sources_path: Path, public_dir: Path, config_path: Path) -> list[ChannelStatus]:
     config = load_config(config_path)
     priority_channels = list(config.get("priority_channels", []))
+    catalog_order = list(config.get("catalog_channel_order", REQUESTED_CATALOG_ORDER))
     channels = load_channels(sources_path)
     cloud_catalog_items = load_cloud_catalog_items(sources_path)
     vod_statuses = await check_all_vod_items(cloud_catalog_items, config)
@@ -1595,7 +1673,7 @@ async def run(sources_path: Path, public_dir: Path, config_path: Path) -> list[C
             list(config["sort_by"]),
             group_order=list(config.get("group_order", [])),
             priority_channels=priority_channels,
-            catalog_order=list(config.get("catalog_channel_order", REQUESTED_CATALOG_ORDER)),
+            catalog_order=catalog_order,
         )
         statuses = select_curated_statuses(
             statuses,
@@ -1604,7 +1682,12 @@ async def run(sources_path: Path, public_dir: Path, config_path: Path) -> list[C
             priority_channels=priority_channels,
         )
 
-    fallback_used = write_outputs(statuses, public_dir, priority_channels=priority_channels)
+    fallback_used = write_outputs(
+        statuses,
+        public_dir,
+        priority_channels=priority_channels,
+        catalog_order=catalog_order,
+    )
     write_vod_output(cloud_catalog_items, vod_statuses, public_dir)
     if fallback_used:
         print("[WARN] Se conservo la ultima playlist valida por una caida masiva del upstream.")

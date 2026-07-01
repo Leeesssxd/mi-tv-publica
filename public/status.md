@@ -1,6 +1,6 @@
 # Estado de canales
 
-Última revisión UTC: `2026-07-01T00:29:28Z`
+Última revisión UTC: `2026-07-01T00:35:03Z`
 
 - Canales totales: **297**
 - Canales vivos: **291**
@@ -54,7 +54,6 @@
 | Disney Channel Latin America North (576p) | Peliculas - Familiar | MX | ✅ Vivo | 200 |  |
 | Dallas Cowboys Cheerleaders | Peliculas - Drama y Series | SE | ✅ Vivo | 200 |  |
 | Pluto TV Klassiske tegnefilmer (720p) | Peliculas - Familiar | SE | ✅ Vivo | 200 |  |
-| Panico (576p) | Peliculas - Terror | MX | ✅ Vivo | 200 |  |
 | TV Pública | Familia y TV Abierta | AR | ✅ Vivo | 200 |  |
 | Milenio Television (720p) | Noticias | MX | ✅ Vivo | 200 |  |
 | Milenio Televisión (720p) | Noticias | MX | ✅ Vivo | 200 |  |
@@ -154,6 +153,7 @@
 | Runtime Crimen | Peliculas - Crimen | MX | ✅ Vivo | 200 |  |
 | Runtime Terror | Peliculas - Terror | MX | ✅ Vivo | 200 |  |
 | Estrella Games (1080p) | Peliculas - Familiar | MX | ✅ Vivo | 200 |  |
+| El Chavo TV (720p) | Peliculas - Familiar | MX | ✅ Vivo | 200 |  |
 | TV Cuatro 4.3 (1080p) | Deportes | MX | ✅ Vivo | 200 |  |
 | WPT | Deportes | MX | ✅ Vivo | 200 |  |
 | Estrella News (1080p) | Noticias | MX | ✅ Vivo | 200 |  |
@@ -238,7 +238,6 @@
 | Unga Mammor | Peliculas - Drama y Series | SE | ✅ Vivo | 200 |  |
 | Wildfire | Peliculas - Drama y Series | SE | ✅ Vivo | 200 |  |
 | Pluto TV Juniorklubben (720p) | Peliculas - Familiar | SE | ✅ Vivo | 200 |  |
-| Pluto TV Tegnefilm (720p) | Peliculas - Familiar | SE | ✅ Vivo | 200 |  |
 | Pluto TV Ungdomsserier (720p) | Peliculas - Familiar | SE | ✅ Vivo | 200 |  |
 | SvampeBob Firkant (720p) | Peliculas - Familiar | SE | ✅ Vivo | 200 |  |
 | Totally Turtles (720p) | Peliculas - Familiar | SE | ✅ Vivo | 200 |  |
@@ -269,6 +268,7 @@
 | Jersey Shore | Entretenimiento | SE | ✅ Vivo | 200 |  |
 | Jersey Shore Family Vacation | Entretenimiento | SE | ✅ Vivo | 200 |  |
 | Luksusfellen | Entretenimiento | SE | ✅ Vivo | 200 |  |
+| MTV Catfish | Entretenimiento | SE | ✅ Vivo | 200 |  |
 | MTV Reality | Entretenimiento | SE | ✅ Vivo | 200 |  |
 | Paradise Hotel | Entretenimiento | SE | ✅ Vivo | 200 |  |
 | Svenske Truckers | Entretenimiento | SE | ✅ Vivo | 200 |  |
