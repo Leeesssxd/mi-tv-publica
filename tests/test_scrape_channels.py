@@ -277,7 +277,7 @@ def test_discover_github_recursive_mirrors_respeta_profundidad_y_unifica_resulta
         ),
     }
 
-    async def fake_fetch_remote_text(session, source_url, config):
+    async def fake_fetch_remote_text(session, source_url, config, **kwargs):
         return payloads.get(source_url, "")
 
     monkeypatch.setattr(scrape_channels, "fetch_remote_text", fake_fetch_remote_text)
@@ -303,6 +303,84 @@ def test_discover_github_recursive_mirrors_respeta_profundidad_y_unifica_resulta
 
     assert payload["306"][0]["url"] == "https://streams.example/espn3.m3u8"
     assert payload["162"][0]["url"] == "https://streams.example/cnni.m3u8"
+
+
+def test_build_source_semaphore_limita_concurrencia_a_dos():
+    import scrape_channels
+
+    semaphore = scrape_channels.build_source_semaphore({"source_fetch_concurrency": 10})
+
+    assert semaphore._value == 2
+
+
+def test_discover_large_m3u_source_corta_tras_15000_lineas_sin_match(monkeypatch, capsys):
+    import scrape_channels
+
+    class FakeContent:
+        def __init__(self, total_lines):
+            self.total_lines = total_lines
+            self.read_lines = 0
+
+        async def readline(self):
+            if self.read_lines >= self.total_lines:
+                return b""
+            self.read_lines += 1
+            return f"# comentario {self.read_lines}\n".encode()
+
+    class FakeResponse:
+        def __init__(self, content):
+            self.status = 200
+            self.content = content
+
+        async def __aenter__(self):
+            return self
+
+        async def __aexit__(self, exc_type, exc, tb):
+            return False
+
+        def raise_for_status(self):
+            return None
+
+    class FakeSession:
+        def __init__(self, *args, **kwargs):
+            self.content = FakeContent(20000)
+
+        async def __aenter__(self):
+            return self
+
+        async def __aexit__(self, exc_type, exc, tb):
+            return False
+
+        def get(self, *args, **kwargs):
+            return FakeResponse(self.content)
+
+    monkeypatch.setattr(scrape_channels.aiohttp, "ClientSession", FakeSession)
+
+    channels, detected = asyncio.run(
+        scrape_channels.discover_large_m3u_source(
+            "https://provider.example/heavy.m3u",
+            {
+                "timeout_seconds": 300,
+                "connect_timeout_seconds": 15,
+                "sock_read_timeout_seconds": 30,
+                "retry_attempts": 1,
+                "retry_backoff_base_seconds": 0,
+                "jitter_min_seconds": 0,
+                "jitter_max_seconds": 0,
+                "user_agent": "pytest",
+                "accept_language": "es",
+                "private_source_scan_line_limit": 15000,
+                "source_fetch_concurrency": 2,
+            },
+            default_group="Privados",
+            default_country="ALL",
+        )
+    )
+
+    assert channels == []
+    assert detected == 0
+    captured = capsys.readouterr()
+    assert "Corte temprano" in captured.out
 
 
 def test_normalize_and_match_advanced_resuelve_clusters_pedidos():
@@ -1031,6 +1109,7 @@ def test_run_omite_fuente_secundaria_caida_y_sigue_con_las_demas(tmp_path, monke
         max_channels=None,
         preferred_primary_patterns=None,
         curate_private=False,
+        semaphore=None,
     ):
         calls.append(source_url)
         if "bad.example" in source_url:
@@ -1108,6 +1187,7 @@ def test_run_omite_fuente_local_caida_y_sigue_con_pipeline(tmp_path, monkeypatch
         max_channels=None,
         preferred_primary_patterns=None,
         curate_private=False,
+        semaphore=None,
     ):
         calls.append(source_url)
         if source_url == "http://127.0.0":
@@ -1181,6 +1261,7 @@ def test_run_reporta_403_local_como_rechazo_de_origen(tmp_path, monkeypatch, cap
         max_channels=None,
         preferred_primary_patterns=None,
         curate_private=False,
+        semaphore=None,
     ):
         if source_url == "https://primary.example/list.m3u":
             return ([], 1)
@@ -1249,6 +1330,7 @@ def test_run_deduplica_fuentes_repetidas_entre_config_y_archivo_local(tmp_path, 
         max_channels=None,
         preferred_primary_patterns=None,
         curate_private=False,
+        semaphore=None,
     ):
         calls.append(source_url)
         return ([], 1)
@@ -1304,6 +1386,7 @@ def test_run_inyecta_discovered_mirrors_antes_de_deduplicar(tmp_path, monkeypatc
         max_channels=None,
         preferred_primary_patterns=None,
         curate_private=False,
+        semaphore=None,
     ):
         return ([], 0)
 
@@ -1362,6 +1445,7 @@ def test_run_genera_telemetria_y_cuarentena_tras_tres_403(tmp_path, monkeypatch)
         max_channels=None,
         preferred_primary_patterns=None,
         curate_private=False,
+        semaphore=None,
     ):
         if source_url == "https://primary.example/list.m3u":
             return ([], 1)

@@ -117,8 +117,11 @@ DEFAULT_LOCAL_PRIVATE_SOURCES: list[dict[str, str]] = [
 ]
 
 DEFAULT_CONFIG: dict[str, Any] = {
-    "timeout_seconds": 20,
-    "max_concurrency": 6,
+    "timeout_seconds": 300,
+    "connect_timeout_seconds": 15,
+    "sock_read_timeout_seconds": 30,
+    "max_concurrency": 2,
+    "source_fetch_concurrency": 2,
     "user_agent": "MiTVPublicaBot/1.0 (+https://github.com)",
     "accept_language": "es-MX,es;q=0.9,en;q=0.6",
     "retry_attempts": 3,
@@ -129,6 +132,7 @@ DEFAULT_CONFIG: dict[str, Any] = {
     "chunk_size_bytes": 65536,
     "max_secret_sources": 8,
     "max_private_channels_per_source": 1200,
+    "private_source_scan_line_limit": 15000,
     "geo_filter_enabled": True,
     "global_source_aggregate_limit": 150000,
     "github_crawler_enabled": True,
@@ -1341,24 +1345,41 @@ def write_telemetry_report(records: list[dict[str, Any]], output_path: Path | No
     output_path.write_text(json.dumps(payload, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
 
 
+def build_network_timeout(config: dict[str, Any]) -> aiohttp.ClientTimeout:
+    return aiohttp.ClientTimeout(
+        total=float(config.get("timeout_seconds", DEFAULT_CONFIG["timeout_seconds"])),
+        connect=float(config.get("connect_timeout_seconds", DEFAULT_CONFIG["connect_timeout_seconds"])),
+        sock_read=float(config.get("sock_read_timeout_seconds", DEFAULT_CONFIG["sock_read_timeout_seconds"])),
+    )
+
+
+def build_source_semaphore(config: dict[str, Any]) -> asyncio.Semaphore:
+    configured = int(config.get("source_fetch_concurrency", config.get("max_concurrency", 2)))
+    return asyncio.Semaphore(max(1, min(configured, 2)))
+
+
 async def fetch_remote_text(
     session: aiohttp.ClientSession,
     source_url: str,
     config: dict[str, Any],
+    *,
+    semaphore: asyncio.Semaphore | None = None,
 ) -> str:
     attempts = int(config.get("retry_attempts", 3))
     backoff_base = float(config.get("retry_backoff_base_seconds", 1.0))
+    active_semaphore = semaphore or build_source_semaphore(config)
 
     for attempt in range(1, attempts + 1):
         await sleep_with_jitter(config)
         try:
-            async with session.get(source_url, allow_redirects=True, ssl=False) as response:
-                if response.status in RETRIABLE_STATUS_CODES and attempt < attempts:
-                    await asyncio.sleep(backoff_base * (2 ** (attempt - 1)))
-                    continue
-                if response.status >= 400:
-                    return ""
-                return await response.text(errors="ignore")
+            async with active_semaphore:
+                async with session.get(source_url, allow_redirects=True, ssl=False) as response:
+                    if response.status in RETRIABLE_STATUS_CODES and attempt < attempts:
+                        await asyncio.sleep(backoff_base * (2 ** (attempt - 1)))
+                        continue
+                    if response.status >= 400:
+                        return ""
+                    return await response.text(errors="ignore")
         except aiohttp.ClientError:
             if attempt < attempts:
                 await asyncio.sleep(backoff_base * (2 ** (attempt - 1)))
@@ -1390,14 +1411,16 @@ async def discover_github_recursive_mirrors(
     config: dict[str, Any],
     *,
     session: aiohttp.ClientSession | None = None,
+    semaphore: asyncio.Semaphore | None = None,
 ) -> dict[str, list[dict[str, Any]]]:
     if not bool(config.get("github_crawler_enabled", True)):
         return {}
 
-    timeout = aiohttp.ClientTimeout(total=float(config["timeout_seconds"]))
+    timeout = build_network_timeout(config)
     headers = build_headers(config)
     owns_session = session is None
     active_session = session or aiohttp.ClientSession(timeout=timeout, headers=headers)
+    active_semaphore = semaphore or build_source_semaphore(config)
 
     max_depth = int(config.get("github_crawler_max_depth", 3))
     max_follow_urls = int(config.get("github_crawler_max_follow_urls", 120))
@@ -1415,7 +1438,12 @@ async def discover_github_recursive_mirrors(
                 continue
             visited.add(normalized_current)
 
-            response_text = await fetch_remote_text(active_session, normalized_current, config)
+            response_text = await fetch_remote_text(
+                active_session,
+                normalized_current,
+                config,
+                semaphore=active_semaphore,
+            )
             if not response_text:
                 continue
 
@@ -1633,6 +1661,7 @@ class M3UCollector:
     pending_match: str = ""
     pending_keep: bool = False
     pending_is_mx: bool = False
+    matched_channels: int = 0
 
     def process_line(self, raw_line: str) -> bool:
         line = raw_line.strip()
@@ -1684,6 +1713,7 @@ class M3UCollector:
                 channel["country"] = "MX" if self.pending_is_mx else self.default_country
             if self.pending_match:
                 channel["tvg_id"] = self.pending_match
+                self.matched_channels += 1
             channel["name"] = ensure_unique_name(str(channel.get("name", "")).strip(), self.used_names)
             self.channels.append(channel)
             if self.max_channels is not None and len(self.channels) >= self.max_channels:
@@ -2251,6 +2281,7 @@ async def discover_single_source(
     max_channels: int | None = None,
     preferred_primary_patterns: list[str] | None = None,
     curate_private: bool = False,
+    semaphore: asyncio.Semaphore | None = None,
 ) -> tuple[list[dict[str, Any]], int]:
     if curate_private:
         discovered_channels, detected_count = await discover_large_m3u_source(
@@ -2259,6 +2290,7 @@ async def discover_single_source(
             default_group=default_group,
             default_country=default_country,
             max_channels=max_channels or int(DEFAULT_CONFIG["max_private_channels_per_source"]),
+            semaphore=semaphore,
         )
         normalized_channels = filter_discovered_channels(
             discovered_channels,
@@ -2273,14 +2305,14 @@ async def discover_single_source(
         )
         return normalized_channels, len(normalized_channels)
 
-    cached_file = await fetch_source_to_cache(source_url, config)
+    cached_file = await fetch_source_to_cache(source_url, config, semaphore=semaphore)
 
     if file_looks_like_m3u(cached_file):
         discovered_channels: list[dict[str, Any]] | list[str] = parse_m3u_file(cached_file)
         detected_count = len(discovered_channels)
     elif file_looks_like_json(cached_file):
         if metadata_url:
-            metadata_file = await fetch_source_to_cache(metadata_url, config)
+            metadata_file = await fetch_source_to_cache(metadata_url, config, semaphore=semaphore)
             discovered_channels = parse_iptv_org_streams(
                 cached_file,
                 metadata_file,
@@ -2288,7 +2320,11 @@ async def discover_single_source(
                 category_filter=category_filter,
             )
         elif "iptv-org.github.io/api/streams.json" in source_url:
-            metadata_file = await fetch_source_to_cache(DEFAULT_IPTVORG_CHANNELS_URL, config)
+            metadata_file = await fetch_source_to_cache(
+                DEFAULT_IPTVORG_CHANNELS_URL,
+                config,
+                semaphore=semaphore,
+            )
             discovered_channels = parse_iptv_org_streams(
                 cached_file,
                 metadata_file,
@@ -2429,7 +2465,12 @@ def save_cached_text(source_url: str, text: str, cache_dir: Path = CACHE_DIR) ->
     cache_path.write_text(text, encoding="utf-8")
 
 
-async def fetch_source_to_cache(source_url: str, config: dict[str, Any]) -> Path:
+async def fetch_source_to_cache(
+    source_url: str,
+    config: dict[str, Any],
+    *,
+    semaphore: asyncio.Semaphore | None = None,
+) -> Path:
     cached = load_cached_path(
         source_url,
         int(config.get("cache_ttl_seconds", 21600)),
@@ -2437,49 +2478,51 @@ async def fetch_source_to_cache(source_url: str, config: dict[str, Any]) -> Path
     if cached is not None:
         return cached
 
-    timeout = aiohttp.ClientTimeout(total=float(config["timeout_seconds"]))
+    timeout = build_network_timeout(config)
     headers = build_headers(config)
     attempts = int(config.get("retry_attempts", 3))
     backoff_base = float(config.get("retry_backoff_base_seconds", 1.0))
+    active_semaphore = semaphore or build_source_semaphore(config)
 
     async with aiohttp.ClientSession(timeout=timeout, headers=headers) as session:
         for attempt in range(1, attempts + 1):
             await sleep_with_jitter(config)
             try:
-                async with session.get(source_url, allow_redirects=True, ssl=False) as response:
-                    if response.status == 401:
-                        raise aiohttp.ClientResponseError(
-                            response.request_info,
-                            response.history,
-                            status=response.status,
-                            message="No autorizado por el origen (401)",
-                            headers=response.headers,
-                        )
-                    if response.status == 403:
-                        raise aiohttp.ClientResponseError(
-                            response.request_info,
-                            response.history,
-                            status=response.status,
-                            message=(
-                                "Acceso prohibido por el origen (403). "
-                                "La URL fue alcanzada, pero el proveedor rechazo la solicitud."
-                            ),
-                            headers=response.headers,
-                        )
-                    if response.status in RETRIABLE_STATUS_CODES and attempt < attempts:
-                        await asyncio.sleep(backoff_base * (2 ** (attempt - 1)))
-                        continue
-                    response.raise_for_status()
-                    response_text = await response.text(errors="ignore")
-                    payload_kind = detect_payload_kind(response_text)
-                    cache_path = cache_path_for_url(source_url)
-                    cache_path.parent.mkdir(parents=True, exist_ok=True)
-                    if payload_kind == "m3u":
-                        cache_path = cache_path.with_suffix(".m3u")
-                    elif payload_kind == "json":
-                        cache_path = cache_path.with_suffix(".json")
-                    cache_path.write_text(response_text, encoding="utf-8")
-                    return cache_path
+                async with active_semaphore:
+                    async with session.get(source_url, allow_redirects=True, ssl=False) as response:
+                        if response.status == 401:
+                            raise aiohttp.ClientResponseError(
+                                response.request_info,
+                                response.history,
+                                status=response.status,
+                                message="No autorizado por el origen (401)",
+                                headers=response.headers,
+                            )
+                        if response.status == 403:
+                            raise aiohttp.ClientResponseError(
+                                response.request_info,
+                                response.history,
+                                status=response.status,
+                                message=(
+                                    "Acceso prohibido por el origen (403). "
+                                    "La URL fue alcanzada, pero el proveedor rechazo la solicitud."
+                                ),
+                                headers=response.headers,
+                            )
+                        if response.status in RETRIABLE_STATUS_CODES and attempt < attempts:
+                            await asyncio.sleep(backoff_base * (2 ** (attempt - 1)))
+                            continue
+                        response.raise_for_status()
+                        response_text = await response.text(errors="ignore")
+                        payload_kind = detect_payload_kind(response_text)
+                        cache_path = cache_path_for_url(source_url)
+                        cache_path.parent.mkdir(parents=True, exist_ok=True)
+                        if payload_kind == "m3u":
+                            cache_path = cache_path.with_suffix(".m3u")
+                        elif payload_kind == "json":
+                            cache_path = cache_path.with_suffix(".json")
+                        cache_path.write_text(response_text, encoding="utf-8")
+                        return cache_path
             except asyncio.TimeoutError:
                 stale_cached = load_any_cached_path(source_url)
                 if stale_cached is not None:
@@ -2541,36 +2584,48 @@ async def discover_large_m3u_source(
     default_group: str,
     default_country: str,
     max_channels: int | None = None,
+    semaphore: asyncio.Semaphore | None = None,
 ) -> tuple[list[dict[str, Any]], int]:
-    timeout = aiohttp.ClientTimeout(total=float(config["timeout_seconds"]))
+    timeout = build_network_timeout(config)
     headers = build_headers(config)
     attempts = int(config.get("retry_attempts", 3))
     backoff_base = float(config.get("retry_backoff_base_seconds", 1.0))
+    active_semaphore = semaphore or build_source_semaphore(config)
+    line_limit = int(config.get("private_source_scan_line_limit", 15000))
 
     async with aiohttp.ClientSession(timeout=timeout, headers=headers) as session:
         for attempt in range(1, attempts + 1):
             await sleep_with_jitter(config)
             try:
-                async with session.get(source_url, allow_redirects=True, ssl=False) as response:
-                    if response.status in RETRIABLE_STATUS_CODES and attempt < attempts:
-                        await asyncio.sleep(backoff_base * (2 ** (attempt - 1)))
-                        continue
-                    response.raise_for_status()
+                async with active_semaphore:
+                    async with session.get(source_url, allow_redirects=True, ssl=False) as response:
+                        if response.status in RETRIABLE_STATUS_CODES and attempt < attempts:
+                            await asyncio.sleep(backoff_base * (2 ** (attempt - 1)))
+                            continue
+                        response.raise_for_status()
 
-                    collector = M3UCollector(
-                        default_group=default_group,
-                        default_country=default_country,
-                        early_filter=True,
-                        max_channels=max_channels,
-                    )
-                    while True:
-                        raw_line = await response.content.readline()
-                        if not raw_line:
-                            break
-                        if collector.process_line(raw_line.decode("utf-8", errors="ignore")):
-                            break
+                        collector = M3UCollector(
+                            default_group=default_group,
+                            default_country=default_country,
+                            early_filter=True,
+                            max_channels=max_channels,
+                        )
+                        lines_processed = 0
+                        while True:
+                            raw_line = await response.content.readline()
+                            if not raw_line:
+                                break
+                            lines_processed += 1
+                            if collector.process_line(raw_line.decode("utf-8", errors="ignore")):
+                                break
+                            if line_limit > 0 and lines_processed >= line_limit and collector.matched_channels == 0:
+                                print(
+                                    f"[WARN] Corte temprano en {source_url}: "
+                                    f"{lines_processed} lineas sin coincidencias de la grilla."
+                                )
+                                break
 
-                    return collector.channels, len(collector.channels)
+                        return collector.channels, len(collector.channels)
             except asyncio.TimeoutError:
                 if attempt < attempts:
                     await asyncio.sleep(backoff_base * (2 ** (attempt - 1)))
@@ -2619,7 +2674,11 @@ async def run(
     ensure_env_example_file()
     env_values = load_env_file()
     quarantine_state = load_quarantine_state()
-    discovered_mirrors_payload = await discover_github_recursive_mirrors(config)
+    source_semaphore = build_source_semaphore(config)
+    discovered_mirrors_payload = await discover_github_recursive_mirrors(
+        config,
+        semaphore=source_semaphore,
+    )
     if discovered_mirrors_payload:
         save_discovered_mirrors_payload(discovered_mirrors_payload)
     discovered_mirror_pool = load_discovered_mirrors_pool()
@@ -2634,6 +2693,7 @@ async def run(
         default_group=default_group,
         default_country=default_country,
         metadata_url=metadata_url,
+        semaphore=source_semaphore,
     )
     aggregated_discovered.extend(primary_discovered)
 
@@ -2656,6 +2716,7 @@ async def run(
                 default_country=str(source_spec.get("country") or default_country).strip(),
                 metadata_url=source_spec.get("metadata_url"),
                 category_filter=source_spec.get("categories") if isinstance(source_spec.get("categories"), list) else None,
+                semaphore=source_semaphore,
             )
             aggregated_discovered.extend(batch_discovered)
             total_detected += batch_detected
@@ -2667,6 +2728,7 @@ async def run(
         *load_secret_upstream_pools(os.getenv(SECRET_UPSTREAM_POOLS_ENV))[: int(config.get("max_secret_sources", 1))],
         *ensure_local_private_sources_file(LOCAL_PRIVATE_SOURCES_FILE),
     ]
+    private_source_jobs: list[tuple[dict[str, Any], str, str, dict[str, Any]]] = []
     for source_spec in private_source_specs:
         fingerprint = build_source_fingerprint(source_spec, resolve_source_url(source_spec, env_values))
         quarantine_entry = quarantine_state.get(fingerprint) or {}
@@ -2699,31 +2761,7 @@ async def run(
                 telemetry_records.append(telemetry_record)
                 continue
             attempted_sources.add(normalized_batch_url)
-            batch_discovered, batch_detected = await discover_single_source(
-                batch_url,
-                config,
-                default_group=str(source_spec.get("group") or default_group).strip() or default_group,
-                default_country=str(source_spec.get("country") or default_country).strip(),
-                metadata_url=source_spec.get("metadata_url"),
-                category_filter=source_spec.get("categories") if isinstance(source_spec.get("categories"), list) else None,
-                max_channels=int(config.get("max_private_channels_per_source", 500)),
-                preferred_primary_patterns=list(config.get("priority_channels", [])),
-                curate_private=True,
-            )
-            aggregated_discovered.extend(batch_discovered)
-            total_detected += batch_detected
-            updated_entry = update_quarantine_entry(
-                quarantine_state,
-                fingerprint,
-                source_spec,
-                batch_url,
-                status="success",
-                http_status=200,
-            )
-            telemetry_record["status"] = "success"
-            telemetry_record["http_status"] = 200
-            telemetry_record["consecutive_failures"] = int(updated_entry.get("consecutive_failures") or 0)
-            telemetry_record["quarantined"] = bool(updated_entry.get("quarantined"))
+            private_source_jobs.append((source_spec, fingerprint, batch_url, telemetry_record))
         except Exception as exc:  # noqa: BLE001
             http_status = extract_http_status(exc)
             updated_entry = update_quarantine_entry(
@@ -2741,7 +2779,71 @@ async def run(
             print(describe_source_error("Fuente local", telemetry_record["source_env"] or batch_url, exc))
             if telemetry_record["quarantined"]:
                 print(f"[INFO] Fuente local movida a cuarentena: {telemetry_record['source_env'] or telemetry_record['source_url_hint']}")
-        telemetry_records.append(telemetry_record)
+            telemetry_records.append(telemetry_record)
+
+    async def process_private_source(
+        source_spec: dict[str, Any],
+        fingerprint: str,
+        batch_url: str,
+        telemetry_record: dict[str, Any],
+    ) -> tuple[list[dict[str, Any]], int, dict[str, Any]]:
+        local_telemetry = dict(telemetry_record)
+        batch_discovered, batch_detected = await discover_single_source(
+            batch_url,
+            config,
+            default_group=str(source_spec.get("group") or default_group).strip() or default_group,
+            default_country=str(source_spec.get("country") or default_country).strip(),
+            metadata_url=source_spec.get("metadata_url"),
+            category_filter=source_spec.get("categories") if isinstance(source_spec.get("categories"), list) else None,
+            max_channels=int(config.get("max_private_channels_per_source", 500)),
+            preferred_primary_patterns=list(config.get("priority_channels", [])),
+            curate_private=True,
+            semaphore=source_semaphore,
+        )
+        updated_entry = update_quarantine_entry(
+            quarantine_state,
+            fingerprint,
+            source_spec,
+            batch_url,
+            status="success",
+            http_status=200,
+        )
+        local_telemetry["status"] = "success"
+        local_telemetry["http_status"] = 200
+        local_telemetry["consecutive_failures"] = int(updated_entry.get("consecutive_failures") or 0)
+        local_telemetry["quarantined"] = bool(updated_entry.get("quarantined"))
+        return batch_discovered, batch_detected, local_telemetry
+
+    private_results = await asyncio.gather(
+        *(process_private_source(*job) for job in private_source_jobs),
+        return_exceptions=True,
+    )
+    for job, result in zip(private_source_jobs, private_results):
+        source_spec, fingerprint, batch_url, telemetry_record = job
+        if isinstance(result, Exception):
+            http_status = extract_http_status(result)
+            updated_entry = update_quarantine_entry(
+                quarantine_state,
+                fingerprint,
+                source_spec,
+                batch_url,
+                status="error",
+                http_status=http_status,
+            )
+            telemetry_record["status"] = "error"
+            telemetry_record["http_status"] = http_status
+            telemetry_record["consecutive_failures"] = int(updated_entry.get("consecutive_failures") or 0)
+            telemetry_record["quarantined"] = bool(updated_entry.get("quarantined"))
+            print(describe_source_error("Fuente local", telemetry_record["source_env"] or batch_url, result))
+            if telemetry_record["quarantined"]:
+                print(f"[INFO] Fuente local movida a cuarentena: {telemetry_record['source_env'] or telemetry_record['source_url_hint']}")
+            telemetry_records.append(telemetry_record)
+            continue
+
+        batch_discovered, batch_detected, updated_telemetry = result
+        aggregated_discovered.extend(batch_discovered)
+        total_detected += batch_detected
+        telemetry_records.append(updated_telemetry)
 
     aggregated_discovered.extend(discovered_mirror_pool)
 
