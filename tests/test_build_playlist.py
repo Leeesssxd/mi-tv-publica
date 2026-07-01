@@ -84,6 +84,18 @@ def test_channel_from_dict_acepta_backup_url_y_lista_de_urls():
     assert channel.backup_urls == ["https://a.com/mirror.m3u8", "https://a.com/failover.m3u8"]
 
 
+def test_channel_from_dict_normaliza_nombre_canonico_de_tv_abierta():
+    channel = Channel.from_dict(
+        {
+            "name": "Canal 5 (1080p)",
+            "url": "https://a.com/main.m3u8",
+            "tvg_id": "Canal5.mx@SD",
+        }
+    )
+
+    assert channel.name == "Canal 5 Televisa"
+
+
 def test_channel_from_dict_rechaza_sin_name():
     with pytest.raises(ValueError):
         Channel.from_dict({"url": "https://a.com/x.m3u8"})
@@ -393,6 +405,21 @@ def test_sort_statuses_usa_aliases_de_prioridad_para_dsports():
     )
 
     assert [status.name for status in ordered] == ["DSPORTPLUS", "Otro Canal"]
+
+
+def test_sort_statuses_prefiere_nombre_principal_sobre_version_regional():
+    statuses = [
+        make_status("Canal 5 TV Cozumel (1080p)", "Familia y TV Abierta", True),
+        make_status("Canal 5 Televisa", "Familia y TV Abierta", True),
+    ]
+
+    ordered = sort_statuses(
+        statuses,
+        ["group", "name"],
+        priority_channels=["Canal 5"],
+    )
+
+    assert [status.name for status in ordered] == ["Canal 5 Televisa", "Canal 5 TV Cozumel (1080p)"]
 
 
 def test_classify_group_ubica_canales_en_secciones_usuario():

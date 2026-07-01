@@ -96,6 +96,15 @@ DEFAULT_PRIORITY_ALIASES: dict[str, tuple[str, ...]] = {
     "s sports": ("s sports",),
     "canal 7 esports": ("canal 7 esports", "canal 7 e-sports", "esports"),
 }
+CANONICAL_DISPLAY_BY_TVG_ID: dict[str, str] = {
+    "canal5.mx@sd": "Canal 5 Televisa",
+    "canal5.mx": "Canal 5 Televisa",
+    "azteca7.mx": "Azteca 7",
+    "aztecauno.mx": "Azteca Uno",
+    "lasestrellas.mx@sd": "Las Estrellas",
+    "lasestrellaslatinamerica.mx": "Las Estrellas",
+    "tudn.mx": "TUDN",
+}
 
 FAMILY_PATTERNS = (
     "azteca uno",
@@ -385,7 +394,7 @@ class Channel:
                 raise ValueError(f"backup_url invalida (debe empezar con http/https): {backup_url}")
 
         return Channel(
-            name=name,
+            name=_canonical_display_name(name, str(raw.get("tvg_id") or "").strip()),
             url=primary_url,
             backup_urls=deduped_backups,
             group=(raw.get("group") or "General").strip() or "General",
@@ -866,6 +875,32 @@ def _quality_score(name: str) -> int:
     return int(match.group(1))
 
 
+def _canonical_display_name(name: str, tvg_id: str) -> str:
+    normalized_tvg_id = _normalize_name(tvg_id)
+    if normalized_tvg_id in CANONICAL_DISPLAY_BY_TVG_ID:
+        return CANONICAL_DISPLAY_BY_TVG_ID[normalized_tvg_id]
+    return name
+
+
+def _priority_exact_bonus(status: ChannelStatus, priority_channels: list[str]) -> int:
+    normalized_name = _normalize_name(status.name)
+
+    for pattern in priority_channels:
+        normalized_pattern = _normalize_name(pattern)
+        aliases = DEFAULT_PRIORITY_ALIASES.get(normalized_pattern, (normalized_pattern,))
+        if any(
+            alias and (
+                normalized_name == alias
+                or normalized_name.startswith(f"{alias} (")
+                or normalized_name.startswith(f"{alias} hd")
+                or normalized_name.startswith(f"{alias} televisa")
+            )
+            for alias in aliases
+        ):
+            return 0
+    return 1
+
+
 def _priority_rank(status: ChannelStatus, priority_channels: list[str]) -> int:
     normalized_name = _normalize_name(status.name)
     normalized_group = _normalize_name(status.group)
@@ -961,6 +996,7 @@ def sort_statuses(
     def sort_key(status: ChannelStatus) -> tuple:
         return (
             _priority_rank(status, priorities),
+            _priority_exact_bonus(status, priorities),
             _state_rank(status),
             _country_rank(status),
             _group_rank(status, ordered_groups),
