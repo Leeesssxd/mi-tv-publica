@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-07-02T10:59:03Z",
-  "total": 296,
-  "alive": 290,
+  "generated_at": "2026-07-02T18:08:37Z",
+  "total": 301,
+  "alive": 295,
   "unstable": 6,
   "dead": 0,
   "channels": [
@@ -801,6 +801,21 @@
       "checked_at": "2026-07-02T04:06:33Z"
     },
     {
+      "name": "Canal 10 Durango (1080p)",
+      "group": "Familia y TV Abierta",
+      "country": "MX",
+      "url": "https://5e50264bd6766.streamlock.net/canal10durango/videocanal10durango/playlist.m3u8",
+      "backup_urls": [],
+      "logo": "https://i.imgur.com/H34quHQ.png",
+      "tvg_id": "Canal10Durango.mx@SD",
+      "alive": true,
+      "status_code": 200,
+      "error": null,
+      "state": "alive",
+      "ttfb_ms": 362,
+      "checked_at": "2026-07-02T18:08:27Z"
+    },
+    {
       "name": "ICRTV Colima (1080p)",
       "group": "Familia y TV Abierta",
       "country": "MX",
@@ -902,8 +917,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 330,
-      "checked_at": "2026-07-02T10:58:53Z"
+      "ttfb_ms": 408,
+      "checked_at": "2026-07-02T18:08:27Z"
     },
     {
       "name": "SIPSE TVCUN 8.1 (1080p) [Not 24/7]",
@@ -1129,6 +1144,21 @@
       "state": "alive",
       "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:33Z"
+    },
+    {
+      "name": "California Medios TV (720p)",
+      "group": "Familia y TV Abierta",
+      "country": "MX",
+      "url": "https://s5.mexside.net:1936/medios/medios/playlist.m3u8",
+      "backup_urls": [],
+      "logo": "https://i.imgur.com/IDvpRNI.png",
+      "tvg_id": "CaliforniaMediosTV.mx@SD",
+      "alive": true,
+      "status_code": 200,
+      "error": null,
+      "state": "alive",
+      "ttfb_ms": 548,
+      "checked_at": "2026-07-02T18:08:28Z"
     },
     {
       "name": "Canal 10 Chiapas (720p)",
@@ -1476,6 +1506,21 @@
       "checked_at": "2026-07-02T04:06:34Z"
     },
     {
+      "name": "Tele UV [Not 24/7]",
+      "group": "Familia y TV Abierta",
+      "country": "MX",
+      "url": "https://58fe359775f31.streamlock.net/tvuv/myStream/playlist.m3u8",
+      "backup_urls": [],
+      "logo": "https://i.imgur.com/8MdUH69.jpeg",
+      "tvg_id": "TeleUV.mx@SD",
+      "alive": true,
+      "status_code": 200,
+      "error": null,
+      "state": "alive",
+      "ttfb_ms": 645,
+      "checked_at": "2026-07-02T18:08:28Z"
+    },
+    {
       "name": "Popcorn Central (1080p)",
       "group": "Peliculas - Cine",
       "country": "MX",
@@ -1699,21 +1744,6 @@
       "state": "alive",
       "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:34Z"
-    },
-    {
-      "name": "Teleplay Sureste (720p)",
-      "group": "Entretenimiento",
-      "country": "MX",
-      "url": "https://player.tvstream.mx/livestream/teleplay/livehd/playlist.m3u8",
-      "backup_urls": [],
-      "logo": "https://i.imgur.com/MeV5N08.png",
-      "tvg_id": "TeleplaySureste.mx@SD",
-      "alive": true,
-      "status_code": 200,
-      "error": null,
-      "state": "alive",
-      "ttfb_ms": 749,
-      "checked_at": "2026-07-02T10:58:54Z"
     },
     {
       "name": "TV Migrante (720p)",
@@ -2871,6 +2901,21 @@
       "checked_at": "2026-07-02T04:06:35Z"
     },
     {
+      "name": "Fibwi (1080p) [Not 24/7]",
+      "group": "Entretenimiento",
+      "country": "ES",
+      "url": "https://hostcdn3.fibwi.com/fibwi_diario/index.fmp4.m3u8",
+      "backup_urls": [],
+      "logo": "https://i.imgur.com/4vcGzcC.png",
+      "tvg_id": "Fibwi.es@SD",
+      "alive": true,
+      "status_code": 200,
+      "error": null,
+      "state": "alive",
+      "ttfb_ms": 866,
+      "checked_at": "2026-07-02T18:08:28Z"
+    },
+    {
       "name": "Fuerteventura TV (1080p)",
       "group": "Entretenimiento",
       "country": "ES",
@@ -3231,6 +3276,21 @@
       "checked_at": "2026-07-02T04:06:36Z"
     },
     {
+      "name": "Telenord Corrientes (1080p) [Not 24/7]",
+      "group": "Entretenimiento",
+      "country": "AR",
+      "url": "http://www.coninfo.net:1935/previsoratv/live/playlist.m3u8",
+      "backup_urls": [],
+      "logo": "https://i.imgur.com/yqXORkt.png",
+      "tvg_id": "Telenord.ar@SD",
+      "alive": true,
+      "status_code": 200,
+      "error": null,
+      "state": "alive",
+      "ttfb_ms": 520,
+      "checked_at": "2026-07-02T18:08:28Z"
+    },
+    {
       "name": "TeleVigo (1080p) [Not 24/7]",
       "group": "Entretenimiento",
       "country": "ES",
@@ -3407,8 +3467,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 385,
-      "checked_at": "2026-07-02T10:58:54Z"
+      "ttfb_ms": 413,
+      "checked_at": "2026-07-02T18:08:28Z"
     },
     {
       "name": "Canal 4 Mancha Centro (720p) [Not 24/7]",
@@ -3482,8 +3542,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 1030,
-      "checked_at": "2026-07-02T10:58:55Z"
+      "ttfb_ms": 832,
+      "checked_at": "2026-07-02T18:08:29Z"
     },
     {
       "name": "Canal Málaga RTV (720p) [Not 24/7]",
@@ -3696,6 +3756,21 @@
       "checked_at": "2026-07-02T04:06:37Z"
     },
     {
+      "name": "LiraTV (720p)",
+      "group": "Entretenimiento",
+      "country": "ES",
+      "url": "https://cloud2.streaminglivehd.com:1936/liratv/liratv/playlist.m3u8",
+      "backup_urls": [],
+      "logo": "https://i.imgur.com/hBswXYZ.png",
+      "tvg_id": "LiraTV.es@SD",
+      "alive": true,
+      "status_code": 200,
+      "error": null,
+      "state": "alive",
+      "ttfb_ms": 439,
+      "checked_at": "2026-07-02T18:08:29Z"
+    },
+    {
       "name": "Metro TV (720p)",
       "group": "Entretenimiento",
       "country": "AR",
@@ -3797,8 +3872,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 856,
-      "checked_at": "2026-07-02T10:58:55Z"
+      "ttfb_ms": 359,
+      "checked_at": "2026-07-02T18:08:28Z"
     },
     {
       "name": "Más FM 95.9 (720p)",
@@ -4067,8 +4142,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 661,
-      "checked_at": "2026-07-02T10:58:54Z"
+      "ttfb_ms": 469,
+      "checked_at": "2026-07-02T18:08:28Z"
     },
     {
       "name": "Televisión Consciente (1080p)",
