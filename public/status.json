@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-07-02T04:06:43Z",
-  "total": 290,
-  "alive": 284,
+  "generated_at": "2026-07-02T06:19:09Z",
+  "total": 293,
+  "alive": 287,
   "unstable": 6,
   "dead": 0,
   "channels": [
@@ -17,7 +17,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 353,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:32Z"
     },
     {
@@ -32,7 +32,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 467,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:33Z"
     },
     {
@@ -47,7 +47,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 1195,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:33Z"
     },
     {
@@ -62,7 +62,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 390,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:33Z"
     },
     {
@@ -77,7 +77,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 548,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:33Z"
     },
     {
@@ -92,7 +92,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 702,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:34Z"
     },
     {
@@ -107,7 +107,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 205,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:34Z"
     },
     {
@@ -122,7 +122,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 1449,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:36Z"
     },
     {
@@ -137,7 +137,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 345,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:33Z"
     },
     {
@@ -152,7 +152,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 347,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:33Z"
     },
     {
@@ -167,7 +167,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 192,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:34Z"
     },
     {
@@ -182,7 +182,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 25,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:33Z"
     },
     {
@@ -197,7 +197,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 832,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:34Z"
     },
     {
@@ -212,7 +212,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 443,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:34Z"
     },
     {
@@ -227,7 +227,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 525,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:33Z"
     },
     {
@@ -242,7 +242,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 197,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:33Z"
     },
     {
@@ -257,7 +257,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 132,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:37Z"
     },
     {
@@ -272,7 +272,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 699,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:37Z"
     },
     {
@@ -287,7 +287,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 727,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:33Z"
     },
     {
@@ -302,7 +302,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 742,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:36Z"
     },
     {
@@ -317,7 +317,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 554,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:34Z"
     },
     {
@@ -332,7 +332,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 406,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:32Z"
     },
     {
@@ -347,7 +347,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 221,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:36Z"
     },
     {
@@ -362,7 +362,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 246,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:32Z"
     },
     {
@@ -377,7 +377,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 208,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:32Z"
     },
     {
@@ -392,7 +392,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 490,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:36Z"
     },
     {
@@ -407,7 +407,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 900,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:35Z"
     },
     {
@@ -422,7 +422,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 224,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:35Z"
     },
     {
@@ -437,7 +437,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 93,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:34Z"
     },
     {
@@ -452,7 +452,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 147,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:36Z"
     },
     {
@@ -467,7 +467,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 278,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:32Z"
     },
     {
@@ -482,7 +482,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 1279,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:34Z"
     },
     {
@@ -497,7 +497,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 560,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:36Z"
     },
     {
@@ -512,7 +512,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 658,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:37Z"
     },
     {
@@ -527,7 +527,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 1031,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:35Z"
     },
     {
@@ -542,7 +542,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 48,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:36Z"
     },
     {
@@ -557,7 +557,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 260,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:34Z"
     },
     {
@@ -572,7 +572,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 334,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:32Z"
     },
     {
@@ -587,7 +587,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 711,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:33Z"
     },
     {
@@ -602,7 +602,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 336,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:33Z"
     },
     {
@@ -617,7 +617,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 496,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:33Z"
     },
     {
@@ -632,7 +632,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 438,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:33Z"
     },
     {
@@ -647,7 +647,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 1613,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:34Z"
     },
     {
@@ -662,7 +662,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 287,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:32Z"
     },
     {
@@ -677,7 +677,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 226,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:32Z"
     },
     {
@@ -692,7 +692,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 566,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:33Z"
     },
     {
@@ -707,7 +707,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 456,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:33Z"
     },
     {
@@ -722,7 +722,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 425,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:33Z"
     },
     {
@@ -737,7 +737,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 483,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:33Z"
     },
     {
@@ -752,7 +752,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 534,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:33Z"
     },
     {
@@ -767,7 +767,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 36,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:33Z"
     },
     {
@@ -782,7 +782,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 202,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:33Z"
     },
     {
@@ -797,7 +797,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 179,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:33Z"
     },
     {
@@ -812,7 +812,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 105,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:33Z"
     },
     {
@@ -827,7 +827,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 177,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:33Z"
     },
     {
@@ -842,7 +842,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 181,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:33Z"
     },
     {
@@ -857,7 +857,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 288,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:33Z"
     },
     {
@@ -872,7 +872,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 306,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:33Z"
     },
     {
@@ -887,8 +887,23 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 473,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:34Z"
+    },
+    {
+      "name": "SIPSE TV 8.1 (1080p) [Not 24/7]",
+      "group": "Familia y TV Abierta",
+      "country": "MX",
+      "url": "https://webprod.sipse.com.mx:8080/show/merida.m3u8",
+      "backup_urls": [],
+      "logo": "https://i.imgur.com/123P7dV.png",
+      "tvg_id": "SIPSETV81.mx@SD",
+      "alive": true,
+      "status_code": 200,
+      "error": null,
+      "state": "alive",
+      "ttfb_ms": 241,
+      "checked_at": "2026-07-02T06:18:59Z"
     },
     {
       "name": "SIPSE TVCUN 8.1 (1080p) [Not 24/7]",
@@ -902,7 +917,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 407,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:33Z"
     },
     {
@@ -917,7 +932,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 179,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:33Z"
     },
     {
@@ -932,7 +947,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 276,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:33Z"
     },
     {
@@ -947,7 +962,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 265,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:33Z"
     },
     {
@@ -962,7 +977,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 36,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:33Z"
     },
     {
@@ -977,7 +992,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 37,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:33Z"
     },
     {
@@ -992,7 +1007,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 100,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:33Z"
     },
     {
@@ -1007,7 +1022,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 141,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:33Z"
     },
     {
@@ -1022,7 +1037,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 276,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:32Z"
     },
     {
@@ -1037,7 +1052,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 37,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:33Z"
     },
     {
@@ -1052,7 +1067,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 27,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:33Z"
     },
     {
@@ -1067,7 +1082,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 26,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:33Z"
     },
     {
@@ -1082,7 +1097,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 38,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:33Z"
     },
     {
@@ -1097,7 +1112,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 110,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:33Z"
     },
     {
@@ -1112,7 +1127,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 36,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:33Z"
     },
     {
@@ -1127,7 +1142,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 38,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:33Z"
     },
     {
@@ -1142,7 +1157,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 445,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:34Z"
     },
     {
@@ -1157,7 +1172,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 37,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:33Z"
     },
     {
@@ -1172,7 +1187,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 114,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:34Z"
     },
     {
@@ -1187,7 +1202,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 35,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:33Z"
     },
     {
@@ -1202,7 +1217,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 38,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:33Z"
     },
     {
@@ -1217,7 +1232,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 37,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:34Z"
     },
     {
@@ -1232,7 +1247,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 38,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:34Z"
     },
     {
@@ -1247,7 +1262,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 37,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:34Z"
     },
     {
@@ -1262,7 +1277,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 238,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:34Z"
     },
     {
@@ -1277,7 +1292,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 38,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:34Z"
     },
     {
@@ -1292,7 +1307,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 36,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:34Z"
     },
     {
@@ -1307,7 +1322,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 38,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:34Z"
     },
     {
@@ -1322,7 +1337,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 37,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:34Z"
     },
     {
@@ -1337,7 +1352,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 37,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:34Z"
     },
     {
@@ -1352,7 +1367,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 111,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:34Z"
     },
     {
@@ -1367,7 +1382,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 37,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:34Z"
     },
     {
@@ -1382,7 +1397,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 39,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:34Z"
     },
     {
@@ -1397,7 +1412,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 691,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:34Z"
     },
     {
@@ -1412,7 +1427,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 446,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:34Z"
     },
     {
@@ -1427,7 +1442,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 154,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:34Z"
     },
     {
@@ -1442,7 +1457,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 38,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:34Z"
     },
     {
@@ -1457,7 +1472,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 259,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:34Z"
     },
     {
@@ -1472,7 +1487,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 282,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:33Z"
     },
     {
@@ -1487,7 +1502,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 291,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:33Z"
     },
     {
@@ -1502,7 +1517,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 39,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:33Z"
     },
     {
@@ -1517,7 +1532,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 173,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:33Z"
     },
     {
@@ -1532,7 +1547,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 38,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:33Z"
     },
     {
@@ -1547,7 +1562,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 39,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:33Z"
     },
     {
@@ -1562,7 +1577,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 593,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:33Z"
     },
     {
@@ -1577,7 +1592,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 179,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:33Z"
     },
     {
@@ -1592,7 +1607,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 244,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:34Z"
     },
     {
@@ -1607,7 +1622,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 482,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:34Z"
     },
     {
@@ -1622,7 +1637,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 235,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:34Z"
     },
     {
@@ -1637,7 +1652,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 118,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:34Z"
     },
     {
@@ -1652,7 +1667,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 37,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:34Z"
     },
     {
@@ -1667,7 +1682,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 798,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:34Z"
     },
     {
@@ -1682,7 +1697,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 300,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:34Z"
     },
     {
@@ -1697,7 +1712,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 36,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:34Z"
     },
     {
@@ -1712,7 +1727,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 38,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:34Z"
     },
     {
@@ -1727,7 +1742,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 54,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:34Z"
     },
     {
@@ -1742,7 +1757,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 135,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:33Z"
     },
     {
@@ -1757,7 +1772,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 329,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:34Z"
     },
     {
@@ -1772,7 +1787,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 413,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:34Z"
     },
     {
@@ -1787,7 +1802,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 235,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:34Z"
     },
     {
@@ -1802,7 +1817,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 174,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:34Z"
     },
     {
@@ -1817,7 +1832,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 1035,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:35Z"
     },
     {
@@ -1832,7 +1847,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 1552,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:36Z"
     },
     {
@@ -1847,7 +1862,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 796,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:35Z"
     },
     {
@@ -1862,7 +1877,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 391,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:35Z"
     },
     {
@@ -1877,7 +1892,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 390,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:36Z"
     },
     {
@@ -1892,7 +1907,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 195,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:33Z"
     },
     {
@@ -1907,7 +1922,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 533,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:33Z"
     },
     {
@@ -1922,7 +1937,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 509,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:33Z"
     },
     {
@@ -1937,7 +1952,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 390,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:33Z"
     },
     {
@@ -1952,7 +1967,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 625,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:33Z"
     },
     {
@@ -1967,7 +1982,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 142,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:33Z"
     },
     {
@@ -1982,7 +1997,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 160,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:33Z"
     },
     {
@@ -1997,7 +2012,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 167,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:33Z"
     },
     {
@@ -2012,7 +2027,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 142,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:33Z"
     },
     {
@@ -2027,7 +2042,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 139,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:33Z"
     },
     {
@@ -2042,7 +2057,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 134,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:33Z"
     },
     {
@@ -2057,7 +2072,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 144,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:33Z"
     },
     {
@@ -2072,7 +2087,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 188,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:33Z"
     },
     {
@@ -2087,7 +2102,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 97,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:33Z"
     },
     {
@@ -2102,7 +2117,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 139,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:33Z"
     },
     {
@@ -2117,7 +2132,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 141,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:33Z"
     },
     {
@@ -2132,7 +2147,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 125,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:33Z"
     },
     {
@@ -2147,7 +2162,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 228,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:33Z"
     },
     {
@@ -2162,7 +2177,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 592,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:33Z"
     },
     {
@@ -2177,7 +2192,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 243,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:34Z"
     },
     {
@@ -2192,7 +2207,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 280,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:36Z"
     },
     {
@@ -2207,7 +2222,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 664,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:33Z"
     },
     {
@@ -2222,7 +2237,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 388,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:33Z"
     },
     {
@@ -2237,7 +2252,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 101,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:33Z"
     },
     {
@@ -2252,7 +2267,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 202,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:33Z"
     },
     {
@@ -2267,7 +2282,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 146,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:33Z"
     },
     {
@@ -2282,7 +2297,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 288,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:33Z"
     },
     {
@@ -2297,7 +2312,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 635,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:33Z"
     },
     {
@@ -2312,7 +2327,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 138,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:33Z"
     },
     {
@@ -2327,7 +2342,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 136,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:33Z"
     },
     {
@@ -2342,7 +2357,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 172,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:33Z"
     },
     {
@@ -2357,7 +2372,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 254,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:33Z"
     },
     {
@@ -2372,7 +2387,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 222,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:34Z"
     },
     {
@@ -2387,7 +2402,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 427,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:35Z"
     },
     {
@@ -2402,7 +2417,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 442,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:36Z"
     },
     {
@@ -2417,7 +2432,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 337,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:35Z"
     },
     {
@@ -2432,7 +2447,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 224,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:36Z"
     },
     {
@@ -2447,7 +2462,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 559,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:36Z"
     },
     {
@@ -2462,7 +2477,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 899,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:33Z"
     },
     {
@@ -2477,7 +2492,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 665,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:37Z"
     },
     {
@@ -2492,7 +2507,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 332,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:33Z"
     },
     {
@@ -2507,7 +2522,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 1301,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:33Z"
     },
     {
@@ -2522,7 +2537,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 140,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:32Z"
     },
     {
@@ -2537,7 +2552,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 373,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:32Z"
     },
     {
@@ -2552,7 +2567,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 381,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:33Z"
     },
     {
@@ -2567,7 +2582,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 311,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:35Z"
     },
     {
@@ -2582,7 +2597,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 45,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:36Z"
     },
     {
@@ -2597,7 +2612,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 575,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:37Z"
     },
     {
@@ -2612,7 +2627,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 371,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:34Z"
     },
     {
@@ -2627,7 +2642,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 787,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:35Z"
     },
     {
@@ -2642,7 +2657,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 944,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:35Z"
     },
     {
@@ -2657,7 +2672,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 865,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:35Z"
     },
     {
@@ -2672,7 +2687,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 680,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:35Z"
     },
     {
@@ -2687,7 +2702,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 551,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:35Z"
     },
     {
@@ -2702,7 +2717,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 548,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:35Z"
     },
     {
@@ -2717,7 +2732,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 761,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:35Z"
     },
     {
@@ -2732,7 +2747,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 545,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:35Z"
     },
     {
@@ -2747,7 +2762,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 467,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:35Z"
     },
     {
@@ -2762,7 +2777,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 936,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:35Z"
     },
     {
@@ -2777,7 +2792,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 1091,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:35Z"
     },
     {
@@ -2792,7 +2807,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 753,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:35Z"
     },
     {
@@ -2807,7 +2822,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 296,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:35Z"
     },
     {
@@ -2822,7 +2837,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 717,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:35Z"
     },
     {
@@ -2837,7 +2852,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 201,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:35Z"
     },
     {
@@ -2852,7 +2867,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 740,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:35Z"
     },
     {
@@ -2867,7 +2882,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 389,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:35Z"
     },
     {
@@ -2882,7 +2897,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 214,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:35Z"
     },
     {
@@ -2897,7 +2912,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 258,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:35Z"
     },
     {
@@ -2912,7 +2927,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 916,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:36Z"
     },
     {
@@ -2927,7 +2942,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 472,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:35Z"
     },
     {
@@ -2942,7 +2957,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 1367,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:36Z"
     },
     {
@@ -2957,7 +2972,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 1190,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:36Z"
     },
     {
@@ -2972,7 +2987,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 1298,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:36Z"
     },
     {
@@ -2987,7 +3002,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 1138,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:36Z"
     },
     {
@@ -3002,7 +3017,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 1330,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:36Z"
     },
     {
@@ -3017,7 +3032,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 1312,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:36Z"
     },
     {
@@ -3032,7 +3047,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 113,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:35Z"
     },
     {
@@ -3047,7 +3062,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 125,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:35Z"
     },
     {
@@ -3062,7 +3077,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 546,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:36Z"
     },
     {
@@ -3077,7 +3092,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 554,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:36Z"
     },
     {
@@ -3092,7 +3107,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 385,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:36Z"
     },
     {
@@ -3107,7 +3122,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 51,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:35Z"
     },
     {
@@ -3122,7 +3137,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 800,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:36Z"
     },
     {
@@ -3137,7 +3152,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 364,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:36Z"
     },
     {
@@ -3152,7 +3167,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 260,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:36Z"
     },
     {
@@ -3167,7 +3182,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 922,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:36Z"
     },
     {
@@ -3182,7 +3197,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 132,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:36Z"
     },
     {
@@ -3197,7 +3212,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 450,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:36Z"
     },
     {
@@ -3212,7 +3227,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 50,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:36Z"
     },
     {
@@ -3227,7 +3242,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 815,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:36Z"
     },
     {
@@ -3242,7 +3257,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 266,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:36Z"
     },
     {
@@ -3257,7 +3272,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 52,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:36Z"
     },
     {
@@ -3272,7 +3287,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 940,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:37Z"
     },
     {
@@ -3287,7 +3302,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 412,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:36Z"
     },
     {
@@ -3302,7 +3317,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 1212,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:37Z"
     },
     {
@@ -3317,7 +3332,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 654,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:36Z"
     },
     {
@@ -3332,7 +3347,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 179,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:36Z"
     },
     {
@@ -3347,7 +3362,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 129,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:36Z"
     },
     {
@@ -3362,8 +3377,23 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 438,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:36Z"
+    },
+    {
+      "name": "Canal 34 San Juan (720p)",
+      "group": "Entretenimiento",
+      "country": "AR",
+      "url": "https://streamyes.alsolnet.com/canal34hd/live/playlist.m3u8",
+      "backup_urls": [],
+      "logo": "https://i.imgur.com/bZMEiYe.png",
+      "tvg_id": "Canal34SanJuan.ar@SD",
+      "alive": true,
+      "status_code": 200,
+      "error": null,
+      "state": "alive",
+      "ttfb_ms": 498,
+      "checked_at": "2026-07-02T06:19:00Z"
     },
     {
       "name": "Canal 4 Mancha Centro (720p) [Not 24/7]",
@@ -3377,7 +3407,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 741,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:37Z"
     },
     {
@@ -3392,7 +3422,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 48,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:36Z"
     },
     {
@@ -3407,7 +3437,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 413,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:37Z"
     },
     {
@@ -3422,7 +3452,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 168,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:36Z"
     },
     {
@@ -3437,7 +3467,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 619,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:37Z"
     },
     {
@@ -3452,7 +3482,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 49,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:36Z"
     },
     {
@@ -3467,7 +3497,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 1385,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:38Z"
     },
     {
@@ -3482,7 +3512,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 131,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:36Z"
     },
     {
@@ -3497,7 +3527,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 605,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:37Z"
     },
     {
@@ -3512,7 +3542,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 166,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:36Z"
     },
     {
@@ -3527,7 +3557,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 1243,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:38Z"
     },
     {
@@ -3542,7 +3572,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 127,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:36Z"
     },
     {
@@ -3557,7 +3587,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 586,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:37Z"
     },
     {
@@ -3572,7 +3602,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 578,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:37Z"
     },
     {
@@ -3587,7 +3617,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 503,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:37Z"
     },
     {
@@ -3602,7 +3632,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 221,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:37Z"
     },
     {
@@ -3617,7 +3647,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 679,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:37Z"
     },
     {
@@ -3632,7 +3662,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 131,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:37Z"
     },
     {
@@ -3647,7 +3677,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 933,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:38Z"
     },
     {
@@ -3662,7 +3692,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 700,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:37Z"
     },
     {
@@ -3677,7 +3707,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 791,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:37Z"
     },
     {
@@ -3692,7 +3722,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 718,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:38Z"
     },
     {
@@ -3707,7 +3737,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 681,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:37Z"
     },
     {
@@ -3722,8 +3752,23 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 720,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:37Z"
+    },
+    {
+      "name": "MTV Vergüenza ajena (720p)",
+      "group": "Entretenimiento",
+      "country": "DE",
+      "url": "https://jmp2.uk/plu-63eb9495a8b227000841bf64.m3u8",
+      "backup_urls": [],
+      "logo": "https://images.pluto.tv/channels/63eb9495a8b227000841bf64/colorLogoPNG.png",
+      "tvg_id": "MTVVerguenzaajena.de@ES",
+      "alive": true,
+      "status_code": 200,
+      "error": null,
+      "state": "alive",
+      "ttfb_ms": 1421,
+      "checked_at": "2026-07-02T06:19:01Z"
     },
     {
       "name": "Más FM 95.9 (720p)",
@@ -3737,7 +3782,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 82,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:37Z"
     },
     {
@@ -3752,7 +3797,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 46,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:37Z"
     },
     {
@@ -3767,7 +3812,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 33,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:37Z"
     },
     {
@@ -3782,7 +3827,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 979,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:38Z"
     },
     {
@@ -3797,7 +3842,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 128,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:37Z"
     },
     {
@@ -3812,7 +3857,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 325,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:34Z"
     },
     {
@@ -3827,7 +3872,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 269,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:34Z"
     },
     {
@@ -3842,7 +3887,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 350,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:34Z"
     },
     {
@@ -3857,7 +3902,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 955,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:35Z"
     },
     {
@@ -3872,7 +3917,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 751,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:35Z"
     },
     {
@@ -3887,7 +3932,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 441,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:35Z"
     },
     {
@@ -3902,7 +3947,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 309,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:35Z"
     },
     {
@@ -3917,7 +3962,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 242,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:35Z"
     },
     {
@@ -3932,7 +3977,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 356,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:35Z"
     },
     {
@@ -3947,7 +3992,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 176,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:35Z"
     },
     {
@@ -3962,7 +4007,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 337,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:35Z"
     },
     {
@@ -3977,7 +4022,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 1099,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:36Z"
     },
     {
@@ -3992,7 +4037,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 512,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:36Z"
     },
     {
@@ -4007,7 +4052,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 367,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:36Z"
     },
     {
@@ -4022,7 +4067,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 567,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:37Z"
     },
     {
@@ -4037,7 +4082,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 640,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:37Z"
     },
     {
@@ -4052,7 +4097,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 646,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:37Z"
     },
     {
@@ -4067,7 +4112,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 338,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:36Z"
     },
     {
@@ -4082,7 +4127,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 242,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:36Z"
     },
     {
@@ -4097,7 +4142,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 693,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:37Z"
     },
     {
@@ -4112,7 +4157,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 252,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:37Z"
     },
     {
@@ -4127,7 +4172,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 606,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:37Z"
     },
     {
@@ -4142,7 +4187,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 591,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:37Z"
     },
     {
@@ -4157,7 +4202,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 549,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:37Z"
     },
     {
@@ -4172,7 +4217,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 1280,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:38Z"
     },
     {
@@ -4187,7 +4232,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 561,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:37Z"
     },
     {
@@ -4202,7 +4247,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 545,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:37Z"
     },
     {
@@ -4217,7 +4262,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 97,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:37Z"
     },
     {
@@ -4232,7 +4277,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 188,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:33Z"
     },
     {
@@ -4247,7 +4292,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 147,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:33Z"
     },
     {
@@ -4262,7 +4307,7 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 166,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:33Z"
     },
     {
@@ -4277,7 +4322,7 @@
       "status_code": 200,
       "error": "Handshake correcto pero contenido inestable (C21ti202)",
       "state": "unstable",
-      "ttfb_ms": 322,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:33Z"
     },
     {
@@ -4292,7 +4337,7 @@
       "status_code": 200,
       "error": "Handshake correcto pero contenido inestable (text/plain; charset=utf-8)",
       "state": "unstable",
-      "ttfb_ms": 247,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:34Z"
     },
     {
@@ -4307,7 +4352,7 @@
       "status_code": 200,
       "error": "Handshake correcto pero contenido inestable (text/plain; charset=utf-8)",
       "state": "unstable",
-      "ttfb_ms": 161,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:34Z"
     },
     {
@@ -4322,7 +4367,7 @@
       "status_code": 200,
       "error": "Handshake correcto pero contenido inestable (text/plain; charset=utf-8)",
       "state": "unstable",
-      "ttfb_ms": 152,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:34Z"
     },
     {
@@ -4337,7 +4382,7 @@
       "status_code": 200,
       "error": "Handshake correcto pero contenido inestable (text/html)",
       "state": "unstable",
-      "ttfb_ms": 991,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:35Z"
     },
     {
@@ -4352,7 +4397,7 @@
       "status_code": 200,
       "error": "Handshake correcto pero contenido inestable (text/html)",
       "state": "unstable",
-      "ttfb_ms": 1036,
+      "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:35Z"
     }
   ]

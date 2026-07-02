@@ -187,6 +187,10 @@ https://stream.arcast.com.ar/c3lapampa/ngrp:c3lapampa_all/playlist.m3u8
 #EXTVLCOPT:network-caching=2000
 #EXTVLCOPT:http-reconnect=true
 https://stream.arcast.com.ar/canal3/canal3/playlist.m3u8
+#EXTINF:-1 tvg-id="Canal34SanJuan.ar@SD" tvg-name="Canal 34 San Juan (720p)" tvg-logo="https://i.imgur.com/bZMEiYe.png" group-title="Entretenimiento",Canal 34 San Juan (720p)
+#EXTVLCOPT:network-caching=2000
+#EXTVLCOPT:http-reconnect=true
+https://streamyes.alsolnet.com/canal34hd/live/playlist.m3u8
 #EXTINF:-1 tvg-id="Canal4Catalunya.es@SD" tvg-name="Canal 4 Catalunya (1080p)" tvg-logo="https://i.imgur.com/tQh8C3s.png" group-title="Entretenimiento",Canal 4 Catalunya (1080p)
 #EXTVLCOPT:network-caching=2000
 #EXTVLCOPT:http-reconnect=true
@@ -419,6 +423,10 @@ https://jmp2.uk/plu-6130d8dc943001000708548d.m3u8
 #EXTVLCOPT:network-caching=2000
 #EXTVLCOPT:http-reconnect=true
 https://jmp2.uk/plu-604f81a49ef73300070e554f.m3u8
+#EXTINF:-1 tvg-id="MTVVerguenzaajena.de@ES" tvg-name="MTV Vergüenza ajena (720p)" tvg-logo="https://images.pluto.tv/channels/63eb9495a8b227000841bf64/colorLogoPNG.png" group-title="Entretenimiento",MTV Vergüenza ajena (720p)
+#EXTVLCOPT:network-caching=2000
+#EXTVLCOPT:http-reconnect=true
+https://jmp2.uk/plu-63eb9495a8b227000841bf64.m3u8
 #EXTINF:-1 tvg-id="MusicTVGranada.es@SD" tvg-name="Music TV Granada (1080p) [Not 24/7]" tvg-logo="https://i.ibb.co/Swd9NP7n/music-tv-granada.png" group-title="Entretenimiento",Music TV Granada (1080p) [Not 24/7]
 #EXTVLCOPT:network-caching=2000
 #EXTVLCOPT:http-reconnect=true
@@ -643,6 +651,10 @@ https://5d0d1d7a6be9e.streamlock.net/sicom/canal1/playlist.m3u8
 #EXTVLCOPT:network-caching=2000
 #EXTVLCOPT:http-reconnect=true
 https://5d0d1d7a6be9e.streamlock.net/sicom/canal2/playlist.m3u8
+#EXTINF:-1 tvg-id="SIPSETV81.mx@SD" tvg-name="SIPSE TV 8.1 (1080p) [Not 24/7]" tvg-logo="https://i.imgur.com/123P7dV.png" group-title="Familia y TV Abierta",SIPSE TV 8.1 (1080p) [Not 24/7]
+#EXTVLCOPT:network-caching=2000
+#EXTVLCOPT:http-reconnect=true
+https://webprod.sipse.com.mx:8080/show/merida.m3u8
 #EXTINF:-1 tvg-id="SIPSETVCUN81.mx@SD" tvg-name="SIPSE TVCUN 8.1 (1080p) [Not 24/7]" tvg-logo="https://i.imgur.com/uiTgClU.png" group-title="Familia y TV Abierta",SIPSE TVCUN 8.1 (1080p) [Not 24/7]
 #EXTVLCOPT:network-caching=2000
 #EXTVLCOPT:http-reconnect=true
