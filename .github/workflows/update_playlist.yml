@@ -61,10 +61,31 @@ jobs:
             echo "No hay cambios para publicar."
             exit 0
           fi
-          git commit -m "chore: automated grid synchronization [skip ci]"
+          publish_dir="$(mktemp -d)"
+          cp public/playlist.m3u "$publish_dir/playlist.m3u"
+          cp public/status.json "$publish_dir/status.json"
+          cp public/dial_status.json "$publish_dir/dial_status.json"
+          if [ -f sources/discovered_mirrors.json ]; then
+            mkdir -p "$publish_dir/sources"
+            cp sources/discovered_mirrors.json "$publish_dir/sources/discovered_mirrors.json"
+          fi
           for attempt in 1 2 3; do
             git fetch origin main
-            git rebase origin/main
+            git checkout -B main origin/main
+            mkdir -p public sources
+            cp "$publish_dir/playlist.m3u" public/playlist.m3u
+            cp "$publish_dir/status.json" public/status.json
+            cp "$publish_dir/dial_status.json" public/dial_status.json
+            if [ -f "$publish_dir/sources/discovered_mirrors.json" ]; then
+              cp "$publish_dir/sources/discovered_mirrors.json" sources/discovered_mirrors.json
+            fi
+            git add public/playlist.m3u public/status.json public/dial_status.json
+            if [ -f sources/discovered_mirrors.json ]; then git add sources/discovered_mirrors.json; fi
+            if git diff --quiet && git diff --staged --quiet; then
+              echo "Los cambios ya fueron publicados por otra ejecucion."
+              exit 0
+            fi
+            git commit -m "chore: automated grid synchronization [skip ci]"
             if git push origin HEAD:main; then
               exit 0
             fi
