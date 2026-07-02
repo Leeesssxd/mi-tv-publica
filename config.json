@@ -1,22 +1,37 @@
 {
   "VOD_TEMPLATE_MOVIE": "https://vidsrc.win/watch/{id}",
   "VOD_TEMPLATE_TV": "https://vidsrc.win/watch/{id}?s={season}&e={episode}",
-  "timeout_seconds": 300,
-  "connect_timeout_seconds": 15,
-  "sock_read_timeout_seconds": 30,
-  "max_concurrency": 2,
+  "timeout_seconds": 12,
+  "connect_timeout_seconds": 5,
+  "sock_read_timeout_seconds": 8,
+  "max_concurrency": 48,
+  "validation_timeout_seconds": 12,
+  "validation_connect_timeout_seconds": 5,
+  "validation_sock_read_timeout_seconds": 8,
+  "validation_max_concurrency": 48,
+  "validation_candidate_limit": 420,
+  "validation_group_buffer_multiplier": 1.35,
+  "validation_group_floor": 12,
+  "validation_retry_attempts": 2,
+  "validation_retry_backoff_base_seconds": 0.35,
+  "validation_jitter_min_seconds": 0.05,
+  "validation_jitter_max_seconds": 0.2,
+  "scrape_timeout_seconds": 300,
+  "scrape_connect_timeout_seconds": 15,
+  "scrape_sock_read_timeout_seconds": 30,
   "source_fetch_concurrency": 2,
   "user_agent": "MiTVPublicaBot/1.0 (+https://github.com)",
   "accept_language": "es-MX,es;q=0.9,en;q=0.6",
-  "retry_attempts": 3,
-  "retry_backoff_base_seconds": 1.0,
-  "jitter_min_seconds": 0.5,
-  "jitter_max_seconds": 1.5,
+  "retry_attempts": 2,
+  "retry_backoff_base_seconds": 0.35,
+  "jitter_min_seconds": 0.05,
+  "jitter_max_seconds": 0.2,
   "cache_ttl_seconds": 21600,
   "chunk_size_bytes": 65536,
-  "max_secret_sources": 8,
-  "max_private_channels_per_source": 1200,
-  "private_source_scan_line_limit": 15000,
+  "max_secret_sources": 2,
+  "max_private_channels_per_source": 250,
+  "private_source_scan_line_limit": 5000,
+  "github_crawler_enabled": false,
   "secondary_sources": [
     {
       "source_url": "https://raw.githubusercontent.com/Alplox/json-teles/main/canales.json",
@@ -29,31 +44,6 @@
       "country": "AR"
     },
     {
-      "source_url": "https://iptv-org.github.io/iptv/countries/bo.m3u",
-      "group": "Importados",
-      "country": "BO"
-    },
-    {
-      "source_url": "https://iptv-org.github.io/iptv/countries/cl.m3u",
-      "group": "Importados",
-      "country": "CL"
-    },
-    {
-      "source_url": "https://iptv-org.github.io/iptv/countries/co.m3u",
-      "group": "Importados",
-      "country": "CO"
-    },
-    {
-      "source_url": "https://iptv-org.github.io/iptv/countries/cr.m3u",
-      "group": "Importados",
-      "country": "CR"
-    },
-    {
-      "source_url": "https://iptv-org.github.io/iptv/countries/ec.m3u",
-      "group": "Importados",
-      "country": "EC"
-    },
-    {
       "source_url": "https://iptv-org.github.io/iptv/countries/es.m3u",
       "group": "Importados",
       "country": "ES"
@@ -62,21 +52,6 @@
       "source_url": "https://iptv-org.github.io/iptv/countries/no.m3u",
       "group": "Deportes Públicos Internacionales",
       "country": "NO"
-    },
-    {
-      "source_url": "https://iptv-org.github.io/iptv/countries/pe.m3u",
-      "group": "Importados",
-      "country": "PE"
-    },
-    {
-      "source_url": "https://iptv-org.github.io/iptv/countries/py.m3u",
-      "group": "Importados",
-      "country": "PY"
-    },
-    {
-      "source_url": "https://iptv-org.github.io/iptv/countries/uy.m3u",
-      "group": "Importados",
-      "country": "UY"
     }
   ],
   "sort_by": ["group", "name"],
@@ -160,20 +135,24 @@
     "Comedy",
     "Movies"
   ],
-  "target_playlist_size": 1200,
+  "status_cache_ttl_seconds": 259200,
+  "head_first": false,
+  "probe_first_segment": false,
+  "ttfb_limit_ms": 2500,
+  "target_playlist_size": 320,
   "target_group_quotas": {
-    "Familia y TV Abierta": 300,
-    "Peliculas - Cine": 240,
-    "Peliculas - Drama y Series": 180,
-    "Peliculas - Accion": 70,
-    "Peliculas - Comedia": 60,
-    "Peliculas - Crimen": 50,
-    "Peliculas - Terror": 50,
-    "Peliculas - Familiar": 50,
-    "Documentales y Cultura": 90,
-    "Deportes": 170,
-    "Noticias": 90,
-    "Entretenimiento": 100,
-    "Otros": 50
+    "Familia y TV Abierta": 90,
+    "Peliculas - Cine": 50,
+    "Peliculas - Drama y Series": 40,
+    "Peliculas - Accion": 15,
+    "Peliculas - Comedia": 15,
+    "Peliculas - Crimen": 10,
+    "Peliculas - Terror": 10,
+    "Peliculas - Familiar": 10,
+    "Documentales y Cultura": 20,
+    "Deportes": 35,
+    "Noticias": 15,
+    "Entretenimiento": 15,
+    "Otros": 10
   }
 }

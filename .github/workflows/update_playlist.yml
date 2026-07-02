@@ -12,6 +12,7 @@ permissions:
 jobs:
   build-and-validate:
     runs-on: ubuntu-latest
+    timeout-minutes: 25
     steps:
       - name: Checkout Code Base
         uses: actions/checkout@v4
@@ -33,7 +34,7 @@ jobs:
           path: |
             .cache/delta_validation/
             .cache/sources/
-          key: ${{ runner.os }}-delta-cache-${{ github.run_id }}
+          key: ${{ runner.os }}-delta-cache-${{ hashFiles('config.json', 'requirements.txt', 'scripts/build_playlist.py', 'scripts/scrape_channels.py') }}
           restore-keys: |
             ${{ runner.os }}-delta-cache-
 
@@ -50,6 +51,7 @@ jobs:
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action Bot"
-          git add public/playlist.m3u public/status.json public/dial_status.json sources/discovered_mirrors.json
+          git add public/playlist.m3u public/status.json public/dial_status.json
+          if [ -f sources/discovered_mirrors.json ]; then git add sources/discovered_mirrors.json; fi
           git diff --quiet && git diff --staged --quiet || git commit -m "chore: automated grid synchronization [skip ci]"
           git push

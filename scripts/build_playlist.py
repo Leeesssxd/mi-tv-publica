@@ -35,6 +35,17 @@ import aiohttp
 DEFAULT_CONFIG: dict[str, Any] = {
     "timeout_seconds": 10,
     "max_concurrency": 120,
+    "validation_timeout_seconds": 12,
+    "validation_connect_timeout_seconds": 5,
+    "validation_sock_read_timeout_seconds": 8,
+    "validation_max_concurrency": 48,
+    "validation_candidate_limit": 420,
+    "validation_group_buffer_multiplier": 1.35,
+    "validation_group_floor": 12,
+    "validation_retry_attempts": 2,
+    "validation_retry_backoff_base_seconds": 0.35,
+    "validation_jitter_min_seconds": 0.05,
+    "validation_jitter_max_seconds": 0.2,
     "user_agent": "MiTVPublicaBot/1.0 (+https://github.com)",
     "accept_language": "es-MX,es;q=0.9,en;q=0.6",
     "sort_by": ["group", "name"],
@@ -54,10 +65,10 @@ DEFAULT_CONFIG: dict[str, Any] = {
     "retry_backoff_base_seconds": 1.0,
     "jitter_min_seconds": 0.5,
     "jitter_max_seconds": 1.5,
-    "status_cache_ttl_seconds": 86400,
-    "head_first": True,
-    "ttfb_limit_ms": 1500,
-    "probe_first_segment": True,
+    "status_cache_ttl_seconds": 259200,
+    "head_first": False,
+    "ttfb_limit_ms": 2500,
+    "probe_first_segment": False,
     "vlc_network_caching_ms": 2000,
     "stream_selection": {
         "mode": "strict",
@@ -886,9 +897,21 @@ def _classify_vod_transport(url: str, status_code: int | None, content_type: str
 
 
 async def _sleep_with_jitter(config: dict[str, Any]) -> None:
-    jitter_min = float(config.get("jitter_min_seconds", 0.5))
-    jitter_max = float(config.get("jitter_max_seconds", 1.5))
+    jitter_min = float(config.get("validation_jitter_min_seconds", config.get("jitter_min_seconds", 0.5)))
+    jitter_max = float(config.get("validation_jitter_max_seconds", config.get("jitter_max_seconds", 1.5)))
     await asyncio.sleep(random.uniform(jitter_min, jitter_max))
+
+
+def _validation_timeout(config: dict[str, Any]) -> aiohttp.ClientTimeout:
+    return aiohttp.ClientTimeout(
+        total=float(config.get("validation_timeout_seconds", config.get("timeout_seconds", 10))),
+        connect=float(config.get("validation_connect_timeout_seconds", 5)),
+        sock_read=float(config.get("validation_sock_read_timeout_seconds", 8)),
+    )
+
+
+def _validation_max_concurrency(config: dict[str, Any]) -> int:
+    return max(1, int(config.get("validation_max_concurrency", config.get("max_concurrency", 120))))
 
 
 def _build_headers(config: dict[str, Any]) -> dict[str, str]:
@@ -931,8 +954,10 @@ async def _request_channel_candidate(
     url: str,
     config: dict[str, Any],
 ) -> tuple[int | None, str, str | None, int | None]:
-    attempts = int(config.get("retry_attempts", 3))
-    backoff_base = float(config.get("retry_backoff_base_seconds", 1.0))
+    attempts = int(config.get("validation_retry_attempts", config.get("retry_attempts", 3)))
+    backoff_base = float(
+        config.get("validation_retry_backoff_base_seconds", config.get("retry_backoff_base_seconds", 1.0))
+    )
     preferred_methods = ["GET", "HEAD"] if bool(config.get("head_first", True)) else ["GET"]
     retryable_method_fallback = {400, 403, 405, 406, 500, 501}
     ttfb_limit_ms = int(config.get("ttfb_limit_ms", 1500))
@@ -1124,9 +1149,9 @@ async def check_all_channels(
     if not channels_to_check:
         return [reusable_statuses[channel.url.casefold()] for channel in channels if channel.url.casefold() in reusable_statuses]
 
-    timeout = aiohttp.ClientTimeout(total=float(config["timeout_seconds"]))
+    timeout = _validation_timeout(config)
     headers = _build_headers(config)
-    semaphore = asyncio.Semaphore(int(config["max_concurrency"]))
+    semaphore = asyncio.Semaphore(_validation_max_concurrency(config))
 
     async with aiohttp.ClientSession(timeout=timeout, headers=headers) as session:
         tasks = [check_channel(session, ch, semaphore, config) for ch in channels_to_check]
@@ -1265,9 +1290,9 @@ async def check_all_vod_items(items: list[dict[str, Any]], config: dict[str, Any
     if not items:
         return []
 
-    timeout = aiohttp.ClientTimeout(total=float(config["timeout_seconds"]))
+    timeout = _validation_timeout(config)
     headers = _build_headers(config)
-    semaphore = asyncio.Semaphore(int(config["max_concurrency"]))
+    semaphore = asyncio.Semaphore(_validation_max_concurrency(config))
 
     async with aiohttp.ClientSession(timeout=timeout, headers=headers) as session:
         tasks = [check_vod_item(session, item, semaphore, config) for item in items]
@@ -1694,6 +1719,74 @@ def sort_statuses(
         )
 
     return [*ordered_top, *sorted(remainder, key=sort_key)]
+
+
+def limit_channels_for_validation(
+    channels: list[Channel],
+    config: dict[str, Any],
+    *,
+    priority_channels: list[str] | None = None,
+) -> list[Channel]:
+    limit = int(config.get("validation_candidate_limit", 0))
+    if limit <= 0 or len(channels) <= limit:
+        return channels
+
+    priorities = priority_channels or []
+    group_order = list(config.get("group_order", []))
+    group_quotas = dict(config.get("target_group_quotas", {}))
+    buffer_multiplier = float(config.get("validation_group_buffer_multiplier", 1.35))
+    group_floor = int(config.get("validation_group_floor", 12))
+
+    ordered = sorted(
+        channels,
+        key=lambda channel: (
+            _priority_rank(channel, priorities),
+            _group_rank(channel, group_order),
+            0 if _normalize_name(channel.country) == "mx" else 1,
+            -_quality_score(channel.name),
+            _normalize_name(channel.name),
+            channel.url.casefold(),
+        ),
+    )
+
+    selected: list[Channel] = []
+    selected_urls: set[str] = set()
+
+    for channel in ordered:
+        if _priority_rank(channel, priorities) >= len(priorities):
+            continue
+        if channel.url.casefold() in selected_urls:
+            continue
+        selected.append(channel)
+        selected_urls.add(channel.url.casefold())
+        if len(selected) >= limit:
+            return selected[:limit]
+
+    for group_name, quota in group_quotas.items():
+        buffered_quota = max(group_floor, int(quota * buffer_multiplier))
+        added = 0
+        for channel in ordered:
+            if channel.group != group_name:
+                continue
+            if channel.url.casefold() in selected_urls:
+                continue
+            selected.append(channel)
+            selected_urls.add(channel.url.casefold())
+            added += 1
+            if len(selected) >= limit:
+                return selected[:limit]
+            if added >= buffered_quota:
+                break
+
+    for channel in ordered:
+        if channel.url.casefold() in selected_urls:
+            continue
+        selected.append(channel)
+        selected_urls.add(channel.url.casefold())
+        if len(selected) >= limit:
+            break
+
+    return selected[:limit]
 
 
 def select_curated_statuses(
@@ -2170,7 +2263,11 @@ async def run(sources_path: Path, public_dir: Path, config_path: Path) -> list[C
     config = load_config(config_path)
     priority_channels = list(config.get("priority_channels", []))
     catalog_order = list(config.get("catalog_channel_order", REQUESTED_CATALOG_ORDER))
-    channels = load_channels(sources_path)
+    channels = limit_channels_for_validation(
+        load_channels(sources_path),
+        config,
+        priority_channels=priority_channels,
+    )
     cloud_catalog_items = load_cloud_catalog_items(sources_path)
     vod_statuses = await check_all_vod_items(cloud_catalog_items, config)
 

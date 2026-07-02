@@ -37,6 +37,7 @@ from build_playlist import (  # noqa: E402
     check_all_channels,
     dedupe_statuses_by_identity,
     enforce_hard_priority_block,
+    limit_channels_for_validation,
     purge_false_positive_variants,
     load_channels,
     load_cloud_catalog_items,
@@ -221,6 +222,28 @@ def test_load_channels_conserva_items_templated_routing_configurados(tmp_path):
     channels = load_channels(sources_file)
 
     assert [channel.name for channel in channels] == ["Movie Template Configurado"]
+
+
+def test_limit_channels_for_validation_preserva_prioridades_y_tope():
+    channels = [
+        Channel(name="Canal Comun 1", url="https://example.com/1.m3u8", group="Otros", country="MX"),
+        Channel(name="Canal Comun 2", url="https://example.com/2.m3u8", group="Otros", country="MX"),
+        Channel(name="Canal Comun 3", url="https://example.com/3.m3u8", group="Otros", country="MX"),
+        Channel(name="Canal 5 Televisa", url="https://example.com/priority.m3u8", group="Familia y TV Abierta", country="MX"),
+    ]
+
+    limited = limit_channels_for_validation(
+        channels,
+        {
+            "validation_candidate_limit": 2,
+            "target_group_quotas": {"Familia y TV Abierta": 1},
+            "group_order": ["Familia y TV Abierta", "Otros"],
+        },
+        priority_channels=["Canal 5 Televisa"],
+    )
+
+    assert len(limited) == 2
+    assert limited[0].name == "Canal 5 Televisa"
 
 
 def test_load_cloud_catalog_items_extrae_items_del_bloque_cloud(tmp_path):

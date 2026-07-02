@@ -1347,9 +1347,13 @@ def write_telemetry_report(records: list[dict[str, Any]], output_path: Path | No
 
 def build_network_timeout(config: dict[str, Any]) -> aiohttp.ClientTimeout:
     return aiohttp.ClientTimeout(
-        total=float(config.get("timeout_seconds", DEFAULT_CONFIG["timeout_seconds"])),
-        connect=float(config.get("connect_timeout_seconds", DEFAULT_CONFIG["connect_timeout_seconds"])),
-        sock_read=float(config.get("sock_read_timeout_seconds", DEFAULT_CONFIG["sock_read_timeout_seconds"])),
+        total=float(config.get("scrape_timeout_seconds", config.get("timeout_seconds", DEFAULT_CONFIG["timeout_seconds"]))),
+        connect=float(
+            config.get("scrape_connect_timeout_seconds", config.get("connect_timeout_seconds", DEFAULT_CONFIG["connect_timeout_seconds"]))
+        ),
+        sock_read=float(
+            config.get("scrape_sock_read_timeout_seconds", config.get("sock_read_timeout_seconds", DEFAULT_CONFIG["sock_read_timeout_seconds"]))
+        ),
     )
 
 
