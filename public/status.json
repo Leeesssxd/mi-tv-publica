@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-07-02T06:19:09Z",
-  "total": 293,
-  "alive": 287,
+  "generated_at": "2026-07-02T10:59:03Z",
+  "total": 296,
+  "alive": 290,
   "unstable": 6,
   "dead": 0,
   "channels": [
@@ -902,8 +902,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 241,
-      "checked_at": "2026-07-02T06:18:59Z"
+      "ttfb_ms": 330,
+      "checked_at": "2026-07-02T10:58:53Z"
     },
     {
       "name": "SIPSE TVCUN 8.1 (1080p) [Not 24/7]",
@@ -1699,6 +1699,21 @@
       "state": "alive",
       "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:34Z"
+    },
+    {
+      "name": "Teleplay Sureste (720p)",
+      "group": "Entretenimiento",
+      "country": "MX",
+      "url": "https://player.tvstream.mx/livestream/teleplay/livehd/playlist.m3u8",
+      "backup_urls": [],
+      "logo": "https://i.imgur.com/MeV5N08.png",
+      "tvg_id": "TeleplaySureste.mx@SD",
+      "alive": true,
+      "status_code": 200,
+      "error": null,
+      "state": "alive",
+      "ttfb_ms": 749,
+      "checked_at": "2026-07-02T10:58:54Z"
     },
     {
       "name": "TV Migrante (720p)",
@@ -3392,8 +3407,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 498,
-      "checked_at": "2026-07-02T06:19:00Z"
+      "ttfb_ms": 385,
+      "checked_at": "2026-07-02T10:58:54Z"
     },
     {
       "name": "Canal 4 Mancha Centro (720p) [Not 24/7]",
@@ -3454,6 +3469,21 @@
       "state": "alive",
       "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:36Z"
+    },
+    {
+      "name": "Canal Doñana (720p) [Not 24/7]",
+      "group": "Entretenimiento",
+      "country": "ES",
+      "url": "https://secure5.todostreaming.es/live/division-alm.m3u8",
+      "backup_urls": [],
+      "logo": "https://i.imgur.com/0WrKIxm.png",
+      "tvg_id": "CanalDonana.es@SD",
+      "alive": true,
+      "status_code": 200,
+      "error": null,
+      "state": "alive",
+      "ttfb_ms": 1030,
+      "checked_at": "2026-07-02T10:58:55Z"
     },
     {
       "name": "Canal Málaga RTV (720p) [Not 24/7]",
@@ -3767,8 +3797,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 1421,
-      "checked_at": "2026-07-02T06:19:01Z"
+      "ttfb_ms": 856,
+      "checked_at": "2026-07-02T10:58:55Z"
     },
     {
       "name": "Más FM 95.9 (720p)",
@@ -4024,6 +4054,21 @@
       "state": "alive",
       "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:36Z"
+    },
+    {
+      "name": "M95 Televisión Marbella (1080p) [Not 24/7]",
+      "group": "Otros",
+      "country": "ES",
+      "url": "https://limited2.todostreaming.es/live/m95-livestream.m3u8",
+      "backup_urls": [],
+      "logo": "https://i.imgur.com/RzAkP1V.png",
+      "tvg_id": "M95TelevisionMarbella.es@SD",
+      "alive": true,
+      "status_code": 200,
+      "error": null,
+      "state": "alive",
+      "ttfb_ms": 661,
+      "checked_at": "2026-07-02T10:58:54Z"
     },
     {
       "name": "Televisión Consciente (1080p)",
