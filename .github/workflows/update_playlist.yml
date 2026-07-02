@@ -6,6 +6,10 @@ on:
     - cron: '0 0,8,16 * * *'
   workflow_dispatch:
 
+concurrency:
+  group: automated-stream-grid-compilation
+  cancel-in-progress: false
+
 permissions:
   contents: write
 
@@ -53,5 +57,18 @@ jobs:
           git config --local user.name "GitHub Action Bot"
           git add public/playlist.m3u public/status.json public/dial_status.json
           if [ -f sources/discovered_mirrors.json ]; then git add sources/discovered_mirrors.json; fi
-          git diff --quiet && git diff --staged --quiet || git commit -m "chore: automated grid synchronization [skip ci]"
-          git push
+          if git diff --quiet && git diff --staged --quiet; then
+            echo "No hay cambios para publicar."
+            exit 0
+          fi
+          git commit -m "chore: automated grid synchronization [skip ci]"
+          for attempt in 1 2 3; do
+            git fetch origin main
+            git rebase origin/main
+            if git push origin HEAD:main; then
+              exit 0
+            fi
+            echo "Push rechazado en intento ${attempt}; reintentando..."
+          done
+          echo "No se pudo publicar tras varios intentos."
+          exit 1
