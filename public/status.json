@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-07-03T10:56:26Z",
-  "total": 296,
-  "alive": 290,
+  "generated_at": "2026-07-03T17:51:34Z",
+  "total": 299,
+  "alive": 293,
   "unstable": 6,
   "dead": 0,
   "channels": [
@@ -801,6 +801,21 @@
       "checked_at": "2026-07-02T04:06:33Z"
     },
     {
+      "name": "Canal 10 Durango (1080p)",
+      "group": "Familia y TV Abierta",
+      "country": "MX",
+      "url": "https://5e50264bd6766.streamlock.net/canal10durango/videocanal10durango/playlist.m3u8",
+      "backup_urls": [],
+      "logo": "https://i.imgur.com/H34quHQ.png",
+      "tvg_id": "Canal10Durango.mx@SD",
+      "alive": true,
+      "status_code": 200,
+      "error": null,
+      "state": "alive",
+      "ttfb_ms": 286,
+      "checked_at": "2026-07-03T17:51:25Z"
+    },
+    {
       "name": "ICRTV Colima (1080p)",
       "group": "Familia y TV Abierta",
       "country": "MX",
@@ -902,8 +917,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 354,
-      "checked_at": "2026-07-03T10:56:17Z"
+      "ttfb_ms": 395,
+      "checked_at": "2026-07-03T17:51:25Z"
     },
     {
       "name": "SIPSE TVCUN 8.1 (1080p) [Not 24/7]",
@@ -1129,6 +1144,21 @@
       "state": "alive",
       "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:33Z"
+    },
+    {
+      "name": "California Medios TV (720p)",
+      "group": "Familia y TV Abierta",
+      "country": "MX",
+      "url": "https://s5.mexside.net:1936/medios/medios/playlist.m3u8",
+      "backup_urls": [],
+      "logo": "https://i.imgur.com/IDvpRNI.png",
+      "tvg_id": "CaliforniaMediosTV.mx@SD",
+      "alive": true,
+      "status_code": 200,
+      "error": null,
+      "state": "alive",
+      "ttfb_ms": 424,
+      "checked_at": "2026-07-03T17:51:25Z"
     },
     {
       "name": "Canal 10 Chiapas (720p)",
@@ -1474,6 +1504,21 @@
       "state": "alive",
       "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:34Z"
+    },
+    {
+      "name": "Tele UV [Not 24/7]",
+      "group": "Familia y TV Abierta",
+      "country": "MX",
+      "url": "https://58fe359775f31.streamlock.net/tvuv/myStream/playlist.m3u8",
+      "backup_urls": [],
+      "logo": "https://i.imgur.com/8MdUH69.jpeg",
+      "tvg_id": "TeleUV.mx@SD",
+      "alive": true,
+      "status_code": 200,
+      "error": null,
+      "state": "alive",
+      "ttfb_ms": 643,
+      "checked_at": "2026-07-03T17:51:25Z"
     },
     {
       "name": "Popcorn Central (1080p)",
@@ -3377,8 +3422,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 574,
-      "checked_at": "2026-07-03T10:56:18Z"
+      "ttfb_ms": 479,
+      "checked_at": "2026-07-03T17:51:26Z"
     },
     {
       "name": "Canal 4 Mancha Centro (720p) [Not 24/7]",
@@ -3452,8 +3497,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 908,
-      "checked_at": "2026-07-03T10:56:18Z"
+      "ttfb_ms": 985,
+      "checked_at": "2026-07-03T17:51:26Z"
     },
     {
       "name": "Canal Málaga RTV (720p) [Not 24/7]",
@@ -3677,8 +3722,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 491,
-      "checked_at": "2026-07-03T10:56:18Z"
+      "ttfb_ms": 510,
+      "checked_at": "2026-07-03T17:51:26Z"
     },
     {
       "name": "Metro TV (720p)",
@@ -3782,8 +3827,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 844,
-      "checked_at": "2026-07-03T10:56:18Z"
+      "ttfb_ms": 776,
+      "checked_at": "2026-07-03T17:51:26Z"
     },
     {
       "name": "Más FM 95.9 (720p)",
@@ -4052,8 +4097,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 708,
-      "checked_at": "2026-07-03T10:56:18Z"
+      "ttfb_ms": 459,
+      "checked_at": "2026-07-03T17:51:26Z"
     },
     {
       "name": "Negocios TV (1080p)",
@@ -4067,8 +4112,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 679,
-      "checked_at": "2026-07-03T10:56:18Z"
+      "ttfb_ms": 717,
+      "checked_at": "2026-07-03T17:51:26Z"
     },
     {
       "name": "Televisión Consciente (1080p)",
