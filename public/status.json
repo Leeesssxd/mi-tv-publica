@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-07-03T03:55:55Z",
-  "total": 295,
-  "alive": 289,
+  "generated_at": "2026-07-03T10:56:26Z",
+  "total": 296,
+  "alive": 290,
   "unstable": 6,
   "dead": 0,
   "channels": [
@@ -902,8 +902,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 167,
-      "checked_at": "2026-07-03T03:55:45Z"
+      "ttfb_ms": 354,
+      "checked_at": "2026-07-03T10:56:17Z"
     },
     {
       "name": "SIPSE TVCUN 8.1 (1080p) [Not 24/7]",
@@ -3377,8 +3377,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 592,
-      "checked_at": "2026-07-03T03:55:46Z"
+      "ttfb_ms": 574,
+      "checked_at": "2026-07-03T10:56:18Z"
     },
     {
       "name": "Canal 4 Mancha Centro (720p) [Not 24/7]",
@@ -3439,6 +3439,21 @@
       "state": "alive",
       "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:36Z"
+    },
+    {
+      "name": "Canal Doñana (720p) [Not 24/7]",
+      "group": "Entretenimiento",
+      "country": "ES",
+      "url": "https://secure5.todostreaming.es/live/division-alm.m3u8",
+      "backup_urls": [],
+      "logo": "https://i.imgur.com/0WrKIxm.png",
+      "tvg_id": "CanalDonana.es@SD",
+      "alive": true,
+      "status_code": 200,
+      "error": null,
+      "state": "alive",
+      "ttfb_ms": 908,
+      "checked_at": "2026-07-03T10:56:18Z"
     },
     {
       "name": "Canal Málaga RTV (720p) [Not 24/7]",
@@ -3662,8 +3677,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 346,
-      "checked_at": "2026-07-03T03:55:46Z"
+      "ttfb_ms": 491,
+      "checked_at": "2026-07-03T10:56:18Z"
     },
     {
       "name": "Metro TV (720p)",
@@ -3767,8 +3782,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 820,
-      "checked_at": "2026-07-03T03:55:47Z"
+      "ttfb_ms": 844,
+      "checked_at": "2026-07-03T10:56:18Z"
     },
     {
       "name": "Más FM 95.9 (720p)",
@@ -4037,8 +4052,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 897,
-      "checked_at": "2026-07-03T03:55:46Z"
+      "ttfb_ms": 708,
+      "checked_at": "2026-07-03T10:56:18Z"
     },
     {
       "name": "Negocios TV (1080p)",
@@ -4052,8 +4067,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 911,
-      "checked_at": "2026-07-03T03:55:46Z"
+      "ttfb_ms": 679,
+      "checked_at": "2026-07-03T10:56:18Z"
     },
     {
       "name": "Televisión Consciente (1080p)",
