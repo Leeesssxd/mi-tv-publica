@@ -1,15 +1,30 @@
 {
-  "generated_at": "2026-07-03T17:51:34Z",
-  "total": 299,
-  "alive": 293,
+  "generated_at": "2026-07-04T03:50:45Z",
+  "total": 301,
+  "alive": 295,
   "unstable": 6,
   "dead": 0,
   "channels": [
     {
-      "name": "Imagen TV+ (720p)",
+      "name": "Azteca Uno (1080p)",
       "group": "Familia y TV Abierta",
       "country": "MX",
-      "url": "https://jmp2.uk/plu-64e35aff6b1fdb0008ea8441.m3u8",
+      "url": "http://45.189.62.33:8002/play/a0cc/index.m3u8",
+      "backup_urls": [],
+      "logo": "https://i.imgur.com/rRxgBtI.png",
+      "tvg_id": "AztecaUno.mx@SD",
+      "alive": true,
+      "status_code": 200,
+      "error": null,
+      "state": "alive",
+      "ttfb_ms": 95,
+      "checked_at": "2026-07-04T03:50:35Z"
+    },
+    {
+      "name": "Imagen TV (1080p)",
+      "group": "Familia y TV Abierta",
+      "country": "MX",
+      "url": "https://igd-it-runtime.otteravision.com/igd/it/it.m3u8",
       "backup_urls": [],
       "logo": "https://i.imgur.com/lKrRvtS.png",
       "tvg_id": "ImagenTV.mx@SD",
@@ -17,8 +32,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": null,
-      "checked_at": "2026-07-02T04:06:32Z"
+      "ttfb_ms": 197,
+      "checked_at": "2026-07-04T03:50:35Z"
     },
     {
       "name": "Canal 5 Televisa",
@@ -34,6 +49,21 @@
       "state": "alive",
       "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:33Z"
+    },
+    {
+      "name": "Azteca 7 (1080p)",
+      "group": "Familia y TV Abierta",
+      "country": "MX",
+      "url": "http://45.189.62.33:8002/play/a0fm/index.m3u8",
+      "backup_urls": [],
+      "logo": "https://i.imgur.com/UtFXjIn.png",
+      "tvg_id": "Azteca7.mx@SD",
+      "alive": true,
+      "status_code": 200,
+      "error": null,
+      "state": "alive",
+      "ttfb_ms": 93,
+      "checked_at": "2026-07-04T03:50:35Z"
     },
     {
       "name": "TUDN (1080p)",
@@ -186,10 +216,10 @@
       "checked_at": "2026-07-02T04:06:33Z"
     },
     {
-      "name": "ADN 40 (720p)",
+      "name": "ADN 40 (1080p)",
       "group": "Noticias",
       "country": "MX",
-      "url": "https://mdstrm.com/live-stream-playlist/60b578b060947317de7b57ac.m3u8",
+      "url": "http://45.189.62.33:8002/play/a0ob/index.m3u8",
       "backup_urls": [],
       "logo": "https://i.imgur.com/Og17U9N.png",
       "tvg_id": "ADN40.mx@SD",
@@ -197,8 +227,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": null,
-      "checked_at": "2026-07-02T04:06:34Z"
+      "ttfb_ms": 148,
+      "checked_at": "2026-07-04T03:50:35Z"
     },
     {
       "name": "Justicia TV (720p)",
@@ -561,6 +591,21 @@
       "checked_at": "2026-07-02T04:06:34Z"
     },
     {
+      "name": "Exa TV (576p)",
+      "group": "Entretenimiento",
+      "country": "MX",
+      "url": "http://45.189.62.33:8002/play/a0lr/index.m3u8",
+      "backup_urls": [],
+      "logo": "https://i.imgur.com/JWOqr1a.png",
+      "tvg_id": "ExaTV.mx@SD",
+      "alive": true,
+      "status_code": 200,
+      "error": null,
+      "state": "alive",
+      "ttfb_ms": 92,
+      "checked_at": "2026-07-04T03:50:35Z"
+    },
+    {
       "name": "Milenio Televisión (720p)",
       "group": "Noticias",
       "country": "MX",
@@ -801,21 +846,6 @@
       "checked_at": "2026-07-02T04:06:33Z"
     },
     {
-      "name": "Canal 10 Durango (1080p)",
-      "group": "Familia y TV Abierta",
-      "country": "MX",
-      "url": "https://5e50264bd6766.streamlock.net/canal10durango/videocanal10durango/playlist.m3u8",
-      "backup_urls": [],
-      "logo": "https://i.imgur.com/H34quHQ.png",
-      "tvg_id": "Canal10Durango.mx@SD",
-      "alive": true,
-      "status_code": 200,
-      "error": null,
-      "state": "alive",
-      "ttfb_ms": 286,
-      "checked_at": "2026-07-03T17:51:25Z"
-    },
-    {
       "name": "ICRTV Colima (1080p)",
       "group": "Familia y TV Abierta",
       "country": "MX",
@@ -917,8 +947,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 395,
-      "checked_at": "2026-07-03T17:51:25Z"
+      "ttfb_ms": 415,
+      "checked_at": "2026-07-04T03:50:35Z"
     },
     {
       "name": "SIPSE TVCUN 8.1 (1080p) [Not 24/7]",
@@ -1157,8 +1187,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 424,
-      "checked_at": "2026-07-03T17:51:25Z"
+      "ttfb_ms": 340,
+      "checked_at": "2026-07-04T03:50:35Z"
     },
     {
       "name": "Canal 10 Chiapas (720p)",
@@ -1506,21 +1536,6 @@
       "checked_at": "2026-07-02T04:06:34Z"
     },
     {
-      "name": "Tele UV [Not 24/7]",
-      "group": "Familia y TV Abierta",
-      "country": "MX",
-      "url": "https://58fe359775f31.streamlock.net/tvuv/myStream/playlist.m3u8",
-      "backup_urls": [],
-      "logo": "https://i.imgur.com/8MdUH69.jpeg",
-      "tvg_id": "TeleUV.mx@SD",
-      "alive": true,
-      "status_code": 200,
-      "error": null,
-      "state": "alive",
-      "ttfb_ms": 643,
-      "checked_at": "2026-07-03T17:51:25Z"
-    },
-    {
       "name": "Popcorn Central (1080p)",
       "group": "Peliculas - Cine",
       "country": "MX",
@@ -1564,6 +1579,21 @@
       "state": "alive",
       "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:33Z"
+    },
+    {
+      "name": "Once Ninas y Ninos (576p)",
+      "group": "Peliculas - Familiar",
+      "country": "MX",
+      "url": "http://45.189.62.33:8002/play/a0p7/index.m3u8",
+      "backup_urls": [],
+      "logo": "https://i.imgur.com/3JC7fko.png",
+      "tvg_id": "OnceNinasyNinos.mx@SD",
+      "alive": true,
+      "status_code": 200,
+      "error": null,
+      "state": "alive",
+      "ttfb_ms": 90,
+      "checked_at": "2026-07-04T03:50:35Z"
     },
     {
       "name": "Notigram TV (XHFGL-TDT) (1080p)",
@@ -1746,6 +1776,21 @@
       "checked_at": "2026-07-02T04:06:34Z"
     },
     {
+      "name": "Teleplay Sureste (720p)",
+      "group": "Entretenimiento",
+      "country": "MX",
+      "url": "https://player.tvstream.mx/livestream/teleplay/livehd/playlist.m3u8",
+      "backup_urls": [],
+      "logo": "https://i.imgur.com/MeV5N08.png",
+      "tvg_id": "TeleplaySureste.mx@SD",
+      "alive": true,
+      "status_code": 200,
+      "error": null,
+      "state": "alive",
+      "ttfb_ms": 543,
+      "checked_at": "2026-07-04T03:50:35Z"
+    },
+    {
       "name": "TV Migrante (720p)",
       "group": "Entretenimiento",
       "country": "MX",
@@ -1759,6 +1804,21 @@
       "state": "alive",
       "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:34Z"
+    },
+    {
+      "name": "La Mejor TV (576p)",
+      "group": "Entretenimiento",
+      "country": "MX",
+      "url": "http://45.189.62.33:8002/play/a0ls/index.m3u8",
+      "backup_urls": [],
+      "logo": "https://i.imgur.com/dSSBAPL.png",
+      "tvg_id": "LaMejorTV.mx@SD",
+      "alive": true,
+      "status_code": 200,
+      "error": null,
+      "state": "alive",
+      "ttfb_ms": 90,
+      "checked_at": "2026-07-04T03:50:35Z"
     },
     {
       "name": "TVMÁS (XHGV-TDT) (360p) [Not 24/7]",
@@ -1939,6 +1999,21 @@
       "state": "alive",
       "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:36Z"
+    },
+    {
+      "name": "Canal 11 de la Costa (720p)",
+      "group": "Familia y TV Abierta",
+      "country": "AR",
+      "url": "https://vivo.solumedia.com:19360/dadaproductora/dadaproductora.m3u8",
+      "backup_urls": [],
+      "logo": "https://i.imgur.com/yYExcq1.jpg",
+      "tvg_id": "Canal11delaCosta.ar@SD",
+      "alive": true,
+      "status_code": 200,
+      "error": null,
+      "state": "alive",
+      "ttfb_ms": 286,
+      "checked_at": "2026-07-04T03:50:36Z"
     },
     {
       "name": "MyTime movie network Spain (1080p)",
@@ -2886,6 +2961,21 @@
       "checked_at": "2026-07-02T04:06:35Z"
     },
     {
+      "name": "Fibwi (1080p) [Not 24/7]",
+      "group": "Entretenimiento",
+      "country": "ES",
+      "url": "https://hostcdn3.fibwi.com/fibwi_diario/index.fmp4.m3u8",
+      "backup_urls": [],
+      "logo": "https://i.imgur.com/4vcGzcC.png",
+      "tvg_id": "Fibwi.es@SD",
+      "alive": true,
+      "status_code": 200,
+      "error": null,
+      "state": "alive",
+      "ttfb_ms": 795,
+      "checked_at": "2026-07-04T03:50:36Z"
+    },
+    {
       "name": "Fuerteventura TV (1080p)",
       "group": "Entretenimiento",
       "country": "ES",
@@ -3396,6 +3486,21 @@
       "checked_at": "2026-07-02T04:06:36Z"
     },
     {
+      "name": "Canal 2 NexTV Rafaela (720p)",
+      "group": "Entretenimiento",
+      "country": "AR",
+      "url": "https://edge.enhdtv.com/nexthd/index.m3u8",
+      "backup_urls": [],
+      "logo": "https://i.imgur.com/hgj3CaR.jpeg",
+      "tvg_id": "Canal2NexTVRafaela.ar@SD",
+      "alive": true,
+      "status_code": 200,
+      "error": null,
+      "state": "alive",
+      "ttfb_ms": 240,
+      "checked_at": "2026-07-04T03:50:36Z"
+    },
+    {
       "name": "Canal 2000 La Solana (720p) [Not 24/7]",
       "group": "Entretenimiento",
       "country": "ES",
@@ -3422,8 +3527,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 479,
-      "checked_at": "2026-07-03T17:51:26Z"
+      "ttfb_ms": 405,
+      "checked_at": "2026-07-04T03:50:36Z"
     },
     {
       "name": "Canal 4 Mancha Centro (720p) [Not 24/7]",
@@ -3484,21 +3589,6 @@
       "state": "alive",
       "ttfb_ms": null,
       "checked_at": "2026-07-02T04:06:36Z"
-    },
-    {
-      "name": "Canal Doñana (720p) [Not 24/7]",
-      "group": "Entretenimiento",
-      "country": "ES",
-      "url": "https://secure5.todostreaming.es/live/division-alm.m3u8",
-      "backup_urls": [],
-      "logo": "https://i.imgur.com/0WrKIxm.png",
-      "tvg_id": "CanalDonana.es@SD",
-      "alive": true,
-      "status_code": 200,
-      "error": null,
-      "state": "alive",
-      "ttfb_ms": 985,
-      "checked_at": "2026-07-03T17:51:26Z"
     },
     {
       "name": "Canal Málaga RTV (720p) [Not 24/7]",
@@ -3711,21 +3801,6 @@
       "checked_at": "2026-07-02T04:06:37Z"
     },
     {
-      "name": "LiraTV (720p)",
-      "group": "Entretenimiento",
-      "country": "ES",
-      "url": "https://cloud2.streaminglivehd.com:1936/liratv/liratv/playlist.m3u8",
-      "backup_urls": [],
-      "logo": "https://i.imgur.com/hBswXYZ.png",
-      "tvg_id": "LiraTV.es@SD",
-      "alive": true,
-      "status_code": 200,
-      "error": null,
-      "state": "alive",
-      "ttfb_ms": 510,
-      "checked_at": "2026-07-03T17:51:26Z"
-    },
-    {
       "name": "Metro TV (720p)",
       "group": "Entretenimiento",
       "country": "AR",
@@ -3827,8 +3902,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 776,
-      "checked_at": "2026-07-03T17:51:26Z"
+      "ttfb_ms": 147,
+      "checked_at": "2026-07-04T03:50:36Z"
     },
     {
       "name": "Más FM 95.9 (720p)",
@@ -3846,6 +3921,21 @@
       "checked_at": "2026-07-02T04:06:37Z"
     },
     {
+      "name": "Neox TV (720p)",
+      "group": "Entretenimiento",
+      "country": "AR",
+      "url": "https://tv.streamcasthd.com:3031/live/neoxtvlive.m3u8",
+      "backup_urls": [],
+      "logo": "https://i.imgur.com/eIX71c9.png",
+      "tvg_id": "NeoxTV.ar@SD",
+      "alive": true,
+      "status_code": 200,
+      "error": null,
+      "state": "alive",
+      "ttfb_ms": 226,
+      "checked_at": "2026-07-04T03:50:36Z"
+    },
+    {
       "name": "NET TV (720p)",
       "group": "Entretenimiento",
       "country": "AR",
@@ -3853,51 +3943,6 @@
       "backup_urls": [],
       "logo": "https://i.imgur.com/IhJ0BjF.png",
       "tvg_id": "NETTV.ar@SD",
-      "alive": true,
-      "status_code": 200,
-      "error": null,
-      "state": "alive",
-      "ttfb_ms": null,
-      "checked_at": "2026-07-02T04:06:37Z"
-    },
-    {
-      "name": "NG Federal (720p)",
-      "group": "Entretenimiento",
-      "country": "AR",
-      "url": "http://www.coninfo.net:1935/tvlink/live/playlist.m3u8",
-      "backup_urls": [],
-      "logo": "https://i.imgur.com/lJCIqYn.png",
-      "tvg_id": "NGFederal.ar@SD",
-      "alive": true,
-      "status_code": 200,
-      "error": null,
-      "state": "alive",
-      "ttfb_ms": null,
-      "checked_at": "2026-07-02T04:06:37Z"
-    },
-    {
-      "name": "Onda Cádiz 24h (720p)",
-      "group": "Entretenimiento",
-      "country": "ES",
-      "url": "https://ondacadiztv.es:30443/octv/24h/playlist.m3u8",
-      "backup_urls": [],
-      "logo": "https://i.imgur.com/sOBMnby.png",
-      "tvg_id": "OndaCadiz.es@SD",
-      "alive": true,
-      "status_code": 200,
-      "error": null,
-      "state": "alive",
-      "ttfb_ms": null,
-      "checked_at": "2026-07-02T04:06:38Z"
-    },
-    {
-      "name": "Onda Valencia (720p)",
-      "group": "Entretenimiento",
-      "country": "ES",
-      "url": "https://cloudvideo.servers10.com:8081/8116/index.m3u8",
-      "backup_urls": [],
-      "logo": "https://i.imgur.com/6HxLUQd.png",
-      "tvg_id": "OndaValenciaTV.es@SD",
       "alive": true,
       "status_code": 200,
       "error": null,
@@ -4097,8 +4142,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 459,
-      "checked_at": "2026-07-03T17:51:26Z"
+      "ttfb_ms": 484,
+      "checked_at": "2026-07-04T03:50:36Z"
     },
     {
       "name": "Negocios TV (1080p)",
@@ -4112,8 +4157,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 717,
-      "checked_at": "2026-07-03T17:51:26Z"
+      "ttfb_ms": 580,
+      "checked_at": "2026-07-04T03:50:36Z"
     },
     {
       "name": "Televisión Consciente (1080p)",
@@ -4333,21 +4378,6 @@
       "backup_urls": [],
       "logo": "https://i.imgur.com/qkHrttj.png",
       "tvg_id": "LogosTVSalud.es@SD",
-      "alive": true,
-      "status_code": 200,
-      "error": null,
-      "state": "alive",
-      "ttfb_ms": null,
-      "checked_at": "2026-07-02T04:06:37Z"
-    },
-    {
-      "name": "Nova (720p)",
-      "group": "Otros",
-      "country": "ES",
-      "url": "http://40.160.24.55/Nova/index.m3u8",
-      "backup_urls": [],
-      "logo": "https://i.imgur.com/Vx1F4o5.png",
-      "tvg_id": "Nova.es@SD",
       "alive": true,
       "status_code": 200,
       "error": null,
