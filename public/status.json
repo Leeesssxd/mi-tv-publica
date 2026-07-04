@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-07-04T10:28:58Z",
-  "total": 302,
-  "alive": 296,
+  "generated_at": "2026-07-04T17:26:18Z",
+  "total": 304,
+  "alive": 298,
   "unstable": 6,
   "dead": 0,
   "channels": [
@@ -17,8 +17,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 144,
-      "checked_at": "2026-07-04T10:28:48Z"
+      "ttfb_ms": 123,
+      "checked_at": "2026-07-04T17:26:08Z"
     },
     {
       "name": "Imagen TV (1080p)",
@@ -32,8 +32,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 367,
-      "checked_at": "2026-07-04T10:28:49Z"
+      "ttfb_ms": 88,
+      "checked_at": "2026-07-04T17:26:08Z"
     },
     {
       "name": "Canal 5 Televisa",
@@ -62,8 +62,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 124,
-      "checked_at": "2026-07-04T10:28:48Z"
+      "ttfb_ms": 92,
+      "checked_at": "2026-07-04T17:26:08Z"
     },
     {
       "name": "TUDN (1080p)",
@@ -227,8 +227,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 129,
-      "checked_at": "2026-07-04T10:28:48Z"
+      "ttfb_ms": 102,
+      "checked_at": "2026-07-04T17:26:08Z"
     },
     {
       "name": "Justicia TV (720p)",
@@ -602,8 +602,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 126,
-      "checked_at": "2026-07-04T10:28:49Z"
+      "ttfb_ms": 89,
+      "checked_at": "2026-07-04T17:26:09Z"
     },
     {
       "name": "Milenio Televisión (720p)",
@@ -846,6 +846,21 @@
       "checked_at": "2026-07-02T04:06:33Z"
     },
     {
+      "name": "Canal 10 Durango (1080p)",
+      "group": "Familia y TV Abierta",
+      "country": "MX",
+      "url": "https://5e50264bd6766.streamlock.net/canal10durango/videocanal10durango/playlist.m3u8",
+      "backup_urls": [],
+      "logo": "https://i.imgur.com/H34quHQ.png",
+      "tvg_id": "Canal10Durango.mx@SD",
+      "alive": true,
+      "status_code": 200,
+      "error": null,
+      "state": "alive",
+      "ttfb_ms": 194,
+      "checked_at": "2026-07-04T17:26:09Z"
+    },
+    {
       "name": "ICRTV Colima (1080p)",
       "group": "Familia y TV Abierta",
       "country": "MX",
@@ -947,8 +962,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 284,
-      "checked_at": "2026-07-04T10:28:49Z"
+      "ttfb_ms": 539,
+      "checked_at": "2026-07-04T17:26:09Z"
     },
     {
       "name": "SIPSE TVCUN 8.1 (1080p) [Not 24/7]",
@@ -1187,8 +1202,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 432,
-      "checked_at": "2026-07-04T10:28:49Z"
+      "ttfb_ms": 399,
+      "checked_at": "2026-07-04T17:26:09Z"
     },
     {
       "name": "Canal 10 Chiapas (720p)",
@@ -1592,8 +1607,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 125,
-      "checked_at": "2026-07-04T10:28:49Z"
+      "ttfb_ms": 94,
+      "checked_at": "2026-07-04T17:26:09Z"
     },
     {
       "name": "Notigram TV (XHFGL-TDT) (1080p)",
@@ -1787,8 +1802,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 463,
-      "checked_at": "2026-07-04T10:28:49Z"
+      "ttfb_ms": 596,
+      "checked_at": "2026-07-04T17:26:09Z"
     },
     {
       "name": "TV Migrante (720p)",
@@ -1817,8 +1832,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 129,
-      "checked_at": "2026-07-04T10:28:49Z"
+      "ttfb_ms": 95,
+      "checked_at": "2026-07-04T17:26:09Z"
     },
     {
       "name": "TVMÁS (XHGV-TDT) (360p) [Not 24/7]",
@@ -2012,8 +2027,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 470,
-      "checked_at": "2026-07-04T10:28:50Z"
+      "ttfb_ms": 245,
+      "checked_at": "2026-07-04T17:26:09Z"
     },
     {
       "name": "MyTime movie network Spain (1080p)",
@@ -2961,6 +2976,21 @@
       "checked_at": "2026-07-02T04:06:35Z"
     },
     {
+      "name": "Fibwi (1080p) [Not 24/7]",
+      "group": "Entretenimiento",
+      "country": "ES",
+      "url": "https://hostcdn3.fibwi.com/fibwi_diario/index.fmp4.m3u8",
+      "backup_urls": [],
+      "logo": "https://i.imgur.com/4vcGzcC.png",
+      "tvg_id": "Fibwi.es@SD",
+      "alive": true,
+      "status_code": 200,
+      "error": null,
+      "state": "alive",
+      "ttfb_ms": 762,
+      "checked_at": "2026-07-04T17:26:10Z"
+    },
+    {
       "name": "Fuerteventura TV (1080p)",
       "group": "Entretenimiento",
       "country": "ES",
@@ -3482,8 +3512,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 368,
-      "checked_at": "2026-07-04T10:28:50Z"
+      "ttfb_ms": 176,
+      "checked_at": "2026-07-04T17:26:09Z"
     },
     {
       "name": "Canal 2000 La Solana (720p) [Not 24/7]",
@@ -3512,8 +3542,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 580,
-      "checked_at": "2026-07-04T10:28:50Z"
+      "ttfb_ms": 256,
+      "checked_at": "2026-07-04T17:26:09Z"
     },
     {
       "name": "Canal 4 Mancha Centro (720p) [Not 24/7]",
@@ -3587,8 +3617,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 1188,
-      "checked_at": "2026-07-04T10:28:51Z"
+      "ttfb_ms": 733,
+      "checked_at": "2026-07-04T17:26:10Z"
     },
     {
       "name": "Canal Málaga RTV (720p) [Not 24/7]",
@@ -3812,8 +3842,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 404,
-      "checked_at": "2026-07-04T10:28:50Z"
+      "ttfb_ms": 258,
+      "checked_at": "2026-07-04T17:26:09Z"
     },
     {
       "name": "Metro TV (720p)",
@@ -3917,8 +3947,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 841,
-      "checked_at": "2026-07-04T10:28:50Z"
+      "ttfb_ms": 805,
+      "checked_at": "2026-07-04T17:26:10Z"
     },
     {
       "name": "Más FM 95.9 (720p)",
@@ -3947,8 +3977,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 454,
-      "checked_at": "2026-07-04T10:28:50Z"
+      "ttfb_ms": 202,
+      "checked_at": "2026-07-04T17:26:10Z"
     },
     {
       "name": "NET TV (720p)",
@@ -4157,8 +4187,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 673,
-      "checked_at": "2026-07-04T10:28:50Z"
+      "ttfb_ms": 474,
+      "checked_at": "2026-07-04T17:26:09Z"
     },
     {
       "name": "Negocios TV (1080p)",
@@ -4172,8 +4202,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 771,
-      "checked_at": "2026-07-04T10:28:50Z"
+      "ttfb_ms": 647,
+      "checked_at": "2026-07-04T17:26:10Z"
     },
     {
       "name": "Televisión Consciente (1080p)",
