@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-07-05T10:35:08Z",
-  "total": 292,
-  "alive": 287,
+  "generated_at": "2026-07-05T17:31:38Z",
+  "total": 295,
+  "alive": 290,
   "unstable": 5,
   "dead": 0,
   "channels": [
@@ -17,8 +17,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 128,
-      "checked_at": "2026-07-05T10:34:57Z"
+      "ttfb_ms": 117,
+      "checked_at": "2026-07-05T17:31:27Z"
     },
     {
       "name": "Imagen TV (1080p)",
@@ -32,8 +32,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 210,
-      "checked_at": "2026-07-05T10:34:58Z"
+      "ttfb_ms": 196,
+      "checked_at": "2026-07-05T17:31:29Z"
     },
     {
       "name": "Canal 5 Televisa",
@@ -47,8 +47,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 161,
-      "checked_at": "2026-07-05T10:34:57Z"
+      "ttfb_ms": 113,
+      "checked_at": "2026-07-05T17:31:27Z"
     },
     {
       "name": "Azteca 7 (1080p)",
@@ -62,8 +62,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 136,
-      "checked_at": "2026-07-05T10:34:57Z"
+      "ttfb_ms": 83,
+      "checked_at": "2026-07-05T17:31:27Z"
     },
     {
       "name": "TUDN (1080p)",
@@ -77,8 +77,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 1326,
-      "checked_at": "2026-07-05T10:34:59Z"
+      "ttfb_ms": 676,
+      "checked_at": "2026-07-05T17:31:28Z"
     },
     {
       "name": "FIFA+ Spain (720p)",
@@ -92,8 +92,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 431,
-      "checked_at": "2026-07-05T10:34:58Z"
+      "ttfb_ms": 389,
+      "checked_at": "2026-07-05T17:31:28Z"
     },
     {
       "name": "FOX Sports (720p)",
@@ -107,8 +107,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 367,
-      "checked_at": "2026-07-05T10:34:58Z"
+      "ttfb_ms": 528,
+      "checked_at": "2026-07-05T17:31:28Z"
     },
     {
       "name": "ESPN",
@@ -122,8 +122,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 659,
-      "checked_at": "2026-07-05T10:34:59Z"
+      "ttfb_ms": 617,
+      "checked_at": "2026-07-05T17:31:29Z"
     },
     {
       "name": "Conecta TV (720p)",
@@ -137,8 +137,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 202,
-      "checked_at": "2026-07-05T10:34:59Z"
+      "ttfb_ms": 178,
+      "checked_at": "2026-07-05T17:31:29Z"
     },
     {
       "name": "Canal 6 Posadas (1080p)",
@@ -152,8 +152,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 1396,
-      "checked_at": "2026-07-05T10:35:01Z"
+      "ttfb_ms": 1299,
+      "checked_at": "2026-07-05T17:31:31Z"
     },
     {
       "name": "ITV Deportes (720p)",
@@ -167,8 +167,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 236,
-      "checked_at": "2026-07-05T10:34:57Z"
+      "ttfb_ms": 252,
+      "checked_at": "2026-07-05T17:31:27Z"
     },
     {
       "name": "TyC Sports (1080p)",
@@ -182,8 +182,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 324,
-      "checked_at": "2026-07-05T10:34:58Z"
+      "ttfb_ms": 399,
+      "checked_at": "2026-07-05T17:31:28Z"
     },
     {
       "name": "Jalisco TV (720p)",
@@ -197,8 +197,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 210,
-      "checked_at": "2026-07-05T10:34:59Z"
+      "ttfb_ms": 22,
+      "checked_at": "2026-07-05T17:31:29Z"
     },
     {
       "name": "Canal 22 Nacional (720p) [Geo-blocked]",
@@ -212,8 +212,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 25,
-      "checked_at": "2026-07-05T10:34:59Z"
+      "ttfb_ms": 66,
+      "checked_at": "2026-07-05T17:31:29Z"
     },
     {
       "name": "ADN 40 (1080p)",
@@ -227,8 +227,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 131,
-      "checked_at": "2026-07-05T10:34:58Z"
+      "ttfb_ms": 87,
+      "checked_at": "2026-07-05T17:31:28Z"
     },
     {
       "name": "Justicia TV (720p)",
@@ -242,8 +242,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 224,
-      "checked_at": "2026-07-05T10:34:59Z"
+      "ttfb_ms": 204,
+      "checked_at": "2026-07-05T17:31:29Z"
     },
     {
       "name": "like Gecko) Chrome/149.0.0.0 Safari/537.3\" group-title=\"Movies\",AXN (1080p)",
@@ -257,8 +257,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 623,
-      "checked_at": "2026-07-05T10:34:58Z"
+      "ttfb_ms": 781,
+      "checked_at": "2026-07-05T17:31:28Z"
     },
     {
       "name": "AXN Latin America Mexico",
@@ -272,8 +272,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 80,
-      "checked_at": "2026-07-05T10:34:58Z"
+      "ttfb_ms": 57,
+      "checked_at": "2026-07-05T17:31:28Z"
     },
     {
       "name": "Logos TV Kids (720p) [Not 24/7]",
@@ -287,8 +287,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 541,
-      "checked_at": "2026-07-05T10:35:02Z"
+      "ttfb_ms": 381,
+      "checked_at": "2026-07-05T17:31:32Z"
     },
     {
       "name": "Historia y Vida (720p)",
@@ -302,8 +302,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 105,
-      "checked_at": "2026-07-05T10:35:02Z"
+      "ttfb_ms": 1245,
+      "checked_at": "2026-07-05T17:31:33Z"
     },
     {
       "name": "Realmadrid TV (720p)",
@@ -317,8 +317,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 427,
-      "checked_at": "2026-07-05T10:34:58Z"
+      "ttfb_ms": 723,
+      "checked_at": "2026-07-05T17:31:28Z"
     },
     {
       "name": "RTV Vida (1080p)",
@@ -332,8 +332,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 621,
-      "checked_at": "2026-07-05T10:35:01Z"
+      "ttfb_ms": 517,
+      "checked_at": "2026-07-05T17:31:31Z"
     },
     {
       "name": "Actualidad 360 (1080p) [Geo-blocked]",
@@ -347,8 +347,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 424,
-      "checked_at": "2026-07-05T10:35:00Z"
+      "ttfb_ms": 253,
+      "checked_at": "2026-07-05T17:31:29Z"
     },
     {
       "name": "Real Madrid TV English [Geo-blocked]",
@@ -362,8 +362,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 120,
-      "checked_at": "2026-07-05T10:34:57Z"
+      "ttfb_ms": 491,
+      "checked_at": "2026-07-05T17:31:28Z"
     },
     {
       "name": "Telemundo Internacional (1080p)",
@@ -377,8 +377,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 212,
-      "checked_at": "2026-07-05T10:35:01Z"
+      "ttfb_ms": 170,
+      "checked_at": "2026-07-05T17:31:31Z"
     },
     {
       "name": "Comedy Central Latin America (1080p)",
@@ -392,8 +392,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 272,
-      "checked_at": "2026-07-05T10:34:58Z"
+      "ttfb_ms": 205,
+      "checked_at": "2026-07-05T17:31:28Z"
     },
     {
       "name": "Azteca Internacional (1080p)",
@@ -407,8 +407,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 365,
-      "checked_at": "2026-07-05T10:34:58Z"
+      "ttfb_ms": 376,
+      "checked_at": "2026-07-05T17:31:28Z"
     },
     {
       "name": "TVE Star HD (1080p)",
@@ -422,8 +422,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 99,
-      "checked_at": "2026-07-05T10:35:01Z"
+      "ttfb_ms": 449,
+      "checked_at": "2026-07-05T17:31:31Z"
     },
     {
       "name": "Clan TVE (1080p) [Geo-blocked]",
@@ -437,8 +437,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 809,
-      "checked_at": "2026-07-05T10:35:00Z"
+      "ttfb_ms": 688,
+      "checked_at": "2026-07-05T17:31:30Z"
     },
     {
       "name": "Nick Jr. Latin America (1080p)",
@@ -452,8 +452,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 223,
-      "checked_at": "2026-07-05T10:35:01Z"
+      "ttfb_ms": 183,
+      "checked_at": "2026-07-05T17:31:30Z"
     },
     {
       "name": "Disney Jr. Latin America North HD (1080p)",
@@ -467,8 +467,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 82,
-      "checked_at": "2026-07-05T10:35:00Z"
+      "ttfb_ms": 56,
+      "checked_at": "2026-07-05T17:31:30Z"
     },
     {
       "name": "Disney Channel Latin America Mexico (720p)",
@@ -482,8 +482,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 150,
-      "checked_at": "2026-07-05T10:35:02Z"
+      "ttfb_ms": 111,
+      "checked_at": "2026-07-05T17:31:31Z"
     },
     {
       "name": "EWTN Spain & Latin America (720p)",
@@ -497,8 +497,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 276,
-      "checked_at": "2026-07-05T10:34:57Z"
+      "ttfb_ms": 198,
+      "checked_at": "2026-07-05T17:31:27Z"
     },
     {
       "name": "Xtrema Cine Clasico",
@@ -512,8 +512,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 370,
-      "checked_at": "2026-07-05T10:34:59Z"
+      "ttfb_ms": 476,
+      "checked_at": "2026-07-05T17:31:28Z"
     },
     {
       "name": "Zylo Todo Novelas (1080p)",
@@ -527,8 +527,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 253,
-      "checked_at": "2026-07-05T10:35:01Z"
+      "ttfb_ms": 354,
+      "checked_at": "2026-07-05T17:31:31Z"
     },
     {
       "name": "Las Tortugas Ninja (720p)",
@@ -542,8 +542,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 706,
-      "checked_at": "2026-07-05T10:35:03Z"
+      "ttfb_ms": 674,
+      "checked_at": "2026-07-05T17:31:32Z"
     },
     {
       "name": "Diez TV Las Villas (1080p)",
@@ -557,8 +557,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 937,
-      "checked_at": "2026-07-05T10:35:01Z"
+      "ttfb_ms": 847,
+      "checked_at": "2026-07-05T17:31:30Z"
     },
     {
       "name": "Canal 3 Las Heras (720p)",
@@ -572,8 +572,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 44,
-      "checked_at": "2026-07-05T10:35:01Z"
+      "ttfb_ms": 4,
+      "checked_at": "2026-07-05T17:31:31Z"
     },
     {
       "name": "Panico (576p)",
@@ -587,8 +587,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 210,
-      "checked_at": "2026-07-05T10:34:59Z"
+      "ttfb_ms": 245,
+      "checked_at": "2026-07-05T17:31:29Z"
     },
     {
       "name": "Exa TV (576p)",
@@ -602,8 +602,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 123,
-      "checked_at": "2026-07-05T10:34:59Z"
+      "ttfb_ms": 87,
+      "checked_at": "2026-07-05T17:31:29Z"
     },
     {
       "name": "Milenio Televisión (720p)",
@@ -617,8 +617,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 661,
-      "checked_at": "2026-07-05T10:34:58Z"
+      "ttfb_ms": 512,
+      "checked_at": "2026-07-05T17:31:28Z"
     },
     {
       "name": "Canal 26 (1080p)",
@@ -632,8 +632,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 855,
-      "checked_at": "2026-07-05T10:34:58Z"
+      "ttfb_ms": 579,
+      "checked_at": "2026-07-05T17:31:28Z"
     },
     {
       "name": "Canal 26 Aguascalientes (1080p)",
@@ -647,8 +647,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 194,
-      "checked_at": "2026-07-05T10:34:57Z"
+      "ttfb_ms": 265,
+      "checked_at": "2026-07-05T17:31:27Z"
     },
     {
       "name": "SET Televisión Canal 26.1 (720p) [Not 24/7]",
@@ -662,8 +662,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 509,
-      "checked_at": "2026-07-05T10:34:58Z"
+      "ttfb_ms": 742,
+      "checked_at": "2026-07-05T17:31:28Z"
     },
     {
       "name": "SET Televisión Canal 26.2 (720p) [Not 24/7]",
@@ -677,8 +677,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 549,
-      "checked_at": "2026-07-05T10:34:58Z"
+      "ttfb_ms": 709,
+      "checked_at": "2026-07-05T17:31:28Z"
     },
     {
       "name": "RTN (Neuquén) (720p) [Not 24/7]",
@@ -692,8 +692,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 1624,
-      "checked_at": "2026-07-05T10:34:59Z"
+      "ttfb_ms": 1355,
+      "checked_at": "2026-07-05T17:31:29Z"
     },
     {
       "name": "Filmex (Xumo) (1080p) [Geo-blocked]",
@@ -707,8 +707,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 444,
-      "checked_at": "2026-07-05T10:34:58Z"
+      "ttfb_ms": 133,
+      "checked_at": "2026-07-05T17:31:27Z"
     },
     {
       "name": "Filmex Clásico (1080p) [Geo-blocked]",
@@ -722,8 +722,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 469,
-      "checked_at": "2026-07-05T10:34:58Z"
+      "ttfb_ms": 309,
+      "checked_at": "2026-07-05T17:31:28Z"
     },
     {
       "name": "Rakuten TV Comedy Movies Spain (1080p)",
@@ -737,8 +737,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 579,
-      "checked_at": "2026-07-05T10:34:58Z"
+      "ttfb_ms": 371,
+      "checked_at": "2026-07-05T17:31:28Z"
     },
     {
       "name": "Rakuten TV Action Movies Spain (1080p)",
@@ -752,8 +752,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 555,
-      "checked_at": "2026-07-05T10:34:58Z"
+      "ttfb_ms": 465,
+      "checked_at": "2026-07-05T17:31:28Z"
     },
     {
       "name": "Rakuten TV Family Movies Spain (1080p)",
@@ -767,8 +767,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 537,
-      "checked_at": "2026-07-05T10:34:58Z"
+      "ttfb_ms": 467,
+      "checked_at": "2026-07-05T17:31:28Z"
     },
     {
       "name": "Rakuten TV Top Movies Spain (1080p)",
@@ -782,8 +782,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 658,
-      "checked_at": "2026-07-05T10:34:58Z"
+      "ttfb_ms": 499,
+      "checked_at": "2026-07-05T17:31:28Z"
     },
     {
       "name": "Rakuten TV Drama Movies Spain (1080p)",
@@ -797,8 +797,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 571,
-      "checked_at": "2026-07-05T10:34:58Z"
+      "ttfb_ms": 483,
+      "checked_at": "2026-07-05T17:31:28Z"
     },
     {
       "name": "8NTV (1080p)",
@@ -812,8 +812,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 36,
-      "checked_at": "2026-07-05T10:34:58Z"
+      "ttfb_ms": 58,
+      "checked_at": "2026-07-05T17:31:28Z"
     },
     {
       "name": "B15 Fresnillo (1080p)",
@@ -827,8 +827,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 248,
-      "checked_at": "2026-07-05T10:34:59Z"
+      "ttfb_ms": 351,
+      "checked_at": "2026-07-05T17:31:28Z"
     },
     {
       "name": "B15 Zacatecas (1080p)",
@@ -842,8 +842,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 244,
-      "checked_at": "2026-07-05T10:34:59Z"
+      "ttfb_ms": 329,
+      "checked_at": "2026-07-05T17:31:28Z"
     },
     {
       "name": "Canal 10 Durango (1080p)",
@@ -857,8 +857,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 171,
-      "checked_at": "2026-07-05T10:34:58Z"
+      "ttfb_ms": 253,
+      "checked_at": "2026-07-05T17:31:29Z"
     },
     {
       "name": "ICRTV Colima (1080p)",
@@ -872,8 +872,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 101,
-      "checked_at": "2026-07-05T10:34:58Z"
+      "ttfb_ms": 304,
+      "checked_at": "2026-07-05T17:31:29Z"
     },
     {
       "name": "IERTBCS Canal 8 La Paz (1080p) [Not 24/7]",
@@ -887,8 +887,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 192,
-      "checked_at": "2026-07-05T10:34:59Z"
+      "ttfb_ms": 338,
+      "checked_at": "2026-07-05T17:31:29Z"
     },
     {
       "name": "IERTBCS Canal 8.2 La Paz (1080p) [Not 24/7]",
@@ -902,8 +902,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 182,
-      "checked_at": "2026-07-05T10:34:59Z"
+      "ttfb_ms": 338,
+      "checked_at": "2026-07-05T17:31:29Z"
     },
     {
       "name": "Nayarit Comunica (1080p)",
@@ -917,8 +917,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 405,
-      "checked_at": "2026-07-05T10:34:59Z"
+      "ttfb_ms": 306,
+      "checked_at": "2026-07-05T17:31:29Z"
     },
     {
       "name": "RCG TV (1080p)",
@@ -932,8 +932,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 285,
-      "checked_at": "2026-07-05T10:34:59Z"
+      "ttfb_ms": 60,
+      "checked_at": "2026-07-05T17:31:28Z"
     },
     {
       "name": "RTQ Querétaro (1080p)",
@@ -947,8 +947,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 381,
-      "checked_at": "2026-07-05T10:34:59Z"
+      "ttfb_ms": 200,
+      "checked_at": "2026-07-05T17:31:29Z"
     },
     {
       "name": "SIPSE TV 8.1 (1080p) [Not 24/7]",
@@ -962,8 +962,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 249,
-      "checked_at": "2026-07-05T10:34:59Z"
+      "ttfb_ms": 321,
+      "checked_at": "2026-07-05T17:31:29Z"
     },
     {
       "name": "SIPSE TVCUN 8.1 (1080p) [Not 24/7]",
@@ -977,8 +977,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 201,
-      "checked_at": "2026-07-05T10:34:59Z"
+      "ttfb_ms": 263,
+      "checked_at": "2026-07-05T17:31:29Z"
     },
     {
       "name": "Sistema Michoacano de TV (1080p) [Not 24/7]",
@@ -992,8 +992,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 36,
-      "checked_at": "2026-07-05T10:34:59Z"
+      "ttfb_ms": 64,
+      "checked_at": "2026-07-05T17:31:29Z"
     },
     {
       "name": "SQCS Canal 4 (1080p)",
@@ -1007,8 +1007,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 275,
-      "checked_at": "2026-07-05T10:34:59Z"
+      "ttfb_ms": 103,
+      "checked_at": "2026-07-05T17:31:29Z"
     },
     {
       "name": "Super Channel 12 (1080p)",
@@ -1022,8 +1022,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 282,
-      "checked_at": "2026-07-05T10:34:59Z"
+      "ttfb_ms": 196,
+      "checked_at": "2026-07-05T17:31:29Z"
     },
     {
       "name": "Tele Yucatan (1080p) [Geo-blocked]",
@@ -1037,8 +1037,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 110,
-      "checked_at": "2026-07-05T10:34:59Z"
+      "ttfb_ms": 160,
+      "checked_at": "2026-07-05T17:31:29Z"
     },
     {
       "name": "Telemax (XEWH-TDT) (1080p)",
@@ -1052,8 +1052,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 36,
-      "checked_at": "2026-07-05T10:34:59Z"
+      "ttfb_ms": 63,
+      "checked_at": "2026-07-05T17:31:29Z"
     },
     {
       "name": "TV Cuatro 4.1 (1080p)",
@@ -1067,8 +1067,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 100,
-      "checked_at": "2026-07-05T10:34:59Z"
+      "ttfb_ms": 339,
+      "checked_at": "2026-07-05T17:31:29Z"
     },
     {
       "name": "TV Cuatro 4.2 (1080p)",
@@ -1082,8 +1082,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 145,
-      "checked_at": "2026-07-05T10:34:59Z"
+      "ttfb_ms": 251,
+      "checked_at": "2026-07-05T17:31:29Z"
     },
     {
       "name": "TV Cuatro 4.3 (1080p)",
@@ -1097,8 +1097,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 171,
-      "checked_at": "2026-07-05T10:34:57Z"
+      "ttfb_ms": 378,
+      "checked_at": "2026-07-05T17:31:28Z"
     },
     {
       "name": "TV Cuatro 4.4 (1080p)",
@@ -1112,8 +1112,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 37,
-      "checked_at": "2026-07-05T10:34:59Z"
+      "ttfb_ms": 54,
+      "checked_at": "2026-07-05T17:31:29Z"
     },
     {
       "name": "TV Mar La Paz (1080p)",
@@ -1127,8 +1127,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 26,
-      "checked_at": "2026-07-05T10:34:59Z"
+      "ttfb_ms": 66,
+      "checked_at": "2026-07-05T17:31:29Z"
     },
     {
       "name": "TV Mar Los Cabos (1080p)",
@@ -1142,8 +1142,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 26,
-      "checked_at": "2026-07-05T10:34:59Z"
+      "ttfb_ms": 194,
+      "checked_at": "2026-07-05T17:31:29Z"
     },
     {
       "name": "TV Mar Puerto Vallarta (1080p)",
@@ -1157,8 +1157,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 38,
-      "checked_at": "2026-07-05T10:34:59Z"
+      "ttfb_ms": 60,
+      "checked_at": "2026-07-05T17:31:29Z"
     },
     {
       "name": "TV UG (1080p) [Not 24/7]",
@@ -1172,8 +1172,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 37,
-      "checked_at": "2026-07-05T10:34:59Z"
+      "ttfb_ms": 52,
+      "checked_at": "2026-07-05T17:31:29Z"
     },
     {
       "name": "UMTV (1080p) [Not 24/7]",
@@ -1187,8 +1187,23 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 36,
-      "checked_at": "2026-07-05T10:34:59Z"
+      "ttfb_ms": 58,
+      "checked_at": "2026-07-05T17:31:29Z"
+    },
+    {
+      "name": "Canal 10 Chiapas (720p)",
+      "group": "Familia y TV Abierta",
+      "country": "MX",
+      "url": "https://5ca9af4645e15.streamlock.net/chiapas/videochiapas/playlist.m3u8",
+      "backup_urls": [],
+      "logo": "https://i.imgur.com/dw6puHC.png",
+      "tvg_id": "XHTTGTDT.mx@SD",
+      "alive": true,
+      "status_code": 200,
+      "error": null,
+      "state": "alive",
+      "ttfb_ms": 182,
+      "checked_at": "2026-07-05T17:31:29Z"
     },
     {
       "name": "Canal 15 ILCE Summa Sabres (720p)",
@@ -1202,8 +1217,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 226,
-      "checked_at": "2026-07-05T10:34:59Z"
+      "ttfb_ms": 240,
+      "checked_at": "2026-07-05T17:31:29Z"
     },
     {
       "name": "Canal 33 Tijuana (720p)",
@@ -1217,8 +1232,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 41,
-      "checked_at": "2026-07-05T10:34:59Z"
+      "ttfb_ms": 181,
+      "checked_at": "2026-07-05T17:31:29Z"
     },
     {
       "name": "Canal 44 Chihuahua (720p) [Not 24/7]",
@@ -1232,8 +1247,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 39,
-      "checked_at": "2026-07-05T10:34:59Z"
+      "ttfb_ms": 60,
+      "checked_at": "2026-07-05T17:31:29Z"
     },
     {
       "name": "Lobo TV (720p)",
@@ -1247,8 +1262,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 36,
-      "checked_at": "2026-07-05T10:34:59Z"
+      "ttfb_ms": 53,
+      "checked_at": "2026-07-05T17:31:29Z"
     },
     {
       "name": "Mexiquense TV (720p)",
@@ -1262,8 +1277,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 115,
-      "checked_at": "2026-07-05T10:34:59Z"
+      "ttfb_ms": 182,
+      "checked_at": "2026-07-05T17:31:29Z"
     },
     {
       "name": "Nueve TV San Luís Potosí (720p)",
@@ -1277,8 +1292,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 38,
-      "checked_at": "2026-07-05T10:34:59Z"
+      "ttfb_ms": 60,
+      "checked_at": "2026-07-05T17:31:29Z"
     },
     {
       "name": "RTG (720p)",
@@ -1292,8 +1307,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 119,
-      "checked_at": "2026-07-05T10:34:59Z"
+      "ttfb_ms": 182,
+      "checked_at": "2026-07-05T17:31:29Z"
     },
     {
       "name": "SIZART Canal 24 (XHZHZ-TDT) (720p)",
@@ -1307,8 +1322,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 39,
-      "checked_at": "2026-07-05T10:34:59Z"
+      "ttfb_ms": 186,
+      "checked_at": "2026-07-05T17:31:29Z"
     },
     {
       "name": "TRC Televisión (720p)",
@@ -1322,8 +1337,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 168,
-      "checked_at": "2026-07-05T10:34:59Z"
+      "ttfb_ms": 422,
+      "checked_at": "2026-07-05T17:31:29Z"
     },
     {
       "name": "TV Lobo Durango (720p)",
@@ -1337,8 +1352,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 37,
-      "checked_at": "2026-07-05T10:34:59Z"
+      "ttfb_ms": 61,
+      "checked_at": "2026-07-05T17:31:29Z"
     },
     {
       "name": "TV Nuevo León Canal 28 (XHMNL-TDT) (720p)",
@@ -1352,8 +1367,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 37,
-      "checked_at": "2026-07-05T10:34:59Z"
+      "ttfb_ms": 63,
+      "checked_at": "2026-07-05T17:31:29Z"
     },
     {
       "name": "TV UJAT (XHUJAT-TDT) (720p) [Not 24/7]",
@@ -1367,8 +1382,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 38,
-      "checked_at": "2026-07-05T10:34:59Z"
+      "ttfb_ms": 60,
+      "checked_at": "2026-07-05T17:31:29Z"
     },
     {
       "name": "TVP Culiacán (720p) [Not 24/7]",
@@ -1382,8 +1397,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 37,
-      "checked_at": "2026-07-05T10:34:59Z"
+      "ttfb_ms": 53,
+      "checked_at": "2026-07-05T17:31:29Z"
     },
     {
       "name": "TVP Los Mochis (720p) [Not 24/7]",
@@ -1397,8 +1412,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 36,
-      "checked_at": "2026-07-05T10:34:59Z"
+      "ttfb_ms": 53,
+      "checked_at": "2026-07-05T17:31:29Z"
     },
     {
       "name": "TVP Mazatlán (720p) [Not 24/7]",
@@ -1412,8 +1427,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 38,
-      "checked_at": "2026-07-05T10:34:59Z"
+      "ttfb_ms": 165,
+      "checked_at": "2026-07-05T17:31:29Z"
     },
     {
       "name": "TVP Obregón (720p) [Not 24/7]",
@@ -1427,8 +1442,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 37,
-      "checked_at": "2026-07-05T10:34:59Z"
+      "ttfb_ms": 53,
+      "checked_at": "2026-07-05T17:31:29Z"
     },
     {
       "name": "Ultra TV Puebla (720p) [Not 24/7]",
@@ -1442,8 +1457,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 40,
-      "checked_at": "2026-07-05T10:34:59Z"
+      "ttfb_ms": 61,
+      "checked_at": "2026-07-05T17:31:29Z"
     },
     {
       "name": "Visión Televisión (720p)",
@@ -1457,8 +1472,23 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 723,
-      "checked_at": "2026-07-05T10:35:00Z"
+      "ttfb_ms": 427,
+      "checked_at": "2026-07-05T17:31:29Z"
+    },
+    {
+      "name": "Tlaxcala Televisión (360p) [Not 24/7]",
+      "group": "Familia y TV Abierta",
+      "country": "MX",
+      "url": "https://vid26.mega00.com:5443/live/streams/qNmc7nulmq8zPYZE1582752735050.m3u8",
+      "backup_urls": [],
+      "logo": "https://i.imgur.com/5vaEhfy.png",
+      "tvg_id": "TlaxcalaTV.mx@SD",
+      "alive": true,
+      "status_code": 200,
+      "error": null,
+      "state": "alive",
+      "ttfb_ms": 336,
+      "checked_at": "2026-07-05T17:31:29Z"
     },
     {
       "name": "Radiotele Morelia (352p)",
@@ -1472,8 +1502,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 168,
-      "checked_at": "2026-07-05T10:34:59Z"
+      "ttfb_ms": 183,
+      "checked_at": "2026-07-05T17:31:29Z"
     },
     {
       "name": "Antena TV",
@@ -1487,8 +1517,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 38,
-      "checked_at": "2026-07-05T10:34:59Z"
+      "ttfb_ms": 60,
+      "checked_at": "2026-07-05T17:31:29Z"
     },
     {
       "name": "Tele Saltillo",
@@ -1502,8 +1532,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 301,
-      "checked_at": "2026-07-05T10:35:00Z"
+      "ttfb_ms": 121,
+      "checked_at": "2026-07-05T17:31:29Z"
     },
     {
       "name": "Popcorn Central (1080p)",
@@ -1517,8 +1547,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 391,
-      "checked_at": "2026-07-05T10:34:58Z"
+      "ttfb_ms": 353,
+      "checked_at": "2026-07-05T17:31:28Z"
     },
     {
       "name": "MyTime Movie Network Mexico (720p)",
@@ -1532,8 +1562,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 423,
-      "checked_at": "2026-07-05T10:34:58Z"
+      "ttfb_ms": 243,
+      "checked_at": "2026-07-05T17:31:28Z"
     },
     {
       "name": "El Chavo TV (720p)",
@@ -1547,8 +1577,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 35,
-      "checked_at": "2026-07-05T10:34:59Z"
+      "ttfb_ms": 18,
+      "checked_at": "2026-07-05T17:31:29Z"
     },
     {
       "name": "Once Ninas y Ninos (576p)",
@@ -1562,8 +1592,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 124,
-      "checked_at": "2026-07-05T10:34:59Z"
+      "ttfb_ms": 87,
+      "checked_at": "2026-07-05T17:31:29Z"
     },
     {
       "name": "Notigram TV (XHFGL-TDT) (1080p)",
@@ -1577,8 +1607,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 148,
-      "checked_at": "2026-07-05T10:34:59Z"
+      "ttfb_ms": 255,
+      "checked_at": "2026-07-05T17:31:29Z"
     },
     {
       "name": "AMX Noticias (720p) [Not 24/7]",
@@ -1592,8 +1622,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 41,
-      "checked_at": "2026-07-05T10:34:59Z"
+      "ttfb_ms": 60,
+      "checked_at": "2026-07-05T17:31:29Z"
     },
     {
       "name": "Canal Parlamento del Congreso de Jalisco (720p) [Not 24/7]",
@@ -1607,8 +1637,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 37,
-      "checked_at": "2026-07-05T10:34:59Z"
+      "ttfb_ms": 60,
+      "checked_at": "2026-07-05T17:31:29Z"
     },
     {
       "name": "CreaLaTV (1080p)",
@@ -1622,8 +1652,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 573,
-      "checked_at": "2026-07-05T10:34:59Z"
+      "ttfb_ms": 438,
+      "checked_at": "2026-07-05T17:31:29Z"
     },
     {
       "name": "VB Media TV (1080p)",
@@ -1637,8 +1667,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 343,
-      "checked_at": "2026-07-05T10:34:59Z"
+      "ttfb_ms": 325,
+      "checked_at": "2026-07-05T17:31:29Z"
     },
     {
       "name": "ZAZ (1080p)",
@@ -1652,8 +1682,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 464,
-      "checked_at": "2026-07-05T10:34:59Z"
+      "ttfb_ms": 354,
+      "checked_at": "2026-07-05T17:31:29Z"
     },
     {
       "name": "Eclipse TV (720p)",
@@ -1667,8 +1697,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 246,
-      "checked_at": "2026-07-05T10:34:59Z"
+      "ttfb_ms": 160,
+      "checked_at": "2026-07-05T17:31:29Z"
     },
     {
       "name": "Expresa TV (720p)",
@@ -1682,8 +1712,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 39,
-      "checked_at": "2026-07-05T10:34:59Z"
+      "ttfb_ms": 184,
+      "checked_at": "2026-07-05T17:31:29Z"
     },
     {
       "name": "Presumiendo México (720p)",
@@ -1697,8 +1727,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 38,
-      "checked_at": "2026-07-05T10:34:59Z"
+      "ttfb_ms": 58,
+      "checked_at": "2026-07-05T17:31:29Z"
     },
     {
       "name": "Raly TV (720p)",
@@ -1712,8 +1742,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 785,
-      "checked_at": "2026-07-05T10:35:00Z"
+      "ttfb_ms": 517,
+      "checked_at": "2026-07-05T17:31:29Z"
     },
     {
       "name": "Señal España (XHUNES-TDT) (720p)",
@@ -1727,8 +1757,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 273,
-      "checked_at": "2026-07-05T10:34:59Z"
+      "ttfb_ms": 47,
+      "checked_at": "2026-07-05T17:31:29Z"
     },
     {
       "name": "Teleplay Sureste (720p)",
@@ -1742,8 +1772,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 425,
-      "checked_at": "2026-07-05T10:34:59Z"
+      "ttfb_ms": 513,
+      "checked_at": "2026-07-05T17:31:29Z"
     },
     {
       "name": "TV Migrante (720p)",
@@ -1757,8 +1787,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 36,
-      "checked_at": "2026-07-05T10:34:59Z"
+      "ttfb_ms": 61,
+      "checked_at": "2026-07-05T17:31:29Z"
     },
     {
       "name": "La Mejor TV (576p)",
@@ -1772,8 +1802,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 123,
-      "checked_at": "2026-07-05T10:34:59Z"
+      "ttfb_ms": 85,
+      "checked_at": "2026-07-05T17:31:29Z"
     },
     {
       "name": "TVMÁS (XHGV-TDT) (360p) [Not 24/7]",
@@ -1787,8 +1817,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 41,
-      "checked_at": "2026-07-05T10:34:59Z"
+      "ttfb_ms": 63,
+      "checked_at": "2026-07-05T17:31:29Z"
     },
     {
       "name": "CB TV Michoacan",
@@ -1802,8 +1832,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 36,
-      "checked_at": "2026-07-05T10:34:59Z"
+      "ttfb_ms": 161,
+      "checked_at": "2026-07-05T17:31:29Z"
     },
     {
       "name": "Monte Maria (1080p)",
@@ -1817,8 +1847,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 143,
-      "checked_at": "2026-07-05T10:34:59Z"
+      "ttfb_ms": 266,
+      "checked_at": "2026-07-05T17:31:29Z"
     },
     {
       "name": "Alcance TV (720p)",
@@ -1832,8 +1862,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 373,
-      "checked_at": "2026-07-05T10:34:59Z"
+      "ttfb_ms": 71,
+      "checked_at": "2026-07-05T17:31:29Z"
     },
     {
       "name": "Turistik TV (720p)",
@@ -1847,8 +1877,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 430,
-      "checked_at": "2026-07-05T10:34:59Z"
+      "ttfb_ms": 181,
+      "checked_at": "2026-07-05T17:31:29Z"
     },
     {
       "name": "WeatherSpy (720p)",
@@ -1862,8 +1892,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 252,
-      "checked_at": "2026-07-05T10:34:59Z"
+      "ttfb_ms": 245,
+      "checked_at": "2026-07-05T17:31:29Z"
     },
     {
       "name": "María Visión Mexico (360p) [Not 24/7]",
@@ -1877,8 +1907,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 198,
-      "checked_at": "2026-07-05T10:34:59Z"
+      "ttfb_ms": 88,
+      "checked_at": "2026-07-05T17:31:29Z"
     },
     {
       "name": "Bravo TV (1080p)",
@@ -1892,8 +1922,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 1303,
-      "checked_at": "2026-07-05T10:35:01Z"
+      "ttfb_ms": 1133,
+      "checked_at": "2026-07-05T17:31:30Z"
     },
     {
       "name": "Canal 21 TV (1080p)",
@@ -1907,8 +1937,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 1561,
-      "checked_at": "2026-07-05T10:35:01Z"
+      "ttfb_ms": 1245,
+      "checked_at": "2026-07-05T17:31:31Z"
     },
     {
       "name": "El Trece (1080p)",
@@ -1922,8 +1952,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 731,
-      "checked_at": "2026-07-05T10:35:00Z"
+      "ttfb_ms": 820,
+      "checked_at": "2026-07-05T17:31:30Z"
     },
     {
       "name": "Estrella TV (1080p)",
@@ -1937,8 +1967,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 223,
-      "checked_at": "2026-07-05T10:35:00Z"
+      "ttfb_ms": 398,
+      "checked_at": "2026-07-05T17:31:30Z"
     },
     {
       "name": "Canal 11 de la Costa (720p)",
@@ -1952,8 +1982,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 136,
-      "checked_at": "2026-07-05T10:35:01Z"
+      "ttfb_ms": 40,
+      "checked_at": "2026-07-05T17:31:31Z"
     },
     {
       "name": "MyTime movie network Spain (1080p)",
@@ -1967,8 +1997,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 339,
-      "checked_at": "2026-07-05T10:34:58Z"
+      "ttfb_ms": 310,
+      "checked_at": "2026-07-05T17:31:28Z"
     },
     {
       "name": "Zylo Cine Friki (1080p)",
@@ -1982,8 +2012,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 561,
-      "checked_at": "2026-07-05T10:34:58Z"
+      "ttfb_ms": 614,
+      "checked_at": "2026-07-05T17:31:28Z"
     },
     {
       "name": "Zylo Cine Western (1080p)",
@@ -1997,8 +2027,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 562,
-      "checked_at": "2026-07-05T10:34:58Z"
+      "ttfb_ms": 575,
+      "checked_at": "2026-07-05T17:31:28Z"
     },
     {
       "name": "Cosmos Tv",
@@ -2012,8 +2042,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 415,
-      "checked_at": "2026-07-05T10:34:58Z"
+      "ttfb_ms": 576,
+      "checked_at": "2026-07-05T17:31:28Z"
     },
     {
       "name": "Paramount Network de Pluto TV",
@@ -2027,8 +2057,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 667,
-      "checked_at": "2026-07-05T10:34:58Z"
+      "ttfb_ms": 661,
+      "checked_at": "2026-07-05T17:31:28Z"
     },
     {
       "name": "Pluto TV Catástrofes",
@@ -2042,8 +2072,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 751,
-      "checked_at": "2026-07-05T10:34:59Z"
+      "ttfb_ms": 796,
+      "checked_at": "2026-07-05T17:31:29Z"
     },
     {
       "name": "Pluto TV Cine Acción",
@@ -2057,8 +2087,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 868,
-      "checked_at": "2026-07-05T10:34:59Z"
+      "ttfb_ms": 673,
+      "checked_at": "2026-07-05T17:31:28Z"
     },
     {
       "name": "Pluto TV Cine Clásico",
@@ -2072,8 +2102,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 749,
-      "checked_at": "2026-07-05T10:34:59Z"
+      "ttfb_ms": 312,
+      "checked_at": "2026-07-05T17:31:28Z"
     },
     {
       "name": "Pluto TV Cine de autor",
@@ -2087,8 +2117,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 720,
-      "checked_at": "2026-07-05T10:34:59Z"
+      "ttfb_ms": 716,
+      "checked_at": "2026-07-05T17:31:29Z"
     },
     {
       "name": "Pluto TV Cine Estelar",
@@ -2102,8 +2132,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 884,
-      "checked_at": "2026-07-05T10:34:59Z"
+      "ttfb_ms": 745,
+      "checked_at": "2026-07-05T17:31:29Z"
     },
     {
       "name": "Pluto TV Cine Romántico",
@@ -2117,8 +2147,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 777,
-      "checked_at": "2026-07-05T10:34:59Z"
+      "ttfb_ms": 727,
+      "checked_at": "2026-07-05T17:31:29Z"
     },
     {
       "name": "Pluto TV Invasión Alien",
@@ -2132,8 +2162,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 761,
-      "checked_at": "2026-07-05T10:34:59Z"
+      "ttfb_ms": 705,
+      "checked_at": "2026-07-05T17:31:29Z"
     },
     {
       "name": "Pluto TV Paranormal",
@@ -2147,23 +2177,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 710,
-      "checked_at": "2026-07-05T10:34:59Z"
-    },
-    {
-      "name": "Pluto TV Psycho",
-      "group": "Peliculas - Cine",
-      "country": "DE",
-      "url": "https://jmp2.uk/plu-65ce480a78df2200131c597b.m3u8",
-      "backup_urls": [],
-      "logo": "https://images.pluto.tv/channels/65ce480a78df2200131c597b/colorLogoPNG.png",
-      "tvg_id": "PlutoTVPsycho.de@ES",
-      "alive": true,
-      "status_code": 200,
-      "error": null,
-      "state": "alive",
-      "ttfb_ms": 743,
-      "checked_at": "2026-07-05T10:34:59Z"
+      "ttfb_ms": 297,
+      "checked_at": "2026-07-05T17:31:28Z"
     },
     {
       "name": "Pluto TV Thrillers",
@@ -2177,8 +2192,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 709,
-      "checked_at": "2026-07-05T10:34:59Z"
+      "ttfb_ms": 750,
+      "checked_at": "2026-07-05T17:31:29Z"
     },
     {
       "name": "Pluto TV Western",
@@ -2192,8 +2207,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 707,
-      "checked_at": "2026-07-05T10:34:59Z"
+      "ttfb_ms": 698,
+      "checked_at": "2026-07-05T17:31:29Z"
     },
     {
       "name": "SensaCine TV x Pluto",
@@ -2207,8 +2222,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 699,
-      "checked_at": "2026-07-05T10:34:59Z"
+      "ttfb_ms": 740,
+      "checked_at": "2026-07-05T17:31:29Z"
     },
     {
       "name": "Xtrema Accion",
@@ -2222,8 +2237,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 437,
-      "checked_at": "2026-07-05T10:34:59Z"
+      "ttfb_ms": 363,
+      "checked_at": "2026-07-05T17:31:28Z"
     },
     {
       "name": "3Cat Plats bruts (1080p)",
@@ -2237,8 +2252,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 621,
-      "checked_at": "2026-07-05T10:34:58Z"
+      "ttfb_ms": 418,
+      "checked_at": "2026-07-05T17:31:28Z"
     },
     {
       "name": "BBC Drama (1080p)",
@@ -2252,8 +2267,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 225,
-      "checked_at": "2026-07-05T10:35:00Z"
+      "ttfb_ms": 331,
+      "checked_at": "2026-07-05T17:31:30Z"
     },
     {
       "name": "Rakuten Viki (1080p)",
@@ -2267,8 +2282,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 208,
-      "checked_at": "2026-07-05T10:35:01Z"
+      "ttfb_ms": 286,
+      "checked_at": "2026-07-05T17:31:31Z"
     },
     {
       "name": "Medium",
@@ -2282,8 +2297,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 661,
-      "checked_at": "2026-07-05T10:34:58Z"
+      "ttfb_ms": 341,
+      "checked_at": "2026-07-05T17:31:28Z"
     },
     {
       "name": "Pluto TV Cine Drama",
@@ -2297,8 +2312,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 776,
-      "checked_at": "2026-07-05T10:34:59Z"
+      "ttfb_ms": 743,
+      "checked_at": "2026-07-05T17:31:29Z"
     },
     {
       "name": "Pluto TV Horror",
@@ -2312,8 +2327,23 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 684,
-      "checked_at": "2026-07-05T10:34:59Z"
+      "ttfb_ms": 694,
+      "checked_at": "2026-07-05T17:31:29Z"
+    },
+    {
+      "name": "Pluto TV Sci-Fi",
+      "group": "Peliculas - Drama y Series",
+      "country": "DE",
+      "url": "https://jmp2.uk/plu-5f6a38eaa5b68b0007a00e7a.m3u8",
+      "backup_urls": [],
+      "logo": "https://images.pluto.tv/channels/60ed498c4248a400077c0b9d/colorLogoPNG.png",
+      "tvg_id": "PlutoTVSciFi.de@ES",
+      "alive": true,
+      "status_code": 200,
+      "error": null,
+      "state": "alive",
+      "ttfb_ms": 963,
+      "checked_at": "2026-07-05T17:31:29Z"
     },
     {
       "name": "Pluto TV Zombies",
@@ -2327,8 +2357,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 659,
-      "checked_at": "2026-07-05T10:34:59Z"
+      "ttfb_ms": 47,
+      "checked_at": "2026-07-05T17:31:28Z"
     },
     {
       "name": "Star Trek: Voyager",
@@ -2342,8 +2372,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 705,
-      "checked_at": "2026-07-05T10:34:59Z"
+      "ttfb_ms": 715,
+      "checked_at": "2026-07-05T17:31:29Z"
     },
     {
       "name": "Comedia a lo bestia de Pluto TV",
@@ -2357,8 +2387,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 718,
-      "checked_at": "2026-07-05T10:34:58Z"
+      "ttfb_ms": 340,
+      "checked_at": "2026-07-05T17:31:28Z"
     },
     {
       "name": "Pluto TV Cine Comedia",
@@ -2372,8 +2402,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 897,
-      "checked_at": "2026-07-05T10:34:59Z"
+      "ttfb_ms": 686,
+      "checked_at": "2026-07-05T17:31:29Z"
     },
     {
       "name": "Pluto TV Comedia made in Spain",
@@ -2387,8 +2417,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 728,
-      "checked_at": "2026-07-05T10:34:58Z"
+      "ttfb_ms": 779,
+      "checked_at": "2026-07-05T17:31:28Z"
     },
     {
       "name": "Pluto TV Comedias Románticas",
@@ -2402,8 +2432,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 704,
-      "checked_at": "2026-07-05T10:34:58Z"
+      "ttfb_ms": 815,
+      "checked_at": "2026-07-05T17:31:28Z"
     },
     {
       "name": "Xtrema Terror",
@@ -2417,8 +2447,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 335,
-      "checked_at": "2026-07-05T10:34:58Z"
+      "ttfb_ms": 447,
+      "checked_at": "2026-07-05T17:31:28Z"
     },
     {
       "name": "Estrella Games (1080p)",
@@ -2432,8 +2462,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 233,
-      "checked_at": "2026-07-05T10:35:00Z"
+      "ttfb_ms": 363,
+      "checked_at": "2026-07-05T17:31:30Z"
     },
     {
       "name": "Mr. Bean Anime Spain (1080p)",
@@ -2447,8 +2477,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 399,
-      "checked_at": "2026-07-05T10:35:01Z"
+      "ttfb_ms": 365,
+      "checked_at": "2026-07-05T17:31:31Z"
     },
     {
       "name": "Plim Plim (1080p)",
@@ -2462,8 +2492,23 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 292,
-      "checked_at": "2026-07-05T10:35:01Z"
+      "ttfb_ms": 256,
+      "checked_at": "2026-07-05T17:31:31Z"
+    },
+    {
+      "name": "Bob Esponja (720p)",
+      "group": "Peliculas - Familiar",
+      "country": "DE",
+      "url": "https://jmp2.uk/plu-5f1aca0b4e448e00075e7c5e.m3u8",
+      "backup_urls": [],
+      "logo": "https://images.pluto.tv/channels/5f1aca0b4e448e00075e7c5e/colorLogoPNG.png",
+      "tvg_id": "BobEsponja.de@ES",
+      "alive": true,
+      "status_code": 200,
+      "error": null,
+      "state": "alive",
+      "ttfb_ms": 721,
+      "checked_at": "2026-07-05T17:31:32Z"
     },
     {
       "name": "NatureTime (1080p)",
@@ -2477,8 +2522,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 351,
-      "checked_at": "2026-07-05T10:35:01Z"
+      "ttfb_ms": 225,
+      "checked_at": "2026-07-05T17:31:30Z"
     },
     {
       "name": "Alterna TV (720p) [Not 24/7]",
@@ -2492,8 +2537,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 930,
-      "checked_at": "2026-07-05T10:34:59Z"
+      "ttfb_ms": 1075,
+      "checked_at": "2026-07-05T17:31:29Z"
     },
     {
       "name": "Crimen & Historia (720p)",
@@ -2507,8 +2552,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 85,
-      "checked_at": "2026-07-05T10:35:02Z"
+      "ttfb_ms": 82,
+      "checked_at": "2026-07-05T17:31:31Z"
     },
     {
       "name": "Esport3 (1080p) [Not 24/7]",
@@ -2522,8 +2567,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 646,
-      "checked_at": "2026-07-05T10:34:58Z"
+      "ttfb_ms": 602,
+      "checked_at": "2026-07-05T17:31:28Z"
     },
     {
       "name": "Red Bull TV ES (1080p)",
@@ -2537,8 +2582,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 349,
-      "checked_at": "2026-07-05T10:34:58Z"
+      "ttfb_ms": 479,
+      "checked_at": "2026-07-05T17:31:28Z"
     },
     {
       "name": "Gol (720p)",
@@ -2552,8 +2597,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 116,
-      "checked_at": "2026-07-05T10:34:57Z"
+      "ttfb_ms": 172,
+      "checked_at": "2026-07-05T17:31:27Z"
     },
     {
       "name": "Pluto TV Snooker 900 (720p)",
@@ -2567,8 +2612,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 705,
-      "checked_at": "2026-07-05T10:34:58Z"
+      "ttfb_ms": 977,
+      "checked_at": "2026-07-05T17:31:28Z"
     },
     {
       "name": "Teledeporte (720p) [Geo-blocked]",
@@ -2582,8 +2627,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 543,
-      "checked_at": "2026-07-05T10:34:58Z"
+      "ttfb_ms": 144,
+      "checked_at": "2026-07-05T17:31:27Z"
     },
     {
       "name": "Estrella News (1080p)",
@@ -2597,8 +2642,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 318,
-      "checked_at": "2026-07-05T10:35:00Z"
+      "ttfb_ms": 591,
+      "checked_at": "2026-07-05T17:31:30Z"
     },
     {
       "name": "Canal E (720p)",
@@ -2612,8 +2657,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 46,
-      "checked_at": "2026-07-05T10:35:02Z"
+      "ttfb_ms": 60,
+      "checked_at": "2026-07-05T17:31:31Z"
     },
     {
       "name": "IP Noticias (720p)",
@@ -2627,8 +2672,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 455,
-      "checked_at": "2026-07-05T10:35:02Z"
+      "ttfb_ms": 296,
+      "checked_at": "2026-07-05T17:31:32Z"
     },
     {
       "name": "Aire de Santa Fe (1080p)",
@@ -2642,8 +2687,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 554,
-      "checked_at": "2026-07-05T10:35:00Z"
+      "ttfb_ms": 741,
+      "checked_at": "2026-07-05T17:31:30Z"
     },
     {
       "name": "Arabí TV (1080p)",
@@ -2657,8 +2702,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 824,
-      "checked_at": "2026-07-05T10:35:00Z"
+      "ttfb_ms": 544,
+      "checked_at": "2026-07-05T17:31:30Z"
     },
     {
       "name": "Canal 2 de Ushuaia (1080p)",
@@ -2672,8 +2717,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 852,
-      "checked_at": "2026-07-05T10:35:00Z"
+      "ttfb_ms": 762,
+      "checked_at": "2026-07-05T17:31:30Z"
     },
     {
       "name": "Canal 2 Misiones (1080p)",
@@ -2687,8 +2732,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 860,
-      "checked_at": "2026-07-05T10:35:00Z"
+      "ttfb_ms": 781,
+      "checked_at": "2026-07-05T17:31:30Z"
     },
     {
       "name": "Canal 3 La Pampa (1080p)",
@@ -2702,8 +2747,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 564,
-      "checked_at": "2026-07-05T10:35:00Z"
+      "ttfb_ms": 184,
+      "checked_at": "2026-07-05T17:31:29Z"
     },
     {
       "name": "Canal 7 Neuquén (1080p)",
@@ -2717,8 +2762,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 452,
-      "checked_at": "2026-07-05T10:35:00Z"
+      "ttfb_ms": 107,
+      "checked_at": "2026-07-05T17:31:29Z"
     },
     {
       "name": "Canal 7 Salta (1080p)",
@@ -2732,8 +2777,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 415,
-      "checked_at": "2026-07-05T10:35:00Z"
+      "ttfb_ms": 365,
+      "checked_at": "2026-07-05T17:31:30Z"
     },
     {
       "name": "Canal Coín (1080p)",
@@ -2747,8 +2792,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 543,
-      "checked_at": "2026-07-05T10:35:00Z"
+      "ttfb_ms": 503,
+      "checked_at": "2026-07-05T17:31:30Z"
     },
     {
       "name": "Canal San Roque (1080p) [Not 24/7]",
@@ -2762,8 +2807,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 431,
-      "checked_at": "2026-07-05T10:35:00Z"
+      "ttfb_ms": 482,
+      "checked_at": "2026-07-05T17:31:30Z"
     },
     {
       "name": "Canal Sierra de Cádiz (1080p) [Not 24/7]",
@@ -2777,8 +2822,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 381,
-      "checked_at": "2026-07-05T10:35:00Z"
+      "ttfb_ms": 296,
+      "checked_at": "2026-07-05T17:31:30Z"
     },
     {
       "name": "Costa Noroeste TV (1080p) [Not 24/7]",
@@ -2792,8 +2837,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 837,
-      "checked_at": "2026-07-05T10:35:00Z"
+      "ttfb_ms": 737,
+      "checked_at": "2026-07-05T17:31:30Z"
     },
     {
       "name": "Diez TV Úbeda (1080p)",
@@ -2807,8 +2852,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 925,
-      "checked_at": "2026-07-05T10:35:01Z"
+      "ttfb_ms": 903,
+      "checked_at": "2026-07-05T17:31:30Z"
     },
     {
       "name": "Distrito TV (1080p)",
@@ -2822,8 +2867,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 996,
-      "checked_at": "2026-07-05T10:35:01Z"
+      "ttfb_ms": 617,
+      "checked_at": "2026-07-05T17:31:30Z"
     },
     {
       "name": "El 33 Originals (1080p) [Not 24/7]",
@@ -2837,8 +2882,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 277,
-      "checked_at": "2026-07-05T10:35:00Z"
+      "ttfb_ms": 205,
+      "checked_at": "2026-07-05T17:31:30Z"
     },
     {
       "name": "Empordà TV (1080p)",
@@ -2852,8 +2897,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 649,
-      "checked_at": "2026-07-05T10:35:00Z"
+      "ttfb_ms": 596,
+      "checked_at": "2026-07-05T17:31:30Z"
     },
     {
       "name": "ETB2 On (1080p)",
@@ -2867,8 +2912,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 341,
-      "checked_at": "2026-07-05T10:35:00Z"
+      "ttfb_ms": 314,
+      "checked_at": "2026-07-05T17:31:30Z"
     },
     {
       "name": "Fuerteventura TV (1080p)",
@@ -2882,8 +2927,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 694,
-      "checked_at": "2026-07-05T10:35:01Z"
+      "ttfb_ms": 541,
+      "checked_at": "2026-07-05T17:31:30Z"
     },
     {
       "name": "Hamaika Telebista (1080p)",
@@ -2897,8 +2942,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 378,
-      "checked_at": "2026-07-05T10:35:00Z"
+      "ttfb_ms": 328,
+      "checked_at": "2026-07-05T17:31:30Z"
     },
     {
       "name": "Historia (1080p)",
@@ -2912,8 +2957,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 151,
-      "checked_at": "2026-07-05T10:35:00Z"
+      "ttfb_ms": 190,
+      "checked_at": "2026-07-05T17:31:30Z"
     },
     {
       "name": "HOLA! Play (1080p)",
@@ -2927,8 +2972,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 280,
-      "checked_at": "2026-07-05T10:35:00Z"
+      "ttfb_ms": 496,
+      "checked_at": "2026-07-05T17:31:30Z"
     },
     {
       "name": "Interalmeria TV (1080p)",
@@ -2942,8 +2987,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 465,
-      "checked_at": "2026-07-05T10:35:01Z"
+      "ttfb_ms": 365,
+      "checked_at": "2026-07-05T17:31:30Z"
     },
     {
       "name": "like Gecko) Chrome/83.0.4103.97 Safari/537.36 CrKey/1.44.191160\" group-title=\"General\",Canal Taronja Comarques Centrals (1080p) [Not 24/7]",
@@ -2957,8 +3002,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 1179,
-      "checked_at": "2026-07-05T10:35:01Z"
+      "ttfb_ms": 866,
+      "checked_at": "2026-07-05T17:31:31Z"
     },
     {
       "name": "like Gecko) Chrome/83.0.4103.97 Safari/537.36 CrKey/1.44.191160\" group-title=\"General\",Canal Taronja Osona i Moianés (1080p) [Not 24/7]",
@@ -2972,8 +3017,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 1199,
-      "checked_at": "2026-07-05T10:35:01Z"
+      "ttfb_ms": 947,
+      "checked_at": "2026-07-05T17:31:31Z"
     },
     {
       "name": "like Gecko) Chrome/83.0.4103.97 Safari/537.36 CrKey/1.44.191160\" group-title=\"General\",Canal Terres de L'Ebre (1080p)",
@@ -2987,8 +3032,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 1102,
-      "checked_at": "2026-07-05T10:35:01Z"
+      "ttfb_ms": 883,
+      "checked_at": "2026-07-05T17:31:31Z"
     },
     {
       "name": "like Gecko) Chrome/83.0.4103.97 Safari/537.36 CrKey/1.44.191160\" group-title=\"General\",TV Sabadell-Vallès (1080p)",
@@ -3002,8 +3047,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 986,
-      "checked_at": "2026-07-05T10:35:01Z"
+      "ttfb_ms": 811,
+      "checked_at": "2026-07-05T17:31:31Z"
     },
     {
       "name": "like Gecko) Chrome/83.0.4103.97 Safari/537.36 CrKey/1.44.191160\" group-title=\"Undefined\",Canal Terrassa (1080p)",
@@ -3017,8 +3062,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 1273,
-      "checked_at": "2026-07-05T10:35:02Z"
+      "ttfb_ms": 828,
+      "checked_at": "2026-07-05T17:31:31Z"
     },
     {
       "name": "like Gecko) Chrome/83.0.4103.97 Safari/537.36 CrKey/1.44.191160\" group-title=\"Undefined\",VOTV (1080p)",
@@ -3032,8 +3077,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 1191,
-      "checked_at": "2026-07-05T10:35:02Z"
+      "ttfb_ms": 861,
+      "checked_at": "2026-07-05T17:31:31Z"
     },
     {
       "name": "MTV Latin America (1080p)",
@@ -3047,8 +3092,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 225,
-      "checked_at": "2026-07-05T10:35:01Z"
+      "ttfb_ms": 183,
+      "checked_at": "2026-07-05T17:31:30Z"
     },
     {
       "name": "Music TV Granada (1080p) [Not 24/7]",
@@ -3062,8 +3107,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 127,
-      "checked_at": "2026-07-05T10:35:01Z"
+      "ttfb_ms": 86,
+      "checked_at": "2026-07-05T17:31:30Z"
     },
     {
       "name": "NORTEvisión (1080p)",
@@ -3077,8 +3122,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 449,
-      "checked_at": "2026-07-05T10:35:01Z"
+      "ttfb_ms": 486,
+      "checked_at": "2026-07-05T17:31:31Z"
     },
     {
       "name": "Platzi TV (1080p)",
@@ -3092,8 +3137,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 344,
-      "checked_at": "2026-07-05T10:35:01Z"
+      "ttfb_ms": 404,
+      "checked_at": "2026-07-05T17:31:31Z"
     },
     {
       "name": "Popular TV Melilla (1080p) [Not 24/7]",
@@ -3107,8 +3152,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 304,
-      "checked_at": "2026-07-05T10:35:01Z"
+      "ttfb_ms": 333,
+      "checked_at": "2026-07-05T17:31:31Z"
     },
     {
       "name": "Popular TV Murcia (1080p) [Not 24/7]",
@@ -3122,8 +3167,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 52,
-      "checked_at": "2026-07-05T10:35:01Z"
+      "ttfb_ms": 87,
+      "checked_at": "2026-07-05T17:31:30Z"
     },
     {
       "name": "Punt 3 Vall Uixó (1080p)",
@@ -3137,8 +3182,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 675,
-      "checked_at": "2026-07-05T10:35:01Z"
+      "ttfb_ms": 646,
+      "checked_at": "2026-07-05T17:31:31Z"
     },
     {
       "name": "Radiocanal San Francisco (1080p)",
@@ -3152,8 +3197,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 374,
-      "checked_at": "2026-07-05T10:35:01Z"
+      "ttfb_ms": 309,
+      "checked_at": "2026-07-05T17:31:31Z"
     },
     {
       "name": "Ràdio Bocairent TV (1080p) [Not 24/7]",
@@ -3167,8 +3212,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 261,
-      "checked_at": "2026-07-05T10:35:01Z"
+      "ttfb_ms": 181,
+      "checked_at": "2026-07-05T17:31:31Z"
     },
     {
       "name": "San Pedro TV (1080p) [Not 24/7]",
@@ -3182,8 +3227,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 966,
-      "checked_at": "2026-07-05T10:35:02Z"
+      "ttfb_ms": 801,
+      "checked_at": "2026-07-05T17:31:31Z"
     },
     {
       "name": "STZ Telebista (1080p)",
@@ -3197,8 +3242,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 125,
-      "checked_at": "2026-07-05T10:35:01Z"
+      "ttfb_ms": 87,
+      "checked_at": "2026-07-05T17:31:31Z"
     },
     {
       "name": "Tele Elx (1080p)",
@@ -3212,8 +3257,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 455,
-      "checked_at": "2026-07-05T10:35:01Z"
+      "ttfb_ms": 413,
+      "checked_at": "2026-07-05T17:31:31Z"
     },
     {
       "name": "TeleVigo (1080p) [Not 24/7]",
@@ -3227,8 +3272,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 53,
-      "checked_at": "2026-07-05T10:35:01Z"
+      "ttfb_ms": 31,
+      "checked_at": "2026-07-05T17:31:31Z"
     },
     {
       "name": "TV BRICS Spanish (1080p)",
@@ -3242,8 +3287,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 1785,
-      "checked_at": "2026-07-05T10:35:03Z"
+      "ttfb_ms": 954,
+      "checked_at": "2026-07-05T17:31:32Z"
     },
     {
       "name": "TVOMIX (1080p)",
@@ -3257,8 +3302,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 270,
-      "checked_at": "2026-07-05T10:35:01Z"
+      "ttfb_ms": 446,
+      "checked_at": "2026-07-05T17:31:31Z"
     },
     {
       "name": "12TV Alicante (720p)",
@@ -3272,8 +3317,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 52,
-      "checked_at": "2026-07-05T10:35:01Z"
+      "ttfb_ms": 31,
+      "checked_at": "2026-07-05T17:31:31Z"
     },
     {
       "name": "Activa TV (720p)",
@@ -3287,8 +3332,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 891,
-      "checked_at": "2026-07-05T10:35:02Z"
+      "ttfb_ms": 558,
+      "checked_at": "2026-07-05T17:31:31Z"
     },
     {
       "name": "Azahares Radio Multimedia (720p)",
@@ -3302,8 +3347,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 315,
-      "checked_at": "2026-07-05T10:35:01Z"
+      "ttfb_ms": 230,
+      "checked_at": "2026-07-05T17:31:31Z"
     },
     {
       "name": "Bayres TV (720p)",
@@ -3317,8 +3362,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 1153,
-      "checked_at": "2026-07-05T10:35:02Z"
+      "ttfb_ms": 1081,
+      "checked_at": "2026-07-05T17:31:32Z"
     },
     {
       "name": "BCN Gospel TV HD (720p)",
@@ -3332,8 +3377,23 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 655,
-      "checked_at": "2026-07-05T10:35:02Z"
+      "ttfb_ms": 459,
+      "checked_at": "2026-07-05T17:31:31Z"
+    },
+    {
+      "name": "Cadena 103 (720p) [Not 24/7]",
+      "group": "Entretenimiento",
+      "country": "AR",
+      "url": "http://arcast.net:1935/cadena103/cadena103/playlist.m3u8",
+      "backup_urls": [],
+      "logo": "https://i.imgur.com/vBsry35.png",
+      "tvg_id": "Cadena103TV.ar@SD",
+      "alive": true,
+      "status_code": 200,
+      "error": null,
+      "state": "alive",
+      "ttfb_ms": 167,
+      "checked_at": "2026-07-05T17:31:31Z"
     },
     {
       "name": "Cadena Elite (720p) [Not 24/7]",
@@ -3347,8 +3407,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 125,
-      "checked_at": "2026-07-05T10:35:01Z"
+      "ttfb_ms": 86,
+      "checked_at": "2026-07-05T17:31:31Z"
     },
     {
       "name": "Canal 2 NexTV Rafaela (720p)",
@@ -3362,8 +3422,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 178,
-      "checked_at": "2026-07-05T10:35:01Z"
+      "ttfb_ms": 221,
+      "checked_at": "2026-07-05T17:31:31Z"
     },
     {
       "name": "Canal 2000 La Solana (720p) [Not 24/7]",
@@ -3377,8 +3437,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 389,
-      "checked_at": "2026-07-05T10:35:02Z"
+      "ttfb_ms": 433,
+      "checked_at": "2026-07-05T17:31:32Z"
     },
     {
       "name": "Canal 34 San Juan (720p)",
@@ -3392,8 +3452,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 203,
-      "checked_at": "2026-07-05T10:35:02Z"
+      "ttfb_ms": 5,
+      "checked_at": "2026-07-05T17:31:31Z"
     },
     {
       "name": "Canal 4 Mancha Centro (720p) [Not 24/7]",
@@ -3407,8 +3467,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 842,
-      "checked_at": "2026-07-05T10:35:02Z"
+      "ttfb_ms": 601,
+      "checked_at": "2026-07-05T17:31:32Z"
     },
     {
       "name": "Canal 7 Santiago del Estero (720p)",
@@ -3422,8 +3482,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 44,
-      "checked_at": "2026-07-05T10:35:02Z"
+      "ttfb_ms": 4,
+      "checked_at": "2026-07-05T17:31:31Z"
     },
     {
       "name": "Canal 9 Litoral (720p)",
@@ -3437,8 +3497,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 447,
-      "checked_at": "2026-07-05T10:35:02Z"
+      "ttfb_ms": 249,
+      "checked_at": "2026-07-05T17:31:31Z"
     },
     {
       "name": "Canal 9 Resistencia (720p)",
@@ -3452,8 +3512,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 240,
-      "checked_at": "2026-07-05T10:35:02Z"
+      "ttfb_ms": 370,
+      "checked_at": "2026-07-05T17:31:32Z"
     },
     {
       "name": "Canal Doñana (720p) [Not 24/7]",
@@ -3467,8 +3527,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 1024,
-      "checked_at": "2026-07-05T10:35:03Z"
+      "ttfb_ms": 862,
+      "checked_at": "2026-07-05T17:31:32Z"
     },
     {
       "name": "Canal Málaga RTV (720p) [Not 24/7]",
@@ -3482,23 +3542,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 710,
-      "checked_at": "2026-07-05T10:35:02Z"
-    },
-    {
-      "name": "Catamarca TV (720p)",
-      "group": "Entretenimiento",
-      "country": "AR",
-      "url": "https://stream.arcast.com.ar/canal7catamarca/ngrp:canal7catamarca_all/playlist.m3u8?DVR=",
-      "backup_urls": [],
-      "logo": "https://i.imgur.com/CEuPoqG.png",
-      "tvg_id": "CatamarcaTV.ar@SD",
-      "alive": true,
-      "status_code": 200,
-      "error": null,
-      "state": "alive",
-      "ttfb_ms": 45,
-      "checked_at": "2026-07-05T10:35:02Z"
+      "ttfb_ms": 649,
+      "checked_at": "2026-07-05T17:31:32Z"
     },
     {
       "name": "Chaco TV (720p) [Not 24/7]",
@@ -3512,8 +3557,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 1381,
-      "checked_at": "2026-07-05T10:35:03Z"
+      "ttfb_ms": 1167,
+      "checked_at": "2026-07-05T17:31:32Z"
     },
     {
       "name": "Ciudades Del Ocio TV (720p)",
@@ -3527,8 +3572,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 125,
-      "checked_at": "2026-07-05T10:35:02Z"
+      "ttfb_ms": 87,
+      "checked_at": "2026-07-05T17:31:31Z"
     },
     {
       "name": "como Gecko) Chrome/112.0.0.0 Mobile Safari/537.36\" group-title=\"News\",A24 (720p)",
@@ -3542,8 +3587,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 617,
-      "checked_at": "2026-07-05T10:35:02Z"
+      "ttfb_ms": 618,
+      "checked_at": "2026-07-05T17:31:32Z"
     },
     {
       "name": "Cumbia Mix (720p)",
@@ -3557,8 +3602,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 176,
-      "checked_at": "2026-07-05T10:35:02Z"
+      "ttfb_ms": 327,
+      "checked_at": "2026-07-05T17:31:31Z"
     },
     {
       "name": "El Toro TV (720p)",
@@ -3572,8 +3617,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 1343,
-      "checked_at": "2026-07-05T10:35:03Z"
+      "ttfb_ms": 994,
+      "checked_at": "2026-07-05T17:31:32Z"
     },
     {
       "name": "Estepona Televisión (720p)",
@@ -3587,8 +3632,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 124,
-      "checked_at": "2026-07-05T10:35:02Z"
+      "ttfb_ms": 85,
+      "checked_at": "2026-07-05T17:31:31Z"
     },
     {
       "name": "EsTuTele (720p)",
@@ -3602,8 +3647,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 641,
-      "checked_at": "2026-07-05T10:35:02Z"
+      "ttfb_ms": 471,
+      "checked_at": "2026-07-05T17:31:32Z"
     },
     {
       "name": "Goiena Eus (720p)",
@@ -3617,8 +3662,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 813,
-      "checked_at": "2026-07-05T10:35:02Z"
+      "ttfb_ms": 556,
+      "checked_at": "2026-07-05T17:31:32Z"
     },
     {
       "name": "Guada TV (720p) [Not 24/7]",
@@ -3632,8 +3677,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 648,
-      "checked_at": "2026-07-05T10:35:02Z"
+      "ttfb_ms": 423,
+      "checked_at": "2026-07-05T17:31:32Z"
     },
     {
       "name": "Kpop Mix (720p)",
@@ -3647,23 +3692,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 217,
-      "checked_at": "2026-07-05T10:35:02Z"
-    },
-    {
-      "name": "like Gecko) Chrome/149.0.0.0 Safari/537.36\" group-title=\"Undefined\",Vision 6 TV (720p)",
-      "group": "Entretenimiento",
-      "country": "ES",
-      "url": "https://streaming.proceso.info:8888/vision6-web/stream.m3u8",
-      "backup_urls": [],
-      "logo": "https://i.imgur.com/TB1wMQ7.jpg",
-      "tvg_id": "Vision6TV.es@SD",
-      "alive": true,
-      "status_code": 200,
-      "error": null,
-      "state": "alive",
-      "ttfb_ms": 671,
-      "checked_at": "2026-07-05T10:35:03Z"
+      "ttfb_ms": 122,
+      "checked_at": "2026-07-05T17:31:31Z"
     },
     {
       "name": "like Gecko) Chrome/83.0.4103.97 Safari/537.36 CrKey/1.44.191160\" group-title=\"General\",Tele 7 (720p)",
@@ -3677,8 +3707,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 134,
-      "checked_at": "2026-07-05T10:35:02Z"
+      "ttfb_ms": 92,
+      "checked_at": "2026-07-05T17:31:32Z"
     },
     {
       "name": "LiraTV (720p)",
@@ -3692,8 +3722,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 377,
-      "checked_at": "2026-07-05T10:35:02Z"
+      "ttfb_ms": 257,
+      "checked_at": "2026-07-05T17:31:32Z"
     },
     {
       "name": "Metro TV (720p)",
@@ -3707,8 +3737,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 920,
-      "checked_at": "2026-07-05T10:35:03Z"
+      "ttfb_ms": 795,
+      "checked_at": "2026-07-05T17:31:32Z"
     },
     {
       "name": "Mijas 3.40TV (720p)",
@@ -3722,8 +3752,23 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 690,
-      "checked_at": "2026-07-05T10:35:03Z"
+      "ttfb_ms": 640,
+      "checked_at": "2026-07-05T17:31:32Z"
+    },
+    {
+      "name": "MTV Catfish TV Show (720p)",
+      "group": "Entretenimiento",
+      "country": "DE",
+      "url": "https://jmp2.uk/plu-5f1ab3c7778230000735cf41.m3u8",
+      "backup_urls": [],
+      "logo": "https://images.pluto.tv/channels/6093f9ed2c75660007322bb7/colorLogoPNG_1750862971704.png",
+      "tvg_id": "MTVCatfishTVShow.de@ES",
+      "alive": true,
+      "status_code": 200,
+      "error": null,
+      "state": "alive",
+      "ttfb_ms": 868,
+      "checked_at": "2026-07-05T17:31:32Z"
     },
     {
       "name": "MTV Dating (720p)",
@@ -3737,8 +3782,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 827,
-      "checked_at": "2026-07-05T10:35:03Z"
+      "ttfb_ms": 830,
+      "checked_at": "2026-07-05T17:31:32Z"
     },
     {
       "name": "MTV Reality (720p)",
@@ -3752,8 +3797,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 688,
-      "checked_at": "2026-07-05T10:35:03Z"
+      "ttfb_ms": 745,
+      "checked_at": "2026-07-05T17:31:32Z"
     },
     {
       "name": "MTV Teen Mom (720p)",
@@ -3767,8 +3812,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 664,
-      "checked_at": "2026-07-05T10:35:03Z"
+      "ttfb_ms": 300,
+      "checked_at": "2026-07-05T17:31:32Z"
     },
     {
       "name": "MTV Vergüenza ajena (720p)",
@@ -3782,8 +3827,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 437,
-      "checked_at": "2026-07-05T10:35:03Z"
+      "ttfb_ms": 352,
+      "checked_at": "2026-07-05T17:31:32Z"
     },
     {
       "name": "Más FM 95.9 (720p)",
@@ -3797,8 +3842,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 112,
-      "checked_at": "2026-07-05T10:35:02Z"
+      "ttfb_ms": 86,
+      "checked_at": "2026-07-05T17:31:32Z"
     },
     {
       "name": "Neox TV (720p)",
@@ -3812,8 +3857,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 396,
-      "checked_at": "2026-07-05T10:35:03Z"
+      "ttfb_ms": 231,
+      "checked_at": "2026-07-05T17:31:32Z"
     },
     {
       "name": "NET TV (720p)",
@@ -3827,8 +3872,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 46,
-      "checked_at": "2026-07-05T10:35:02Z"
+      "ttfb_ms": 60,
+      "checked_at": "2026-07-05T17:31:32Z"
     },
     {
       "name": "3Cat Càmeres del temps (1080p)",
@@ -3842,8 +3887,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 270,
-      "checked_at": "2026-07-05T10:34:59Z"
+      "ttfb_ms": 209,
+      "checked_at": "2026-07-05T17:31:29Z"
     },
     {
       "name": "3CatInfo (1080p)",
@@ -3857,8 +3902,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 341,
-      "checked_at": "2026-07-05T10:35:00Z"
+      "ttfb_ms": 235,
+      "checked_at": "2026-07-05T17:31:29Z"
     },
     {
       "name": "Bon Dia TV (1080p)",
@@ -3872,8 +3917,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 347,
-      "checked_at": "2026-07-05T10:35:00Z"
+      "ttfb_ms": 232,
+      "checked_at": "2026-07-05T17:31:29Z"
     },
     {
       "name": "Canal 1 Mar Menor-Torre Pacheco (1080p)",
@@ -3887,8 +3932,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 840,
-      "checked_at": "2026-07-05T10:35:00Z"
+      "ttfb_ms": 532,
+      "checked_at": "2026-07-05T17:31:30Z"
     },
     {
       "name": "Canal Sur Andalucia (1080p)",
@@ -3902,8 +3947,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 624,
-      "checked_at": "2026-07-05T10:35:00Z"
+      "ttfb_ms": 627,
+      "checked_at": "2026-07-05T17:31:30Z"
     },
     {
       "name": "CMM TV HD (1080p)",
@@ -3917,8 +3962,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 342,
-      "checked_at": "2026-07-05T10:35:00Z"
+      "ttfb_ms": 282,
+      "checked_at": "2026-07-05T17:31:30Z"
     },
     {
       "name": "ETB 1 (1080p) [Geo-blocked]",
@@ -3932,8 +3977,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 279,
-      "checked_at": "2026-07-05T10:35:00Z"
+      "ttfb_ms": 341,
+      "checked_at": "2026-07-05T17:31:30Z"
     },
     {
       "name": "ETB 2 (1080p) [Geo-blocked]",
@@ -3947,8 +3992,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 293,
-      "checked_at": "2026-07-05T10:35:00Z"
+      "ttfb_ms": 357,
+      "checked_at": "2026-07-05T17:31:30Z"
     },
     {
       "name": "ETB Events 1 (1080p)",
@@ -3962,8 +4007,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 506,
-      "checked_at": "2026-07-05T10:35:00Z"
+      "ttfb_ms": 457,
+      "checked_at": "2026-07-05T17:31:30Z"
     },
     {
       "name": "ETB1 On (1080p)",
@@ -3977,8 +4022,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 336,
-      "checked_at": "2026-07-05T10:35:00Z"
+      "ttfb_ms": 292,
+      "checked_at": "2026-07-05T17:31:30Z"
     },
     {
       "name": "France 24 Español (1080p)",
@@ -3992,8 +4037,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 423,
-      "checked_at": "2026-07-05T10:35:00Z"
+      "ttfb_ms": 215,
+      "checked_at": "2026-07-05T17:31:30Z"
     },
     {
       "name": "Logos TV (1080p) [Not 24/7]",
@@ -4007,8 +4052,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 1082,
-      "checked_at": "2026-07-05T10:35:01Z"
+      "ttfb_ms": 680,
+      "checked_at": "2026-07-05T17:31:31Z"
     },
     {
       "name": "M95 Televisión Marbella (1080p) [Not 24/7]",
@@ -4022,8 +4067,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 690,
-      "checked_at": "2026-07-05T10:35:01Z"
+      "ttfb_ms": 541,
+      "checked_at": "2026-07-05T17:31:31Z"
     },
     {
       "name": "Negocios TV (1080p)",
@@ -4037,8 +4082,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 723,
-      "checked_at": "2026-07-05T10:35:01Z"
+      "ttfb_ms": 667,
+      "checked_at": "2026-07-05T17:31:31Z"
     },
     {
       "name": "Televisión Consciente (1080p)",
@@ -4052,8 +4097,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 475,
-      "checked_at": "2026-07-05T10:35:01Z"
+      "ttfb_ms": 430,
+      "checked_at": "2026-07-05T17:31:31Z"
     },
     {
       "name": "A Punt (720p)",
@@ -4067,8 +4112,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 298,
-      "checked_at": "2026-07-05T10:35:01Z"
+      "ttfb_ms": 247,
+      "checked_at": "2026-07-05T17:31:31Z"
     },
     {
       "name": "Canal 24 Horas (720p)",
@@ -4082,8 +4127,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 146,
-      "checked_at": "2026-07-05T10:35:01Z"
+      "ttfb_ms": 402,
+      "checked_at": "2026-07-05T17:31:31Z"
     },
     {
       "name": "Canal 24 Horas Canarias (720p)",
@@ -4097,8 +4142,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 537,
-      "checked_at": "2026-07-05T10:35:02Z"
+      "ttfb_ms": 423,
+      "checked_at": "2026-07-05T17:31:32Z"
     },
     {
       "name": "Canal 24 Horas Catalunya (720p)",
@@ -4112,8 +4157,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 597,
-      "checked_at": "2026-07-05T10:35:02Z"
+      "ttfb_ms": 426,
+      "checked_at": "2026-07-05T17:31:32Z"
     },
     {
       "name": "Canal Sur Andalucía 2 (720p)",
@@ -4127,8 +4172,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 406,
-      "checked_at": "2026-07-05T10:35:02Z"
+      "ttfb_ms": 380,
+      "checked_at": "2026-07-05T17:31:32Z"
     },
     {
       "name": "Ciudad Magica (720p)",
@@ -4142,8 +4187,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 259,
-      "checked_at": "2026-07-05T10:35:02Z"
+      "ttfb_ms": 230,
+      "checked_at": "2026-07-05T17:31:31Z"
     },
     {
       "name": "El Mueble (720p)",
@@ -4157,8 +4202,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 625,
-      "checked_at": "2026-07-05T10:35:02Z"
+      "ttfb_ms": 1713,
+      "checked_at": "2026-07-05T17:31:33Z"
     },
     {
       "name": "Galicia TV Europa (720p)",
@@ -4172,8 +4217,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 323,
-      "checked_at": "2026-07-05T10:35:02Z"
+      "ttfb_ms": 311,
+      "checked_at": "2026-07-05T17:31:32Z"
     },
     {
       "name": "La 1 (720p)",
@@ -4187,8 +4232,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 607,
-      "checked_at": "2026-07-05T10:35:02Z"
+      "ttfb_ms": 438,
+      "checked_at": "2026-07-05T17:31:32Z"
     },
     {
       "name": "La 1 Canarias (720p)",
@@ -4202,8 +4247,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 756,
-      "checked_at": "2026-07-05T10:35:02Z"
+      "ttfb_ms": 393,
+      "checked_at": "2026-07-05T17:31:32Z"
     },
     {
       "name": "La 1 Catalunya (720p)",
@@ -4217,8 +4262,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 788,
-      "checked_at": "2026-07-05T10:35:02Z"
+      "ttfb_ms": 428,
+      "checked_at": "2026-07-05T17:31:32Z"
     },
     {
       "name": "La 2 Canarias (720p)",
@@ -4232,8 +4277,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 625,
-      "checked_at": "2026-07-05T10:35:02Z"
+      "ttfb_ms": 411,
+      "checked_at": "2026-07-05T17:31:32Z"
     },
     {
       "name": "La 2 Catalunya (720p)",
@@ -4247,8 +4292,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 608,
-      "checked_at": "2026-07-05T10:35:02Z"
+      "ttfb_ms": 404,
+      "checked_at": "2026-07-05T17:31:32Z"
     },
     {
       "name": "Logos TV Salud (720p) [Not 24/7]",
@@ -4262,8 +4307,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 133,
-      "checked_at": "2026-07-05T10:35:02Z"
+      "ttfb_ms": 390,
+      "checked_at": "2026-07-05T17:31:32Z"
     },
     {
       "name": "South Park",
@@ -4277,8 +4322,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 697,
-      "checked_at": "2026-07-05T10:34:58Z"
+      "ttfb_ms": 418,
+      "checked_at": "2026-07-05T17:31:28Z"
     },
     {
       "name": "South Park Versión Original",
@@ -4292,8 +4337,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 712,
-      "checked_at": "2026-07-05T10:34:58Z"
+      "ttfb_ms": 711,
+      "checked_at": "2026-07-05T17:31:28Z"
     },
     {
       "name": "Vaya semanita",
@@ -4307,8 +4352,8 @@
       "status_code": 200,
       "error": null,
       "state": "alive",
-      "ttfb_ms": 732,
-      "checked_at": "2026-07-05T10:34:58Z"
+      "ttfb_ms": 290,
+      "checked_at": "2026-07-05T17:31:28Z"
     },
     {
       "name": "GikTVMX (720p)",
@@ -4322,8 +4367,8 @@
       "status_code": 200,
       "error": "Handshake correcto pero contenido inestable (text/plain; charset=utf-8)",
       "state": "unstable",
-      "ttfb_ms": 227,
-      "checked_at": "2026-07-05T10:34:59Z"
+      "ttfb_ms": 375,
+      "checked_at": "2026-07-05T17:31:29Z"
     },
     {
       "name": "PSN (288p)",
@@ -4337,8 +4382,8 @@
       "status_code": 200,
       "error": "Handshake correcto pero contenido inestable (text/plain; charset=utf-8)",
       "state": "unstable",
-      "ttfb_ms": 156,
-      "checked_at": "2026-07-05T10:34:59Z"
+      "ttfb_ms": 310,
+      "checked_at": "2026-07-05T17:31:29Z"
     },
     {
       "name": "PSN Canal 45.2 (288p)",
@@ -4352,8 +4397,8 @@
       "status_code": 200,
       "error": "Handshake correcto pero contenido inestable (text/plain; charset=utf-8)",
       "state": "unstable",
-      "ttfb_ms": 151,
-      "checked_at": "2026-07-05T10:34:59Z"
+      "ttfb_ms": 222,
+      "checked_at": "2026-07-05T17:31:29Z"
     },
     {
       "name": "Canal 4 Catalunya (1080p)",
@@ -4367,8 +4412,8 @@
       "status_code": 200,
       "error": "Handshake correcto pero contenido inestable (text/html)",
       "state": "unstable",
-      "ttfb_ms": 810,
-      "checked_at": "2026-07-05T10:35:00Z"
+      "ttfb_ms": 600,
+      "checked_at": "2026-07-05T17:31:30Z"
     },
     {
       "name": "Canal 4 Mallorca (1080p)",
@@ -4382,8 +4427,8 @@
       "status_code": 200,
       "error": "Handshake correcto pero contenido inestable (text/html)",
       "state": "unstable",
-      "ttfb_ms": 715,
-      "checked_at": "2026-07-05T10:35:00Z"
+      "ttfb_ms": 611,
+      "checked_at": "2026-07-05T17:31:30Z"
     }
   ]
 }
