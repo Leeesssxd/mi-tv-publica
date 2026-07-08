@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-07-07T18:18:53Z",
+  "generated_at": "2026-07-08T03:33:58Z",
   "requested_total": 139,
-  "found_total": 22,
-  "missing_total": 117,
+  "found_total": 28,
+  "missing_total": 111,
   "found": [
     {
       "dial": 100,
@@ -113,6 +113,18 @@
       "candidate_count": 1
     },
     {
+      "dial": 145,
+      "requested": "CANAL_DEL_CONGRESO_SD",
+      "tvg_id": "CANAL_DEL_CONGRESO_SD",
+      "reserved": false,
+      "matched_name": "Canal del Congreso 45.1 (720p)",
+      "group": "Noticias",
+      "country": "MX",
+      "state": "alive",
+      "url": "http://177.245.131.133:8080/CONGRESO/index.m3u8",
+      "candidate_count": 1
+    },
+    {
       "dial": 146,
       "requested": "JUSTICIA_TV_SD",
       "tvg_id": "JUSTICIA_TV_SD",
@@ -125,15 +137,39 @@
       "candidate_count": 1
     },
     {
-      "dial": 209,
-      "requested": "AXN_HD",
-      "tvg_id": "AXN_HD",
+      "dial": 202,
+      "requested": "STAR_CHANNEL_HD",
+      "tvg_id": "STAR_CHANNEL_HD",
       "reserved": false,
-      "matched_name": "AXN Latin America Mexico",
+      "matched_name": "Star Channel Latin America South (1080p)",
+      "group": "Peliculas - Drama y Series",
+      "country": "US",
+      "state": "alive",
+      "url": "http://45.6.4.35/FOX/index.m3u8",
+      "candidate_count": 1
+    },
+    {
+      "dial": 204,
+      "requested": "FX_HD",
+      "tvg_id": "FX_HD",
+      "reserved": false,
+      "matched_name": "FX Latin America South (1080p)",
+      "group": "Entretenimiento",
+      "country": "US",
+      "state": "alive",
+      "url": "http://45.6.4.35/FX/index.m3u8",
+      "candidate_count": 1
+    },
+    {
+      "dial": 207,
+      "requested": "AMC_HD",
+      "tvg_id": "AMC_HD",
+      "reserved": false,
+      "matched_name": "AMC Latin America (1080p)",
       "group": "Peliculas - Cine",
       "country": "US",
       "state": "alive",
-      "url": "http://190.11.225.124:5000/live/axn_hd/playlist.m3u8",
+      "url": "http://177.234.249.178:8888/AMC/index.m3u8",
       "candidate_count": 1
     },
     {
@@ -149,6 +185,18 @@
       "candidate_count": 1
     },
     {
+      "dial": 216,
+      "requested": "E!_HD",
+      "tvg_id": "E!_HD",
+      "reserved": false,
+      "matched_name": "E! Latin America Mexico (720p)",
+      "group": "Entretenimiento",
+      "country": "US",
+      "state": "alive",
+      "url": "http://72.1.184.5:8089/play/a05d/index.m3u8",
+      "candidate_count": 1
+    },
+    {
       "dial": 219,
       "requested": "COMEDY_CENTRAL_HD",
       "tvg_id": "COMEDY_CENTRAL_HD",
@@ -158,6 +206,18 @@
       "country": "US",
       "state": "alive",
       "url": "http://181.119.93.83:8000/play/a1di/index.m3u8",
+      "candidate_count": 1
+    },
+    {
+      "dial": 223,
+      "requested": "EL_GOURMET_HD",
+      "tvg_id": "EL_GOURMET_HD",
+      "reserved": false,
+      "matched_name": "El Gourmet South (1080p)",
+      "group": "Otros",
+      "country": "AR",
+      "state": "alive",
+      "url": "http://45.6.4.35/GOURMET/index.m3u8",
       "candidate_count": 1
     },
     {
@@ -205,7 +265,7 @@
       "group": "Noticias",
       "country": "US",
       "state": "alive",
-      "url": "https://cdn3.wowza.com/1/SmVrQmZCUXZhVDgz/b3J3MFJv/hls/live/playlist.m3u8",
+      "url": "http://138.186.23.7:8082/EWTN/index.m3u8",
       "candidate_count": 1
     },
     {
@@ -213,11 +273,11 @@
       "requested": "FOX",
       "tvg_id": "FOX",
       "reserved": false,
-      "matched_name": "FOX Sports (720p)",
+      "matched_name": "Fox Sports (720p)",
       "group": "Deportes",
       "country": "AR",
       "state": "alive",
-      "url": "https://jmp2.uk/plu-5a74b8e1e22a61737979c6bf.m3u8",
+      "url": "http://45.6.4.35/FOX_SPORT/index.m3u8",
       "candidate_count": 1
     },
     {
@@ -257,6 +317,18 @@
       "candidate_count": 1
     },
     {
+      "dial": 406,
+      "requested": "EUROPA_EUROPA_HD",
+      "tvg_id": "EUROPA_EUROPA_HD",
+      "reserved": false,
+      "matched_name": "Europa Europa (1080p)",
+      "group": "Peliculas - Drama y Series",
+      "country": "AR",
+      "state": "alive",
+      "url": "http://45.6.4.35/EUROPA/index.m3u8",
+      "candidate_count": 1
+    },
+    {
       "dial": 632,
       "requested": "EXA_TV_HD",
       "tvg_id": "EXA_TV_HD",
@@ -283,7 +355,6 @@
     "APRENDE_+_SD",
     "A+_SD",
     "CANAL_44_UDG_HD",
-    "CANAL_DEL_CONGRESO_SD",
     "MEGANOTICIAS_MX_HD",
     "MEGANOTICIAS_HD",
     "AZTECA_UNO_DELAY_SD",
@@ -299,21 +370,17 @@
     "BBC_NEWS_HD",
     "DW_LATINOAMÉRICA_SD",
     "TV5_MONDE_SD",
-    "STAR_CHANNEL_HD",
-    "FX_HD",
     "UNIVERSAL_TV_HD",
-    "AMC_HD",
     "TNT_NOVELAS_HD",
+    "AXN_HD",
     "SONY_HD",
     "TNT_SERIES_HD",
     "WARNER_CHANNEL_HD",
     "ID_HD",
     "A&E_HD",
-    "E!_HD",
     "ATRESERIES_HD",
     "USA_HD",
     "CORAZÓN_HD",
-    "EL_GOURMET_HD",
     "MAS_CHIC_SD",
     "DISCOVERY_H&H_HD",
     "PASIONES_HD",
@@ -366,7 +433,6 @@
     "CINEMA_PLATINO_HD",
     "PANICO_HD",
     "SONY_MOVIES",
-    "EUROPA_EUROPA_HD",
     "STUDIO_UNIVERSAL_HD",
     "CINEMAX_HD",
     "TNT_HD",
@@ -644,12 +710,13 @@
       "dial": 145,
       "requested": "CANAL_DEL_CONGRESO_SD",
       "tvg_id": "CANAL_DEL_CONGRESO_SD",
-      "reserved": true,
-      "matched_name": null,
-      "group": null,
-      "country": null,
-      "state": "reserved",
-      "url": null
+      "reserved": false,
+      "matched_name": "Canal del Congreso 45.1 (720p)",
+      "group": "Noticias",
+      "country": "MX",
+      "state": "alive",
+      "url": "http://177.245.131.133:8080/CONGRESO/index.m3u8",
+      "candidate_count": 1
     },
     {
       "dial": 146,
@@ -832,23 +899,25 @@
       "dial": 202,
       "requested": "STAR_CHANNEL_HD",
       "tvg_id": "STAR_CHANNEL_HD",
-      "reserved": true,
-      "matched_name": null,
-      "group": null,
-      "country": null,
-      "state": "reserved",
-      "url": null
+      "reserved": false,
+      "matched_name": "Star Channel Latin America South (1080p)",
+      "group": "Peliculas - Drama y Series",
+      "country": "US",
+      "state": "alive",
+      "url": "http://45.6.4.35/FOX/index.m3u8",
+      "candidate_count": 1
     },
     {
       "dial": 204,
       "requested": "FX_HD",
       "tvg_id": "FX_HD",
-      "reserved": true,
-      "matched_name": null,
-      "group": null,
-      "country": null,
-      "state": "reserved",
-      "url": null
+      "reserved": false,
+      "matched_name": "FX Latin America South (1080p)",
+      "group": "Entretenimiento",
+      "country": "US",
+      "state": "alive",
+      "url": "http://45.6.4.35/FX/index.m3u8",
+      "candidate_count": 1
     },
     {
       "dial": 206,
@@ -865,12 +934,13 @@
       "dial": 207,
       "requested": "AMC_HD",
       "tvg_id": "AMC_HD",
-      "reserved": true,
-      "matched_name": null,
-      "group": null,
-      "country": null,
-      "state": "reserved",
-      "url": null
+      "reserved": false,
+      "matched_name": "AMC Latin America (1080p)",
+      "group": "Peliculas - Cine",
+      "country": "US",
+      "state": "alive",
+      "url": "http://177.234.249.178:8888/AMC/index.m3u8",
+      "candidate_count": 1
     },
     {
       "dial": 208,
@@ -887,13 +957,12 @@
       "dial": 209,
       "requested": "AXN_HD",
       "tvg_id": "AXN_HD",
-      "reserved": false,
-      "matched_name": "AXN Latin America Mexico",
-      "group": "Peliculas - Cine",
-      "country": "US",
-      "state": "alive",
-      "url": "http://190.11.225.124:5000/live/axn_hd/playlist.m3u8",
-      "candidate_count": 1
+      "reserved": true,
+      "matched_name": null,
+      "group": null,
+      "country": null,
+      "state": "reserved",
+      "url": null
     },
     {
       "dial": 210,
@@ -966,12 +1035,13 @@
       "dial": 216,
       "requested": "E!_HD",
       "tvg_id": "E!_HD",
-      "reserved": true,
-      "matched_name": null,
-      "group": null,
-      "country": null,
-      "state": "reserved",
-      "url": null
+      "reserved": false,
+      "matched_name": "E! Latin America Mexico (720p)",
+      "group": "Entretenimiento",
+      "country": "US",
+      "state": "alive",
+      "url": "http://72.1.184.5:8089/play/a05d/index.m3u8",
+      "candidate_count": 1
     },
     {
       "dial": 217,
@@ -1022,12 +1092,13 @@
       "dial": 223,
       "requested": "EL_GOURMET_HD",
       "tvg_id": "EL_GOURMET_HD",
-      "reserved": true,
-      "matched_name": null,
-      "group": null,
-      "country": null,
-      "state": "reserved",
-      "url": null
+      "reserved": false,
+      "matched_name": "El Gourmet South (1080p)",
+      "group": "Otros",
+      "country": "AR",
+      "state": "alive",
+      "url": "http://45.6.4.35/GOURMET/index.m3u8",
+      "candidate_count": 1
     },
     {
       "dial": 224,
@@ -1415,7 +1486,7 @@
       "group": "Noticias",
       "country": "US",
       "state": "alive",
-      "url": "https://cdn3.wowza.com/1/SmVrQmZCUXZhVDgz/b3J3MFJv/hls/live/playlist.m3u8",
+      "url": "http://138.186.23.7:8082/EWTN/index.m3u8",
       "candidate_count": 1
     },
     {
@@ -1456,11 +1527,11 @@
       "requested": "FOX",
       "tvg_id": "FOX",
       "reserved": false,
-      "matched_name": "FOX Sports (720p)",
+      "matched_name": "Fox Sports (720p)",
       "group": "Deportes",
       "country": "AR",
       "state": "alive",
-      "url": "https://jmp2.uk/plu-5a74b8e1e22a61737979c6bf.m3u8",
+      "url": "http://45.6.4.35/FOX_SPORT/index.m3u8",
       "candidate_count": 1
     },
     {
@@ -1701,12 +1772,13 @@
       "dial": 406,
       "requested": "EUROPA_EUROPA_HD",
       "tvg_id": "EUROPA_EUROPA_HD",
-      "reserved": true,
-      "matched_name": null,
-      "group": null,
-      "country": null,
-      "state": "reserved",
-      "url": null
+      "reserved": false,
+      "matched_name": "Europa Europa (1080p)",
+      "group": "Peliculas - Drama y Series",
+      "country": "AR",
+      "state": "alive",
+      "url": "http://45.6.4.35/EUROPA/index.m3u8",
+      "candidate_count": 1
     },
     {
       "dial": 408,
