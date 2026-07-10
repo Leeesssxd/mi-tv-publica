@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-07-09T18:15:27Z",
+  "generated_at": "2026-07-10T04:02:24Z",
   "requested_total": 139,
-  "found_total": 24,
-  "missing_total": 115,
+  "found_total": 23,
+  "missing_total": 116,
   "found": [
     {
       "dial": 100,
@@ -146,18 +146,6 @@
       "country": "MX",
       "state": "alive",
       "url": "https://live-scjn.ovp-vivaro.digital/ovp-origin/638a22b47746d/playlist.m3u8",
-      "candidate_count": 1
-    },
-    {
-      "dial": 207,
-      "requested": "AMC_HD",
-      "tvg_id": "AMC_HD",
-      "reserved": false,
-      "matched_name": "AMC Latin America (1080p)",
-      "group": "Peliculas - Cine",
-      "country": "US",
-      "state": "alive",
-      "url": "http://177.234.249.178:8888/AMC/index.m3u8",
       "candidate_count": 1
     },
     {
@@ -324,6 +312,7 @@
     "STAR_CHANNEL_HD",
     "FX_HD",
     "UNIVERSAL_TV_HD",
+    "AMC_HD",
     "TNT_NOVELAS_HD",
     "AXN_HD",
     "SONY_HD",
@@ -889,13 +878,12 @@
       "dial": 207,
       "requested": "AMC_HD",
       "tvg_id": "AMC_HD",
-      "reserved": false,
-      "matched_name": "AMC Latin America (1080p)",
-      "group": "Peliculas - Cine",
-      "country": "US",
-      "state": "alive",
-      "url": "http://177.234.249.178:8888/AMC/index.m3u8",
-      "candidate_count": 1
+      "reserved": true,
+      "matched_name": null,
+      "group": null,
+      "country": null,
+      "state": "reserved",
+      "url": null
     },
     {
       "dial": 208,
