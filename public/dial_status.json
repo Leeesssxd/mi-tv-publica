@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-07-10T18:05:22Z",
+  "generated_at": "2026-07-11T03:29:32Z",
   "requested_total": 139,
-  "found_total": 23,
-  "missing_total": 116,
+  "found_total": 24,
+  "missing_total": 115,
   "found": [
     {
       "dial": 100,
@@ -149,6 +149,30 @@
       "candidate_count": 1
     },
     {
+      "dial": 207,
+      "requested": "AMC_HD",
+      "tvg_id": "AMC_HD",
+      "reserved": false,
+      "matched_name": "AMC Latin America (720p)",
+      "group": "Peliculas - Cine",
+      "country": "US",
+      "state": "alive",
+      "url": "http://200.91.32.158:8080/amc/index.m3u8",
+      "candidate_count": 1
+    },
+    {
+      "dial": 208,
+      "requested": "TNT_NOVELAS_HD",
+      "tvg_id": "TNT_NOVELAS_HD",
+      "reserved": false,
+      "matched_name": "TNT Novelas (720p)",
+      "group": "Noticias",
+      "country": "US",
+      "state": "alive",
+      "url": "http://200.91.32.158:8080/tntnovelas/index.m3u8",
+      "candidate_count": 1
+    },
+    {
       "dial": 214,
       "requested": "TELEMUNDO_HD",
       "tvg_id": "TELEMUNDO_HD",
@@ -245,18 +269,6 @@
       "candidate_count": 1
     },
     {
-      "dial": 321,
-      "requested": "LAS_HD",
-      "tvg_id": "LAS_HD",
-      "reserved": false,
-      "matched_name": "Las Tortugas Ninja (720p)",
-      "group": "Peliculas - Familiar",
-      "country": "DE",
-      "state": "alive",
-      "url": "https://jmp2.uk/plu-61373f1a12dd9f00077dcd6f.m3u8",
-      "candidate_count": 1
-    },
-    {
       "dial": 403,
       "requested": "PANICO_DELAY_SD",
       "tvg_id": "PANICO_DELAY_SD",
@@ -312,8 +324,6 @@
     "STAR_CHANNEL_HD",
     "FX_HD",
     "UNIVERSAL_TV_HD",
-    "AMC_HD",
-    "TNT_NOVELAS_HD",
     "AXN_HD",
     "SONY_HD",
     "TNT_SERIES_HD",
@@ -369,6 +379,7 @@
     "GOLF_CHANNEL_HD",
     "MEGA_SPORTS_1_HD",
     "AYM_SPORTS_HD",
+    "LAS_HD",
     "AZTECA_DEPORTES_NETWORK_HD",
     "PX_SPORTS_HD",
     "CLARO_SPORTS_HD",
@@ -878,23 +889,25 @@
       "dial": 207,
       "requested": "AMC_HD",
       "tvg_id": "AMC_HD",
-      "reserved": true,
-      "matched_name": null,
-      "group": null,
-      "country": null,
-      "state": "reserved",
-      "url": null
+      "reserved": false,
+      "matched_name": "AMC Latin America (720p)",
+      "group": "Peliculas - Cine",
+      "country": "US",
+      "state": "alive",
+      "url": "http://200.91.32.158:8080/amc/index.m3u8",
+      "candidate_count": 1
     },
     {
       "dial": 208,
       "requested": "TNT_NOVELAS_HD",
       "tvg_id": "TNT_NOVELAS_HD",
-      "reserved": true,
-      "matched_name": null,
-      "group": null,
-      "country": null,
-      "state": "reserved",
-      "url": null
+      "reserved": false,
+      "matched_name": "TNT Novelas (720p)",
+      "group": "Noticias",
+      "country": "US",
+      "state": "alive",
+      "url": "http://200.91.32.158:8080/tntnovelas/index.m3u8",
+      "candidate_count": 1
     },
     {
       "dial": 209,
@@ -1601,13 +1614,12 @@
       "dial": 321,
       "requested": "LAS_HD",
       "tvg_id": "LAS_HD",
-      "reserved": false,
-      "matched_name": "Las Tortugas Ninja (720p)",
-      "group": "Peliculas - Familiar",
-      "country": "DE",
-      "state": "alive",
-      "url": "https://jmp2.uk/plu-61373f1a12dd9f00077dcd6f.m3u8",
-      "candidate_count": 1
+      "reserved": true,
+      "matched_name": null,
+      "group": null,
+      "country": null,
+      "state": "reserved",
+      "url": null
     },
     {
       "dial": 322,
