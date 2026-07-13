@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-07-13T03:43:32Z",
+  "generated_at": "2026-07-13T11:32:51Z",
   "requested_total": 139,
-  "found_total": 22,
-  "missing_total": 117,
+  "found_total": 21,
+  "missing_total": 118,
   "found": [
     {
       "dial": 100,
@@ -146,18 +146,6 @@
       "country": "US",
       "state": "alive",
       "url": "http://45.162.193.35:80/AMC/index.m3u8",
-      "candidate_count": 1
-    },
-    {
-      "dial": 214,
-      "requested": "TELEMUNDO_HD",
-      "tvg_id": "TELEMUNDO_HD",
-      "reserved": false,
-      "matched_name": "Telemundo Internacional (1080p)",
-      "group": "Entretenimiento",
-      "country": "US",
-      "state": "alive",
-      "url": "http://138.121.15.230:9002/TELEMUNDO/index.m3u8",
       "candidate_count": 1
     },
     {
@@ -307,6 +295,7 @@
     "TNT_SERIES_HD",
     "WARNER_CHANNEL_HD",
     "ID_HD",
+    "TELEMUNDO_HD",
     "A&E_HD",
     "ATRESERIES_HD",
     "USA_HD",
@@ -944,13 +933,12 @@
       "dial": 214,
       "requested": "TELEMUNDO_HD",
       "tvg_id": "TELEMUNDO_HD",
-      "reserved": false,
-      "matched_name": "Telemundo Internacional (1080p)",
-      "group": "Entretenimiento",
-      "country": "US",
-      "state": "alive",
-      "url": "http://138.121.15.230:9002/TELEMUNDO/index.m3u8",
-      "candidate_count": 1
+      "reserved": true,
+      "matched_name": null,
+      "group": null,
+      "country": null,
+      "state": "reserved",
+      "url": null
     },
     {
       "dial": 215,
