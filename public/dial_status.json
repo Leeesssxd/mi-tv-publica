@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-07-12T17:19:17Z",
+  "generated_at": "2026-07-13T03:43:32Z",
   "requested_total": 139,
-  "found_total": 21,
-  "missing_total": 118,
+  "found_total": 22,
+  "missing_total": 117,
   "found": [
     {
       "dial": 100,
@@ -122,6 +122,18 @@
       "country": "MX",
       "state": "alive",
       "url": "https://live-scjn.ovp-vivaro.digital/ovp-origin/638a22b47746d/playlist.m3u8",
+      "candidate_count": 1
+    },
+    {
+      "dial": 204,
+      "requested": "FX_HD",
+      "tvg_id": "FX_HD",
+      "reserved": false,
+      "matched_name": "FX Latin America South (720p)",
+      "group": "Entretenimiento",
+      "country": "US",
+      "state": "alive",
+      "url": "http://72.1.184.5:8089/play/a05i/index.m3u8",
       "candidate_count": 1
     },
     {
@@ -288,7 +300,6 @@
     "DW_LATINOAMÉRICA_SD",
     "TV5_MONDE_SD",
     "STAR_CHANNEL_HD",
-    "FX_HD",
     "UNIVERSAL_TV_HD",
     "TNT_NOVELAS_HD",
     "AXN_HD",
@@ -832,12 +843,13 @@
       "dial": 204,
       "requested": "FX_HD",
       "tvg_id": "FX_HD",
-      "reserved": true,
-      "matched_name": null,
-      "group": null,
-      "country": null,
-      "state": "reserved",
-      "url": null
+      "reserved": false,
+      "matched_name": "FX Latin America South (720p)",
+      "group": "Entretenimiento",
+      "country": "US",
+      "state": "alive",
+      "url": "http://72.1.184.5:8089/play/a05i/index.m3u8",
+      "candidate_count": 1
     },
     {
       "dial": 206,
