@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-07-13T18:14:00Z",
+  "generated_at": "2026-07-14T03:06:44Z",
   "requested_total": 139,
-  "found_total": 22,
-  "missing_total": 117,
+  "found_total": 18,
+  "missing_total": 121,
   "found": [
     {
       "dial": 100,
@@ -14,18 +14,6 @@
       "country": "MX",
       "state": "alive",
       "url": "https://stream8.mexiserver.com:19360/conectatvx/conectatvx.m3u8",
-      "candidate_count": 1
-    },
-    {
-      "dial": 101,
-      "requested": "AZTECA_UNO_HD",
-      "tvg_id": "AZTECA_UNO_HD",
-      "reserved": false,
-      "matched_name": "Azteca Uno (1080p)",
-      "group": "Familia y TV Abierta",
-      "country": "MX",
-      "state": "alive",
-      "url": "http://45.189.62.33:8002/play/a0cc/index.m3u8",
       "candidate_count": 1
     },
     {
@@ -49,7 +37,7 @@
       "group": "Familia y TV Abierta",
       "country": "MX",
       "state": "alive",
-      "url": "http://190.11.225.124:5000/live/canal5_hd/playlist.m3u8",
+      "url": "http://45.181.87.106/CANAL5HD/index.m3u8",
       "candidate_count": 1
     },
     {
@@ -62,18 +50,6 @@
       "country": "AR",
       "state": "alive",
       "url": "https://iptv.ixfo.com.ar:30443/live/c6digital/playlist.m3u8",
-      "candidate_count": 1
-    },
-    {
-      "dial": 107,
-      "requested": "AZTECA_7_HD",
-      "tvg_id": "AZTECA_7_HD",
-      "reserved": false,
-      "matched_name": "Azteca 7 (1080p)",
-      "group": "Familia y TV Abierta",
-      "country": "MX",
-      "state": "alive",
-      "url": "http://45.189.62.33:8002/play/a0fm/index.m3u8",
       "candidate_count": 1
     },
     {
@@ -98,18 +74,6 @@
       "country": "MX",
       "state": "alive",
       "url": "https://5fc584f3f19c9.streamlock.net/canal22/smil:canal22.smil/playlist.m3u8",
-      "candidate_count": 1
-    },
-    {
-      "dial": 140,
-      "requested": "ADN_40_SD",
-      "tvg_id": "ADN_40_SD",
-      "reserved": false,
-      "matched_name": "ADN 40 (1080p)",
-      "group": "Noticias",
-      "country": "MX",
-      "state": "alive",
-      "url": "http://45.189.62.33:8002/play/a0ob/index.m3u8",
       "candidate_count": 1
     },
     {
@@ -145,7 +109,7 @@
       "group": "Peliculas - Cine",
       "country": "US",
       "state": "alive",
-      "url": "http://45.162.193.35:80/AMC/index.m3u8",
+      "url": "http://45.162.193.35/AMC/index.m3u8",
       "candidate_count": 1
     },
     {
@@ -255,23 +219,13 @@
       "state": "alive",
       "url": "http://181.78.8.199:8000/play/a0bt/index.m3u8",
       "candidate_count": 1
-    },
-    {
-      "dial": 632,
-      "requested": "EXA_TV_HD",
-      "tvg_id": "EXA_TV_HD",
-      "reserved": false,
-      "matched_name": "Exa TV (576p)",
-      "group": "Entretenimiento",
-      "country": "MX",
-      "state": "alive",
-      "url": "http://45.189.62.33:8002/play/a0lr/index.m3u8",
-      "candidate_count": 1
     }
   ],
   "missing": [
+    "AZTECA_UNO_HD",
     "LAS_ESTRELLAS_HD",
     "CANAL_4_GDL_HD",
+    "AZTECA_7_HD",
     "MÁS_VISIÓN_HD",
     "NU9VE_HD",
     "QUIERO_TV_HD",
@@ -281,6 +235,7 @@
     "TV_UNAM_SD",
     "CANAL_22.2_SD",
     "APRENDE_+_SD",
+    "ADN_40_SD",
     "A+_SD",
     "CANAL_44_UDG_HD",
     "CANAL_DEL_CONGRESO_SD",
@@ -386,6 +341,7 @@
     "HTV_HD",
     "BEAT_BOX_SD",
     "VR_PLUS_HD",
+    "EXA_TV_HD",
     "SONY_MOVIES_ALT"
   ],
   "entries": [
@@ -405,13 +361,12 @@
       "dial": 101,
       "requested": "AZTECA_UNO_HD",
       "tvg_id": "AZTECA_UNO_HD",
-      "reserved": false,
-      "matched_name": "Azteca Uno (1080p)",
-      "group": "Familia y TV Abierta",
-      "country": "MX",
-      "state": "alive",
-      "url": "http://45.189.62.33:8002/play/a0cc/index.m3u8",
-      "candidate_count": 1
+      "reserved": true,
+      "matched_name": null,
+      "group": null,
+      "country": null,
+      "state": "reserved",
+      "url": null
     },
     {
       "dial": 102,
@@ -456,7 +411,7 @@
       "group": "Familia y TV Abierta",
       "country": "MX",
       "state": "alive",
-      "url": "http://190.11.225.124:5000/live/canal5_hd/playlist.m3u8",
+      "url": "http://45.181.87.106/CANAL5HD/index.m3u8",
       "candidate_count": 1
     },
     {
@@ -475,13 +430,12 @@
       "dial": 107,
       "requested": "AZTECA_7_HD",
       "tvg_id": "AZTECA_7_HD",
-      "reserved": false,
-      "matched_name": "Azteca 7 (1080p)",
-      "group": "Familia y TV Abierta",
-      "country": "MX",
-      "state": "alive",
-      "url": "http://45.189.62.33:8002/play/a0fm/index.m3u8",
-      "candidate_count": 1
+      "reserved": true,
+      "matched_name": null,
+      "group": null,
+      "country": null,
+      "state": "reserved",
+      "url": null
     },
     {
       "dial": 108,
@@ -610,13 +564,12 @@
       "dial": 140,
       "requested": "ADN_40_SD",
       "tvg_id": "ADN_40_SD",
-      "reserved": false,
-      "matched_name": "ADN 40 (1080p)",
-      "group": "Noticias",
-      "country": "MX",
-      "state": "alive",
-      "url": "http://45.189.62.33:8002/play/a0ob/index.m3u8",
-      "candidate_count": 1
+      "reserved": true,
+      "matched_name": null,
+      "group": null,
+      "country": null,
+      "state": "reserved",
+      "url": null
     },
     {
       "dial": 141,
@@ -871,7 +824,7 @@
       "group": "Peliculas - Cine",
       "country": "US",
       "state": "alive",
-      "url": "http://45.162.193.35:80/AMC/index.m3u8",
+      "url": "http://45.162.193.35/AMC/index.m3u8",
       "candidate_count": 1
     },
     {
@@ -1921,13 +1874,12 @@
       "dial": 632,
       "requested": "EXA_TV_HD",
       "tvg_id": "EXA_TV_HD",
-      "reserved": false,
-      "matched_name": "Exa TV (576p)",
-      "group": "Entretenimiento",
-      "country": "MX",
-      "state": "alive",
-      "url": "http://45.189.62.33:8002/play/a0lr/index.m3u8",
-      "candidate_count": 1
+      "reserved": true,
+      "matched_name": null,
+      "group": null,
+      "country": null,
+      "state": "reserved",
+      "url": null
     },
     {
       "dial": 1405,
