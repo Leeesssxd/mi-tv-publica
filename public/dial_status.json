@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-07-18T03:05:13Z",
+  "generated_at": "2026-07-18T09:53:20Z",
   "requested_total": 139,
-  "found_total": 19,
-  "missing_total": 120,
+  "found_total": 18,
+  "missing_total": 121,
   "found": [
     {
       "dial": 100,
@@ -50,18 +50,6 @@
       "country": "AR",
       "state": "alive",
       "url": "https://iptv.ixfo.com.ar:30443/live/c6digital/playlist.m3u8",
-      "candidate_count": 1
-    },
-    {
-      "dial": 117,
-      "requested": "JALISCO_TV_HD",
-      "tvg_id": "JALISCO_TV_HD",
-      "reserved": false,
-      "matched_name": "Jalisco TV (720p)",
-      "group": "Familia y TV Abierta",
-      "country": "MX",
-      "state": "alive",
-      "url": "https://video0.rogohosting.com:19360/sisjalisciense/sisjalisciense.m3u8",
       "candidate_count": 1
     },
     {
@@ -244,6 +232,7 @@
     "ONCE_TV_HD",
     "CANAL_13_HD",
     "CANAL_14_HD",
+    "JALISCO_TV_HD",
     "TV_UNAM_SD",
     "CANAL_22.2_SD",
     "APRENDE_+_SD",
@@ -518,13 +507,12 @@
       "dial": 117,
       "requested": "JALISCO_TV_HD",
       "tvg_id": "JALISCO_TV_HD",
-      "reserved": false,
-      "matched_name": "Jalisco TV (720p)",
-      "group": "Familia y TV Abierta",
-      "country": "MX",
-      "state": "alive",
-      "url": "https://video0.rogohosting.com:19360/sisjalisciense/sisjalisciense.m3u8",
-      "candidate_count": 1
+      "reserved": true,
+      "matched_name": null,
+      "group": null,
+      "country": null,
+      "state": "reserved",
+      "url": null
     },
     {
       "dial": 120,
