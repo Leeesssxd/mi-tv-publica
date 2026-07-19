@@ -11,6 +11,10 @@ https://igd-it-runtime.otteravision.com/igd/it/it.m3u8
 #EXTVLCOPT:network-caching=2000
 #EXTVLCOPT:http-reconnect=true
 http://45.181.87.106/CANAL5HD/index.m3u8
+#EXTINF:-1 tvg-id="CANAL_6_HD" tvg-name="Canal 6 Posadas (1080p)" tvg-chno="106" tvg-logo="https://i.imgur.com/OamBiS5.png" group-title="Entretenimiento",Canal 6 Posadas (1080p)
+#EXTVLCOPT:network-caching=2000
+#EXTVLCOPT:http-reconnect=true
+https://iptv.ixfo.com.ar:30443/live/c6digital/playlist.m3u8
 #EXTINF:-1 tvg-id="JALISCO_TV_HD" tvg-name="Jalisco TV (720p)" tvg-chno="117" tvg-logo="https://i.imgur.com/N4meE8I.png" group-title="Familia y TV Abierta",Jalisco TV (720p)
 #EXTVLCOPT:network-caching=2000
 #EXTVLCOPT:http-reconnect=true
@@ -79,10 +83,6 @@ http://181.78.8.199:8000/play/a0bt/index.m3u8
 #EXTVLCOPT:network-caching=2000
 #EXTVLCOPT:http-reconnect=true
 https://livestream.lumpentv.com.ar/hls/lumpen.m3u8
-#EXTINF:-1 tvg-id="DSports.us@Panregional" tvg-name="DSports (1080p)" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/DirecTV_Sports_Latin_America_%282018%29.png/960px-DirecTV_Sports_Latin_America_%282018%29.png" group-title="Deportes",DSports (1080p)
-#EXTVLCOPT:network-caching=2000
-#EXTVLCOPT:http-reconnect=true
-https://streamvidex.qzz.io/videx/dsportsar/index.m3u8
 #EXTINF:-1 tvg-id="Esport3.es@Originals" tvg-name="Esport3 (1080p) [Not 24/7]" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Esport3.svg/960px-Esport3.svg.png" group-title="Deportes",Esport3 (1080p) [Not 24/7]
 #EXTVLCOPT:network-caching=2000
 #EXTVLCOPT:http-reconnect=true
@@ -131,10 +131,6 @@ http://45.181.87.106/TYCSPORTSHD/index.m3u8
 #EXTVLCOPT:network-caching=2000
 #EXTVLCOPT:http-reconnect=true
 https://tv.alterna.ar/stream/hls/live.m3u8
-#EXTINF:-1 tvg-id="CrimenHistoria.es@SD" tvg-name="Crimen & Historia (720p)" tvg-logo="https://images.pluto.tv/channels/64ddcbb14c5ed80008fad416/colorLogoPNG.png" group-title="Documentales y Cultura",Crimen & Historia (720p)
-#EXTVLCOPT:network-caching=2000
-#EXTVLCOPT:http-reconnect=true
-https://jmp2.uk/plu-64ddcbb14c5ed80008fad416.m3u8
 #EXTINF:-1 tvg-id="HistoriaYVida.es@SD" tvg-name="Historia y Vida (720p)" tvg-logo="https://i.imgur.com/56ZtCA1.png" group-title="Documentales y Cultura",Historia y Vida (720p)
 #EXTVLCOPT:network-caching=2000
 #EXTVLCOPT:http-reconnect=true
@@ -163,6 +159,10 @@ https://unlimited1-us.dps.live/airedesantafetv/airedesantafetv.smil/playlist.m3u
 #EXTVLCOPT:network-caching=2000
 #EXTVLCOPT:http-reconnect=true
 https://streamtv2.elitecomunicacion.cloud:3628/live/arabitv2025live.m3u8
+#EXTINF:-1 tvg-id="AzaharesRadiovisualMultimedia.ar@SD" tvg-name="Azahares Radio Multimedia (720p)" tvg-logo="https://i.imgur.com/g1BFoSs.png" group-title="Entretenimiento",Azahares Radio Multimedia (720p)
+#EXTVLCOPT:network-caching=2000
+#EXTVLCOPT:http-reconnect=true
+https://streamyes.alsolnet.com/azaharesfm/live/playlist.m3u8
 #EXTINF:-1 tvg-id="BayresTV.ar@SD" tvg-name="Bayres TV (720p)" tvg-logo="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjKrroOZ4RYMYlzGqMQjiIO2QbRNVndEM9PiC-CaRn0PO2AoB_YKyrt6Eigzh4M1gPZaVn5udDL5YzrzxAmyQCj_HTF8Pszo46dk9dABt9TpepY43_IEzT80atZEMaiMcdrqt3lmxAbZYaLwCgr6vDUgV1HlvmhIOJ99UlwAhG2FoHgtCm13CWEugV7Bvg/w1200-h630-p-k-no-nu/bayres-tv-removebg-preview.png" group-title="Entretenimiento",Bayres TV (720p)
 #EXTVLCOPT:network-caching=2000
 #EXTVLCOPT:http-reconnect=true
@@ -219,10 +219,6 @@ https://limited35.todostreaming.es/live/mitjans-livestream1.m3u8
 #EXTVLCOPT:network-caching=2000
 #EXTVLCOPT:http-reconnect=true
 https://5924d3ad0efcf.streamlock.net/canal4/canal4live/playlist.m3u8
-#EXTINF:-1 tvg-id="Canal7Neuquen.ar@SD" tvg-name="Canal 7 Neuquén (1080p)" tvg-logo="https://i.ibb.co/BrvQsWm/C7neuquenlogo2023.png" group-title="Entretenimiento",Canal 7 Neuquén (1080p)
-#EXTVLCOPT:network-caching=2000
-#EXTVLCOPT:http-reconnect=true
-https://stream.arcast.com.ar/c7nq/ngrp:c7nq_all/playlist.m3u8
 #EXTINF:-1 tvg-id="Canal7Salta.ar@SD" tvg-name="Canal 7 Salta (1080p)" tvg-logo="https://i.imgur.com/CudG6sl.png" group-title="Entretenimiento",Canal 7 Salta (1080p)
 #EXTVLCOPT:network-caching=2000
 #EXTVLCOPT:http-reconnect=true
@@ -411,6 +407,10 @@ http://amaru.dyndns.org:8870/0.m3u8
 #EXTVLCOPT:network-caching=2000
 #EXTVLCOPT:http-reconnect=true
 https://mdstrm.com/live-stream-playlist/629a63ae8df27c082901f78b.m3u8
+#EXTINF:-1 tvg-id="PopularTVMelilla.es@SD" tvg-name="Popular TV Melilla (1080p) [Not 24/7]" tvg-logo="https://i.imgur.com/TbevWX4.png" group-title="Entretenimiento",Popular TV Melilla (1080p) [Not 24/7]
+#EXTVLCOPT:network-caching=2000
+#EXTVLCOPT:http-reconnect=true
+http://5940924978228.streamlock.net:1935/8009/8009/playlist.m3u8
 #EXTINF:-1 tvg-id="PopularTVMurcia.es@SD" tvg-name="Popular TV Murcia (1080p) [Not 24/7]" tvg-logo="https://i.imgur.com/jFg9dGO.png" group-title="Entretenimiento",Popular TV Murcia (1080p) [Not 24/7]
 #EXTVLCOPT:network-caching=2000
 #EXTVLCOPT:http-reconnect=true
@@ -447,6 +447,10 @@ https://vidartv2.todostreaming.es/live/radiovida-emisiontvhd.m3u8
 #EXTVLCOPT:network-caching=2000
 #EXTVLCOPT:http-reconnect=true
 http://185.81.77.4/BocairentTV/index.m3u8
+#EXTINF:-1 tvg-id="SanPedroTV.ar@SD" tvg-name="San Pedro TV (1080p) [Not 24/7]" tvg-logo="https://i.imgur.com/UkpXogr.png" group-title="Entretenimiento",San Pedro TV (1080p) [Not 24/7]
+#EXTVLCOPT:network-caching=2000
+#EXTVLCOPT:http-reconnect=true
+https://iptv.ixfo.com.ar:30443/live/sanpedrotv/playlist.m3u8
 #EXTINF:-1 tvg-id="XHUNESTDT.mx@SD" tvg-name="Señal España (XHUNES-TDT) (720p)" tvg-logo="https://i.imgur.com/LbZkdca.png" group-title="Entretenimiento",Señal España (XHUNES-TDT) (720p)
 #EXTVLCOPT:network-caching=2000
 #EXTVLCOPT:http-reconnect=true
@@ -459,10 +463,6 @@ https://cloudvideo.servers10.com:8081/stztelebista/index.m3u8
 #EXTVLCOPT:network-caching=2000
 #EXTVLCOPT:http-reconnect=true
 https://tvdirecto.teleelx.es/stream/teleelx.m3u8
-#EXTINF:-1 tvg-id="TelefeBuenosAires.ar@SD" tvg-name="Telefe Buenos Aires (1080p)" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Telefe_%28nuevo_logo%29.png/960px-Telefe_%28nuevo_logo%29.png" group-title="Entretenimiento",Telefe Buenos Aires (1080p)
-#EXTVLCOPT:network-caching=2000
-#EXTVLCOPT:http-reconnect=true
-http://45.134.141.161:2200/ARG/TELEFE_HD/index.m3u8
 #EXTINF:-1 tvg-id="Telenord.ar@SD" tvg-name="Telenord Corrientes (1080p) [Not 24/7]" tvg-logo="https://i.imgur.com/yqXORkt.png" group-title="Entretenimiento",Telenord Corrientes (1080p) [Not 24/7]
 #EXTVLCOPT:network-caching=2000
 #EXTVLCOPT:http-reconnect=true
@@ -643,6 +643,10 @@ https://5ca3e84a76d30.streamlock.net/teleyucatan/videoteleyucatan/playlist.m3u8
 #EXTVLCOPT:network-caching=2000
 #EXTVLCOPT:http-reconnect=true
 https://s5.mexside.net:1936/telemax/telemax/playlist.m3u8
+#EXTINF:-1 tvg-id="TlaxcalaTV.mx@SD" tvg-name="Tlaxcala Televisión (360p) [Not 24/7]" tvg-logo="https://i.imgur.com/5vaEhfy.png" group-title="Familia y TV Abierta",Tlaxcala Televisión (360p) [Not 24/7]
+#EXTVLCOPT:network-caching=2000
+#EXTVLCOPT:http-reconnect=true
+https://vid26.mega00.com:5443/live/streams/qNmc7nulmq8zPYZE1582752735050.m3u8
 #EXTINF:-1 tvg-id="TRCTV.mx@SD" tvg-name="TRC Televisión (720p)" tvg-logo="https://i.imgur.com/W4xwCdl.png" group-title="Familia y TV Abierta",TRC Televisión (720p)
 #EXTVLCOPT:network-caching=2000
 #EXTVLCOPT:http-reconnect=true
@@ -1023,14 +1027,6 @@ https://jmp2.uk/plu-655b5d865812e80008843bd1.m3u8
 #EXTVLCOPT:network-caching=2000
 #EXTVLCOPT:http-reconnect=true
 https://fast-tailor.3catdirectes.cat/v1/channel/ccma-channel2/hls.m3u8
-#EXTINF:-1 tvg-id="BBCDrama.uk@Spain" tvg-name="BBC Drama (1080p)" tvg-logo="https://i.imgur.com/HctHhLL.png" group-title="Peliculas - Drama y Series",BBC Drama (1080p)
-#EXTVLCOPT:network-caching=2000
-#EXTVLCOPT:http-reconnect=true
-https://amg00793-amg00793c40-rakuten-es-5444.playouts.now.amagi.tv/playlist.m3u8
-#EXTINF:-1 tvg-id="Medium.de@ES" tvg-name="Medium" tvg-logo="https://images.pluto.tv/channels/6578808014fbe400086e21bc/colorLogoPNG.png" group-title="Peliculas - Drama y Series",Medium
-#EXTVLCOPT:network-caching=2000
-#EXTVLCOPT:http-reconnect=true
-https://jmp2.uk/plu-6578808014fbe400086e21bc.m3u8
 #EXTINF:-1 tvg-id="PlutoTVCineDrama.de@ES" tvg-name="Pluto TV Cine Drama" tvg-logo="https://images.pluto.tv/channels/5f1ac947dcd00d0007937c08/colorLogoPNG.png" group-title="Peliculas - Drama y Series",Pluto TV Cine Drama
 #EXTVLCOPT:network-caching=2000
 #EXTVLCOPT:http-reconnect=true
@@ -1083,6 +1079,10 @@ https://live20.bozztv.com/giatvplayout7/giatv-211465/playlist.m3u8
 #EXTVLCOPT:network-caching=2000
 #EXTVLCOPT:http-reconnect=true
 https://estrella-games-oando.amagi.tv/playlist.m3u8
+#EXTINF:-1 tvg-id="KinoKazka.es@SD" tvg-name="like Gecko) Chrome/130.0.0.0 Safari/537.36' group-title='Kids',KinoKazka (1080p)" tvg-logo="https://i.imgur.com/y6SWpsX.png" group-title="Peliculas - Familiar",like Gecko) Chrome/130.0.0.0 Safari/537.36' group-title='Kids',KinoKazka (1080p)
+#EXTVLCOPT:network-caching=2000
+#EXTVLCOPT:http-reconnect=true
+http://stream.mcquack.net/167/index.m3u8
 #EXTINF:-1 tvg-id="MrBeanAnimated.uk@ES" tvg-name="Mr. Bean Anime Spain (1080p)" tvg-logo="https://static.wikia.nocookie.net/logopedia/images/2/25/Mr._Bean_Animated_Series_stacked_logo.png" group-title="Peliculas - Familiar",Mr. Bean Anime Spain (1080p)
 #EXTVLCOPT:network-caching=2000
 #EXTVLCOPT:http-reconnect=true
@@ -1091,10 +1091,6 @@ https://amg00627-amg00627c30-rakuten-es-3990.playouts.now.amagi.tv/playlist/amg0
 #EXTVLCOPT:network-caching=2000
 #EXTVLCOPT:http-reconnect=true
 http://138.186.23.7:8082/NICKJR/index.m3u8
-#EXTINF:-1 tvg-id="PlimPlim.ar@SD" tvg-name="Plim Plim (1080p)" tvg-logo="https://i.imgur.com/MYc8srh.png" group-title="Peliculas - Familiar",Plim Plim (1080p)
-#EXTVLCOPT:network-caching=2000
-#EXTVLCOPT:http-reconnect=true
-http://8.243.126.131:8000/play/a0od/index.m3u8
 #EXTINF:-1 tvg-id="XtremaTerror.ar@SD" tvg-name="Xtrema Terror" tvg-logo="https://i.imgur.com/FcaTUym.png" group-title="Peliculas - Terror",Xtrema Terror
 #EXTVLCOPT:network-caching=2000
 #EXTVLCOPT:http-reconnect=true
