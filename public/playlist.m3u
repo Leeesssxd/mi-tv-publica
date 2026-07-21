@@ -75,6 +75,10 @@ http://181.78.8.199:8000/play/a0bt/index.m3u8
 #EXTVLCOPT:network-caching=2000
 #EXTVLCOPT:http-reconnect=true
 https://livestream.lumpentv.com.ar/hls/lumpen.m3u8
+#EXTINF:-1 tvg-id="DSports.us@Panregional" tvg-name="DSports (1080p)" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/DirecTV_Sports_Latin_America_%282018%29.png/960px-DirecTV_Sports_Latin_America_%282018%29.png" group-title="Deportes",DSports (1080p)
+#EXTVLCOPT:network-caching=2000
+#EXTVLCOPT:http-reconnect=true
+https://streamvidex.qzz.io/videx/dsportsar/index.m3u8
 #EXTINF:-1 tvg-id="Esport3.es@Originals" tvg-name="Esport3 (1080p) [Not 24/7]" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Esport3.svg/960px-Esport3.svg.png" group-title="Deportes",Esport3 (1080p) [Not 24/7]
 #EXTVLCOPT:network-caching=2000
 #EXTVLCOPT:http-reconnect=true
@@ -207,10 +211,6 @@ https://limited35.todostreaming.es/live/mitjans-livestream.m3u8
 #EXTVLCOPT:network-caching=2000
 #EXTVLCOPT:http-reconnect=true
 https://limited35.todostreaming.es/live/mitjans-livestream1.m3u8
-#EXTINF:-1 tvg-id="Canal4ManchaCentro.es@SD" tvg-name="Canal 4 Mancha Centro (720p) [Not 24/7]" tvg-logo="https://i.imgur.com/t3O3O9M.png" group-title="Entretenimiento",Canal 4 Mancha Centro (720p) [Not 24/7]
-#EXTVLCOPT:network-caching=2000
-#EXTVLCOPT:http-reconnect=true
-https://5924d3ad0efcf.streamlock.net/canal4/canal4live/playlist.m3u8
 #EXTINF:-1 tvg-id="Canal7Neuquen.ar@SD" tvg-name="Canal 7 Neuquén (1080p)" tvg-logo="https://i.ibb.co/BrvQsWm/C7neuquenlogo2023.png" group-title="Entretenimiento",Canal 7 Neuquén (1080p)
 #EXTVLCOPT:network-caching=2000
 #EXTVLCOPT:http-reconnect=true
@@ -235,6 +235,10 @@ http://coninfo.net:1935/9linklivert/smil:9linkmultibr.smil/playlist.m3u8
 #EXTVLCOPT:network-caching=2000
 #EXTVLCOPT:http-reconnect=true
 https://canalcoin.garjim.es/hls/directo.m3u8
+#EXTINF:-1 tvg-id="CanalDonana.es@SD" tvg-name="Canal Doñana (720p) [Not 24/7]" tvg-logo="https://i.imgur.com/0WrKIxm.png" group-title="Entretenimiento",Canal Doñana (720p) [Not 24/7]
+#EXTVLCOPT:network-caching=2000
+#EXTVLCOPT:http-reconnect=true
+https://secure5.todostreaming.es/live/division-alm.m3u8
 #EXTINF:-1 tvg-id="CanalMalagaRTV.es@SD" tvg-name="Canal Málaga RTV (720p) [Not 24/7]" tvg-logo="https://i.imgur.com/QSUOxtM.png" group-title="Entretenimiento",Canal Málaga RTV (720p) [Not 24/7]
 #EXTVLCOPT:network-caching=2000
 #EXTVLCOPT:http-reconnect=true
@@ -327,18 +331,14 @@ https://cdn1.etbon.eus/etb2on/index.m3u8
 #EXTVLCOPT:network-caching=2000
 #EXTVLCOPT:http-reconnect=true
 https://5ca9af4645e15.streamlock.net/teleradio/smil:teleradio.smil/playlist.m3u8
-#EXTINF:-1 tvg-id="Fibwi.es@SD" tvg-name="Fibwi (1080p) [Not 24/7]" tvg-logo="https://i.imgur.com/4vcGzcC.png" group-title="Entretenimiento",Fibwi (1080p) [Not 24/7]
-#EXTVLCOPT:network-caching=2000
-#EXTVLCOPT:http-reconnect=true
-https://hostcdn3.fibwi.com/fibwi_diario/index.fmp4.m3u8
 #EXTINF:-1 tvg-id="FuerteventuraTV.es@SD" tvg-name="Fuerteventura TV (1080p)" tvg-logo="https://i.ibb.co/MpvjCzC/Fuerteventura-tv-service-webtv-488969d1-1.png" group-title="Entretenimiento",Fuerteventura TV (1080p)
 #EXTVLCOPT:network-caching=2000
 #EXTVLCOPT:http-reconnect=true
 https://5c0956165db0b.streamlock.net/ftv/directo/.m3u8
-#EXTINF:-1 tvg-id="GikTVMX.mx@SD" tvg-name="GikTVMX (720p)" tvg-logo="https://i.imgur.com/Gwz78jZ.png" group-title="Entretenimiento",GikTVMX (720p)
+#EXTINF:-1 tvg-id="GoienaEus.es@SD" tvg-name="Goiena Eus (720p)" tvg-logo="https://i.imgur.com/eaLIJzK.png" group-title="Entretenimiento",Goiena Eus (720p)
 #EXTVLCOPT:network-caching=2000
 #EXTVLCOPT:http-reconnect=true
-https://pistream.ddns.net/hls/stream.m3u8
+https://zuzenean.goienamedia.eus/goiena-telebista.m3u8
 #EXTINF:-1 tvg-id="GuadaTV.es@SD" tvg-name="Guada TV (720p) [Not 24/7]" tvg-logo="https://i.imgur.com/YaDNsYN.png" group-title="Entretenimiento",Guada TV (720p) [Not 24/7]
 #EXTVLCOPT:network-caching=2000
 #EXTVLCOPT:http-reconnect=true
@@ -463,6 +463,14 @@ https://tvdirecto.teleelx.es/stream/teleelx.m3u8
 #EXTVLCOPT:network-caching=2000
 #EXTVLCOPT:http-reconnect=true
 http://45.134.141.161:2200/ARG/TELEFE_HD/index.m3u8
+#EXTINF:-1 tvg-id="Telenord.ar@SD" tvg-name="Telenord Corrientes (1080p) [Not 24/7]" tvg-logo="https://i.imgur.com/yqXORkt.png" group-title="Entretenimiento",Telenord Corrientes (1080p) [Not 24/7]
+#EXTVLCOPT:network-caching=2000
+#EXTVLCOPT:http-reconnect=true
+http://www.coninfo.net:1935/previsoratv/live/playlist.m3u8
+#EXTINF:-1 tvg-id="TeleplaySureste.mx@SD" tvg-name="Teleplay Sureste (720p)" tvg-logo="https://i.imgur.com/MeV5N08.png" group-title="Entretenimiento",Teleplay Sureste (720p)
+#EXTVLCOPT:network-caching=2000
+#EXTVLCOPT:http-reconnect=true
+https://player.tvstream.mx/livestream/teleplay/livehd/playlist.m3u8
 #EXTINF:-1 tvg-id="TeleVigo.es@SD" tvg-name="TeleVigo (1080p) [Not 24/7]" tvg-logo="https://i.imgur.com/4iVmlFa.png" group-title="Entretenimiento",TeleVigo (1080p) [Not 24/7]
 #EXTVLCOPT:network-caching=2000
 #EXTVLCOPT:http-reconnect=true
@@ -523,10 +531,6 @@ https://5ca9af4645e15.streamlock.net/chiapas/videochiapas/playlist.m3u8
 #EXTVLCOPT:network-caching=2000
 #EXTVLCOPT:http-reconnect=true
 https://vivo.solumedia.com:19360/dadaproductora/dadaproductora.m3u8
-#EXTINF:-1 tvg-id="ILCECanal15SummaSaberes.mx@SD" tvg-name="Canal 15 ILCE Summa Sabres (720p)" tvg-logo="https://i.imgur.com/r7czgOc.png" group-title="Familia y TV Abierta",Canal 15 ILCE Summa Sabres (720p)
-#EXTVLCOPT:network-caching=2000
-#EXTVLCOPT:http-reconnect=true
-https://live-ilce.ovp-vivaro.digital/ovp-origin-abr/ngrp:6359ef999f3fb_all/playlist.m3u8
 #EXTINF:-1 tvg-id="Canal26.mx@SD" tvg-name="Canal 26 Aguascalientes (1080p)" tvg-logo="https://i.imgur.com/PAvnVN9.png" group-title="Familia y TV Abierta",Canal 26 Aguascalientes (1080p)
 #EXTVLCOPT:network-caching=2000
 #EXTVLCOPT:http-reconnect=true
@@ -567,10 +571,6 @@ https://5ca3e84a76d30.streamlock.net/tvlobo/videotvlobo/playlist.m3u8
 #EXTVLCOPT:network-caching=2000
 #EXTVLCOPT:http-reconnect=true
 https://5e50264bd6766.streamlock.net/mexiquense/videomexiquense/playlist.m3u8
-#EXTINF:-1 tvg-id="NayaritComunica.mx@SD" tvg-name="Nayarit Comunica (1080p)" tvg-logo="https://i.imgur.com/aZCTkjU.jpg" group-title="Familia y TV Abierta",Nayarit Comunica (1080p)
-#EXTVLCOPT:network-caching=2000
-#EXTVLCOPT:http-reconnect=true
-https://live.iplanay.gob.mx/hls/nayarittv.m3u8
 #EXTINF:-1 tvg-id="NueveTV.mx@SD" tvg-name="Nueve TV San Luís Potosí (720p)" tvg-logo="https://i.imgur.com/3fzB7zY.png" group-title="Familia y TV Abierta",Nueve TV San Luís Potosí (720p)
 #EXTVLCOPT:network-caching=2000
 #EXTVLCOPT:http-reconnect=true
@@ -635,10 +635,6 @@ https://5ca3e84a76d30.streamlock.net/teleyucatan/videoteleyucatan/playlist.m3u8
 #EXTVLCOPT:network-caching=2000
 #EXTVLCOPT:http-reconnect=true
 https://s5.mexside.net:1936/telemax/telemax/playlist.m3u8
-#EXTINF:-1 tvg-id="TlaxcalaTV.mx@SD" tvg-name="Tlaxcala Televisión (360p) [Not 24/7]" tvg-logo="https://i.imgur.com/5vaEhfy.png" group-title="Familia y TV Abierta",Tlaxcala Televisión (360p) [Not 24/7]
-#EXTVLCOPT:network-caching=2000
-#EXTVLCOPT:http-reconnect=true
-https://vid26.mega00.com:5443/live/streams/qNmc7nulmq8zPYZE1582752735050.m3u8
 #EXTINF:-1 tvg-id="TRCTV.mx@SD" tvg-name="TRC Televisión (720p)" tvg-logo="https://i.imgur.com/W4xwCdl.png" group-title="Familia y TV Abierta",TRC Televisión (720p)
 #EXTVLCOPT:network-caching=2000
 #EXTVLCOPT:http-reconnect=true
@@ -731,6 +727,10 @@ https://estrella-news-oando.amagi.tv/playlist.m3u8
 #EXTVLCOPT:network-caching=2000
 #EXTVLCOPT:http-reconnect=true
 https://jmp2.uk/plu-652e922db4b047000825f975.m3u8
+#EXTINF:-1 tvg-id="XHFGLTDT.mx@SD" tvg-name="Notigram TV (XHFGL-TDT) (1080p)" tvg-logo="https://i.imgur.com/9ZXCQvy.png" group-title="Noticias",Notigram TV (XHFGL-TDT) (1080p)
+#EXTVLCOPT:network-caching=2000
+#EXTVLCOPT:http-reconnect=true
+https://stream.ontvmx.com/ontv/Wn3jgo4UYNSmwRDIev/playlist.m3u8
 #EXTINF:-1 tvg-id="RTN.ar@SD" tvg-name="RTN (Neuquén) (720p) [Not 24/7]" tvg-logo="https://i.imgur.com/8xqYg4C.png" group-title="Noticias",RTN (Neuquén) (720p) [Not 24/7]
 #EXTVLCOPT:network-caching=2000
 #EXTVLCOPT:http-reconnect=true
@@ -759,6 +759,10 @@ https://s5.mexside.net:1936/clientetv/clientetv/playlist.m3u8
 #EXTVLCOPT:network-caching=2000
 #EXTVLCOPT:http-reconnect=true
 https://5bf8041cb3fed.streamlock.net/AlcanceTV/AlcanceTV/playlist.m3u8
+#EXTINF:-1 tvg-id="BAMOSTV.mx@SD" tvg-name="BAMOS TV (1080p) [Not 24/7]" tvg-logo="https://i.imgur.com/ntK4D64.png" group-title="Otros",BAMOS TV (1080p) [Not 24/7]
+#EXTVLCOPT:network-caching=2000
+#EXTVLCOPT:http-reconnect=true
+https://video2.getstreamhosting.com:19360/8092/8092.m3u8
 #EXTINF:-1 tvg-id="BonDiaTV.es@SD" tvg-name="Bon Dia TV (1080p)" tvg-logo="https://i.imgur.com/VgRCu2U.png" group-title="Otros",Bon Dia TV (1080p)
 #EXTVLCOPT:network-caching=2000
 #EXTVLCOPT:http-reconnect=true
