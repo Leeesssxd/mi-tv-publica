@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-07-22T17:39:58Z",
+  "generated_at": "2026-07-23T03:36:08Z",
   "requested_total": 139,
-  "found_total": 18,
-  "missing_total": 121,
+  "found_total": 20,
+  "missing_total": 119,
   "found": [
     {
       "dial": 100,
@@ -113,6 +113,18 @@
       "candidate_count": 1
     },
     {
+      "dial": 208,
+      "requested": "TNT_NOVELAS_HD",
+      "tvg_id": "TNT_NOVELAS_HD",
+      "reserved": false,
+      "matched_name": "TNT Novelas (1080p)",
+      "group": "Noticias",
+      "country": "US",
+      "state": "alive",
+      "url": "http://15.204.246.24:8080/TNTNovelasHD/index.m3u8",
+      "candidate_count": 1
+    },
+    {
       "dial": 214,
       "requested": "TELEMUNDO_HD",
       "tvg_id": "TELEMUNDO_HD",
@@ -209,6 +221,18 @@
       "candidate_count": 1
     },
     {
+      "dial": 322,
+      "requested": "AZTECA_DEPORTES_NETWORK_HD",
+      "tvg_id": "AZTECA_DEPORTES_NETWORK_HD",
+      "reserved": false,
+      "matched_name": "Azteca Deportes Network (1080p)",
+      "group": "Deportes",
+      "country": "MX",
+      "state": "alive",
+      "url": "http://181.119.66.28:8081/AZTECA-DEPORTES-HD/index.m3u8",
+      "candidate_count": 1
+    },
+    {
       "dial": 403,
       "requested": "PANICO_DELAY_SD",
       "tvg_id": "PANICO_DELAY_SD",
@@ -256,7 +280,6 @@
     "TV5_MONDE_SD",
     "STAR_CHANNEL_HD",
     "UNIVERSAL_TV_HD",
-    "TNT_NOVELAS_HD",
     "AXN_HD",
     "SONY_HD",
     "TNT_SERIES_HD",
@@ -313,7 +336,6 @@
     "MEGA_SPORTS_1_HD",
     "AYM_SPORTS_HD",
     "LAS_HD",
-    "AZTECA_DEPORTES_NETWORK_HD",
     "PX_SPORTS_HD",
     "CLARO_SPORTS_HD",
     "WWB_SD",
@@ -831,12 +853,13 @@
       "dial": 208,
       "requested": "TNT_NOVELAS_HD",
       "tvg_id": "TNT_NOVELAS_HD",
-      "reserved": true,
-      "matched_name": null,
-      "group": null,
-      "country": null,
-      "state": "reserved",
-      "url": null
+      "reserved": false,
+      "matched_name": "TNT Novelas (1080p)",
+      "group": "Noticias",
+      "country": "US",
+      "state": "alive",
+      "url": "http://15.204.246.24:8080/TNTNovelasHD/index.m3u8",
+      "candidate_count": 1
     },
     {
       "dial": 209,
@@ -1554,12 +1577,13 @@
       "dial": 322,
       "requested": "AZTECA_DEPORTES_NETWORK_HD",
       "tvg_id": "AZTECA_DEPORTES_NETWORK_HD",
-      "reserved": true,
-      "matched_name": null,
-      "group": null,
-      "country": null,
-      "state": "reserved",
-      "url": null
+      "reserved": false,
+      "matched_name": "Azteca Deportes Network (1080p)",
+      "group": "Deportes",
+      "country": "MX",
+      "state": "alive",
+      "url": "http://181.119.66.28:8081/AZTECA-DEPORTES-HD/index.m3u8",
+      "candidate_count": 1
     },
     {
       "dial": 323,
