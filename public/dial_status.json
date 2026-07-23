@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-07-23T10:42:20Z",
+  "generated_at": "2026-07-23T17:42:39Z",
   "requested_total": 139,
-  "found_total": 20,
-  "missing_total": 119,
+  "found_total": 19,
+  "missing_total": 120,
   "found": [
     {
       "dial": 100,
@@ -38,18 +38,6 @@
       "country": "MX",
       "state": "alive",
       "url": "http://45.181.87.106/CANAL5HD/index.m3u8",
-      "candidate_count": 1
-    },
-    {
-      "dial": 106,
-      "requested": "CANAL_6_HD",
-      "tvg_id": "CANAL_6_HD",
-      "reserved": false,
-      "matched_name": "Canal 6 Posadas (1080p)",
-      "group": "Entretenimiento",
-      "country": "AR",
-      "state": "alive",
-      "url": "https://iptv.ixfo.com.ar:30443/live/c6digital/playlist.m3u8",
       "candidate_count": 1
     },
     {
@@ -249,6 +237,7 @@
     "AZTECA_UNO_HD",
     "LAS_ESTRELLAS_HD",
     "CANAL_4_GDL_HD",
+    "CANAL_6_HD",
     "AZTECA_7_HD",
     "MÁS_VISIÓN_HD",
     "NU9VE_HD",
@@ -440,13 +429,12 @@
       "dial": 106,
       "requested": "CANAL_6_HD",
       "tvg_id": "CANAL_6_HD",
-      "reserved": false,
-      "matched_name": "Canal 6 Posadas (1080p)",
-      "group": "Entretenimiento",
-      "country": "AR",
-      "state": "alive",
-      "url": "https://iptv.ixfo.com.ar:30443/live/c6digital/playlist.m3u8",
-      "candidate_count": 1
+      "reserved": true,
+      "matched_name": null,
+      "group": null,
+      "country": null,
+      "state": "reserved",
+      "url": null
     },
     {
       "dial": 107,
