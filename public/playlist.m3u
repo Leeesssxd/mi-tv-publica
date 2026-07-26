@@ -47,6 +47,10 @@ http://138.121.15.230:9002/TELEMUNDO/index.m3u8
 #EXTVLCOPT:network-caching=2000
 #EXTVLCOPT:http-reconnect=true
 http://72.1.184.5:8089/play/a05d/index.m3u8
+#EXTINF:-1 tvg-id="COMEDY_CENTRAL_HD" tvg-name="Comedy Central Latin America (1080p)" tvg-chno="219" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Comedy_Central_2018.svg/960px-Comedy_Central_2018.svg.png" group-title="Peliculas - Comedia",Comedy Central Latin America (1080p)
+#EXTVLCOPT:network-caching=2000
+#EXTVLCOPT:http-reconnect=true
+http://181.119.93.83:8000/play/a1di/index.m3u8
 #EXTINF:-1 tvg-id="AZTECA_INTERNACIONAL_HD" tvg-name="Azteca Internacional (1080p)" tvg-chno="234" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/e/eb/Azteca_Internacional_logo_2023.png" group-title="Familia y TV Abierta",Azteca Internacional (1080p)
 #EXTVLCOPT:network-caching=2000
 #EXTVLCOPT:http-reconnect=true
@@ -139,6 +143,10 @@ https://shls-live-ak.akamaized.net/out/v1/b06a89a463764d3688cda337d40dc5bf/index
 #EXTVLCOPT:network-caching=2000
 #EXTVLCOPT:http-reconnect=true
 https://cloud.fastchannel.es/mic/manifiest/hls/12tv/12tv.m3u8
+#EXTINF:-1 tvg-id="ActivaTV.es@SD" tvg-name="Activa TV (720p)" tvg-logo="https://i.imgur.com/VCUZKiw.png" group-title="Entretenimiento",Activa TV (720p)
+#EXTVLCOPT:network-caching=2000
+#EXTVLCOPT:http-reconnect=true
+https://streamtv.mediasector.es/hls/activatv/index.m3u8
 #EXTINF:-1 tvg-id="AiredeSantaFe.ar@SD" tvg-name="Aire de Santa Fe (1080p)" tvg-logo="https://i.imgur.com/60vSWW0.png" group-title="Entretenimiento",Aire de Santa Fe (1080p)
 #EXTVLCOPT:network-caching=2000
 #EXTVLCOPT:http-reconnect=true
@@ -219,10 +227,6 @@ https://stream.arcast.com.ar/envivo/castv/playlist.m3u8
 #EXTVLCOPT:network-caching=2000
 #EXTVLCOPT:http-reconnect=true
 https://stream.arcast.live/ahora/ahora/playlist.m3u8
-#EXTINF:-1 tvg-id="Canal9Resistencia.ar@SD" tvg-name="Canal 9 Resistencia (720p)" tvg-logo="https://i.imgur.com/xqgRFpC.png" group-title="Entretenimiento",Canal 9 Resistencia (720p)
-#EXTVLCOPT:network-caching=2000
-#EXTVLCOPT:http-reconnect=true
-http://coninfo.net:1935/9linklivert/smil:9linkmultibr.smil/playlist.m3u8
 #EXTINF:-1 tvg-id="CanalCoinTV.es@SD" tvg-name="Canal Coín (1080p)" tvg-logo="https://i.imgur.com/3QPJIpa.png" group-title="Entretenimiento",Canal Coín (1080p)
 #EXTVLCOPT:network-caching=2000
 #EXTVLCOPT:http-reconnect=true
@@ -443,10 +447,6 @@ http://45.134.141.161:2200/ARG/TELEFE_HD/index.m3u8
 #EXTVLCOPT:network-caching=2000
 #EXTVLCOPT:http-reconnect=true
 https://live.telemadrid.cross-media.es/6389770581112/eu-central-1/6416060453001/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJob3N0IjoiajI5YjgyLmVncmVzcy5haGc3NmwiLCJhY2NvdW50X2lkIjoiNjQxNjA2MDQ1MzAwMSIsImVobiI6ImxpdmUudGVsZW1hZHJpZC5jcm9zcy1tZWRpYS5lcyIsImlzcyI6ImJsaXZlLXBsYXliYWNrLXNvdXJjZS1hcGkiLCJzdWIiOiJwYXRobWFwdG9rZW4iLCJhdWQiOlsiNjQxNjA2MDQ1MzAwMSJdLCJqdGkiOiI2Mzg5NzcwNTgxMTEyIn0.kqriAMUkHT6m0V6wkCHJum_EUyL4PAi1zJMKlfmYHEU/playlist-hls.m3u8
-#EXTINF:-1 tvg-id="Telenord.ar@SD" tvg-name="Telenord Corrientes (1080p) [Not 24/7]" tvg-logo="https://i.imgur.com/yqXORkt.png" group-title="Entretenimiento",Telenord Corrientes (1080p) [Not 24/7]
-#EXTVLCOPT:network-caching=2000
-#EXTVLCOPT:http-reconnect=true
-http://www.coninfo.net:1935/previsoratv/live/playlist.m3u8
 #EXTINF:-1 tvg-id="TeleplaySureste.mx@SD" tvg-name="Teleplay Sureste (720p)" tvg-logo="https://i.imgur.com/MeV5N08.png" group-title="Entretenimiento",Teleplay Sureste (720p)
 #EXTVLCOPT:network-caching=2000
 #EXTVLCOPT:http-reconnect=true
@@ -487,6 +487,10 @@ https://cloud.fastchannel.es/mic/manifiest/hls/zaztv/zaztv.m3u8
 #EXTVLCOPT:network-caching=2000
 #EXTVLCOPT:http-reconnect=true
 https://60417ddeaf0d9.streamlock.net/ntv/videontv/playlist.m3u8
+#EXTINF:-1 tvg-id="AntenaTV.mx@SD" tvg-name="Antena TV" tvg-logo="https://i.imgur.com/1sAgSME.png" group-title="Familia y TV Abierta",Antena TV
+#EXTVLCOPT:network-caching=2000
+#EXTVLCOPT:http-reconnect=true
+https://5ca9af4645e15.streamlock.net/grd/videogrd/playlist.m3u8
 #EXTINF:-1 tvg-id="B15Fresnillo.mx@SD" tvg-name="B15 Fresnillo (1080p)" tvg-logo="https://i.imgur.com/kaUhEQy.png" group-title="Familia y TV Abierta",B15 Fresnillo (1080p)
 #EXTVLCOPT:network-caching=2000
 #EXTVLCOPT:http-reconnect=true
@@ -515,6 +519,10 @@ https://vivo.solumedia.com:19360/dadaproductora/dadaproductora.m3u8
 #EXTVLCOPT:network-caching=2000
 #EXTVLCOPT:http-reconnect=true
 https://live-ilce.ovp-vivaro.digital/ovp-origin-abr/ngrp:6359ef999f3fb_all/playlist.m3u8
+#EXTINF:-1 tvg-id="Canal21TV.ar@SD" tvg-name="Canal 21 TV (1080p)" tvg-logo="https://i.imgur.com/Am7yMXg.png" group-title="Familia y TV Abierta",Canal 21 TV (1080p)
+#EXTVLCOPT:network-caching=2000
+#EXTVLCOPT:http-reconnect=true
+https://iptv.ixfo.com.ar:30443/c21tv/hd/c21tv/playlist.m3u8
 #EXTINF:-1 tvg-id="Canal26.mx@SD" tvg-name="Canal 26 Aguascalientes (1080p)" tvg-logo="https://i.imgur.com/PAvnVN9.png" group-title="Familia y TV Abierta",Canal 26 Aguascalientes (1080p)
 #EXTVLCOPT:network-caching=2000
 #EXTVLCOPT:http-reconnect=true
@@ -615,6 +623,10 @@ https://5ca3e84a76d30.streamlock.net/teleyucatan/videoteleyucatan/playlist.m3u8
 #EXTVLCOPT:network-caching=2000
 #EXTVLCOPT:http-reconnect=true
 https://s5.mexside.net:1936/telemax/telemax/playlist.m3u8
+#EXTINF:-1 tvg-id="TlaxcalaTV.mx@SD" tvg-name="Tlaxcala Televisión (360p) [Not 24/7]" tvg-logo="https://i.imgur.com/5vaEhfy.png" group-title="Familia y TV Abierta",Tlaxcala Televisión (360p) [Not 24/7]
+#EXTVLCOPT:network-caching=2000
+#EXTVLCOPT:http-reconnect=true
+https://vid26.mega00.com:5443/live/streams/qNmc7nulmq8zPYZE1582752735050.m3u8
 #EXTINF:-1 tvg-id="TRCTV.mx@SD" tvg-name="TRC Televisión (720p)" tvg-logo="https://i.imgur.com/W4xwCdl.png" group-title="Familia y TV Abierta",TRC Televisión (720p)
 #EXTVLCOPT:network-caching=2000
 #EXTVLCOPT:http-reconnect=true
@@ -683,10 +695,6 @@ https://5ca3e84a76d30.streamlock.net/gpacifico3/obregon.smil/playlist.m3u8
 #EXTVLCOPT:network-caching=2000
 #EXTVLCOPT:http-reconnect=true
 https://5e50264bd6766.streamlock.net/telemetrika2/smil:telemetrika2.smil/playlist.m3u8
-#EXTINF:-1 tvg-id="UMTV.mx@SD" tvg-name="UMTV (1080p) [Not 24/7]" tvg-logo="https://i.imgur.com/sjxVdPh.png" group-title="Familia y TV Abierta",UMTV (1080p) [Not 24/7]
-#EXTVLCOPT:network-caching=2000
-#EXTVLCOPT:http-reconnect=true
-https://60417ddeaf0d9.streamlock.net/montemorelos/videomontemorelos/playlist.m3u8
 #EXTINF:-1 tvg-id="VisionTelevision.mx@SD" tvg-name="Visión Televisión (720p)" tvg-logo="https://i.imgur.com/HV5tgcM.png" group-title="Familia y TV Abierta",Visión Televisión (720p)
 #EXTVLCOPT:network-caching=2000
 #EXTVLCOPT:http-reconnect=true
@@ -839,10 +847,18 @@ https://jmp2.uk/plu-628751bb7154a40007168843.m3u8
 #EXTVLCOPT:network-caching=2000
 #EXTVLCOPT:http-reconnect=true
 https://jmp2.uk/plu-63d7a8e5a9957100086bfc23.m3u8
+#EXTINF:-1 tvg-id="TelevisionConsciente.es@SD" tvg-name="Televisión Consciente (1080p)" tvg-logo="https://i.imgur.com/6QVHKPw.png" group-title="Otros",Televisión Consciente (1080p)
+#EXTVLCOPT:network-caching=2000
+#EXTVLCOPT:http-reconnect=true
+https://cdn318.fractalmedia.es/318/live/hls/tvc/master.m3u8
 #EXTINF:-1 tvg-id="TuristikTV.mx@SD" tvg-name="Turistik TV (720p)" tvg-logo="https://i.imgur.com/g9j0ze8.png" group-title="Otros",Turistik TV (720p)
 #EXTVLCOPT:network-caching=2000
 #EXTVLCOPT:http-reconnect=true
 https://cdn1.cef-technology.com/stream_web/turistik/playlist.m3u8
+#EXTINF:-1 tvg-id="Vayasemanita.us@Spain" tvg-name="Vaya semanita" tvg-logo="https://i.imgur.com/0bCLNUG.png" group-title="Otros",Vaya semanita
+#EXTVLCOPT:network-caching=2000
+#EXTVLCOPT:http-reconnect=true
+https://jmp2.uk/plu-5f28009b150b2500077766b8.m3u8
 #EXTINF:-1 tvg-id="WeatherSpy.mx@SD" tvg-name="WeatherSpy (720p)" tvg-logo="https://i.imgur.com/KIEKOt1.png" group-title="Otros",WeatherSpy (720p)
 #EXTVLCOPT:network-caching=2000
 #EXTVLCOPT:http-reconnect=true
@@ -851,6 +867,10 @@ https://jukin-weatherspy-2-mx.samsung.wurl.tv/playlist.m3u8
 #EXTVLCOPT:network-caching=2000
 #EXTVLCOPT:http-reconnect=true
 http://45.162.193.35/CINELATINO_HD/index.m3u8
+#EXTINF:-1 tvg-id="CosmosTv.ar@SD" tvg-name="Cosmos Tv" tvg-logo="https://i0.wp.com/fmcosmos.com/wp-content/uploads/2021/11/COSMOS-TV.png" group-title="Peliculas - Cine",Cosmos Tv
+#EXTVLCOPT:network-caching=2000
+#EXTVLCOPT:http-reconnect=true
+https://canaletaplus.com:3922/live/cosmoslive.m3u8
 #EXTINF:-1 tvg-id="Filmex.mx@SD" tvg-name="Filmex (Xumo) (1080p) [Geo-blocked]" tvg-logo="https://i.imgur.com/Hiz2OyC.png" group-title="Peliculas - Cine",Filmex (Xumo) (1080p) [Geo-blocked]
 #EXTVLCOPT:network-caching=2000
 #EXTVLCOPT:http-reconnect=true
@@ -883,6 +903,10 @@ https://jmp2.uk/plu-645a309c5a0cd5000873f609.m3u8
 #EXTVLCOPT:network-caching=2000
 #EXTVLCOPT:http-reconnect=true
 https://jmp2.uk/plu-5f1ac2591dd8880007bb7d6d.m3u8
+#EXTINF:-1 tvg-id="PlutoTVCineClasico.de@ES" tvg-name="Pluto TV Cine Clásico" tvg-logo="https://images.pluto.tv/channels/61373bb45168fe000773eecd/colorLogoPNG.png" group-title="Peliculas - Cine",Pluto TV Cine Clásico
+#EXTVLCOPT:network-caching=2000
+#EXTVLCOPT:http-reconnect=true
+https://jmp2.uk/plu-61373bb45168fe000773eecd.m3u8
 #EXTINF:-1 tvg-id="PlutoTVCinedeautor.de@ES" tvg-name="Pluto TV Cine de autor" tvg-logo="https://images.pluto.tv/channels/60cc807324d60a0007708dc8/colorLogoPNG.png" group-title="Peliculas - Cine",Pluto TV Cine de autor
 #EXTVLCOPT:network-caching=2000
 #EXTVLCOPT:http-reconnect=true
@@ -895,10 +919,26 @@ https://jmp2.uk/plu-5f1ac1f1b66c76000790ef27.m3u8
 #EXTVLCOPT:network-caching=2000
 #EXTVLCOPT:http-reconnect=true
 https://jmp2.uk/plu-5f1ac9a2d3611d0007a844bb.m3u8
+#EXTINF:-1 tvg-id="PlutoTVInvasionAlien.de@ES" tvg-name="Pluto TV Invasión Alien" tvg-logo="https://images.pluto.tv/channels/654a35ce346f420008d5c36e/colorLogoPNG.png" group-title="Peliculas - Cine",Pluto TV Invasión Alien
+#EXTVLCOPT:network-caching=2000
+#EXTVLCOPT:http-reconnect=true
+https://jmp2.uk/plu-654a35ce346f420008d5c36e.m3u8
 #EXTINF:-1 tvg-id="PlutoTVParanormal.de@ES" tvg-name="Pluto TV Paranormal" tvg-logo="https://images.pluto.tv/channels/5f98487036af340008da1e37/colorLogoPNG.png" group-title="Peliculas - Cine",Pluto TV Paranormal
 #EXTVLCOPT:network-caching=2000
 #EXTVLCOPT:http-reconnect=true
 https://jmp2.uk/plu-612ce5214bb5790007ad3016.m3u8
+#EXTINF:-1 tvg-id="PlutoTVPsycho.de@ES" tvg-name="Pluto TV Psycho" tvg-logo="https://images.pluto.tv/channels/65ce480a78df2200131c597b/colorLogoPNG.png" group-title="Peliculas - Cine",Pluto TV Psycho
+#EXTVLCOPT:network-caching=2000
+#EXTVLCOPT:http-reconnect=true
+https://jmp2.uk/plu-65ce480a78df2200131c597b.m3u8
+#EXTINF:-1 tvg-id="PlutoTVThrillers.de@ES" tvg-name="Pluto TV Thrillers" tvg-logo="https://images.pluto.tv/channels/5f1ac8a87cd38d000745d7cf/colorLogoPNG.png" group-title="Peliculas - Cine",Pluto TV Thrillers
+#EXTVLCOPT:network-caching=2000
+#EXTVLCOPT:http-reconnect=true
+https://jmp2.uk/plu-5f1ac8a87cd38d000745d7cf.m3u8
+#EXTINF:-1 tvg-id="PlutoTVWestern.de@ES" tvg-name="Pluto TV Western" tvg-logo="https://images.pluto.tv/channels/630dd3b2605f140007e002f5/colorLogoPNG_1732030684562.png" group-title="Peliculas - Cine",Pluto TV Western
+#EXTVLCOPT:network-caching=2000
+#EXTVLCOPT:http-reconnect=true
+https://jmp2.uk/plu-6385e82900ab2e000768a058.m3u8
 #EXTINF:-1 tvg-id="PopcornCentral.mx@SD" tvg-name="Popcorn Central (1080p)" tvg-logo="https://i.imgur.com/ULGVjyC.png" group-title="Peliculas - Cine",Popcorn Central (1080p)
 #EXTVLCOPT:network-caching=2000
 #EXTVLCOPT:http-reconnect=true
@@ -923,14 +963,6 @@ https://ff335120300e4742a2b135ee9a9e7df8.mediatailor.eu-west-1.amazonaws.com/v1/
 #EXTVLCOPT:network-caching=2000
 #EXTVLCOPT:http-reconnect=true
 https://jmp2.uk/plu-676e7b4a4bd636000819c6a7.m3u8
-#EXTINF:-1 tvg-id="XtremaAccion.ar@SD" tvg-name="Xtrema Accion" tvg-logo="https://i.imgur.com/z5NwizH.png" group-title="Peliculas - Cine",Xtrema Accion
-#EXTVLCOPT:network-caching=2000
-#EXTVLCOPT:http-reconnect=true
-https://stmv6.voxtvhd.com.br/cineaccion/cineaccion/playlist.m3u8
-#EXTINF:-1 tvg-id="XtremaCineClasico.ar@SD" tvg-name="Xtrema Cine Clasico" tvg-logo="https://i.imgur.com/j91M4Yf.png" group-title="Peliculas - Cine",Xtrema Cine Clasico
-#EXTVLCOPT:network-caching=2000
-#EXTVLCOPT:http-reconnect=true
-https://stmv6.voxtvhd.com.br/cineclasico/cineclasico/playlist.m3u8
 #EXTINF:-1 tvg-id="CineFriki.es@SD" tvg-name="Zylo Cine Friki (1080p)" tvg-logo="https://i.imgur.com/b3Ospym.png" group-title="Peliculas - Cine",Zylo Cine Friki (1080p)
 #EXTVLCOPT:network-caching=2000
 #EXTVLCOPT:http-reconnect=true
@@ -943,6 +975,10 @@ https://d2nq34q0i1r3la.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68
 #EXTVLCOPT:network-caching=2000
 #EXTVLCOPT:http-reconnect=true
 https://jmp2.uk/plu-68de3db35fc0afe85de0b843.m3u8
+#EXTINF:-1 tvg-id="PlutoTVCineComedia.de@ES" tvg-name="Pluto TV Cine Comedia" tvg-logo="https://images.pluto.tv/channels/5f1ac8099c49f600076579b2/colorLogoPNG_1769092378955.png" group-title="Peliculas - Comedia",Pluto TV Cine Comedia
+#EXTVLCOPT:network-caching=2000
+#EXTVLCOPT:http-reconnect=true
+https://jmp2.uk/plu-5f1ac8099c49f600076579b2.m3u8
 #EXTINF:-1 tvg-id="PlutoTVComediamadeinSpain.de@ES" tvg-name="Pluto TV Comedia made in Spain" tvg-logo="https://images.pluto.tv/channels/5f1abce155a03d0007718834/colorLogoPNG.png" group-title="Peliculas - Comedia",Pluto TV Comedia made in Spain
 #EXTVLCOPT:network-caching=2000
 #EXTVLCOPT:http-reconnect=true
@@ -971,6 +1007,14 @@ https://jmp2.uk/plu-5f1ac947dcd00d0007937c08.m3u8
 #EXTVLCOPT:network-caching=2000
 #EXTVLCOPT:http-reconnect=true
 https://jmp2.uk/plu-6267d4d1fb694f0007a6af0e.m3u8
+#EXTINF:-1 tvg-id="PlutoTVSciFi.de@ES" tvg-name="Pluto TV Sci-Fi" tvg-logo="https://images.pluto.tv/channels/60ed498c4248a400077c0b9d/colorLogoPNG.png" group-title="Peliculas - Drama y Series",Pluto TV Sci-Fi
+#EXTVLCOPT:network-caching=2000
+#EXTVLCOPT:http-reconnect=true
+https://jmp2.uk/plu-5f6a38eaa5b68b0007a00e7a.m3u8
+#EXTINF:-1 tvg-id="PlutoTVZombies.de@ES" tvg-name="Pluto TV Zombies" tvg-logo="https://images.pluto.tv/channels/65786888b228b7000843ad9a/colorLogoPNG.png" group-title="Peliculas - Drama y Series",Pluto TV Zombies
+#EXTVLCOPT:network-caching=2000
+#EXTVLCOPT:http-reconnect=true
+https://jmp2.uk/plu-65786888b228b7000843ad9a.m3u8
 #EXTINF:-1 tvg-id="RakutenTVDramaMovies.es@Spain" tvg-name="Rakuten TV Drama Movies Spain (1080p)" tvg-logo="https://i.imgur.com/Meew6eX.png" group-title="Peliculas - Drama y Series",Rakuten TV Drama Movies Spain (1080p)
 #EXTVLCOPT:network-caching=2000
 #EXTVLCOPT:http-reconnect=true
@@ -1015,15 +1059,7 @@ http://stream.mcquack.net/167/index.m3u8
 #EXTVLCOPT:network-caching=2000
 #EXTVLCOPT:http-reconnect=true
 https://amg00627-amg00627c30-rakuten-es-3990.playouts.now.amagi.tv/playlist/amg00627-banijayfast-mrbeanescc-rakutenes/playlist.m3u8
-#EXTINF:-1 tvg-id="NickJrLatinAmerica.us@Panregional" tvg-name="Nick Jr. Latin America (1080p)" tvg-logo="https://i.imgur.com/KT4tdQs.png" group-title="Peliculas - Familiar",Nick Jr. Latin America (1080p)
-#EXTVLCOPT:network-caching=2000
-#EXTVLCOPT:http-reconnect=true
-http://138.186.23.7:8082/NICKJR/index.m3u8
 #EXTINF:-1 tvg-id="PlimPlim.ar@SD" tvg-name="Plim Plim (1080p)" tvg-logo="https://i.imgur.com/MYc8srh.png" group-title="Peliculas - Familiar",Plim Plim (1080p)
 #EXTVLCOPT:network-caching=2000
 #EXTVLCOPT:http-reconnect=true
 http://8.243.126.131:8000/play/a0od/index.m3u8
-#EXTINF:-1 tvg-id="XtremaTerror.ar@SD" tvg-name="Xtrema Terror" tvg-logo="https://i.imgur.com/FcaTUym.png" group-title="Peliculas - Terror",Xtrema Terror
-#EXTVLCOPT:network-caching=2000
-#EXTVLCOPT:http-reconnect=true
-https://stmv6.voxtvhd.com.br/cineterror/cineterror/playlist.m3u8
