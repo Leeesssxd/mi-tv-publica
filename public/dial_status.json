@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-07-28T03:07:13Z",
+  "generated_at": "2026-07-28T10:55:46Z",
   "requested_total": 139,
-  "found_total": 20,
-  "missing_total": 119,
+  "found_total": 19,
+  "missing_total": 120,
   "found": [
     {
       "dial": 100,
@@ -26,18 +26,6 @@
       "country": "MX",
       "state": "alive",
       "url": "https://igd-it-runtime.otteravision.com/igd/it/it.m3u8",
-      "candidate_count": 1
-    },
-    {
-      "dial": 105,
-      "requested": "CANAL_5_LOCAL_HD",
-      "tvg_id": "CANAL_5_LOCAL_HD",
-      "reserved": false,
-      "matched_name": "Canal 5 Televisa",
-      "group": "Familia y TV Abierta",
-      "country": "MX",
-      "state": "alive",
-      "url": "http://45.181.87.106/CANAL5HD/index.m3u8",
       "candidate_count": 1
     },
     {
@@ -249,6 +237,7 @@
     "AZTECA_UNO_HD",
     "LAS_ESTRELLAS_HD",
     "CANAL_4_GDL_HD",
+    "CANAL_5_LOCAL_HD",
     "AZTECA_7_HD",
     "MÁS_VISIÓN_HD",
     "NU9VE_HD",
@@ -428,13 +417,12 @@
       "dial": 105,
       "requested": "CANAL_5_LOCAL_HD",
       "tvg_id": "CANAL_5_LOCAL_HD",
-      "reserved": false,
-      "matched_name": "Canal 5 Televisa",
-      "group": "Familia y TV Abierta",
-      "country": "MX",
-      "state": "alive",
-      "url": "http://45.181.87.106/CANAL5HD/index.m3u8",
-      "candidate_count": 1
+      "reserved": true,
+      "matched_name": null,
+      "group": null,
+      "country": null,
+      "state": "reserved",
+      "url": null
     },
     {
       "dial": 106,
