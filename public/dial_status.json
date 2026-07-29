@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-07-28T17:49:14Z",
+  "generated_at": "2026-07-29T03:23:07Z",
   "requested_total": 139,
-  "found_total": 17,
-  "missing_total": 122,
+  "found_total": 20,
+  "missing_total": 119,
   "found": [
     {
       "dial": 100,
@@ -113,6 +113,18 @@
       "candidate_count": 1
     },
     {
+      "dial": 214,
+      "requested": "TELEMUNDO_HD",
+      "tvg_id": "TELEMUNDO_HD",
+      "reserved": false,
+      "matched_name": "Telemundo Internacional (1080p)",
+      "group": "Entretenimiento",
+      "country": "US",
+      "state": "alive",
+      "url": "http://138.121.15.230:9002/TELEMUNDO/index.m3u8",
+      "candidate_count": 1
+    },
+    {
       "dial": 216,
       "requested": "E!_HD",
       "tvg_id": "E!_HD",
@@ -158,6 +170,18 @@
       "country": "ES",
       "state": "alive",
       "url": "https://rtvelivestream-rtveplayplus.rtve.es/rtvesec/int/star_main_1080.m3u8",
+      "candidate_count": 1
+    },
+    {
+      "dial": 260,
+      "requested": "DISNEY_CHANNEL_HD",
+      "tvg_id": "DISNEY_CHANNEL_HD",
+      "reserved": false,
+      "matched_name": "Disney Channel Latin America Mexico (720p)",
+      "group": "Peliculas - Familiar",
+      "country": "AR",
+      "state": "alive",
+      "url": "http://45.166.93.156:9999/play/a0f3/index.m3u8",
       "candidate_count": 1
     },
     {
@@ -207,6 +231,18 @@
       "state": "alive",
       "url": "http://181.78.8.199:8000/play/a0bt/index.m3u8",
       "candidate_count": 1
+    },
+    {
+      "dial": 408,
+      "requested": "STUDIO_UNIVERSAL_HD",
+      "tvg_id": "STUDIO_UNIVERSAL_HD",
+      "reserved": false,
+      "matched_name": "Studio Universal Latin America Mexico (1080p)",
+      "group": "Entretenimiento",
+      "country": "US",
+      "state": "alive",
+      "url": "http://200.39.57.254:8008/play/a0eg/index.m3u8",
+      "candidate_count": 1
     }
   ],
   "missing": [
@@ -250,7 +286,6 @@
     "TNT_SERIES_HD",
     "WARNER_CHANNEL_HD",
     "ID_HD",
-    "TELEMUNDO_HD",
     "A&E_HD",
     "ATRESERIES_HD",
     "USA_HD",
@@ -270,7 +305,6 @@
     "CARTOONITO_HD",
     "NICKELODEON_HD",
     "DISCOVERY_KIDS_HD",
-    "DISNEY_CHANNEL_HD",
     "TOONCAST_HD",
     "BABY_FIRST_HD",
     "BABY_TV_SD",
@@ -311,7 +345,6 @@
     "PANICO_HD",
     "SONY_MOVIES",
     "EUROPA_EUROPA_HD",
-    "STUDIO_UNIVERSAL_HD",
     "CINEMAX_HD",
     "TNT_HD",
     "CINEMA_PLATINO_2_DELAY_SD",
@@ -886,12 +919,13 @@
       "dial": 214,
       "requested": "TELEMUNDO_HD",
       "tvg_id": "TELEMUNDO_HD",
-      "reserved": true,
-      "matched_name": null,
-      "group": null,
-      "country": null,
-      "state": "reserved",
-      "url": null
+      "reserved": false,
+      "matched_name": "Telemundo Internacional (1080p)",
+      "group": "Entretenimiento",
+      "country": "US",
+      "state": "alive",
+      "url": "http://138.121.15.230:9002/TELEMUNDO/index.m3u8",
+      "candidate_count": 1
     },
     {
       "dial": 215,
@@ -1154,12 +1188,13 @@
       "dial": 260,
       "requested": "DISNEY_CHANNEL_HD",
       "tvg_id": "DISNEY_CHANNEL_HD",
-      "reserved": true,
-      "matched_name": null,
-      "group": null,
-      "country": null,
-      "state": "reserved",
-      "url": null
+      "reserved": false,
+      "matched_name": "Disney Channel Latin America Mexico (720p)",
+      "group": "Peliculas - Familiar",
+      "country": "AR",
+      "state": "alive",
+      "url": "http://45.166.93.156:9999/play/a0f3/index.m3u8",
+      "candidate_count": 1
     },
     {
       "dial": 261,
@@ -1653,12 +1688,13 @@
       "dial": 408,
       "requested": "STUDIO_UNIVERSAL_HD",
       "tvg_id": "STUDIO_UNIVERSAL_HD",
-      "reserved": true,
-      "matched_name": null,
-      "group": null,
-      "country": null,
-      "state": "reserved",
-      "url": null
+      "reserved": false,
+      "matched_name": "Studio Universal Latin America Mexico (1080p)",
+      "group": "Entretenimiento",
+      "country": "US",
+      "state": "alive",
+      "url": "http://200.39.57.254:8008/play/a0eg/index.m3u8",
+      "candidate_count": 1
     },
     {
       "dial": 409,
