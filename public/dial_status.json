@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-07-30T10:43:11Z",
+  "generated_at": "2026-07-30T17:54:34Z",
   "requested_total": 139,
-  "found_total": 20,
-  "missing_total": 119,
+  "found_total": 19,
+  "missing_total": 120,
   "found": [
     {
       "dial": 100,
@@ -173,18 +173,6 @@
       "candidate_count": 1
     },
     {
-      "dial": 260,
-      "requested": "DISNEY_CHANNEL_HD",
-      "tvg_id": "DISNEY_CHANNEL_HD",
-      "reserved": false,
-      "matched_name": "Disney Channel Latin America Mexico (720p)",
-      "group": "Peliculas - Familiar",
-      "country": "AR",
-      "state": "alive",
-      "url": "http://45.166.93.156:9999/play/a0f3/index.m3u8",
-      "candidate_count": 1
-    },
-    {
       "dial": 292,
       "requested": "EWTN_SD",
       "tvg_id": "EWTN_SD",
@@ -305,6 +293,7 @@
     "CARTOONITO_HD",
     "NICKELODEON_HD",
     "DISCOVERY_KIDS_HD",
+    "DISNEY_CHANNEL_HD",
     "TOONCAST_HD",
     "BABY_FIRST_HD",
     "BABY_TV_SD",
@@ -1188,13 +1177,12 @@
       "dial": 260,
       "requested": "DISNEY_CHANNEL_HD",
       "tvg_id": "DISNEY_CHANNEL_HD",
-      "reserved": false,
-      "matched_name": "Disney Channel Latin America Mexico (720p)",
-      "group": "Peliculas - Familiar",
-      "country": "AR",
-      "state": "alive",
-      "url": "http://45.166.93.156:9999/play/a0f3/index.m3u8",
-      "candidate_count": 1
+      "reserved": true,
+      "matched_name": null,
+      "group": null,
+      "country": null,
+      "state": "reserved",
+      "url": null
     },
     {
       "dial": 261,
