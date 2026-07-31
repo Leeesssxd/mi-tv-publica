@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-07-30T17:54:34Z",
+  "generated_at": "2026-07-31T03:40:39Z",
   "requested_total": 139,
-  "found_total": 19,
-  "missing_total": 120,
+  "found_total": 24,
+  "missing_total": 115,
   "found": [
     {
       "dial": 100,
@@ -113,6 +113,30 @@
       "candidate_count": 1
     },
     {
+      "dial": 209,
+      "requested": "AXN_HD",
+      "tvg_id": "AXN_HD",
+      "reserved": false,
+      "matched_name": "AXN Latin America Mexico",
+      "group": "Peliculas - Cine",
+      "country": "US",
+      "state": "alive",
+      "url": "http://190.11.225.124:5000/live/axn_hd/playlist.m3u8",
+      "candidate_count": 1
+    },
+    {
+      "dial": 210,
+      "requested": "SONY_HD",
+      "tvg_id": "SONY_HD",
+      "reserved": false,
+      "matched_name": "Sony Channel (1080p)",
+      "group": "Entretenimiento",
+      "country": "AR",
+      "state": "alive",
+      "url": "http://138.121.15.230:9002/SONY/index.m3u8",
+      "candidate_count": 1
+    },
+    {
       "dial": 214,
       "requested": "TELEMUNDO_HD",
       "tvg_id": "TELEMUNDO_HD",
@@ -173,6 +197,18 @@
       "candidate_count": 1
     },
     {
+      "dial": 260,
+      "requested": "DISNEY_CHANNEL_HD",
+      "tvg_id": "DISNEY_CHANNEL_HD",
+      "reserved": false,
+      "matched_name": "Disney Channel Latin America Mexico (720p)",
+      "group": "Peliculas - Familiar",
+      "country": "AR",
+      "state": "alive",
+      "url": "http://45.166.93.156:9999/play/a0f3/index.m3u8",
+      "candidate_count": 1
+    },
+    {
       "dial": 292,
       "requested": "EWTN_SD",
       "tvg_id": "EWTN_SD",
@@ -194,6 +230,18 @@
       "country": "ALL",
       "state": "alive",
       "url": "http://magiz.net:80/play/chXzkkaPaXkx2-3idfJ3VR5WgpQJIwNvHueedj9V6oQ/ts",
+      "candidate_count": 1
+    },
+    {
+      "dial": 321,
+      "requested": "LAS_HD",
+      "tvg_id": "LAS_HD",
+      "reserved": false,
+      "matched_name": "Las Tortugas Ninja (720p)",
+      "group": "Peliculas - Familiar",
+      "country": "DE",
+      "state": "alive",
+      "url": "https://jmp2.uk/plu-61373f1a12dd9f00077dcd6f.m3u8",
       "candidate_count": 1
     },
     {
@@ -230,6 +278,18 @@
       "country": "US",
       "state": "alive",
       "url": "http://200.39.57.254:8008/play/a0eg/index.m3u8",
+      "candidate_count": 1
+    },
+    {
+      "dial": 431,
+      "requested": "CINECANAL_HD",
+      "tvg_id": "CINECANAL_HD",
+      "reserved": false,
+      "matched_name": "Cinecanal South (1080p)",
+      "group": "Peliculas - Cine",
+      "country": "US",
+      "state": "alive",
+      "url": "http://45.162.193.35/CINECANAL/index.m3u8",
       "candidate_count": 1
     }
   ],
@@ -269,8 +329,6 @@
     "TV5_MONDE_SD",
     "STAR_CHANNEL_HD",
     "UNIVERSAL_TV_HD",
-    "AXN_HD",
-    "SONY_HD",
     "TNT_SERIES_HD",
     "WARNER_CHANNEL_HD",
     "ID_HD",
@@ -293,7 +351,6 @@
     "CARTOONITO_HD",
     "NICKELODEON_HD",
     "DISCOVERY_KIDS_HD",
-    "DISNEY_CHANNEL_HD",
     "TOONCAST_HD",
     "BABY_FIRST_HD",
     "BABY_TV_SD",
@@ -325,7 +382,6 @@
     "GOLF_CHANNEL_HD",
     "MEGA_SPORTS_1_HD",
     "AYM_SPORTS_HD",
-    "LAS_HD",
     "PX_SPORTS_HD",
     "CLARO_SPORTS_HD",
     "WWB_SD",
@@ -345,7 +401,6 @@
     "CINE_LATINO_SD",
     "MULTICINEMA_HD",
     "MULTIPREMIER_HD",
-    "CINECANAL_HD",
     "CÍNEMA_HD",
     "VIDEO_ROLA_HD",
     "CLIC_HD",
@@ -853,23 +908,25 @@
       "dial": 209,
       "requested": "AXN_HD",
       "tvg_id": "AXN_HD",
-      "reserved": true,
-      "matched_name": null,
-      "group": null,
-      "country": null,
-      "state": "reserved",
-      "url": null
+      "reserved": false,
+      "matched_name": "AXN Latin America Mexico",
+      "group": "Peliculas - Cine",
+      "country": "US",
+      "state": "alive",
+      "url": "http://190.11.225.124:5000/live/axn_hd/playlist.m3u8",
+      "candidate_count": 1
     },
     {
       "dial": 210,
       "requested": "SONY_HD",
       "tvg_id": "SONY_HD",
-      "reserved": true,
-      "matched_name": null,
-      "group": null,
-      "country": null,
-      "state": "reserved",
-      "url": null
+      "reserved": false,
+      "matched_name": "Sony Channel (1080p)",
+      "group": "Entretenimiento",
+      "country": "AR",
+      "state": "alive",
+      "url": "http://138.121.15.230:9002/SONY/index.m3u8",
+      "candidate_count": 1
     },
     {
       "dial": 211,
@@ -1177,12 +1234,13 @@
       "dial": 260,
       "requested": "DISNEY_CHANNEL_HD",
       "tvg_id": "DISNEY_CHANNEL_HD",
-      "reserved": true,
-      "matched_name": null,
-      "group": null,
-      "country": null,
-      "state": "reserved",
-      "url": null
+      "reserved": false,
+      "matched_name": "Disney Channel Latin America Mexico (720p)",
+      "group": "Peliculas - Familiar",
+      "country": "AR",
+      "state": "alive",
+      "url": "http://45.166.93.156:9999/play/a0f3/index.m3u8",
+      "candidate_count": 1
     },
     {
       "dial": 261,
@@ -1553,12 +1611,13 @@
       "dial": 321,
       "requested": "LAS_HD",
       "tvg_id": "LAS_HD",
-      "reserved": true,
-      "matched_name": null,
-      "group": null,
-      "country": null,
-      "state": "reserved",
-      "url": null
+      "reserved": false,
+      "matched_name": "Las Tortugas Ninja (720p)",
+      "group": "Peliculas - Familiar",
+      "country": "DE",
+      "state": "alive",
+      "url": "https://jmp2.uk/plu-61373f1a12dd9f00077dcd6f.m3u8",
+      "candidate_count": 1
     },
     {
       "dial": 322,
@@ -1809,12 +1868,13 @@
       "dial": 431,
       "requested": "CINECANAL_HD",
       "tvg_id": "CINECANAL_HD",
-      "reserved": true,
-      "matched_name": null,
-      "group": null,
-      "country": null,
-      "state": "reserved",
-      "url": null
+      "reserved": false,
+      "matched_name": "Cinecanal South (1080p)",
+      "group": "Peliculas - Cine",
+      "country": "US",
+      "state": "alive",
+      "url": "http://45.162.193.35/CINECANAL/index.m3u8",
+      "candidate_count": 1
     },
     {
       "dial": 432,
