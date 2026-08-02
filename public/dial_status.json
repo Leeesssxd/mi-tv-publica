@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-08-01T17:19:48Z",
+  "generated_at": "2026-08-02T03:39:40Z",
   "requested_total": 139,
-  "found_total": 24,
-  "missing_total": 115,
+  "found_total": 20,
+  "missing_total": 119,
   "found": [
     {
       "dial": 100,
@@ -77,30 +77,6 @@
       "candidate_count": 1
     },
     {
-      "dial": 204,
-      "requested": "FX_HD",
-      "tvg_id": "FX_HD",
-      "reserved": false,
-      "matched_name": "FX Latin America South (720p)",
-      "group": "Entretenimiento",
-      "country": "US",
-      "state": "alive",
-      "url": "http://72.1.184.5:8089/play/a05i/index.m3u8",
-      "candidate_count": 1
-    },
-    {
-      "dial": 207,
-      "requested": "AMC_HD",
-      "tvg_id": "AMC_HD",
-      "reserved": false,
-      "matched_name": "AMC Latin America (1080p)",
-      "group": "Peliculas - Cine",
-      "country": "US",
-      "state": "alive",
-      "url": "http://45.162.193.35/AMC/index.m3u8",
-      "candidate_count": 1
-    },
-    {
       "dial": 208,
       "requested": "TNT_NOVELAS_HD",
       "tvg_id": "TNT_NOVELAS_HD",
@@ -146,18 +122,6 @@
       "country": "US",
       "state": "alive",
       "url": "http://138.121.15.230:9002/TELEMUNDO/index.m3u8",
-      "candidate_count": 1
-    },
-    {
-      "dial": 216,
-      "requested": "E!_HD",
-      "tvg_id": "E!_HD",
-      "reserved": false,
-      "matched_name": "E! Latin America Mexico (720p)",
-      "group": "Entretenimiento",
-      "country": "US",
-      "state": "alive",
-      "url": "http://72.1.184.5:8089/play/a05d/index.m3u8",
       "candidate_count": 1
     },
     {
@@ -279,18 +243,6 @@
       "state": "alive",
       "url": "http://200.39.57.254:8008/play/a0eg/index.m3u8",
       "candidate_count": 1
-    },
-    {
-      "dial": 431,
-      "requested": "CINECANAL_HD",
-      "tvg_id": "CINECANAL_HD",
-      "reserved": false,
-      "matched_name": "Cinecanal South (1080p)",
-      "group": "Peliculas - Cine",
-      "country": "US",
-      "state": "alive",
-      "url": "http://45.162.193.35/CINECANAL/index.m3u8",
-      "candidate_count": 1
     }
   ],
   "missing": [
@@ -328,11 +280,14 @@
     "DW_LATINOAMÉRICA_SD",
     "TV5_MONDE_SD",
     "STAR_CHANNEL_HD",
+    "FX_HD",
     "UNIVERSAL_TV_HD",
+    "AMC_HD",
     "TNT_SERIES_HD",
     "WARNER_CHANNEL_HD",
     "ID_HD",
     "A&E_HD",
+    "E!_HD",
     "ATRESERIES_HD",
     "USA_HD",
     "CORAZÓN_HD",
@@ -401,6 +356,7 @@
     "CINE_LATINO_SD",
     "MULTICINEMA_HD",
     "MULTIPREMIER_HD",
+    "CINECANAL_HD",
     "CÍNEMA_HD",
     "VIDEO_ROLA_HD",
     "CLIC_HD",
@@ -861,13 +817,12 @@
       "dial": 204,
       "requested": "FX_HD",
       "tvg_id": "FX_HD",
-      "reserved": false,
-      "matched_name": "FX Latin America South (720p)",
-      "group": "Entretenimiento",
-      "country": "US",
-      "state": "alive",
-      "url": "http://72.1.184.5:8089/play/a05i/index.m3u8",
-      "candidate_count": 1
+      "reserved": true,
+      "matched_name": null,
+      "group": null,
+      "country": null,
+      "state": "reserved",
+      "url": null
     },
     {
       "dial": 206,
@@ -884,13 +839,12 @@
       "dial": 207,
       "requested": "AMC_HD",
       "tvg_id": "AMC_HD",
-      "reserved": false,
-      "matched_name": "AMC Latin America (1080p)",
-      "group": "Peliculas - Cine",
-      "country": "US",
-      "state": "alive",
-      "url": "http://45.162.193.35/AMC/index.m3u8",
-      "candidate_count": 1
+      "reserved": true,
+      "matched_name": null,
+      "group": null,
+      "country": null,
+      "state": "reserved",
+      "url": null
     },
     {
       "dial": 208,
@@ -988,13 +942,12 @@
       "dial": 216,
       "requested": "E!_HD",
       "tvg_id": "E!_HD",
-      "reserved": false,
-      "matched_name": "E! Latin America Mexico (720p)",
-      "group": "Entretenimiento",
-      "country": "US",
-      "state": "alive",
-      "url": "http://72.1.184.5:8089/play/a05d/index.m3u8",
-      "candidate_count": 1
+      "reserved": true,
+      "matched_name": null,
+      "group": null,
+      "country": null,
+      "state": "reserved",
+      "url": null
     },
     {
       "dial": 217,
@@ -1868,13 +1821,12 @@
       "dial": 431,
       "requested": "CINECANAL_HD",
       "tvg_id": "CINECANAL_HD",
-      "reserved": false,
-      "matched_name": "Cinecanal South (1080p)",
-      "group": "Peliculas - Cine",
-      "country": "US",
-      "state": "alive",
-      "url": "http://45.162.193.35/CINECANAL/index.m3u8",
-      "candidate_count": 1
+      "reserved": true,
+      "matched_name": null,
+      "group": null,
+      "country": null,
+      "state": "reserved",
+      "url": null
     },
     {
       "dial": 432,
