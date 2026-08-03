@@ -79,10 +79,6 @@ http://magiz.net:80/play/chXzkkaPaXkx2-3idfJ3VR5WgpQJIwNvHueedj9V6oQ/ts
 #EXTVLCOPT:network-caching=2000
 #EXTVLCOPT:http-reconnect=true
 https://jmp2.uk/plu-61373f1a12dd9f00077dcd6f.m3u8
-#EXTINF:-1 tvg-id="AZTECA_DEPORTES_NETWORK_HD" tvg-name="Azteca Deportes Network (1080p)" tvg-chno="322" tvg-logo="https://match-images.icdb.tv/5913207f2494844101287828e87625eb.jpg" group-title="Deportes",Azteca Deportes Network (1080p)
-#EXTVLCOPT:network-caching=2000
-#EXTVLCOPT:http-reconnect=true
-http://181.119.66.28:8081/AZTECA-DEPORTES-HD/index.m3u8
 #EXTINF:-1 tvg-id="PANICO_DELAY_SD" tvg-name="Panico (576p)" tvg-chno="403" tvg-logo="https://i.imgur.com/XOJzlfS.png" group-title="Peliculas - Terror",Panico (576p)
 #EXTVLCOPT:network-caching=2000
 #EXTVLCOPT:http-reconnect=true
@@ -199,10 +195,6 @@ https://nd106.republicaservers.com:4433/hls/canal2misioness/index.m3u8
 #EXTVLCOPT:network-caching=2000
 #EXTVLCOPT:http-reconnect=true
 https://edge.enhdtv.com/nexthd/index.m3u8
-#EXTINF:-1 tvg-id="Canal2000.es@SD" tvg-name="Canal 2000 La Solana (720p) [Not 24/7]" tvg-logo="https://i.imgur.com/9RoBASf.png" group-title="Entretenimiento",Canal 2000 La Solana (720p) [Not 24/7]
-#EXTVLCOPT:network-caching=2000
-#EXTVLCOPT:http-reconnect=true
-http://canal2000.berkano-systems.net/streaming/streams/canal2000.m3u8
 #EXTINF:-1 tvg-id="Canal3LaPampa.ar@SD" tvg-name="Canal 3 La Pampa (1080p)" tvg-logo="https://i.imgur.com/SsNFudZ.png" group-title="Entretenimiento",Canal 3 La Pampa (1080p)
 #EXTVLCOPT:network-caching=2000
 #EXTVLCOPT:http-reconnect=true
@@ -223,6 +215,10 @@ https://limited35.todostreaming.es/live/mitjans-livestream1.m3u8
 #EXTVLCOPT:network-caching=2000
 #EXTVLCOPT:http-reconnect=true
 https://5924d3ad0efcf.streamlock.net/canal4/canal4live/playlist.m3u8
+#EXTINF:-1 tvg-id="Canal7Neuquen.ar@SD" tvg-name="Canal 7 Neuquén (1080p)" tvg-logo="https://i.ibb.co/BrvQsWm/C7neuquenlogo2023.png" group-title="Entretenimiento",Canal 7 Neuquén (1080p)
+#EXTVLCOPT:network-caching=2000
+#EXTVLCOPT:http-reconnect=true
+https://stream.arcast.com.ar/c7nq/ngrp:c7nq_all/playlist.m3u8
 #EXTINF:-1 tvg-id="Canal7Salta.ar@SD" tvg-name="Canal 7 Salta (1080p)" tvg-logo="https://i.imgur.com/CudG6sl.png" group-title="Entretenimiento",Canal 7 Salta (1080p)
 #EXTVLCOPT:network-caching=2000
 #EXTVLCOPT:http-reconnect=true
@@ -243,6 +239,10 @@ http://coninfo.net:1935/9linklivert/smil:9linkmultibr.smil/playlist.m3u8
 #EXTVLCOPT:network-caching=2000
 #EXTVLCOPT:http-reconnect=true
 https://canalcoin.garjim.es/hls/directo.m3u8
+#EXTINF:-1 tvg-id="CanalDonana.es@SD" tvg-name="Canal Doñana (720p) [Not 24/7]" tvg-logo="https://i.imgur.com/0WrKIxm.png" group-title="Entretenimiento",Canal Doñana (720p) [Not 24/7]
+#EXTVLCOPT:network-caching=2000
+#EXTVLCOPT:http-reconnect=true
+https://secure5.todostreaming.es/live/division-alm.m3u8
 #EXTINF:-1 tvg-id="CanalMalagaRTV.es@SD" tvg-name="Canal Málaga RTV (720p) [Not 24/7]" tvg-logo="https://i.imgur.com/QSUOxtM.png" group-title="Entretenimiento",Canal Málaga RTV (720p) [Not 24/7]
 #EXTVLCOPT:network-caching=2000
 #EXTVLCOPT:http-reconnect=true
@@ -307,6 +307,10 @@ https://directes-tv-int.3catdirectes.cat/live-content/c33-super3-hls/master.m3u8
 #EXTVLCOPT:network-caching=2000
 #EXTVLCOPT:http-reconnect=true
 https://streaming-1.eltorotv.com/lb0/eltorotv-streaming-web/index.m3u8
+#EXTINF:-1 tvg-id="EmpordaTV.es@SD" tvg-name="Empordà TV (1080p)" tvg-logo="https://i.imgur.com/jc0lUbX.png" group-title="Entretenimiento",Empordà TV (1080p)
+#EXTVLCOPT:network-caching=2000
+#EXTVLCOPT:http-reconnect=true
+https://video3.lhdserver.es/empordatv2/live.m3u8
 #EXTINF:-1 tvg-id="EsteponaTelevision.es@SD" tvg-name="Estepona Televisión (720p)" tvg-logo="https://i.imgur.com/rMAB720.png" group-title="Entretenimiento",Estepona Televisión (720p)
 #EXTVLCOPT:network-caching=2000
 #EXTVLCOPT:http-reconnect=true
@@ -459,14 +463,14 @@ http://45.134.141.161:2200/ARG/TELEFE_HD/index.m3u8
 #EXTVLCOPT:network-caching=2000
 #EXTVLCOPT:http-reconnect=true
 https://live.telemadrid.cross-media.es/6389770581112/eu-central-1/6416060453001/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJob3N0IjoiajI5YjgyLmVncmVzcy5haGc3NmwiLCJhY2NvdW50X2lkIjoiNjQxNjA2MDQ1MzAwMSIsImVobiI6ImxpdmUudGVsZW1hZHJpZC5jcm9zcy1tZWRpYS5lcyIsImlzcyI6ImJsaXZlLXBsYXliYWNrLXNvdXJjZS1hcGkiLCJzdWIiOiJwYXRobWFwdG9rZW4iLCJhdWQiOlsiNjQxNjA2MDQ1MzAwMSJdLCJqdGkiOiI2Mzg5NzcwNTgxMTEyIn0.kqriAMUkHT6m0V6wkCHJum_EUyL4PAi1zJMKlfmYHEU/playlist-hls.m3u8
+#EXTINF:-1 tvg-id="TeleplaySureste.mx@SD" tvg-name="Teleplay Sureste (720p)" tvg-logo="https://i.imgur.com/MeV5N08.png" group-title="Entretenimiento",Teleplay Sureste (720p)
+#EXTVLCOPT:network-caching=2000
+#EXTVLCOPT:http-reconnect=true
+https://player.tvstream.mx/livestream/teleplay/livehd/playlist.m3u8
 #EXTINF:-1 tvg-id="TeleVigo.es@SD" tvg-name="TeleVigo (1080p) [Not 24/7]" tvg-logo="https://i.imgur.com/4iVmlFa.png" group-title="Entretenimiento",TeleVigo (1080p) [Not 24/7]
 #EXTVLCOPT:network-caching=2000
 #EXTVLCOPT:http-reconnect=true
 https://cloud.fastchannel.es/mic/manifiest/hls/televigo/televigo.m3u8
-#EXTINF:-1 tvg-id="TransmediaTelevisionMorelia.mx@SD" tvg-name="Transmedia Televisión Morelia (614p) [Geo-blocked]" tvg-logo="https://i.imgur.com/jYMpVQA.png" group-title="Entretenimiento",Transmedia Televisión Morelia (614p) [Geo-blocked]
-#EXTVLCOPT:network-caching=2000
-#EXTVLCOPT:http-reconnect=true
-http://streamingcws20.com:1935/tmtv/videotmtv/playlist.m3u8
 #EXTINF:-1 tvg-id="TVBRICSSpanish.es@HD" tvg-name="TV BRICS Spanish (1080p)" tvg-logo="https://i.imgur.com/vLpm8tN.png" group-title="Entretenimiento",TV BRICS Spanish (1080p)
 #EXTVLCOPT:network-caching=2000
 #EXTVLCOPT:http-reconnect=true
@@ -519,10 +523,6 @@ https://vivo.solumedia.com:19360/dadaproductora/dadaproductora.m3u8
 #EXTVLCOPT:network-caching=2000
 #EXTVLCOPT:http-reconnect=true
 https://live-ilce.ovp-vivaro.digital/ovp-origin-abr/ngrp:6359ef999f3fb_all/playlist.m3u8
-#EXTINF:-1 tvg-id="Canal21TV.ar@SD" tvg-name="Canal 21 TV (1080p)" tvg-logo="https://i.imgur.com/Am7yMXg.png" group-title="Familia y TV Abierta",Canal 21 TV (1080p)
-#EXTVLCOPT:network-caching=2000
-#EXTVLCOPT:http-reconnect=true
-https://iptv.ixfo.com.ar:30443/c21tv/hd/c21tv/playlist.m3u8
 #EXTINF:-1 tvg-id="Canal26.mx@SD" tvg-name="Canal 26 Aguascalientes (1080p)" tvg-logo="https://i.imgur.com/PAvnVN9.png" group-title="Familia y TV Abierta",Canal 26 Aguascalientes (1080p)
 #EXTVLCOPT:network-caching=2000
 #EXTVLCOPT:http-reconnect=true
@@ -535,10 +535,14 @@ https://5f2c1b0d880e5.streamlock.net/canal33tijuana/videocanal33tijuana/playlist
 #EXTVLCOPT:network-caching=2000
 #EXTVLCOPT:http-reconnect=true
 https://5e50264bd6766.streamlock.net/canal442/videocanal442/playlist.m3u8
-#EXTINF:-1 tvg-id="Canal50Morteros.ar@SD" tvg-name="Canal 50 Morteros" tvg-logo="https://i.imgur.com/IDhgBav.png" group-title="Familia y TV Abierta",Canal 50 Morteros
+#EXTINF:-1 tvg-id="Canal56.es@SD" tvg-name="Canal 56 (576p) [Not 24/7]" tvg-logo="https://i.imgur.com/pwRVbCz.png" group-title="Familia y TV Abierta",Canal 56 (576p) [Not 24/7]
 #EXTVLCOPT:network-caching=2000
 #EXTVLCOPT:http-reconnect=true
-https://online.coopmorteros.coop/canal50/vivo.m3u8
+https://videos.canal56.com/directe/stream/index.m3u8
+#EXTINF:-1 tvg-id="Capital21.mx@SD" tvg-name="Capital 21 (1080p) [Not 24/7]" tvg-logo="https://i.imgur.com/8ign49i.png" group-title="Familia y TV Abierta",Capital 21 (1080p) [Not 24/7]
+#EXTVLCOPT:network-caching=2000
+#EXTVLCOPT:http-reconnect=true
+https://video.cdmx.gob.mx/redes/stream.m3u8
 #EXTINF:-1 tvg-id="ElTrece.ar@SD" tvg-name="El Trece (1080p)" tvg-logo="https://i.imgur.com/TrgBAdA.png" group-title="Familia y TV Abierta",El Trece (1080p)
 #EXTVLCOPT:network-caching=2000
 #EXTVLCOPT:http-reconnect=true
@@ -635,10 +639,6 @@ https://5ca3e84a76d30.streamlock.net/teleyucatan/videoteleyucatan/playlist.m3u8
 #EXTVLCOPT:network-caching=2000
 #EXTVLCOPT:http-reconnect=true
 https://s5.mexside.net:1936/telemax/telemax/playlist.m3u8
-#EXTINF:-1 tvg-id="TlaxcalaTV.mx@SD" tvg-name="Tlaxcala Televisión (360p) [Not 24/7]" tvg-logo="https://i.imgur.com/5vaEhfy.png" group-title="Familia y TV Abierta",Tlaxcala Televisión (360p) [Not 24/7]
-#EXTVLCOPT:network-caching=2000
-#EXTVLCOPT:http-reconnect=true
-https://vid26.mega00.com:5443/live/streams/qNmc7nulmq8zPYZE1582752735050.m3u8
 #EXTINF:-1 tvg-id="TRCTV.mx@SD" tvg-name="TRC Televisión (720p)" tvg-logo="https://i.imgur.com/W4xwCdl.png" group-title="Familia y TV Abierta",TRC Televisión (720p)
 #EXTVLCOPT:network-caching=2000
 #EXTVLCOPT:http-reconnect=true
