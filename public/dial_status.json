@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-08-04T10:59:01Z",
+  "generated_at": "2026-08-04T18:07:33Z",
   "requested_total": 139,
-  "found_total": 23,
-  "missing_total": 116,
+  "found_total": 22,
+  "missing_total": 117,
   "found": [
     {
       "dial": 100,
@@ -209,18 +209,6 @@
       "candidate_count": 1
     },
     {
-      "dial": 292,
-      "requested": "EWTN_SD",
-      "tvg_id": "EWTN_SD",
-      "reserved": false,
-      "matched_name": "EWTN Spain & Latin America (720p)",
-      "group": "Noticias",
-      "country": "US",
-      "state": "alive",
-      "url": "http://138.186.23.7:8082/EWTN/index.m3u8",
-      "candidate_count": 1
-    },
-    {
       "dial": 302,
       "requested": "ESPN_HD",
       "tvg_id": "ESPN_HD",
@@ -356,6 +344,7 @@
     "NAT_GEO_HD",
     "ANIMAL_PLANET_HD",
     "MARIAVISION_SD",
+    "EWTN_SD",
     "ESNE_SD",
     "ENLACE_SD",
     "FILM_&_ARTS_HD",
@@ -1422,13 +1411,12 @@
       "dial": 292,
       "requested": "EWTN_SD",
       "tvg_id": "EWTN_SD",
-      "reserved": false,
-      "matched_name": "EWTN Spain & Latin America (720p)",
-      "group": "Noticias",
-      "country": "US",
-      "state": "alive",
-      "url": "http://138.186.23.7:8082/EWTN/index.m3u8",
-      "candidate_count": 1
+      "reserved": true,
+      "matched_name": null,
+      "group": null,
+      "country": null,
+      "state": "reserved",
+      "url": null
     },
     {
       "dial": 293,
