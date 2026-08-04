@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-08-03T18:10:03Z",
+  "generated_at": "2026-08-04T03:10:07Z",
   "requested_total": 139,
-  "found_total": 24,
-  "missing_total": 115,
+  "found_total": 23,
+  "missing_total": 116,
   "found": [
     {
       "dial": 100,
@@ -269,18 +269,6 @@
       "candidate_count": 1
     },
     {
-      "dial": 408,
-      "requested": "STUDIO_UNIVERSAL_HD",
-      "tvg_id": "STUDIO_UNIVERSAL_HD",
-      "reserved": false,
-      "matched_name": "Studio Universal Latin America Mexico (1080p)",
-      "group": "Entretenimiento",
-      "country": "US",
-      "state": "alive",
-      "url": "http://200.39.57.254:8008/play/a0eg/index.m3u8",
-      "candidate_count": 1
-    },
-    {
       "dial": 431,
       "requested": "CINECANAL_HD",
       "tvg_id": "CINECANAL_HD",
@@ -390,6 +378,7 @@
     "PANICO_HD",
     "SONY_MOVIES",
     "EUROPA_EUROPA_HD",
+    "STUDIO_UNIVERSAL_HD",
     "CINEMAX_HD",
     "TNT_HD",
     "CINEMA_PLATINO_2_DELAY_SD",
@@ -1735,13 +1724,12 @@
       "dial": 408,
       "requested": "STUDIO_UNIVERSAL_HD",
       "tvg_id": "STUDIO_UNIVERSAL_HD",
-      "reserved": false,
-      "matched_name": "Studio Universal Latin America Mexico (1080p)",
-      "group": "Entretenimiento",
-      "country": "US",
-      "state": "alive",
-      "url": "http://200.39.57.254:8008/play/a0eg/index.m3u8",
-      "candidate_count": 1
+      "reserved": true,
+      "matched_name": null,
+      "group": null,
+      "country": null,
+      "state": "reserved",
+      "url": null
     },
     {
       "dial": 409,
