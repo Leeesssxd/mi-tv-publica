@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-08-07T03:07:11Z",
+  "generated_at": "2026-08-07T09:19:29Z",
   "requested_total": 139,
-  "found_total": 23,
-  "missing_total": 116,
+  "found_total": 22,
+  "missing_total": 117,
   "found": [
     {
       "dial": 100,
@@ -173,18 +173,6 @@
       "candidate_count": 1
     },
     {
-      "dial": 219,
-      "requested": "COMEDY_CENTRAL_HD",
-      "tvg_id": "COMEDY_CENTRAL_HD",
-      "reserved": false,
-      "matched_name": "Comedy Central Latin America (1080p)",
-      "group": "Peliculas - Comedia",
-      "country": "US",
-      "state": "alive",
-      "url": "http://181.119.93.83:8000/play/a1di/index.m3u8",
-      "candidate_count": 1
-    },
-    {
       "dial": 234,
       "requested": "AZTECA_INTERNACIONAL_HD",
       "tvg_id": "AZTECA_INTERNACIONAL_HD",
@@ -322,6 +310,7 @@
     "A&E_HD",
     "ATRESERIES_HD",
     "USA_HD",
+    "COMEDY_CENTRAL_HD",
     "CORAZÓN_HD",
     "EL_GOURMET_HD",
     "MAS_CHIC_SD",
@@ -1012,13 +1001,12 @@
       "dial": 219,
       "requested": "COMEDY_CENTRAL_HD",
       "tvg_id": "COMEDY_CENTRAL_HD",
-      "reserved": false,
-      "matched_name": "Comedy Central Latin America (1080p)",
-      "group": "Peliculas - Comedia",
-      "country": "US",
-      "state": "alive",
-      "url": "http://181.119.93.83:8000/play/a1di/index.m3u8",
-      "candidate_count": 1
+      "reserved": true,
+      "matched_name": null,
+      "group": null,
+      "country": null,
+      "state": "reserved",
+      "url": null
     },
     {
       "dial": 220,
