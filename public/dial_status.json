@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-09T16:55:06Z",
+  "generated_at": "2026-08-10T02:23:04Z",
   "requested_total": 139,
   "found_total": 23,
   "missing_total": 116,
@@ -221,6 +221,18 @@
       "candidate_count": 1
     },
     {
+      "dial": 301,
+      "requested": "FOX",
+      "tvg_id": "FOX",
+      "reserved": false,
+      "matched_name": "Fox Sports (720p) [Not 24/7]",
+      "group": "Deportes",
+      "country": "AR",
+      "state": "alive",
+      "url": "https://futbol9865.ultratv13.workers.dev/deportivo111/78.m3u8",
+      "candidate_count": 1
+    },
+    {
       "dial": 302,
       "requested": "ESPN_HD",
       "tvg_id": "ESPN_HD",
@@ -230,18 +242,6 @@
       "country": "ALL",
       "state": "alive",
       "url": "http://magiz.net:80/play/chXzkkaPaXkx2-3idfJ3VR5WgpQJIwNvHueedj9V6oQ/ts",
-      "candidate_count": 1
-    },
-    {
-      "dial": 321,
-      "requested": "LAS_HD",
-      "tvg_id": "LAS_HD",
-      "reserved": false,
-      "matched_name": "Las Tortugas Ninja (720p)",
-      "group": "Peliculas - Familiar",
-      "country": "DE",
-      "state": "alive",
-      "url": "https://jmp2.uk/plu-61373f1a12dd9f00077dcd6f.m3u8",
       "candidate_count": 1
     },
     {
@@ -359,7 +359,6 @@
     "ESNE_SD",
     "ENLACE_SD",
     "FILM_&_ARTS_HD",
-    "FOX",
     "TVC_DEPORTES_HD",
     "ESPN_2_HD",
     "TVC_DEPORTES_2_HD",
@@ -370,6 +369,7 @@
     "GOLF_CHANNEL_HD",
     "MEGA_SPORTS_1_HD",
     "AYM_SPORTS_HD",
+    "LAS_HD",
     "PX_SPORTS_HD",
     "CLARO_SPORTS_HD",
     "WWB_SD",
@@ -1467,12 +1467,13 @@
       "dial": 301,
       "requested": "FOX",
       "tvg_id": "FOX",
-      "reserved": true,
-      "matched_name": null,
-      "group": null,
-      "country": null,
-      "state": "reserved",
-      "url": null
+      "reserved": false,
+      "matched_name": "Fox Sports (720p) [Not 24/7]",
+      "group": "Deportes",
+      "country": "AR",
+      "state": "alive",
+      "url": "https://futbol9865.ultratv13.workers.dev/deportivo111/78.m3u8",
+      "candidate_count": 1
     },
     {
       "dial": 302,
@@ -1600,13 +1601,12 @@
       "dial": 321,
       "requested": "LAS_HD",
       "tvg_id": "LAS_HD",
-      "reserved": false,
-      "matched_name": "Las Tortugas Ninja (720p)",
-      "group": "Peliculas - Familiar",
-      "country": "DE",
-      "state": "alive",
-      "url": "https://jmp2.uk/plu-61373f1a12dd9f00077dcd6f.m3u8",
-      "candidate_count": 1
+      "reserved": true,
+      "matched_name": null,
+      "group": null,
+      "country": null,
+      "state": "reserved",
+      "url": null
     },
     {
       "dial": 322,
