@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-08-11T09:16:46Z",
+  "generated_at": "2026-08-11T17:14:30Z",
   "requested_total": 139,
-  "found_total": 22,
-  "missing_total": 117,
+  "found_total": 24,
+  "missing_total": 115,
   "found": [
     {
       "dial": 100,
@@ -41,18 +41,6 @@
       "candidate_count": 1
     },
     {
-      "dial": 106,
-      "requested": "CANAL_6_HD",
-      "tvg_id": "CANAL_6_HD",
-      "reserved": false,
-      "matched_name": "Canal 6 Posadas (1080p)",
-      "group": "Entretenimiento",
-      "country": "AR",
-      "state": "alive",
-      "url": "https://iptv.ixfo.com.ar:30443/live/c6digital/playlist.m3u8",
-      "candidate_count": 1
-    },
-    {
       "dial": 117,
       "requested": "JALISCO_TV_HD",
       "tvg_id": "JALISCO_TV_HD",
@@ -74,6 +62,18 @@
       "country": "MX",
       "state": "alive",
       "url": "https://5fc584f3f19c9.streamlock.net/canal22/smil:canal22.smil/playlist.m3u8",
+      "candidate_count": 1
+    },
+    {
+      "dial": 140,
+      "requested": "ADN_40_SD",
+      "tvg_id": "ADN_40_SD",
+      "reserved": false,
+      "matched_name": "ADN 40 (720p)",
+      "group": "Noticias",
+      "country": "MX",
+      "state": "alive",
+      "url": "https://mdstrm.com/live-stream-playlist/60b578b060947317de7b57ac.m3u8",
       "candidate_count": 1
     },
     {
@@ -109,7 +109,7 @@
       "group": "Peliculas - Cine",
       "country": "US",
       "state": "alive",
-      "url": "http://45.162.193.35/AMC/index.m3u8",
+      "url": "http://15.204.246.24:8080/AMCHD/index.m3u8",
       "candidate_count": 1
     },
     {
@@ -181,7 +181,7 @@
       "group": "Peliculas - Comedia",
       "country": "US",
       "state": "alive",
-      "url": "http://181.119.93.83:8000/play/a1di/index.m3u8",
+      "url": "http://15.204.246.24:8080/ComedyCentralHD/index.m3u8",
       "candidate_count": 1
     },
     {
@@ -233,6 +233,18 @@
       "candidate_count": 1
     },
     {
+      "dial": 321,
+      "requested": "LAS_HD",
+      "tvg_id": "LAS_HD",
+      "reserved": false,
+      "matched_name": "Las Tortugas Ninja (720p)",
+      "group": "Peliculas - Familiar",
+      "country": "DE",
+      "state": "alive",
+      "url": "https://jmp2.uk/plu-61373f1a12dd9f00077dcd6f.m3u8",
+      "candidate_count": 1
+    },
+    {
       "dial": 322,
       "requested": "AZTECA_DEPORTES_NETWORK_HD",
       "tvg_id": "AZTECA_DEPORTES_NETWORK_HD",
@@ -267,12 +279,25 @@
       "state": "alive",
       "url": "http://45.162.193.35/CINECANAL/index.m3u8",
       "candidate_count": 1
+    },
+    {
+      "dial": 632,
+      "requested": "EXA_TV_HD",
+      "tvg_id": "EXA_TV_HD",
+      "reserved": false,
+      "matched_name": "Exa TV",
+      "group": "Entretenimiento",
+      "country": "MX",
+      "state": "alive",
+      "url": "http://190.61.90.17:40000/play/a0hk/index.m3u8",
+      "candidate_count": 1
     }
   ],
   "missing": [
     "AZTECA_UNO_HD",
     "LAS_ESTRELLAS_HD",
     "CANAL_4_GDL_HD",
+    "CANAL_6_HD",
     "AZTECA_7_HD",
     "MÁS_VISIÓN_HD",
     "NU9VE_HD",
@@ -283,7 +308,6 @@
     "TV_UNAM_SD",
     "CANAL_22.2_SD",
     "APRENDE_+_SD",
-    "ADN_40_SD",
     "A+_SD",
     "CANAL_44_UDG_HD",
     "CANAL_DEL_CONGRESO_SD",
@@ -358,7 +382,6 @@
     "GOLF_CHANNEL_HD",
     "MEGA_SPORTS_1_HD",
     "AYM_SPORTS_HD",
-    "LAS_HD",
     "PX_SPORTS_HD",
     "CLARO_SPORTS_HD",
     "WWB_SD",
@@ -385,7 +408,6 @@
     "HTV_HD",
     "BEAT_BOX_SD",
     "VR_PLUS_HD",
-    "EXA_TV_HD",
     "SONY_MOVIES_ALT"
   ],
   "entries": [
@@ -462,13 +484,12 @@
       "dial": 106,
       "requested": "CANAL_6_HD",
       "tvg_id": "CANAL_6_HD",
-      "reserved": false,
-      "matched_name": "Canal 6 Posadas (1080p)",
-      "group": "Entretenimiento",
-      "country": "AR",
-      "state": "alive",
-      "url": "https://iptv.ixfo.com.ar:30443/live/c6digital/playlist.m3u8",
-      "candidate_count": 1
+      "reserved": true,
+      "matched_name": null,
+      "group": null,
+      "country": null,
+      "state": "reserved",
+      "url": null
     },
     {
       "dial": 107,
@@ -608,12 +629,13 @@
       "dial": 140,
       "requested": "ADN_40_SD",
       "tvg_id": "ADN_40_SD",
-      "reserved": true,
-      "matched_name": null,
-      "group": null,
-      "country": null,
-      "state": "reserved",
-      "url": null
+      "reserved": false,
+      "matched_name": "ADN 40 (720p)",
+      "group": "Noticias",
+      "country": "MX",
+      "state": "alive",
+      "url": "https://mdstrm.com/live-stream-playlist/60b578b060947317de7b57ac.m3u8",
+      "candidate_count": 1
     },
     {
       "dial": 141,
@@ -868,7 +890,7 @@
       "group": "Peliculas - Cine",
       "country": "US",
       "state": "alive",
-      "url": "http://45.162.193.35/AMC/index.m3u8",
+      "url": "http://15.204.246.24:8080/AMCHD/index.m3u8",
       "candidate_count": 1
     },
     {
@@ -1006,7 +1028,7 @@
       "group": "Peliculas - Comedia",
       "country": "US",
       "state": "alive",
-      "url": "http://181.119.93.83:8000/play/a1di/index.m3u8",
+      "url": "http://15.204.246.24:8080/ComedyCentralHD/index.m3u8",
       "candidate_count": 1
     },
     {
@@ -1589,12 +1611,13 @@
       "dial": 321,
       "requested": "LAS_HD",
       "tvg_id": "LAS_HD",
-      "reserved": true,
-      "matched_name": null,
-      "group": null,
-      "country": null,
-      "state": "reserved",
-      "url": null
+      "reserved": false,
+      "matched_name": "Las Tortugas Ninja (720p)",
+      "group": "Peliculas - Familiar",
+      "country": "DE",
+      "state": "alive",
+      "url": "https://jmp2.uk/plu-61373f1a12dd9f00077dcd6f.m3u8",
+      "candidate_count": 1
     },
     {
       "dial": 322,
@@ -1922,12 +1945,13 @@
       "dial": 632,
       "requested": "EXA_TV_HD",
       "tvg_id": "EXA_TV_HD",
-      "reserved": true,
-      "matched_name": null,
-      "group": null,
-      "country": null,
-      "state": "reserved",
-      "url": null
+      "reserved": false,
+      "matched_name": "Exa TV",
+      "group": "Entretenimiento",
+      "country": "MX",
+      "state": "alive",
+      "url": "http://190.61.90.17:40000/play/a0hk/index.m3u8",
+      "candidate_count": 1
     },
     {
       "dial": 1405,
