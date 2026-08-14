@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-08-13T17:12:43Z",
+  "generated_at": "2026-08-14T02:32:28Z",
   "requested_total": 139,
-  "found_total": 25,
-  "missing_total": 114,
+  "found_total": 26,
+  "missing_total": 113,
   "found": [
     {
       "dial": 100,
@@ -233,6 +233,18 @@
       "candidate_count": 1
     },
     {
+      "dial": 292,
+      "requested": "EWTN_SD",
+      "tvg_id": "EWTN_SD",
+      "reserved": false,
+      "matched_name": "EWTN Spain & Latin America (720p)",
+      "group": "Noticias",
+      "country": "US",
+      "state": "alive",
+      "url": "https://cdn3.wowza.com/1/SmVrQmZCUXZhVDgz/b3J3MFJv/hls/live/playlist.m3u8",
+      "candidate_count": 1
+    },
+    {
       "dial": 302,
       "requested": "ESPN_HD",
       "tvg_id": "ESPN_HD",
@@ -378,7 +390,6 @@
     "NAT_GEO_HD",
     "ANIMAL_PLANET_HD",
     "MARIAVISION_SD",
-    "EWTN_SD",
     "ESNE_SD",
     "ENLACE_SD",
     "FILM_&_ARTS_HD",
@@ -1446,12 +1457,13 @@
       "dial": 292,
       "requested": "EWTN_SD",
       "tvg_id": "EWTN_SD",
-      "reserved": true,
-      "matched_name": null,
-      "group": null,
-      "country": null,
-      "state": "reserved",
-      "url": null
+      "reserved": false,
+      "matched_name": "EWTN Spain & Latin America (720p)",
+      "group": "Noticias",
+      "country": "US",
+      "state": "alive",
+      "url": "https://cdn3.wowza.com/1/SmVrQmZCUXZhVDgz/b3J3MFJv/hls/live/playlist.m3u8",
+      "candidate_count": 1
     },
     {
       "dial": 293,
