@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-08-17T16:42:31Z",
+  "generated_at": "2026-08-18T01:36:22Z",
   "requested_total": 139,
-  "found_total": 24,
-  "missing_total": 115,
+  "found_total": 26,
+  "missing_total": 113,
   "found": [
     {
       "dial": 100,
@@ -38,6 +38,18 @@
       "country": "MX",
       "state": "alive",
       "url": "http://45.181.87.106/CANAL5HD/index.m3u8",
+      "candidate_count": 1
+    },
+    {
+      "dial": 106,
+      "requested": "CANAL_6_HD",
+      "tvg_id": "CANAL_6_HD",
+      "reserved": false,
+      "matched_name": "Canal 6 Posadas (1080p)",
+      "group": "Entretenimiento",
+      "country": "AR",
+      "state": "alive",
+      "url": "https://iptv.ixfo.com.ar:30443/live/c6digital/playlist.m3u8",
       "candidate_count": 1
     },
     {
@@ -233,6 +245,18 @@
       "candidate_count": 1
     },
     {
+      "dial": 301,
+      "requested": "FOX",
+      "tvg_id": "FOX",
+      "reserved": false,
+      "matched_name": "Fox Sports (720p) [Not 24/7]",
+      "group": "Deportes",
+      "country": "AR",
+      "state": "alive",
+      "url": "https://futbol9865.ultratv13.workers.dev/deportivo111/78.m3u8",
+      "candidate_count": 1
+    },
+    {
       "dial": 302,
       "requested": "ESPN_HD",
       "tvg_id": "ESPN_HD",
@@ -257,18 +281,6 @@
       "candidate_count": 1
     },
     {
-      "dial": 322,
-      "requested": "AZTECA_DEPORTES_NETWORK_HD",
-      "tvg_id": "AZTECA_DEPORTES_NETWORK_HD",
-      "reserved": false,
-      "matched_name": "Azteca Deportes Network (1080p)",
-      "group": "Deportes",
-      "country": "MX",
-      "state": "alive",
-      "url": "http://181.119.66.28:8081/AZTECA-DEPORTES-HD/index.m3u8",
-      "candidate_count": 1
-    },
-    {
       "dial": 403,
       "requested": "PANICO_DELAY_SD",
       "tvg_id": "PANICO_DELAY_SD",
@@ -278,6 +290,18 @@
       "country": "MX",
       "state": "alive",
       "url": "http://181.78.8.199:8000/play/a0bt/index.m3u8",
+      "candidate_count": 1
+    },
+    {
+      "dial": 431,
+      "requested": "CINECANAL_HD",
+      "tvg_id": "CINECANAL_HD",
+      "reserved": false,
+      "matched_name": "Cinecanal South (1080p)",
+      "group": "Peliculas - Cine",
+      "country": "US",
+      "state": "alive",
+      "url": "http://45.162.193.35/CINECANAL/index.m3u8",
       "candidate_count": 1
     },
     {
@@ -297,7 +321,6 @@
     "AZTECA_UNO_HD",
     "LAS_ESTRELLAS_HD",
     "CANAL_4_GDL_HD",
-    "CANAL_6_HD",
     "AZTECA_7_HD",
     "MÁS_VISIÓN_HD",
     "NU9VE_HD",
@@ -370,7 +393,6 @@
     "ESNE_SD",
     "ENLACE_SD",
     "FILM_&_ARTS_HD",
-    "FOX",
     "TVC_DEPORTES_HD",
     "ESPN_2_HD",
     "TVC_DEPORTES_2_HD",
@@ -381,6 +403,7 @@
     "GOLF_CHANNEL_HD",
     "MEGA_SPORTS_1_HD",
     "AYM_SPORTS_HD",
+    "AZTECA_DEPORTES_NETWORK_HD",
     "PX_SPORTS_HD",
     "CLARO_SPORTS_HD",
     "WWB_SD",
@@ -401,7 +424,6 @@
     "CINE_LATINO_SD",
     "MULTICINEMA_HD",
     "MULTIPREMIER_HD",
-    "CINECANAL_HD",
     "CÍNEMA_HD",
     "VIDEO_ROLA_HD",
     "CLIC_HD",
@@ -484,12 +506,13 @@
       "dial": 106,
       "requested": "CANAL_6_HD",
       "tvg_id": "CANAL_6_HD",
-      "reserved": true,
-      "matched_name": null,
-      "group": null,
-      "country": null,
-      "state": "reserved",
-      "url": null
+      "reserved": false,
+      "matched_name": "Canal 6 Posadas (1080p)",
+      "group": "Entretenimiento",
+      "country": "AR",
+      "state": "alive",
+      "url": "https://iptv.ixfo.com.ar:30443/live/c6digital/playlist.m3u8",
+      "candidate_count": 1
     },
     {
       "dial": 107,
@@ -1479,12 +1502,13 @@
       "dial": 301,
       "requested": "FOX",
       "tvg_id": "FOX",
-      "reserved": true,
-      "matched_name": null,
-      "group": null,
-      "country": null,
-      "state": "reserved",
-      "url": null
+      "reserved": false,
+      "matched_name": "Fox Sports (720p) [Not 24/7]",
+      "group": "Deportes",
+      "country": "AR",
+      "state": "alive",
+      "url": "https://futbol9865.ultratv13.workers.dev/deportivo111/78.m3u8",
+      "candidate_count": 1
     },
     {
       "dial": 302,
@@ -1624,13 +1648,12 @@
       "dial": 322,
       "requested": "AZTECA_DEPORTES_NETWORK_HD",
       "tvg_id": "AZTECA_DEPORTES_NETWORK_HD",
-      "reserved": false,
-      "matched_name": "Azteca Deportes Network (1080p)",
-      "group": "Deportes",
-      "country": "MX",
-      "state": "alive",
-      "url": "http://181.119.66.28:8081/AZTECA-DEPORTES-HD/index.m3u8",
-      "candidate_count": 1
+      "reserved": true,
+      "matched_name": null,
+      "group": null,
+      "country": null,
+      "state": "reserved",
+      "url": null
     },
     {
       "dial": 323,
@@ -1868,12 +1891,13 @@
       "dial": 431,
       "requested": "CINECANAL_HD",
       "tvg_id": "CINECANAL_HD",
-      "reserved": true,
-      "matched_name": null,
-      "group": null,
-      "country": null,
-      "state": "reserved",
-      "url": null
+      "reserved": false,
+      "matched_name": "Cinecanal South (1080p)",
+      "group": "Peliculas - Cine",
+      "country": "US",
+      "state": "alive",
+      "url": "http://45.162.193.35/CINECANAL/index.m3u8",
+      "candidate_count": 1
     },
     {
       "dial": 432,
