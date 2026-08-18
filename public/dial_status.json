@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-18T01:36:22Z",
+  "generated_at": "2026-08-18T08:55:10Z",
   "requested_total": 139,
   "found_total": 26,
   "missing_total": 113,
@@ -245,18 +245,6 @@
       "candidate_count": 1
     },
     {
-      "dial": 301,
-      "requested": "FOX",
-      "tvg_id": "FOX",
-      "reserved": false,
-      "matched_name": "Fox Sports (720p) [Not 24/7]",
-      "group": "Deportes",
-      "country": "AR",
-      "state": "alive",
-      "url": "https://futbol9865.ultratv13.workers.dev/deportivo111/78.m3u8",
-      "candidate_count": 1
-    },
-    {
       "dial": 302,
       "requested": "ESPN_HD",
       "tvg_id": "ESPN_HD",
@@ -278,6 +266,18 @@
       "country": "DE",
       "state": "alive",
       "url": "https://jmp2.uk/plu-61373f1a12dd9f00077dcd6f.m3u8",
+      "candidate_count": 1
+    },
+    {
+      "dial": 322,
+      "requested": "AZTECA_DEPORTES_NETWORK_HD",
+      "tvg_id": "AZTECA_DEPORTES_NETWORK_HD",
+      "reserved": false,
+      "matched_name": "Azteca Deportes Network (1080p)",
+      "group": "Deportes",
+      "country": "MX",
+      "state": "alive",
+      "url": "http://181.119.66.28:8081/AZTECA-DEPORTES-HD/index.m3u8",
       "candidate_count": 1
     },
     {
@@ -393,6 +393,7 @@
     "ESNE_SD",
     "ENLACE_SD",
     "FILM_&_ARTS_HD",
+    "FOX",
     "TVC_DEPORTES_HD",
     "ESPN_2_HD",
     "TVC_DEPORTES_2_HD",
@@ -403,7 +404,6 @@
     "GOLF_CHANNEL_HD",
     "MEGA_SPORTS_1_HD",
     "AYM_SPORTS_HD",
-    "AZTECA_DEPORTES_NETWORK_HD",
     "PX_SPORTS_HD",
     "CLARO_SPORTS_HD",
     "WWB_SD",
@@ -1502,13 +1502,12 @@
       "dial": 301,
       "requested": "FOX",
       "tvg_id": "FOX",
-      "reserved": false,
-      "matched_name": "Fox Sports (720p) [Not 24/7]",
-      "group": "Deportes",
-      "country": "AR",
-      "state": "alive",
-      "url": "https://futbol9865.ultratv13.workers.dev/deportivo111/78.m3u8",
-      "candidate_count": 1
+      "reserved": true,
+      "matched_name": null,
+      "group": null,
+      "country": null,
+      "state": "reserved",
+      "url": null
     },
     {
       "dial": 302,
@@ -1648,12 +1647,13 @@
       "dial": 322,
       "requested": "AZTECA_DEPORTES_NETWORK_HD",
       "tvg_id": "AZTECA_DEPORTES_NETWORK_HD",
-      "reserved": true,
-      "matched_name": null,
-      "group": null,
-      "country": null,
-      "state": "reserved",
-      "url": null
+      "reserved": false,
+      "matched_name": "Azteca Deportes Network (1080p)",
+      "group": "Deportes",
+      "country": "MX",
+      "state": "alive",
+      "url": "http://181.119.66.28:8081/AZTECA-DEPORTES-HD/index.m3u8",
+      "candidate_count": 1
     },
     {
       "dial": 323,
