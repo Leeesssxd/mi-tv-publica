@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-19T01:46:58Z",
+  "generated_at": "2026-08-19T08:55:24Z",
   "requested_total": 139,
   "found_total": 26,
   "missing_total": 113,
@@ -125,6 +125,18 @@
       "candidate_count": 1
     },
     {
+      "dial": 208,
+      "requested": "TNT_NOVELAS_HD",
+      "tvg_id": "TNT_NOVELAS_HD",
+      "reserved": false,
+      "matched_name": "TNT Novelas (1080p)",
+      "group": "Noticias",
+      "country": "US",
+      "state": "alive",
+      "url": "http://190.93.224.42/TNT-NOVELAS/index.m3u8",
+      "candidate_count": 1
+    },
+    {
       "dial": 209,
       "requested": "AXN_HD",
       "tvg_id": "AXN_HD",
@@ -230,18 +242,6 @@
       "country": "US",
       "state": "alive",
       "url": "https://cdn3.wowza.com/1/SmVrQmZCUXZhVDgz/b3J3MFJv/hls/live/playlist.m3u8",
-      "candidate_count": 1
-    },
-    {
-      "dial": 301,
-      "requested": "FOX",
-      "tvg_id": "FOX",
-      "reserved": false,
-      "matched_name": "Fox Sports (720p) [Not 24/7]",
-      "group": "Deportes",
-      "country": "AR",
-      "state": "alive",
-      "url": "https://futbol9865.ultratv13.workers.dev/deportivo111/78.m3u8",
       "candidate_count": 1
     },
     {
@@ -351,7 +351,6 @@
     "TV5_MONDE_SD",
     "STAR_CHANNEL_HD",
     "UNIVERSAL_TV_HD",
-    "TNT_NOVELAS_HD",
     "TNT_SERIES_HD",
     "WARNER_CHANNEL_HD",
     "ID_HD",
@@ -394,6 +393,7 @@
     "ESNE_SD",
     "ENLACE_SD",
     "FILM_&_ARTS_HD",
+    "FOX",
     "TVC_DEPORTES_HD",
     "ESPN_2_HD",
     "TVC_DEPORTES_2_HD",
@@ -920,12 +920,13 @@
       "dial": 208,
       "requested": "TNT_NOVELAS_HD",
       "tvg_id": "TNT_NOVELAS_HD",
-      "reserved": true,
-      "matched_name": null,
-      "group": null,
-      "country": null,
-      "state": "reserved",
-      "url": null
+      "reserved": false,
+      "matched_name": "TNT Novelas (1080p)",
+      "group": "Noticias",
+      "country": "US",
+      "state": "alive",
+      "url": "http://190.93.224.42/TNT-NOVELAS/index.m3u8",
+      "candidate_count": 1
     },
     {
       "dial": 209,
@@ -1501,13 +1502,12 @@
       "dial": 301,
       "requested": "FOX",
       "tvg_id": "FOX",
-      "reserved": false,
-      "matched_name": "Fox Sports (720p) [Not 24/7]",
-      "group": "Deportes",
-      "country": "AR",
-      "state": "alive",
-      "url": "https://futbol9865.ultratv13.workers.dev/deportivo111/78.m3u8",
-      "candidate_count": 1
+      "reserved": true,
+      "matched_name": null,
+      "group": null,
+      "country": null,
+      "state": "reserved",
+      "url": null
     },
     {
       "dial": 302,
