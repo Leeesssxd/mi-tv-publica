@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-08-18T16:49:17Z",
+  "generated_at": "2026-08-19T01:46:58Z",
   "requested_total": 139,
-  "found_total": 25,
-  "missing_total": 114,
+  "found_total": 26,
+  "missing_total": 113,
   "found": [
     {
       "dial": 100,
@@ -125,18 +125,6 @@
       "candidate_count": 1
     },
     {
-      "dial": 208,
-      "requested": "TNT_NOVELAS_HD",
-      "tvg_id": "TNT_NOVELAS_HD",
-      "reserved": false,
-      "matched_name": "TNT Novelas (1080p)",
-      "group": "Noticias",
-      "country": "US",
-      "state": "alive",
-      "url": "http://190.93.224.42/TNT-NOVELAS/index.m3u8",
-      "candidate_count": 1
-    },
-    {
       "dial": 209,
       "requested": "AXN_HD",
       "tvg_id": "AXN_HD",
@@ -245,6 +233,18 @@
       "candidate_count": 1
     },
     {
+      "dial": 301,
+      "requested": "FOX",
+      "tvg_id": "FOX",
+      "reserved": false,
+      "matched_name": "Fox Sports (720p) [Not 24/7]",
+      "group": "Deportes",
+      "country": "AR",
+      "state": "alive",
+      "url": "https://futbol9865.ultratv13.workers.dev/deportivo111/78.m3u8",
+      "candidate_count": 1
+    },
+    {
       "dial": 302,
       "requested": "ESPN_HD",
       "tvg_id": "ESPN_HD",
@@ -290,6 +290,18 @@
       "country": "MX",
       "state": "alive",
       "url": "http://181.78.8.199:8000/play/a0bt/index.m3u8",
+      "candidate_count": 1
+    },
+    {
+      "dial": 431,
+      "requested": "CINECANAL_HD",
+      "tvg_id": "CINECANAL_HD",
+      "reserved": false,
+      "matched_name": "Cinecanal South (1080p)",
+      "group": "Peliculas - Cine",
+      "country": "US",
+      "state": "alive",
+      "url": "http://45.162.193.35/CINECANAL/index.m3u8",
       "candidate_count": 1
     },
     {
@@ -339,6 +351,7 @@
     "TV5_MONDE_SD",
     "STAR_CHANNEL_HD",
     "UNIVERSAL_TV_HD",
+    "TNT_NOVELAS_HD",
     "TNT_SERIES_HD",
     "WARNER_CHANNEL_HD",
     "ID_HD",
@@ -381,7 +394,6 @@
     "ESNE_SD",
     "ENLACE_SD",
     "FILM_&_ARTS_HD",
-    "FOX",
     "TVC_DEPORTES_HD",
     "ESPN_2_HD",
     "TVC_DEPORTES_2_HD",
@@ -412,7 +424,6 @@
     "CINE_LATINO_SD",
     "MULTICINEMA_HD",
     "MULTIPREMIER_HD",
-    "CINECANAL_HD",
     "CÍNEMA_HD",
     "VIDEO_ROLA_HD",
     "CLIC_HD",
@@ -909,13 +920,12 @@
       "dial": 208,
       "requested": "TNT_NOVELAS_HD",
       "tvg_id": "TNT_NOVELAS_HD",
-      "reserved": false,
-      "matched_name": "TNT Novelas (1080p)",
-      "group": "Noticias",
-      "country": "US",
-      "state": "alive",
-      "url": "http://190.93.224.42/TNT-NOVELAS/index.m3u8",
-      "candidate_count": 1
+      "reserved": true,
+      "matched_name": null,
+      "group": null,
+      "country": null,
+      "state": "reserved",
+      "url": null
     },
     {
       "dial": 209,
@@ -1491,12 +1501,13 @@
       "dial": 301,
       "requested": "FOX",
       "tvg_id": "FOX",
-      "reserved": true,
-      "matched_name": null,
-      "group": null,
-      "country": null,
-      "state": "reserved",
-      "url": null
+      "reserved": false,
+      "matched_name": "Fox Sports (720p) [Not 24/7]",
+      "group": "Deportes",
+      "country": "AR",
+      "state": "alive",
+      "url": "https://futbol9865.ultratv13.workers.dev/deportivo111/78.m3u8",
+      "candidate_count": 1
     },
     {
       "dial": 302,
@@ -1880,12 +1891,13 @@
       "dial": 431,
       "requested": "CINECANAL_HD",
       "tvg_id": "CINECANAL_HD",
-      "reserved": true,
-      "matched_name": null,
-      "group": null,
-      "country": null,
-      "state": "reserved",
-      "url": null
+      "reserved": false,
+      "matched_name": "Cinecanal South (1080p)",
+      "group": "Peliculas - Cine",
+      "country": "US",
+      "state": "alive",
+      "url": "http://45.162.193.35/CINECANAL/index.m3u8",
+      "candidate_count": 1
     },
     {
       "dial": 432,
