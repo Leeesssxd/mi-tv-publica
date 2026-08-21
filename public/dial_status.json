@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-20T16:52:53Z",
+  "generated_at": "2026-08-21T01:50:30Z",
   "requested_total": 139,
   "found_total": 26,
   "missing_total": 113,
@@ -221,18 +221,6 @@
       "candidate_count": 1
     },
     {
-      "dial": 260,
-      "requested": "DISNEY_CHANNEL_HD",
-      "tvg_id": "DISNEY_CHANNEL_HD",
-      "reserved": false,
-      "matched_name": "Disney Channel Latin America Mexico (720p)",
-      "group": "Peliculas - Familiar",
-      "country": "AR",
-      "state": "alive",
-      "url": "http://45.166.93.156:9999/play/a0f3/index.m3u8",
-      "candidate_count": 1
-    },
-    {
       "dial": 292,
       "requested": "EWTN_SD",
       "tvg_id": "EWTN_SD",
@@ -242,6 +230,18 @@
       "country": "US",
       "state": "alive",
       "url": "https://cdn3.wowza.com/1/SmVrQmZCUXZhVDgz/b3J3MFJv/hls/live/playlist.m3u8",
+      "candidate_count": 1
+    },
+    {
+      "dial": 301,
+      "requested": "FOX",
+      "tvg_id": "FOX",
+      "reserved": false,
+      "matched_name": "Fox Sports (720p) [Not 24/7]",
+      "group": "Deportes",
+      "country": "AR",
+      "state": "alive",
+      "url": "https://futbol9865.ultratv13.workers.dev/deportivo111/78.m3u8",
       "candidate_count": 1
     },
     {
@@ -373,6 +373,7 @@
     "CARTOONITO_HD",
     "NICKELODEON_HD",
     "DISCOVERY_KIDS_HD",
+    "DISNEY_CHANNEL_HD",
     "TOONCAST_HD",
     "BABY_FIRST_HD",
     "BABY_TV_SD",
@@ -393,7 +394,6 @@
     "ESNE_SD",
     "ENLACE_SD",
     "FILM_&_ARTS_HD",
-    "FOX",
     "TVC_DEPORTES_HD",
     "ESPN_2_HD",
     "TVC_DEPORTES_2_HD",
@@ -1258,13 +1258,12 @@
       "dial": 260,
       "requested": "DISNEY_CHANNEL_HD",
       "tvg_id": "DISNEY_CHANNEL_HD",
-      "reserved": false,
-      "matched_name": "Disney Channel Latin America Mexico (720p)",
-      "group": "Peliculas - Familiar",
-      "country": "AR",
-      "state": "alive",
-      "url": "http://45.166.93.156:9999/play/a0f3/index.m3u8",
-      "candidate_count": 1
+      "reserved": true,
+      "matched_name": null,
+      "group": null,
+      "country": null,
+      "state": "reserved",
+      "url": null
     },
     {
       "dial": 261,
@@ -1502,12 +1501,13 @@
       "dial": 301,
       "requested": "FOX",
       "tvg_id": "FOX",
-      "reserved": true,
-      "matched_name": null,
-      "group": null,
-      "country": null,
-      "state": "reserved",
-      "url": null
+      "reserved": false,
+      "matched_name": "Fox Sports (720p) [Not 24/7]",
+      "group": "Deportes",
+      "country": "AR",
+      "state": "alive",
+      "url": "https://futbol9865.ultratv13.workers.dev/deportivo111/78.m3u8",
+      "candidate_count": 1
     },
     {
       "dial": 302,
