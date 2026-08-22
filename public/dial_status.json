@@ -1,9 +1,21 @@
 {
-  "generated_at": "2026-08-22T01:38:40Z",
+  "generated_at": "2026-08-22T08:48:35Z",
   "requested_total": 139,
   "found_total": 28,
   "missing_total": 111,
   "found": [
+    {
+      "dial": 100,
+      "requested": "BARKER_CHANNEL_HD",
+      "tvg_id": "BARKER_CHANNEL_HD",
+      "reserved": false,
+      "matched_name": "Conecta TV (720p)",
+      "group": "Entretenimiento",
+      "country": "MX",
+      "state": "alive",
+      "url": "https://stream8.mexiserver.com:19360/conectatvx/conectatvx.m3u8",
+      "candidate_count": 1
+    },
     {
       "dial": 103,
       "requested": "IMAGEN_TV_HD",
@@ -245,18 +257,6 @@
       "candidate_count": 1
     },
     {
-      "dial": 301,
-      "requested": "FOX",
-      "tvg_id": "FOX",
-      "reserved": false,
-      "matched_name": "Fox Sports (720p) [Not 24/7]",
-      "group": "Deportes",
-      "country": "AR",
-      "state": "alive",
-      "url": "https://futbol9865.ultratv13.workers.dev/deportivo111/78.m3u8",
-      "candidate_count": 1
-    },
-    {
       "dial": 302,
       "requested": "ESPN_HD",
       "tvg_id": "ESPN_HD",
@@ -342,7 +342,6 @@
     }
   ],
   "missing": [
-    "BARKER_CHANNEL_HD",
     "AZTECA_UNO_HD",
     "LAS_ESTRELLAS_HD",
     "CANAL_4_GDL_HD",
@@ -417,6 +416,7 @@
     "ESNE_SD",
     "ENLACE_SD",
     "FILM_&_ARTS_HD",
+    "FOX",
     "TVC_DEPORTES_HD",
     "ESPN_2_HD",
     "TVC_DEPORTES_2_HD",
@@ -459,12 +459,13 @@
       "dial": 100,
       "requested": "BARKER_CHANNEL_HD",
       "tvg_id": "BARKER_CHANNEL_HD",
-      "reserved": true,
-      "matched_name": null,
-      "group": null,
-      "country": null,
-      "state": "reserved",
-      "url": null
+      "reserved": false,
+      "matched_name": "Conecta TV (720p)",
+      "group": "Entretenimiento",
+      "country": "MX",
+      "state": "alive",
+      "url": "https://stream8.mexiserver.com:19360/conectatvx/conectatvx.m3u8",
+      "candidate_count": 1
     },
     {
       "dial": 101,
@@ -1524,13 +1525,12 @@
       "dial": 301,
       "requested": "FOX",
       "tvg_id": "FOX",
-      "reserved": false,
-      "matched_name": "Fox Sports (720p) [Not 24/7]",
-      "group": "Deportes",
-      "country": "AR",
-      "state": "alive",
-      "url": "https://futbol9865.ultratv13.workers.dev/deportivo111/78.m3u8",
-      "candidate_count": 1
+      "reserved": true,
+      "matched_name": null,
+      "group": null,
+      "country": null,
+      "state": "reserved",
+      "url": null
     },
     {
       "dial": 302,
