@@ -1,21 +1,9 @@
 {
-  "generated_at": "2026-08-21T16:52:27Z",
+  "generated_at": "2026-08-22T01:38:40Z",
   "requested_total": 139,
-  "found_total": 26,
-  "missing_total": 113,
+  "found_total": 28,
+  "missing_total": 111,
   "found": [
-    {
-      "dial": 100,
-      "requested": "BARKER_CHANNEL_HD",
-      "tvg_id": "BARKER_CHANNEL_HD",
-      "reserved": false,
-      "matched_name": "Conecta TV (720p)",
-      "group": "Entretenimiento",
-      "country": "MX",
-      "state": "alive",
-      "url": "https://stream8.mexiserver.com:19360/conectatvx/conectatvx.m3u8",
-      "candidate_count": 1
-    },
     {
       "dial": 103,
       "requested": "IMAGEN_TV_HD",
@@ -197,6 +185,18 @@
       "candidate_count": 1
     },
     {
+      "dial": 223,
+      "requested": "EL_GOURMET_HD",
+      "tvg_id": "EL_GOURMET_HD",
+      "reserved": false,
+      "matched_name": "El Gourmet South (1080p)",
+      "group": "Otros",
+      "country": "AR",
+      "state": "alive",
+      "url": "https://iptv.bitred.cl/ELGOURMET_HD/index.m3u8",
+      "candidate_count": 1
+    },
+    {
       "dial": 234,
       "requested": "AZTECA_INTERNACIONAL_HD",
       "tvg_id": "AZTECA_INTERNACIONAL_HD",
@@ -242,6 +242,18 @@
       "country": "US",
       "state": "alive",
       "url": "https://cdn3.wowza.com/1/SmVrQmZCUXZhVDgz/b3J3MFJv/hls/live/playlist.m3u8",
+      "candidate_count": 1
+    },
+    {
+      "dial": 301,
+      "requested": "FOX",
+      "tvg_id": "FOX",
+      "reserved": false,
+      "matched_name": "Fox Sports (720p) [Not 24/7]",
+      "group": "Deportes",
+      "country": "AR",
+      "state": "alive",
+      "url": "https://futbol9865.ultratv13.workers.dev/deportivo111/78.m3u8",
       "candidate_count": 1
     },
     {
@@ -293,6 +305,18 @@
       "candidate_count": 1
     },
     {
+      "dial": 406,
+      "requested": "EUROPA_EUROPA_HD",
+      "tvg_id": "EUROPA_EUROPA_HD",
+      "reserved": false,
+      "matched_name": "Europa Europa (1080p)",
+      "group": "Peliculas - Drama y Series",
+      "country": "AR",
+      "state": "alive",
+      "url": "https://cdn1tlinkgo.tlink.cl/europaeuropa/index.m3u8",
+      "candidate_count": 1
+    },
+    {
       "dial": 431,
       "requested": "CINECANAL_HD",
       "tvg_id": "CINECANAL_HD",
@@ -318,6 +342,7 @@
     }
   ],
   "missing": [
+    "BARKER_CHANNEL_HD",
     "AZTECA_UNO_HD",
     "LAS_ESTRELLAS_HD",
     "CANAL_4_GDL_HD",
@@ -358,7 +383,6 @@
     "ATRESERIES_HD",
     "USA_HD",
     "CORAZÓN_HD",
-    "EL_GOURMET_HD",
     "MAS_CHIC_SD",
     "DISCOVERY_H&H_HD",
     "PASIONES_HD",
@@ -393,7 +417,6 @@
     "ESNE_SD",
     "ENLACE_SD",
     "FILM_&_ARTS_HD",
-    "FOX",
     "TVC_DEPORTES_HD",
     "ESPN_2_HD",
     "TVC_DEPORTES_2_HD",
@@ -411,7 +434,6 @@
     "CINEMA_PLATINO_HD",
     "PANICO_HD",
     "SONY_MOVIES",
-    "EUROPA_EUROPA_HD",
     "STUDIO_UNIVERSAL_HD",
     "CINEMAX_HD",
     "TNT_HD",
@@ -437,13 +459,12 @@
       "dial": 100,
       "requested": "BARKER_CHANNEL_HD",
       "tvg_id": "BARKER_CHANNEL_HD",
-      "reserved": false,
-      "matched_name": "Conecta TV (720p)",
-      "group": "Entretenimiento",
-      "country": "MX",
-      "state": "alive",
-      "url": "https://stream8.mexiserver.com:19360/conectatvx/conectatvx.m3u8",
-      "candidate_count": 1
+      "reserved": true,
+      "matched_name": null,
+      "group": null,
+      "country": null,
+      "state": "reserved",
+      "url": null
     },
     {
       "dial": 101,
@@ -1069,12 +1090,13 @@
       "dial": 223,
       "requested": "EL_GOURMET_HD",
       "tvg_id": "EL_GOURMET_HD",
-      "reserved": true,
-      "matched_name": null,
-      "group": null,
-      "country": null,
-      "state": "reserved",
-      "url": null
+      "reserved": false,
+      "matched_name": "El Gourmet South (1080p)",
+      "group": "Otros",
+      "country": "AR",
+      "state": "alive",
+      "url": "https://iptv.bitred.cl/ELGOURMET_HD/index.m3u8",
+      "candidate_count": 1
     },
     {
       "dial": 224,
@@ -1502,12 +1524,13 @@
       "dial": 301,
       "requested": "FOX",
       "tvg_id": "FOX",
-      "reserved": true,
-      "matched_name": null,
-      "group": null,
-      "country": null,
-      "state": "reserved",
-      "url": null
+      "reserved": false,
+      "matched_name": "Fox Sports (720p) [Not 24/7]",
+      "group": "Deportes",
+      "country": "AR",
+      "state": "alive",
+      "url": "https://futbol9865.ultratv13.workers.dev/deportivo111/78.m3u8",
+      "candidate_count": 1
     },
     {
       "dial": 302,
@@ -1748,12 +1771,13 @@
       "dial": 406,
       "requested": "EUROPA_EUROPA_HD",
       "tvg_id": "EUROPA_EUROPA_HD",
-      "reserved": true,
-      "matched_name": null,
-      "group": null,
-      "country": null,
-      "state": "reserved",
-      "url": null
+      "reserved": false,
+      "matched_name": "Europa Europa (1080p)",
+      "group": "Peliculas - Drama y Series",
+      "country": "AR",
+      "state": "alive",
+      "url": "https://cdn1tlinkgo.tlink.cl/europaeuropa/index.m3u8",
+      "candidate_count": 1
     },
     {
       "dial": 408,
