@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-08-23T16:44:01Z",
+  "generated_at": "2026-08-24T01:52:04Z",
   "requested_total": 139,
-  "found_total": 28,
-  "missing_total": 111,
+  "found_total": 29,
+  "missing_total": 110,
   "found": [
     {
       "dial": 100,
@@ -257,6 +257,18 @@
       "candidate_count": 1
     },
     {
+      "dial": 301,
+      "requested": "FOX",
+      "tvg_id": "FOX",
+      "reserved": false,
+      "matched_name": "Fox Sports (720p) [Not 24/7]",
+      "group": "Deportes",
+      "country": "AR",
+      "state": "alive",
+      "url": "https://futbol9865.ultratv13.workers.dev/deportivo111/78.m3u8",
+      "candidate_count": 1
+    },
+    {
       "dial": 302,
       "requested": "ESPN_HD",
       "tvg_id": "ESPN_HD",
@@ -416,7 +428,6 @@
     "ESNE_SD",
     "ENLACE_SD",
     "FILM_&_ARTS_HD",
-    "FOX",
     "TVC_DEPORTES_HD",
     "ESPN_2_HD",
     "TVC_DEPORTES_2_HD",
@@ -1525,12 +1536,13 @@
       "dial": 301,
       "requested": "FOX",
       "tvg_id": "FOX",
-      "reserved": true,
-      "matched_name": null,
-      "group": null,
-      "country": null,
-      "state": "reserved",
-      "url": null
+      "reserved": false,
+      "matched_name": "Fox Sports (720p) [Not 24/7]",
+      "group": "Deportes",
+      "country": "AR",
+      "state": "alive",
+      "url": "https://futbol9865.ultratv13.workers.dev/deportivo111/78.m3u8",
+      "candidate_count": 1
     },
     {
       "dial": 302,
