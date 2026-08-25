@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-08-25T01:44:00Z",
+  "generated_at": "2026-08-25T09:03:11Z",
   "requested_total": 139,
-  "found_total": 27,
-  "missing_total": 112,
+  "found_total": 25,
+  "missing_total": 114,
   "found": [
     {
       "dial": 100,
@@ -233,18 +233,6 @@
       "candidate_count": 1
     },
     {
-      "dial": 301,
-      "requested": "FOX",
-      "tvg_id": "FOX",
-      "reserved": false,
-      "matched_name": "Fox Sports (720p) [Not 24/7]",
-      "group": "Deportes",
-      "country": "AR",
-      "state": "alive",
-      "url": "https://futbol9865.ultratv13.workers.dev/deportivo111/78.m3u8",
-      "candidate_count": 1
-    },
-    {
       "dial": 302,
       "requested": "ESPN_HD",
       "tvg_id": "ESPN_HD",
@@ -290,18 +278,6 @@
       "country": "MX",
       "state": "alive",
       "url": "http://181.78.8.199:8000/play/a0bt/index.m3u8",
-      "candidate_count": 1
-    },
-    {
-      "dial": 406,
-      "requested": "EUROPA_EUROPA_HD",
-      "tvg_id": "EUROPA_EUROPA_HD",
-      "reserved": false,
-      "matched_name": "Europa Europa (1080p)",
-      "group": "Peliculas - Drama y Series",
-      "country": "AR",
-      "state": "alive",
-      "url": "https://cdn1tlinkgo.tlink.cl/europaeuropa/index.m3u8",
       "candidate_count": 1
     },
     {
@@ -406,6 +382,7 @@
     "ESNE_SD",
     "ENLACE_SD",
     "FILM_&_ARTS_HD",
+    "FOX",
     "TVC_DEPORTES_HD",
     "ESPN_2_HD",
     "TVC_DEPORTES_2_HD",
@@ -423,6 +400,7 @@
     "CINEMA_PLATINO_HD",
     "PANICO_HD",
     "SONY_MOVIES",
+    "EUROPA_EUROPA_HD",
     "STUDIO_UNIVERSAL_HD",
     "CINEMAX_HD",
     "TNT_HD",
@@ -1512,13 +1490,12 @@
       "dial": 301,
       "requested": "FOX",
       "tvg_id": "FOX",
-      "reserved": false,
-      "matched_name": "Fox Sports (720p) [Not 24/7]",
-      "group": "Deportes",
-      "country": "AR",
-      "state": "alive",
-      "url": "https://futbol9865.ultratv13.workers.dev/deportivo111/78.m3u8",
-      "candidate_count": 1
+      "reserved": true,
+      "matched_name": null,
+      "group": null,
+      "country": null,
+      "state": "reserved",
+      "url": null
     },
     {
       "dial": 302,
@@ -1759,13 +1736,12 @@
       "dial": 406,
       "requested": "EUROPA_EUROPA_HD",
       "tvg_id": "EUROPA_EUROPA_HD",
-      "reserved": false,
-      "matched_name": "Europa Europa (1080p)",
-      "group": "Peliculas - Drama y Series",
-      "country": "AR",
-      "state": "alive",
-      "url": "https://cdn1tlinkgo.tlink.cl/europaeuropa/index.m3u8",
-      "candidate_count": 1
+      "reserved": true,
+      "matched_name": null,
+      "group": null,
+      "country": null,
+      "state": "reserved",
+      "url": null
     },
     {
       "dial": 408,
