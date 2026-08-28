@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-08-28T01:01:27Z",
+  "generated_at": "2026-08-28T20:20:02Z",
   "requested_total": 139,
-  "found_total": 28,
-  "missing_total": 111,
+  "found_total": 29,
+  "missing_total": 110,
   "found": [
     {
       "dial": 100,
@@ -14,6 +14,18 @@
       "country": "MX",
       "state": "alive",
       "url": "https://stream8.mexiserver.com:19360/conectatvx/conectatvx.m3u8",
+      "candidate_count": 1
+    },
+    {
+      "dial": 102,
+      "requested": "LAS_ESTRELLAS_HD",
+      "tvg_id": "LAS_ESTRELLAS_HD",
+      "reserved": false,
+      "matched_name": "Las Estrellas",
+      "group": "Familia y TV Abierta",
+      "country": "MX",
+      "state": "alive",
+      "url": "https://channel01-onlymex.akamaized.net/hls/live/2022749/event01/index.m3u8",
       "candidate_count": 1
     },
     {
@@ -98,6 +110,18 @@
       "country": "MX",
       "state": "alive",
       "url": "https://live-scjn.ovp-vivaro.digital/ovp-origin/638a22b47746d/playlist.m3u8",
+      "candidate_count": 1
+    },
+    {
+      "dial": 153,
+      "requested": "TELEFÓRMULA_HD",
+      "tvg_id": "TELEFÓRMULA_HD",
+      "reserved": false,
+      "matched_name": "TeleFórmula (720p)",
+      "group": "Noticias",
+      "country": "MX",
+      "state": "alive",
+      "url": "https://mdstrm.com/live-stream-playlist/62f2c855f7981b5a5a2d8763.m3u8",
       "candidate_count": 1
     },
     {
@@ -257,18 +281,6 @@
       "candidate_count": 1
     },
     {
-      "dial": 301,
-      "requested": "FOX",
-      "tvg_id": "FOX",
-      "reserved": false,
-      "matched_name": "Fox Sports (720p) [Not 24/7]",
-      "group": "Deportes",
-      "country": "AR",
-      "state": "alive",
-      "url": "https://futbol9865.ultratv13.workers.dev/deportivo111/78.m3u8",
-      "candidate_count": 1
-    },
-    {
       "dial": 302,
       "requested": "ESPN_HD",
       "tvg_id": "ESPN_HD",
@@ -343,7 +355,6 @@
   ],
   "missing": [
     "AZTECA_UNO_HD",
-    "LAS_ESTRELLAS_HD",
     "CANAL_4_GDL_HD",
     "AZTECA_7_HD",
     "MÁS_VISIÓN_HD",
@@ -361,7 +372,6 @@
     "MEGANOTICIAS_MX_HD",
     "MEGANOTICIAS_HD",
     "AZTECA_UNO_DELAY_SD",
-    "TELEFÓRMULA_HD",
     "CNNE_HD",
     "MILENIO_TV_HD",
     "MVSTV_SD",
@@ -416,6 +426,7 @@
     "ESNE_SD",
     "ENLACE_SD",
     "FILM_&_ARTS_HD",
+    "FOX",
     "TVC_DEPORTES_HD",
     "ESPN_2_HD",
     "TVC_DEPORTES_2_HD",
@@ -482,12 +493,13 @@
       "dial": 102,
       "requested": "LAS_ESTRELLAS_HD",
       "tvg_id": "LAS_ESTRELLAS_HD",
-      "reserved": true,
-      "matched_name": null,
-      "group": null,
-      "country": null,
-      "state": "reserved",
-      "url": null
+      "reserved": false,
+      "matched_name": "Las Estrellas",
+      "group": "Familia y TV Abierta",
+      "country": "MX",
+      "state": "alive",
+      "url": "https://channel01-onlymex.akamaized.net/hls/live/2022749/event01/index.m3u8",
+      "candidate_count": 1
     },
     {
       "dial": 103,
@@ -764,12 +776,13 @@
       "dial": 153,
       "requested": "TELEFÓRMULA_HD",
       "tvg_id": "TELEFÓRMULA_HD",
-      "reserved": true,
-      "matched_name": null,
-      "group": null,
-      "country": null,
-      "state": "reserved",
-      "url": null
+      "reserved": false,
+      "matched_name": "TeleFórmula (720p)",
+      "group": "Noticias",
+      "country": "MX",
+      "state": "alive",
+      "url": "https://mdstrm.com/live-stream-playlist/62f2c855f7981b5a5a2d8763.m3u8",
+      "candidate_count": 1
     },
     {
       "dial": 154,
@@ -1525,13 +1538,12 @@
       "dial": 301,
       "requested": "FOX",
       "tvg_id": "FOX",
-      "reserved": false,
-      "matched_name": "Fox Sports (720p) [Not 24/7]",
-      "group": "Deportes",
-      "country": "AR",
-      "state": "alive",
-      "url": "https://futbol9865.ultratv13.workers.dev/deportivo111/78.m3u8",
-      "candidate_count": 1
+      "reserved": true,
+      "matched_name": null,
+      "group": null,
+      "country": null,
+      "state": "reserved",
+      "url": null
     },
     {
       "dial": 302,
