@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-08-28T20:20:02Z",
+  "generated_at": "2026-08-29T06:44:19Z",
   "requested_total": 139,
-  "found_total": 29,
-  "missing_total": 110,
+  "found_total": 27,
+  "missing_total": 112,
   "found": [
     {
       "dial": 100,
@@ -14,18 +14,6 @@
       "country": "MX",
       "state": "alive",
       "url": "https://stream8.mexiserver.com:19360/conectatvx/conectatvx.m3u8",
-      "candidate_count": 1
-    },
-    {
-      "dial": 102,
-      "requested": "LAS_ESTRELLAS_HD",
-      "tvg_id": "LAS_ESTRELLAS_HD",
-      "reserved": false,
-      "matched_name": "Las Estrellas",
-      "group": "Familia y TV Abierta",
-      "country": "MX",
-      "state": "alive",
-      "url": "https://channel01-onlymex.akamaized.net/hls/live/2022749/event01/index.m3u8",
       "candidate_count": 1
     },
     {
@@ -110,18 +98,6 @@
       "country": "MX",
       "state": "alive",
       "url": "https://live-scjn.ovp-vivaro.digital/ovp-origin/638a22b47746d/playlist.m3u8",
-      "candidate_count": 1
-    },
-    {
-      "dial": 153,
-      "requested": "TELEFÓRMULA_HD",
-      "tvg_id": "TELEFÓRMULA_HD",
-      "reserved": false,
-      "matched_name": "TeleFórmula (720p)",
-      "group": "Noticias",
-      "country": "MX",
-      "state": "alive",
-      "url": "https://mdstrm.com/live-stream-playlist/62f2c855f7981b5a5a2d8763.m3u8",
       "candidate_count": 1
     },
     {
@@ -355,6 +331,7 @@
   ],
   "missing": [
     "AZTECA_UNO_HD",
+    "LAS_ESTRELLAS_HD",
     "CANAL_4_GDL_HD",
     "AZTECA_7_HD",
     "MÁS_VISIÓN_HD",
@@ -372,6 +349,7 @@
     "MEGANOTICIAS_MX_HD",
     "MEGANOTICIAS_HD",
     "AZTECA_UNO_DELAY_SD",
+    "TELEFÓRMULA_HD",
     "CNNE_HD",
     "MILENIO_TV_HD",
     "MVSTV_SD",
@@ -493,13 +471,12 @@
       "dial": 102,
       "requested": "LAS_ESTRELLAS_HD",
       "tvg_id": "LAS_ESTRELLAS_HD",
-      "reserved": false,
-      "matched_name": "Las Estrellas",
-      "group": "Familia y TV Abierta",
-      "country": "MX",
-      "state": "alive",
-      "url": "https://channel01-onlymex.akamaized.net/hls/live/2022749/event01/index.m3u8",
-      "candidate_count": 1
+      "reserved": true,
+      "matched_name": null,
+      "group": null,
+      "country": null,
+      "state": "reserved",
+      "url": null
     },
     {
       "dial": 103,
@@ -776,13 +753,12 @@
       "dial": 153,
       "requested": "TELEFÓRMULA_HD",
       "tvg_id": "TELEFÓRMULA_HD",
-      "reserved": false,
-      "matched_name": "TeleFórmula (720p)",
-      "group": "Noticias",
-      "country": "MX",
-      "state": "alive",
-      "url": "https://mdstrm.com/live-stream-playlist/62f2c855f7981b5a5a2d8763.m3u8",
-      "candidate_count": 1
+      "reserved": true,
+      "matched_name": null,
+      "group": null,
+      "country": null,
+      "state": "reserved",
+      "url": null
     },
     {
       "dial": 154,
