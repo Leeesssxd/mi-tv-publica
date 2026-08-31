@@ -111,6 +111,10 @@ http://190.61.90.17:40000/play/a0hk/index.m3u8
 #EXTVLCOPT:network-caching=2000
 #EXTVLCOPT:http-reconnect=true
 https://livestream.lumpentv.com.ar/hls/lumpen.m3u8
+#EXTINF:-1 tvg-id="DSports.us@Panregional" tvg-name="DSports" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/DirecTV_Sports_Latin_America_%282018%29.png/960px-DirecTV_Sports_Latin_America_%282018%29.png" group-title="Deportes",DSports
+#EXTVLCOPT:network-caching=2000
+#EXTVLCOPT:http-reconnect=true
+http://138.121.113.175:8000/play/a0cj/index.m3u8
 #EXTINF:-1 tvg-id="Esport3.es@Originals" tvg-name="Esport3 (1080p) [Not 24/7]" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Esport3.svg/960px-Esport3.svg.png" group-title="Deportes",Esport3 (1080p) [Not 24/7]
 #EXTVLCOPT:network-caching=2000
 #EXTVLCOPT:http-reconnect=true
@@ -183,6 +187,14 @@ https://unlimited1-us.dps.live/airedesantafetv/airedesantafetv.smil/playlist.m3u
 #EXTVLCOPT:network-caching=2000
 #EXTVLCOPT:http-reconnect=true
 https://streamtv2.elitecomunicacion.cloud:3628/live/arabitv2025live.m3u8
+#EXTINF:-1 tvg-id="AzaharesRadiovisualMultimedia.ar@SD" tvg-name="Azahares Radio Multimedia (720p)" tvg-logo="https://i.imgur.com/g1BFoSs.png" group-title="Entretenimiento",Azahares Radio Multimedia (720p)
+#EXTVLCOPT:network-caching=2000
+#EXTVLCOPT:http-reconnect=true
+https://streamyes.alsolnet.com/azaharesfm/live/playlist.m3u8
+#EXTINF:-1 tvg-id="BayresTV.ar@SD" tvg-name="Bayres TV (720p)" tvg-logo="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjKrroOZ4RYMYlzGqMQjiIO2QbRNVndEM9PiC-CaRn0PO2AoB_YKyrt6Eigzh4M1gPZaVn5udDL5YzrzxAmyQCj_HTF8Pszo46dk9dABt9TpepY43_IEzT80atZEMaiMcdrqt3lmxAbZYaLwCgr6vDUgV1HlvmhIOJ99UlwAhG2FoHgtCm13CWEugV7Bvg/w1200-h630-p-k-no-nu/bayres-tv-removebg-preview.png" group-title="Entretenimiento",Bayres TV (720p)
+#EXTVLCOPT:network-caching=2000
+#EXTVLCOPT:http-reconnect=true
+https://streaming01.mikrolive.tv/bayrestv/live/playlist.m3u8
 #EXTINF:-1 tvg-id="BCNGospelTV.es@HD" tvg-name="BCN Gospel TV HD (720p)" tvg-logo="https://bcngospelchannel.com/wp-content/uploads/2025/09/bcn-gospel-channer-favicon.png" group-title="Entretenimiento",BCN Gospel TV HD (720p)
 #EXTVLCOPT:network-caching=2000
 #EXTVLCOPT:http-reconnect=true
@@ -255,10 +267,6 @@ http://coninfo.net:1935/9linklivert/smil:9linkmultibr.smil/playlist.m3u8
 #EXTVLCOPT:network-caching=2000
 #EXTVLCOPT:http-reconnect=true
 https://canalcoin.garjim.es/hls/directo.m3u8
-#EXTINF:-1 tvg-id="CanalDonana.es@SD" tvg-name="Canal Doñana (720p) [Not 24/7]" tvg-logo="https://i.imgur.com/0WrKIxm.png" group-title="Entretenimiento",Canal Doñana (720p) [Not 24/7]
-#EXTVLCOPT:network-caching=2000
-#EXTVLCOPT:http-reconnect=true
-https://secure5.todostreaming.es/live/division-alm.m3u8
 #EXTINF:-1 tvg-id="CanalMalagaRTV.es@SD" tvg-name="Canal Málaga RTV (720p) [Not 24/7]" tvg-logo="https://i.imgur.com/QSUOxtM.png" group-title="Entretenimiento",Canal Málaga RTV (720p) [Not 24/7]
 #EXTVLCOPT:network-caching=2000
 #EXTVLCOPT:http-reconnect=true
@@ -547,10 +555,6 @@ http://45.134.141.161:2200/ARG/TELEFE_HD/index.m3u8
 #EXTVLCOPT:network-caching=2000
 #EXTVLCOPT:http-reconnect=true
 https://live.telemadrid.cross-media.es/6389770581112/eu-central-1/6416060453001/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJob3N0IjoiajI5YjgyLmVncmVzcy5haGc3NmwiLCJhY2NvdW50X2lkIjoiNjQxNjA2MDQ1MzAwMSIsImVobiI6ImxpdmUudGVsZW1hZHJpZC5jcm9zcy1tZWRpYS5lcyIsImlzcyI6ImJsaXZlLXBsYXliYWNrLXNvdXJjZS1hcGkiLCJzdWIiOiJwYXRobWFwdG9rZW4iLCJhdWQiOlsiNjQxNjA2MDQ1MzAwMSJdLCJqdGkiOiI2Mzg5NzcwNTgxMTEyIn0.kqriAMUkHT6m0V6wkCHJum_EUyL4PAi1zJMKlfmYHEU/playlist-hls.m3u8
-#EXTINF:-1 tvg-id="TeleplaySureste.mx@SD" tvg-name="Teleplay Sureste (720p)" tvg-logo="https://i.imgur.com/MeV5N08.png" group-title="Entretenimiento",Teleplay Sureste (720p)
-#EXTVLCOPT:network-caching=2000
-#EXTVLCOPT:http-reconnect=true
-https://player.tvstream.mx/livestream/teleplay/livehd/playlist.m3u8
 #EXTINF:-1 tvg-id="Telesol.ar@SD" tvg-name="Telesol (1080p)" tvg-logo="https://i.imgur.com/79sTxtP.png" group-title="Entretenimiento",Telesol (1080p)
 #EXTVLCOPT:network-caching=2000
 #EXTVLCOPT:http-reconnect=true
@@ -783,6 +787,10 @@ https://5ca3e84a76d30.streamlock.net/gpacifico3/obregon.smil/playlist.m3u8
 #EXTVLCOPT:network-caching=2000
 #EXTVLCOPT:http-reconnect=true
 https://5e50264bd6766.streamlock.net/telemetrika2/smil:telemetrika2.smil/playlist.m3u8
+#EXTINF:-1 tvg-id="UMTV.mx@SD" tvg-name="UMTV (1080p) [Not 24/7]" tvg-logo="https://i.imgur.com/sjxVdPh.png" group-title="Familia y TV Abierta",UMTV (1080p) [Not 24/7]
+#EXTVLCOPT:network-caching=2000
+#EXTVLCOPT:http-reconnect=true
+https://60417ddeaf0d9.streamlock.net/montemorelos/videomontemorelos/playlist.m3u8
 #EXTINF:-1 tvg-id="UnisonTV.mx@SD" tvg-name="Unison TV (1080p) [Not 24/7]" tvg-logo="https://i.imgur.com/7ixWRId.png" group-title="Familia y TV Abierta",Unison TV (1080p) [Not 24/7]
 #EXTVLCOPT:network-caching=2000
 #EXTVLCOPT:http-reconnect=true
