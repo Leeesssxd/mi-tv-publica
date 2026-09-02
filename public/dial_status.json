@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-02T04:03:16Z",
+  "generated_at": "2026-09-02T12:53:29Z",
   "requested_total": 139,
   "found_total": 25,
   "missing_total": 114,
@@ -101,15 +101,15 @@
       "candidate_count": 1
     },
     {
-      "dial": 204,
-      "requested": "FX_HD",
-      "tvg_id": "FX_HD",
+      "dial": 207,
+      "requested": "AMC_HD",
+      "tvg_id": "AMC_HD",
       "reserved": false,
-      "matched_name": "FX Latin America South (720p)",
-      "group": "Entretenimiento",
+      "matched_name": "AMC Latin America (1080p)",
+      "group": "Peliculas - Cine",
       "country": "US",
       "state": "alive",
-      "url": "http://72.1.184.5:8089/play/a05i/index.m3u8",
+      "url": "http://15.204.246.24:8080/AMCHD/index.m3u8",
       "candidate_count": 1
     },
     {
@@ -161,15 +161,15 @@
       "candidate_count": 1
     },
     {
-      "dial": 216,
-      "requested": "E!_HD",
-      "tvg_id": "E!_HD",
+      "dial": 219,
+      "requested": "COMEDY_CENTRAL_HD",
+      "tvg_id": "COMEDY_CENTRAL_HD",
       "reserved": false,
-      "matched_name": "E! Latin America Mexico (720p)",
-      "group": "Entretenimiento",
+      "matched_name": "Comedy Central Latin America (1080p)",
+      "group": "Peliculas - Comedia",
       "country": "US",
       "state": "alive",
-      "url": "http://72.1.184.5:8089/play/a05d/index.m3u8",
+      "url": "http://15.204.246.24:8080/ComedyCentralHD/index.m3u8",
       "candidate_count": 1
     },
     {
@@ -338,15 +338,15 @@
     "DW_LATINOAMÉRICA_SD",
     "TV5_MONDE_SD",
     "STAR_CHANNEL_HD",
+    "FX_HD",
     "UNIVERSAL_TV_HD",
-    "AMC_HD",
     "TNT_SERIES_HD",
     "WARNER_CHANNEL_HD",
     "ID_HD",
     "A&E_HD",
+    "E!_HD",
     "ATRESERIES_HD",
     "USA_HD",
-    "COMEDY_CENTRAL_HD",
     "CORAZÓN_HD",
     "MAS_CHIC_SD",
     "DISCOVERY_H&H_HD",
@@ -874,13 +874,12 @@
       "dial": 204,
       "requested": "FX_HD",
       "tvg_id": "FX_HD",
-      "reserved": false,
-      "matched_name": "FX Latin America South (720p)",
-      "group": "Entretenimiento",
-      "country": "US",
-      "state": "alive",
-      "url": "http://72.1.184.5:8089/play/a05i/index.m3u8",
-      "candidate_count": 1
+      "reserved": true,
+      "matched_name": null,
+      "group": null,
+      "country": null,
+      "state": "reserved",
+      "url": null
     },
     {
       "dial": 206,
@@ -897,12 +896,13 @@
       "dial": 207,
       "requested": "AMC_HD",
       "tvg_id": "AMC_HD",
-      "reserved": true,
-      "matched_name": null,
-      "group": null,
-      "country": null,
-      "state": "reserved",
-      "url": null
+      "reserved": false,
+      "matched_name": "AMC Latin America (1080p)",
+      "group": "Peliculas - Cine",
+      "country": "US",
+      "state": "alive",
+      "url": "http://15.204.246.24:8080/AMCHD/index.m3u8",
+      "candidate_count": 1
     },
     {
       "dial": 208,
@@ -1000,13 +1000,12 @@
       "dial": 216,
       "requested": "E!_HD",
       "tvg_id": "E!_HD",
-      "reserved": false,
-      "matched_name": "E! Latin America Mexico (720p)",
-      "group": "Entretenimiento",
-      "country": "US",
-      "state": "alive",
-      "url": "http://72.1.184.5:8089/play/a05d/index.m3u8",
-      "candidate_count": 1
+      "reserved": true,
+      "matched_name": null,
+      "group": null,
+      "country": null,
+      "state": "reserved",
+      "url": null
     },
     {
       "dial": 217,
@@ -1034,12 +1033,13 @@
       "dial": 219,
       "requested": "COMEDY_CENTRAL_HD",
       "tvg_id": "COMEDY_CENTRAL_HD",
-      "reserved": true,
-      "matched_name": null,
-      "group": null,
-      "country": null,
-      "state": "reserved",
-      "url": null
+      "reserved": false,
+      "matched_name": "Comedy Central Latin America (1080p)",
+      "group": "Peliculas - Comedia",
+      "country": "US",
+      "state": "alive",
+      "url": "http://15.204.246.24:8080/ComedyCentralHD/index.m3u8",
+      "candidate_count": 1
     },
     {
       "dial": 220,
