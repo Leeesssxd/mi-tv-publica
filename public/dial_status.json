@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-09-02T19:32:00Z",
+  "generated_at": "2026-09-03T04:03:16Z",
   "requested_total": 139,
-  "found_total": 27,
-  "missing_total": 112,
+  "found_total": 28,
+  "missing_total": 111,
   "found": [
     {
       "dial": 100,
@@ -305,6 +305,18 @@
       "candidate_count": 1
     },
     {
+      "dial": 406,
+      "requested": "EUROPA_EUROPA_HD",
+      "tvg_id": "EUROPA_EUROPA_HD",
+      "reserved": false,
+      "matched_name": "Europa Europa (1080p)",
+      "group": "Peliculas - Drama y Series",
+      "country": "AR",
+      "state": "alive",
+      "url": "https://iptv.bitred.cl/EUROPAEUROPA_HD/index.m3u8",
+      "candidate_count": 1
+    },
+    {
       "dial": 431,
       "requested": "CINECANAL_HD",
       "tvg_id": "CINECANAL_HD",
@@ -422,7 +434,6 @@
     "CINEMA_PLATINO_HD",
     "PANICO_HD",
     "SONY_MOVIES",
-    "EUROPA_EUROPA_HD",
     "STUDIO_UNIVERSAL_HD",
     "CINEMAX_HD",
     "TNT_HD",
@@ -1760,12 +1771,13 @@
       "dial": 406,
       "requested": "EUROPA_EUROPA_HD",
       "tvg_id": "EUROPA_EUROPA_HD",
-      "reserved": true,
-      "matched_name": null,
-      "group": null,
-      "country": null,
-      "state": "reserved",
-      "url": null
+      "reserved": false,
+      "matched_name": "Europa Europa (1080p)",
+      "group": "Peliculas - Drama y Series",
+      "country": "AR",
+      "state": "alive",
+      "url": "https://iptv.bitred.cl/EUROPAEUROPA_HD/index.m3u8",
+      "candidate_count": 1
     },
     {
       "dial": 408,
