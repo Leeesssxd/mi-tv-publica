@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-09-04T04:00:31Z",
+  "generated_at": "2026-09-04T12:49:35Z",
   "requested_total": 139,
-  "found_total": 30,
-  "missing_total": 109,
+  "found_total": 25,
+  "missing_total": 114,
   "found": [
     {
       "dial": 100,
@@ -14,18 +14,6 @@
       "country": "MX",
       "state": "alive",
       "url": "https://stream8.mexiserver.com:19360/conectatvx/conectatvx.m3u8",
-      "candidate_count": 1
-    },
-    {
-      "dial": 102,
-      "requested": "LAS_ESTRELLAS_HD",
-      "tvg_id": "LAS_ESTRELLAS_HD",
-      "reserved": false,
-      "matched_name": "Las Estrellas",
-      "group": "Familia y TV Abierta",
-      "country": "MX",
-      "state": "alive",
-      "url": "https://channel01-onlymex.akamaized.net/hls/live/2022749/event01/index.m3u8",
       "candidate_count": 1
     },
     {
@@ -113,18 +101,6 @@
       "candidate_count": 1
     },
     {
-      "dial": 153,
-      "requested": "TELEFÓRMULA_HD",
-      "tvg_id": "TELEFÓRMULA_HD",
-      "reserved": false,
-      "matched_name": "TeleFórmula (720p)",
-      "group": "Noticias",
-      "country": "MX",
-      "state": "alive",
-      "url": "https://mdstrm.com/live-stream-playlist/62f2c855f7981b5a5a2d8763.m3u8",
-      "candidate_count": 1
-    },
-    {
       "dial": 204,
       "requested": "FX_HD",
       "tvg_id": "FX_HD",
@@ -134,18 +110,6 @@
       "country": "US",
       "state": "alive",
       "url": "http://72.1.184.5:8089/play/a05i/index.m3u8",
-      "candidate_count": 1
-    },
-    {
-      "dial": 207,
-      "requested": "AMC_HD",
-      "tvg_id": "AMC_HD",
-      "reserved": false,
-      "matched_name": "AMC Latin America (1080p)",
-      "group": "Peliculas - Cine",
-      "country": "US",
-      "state": "alive",
-      "url": "http://15.204.246.24:8080/AMCHD/index.m3u8",
       "candidate_count": 1
     },
     {
@@ -209,18 +173,6 @@
       "candidate_count": 1
     },
     {
-      "dial": 219,
-      "requested": "COMEDY_CENTRAL_HD",
-      "tvg_id": "COMEDY_CENTRAL_HD",
-      "reserved": false,
-      "matched_name": "Comedy Central Latin America (1080p)",
-      "group": "Peliculas - Comedia",
-      "country": "US",
-      "state": "alive",
-      "url": "http://15.204.246.24:8080/ComedyCentralHD/index.m3u8",
-      "candidate_count": 1
-    },
-    {
       "dial": 223,
       "requested": "EL_GOURMET_HD",
       "tvg_id": "EL_GOURMET_HD",
@@ -278,18 +230,6 @@
       "country": "US",
       "state": "alive",
       "url": "https://cdn3.wowza.com/1/SmVrQmZCUXZhVDgz/b3J3MFJv/hls/live/playlist.m3u8",
-      "candidate_count": 1
-    },
-    {
-      "dial": 302,
-      "requested": "ESPN_HD",
-      "tvg_id": "ESPN_HD",
-      "reserved": false,
-      "matched_name": "ESPN",
-      "group": "Deportes",
-      "country": "ALL",
-      "state": "alive",
-      "url": "http://magiz.net:80/play/chXzkkaPaXkx2-3idfJ3VR5WgpQJIwNvHueedj9V6oQ/ts",
       "candidate_count": 1
     },
     {
@@ -367,6 +307,7 @@
   ],
   "missing": [
     "AZTECA_UNO_HD",
+    "LAS_ESTRELLAS_HD",
     "CANAL_4_GDL_HD",
     "AZTECA_7_HD",
     "MÁS_VISIÓN_HD",
@@ -384,6 +325,7 @@
     "MEGANOTICIAS_MX_HD",
     "MEGANOTICIAS_HD",
     "AZTECA_UNO_DELAY_SD",
+    "TELEFÓRMULA_HD",
     "CNNE_HD",
     "MILENIO_TV_HD",
     "MVSTV_SD",
@@ -397,12 +339,14 @@
     "TV5_MONDE_SD",
     "STAR_CHANNEL_HD",
     "UNIVERSAL_TV_HD",
+    "AMC_HD",
     "TNT_SERIES_HD",
     "WARNER_CHANNEL_HD",
     "ID_HD",
     "A&E_HD",
     "ATRESERIES_HD",
     "USA_HD",
+    "COMEDY_CENTRAL_HD",
     "CORAZÓN_HD",
     "MAS_CHIC_SD",
     "DISCOVERY_H&H_HD",
@@ -439,6 +383,7 @@
     "ENLACE_SD",
     "FILM_&_ARTS_HD",
     "FOX",
+    "ESPN_HD",
     "TVC_DEPORTES_HD",
     "ESPN_2_HD",
     "TVC_DEPORTES_2_HD",
@@ -504,13 +449,12 @@
       "dial": 102,
       "requested": "LAS_ESTRELLAS_HD",
       "tvg_id": "LAS_ESTRELLAS_HD",
-      "reserved": false,
-      "matched_name": "Las Estrellas",
-      "group": "Familia y TV Abierta",
-      "country": "MX",
-      "state": "alive",
-      "url": "https://channel01-onlymex.akamaized.net/hls/live/2022749/event01/index.m3u8",
-      "candidate_count": 1
+      "reserved": true,
+      "matched_name": null,
+      "group": null,
+      "country": null,
+      "state": "reserved",
+      "url": null
     },
     {
       "dial": 103,
@@ -787,13 +731,12 @@
       "dial": 153,
       "requested": "TELEFÓRMULA_HD",
       "tvg_id": "TELEFÓRMULA_HD",
-      "reserved": false,
-      "matched_name": "TeleFórmula (720p)",
-      "group": "Noticias",
-      "country": "MX",
-      "state": "alive",
-      "url": "https://mdstrm.com/live-stream-playlist/62f2c855f7981b5a5a2d8763.m3u8",
-      "candidate_count": 1
+      "reserved": true,
+      "matched_name": null,
+      "group": null,
+      "country": null,
+      "state": "reserved",
+      "url": null
     },
     {
       "dial": 154,
@@ -954,13 +897,12 @@
       "dial": 207,
       "requested": "AMC_HD",
       "tvg_id": "AMC_HD",
-      "reserved": false,
-      "matched_name": "AMC Latin America (1080p)",
-      "group": "Peliculas - Cine",
-      "country": "US",
-      "state": "alive",
-      "url": "http://15.204.246.24:8080/AMCHD/index.m3u8",
-      "candidate_count": 1
+      "reserved": true,
+      "matched_name": null,
+      "group": null,
+      "country": null,
+      "state": "reserved",
+      "url": null
     },
     {
       "dial": 208,
@@ -1092,13 +1034,12 @@
       "dial": 219,
       "requested": "COMEDY_CENTRAL_HD",
       "tvg_id": "COMEDY_CENTRAL_HD",
-      "reserved": false,
-      "matched_name": "Comedy Central Latin America (1080p)",
-      "group": "Peliculas - Comedia",
-      "country": "US",
-      "state": "alive",
-      "url": "http://15.204.246.24:8080/ComedyCentralHD/index.m3u8",
-      "candidate_count": 1
+      "reserved": true,
+      "matched_name": null,
+      "group": null,
+      "country": null,
+      "state": "reserved",
+      "url": null
     },
     {
       "dial": 220,
@@ -1560,13 +1501,12 @@
       "dial": 302,
       "requested": "ESPN_HD",
       "tvg_id": "ESPN_HD",
-      "reserved": false,
-      "matched_name": "ESPN",
-      "group": "Deportes",
-      "country": "ALL",
-      "state": "alive",
-      "url": "http://magiz.net:80/play/chXzkkaPaXkx2-3idfJ3VR5WgpQJIwNvHueedj9V6oQ/ts",
-      "candidate_count": 1
+      "reserved": true,
+      "matched_name": null,
+      "group": null,
+      "country": null,
+      "state": "reserved",
+      "url": null
     },
     {
       "dial": 303,
