@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-09-05T11:58:44Z",
+  "generated_at": "2026-09-05T18:15:14Z",
   "requested_total": 139,
-  "found_total": 24,
-  "missing_total": 115,
+  "found_total": 26,
+  "missing_total": 113,
   "found": [
     {
       "dial": 100,
@@ -26,6 +26,18 @@
       "country": "MX",
       "state": "alive",
       "url": "https://igd-it-runtime.otteravision.com/igd/it/it.m3u8",
+      "candidate_count": 1
+    },
+    {
+      "dial": 106,
+      "requested": "CANAL_6_HD",
+      "tvg_id": "CANAL_6_HD",
+      "reserved": false,
+      "matched_name": "Canal 6 Posadas (1080p)",
+      "group": "Entretenimiento",
+      "country": "AR",
+      "state": "alive",
+      "url": "https://iptv.ixfo.com.ar:30443/live/c6digital/playlist.m3u8",
       "candidate_count": 1
     },
     {
@@ -89,6 +101,18 @@
       "candidate_count": 1
     },
     {
+      "dial": 207,
+      "requested": "AMC_HD",
+      "tvg_id": "AMC_HD",
+      "reserved": false,
+      "matched_name": "AMC Latin America (1080p)",
+      "group": "Peliculas - Cine",
+      "country": "US",
+      "state": "alive",
+      "url": "http://15.204.246.24:8080/AMCHD/index.m3u8",
+      "candidate_count": 1
+    },
+    {
       "dial": 208,
       "requested": "TNT_NOVELAS_HD",
       "tvg_id": "TNT_NOVELAS_HD",
@@ -149,6 +173,18 @@
       "candidate_count": 1
     },
     {
+      "dial": 219,
+      "requested": "COMEDY_CENTRAL_HD",
+      "tvg_id": "COMEDY_CENTRAL_HD",
+      "reserved": false,
+      "matched_name": "Comedy Central Latin America (1080p)",
+      "group": "Peliculas - Comedia",
+      "country": "US",
+      "state": "alive",
+      "url": "http://15.204.246.24:8080/ComedyCentralHD/index.m3u8",
+      "candidate_count": 1
+    },
+    {
       "dial": 223,
       "requested": "EL_GOURMET_HD",
       "tvg_id": "EL_GOURMET_HD",
@@ -206,18 +242,6 @@
       "country": "US",
       "state": "alive",
       "url": "https://cdn3.wowza.com/1/SmVrQmZCUXZhVDgz/b3J3MFJv/hls/live/playlist.m3u8",
-      "candidate_count": 1
-    },
-    {
-      "dial": 302,
-      "requested": "ESPN_HD",
-      "tvg_id": "ESPN_HD",
-      "reserved": false,
-      "matched_name": "ESPN",
-      "group": "Deportes",
-      "country": "ALL",
-      "state": "alive",
-      "url": "http://magiz.net:80/play/chXzkkaPaXkx2-3idfJ3VR5WgpQJIwNvHueedj9V6oQ/ts",
       "candidate_count": 1
     },
     {
@@ -298,7 +322,6 @@
     "LAS_ESTRELLAS_HD",
     "CANAL_4_GDL_HD",
     "CANAL_5_LOCAL_HD",
-    "CANAL_6_HD",
     "AZTECA_7_HD",
     "MÁS_VISIÓN_HD",
     "NU9VE_HD",
@@ -329,14 +352,12 @@
     "TV5_MONDE_SD",
     "STAR_CHANNEL_HD",
     "UNIVERSAL_TV_HD",
-    "AMC_HD",
     "TNT_SERIES_HD",
     "WARNER_CHANNEL_HD",
     "ID_HD",
     "A&E_HD",
     "ATRESERIES_HD",
     "USA_HD",
-    "COMEDY_CENTRAL_HD",
     "CORAZÓN_HD",
     "MAS_CHIC_SD",
     "DISCOVERY_H&H_HD",
@@ -373,6 +394,7 @@
     "ENLACE_SD",
     "FILM_&_ARTS_HD",
     "FOX",
+    "ESPN_HD",
     "TVC_DEPORTES_HD",
     "ESPN_2_HD",
     "TVC_DEPORTES_2_HD",
@@ -483,12 +505,13 @@
       "dial": 106,
       "requested": "CANAL_6_HD",
       "tvg_id": "CANAL_6_HD",
-      "reserved": true,
-      "matched_name": null,
-      "group": null,
-      "country": null,
-      "state": "reserved",
-      "url": null
+      "reserved": false,
+      "matched_name": "Canal 6 Posadas (1080p)",
+      "group": "Entretenimiento",
+      "country": "AR",
+      "state": "alive",
+      "url": "https://iptv.ixfo.com.ar:30443/live/c6digital/playlist.m3u8",
+      "candidate_count": 1
     },
     {
       "dial": 107,
@@ -884,12 +907,13 @@
       "dial": 207,
       "requested": "AMC_HD",
       "tvg_id": "AMC_HD",
-      "reserved": true,
-      "matched_name": null,
-      "group": null,
-      "country": null,
-      "state": "reserved",
-      "url": null
+      "reserved": false,
+      "matched_name": "AMC Latin America (1080p)",
+      "group": "Peliculas - Cine",
+      "country": "US",
+      "state": "alive",
+      "url": "http://15.204.246.24:8080/AMCHD/index.m3u8",
+      "candidate_count": 1
     },
     {
       "dial": 208,
@@ -1021,12 +1045,13 @@
       "dial": 219,
       "requested": "COMEDY_CENTRAL_HD",
       "tvg_id": "COMEDY_CENTRAL_HD",
-      "reserved": true,
-      "matched_name": null,
-      "group": null,
-      "country": null,
-      "state": "reserved",
-      "url": null
+      "reserved": false,
+      "matched_name": "Comedy Central Latin America (1080p)",
+      "group": "Peliculas - Comedia",
+      "country": "US",
+      "state": "alive",
+      "url": "http://15.204.246.24:8080/ComedyCentralHD/index.m3u8",
+      "candidate_count": 1
     },
     {
       "dial": 220,
@@ -1488,13 +1513,12 @@
       "dial": 302,
       "requested": "ESPN_HD",
       "tvg_id": "ESPN_HD",
-      "reserved": false,
-      "matched_name": "ESPN",
-      "group": "Deportes",
-      "country": "ALL",
-      "state": "alive",
-      "url": "http://magiz.net:80/play/chXzkkaPaXkx2-3idfJ3VR5WgpQJIwNvHueedj9V6oQ/ts",
-      "candidate_count": 1
+      "reserved": true,
+      "matched_name": null,
+      "group": null,
+      "country": null,
+      "state": "reserved",
+      "url": null
     },
     {
       "dial": 303,
