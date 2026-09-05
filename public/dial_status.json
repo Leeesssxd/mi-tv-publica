@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-09-04T19:08:35Z",
+  "generated_at": "2026-09-05T04:00:34Z",
   "requested_total": 139,
-  "found_total": 24,
-  "missing_total": 115,
+  "found_total": 25,
+  "missing_total": 114,
   "found": [
     {
       "dial": 100,
@@ -101,18 +101,6 @@
       "candidate_count": 1
     },
     {
-      "dial": 207,
-      "requested": "AMC_HD",
-      "tvg_id": "AMC_HD",
-      "reserved": false,
-      "matched_name": "AMC Latin America (1080p)",
-      "group": "Peliculas - Cine",
-      "country": "US",
-      "state": "alive",
-      "url": "http://15.204.246.24:8080/AMCHD/index.m3u8",
-      "candidate_count": 1
-    },
-    {
       "dial": 208,
       "requested": "TNT_NOVELAS_HD",
       "tvg_id": "TNT_NOVELAS_HD",
@@ -173,15 +161,15 @@
       "candidate_count": 1
     },
     {
-      "dial": 219,
-      "requested": "COMEDY_CENTRAL_HD",
-      "tvg_id": "COMEDY_CENTRAL_HD",
+      "dial": 223,
+      "requested": "EL_GOURMET_HD",
+      "tvg_id": "EL_GOURMET_HD",
       "reserved": false,
-      "matched_name": "Comedy Central Latin America (1080p)",
-      "group": "Peliculas - Comedia",
-      "country": "US",
+      "matched_name": "El Gourmet South (1080p)",
+      "group": "Otros",
+      "country": "AR",
       "state": "alive",
-      "url": "http://15.204.246.24:8080/ComedyCentralHD/index.m3u8",
+      "url": "https://iptv.bitred.cl/ELGOURMET_HD/index.m3u8",
       "candidate_count": 1
     },
     {
@@ -281,6 +269,30 @@
       "candidate_count": 1
     },
     {
+      "dial": 406,
+      "requested": "EUROPA_EUROPA_HD",
+      "tvg_id": "EUROPA_EUROPA_HD",
+      "reserved": false,
+      "matched_name": "Europa Europa (1080p)",
+      "group": "Peliculas - Drama y Series",
+      "country": "AR",
+      "state": "alive",
+      "url": "https://iptv.bitred.cl/EUROPAEUROPA_HD/index.m3u8",
+      "candidate_count": 1
+    },
+    {
+      "dial": 431,
+      "requested": "CINECANAL_HD",
+      "tvg_id": "CINECANAL_HD",
+      "reserved": false,
+      "matched_name": "Cinecanal South (1080p)",
+      "group": "Peliculas - Cine",
+      "country": "US",
+      "state": "alive",
+      "url": "http://45.162.193.35/CINECANAL/index.m3u8",
+      "candidate_count": 1
+    },
+    {
       "dial": 632,
       "requested": "EXA_TV_HD",
       "tvg_id": "EXA_TV_HD",
@@ -328,14 +340,15 @@
     "TV5_MONDE_SD",
     "STAR_CHANNEL_HD",
     "UNIVERSAL_TV_HD",
+    "AMC_HD",
     "TNT_SERIES_HD",
     "WARNER_CHANNEL_HD",
     "ID_HD",
     "A&E_HD",
     "ATRESERIES_HD",
     "USA_HD",
+    "COMEDY_CENTRAL_HD",
     "CORAZÓN_HD",
-    "EL_GOURMET_HD",
     "MAS_CHIC_SD",
     "DISCOVERY_H&H_HD",
     "PASIONES_HD",
@@ -388,7 +401,6 @@
     "CINEMA_PLATINO_HD",
     "PANICO_HD",
     "SONY_MOVIES",
-    "EUROPA_EUROPA_HD",
     "STUDIO_UNIVERSAL_HD",
     "CINEMAX_HD",
     "TNT_HD",
@@ -401,7 +413,6 @@
     "CINE_LATINO_SD",
     "MULTICINEMA_HD",
     "MULTIPREMIER_HD",
-    "CINECANAL_HD",
     "CÍNEMA_HD",
     "VIDEO_ROLA_HD",
     "CLIC_HD",
@@ -885,13 +896,12 @@
       "dial": 207,
       "requested": "AMC_HD",
       "tvg_id": "AMC_HD",
-      "reserved": false,
-      "matched_name": "AMC Latin America (1080p)",
-      "group": "Peliculas - Cine",
-      "country": "US",
-      "state": "alive",
-      "url": "http://15.204.246.24:8080/AMCHD/index.m3u8",
-      "candidate_count": 1
+      "reserved": true,
+      "matched_name": null,
+      "group": null,
+      "country": null,
+      "state": "reserved",
+      "url": null
     },
     {
       "dial": 208,
@@ -1023,13 +1033,12 @@
       "dial": 219,
       "requested": "COMEDY_CENTRAL_HD",
       "tvg_id": "COMEDY_CENTRAL_HD",
-      "reserved": false,
-      "matched_name": "Comedy Central Latin America (1080p)",
-      "group": "Peliculas - Comedia",
-      "country": "US",
-      "state": "alive",
-      "url": "http://15.204.246.24:8080/ComedyCentralHD/index.m3u8",
-      "candidate_count": 1
+      "reserved": true,
+      "matched_name": null,
+      "group": null,
+      "country": null,
+      "state": "reserved",
+      "url": null
     },
     {
       "dial": 220,
@@ -1046,12 +1055,13 @@
       "dial": 223,
       "requested": "EL_GOURMET_HD",
       "tvg_id": "EL_GOURMET_HD",
-      "reserved": true,
-      "matched_name": null,
-      "group": null,
-      "country": null,
-      "state": "reserved",
-      "url": null
+      "reserved": false,
+      "matched_name": "El Gourmet South (1080p)",
+      "group": "Otros",
+      "country": "AR",
+      "state": "alive",
+      "url": "https://iptv.bitred.cl/ELGOURMET_HD/index.m3u8",
+      "candidate_count": 1
     },
     {
       "dial": 224,
@@ -1725,12 +1735,13 @@
       "dial": 406,
       "requested": "EUROPA_EUROPA_HD",
       "tvg_id": "EUROPA_EUROPA_HD",
-      "reserved": true,
-      "matched_name": null,
-      "group": null,
-      "country": null,
-      "state": "reserved",
-      "url": null
+      "reserved": false,
+      "matched_name": "Europa Europa (1080p)",
+      "group": "Peliculas - Drama y Series",
+      "country": "AR",
+      "state": "alive",
+      "url": "https://iptv.bitred.cl/EUROPAEUROPA_HD/index.m3u8",
+      "candidate_count": 1
     },
     {
       "dial": 408,
@@ -1868,12 +1879,13 @@
       "dial": 431,
       "requested": "CINECANAL_HD",
       "tvg_id": "CINECANAL_HD",
-      "reserved": true,
-      "matched_name": null,
-      "group": null,
-      "country": null,
-      "state": "reserved",
-      "url": null
+      "reserved": false,
+      "matched_name": "Cinecanal South (1080p)",
+      "group": "Peliculas - Cine",
+      "country": "US",
+      "state": "alive",
+      "url": "http://45.162.193.35/CINECANAL/index.m3u8",
+      "candidate_count": 1
     },
     {
       "dial": 432,
