@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-09-07T04:04:46Z",
+  "generated_at": "2026-09-07T14:21:05Z",
   "requested_total": 139,
-  "found_total": 23,
-  "missing_total": 116,
+  "found_total": 25,
+  "missing_total": 114,
   "found": [
     {
       "dial": 100,
@@ -185,18 +185,6 @@
       "candidate_count": 1
     },
     {
-      "dial": 223,
-      "requested": "EL_GOURMET_HD",
-      "tvg_id": "EL_GOURMET_HD",
-      "reserved": false,
-      "matched_name": "El Gourmet South (1080p)",
-      "group": "Otros",
-      "country": "AR",
-      "state": "alive",
-      "url": "https://iptv.bitred.cl/ELGOURMET_HD/index.m3u8",
-      "candidate_count": 1
-    },
-    {
       "dial": 234,
       "requested": "AZTECA_INTERNACIONAL_HD",
       "tvg_id": "AZTECA_INTERNACIONAL_HD",
@@ -218,6 +206,18 @@
       "country": "ES",
       "state": "alive",
       "url": "https://rtvelivestream-rtveplayplus.rtve.es/rtvesec/int/star_main_1080.m3u8",
+      "candidate_count": 1
+    },
+    {
+      "dial": 260,
+      "requested": "DISNEY_CHANNEL_HD",
+      "tvg_id": "DISNEY_CHANNEL_HD",
+      "reserved": false,
+      "matched_name": "Disney Channel Latin America Mexico (720p)",
+      "group": "Peliculas - Familiar",
+      "country": "AR",
+      "state": "alive",
+      "url": "http://45.166.93.156:9999/play/a0f3/index.m3u8",
       "candidate_count": 1
     },
     {
@@ -279,6 +279,30 @@
       "state": "alive",
       "url": "https://iptv.bitred.cl/EUROPAEUROPA_HD/index.m3u8",
       "candidate_count": 1
+    },
+    {
+      "dial": 431,
+      "requested": "CINECANAL_HD",
+      "tvg_id": "CINECANAL_HD",
+      "reserved": false,
+      "matched_name": "Cinecanal South (1080p)",
+      "group": "Peliculas - Cine",
+      "country": "US",
+      "state": "alive",
+      "url": "http://45.162.193.35/CINECANAL/index.m3u8",
+      "candidate_count": 1
+    },
+    {
+      "dial": 632,
+      "requested": "EXA_TV_HD",
+      "tvg_id": "EXA_TV_HD",
+      "reserved": false,
+      "matched_name": "Exa TV",
+      "group": "Entretenimiento",
+      "country": "MX",
+      "state": "alive",
+      "url": "http://190.61.90.17:40000/play/a0hk/index.m3u8",
+      "candidate_count": 1
     }
   ],
   "missing": [
@@ -323,6 +347,7 @@
     "ATRESERIES_HD",
     "USA_HD",
     "CORAZÓN_HD",
+    "EL_GOURMET_HD",
     "MAS_CHIC_SD",
     "DISCOVERY_H&H_HD",
     "PASIONES_HD",
@@ -337,7 +362,6 @@
     "CARTOONITO_HD",
     "NICKELODEON_HD",
     "DISCOVERY_KIDS_HD",
-    "DISNEY_CHANNEL_HD",
     "TOONCAST_HD",
     "BABY_FIRST_HD",
     "BABY_TV_SD",
@@ -389,14 +413,12 @@
     "CINE_LATINO_SD",
     "MULTICINEMA_HD",
     "MULTIPREMIER_HD",
-    "CINECANAL_HD",
     "CÍNEMA_HD",
     "VIDEO_ROLA_HD",
     "CLIC_HD",
     "HTV_HD",
     "BEAT_BOX_SD",
     "VR_PLUS_HD",
-    "EXA_TV_HD",
     "SONY_MOVIES_ALT"
   ],
   "entries": [
@@ -1035,13 +1057,12 @@
       "dial": 223,
       "requested": "EL_GOURMET_HD",
       "tvg_id": "EL_GOURMET_HD",
-      "reserved": false,
-      "matched_name": "El Gourmet South (1080p)",
-      "group": "Otros",
-      "country": "AR",
-      "state": "alive",
-      "url": "https://iptv.bitred.cl/ELGOURMET_HD/index.m3u8",
-      "candidate_count": 1
+      "reserved": true,
+      "matched_name": null,
+      "group": null,
+      "country": null,
+      "state": "reserved",
+      "url": null
     },
     {
       "dial": 224,
@@ -1225,12 +1246,13 @@
       "dial": 260,
       "requested": "DISNEY_CHANNEL_HD",
       "tvg_id": "DISNEY_CHANNEL_HD",
-      "reserved": true,
-      "matched_name": null,
-      "group": null,
-      "country": null,
-      "state": "reserved",
-      "url": null
+      "reserved": false,
+      "matched_name": "Disney Channel Latin America Mexico (720p)",
+      "group": "Peliculas - Familiar",
+      "country": "AR",
+      "state": "alive",
+      "url": "http://45.166.93.156:9999/play/a0f3/index.m3u8",
+      "candidate_count": 1
     },
     {
       "dial": 261,
@@ -1857,12 +1879,13 @@
       "dial": 431,
       "requested": "CINECANAL_HD",
       "tvg_id": "CINECANAL_HD",
-      "reserved": true,
-      "matched_name": null,
-      "group": null,
-      "country": null,
-      "state": "reserved",
-      "url": null
+      "reserved": false,
+      "matched_name": "Cinecanal South (1080p)",
+      "group": "Peliculas - Cine",
+      "country": "US",
+      "state": "alive",
+      "url": "http://45.162.193.35/CINECANAL/index.m3u8",
+      "candidate_count": 1
     },
     {
       "dial": 432,
@@ -1934,12 +1957,13 @@
       "dial": 632,
       "requested": "EXA_TV_HD",
       "tvg_id": "EXA_TV_HD",
-      "reserved": true,
-      "matched_name": null,
-      "group": null,
-      "country": null,
-      "state": "reserved",
-      "url": null
+      "reserved": false,
+      "matched_name": "Exa TV",
+      "group": "Entretenimiento",
+      "country": "MX",
+      "state": "alive",
+      "url": "http://190.61.90.17:40000/play/a0hk/index.m3u8",
+      "candidate_count": 1
     },
     {
       "dial": 1405,
