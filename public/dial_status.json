@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-09-07T19:57:53Z",
+  "generated_at": "2026-09-08T04:08:08Z",
   "requested_total": 139,
-  "found_total": 24,
-  "missing_total": 115,
+  "found_total": 25,
+  "missing_total": 114,
   "found": [
     {
       "dial": 100,
@@ -101,6 +101,18 @@
       "candidate_count": 1
     },
     {
+      "dial": 207,
+      "requested": "AMC_HD",
+      "tvg_id": "AMC_HD",
+      "reserved": false,
+      "matched_name": "AMC Latin America (1080p)",
+      "group": "Peliculas - Cine",
+      "country": "US",
+      "state": "alive",
+      "url": "http://15.204.246.24:8080/AMCHD/index.m3u8",
+      "candidate_count": 1
+    },
+    {
       "dial": 208,
       "requested": "TNT_NOVELAS_HD",
       "tvg_id": "TNT_NOVELAS_HD",
@@ -158,6 +170,18 @@
       "country": "US",
       "state": "alive",
       "url": "http://72.1.184.5:8089/play/a05d/index.m3u8",
+      "candidate_count": 1
+    },
+    {
+      "dial": 219,
+      "requested": "COMEDY_CENTRAL_HD",
+      "tvg_id": "COMEDY_CENTRAL_HD",
+      "reserved": false,
+      "matched_name": "Comedy Central Latin America (1080p)",
+      "group": "Peliculas - Comedia",
+      "country": "US",
+      "state": "alive",
+      "url": "http://15.204.246.24:8080/ComedyCentralHD/index.m3u8",
       "candidate_count": 1
     },
     {
@@ -279,18 +303,6 @@
       "state": "alive",
       "url": "http://45.162.193.35/CINECANAL/index.m3u8",
       "candidate_count": 1
-    },
-    {
-      "dial": 632,
-      "requested": "EXA_TV_HD",
-      "tvg_id": "EXA_TV_HD",
-      "reserved": false,
-      "matched_name": "Exa TV",
-      "group": "Entretenimiento",
-      "country": "MX",
-      "state": "alive",
-      "url": "http://190.61.90.17:40000/play/a0hk/index.m3u8",
-      "candidate_count": 1
     }
   ],
   "missing": [
@@ -328,14 +340,12 @@
     "TV5_MONDE_SD",
     "STAR_CHANNEL_HD",
     "UNIVERSAL_TV_HD",
-    "AMC_HD",
     "TNT_SERIES_HD",
     "WARNER_CHANNEL_HD",
     "ID_HD",
     "A&E_HD",
     "ATRESERIES_HD",
     "USA_HD",
-    "COMEDY_CENTRAL_HD",
     "CORAZÓN_HD",
     "MAS_CHIC_SD",
     "DISCOVERY_H&H_HD",
@@ -408,6 +418,7 @@
     "HTV_HD",
     "BEAT_BOX_SD",
     "VR_PLUS_HD",
+    "EXA_TV_HD",
     "SONY_MOVIES_ALT"
   ],
   "entries": [
@@ -885,12 +896,13 @@
       "dial": 207,
       "requested": "AMC_HD",
       "tvg_id": "AMC_HD",
-      "reserved": true,
-      "matched_name": null,
-      "group": null,
-      "country": null,
-      "state": "reserved",
-      "url": null
+      "reserved": false,
+      "matched_name": "AMC Latin America (1080p)",
+      "group": "Peliculas - Cine",
+      "country": "US",
+      "state": "alive",
+      "url": "http://15.204.246.24:8080/AMCHD/index.m3u8",
+      "candidate_count": 1
     },
     {
       "dial": 208,
@@ -1022,12 +1034,13 @@
       "dial": 219,
       "requested": "COMEDY_CENTRAL_HD",
       "tvg_id": "COMEDY_CENTRAL_HD",
-      "reserved": true,
-      "matched_name": null,
-      "group": null,
-      "country": null,
-      "state": "reserved",
-      "url": null
+      "reserved": false,
+      "matched_name": "Comedy Central Latin America (1080p)",
+      "group": "Peliculas - Comedia",
+      "country": "US",
+      "state": "alive",
+      "url": "http://15.204.246.24:8080/ComedyCentralHD/index.m3u8",
+      "candidate_count": 1
     },
     {
       "dial": 220,
@@ -1945,13 +1958,12 @@
       "dial": 632,
       "requested": "EXA_TV_HD",
       "tvg_id": "EXA_TV_HD",
-      "reserved": false,
-      "matched_name": "Exa TV",
-      "group": "Entretenimiento",
-      "country": "MX",
-      "state": "alive",
-      "url": "http://190.61.90.17:40000/play/a0hk/index.m3u8",
-      "candidate_count": 1
+      "reserved": true,
+      "matched_name": null,
+      "group": null,
+      "country": null,
+      "state": "reserved",
+      "url": null
     },
     {
       "dial": 1405,
