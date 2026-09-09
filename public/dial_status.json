@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-09T13:03:34Z",
+  "generated_at": "2026-09-09T19:23:50Z",
   "requested_total": 139,
   "found_total": 25,
   "missing_total": 114,
@@ -257,6 +257,18 @@
       "candidate_count": 1
     },
     {
+      "dial": 322,
+      "requested": "AZTECA_DEPORTES_NETWORK_HD",
+      "tvg_id": "AZTECA_DEPORTES_NETWORK_HD",
+      "reserved": false,
+      "matched_name": "Azteca Deportes Network (1080p)",
+      "group": "Deportes",
+      "country": "MX",
+      "state": "alive",
+      "url": "http://181.119.66.28:8081/AZTECA-DEPORTES-HD/index.m3u8",
+      "candidate_count": 1
+    },
+    {
       "dial": 403,
       "requested": "PANICO_DELAY_SD",
       "tvg_id": "PANICO_DELAY_SD",
@@ -278,18 +290,6 @@
       "country": "AR",
       "state": "alive",
       "url": "https://iptv.bitred.cl/EUROPAEUROPA_HD/index.m3u8",
-      "candidate_count": 1
-    },
-    {
-      "dial": 431,
-      "requested": "CINECANAL_HD",
-      "tvg_id": "CINECANAL_HD",
-      "reserved": false,
-      "matched_name": "Cinecanal South (1080p)",
-      "group": "Peliculas - Cine",
-      "country": "US",
-      "state": "alive",
-      "url": "http://45.162.193.35/CINECANAL/index.m3u8",
       "candidate_count": 1
     },
     {
@@ -393,7 +393,6 @@
     "GOLF_CHANNEL_HD",
     "MEGA_SPORTS_1_HD",
     "AYM_SPORTS_HD",
-    "AZTECA_DEPORTES_NETWORK_HD",
     "PX_SPORTS_HD",
     "CLARO_SPORTS_HD",
     "WWB_SD",
@@ -413,6 +412,7 @@
     "CINE_LATINO_SD",
     "MULTICINEMA_HD",
     "MULTIPREMIER_HD",
+    "CINECANAL_HD",
     "CÍNEMA_HD",
     "VIDEO_ROLA_HD",
     "CLIC_HD",
@@ -1635,12 +1635,13 @@
       "dial": 322,
       "requested": "AZTECA_DEPORTES_NETWORK_HD",
       "tvg_id": "AZTECA_DEPORTES_NETWORK_HD",
-      "reserved": true,
-      "matched_name": null,
-      "group": null,
-      "country": null,
-      "state": "reserved",
-      "url": null
+      "reserved": false,
+      "matched_name": "Azteca Deportes Network (1080p)",
+      "group": "Deportes",
+      "country": "MX",
+      "state": "alive",
+      "url": "http://181.119.66.28:8081/AZTECA-DEPORTES-HD/index.m3u8",
+      "candidate_count": 1
     },
     {
       "dial": 323,
@@ -1879,13 +1880,12 @@
       "dial": 431,
       "requested": "CINECANAL_HD",
       "tvg_id": "CINECANAL_HD",
-      "reserved": false,
-      "matched_name": "Cinecanal South (1080p)",
-      "group": "Peliculas - Cine",
-      "country": "US",
-      "state": "alive",
-      "url": "http://45.162.193.35/CINECANAL/index.m3u8",
-      "candidate_count": 1
+      "reserved": true,
+      "matched_name": null,
+      "group": null,
+      "country": null,
+      "state": "reserved",
+      "url": null
     },
     {
       "dial": 432,
