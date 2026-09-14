@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-09-14T04:22:46Z",
+  "generated_at": "2026-09-14T15:06:09Z",
   "requested_total": 139,
-  "found_total": 25,
-  "missing_total": 114,
+  "found_total": 26,
+  "missing_total": 113,
   "found": [
     {
       "dial": 100,
@@ -197,6 +197,18 @@
       "candidate_count": 1
     },
     {
+      "dial": 234,
+      "requested": "AZTECA_INTERNACIONAL_HD",
+      "tvg_id": "AZTECA_INTERNACIONAL_HD",
+      "reserved": false,
+      "matched_name": "Azteca Internacional (1080p)",
+      "group": "Familia y TV Abierta",
+      "country": "MX",
+      "state": "alive",
+      "url": "https://azt-mun.otteravision.com/azt/mun/mun.m3u8",
+      "candidate_count": 1
+    },
+    {
       "dial": 236,
       "requested": "TVE_HD",
       "tvg_id": "TVE_HD",
@@ -354,7 +366,6 @@
     "SPACE_HD",
     "ANTENA_3",
     "ADULT_SWIM_HD",
-    "AZTECA_INTERNACIONAL_HD",
     "HOLA_TV_HD",
     "NICK_JR_HD",
     "CARTOON_NETWORK_HD",
@@ -1146,12 +1157,13 @@
       "dial": 234,
       "requested": "AZTECA_INTERNACIONAL_HD",
       "tvg_id": "AZTECA_INTERNACIONAL_HD",
-      "reserved": true,
-      "matched_name": null,
-      "group": null,
-      "country": null,
-      "state": "reserved",
-      "url": null
+      "reserved": false,
+      "matched_name": "Azteca Internacional (1080p)",
+      "group": "Familia y TV Abierta",
+      "country": "MX",
+      "state": "alive",
+      "url": "https://azt-mun.otteravision.com/azt/mun/mun.m3u8",
+      "candidate_count": 1
     },
     {
       "dial": 235,
