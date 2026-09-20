@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-09-20T13:11:41Z",
+  "generated_at": "2026-09-20T18:45:41Z",
   "requested_total": 139,
-  "found_total": 25,
-  "missing_total": 114,
+  "found_total": 24,
+  "missing_total": 115,
   "found": [
     {
       "dial": 100,
@@ -291,18 +291,6 @@
       "state": "alive",
       "url": "https://iptv.bitred.cl/EUROPAEUROPA_HD/index.m3u8",
       "candidate_count": 1
-    },
-    {
-      "dial": 632,
-      "requested": "EXA_TV_HD",
-      "tvg_id": "EXA_TV_HD",
-      "reserved": false,
-      "matched_name": "Exa TV",
-      "group": "Entretenimiento",
-      "country": "MX",
-      "state": "alive",
-      "url": "http://190.61.90.17:40000/play/a0hk/index.m3u8",
-      "candidate_count": 1
     }
   ],
   "missing": [
@@ -419,6 +407,7 @@
     "HTV_HD",
     "BEAT_BOX_SD",
     "VR_PLUS_HD",
+    "EXA_TV_HD",
     "SONY_MOVIES_ALT"
   ],
   "entries": [
@@ -1957,13 +1946,12 @@
       "dial": 632,
       "requested": "EXA_TV_HD",
       "tvg_id": "EXA_TV_HD",
-      "reserved": false,
-      "matched_name": "Exa TV",
-      "group": "Entretenimiento",
-      "country": "MX",
-      "state": "alive",
-      "url": "http://190.61.90.17:40000/play/a0hk/index.m3u8",
-      "candidate_count": 1
+      "reserved": true,
+      "matched_name": null,
+      "group": null,
+      "country": null,
+      "state": "reserved",
+      "url": null
     },
     {
       "dial": 1405,
