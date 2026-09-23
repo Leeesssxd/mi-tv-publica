@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-09-23T13:43:09Z",
+  "generated_at": "2026-09-23T19:48:18Z",
   "requested_total": 139,
-  "found_total": 23,
-  "missing_total": 116,
+  "found_total": 22,
+  "missing_total": 117,
   "found": [
     {
       "dial": 100,
@@ -65,6 +65,18 @@
       "candidate_count": 1
     },
     {
+      "dial": 140,
+      "requested": "ADN_40_SD",
+      "tvg_id": "ADN_40_SD",
+      "reserved": false,
+      "matched_name": "ADN 40 (720p)",
+      "group": "Noticias",
+      "country": "MX",
+      "state": "alive",
+      "url": "https://mdstrm.com/live-stream-playlist/60b578b060947317de7b57ac.m3u8",
+      "candidate_count": 1
+    },
+    {
       "dial": 146,
       "requested": "JUSTICIA_TV_SD",
       "tvg_id": "JUSTICIA_TV_SD",
@@ -74,18 +86,6 @@
       "country": "MX",
       "state": "alive",
       "url": "https://live-scjn.ovp-vivaro.digital/ovp-origin/638a22b47746d/playlist.m3u8",
-      "candidate_count": 1
-    },
-    {
-      "dial": 204,
-      "requested": "FX_HD",
-      "tvg_id": "FX_HD",
-      "reserved": false,
-      "matched_name": "FX Latin America South (720p)",
-      "group": "Entretenimiento",
-      "country": "US",
-      "state": "alive",
-      "url": "http://72.1.184.5:8089/play/a05i/index.m3u8",
       "candidate_count": 1
     },
     {
@@ -146,18 +146,6 @@
       "country": "US",
       "state": "alive",
       "url": "http://138.121.15.230:9002/TELEMUNDO/index.m3u8",
-      "candidate_count": 1
-    },
-    {
-      "dial": 216,
-      "requested": "E!_HD",
-      "tvg_id": "E!_HD",
-      "reserved": false,
-      "matched_name": "E! Latin America Mexico (720p)",
-      "group": "Entretenimiento",
-      "country": "US",
-      "state": "alive",
-      "url": "http://72.1.184.5:8089/play/a05d/index.m3u8",
       "candidate_count": 1
     },
     {
@@ -296,7 +284,6 @@
     "TV_UNAM_SD",
     "CANAL_22.2_SD",
     "APRENDE_+_SD",
-    "ADN_40_SD",
     "A+_SD",
     "CANAL_44_UDG_HD",
     "CANAL_DEL_CONGRESO_SD",
@@ -316,11 +303,13 @@
     "DW_LATINOAMÉRICA_SD",
     "TV5_MONDE_SD",
     "STAR_CHANNEL_HD",
+    "FX_HD",
     "UNIVERSAL_TV_HD",
     "TNT_SERIES_HD",
     "WARNER_CHANNEL_HD",
     "ID_HD",
     "A&E_HD",
+    "E!_HD",
     "ATRESERIES_HD",
     "USA_HD",
     "CORAZÓN_HD",
@@ -618,12 +607,13 @@
       "dial": 140,
       "requested": "ADN_40_SD",
       "tvg_id": "ADN_40_SD",
-      "reserved": true,
-      "matched_name": null,
-      "group": null,
-      "country": null,
-      "state": "reserved",
-      "url": null
+      "reserved": false,
+      "matched_name": "ADN 40 (720p)",
+      "group": "Noticias",
+      "country": "MX",
+      "state": "alive",
+      "url": "https://mdstrm.com/live-stream-playlist/60b578b060947317de7b57ac.m3u8",
+      "candidate_count": 1
     },
     {
       "dial": 141,
@@ -850,13 +840,12 @@
       "dial": 204,
       "requested": "FX_HD",
       "tvg_id": "FX_HD",
-      "reserved": false,
-      "matched_name": "FX Latin America South (720p)",
-      "group": "Entretenimiento",
-      "country": "US",
-      "state": "alive",
-      "url": "http://72.1.184.5:8089/play/a05i/index.m3u8",
-      "candidate_count": 1
+      "reserved": true,
+      "matched_name": null,
+      "group": null,
+      "country": null,
+      "state": "reserved",
+      "url": null
     },
     {
       "dial": 206,
@@ -977,13 +966,12 @@
       "dial": 216,
       "requested": "E!_HD",
       "tvg_id": "E!_HD",
-      "reserved": false,
-      "matched_name": "E! Latin America Mexico (720p)",
-      "group": "Entretenimiento",
-      "country": "US",
-      "state": "alive",
-      "url": "http://72.1.184.5:8089/play/a05d/index.m3u8",
-      "candidate_count": 1
+      "reserved": true,
+      "matched_name": null,
+      "group": null,
+      "country": null,
+      "state": "reserved",
+      "url": null
     },
     {
       "dial": 217,
