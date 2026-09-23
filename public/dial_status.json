@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-09-22T19:49:18Z",
+  "generated_at": "2026-09-23T04:21:24Z",
   "requested_total": 139,
-  "found_total": 25,
-  "missing_total": 114,
+  "found_total": 24,
+  "missing_total": 115,
   "found": [
     {
       "dial": 100,
@@ -245,18 +245,6 @@
       "candidate_count": 1
     },
     {
-      "dial": 321,
-      "requested": "LAS_HD",
-      "tvg_id": "LAS_HD",
-      "reserved": false,
-      "matched_name": "Las Tortugas Ninja (Germany) (720p)",
-      "group": "Peliculas - Familiar",
-      "country": "DE",
-      "state": "alive",
-      "url": "https://jmp2.uk/plu-61373f1a12dd9f00077dcd6f.m3u8",
-      "candidate_count": 1
-    },
-    {
       "dial": 322,
       "requested": "AZTECA_DEPORTES_NETWORK_HD",
       "tvg_id": "AZTECA_DEPORTES_NETWORK_HD",
@@ -393,6 +381,7 @@
     "GOLF_CHANNEL_HD",
     "MEGA_SPORTS_1_HD",
     "AYM_SPORTS_HD",
+    "LAS_HD",
     "PX_SPORTS_HD",
     "CLARO_SPORTS_HD",
     "WWB_SD",
@@ -1623,13 +1612,12 @@
       "dial": 321,
       "requested": "LAS_HD",
       "tvg_id": "LAS_HD",
-      "reserved": false,
-      "matched_name": "Las Tortugas Ninja (Germany) (720p)",
-      "group": "Peliculas - Familiar",
-      "country": "DE",
-      "state": "alive",
-      "url": "https://jmp2.uk/plu-61373f1a12dd9f00077dcd6f.m3u8",
-      "candidate_count": 1
+      "reserved": true,
+      "matched_name": null,
+      "group": null,
+      "country": null,
+      "state": "reserved",
+      "url": null
     },
     {
       "dial": 322,
