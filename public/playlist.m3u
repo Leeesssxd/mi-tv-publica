@@ -19,10 +19,6 @@ https://video0.rogohosting.com:19360/sisjalisciense/sisjalisciense.m3u8
 #EXTVLCOPT:network-caching=2000
 #EXTVLCOPT:http-reconnect=true
 https://5fc584f3f19c9.streamlock.net/canal22/smil:canal22.smil/playlist.m3u8
-#EXTINF:-1 tvg-id="ADN_40_SD" tvg-name="ADN 40 (720p)" tvg-chno="140" tvg-logo="https://i.imgur.com/Og17U9N.png" group-title="Noticias",ADN 40 (720p)
-#EXTVLCOPT:network-caching=2000
-#EXTVLCOPT:http-reconnect=true
-https://mdstrm.com/live-stream-playlist/60b578b060947317de7b57ac.m3u8
 #EXTINF:-1 tvg-id="JUSTICIA_TV_SD" tvg-name="Justicia TV (Mexico) (720p)" tvg-chno="146" tvg-logo="https://i.imgur.com/zyAS1hk.png" group-title="Noticias",Justicia TV (Mexico) (720p)
 #EXTVLCOPT:network-caching=2000
 #EXTVLCOPT:http-reconnect=true
@@ -207,10 +203,6 @@ https://nd106.republicaservers.com:4433/hls/canal2misioness/index.m3u8
 #EXTVLCOPT:network-caching=2000
 #EXTVLCOPT:http-reconnect=true
 https://edge.enhdtv.com/nexthd/index.m3u8
-#EXTINF:-1 tvg-id="Canal2000.es@SD" tvg-name="Canal 2000 (720p) [Not 24/7]" tvg-logo="https://i.imgur.com/9RoBASf.png" group-title="Entretenimiento",Canal 2000 (720p) [Not 24/7]
-#EXTVLCOPT:network-caching=2000
-#EXTVLCOPT:http-reconnect=true
-http://canal2000.berkano-systems.net/streaming/streams/canal2000.m3u8
 #EXTINF:-1 tvg-id="Canal3LaPampa.ar@SD" tvg-name="Canal 3 La Pampa (1080p)" tvg-logo="https://i.imgur.com/SsNFudZ.png" group-title="Entretenimiento",Canal 3 La Pampa (1080p)
 #EXTVLCOPT:network-caching=2000
 #EXTVLCOPT:http-reconnect=true
@@ -255,10 +247,10 @@ http://coninfo.net:1935/9linklivert/smil:9linkmultibr.smil/playlist.m3u8
 #EXTVLCOPT:network-caching=2000
 #EXTVLCOPT:http-reconnect=true
 https://canalcoin.garjim.es/hls/directo.m3u8
-#EXTINF:-1 tvg-id="CanalMalagaRTV.es@SD" tvg-name="Canal Malaga RTV (720p) [Not 24/7]" tvg-logo="https://i.imgur.com/QSUOxtM.png" group-title="Entretenimiento",Canal Malaga RTV (720p) [Not 24/7]
+#EXTINF:-1 tvg-id="CanalDonana.es@SD" tvg-name="Canal Donana (720p) [Not 24/7]" tvg-logo="https://i.imgur.com/0WrKIxm.png" group-title="Entretenimiento",Canal Donana (720p) [Not 24/7]
 #EXTVLCOPT:network-caching=2000
 #EXTVLCOPT:http-reconnect=true
-https://canalmalaga-tv-live.flumotion.com/playlist.m3u8
+https://secure5.todostreaming.es/live/division-alm.m3u8
 #EXTINF:-1 tvg-id="CanalSanRoque.es@SD" tvg-name="Canal San Roque (1080p) [Not 24/7]" tvg-logo="https://i.imgur.com/SN9kFKh.png" group-title="Entretenimiento",Canal San Roque (1080p) [Not 24/7]
 #EXTVLCOPT:network-caching=2000
 #EXTVLCOPT:http-reconnect=true
@@ -547,10 +539,6 @@ https://5d0d1d7a6be9e.streamlock.net/sicom/canal1/playlist.m3u8
 #EXTVLCOPT:network-caching=2000
 #EXTVLCOPT:http-reconnect=true
 https://tvdirecto.teleelx.es/stream/teleelx.m3u8
-#EXTINF:-1 tvg-id="TelefeBuenosAires.ar@SD" tvg-name="Telefe Buenos Aires (1080p)" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Telefe_%28nuevo_logo%29.png/960px-Telefe_%28nuevo_logo%29.png" group-title="Entretenimiento",Telefe Buenos Aires (1080p)
-#EXTVLCOPT:network-caching=2000
-#EXTVLCOPT:http-reconnect=true
-http://45.134.141.161:2200/ARG/TELEFE_HD/index.m3u8
 #EXTINF:-1 tvg-id="TelefeTucuman.ar@SD" tvg-name="Telefe Tucuman (1080p)" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Telefe_Tucum%C3%A1n_%282018%29.png/960px-Telefe_Tucum%C3%A1n_%282018%29.png" group-title="Entretenimiento",Telefe Tucuman (1080p)
 #EXTVLCOPT:network-caching=2000
 #EXTVLCOPT:http-reconnect=true
@@ -655,6 +643,10 @@ https://s5.mexside.net:1936/envio2/envio2/playlist.m3u8
 #EXTVLCOPT:network-caching=2000
 #EXTVLCOPT:http-reconnect=true
 https://redirector.rudo.video/hls-video/c54ac2799874375c81c1672abb700870537c5223/bravo/bravo.smil/playlist.m3u8
+#EXTINF:-1 tvg-id="CaliforniaMediosTV.mx@SD" tvg-name="California Medios TV (720p)" tvg-logo="https://i.imgur.com/IDvpRNI.png" group-title="Familia y TV Abierta",California Medios TV (720p)
+#EXTVLCOPT:network-caching=2000
+#EXTVLCOPT:http-reconnect=true
+https://s5.mexside.net:1936/medios/medios/playlist.m3u8
 #EXTINF:-1 tvg-id="Canal21TV.ar@SD" tvg-name="Canal 21 TV (1080p)" tvg-logo="https://i.imgur.com/Am7yMXg.png" group-title="Familia y TV Abierta",Canal 21 TV (1080p)
 #EXTVLCOPT:network-caching=2000
 #EXTVLCOPT:http-reconnect=true
@@ -723,10 +715,6 @@ https://webprod.sipse.com.mx:8080/show/merida.m3u8
 #EXTVLCOPT:network-caching=2000
 #EXTVLCOPT:http-reconnect=true
 https://webprod.sipse.com.mx:8080/show/tvcun.m3u8
-#EXTINF:-1 tvg-id="SistemaMichoacanodeTV.mx@SD" tvg-name="Sistema Michoacano de TV (1080p) [Not 24/7]" tvg-logo="https://i.imgur.com/7MXF4Fd.png" group-title="Familia y TV Abierta",Sistema Michoacano de TV (1080p) [Not 24/7]
-#EXTVLCOPT:network-caching=2000
-#EXTVLCOPT:http-reconnect=true
-https://s5.mexside.net:1936/enlinea/enlinea/playlist.m3u8
 #EXTINF:-1 tvg-id="SQCSCanal4.mx@SD" tvg-name="SQCS Canal 4 (1080p)" tvg-logo="https://i.imgur.com/qnx8nBP.png" group-title="Familia y TV Abierta",SQCS Canal 4 (1080p)
 #EXTVLCOPT:network-caching=2000
 #EXTVLCOPT:http-reconnect=true
@@ -807,10 +795,6 @@ https://5e50264bd6766.streamlock.net/telemetrika2/smil:telemetrika2.smil/playlis
 #EXTVLCOPT:network-caching=2000
 #EXTVLCOPT:http-reconnect=true
 https://60417ddeaf0d9.streamlock.net/montemorelos/videomontemorelos/playlist.m3u8
-#EXTINF:-1 tvg-id="UnisonTV.mx@SD" tvg-name="Unison TV (1080p) [Not 24/7]" tvg-logo="https://i.imgur.com/7ixWRId.png" group-title="Familia y TV Abierta",Unison TV (1080p) [Not 24/7]
-#EXTVLCOPT:network-caching=2000
-#EXTVLCOPT:http-reconnect=true
-https://stream.unison.mx/hls/unisontvatem.m3u8
 #EXTINF:-1 tvg-id="VisionTelevision.mx@SD" tvg-name="Vision Television (720p)" tvg-logo="https://i.imgur.com/HV5tgcM.png" group-title="Familia y TV Abierta",Vision Television (720p)
 #EXTVLCOPT:network-caching=2000
 #EXTVLCOPT:http-reconnect=true
@@ -875,6 +859,10 @@ https://video2.getstreamhosting.com:19360/8092/8092.m3u8
 #EXTVLCOPT:network-caching=2000
 #EXTVLCOPT:http-reconnect=true
 https://directes-tv-int.3catdirectes.cat/live-content/bondia-hls/master.m3u8
+#EXTINF:-1 tvg-id="Canal1MarMenorTorrePacheco.es@SD" tvg-name="Canal 1 Mar Menor Torre Pacheco (1080p)" tvg-logo="https://i.imgur.com/MQOwCdZ.png" group-title="Otros",Canal 1 Mar Menor Torre Pacheco (1080p)
+#EXTVLCOPT:network-caching=2000
+#EXTVLCOPT:http-reconnect=true
+https://directo.tuwebtv.es/canal1.m3u8
 #EXTINF:-1 tvg-id="CanalSur2.es@SD" tvg-name="Canal Sur 2 (720p)" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Canal_Sur_2_-_2017_logo.png/500px-Canal_Sur_2_-_2017_logo.png" group-title="Otros",Canal Sur 2 (720p)
 #EXTVLCOPT:network-caching=2000
 #EXTVLCOPT:http-reconnect=true
