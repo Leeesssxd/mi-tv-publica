@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-09-26T19:21:01Z",
+  "generated_at": "2026-09-27T04:52:37Z",
   "requested_total": 139,
-  "found_total": 23,
-  "missing_total": 116,
+  "found_total": 24,
+  "missing_total": 115,
   "found": [
     {
       "dial": 100,
@@ -38,6 +38,18 @@
       "country": "AR",
       "state": "alive",
       "url": "https://iptv.ixfo.com.ar:30443/live/c6digital/playlist.m3u8",
+      "candidate_count": 1
+    },
+    {
+      "dial": 107,
+      "requested": "AZTECA_7_HD",
+      "tvg_id": "AZTECA_7_HD",
+      "reserved": false,
+      "matched_name": "Azteca 7 (1080p)",
+      "group": "Familia y TV Abierta",
+      "country": "MX",
+      "state": "alive",
+      "url": "http://187.245.231.226:8000/play/a0uz/index.m3u8",
       "candidate_count": 1
     },
     {
@@ -286,7 +298,6 @@
     "LAS_ESTRELLAS_HD",
     "CANAL_4_GDL_HD",
     "CANAL_5_LOCAL_HD",
-    "AZTECA_7_HD",
     "MÁS_VISIÓN_HD",
     "NU9VE_HD",
     "QUIERO_TV_HD",
@@ -484,12 +495,13 @@
       "dial": 107,
       "requested": "AZTECA_7_HD",
       "tvg_id": "AZTECA_7_HD",
-      "reserved": true,
-      "matched_name": null,
-      "group": null,
-      "country": null,
-      "state": "reserved",
-      "url": null
+      "reserved": false,
+      "matched_name": "Azteca 7 (1080p)",
+      "group": "Familia y TV Abierta",
+      "country": "MX",
+      "state": "alive",
+      "url": "http://187.245.231.226:8000/play/a0uz/index.m3u8",
+      "candidate_count": 1
     },
     {
       "dial": 108,
