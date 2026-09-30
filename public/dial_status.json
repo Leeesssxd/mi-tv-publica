@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-09-29T20:47:14Z",
+  "generated_at": "2026-09-30T05:08:39Z",
   "requested_total": 139,
-  "found_total": 28,
-  "missing_total": 111,
+  "found_total": 27,
+  "missing_total": 112,
   "found": [
     {
       "dial": 100,
@@ -269,18 +269,6 @@
       "candidate_count": 1
     },
     {
-      "dial": 322,
-      "requested": "AZTECA_DEPORTES_NETWORK_HD",
-      "tvg_id": "AZTECA_DEPORTES_NETWORK_HD",
-      "reserved": false,
-      "matched_name": "Azteca Deportes Network (1080p)",
-      "group": "Deportes",
-      "country": "MX",
-      "state": "alive",
-      "url": "http://181.119.66.28:8081/AZTECA-DEPORTES-HD/index.m3u8",
-      "candidate_count": 1
-    },
-    {
       "dial": 323,
       "requested": "PX_SPORTS_HD",
       "tvg_id": "PX_SPORTS_HD",
@@ -428,6 +416,7 @@
     "GOLF_CHANNEL_HD",
     "MEGA_SPORTS_1_HD",
     "LAS_HD",
+    "AZTECA_DEPORTES_NETWORK_HD",
     "CLARO_SPORTS_HD",
     "WWB_SD",
     "CINEMA_PLATINO_DELAY_SD",
@@ -1669,13 +1658,12 @@
       "dial": 322,
       "requested": "AZTECA_DEPORTES_NETWORK_HD",
       "tvg_id": "AZTECA_DEPORTES_NETWORK_HD",
-      "reserved": false,
-      "matched_name": "Azteca Deportes Network (1080p)",
-      "group": "Deportes",
-      "country": "MX",
-      "state": "alive",
-      "url": "http://181.119.66.28:8081/AZTECA-DEPORTES-HD/index.m3u8",
-      "candidate_count": 1
+      "reserved": true,
+      "matched_name": null,
+      "group": null,
+      "country": null,
+      "state": "reserved",
+      "url": null
     },
     {
       "dial": 323,
