@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-10-04T14:02:55Z",
+  "generated_at": "2026-10-04T19:35:10Z",
   "requested_total": 139,
-  "found_total": 28,
-  "missing_total": 111,
+  "found_total": 27,
+  "missing_total": 112,
   "found": [
     {
       "dial": 100,
@@ -293,18 +293,6 @@
       "candidate_count": 1
     },
     {
-      "dial": 403,
-      "requested": "PANICO_DELAY_SD",
-      "tvg_id": "PANICO_DELAY_SD",
-      "reserved": false,
-      "matched_name": "Panico (576p)",
-      "group": "Peliculas - Terror",
-      "country": "MX",
-      "state": "alive",
-      "url": "http://181.78.8.199:8000/play/a0bt/index.m3u8",
-      "candidate_count": 1
-    },
-    {
       "dial": 406,
       "requested": "EUROPA_EUROPA_HD",
       "tvg_id": "EUROPA_EUROPA_HD",
@@ -432,6 +420,7 @@
     "WWB_SD",
     "CINEMA_PLATINO_DELAY_SD",
     "CINEMA_PLATINO_HD",
+    "PANICO_DELAY_SD",
     "PANICO_HD",
     "SONY_MOVIES",
     "STUDIO_UNIVERSAL_HD",
@@ -1737,13 +1726,12 @@
       "dial": 403,
       "requested": "PANICO_DELAY_SD",
       "tvg_id": "PANICO_DELAY_SD",
-      "reserved": false,
-      "matched_name": "Panico (576p)",
-      "group": "Peliculas - Terror",
-      "country": "MX",
-      "state": "alive",
-      "url": "http://181.78.8.199:8000/play/a0bt/index.m3u8",
-      "candidate_count": 1
+      "reserved": true,
+      "matched_name": null,
+      "group": null,
+      "country": null,
+      "state": "reserved",
+      "url": null
     },
     {
       "dial": 404,
