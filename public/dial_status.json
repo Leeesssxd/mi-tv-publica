@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-10-08T05:37:36Z",
+  "generated_at": "2026-10-08T15:39:25Z",
   "requested_total": 139,
-  "found_total": 32,
-  "missing_total": 107,
+  "found_total": 31,
+  "missing_total": 108,
   "found": [
     {
       "dial": 100,
@@ -245,18 +245,6 @@
       "candidate_count": 1
     },
     {
-      "dial": 250,
-      "requested": "CARTOON_NETWORK_HD",
-      "tvg_id": "CARTOON_NETWORK_HD",
-      "reserved": false,
-      "matched_name": "Cartoon Network Latin America South Atlantic (1080p)",
-      "group": "Peliculas - Familiar",
-      "country": "US",
-      "state": "alive",
-      "url": "http://158.172.217.18:8000/play/a03a/index.m3u8",
-      "candidate_count": 1
-    },
-    {
       "dial": 258,
       "requested": "DISCOVERY_KIDS_HD",
       "tvg_id": "DISCOVERY_KIDS_HD",
@@ -438,6 +426,7 @@
     "ADULT_SWIM_HD",
     "HOLA_TV_HD",
     "NICK_JR_HD",
+    "CARTOON_NETWORK_HD",
     "DISNEY_JR_HD",
     "CARTOONITO_HD",
     "NICKELODEON_HD",
@@ -1271,13 +1260,12 @@
       "dial": 250,
       "requested": "CARTOON_NETWORK_HD",
       "tvg_id": "CARTOON_NETWORK_HD",
-      "reserved": false,
-      "matched_name": "Cartoon Network Latin America South Atlantic (1080p)",
-      "group": "Peliculas - Familiar",
-      "country": "US",
-      "state": "alive",
-      "url": "http://158.172.217.18:8000/play/a03a/index.m3u8",
-      "candidate_count": 1
+      "reserved": true,
+      "matched_name": null,
+      "group": null,
+      "country": null,
+      "state": "reserved",
+      "url": null
     },
     {
       "dial": 251,
