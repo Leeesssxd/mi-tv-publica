@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-10-07T21:21:52Z",
+  "generated_at": "2026-10-08T05:37:36Z",
   "requested_total": 139,
-  "found_total": 26,
-  "missing_total": 113,
+  "found_total": 32,
+  "missing_total": 107,
   "found": [
     {
       "dial": 100,
@@ -14,6 +14,18 @@
       "country": "MX",
       "state": "alive",
       "url": "https://stream8.mexiserver.com:19360/conectatvx/conectatvx.m3u8",
+      "candidate_count": 1
+    },
+    {
+      "dial": 101,
+      "requested": "AZTECA_UNO_HD",
+      "tvg_id": "AZTECA_UNO_HD",
+      "reserved": false,
+      "matched_name": "Azteca Uno (1080p)",
+      "group": "Familia y TV Abierta",
+      "country": "MX",
+      "state": "alive",
+      "url": "http://38.44.109.41:8003/play/a033/index.m3u8",
       "candidate_count": 1
     },
     {
@@ -113,6 +125,18 @@
       "candidate_count": 1
     },
     {
+      "dial": 207,
+      "requested": "AMC_HD",
+      "tvg_id": "AMC_HD",
+      "reserved": false,
+      "matched_name": "AMC Latin America (1080p)",
+      "group": "Peliculas - Cine",
+      "country": "US",
+      "state": "alive",
+      "url": "http://15.204.246.24:8080/AMCHD/index.m3u8",
+      "candidate_count": 1
+    },
+    {
       "dial": 208,
       "requested": "TNT_NOVELAS_HD",
       "tvg_id": "TNT_NOVELAS_HD",
@@ -161,6 +185,18 @@
       "candidate_count": 1
     },
     {
+      "dial": 219,
+      "requested": "COMEDY_CENTRAL_HD",
+      "tvg_id": "COMEDY_CENTRAL_HD",
+      "reserved": false,
+      "matched_name": "Comedy Central Latin America (1080p)",
+      "group": "Peliculas - Comedia",
+      "country": "US",
+      "state": "alive",
+      "url": "http://15.204.246.24:8080/ComedyCentralHD/index.m3u8",
+      "candidate_count": 1
+    },
+    {
       "dial": 223,
       "requested": "EL_GOURMET_HD",
       "tvg_id": "EL_GOURMET_HD",
@@ -206,6 +242,30 @@
       "country": "ES",
       "state": "alive",
       "url": "https://rtvelivestream-rtveplayplus.rtve.es/rtvesec/int/star_main_1080.m3u8",
+      "candidate_count": 1
+    },
+    {
+      "dial": 250,
+      "requested": "CARTOON_NETWORK_HD",
+      "tvg_id": "CARTOON_NETWORK_HD",
+      "reserved": false,
+      "matched_name": "Cartoon Network Latin America South Atlantic (1080p)",
+      "group": "Peliculas - Familiar",
+      "country": "US",
+      "state": "alive",
+      "url": "http://158.172.217.18:8000/play/a03a/index.m3u8",
+      "candidate_count": 1
+    },
+    {
+      "dial": 258,
+      "requested": "DISCOVERY_KIDS_HD",
+      "tvg_id": "DISCOVERY_KIDS_HD",
+      "reserved": false,
+      "matched_name": "Discovery Kids Latin America Mexico (1080p)",
+      "group": "Documentales y Cultura",
+      "country": "US",
+      "state": "alive",
+      "url": "http://38.65.175.84:8000/play/a0an/index.m3u8",
       "candidate_count": 1
     },
     {
@@ -293,6 +353,18 @@
       "candidate_count": 1
     },
     {
+      "dial": 424,
+      "requested": "TCM_HD",
+      "tvg_id": "TCM_HD",
+      "reserved": false,
+      "matched_name": "TCM Latin America South (1080p)",
+      "group": "Entretenimiento",
+      "country": "US",
+      "state": "alive",
+      "url": "http://45.171.64.30:6060/play/a014/index.m3u8",
+      "candidate_count": 1
+    },
+    {
       "dial": 430,
       "requested": "MULTIPREMIER_HD",
       "tvg_id": "MULTIPREMIER_HD",
@@ -318,7 +390,6 @@
     }
   ],
   "missing": [
-    "AZTECA_UNO_HD",
     "LAS_ESTRELLAS_HD",
     "CANAL_4_GDL_HD",
     "CANAL_5_LOCAL_HD",
@@ -351,7 +422,6 @@
     "TV5_MONDE_SD",
     "STAR_CHANNEL_HD",
     "UNIVERSAL_TV_HD",
-    "AMC_HD",
     "AXN_HD",
     "TNT_SERIES_HD",
     "WARNER_CHANNEL_HD",
@@ -359,7 +429,6 @@
     "A&E_HD",
     "ATRESERIES_HD",
     "USA_HD",
-    "COMEDY_CENTRAL_HD",
     "CORAZÓN_HD",
     "MAS_CHIC_SD",
     "DISCOVERY_H&H_HD",
@@ -369,11 +438,9 @@
     "ADULT_SWIM_HD",
     "HOLA_TV_HD",
     "NICK_JR_HD",
-    "CARTOON_NETWORK_HD",
     "DISNEY_JR_HD",
     "CARTOONITO_HD",
     "NICKELODEON_HD",
-    "DISCOVERY_KIDS_HD",
     "TOONCAST_HD",
     "BABY_FIRST_HD",
     "BABY_TV_SD",
@@ -420,7 +487,6 @@
     "CMC_DELAY_SD",
     "CMC_SD",
     "EUROCHANNEL_SD",
-    "TCM_HD",
     "CINE_LATINO_SD",
     "MULTICINEMA_HD",
     "CINECANAL_HD",
@@ -449,12 +515,13 @@
       "dial": 101,
       "requested": "AZTECA_UNO_HD",
       "tvg_id": "AZTECA_UNO_HD",
-      "reserved": true,
-      "matched_name": null,
-      "group": null,
-      "country": null,
-      "state": "reserved",
-      "url": null
+      "reserved": false,
+      "matched_name": "Azteca Uno (1080p)",
+      "group": "Familia y TV Abierta",
+      "country": "MX",
+      "state": "alive",
+      "url": "http://38.44.109.41:8003/play/a033/index.m3u8",
+      "candidate_count": 1
     },
     {
       "dial": 102,
@@ -908,12 +975,13 @@
       "dial": 207,
       "requested": "AMC_HD",
       "tvg_id": "AMC_HD",
-      "reserved": true,
-      "matched_name": null,
-      "group": null,
-      "country": null,
-      "state": "reserved",
-      "url": null
+      "reserved": false,
+      "matched_name": "AMC Latin America (1080p)",
+      "group": "Peliculas - Cine",
+      "country": "US",
+      "state": "alive",
+      "url": "http://15.204.246.24:8080/AMCHD/index.m3u8",
+      "candidate_count": 1
     },
     {
       "dial": 208,
@@ -1044,12 +1112,13 @@
       "dial": 219,
       "requested": "COMEDY_CENTRAL_HD",
       "tvg_id": "COMEDY_CENTRAL_HD",
-      "reserved": true,
-      "matched_name": null,
-      "group": null,
-      "country": null,
-      "state": "reserved",
-      "url": null
+      "reserved": false,
+      "matched_name": "Comedy Central Latin America (1080p)",
+      "group": "Peliculas - Comedia",
+      "country": "US",
+      "state": "alive",
+      "url": "http://15.204.246.24:8080/ComedyCentralHD/index.m3u8",
+      "candidate_count": 1
     },
     {
       "dial": 220,
@@ -1202,12 +1271,13 @@
       "dial": 250,
       "requested": "CARTOON_NETWORK_HD",
       "tvg_id": "CARTOON_NETWORK_HD",
-      "reserved": true,
-      "matched_name": null,
-      "group": null,
-      "country": null,
-      "state": "reserved",
-      "url": null
+      "reserved": false,
+      "matched_name": "Cartoon Network Latin America South Atlantic (1080p)",
+      "group": "Peliculas - Familiar",
+      "country": "US",
+      "state": "alive",
+      "url": "http://158.172.217.18:8000/play/a03a/index.m3u8",
+      "candidate_count": 1
     },
     {
       "dial": 251,
@@ -1246,12 +1316,13 @@
       "dial": 258,
       "requested": "DISCOVERY_KIDS_HD",
       "tvg_id": "DISCOVERY_KIDS_HD",
-      "reserved": true,
-      "matched_name": null,
-      "group": null,
-      "country": null,
-      "state": "reserved",
-      "url": null
+      "reserved": false,
+      "matched_name": "Discovery Kids Latin America Mexico (1080p)",
+      "group": "Documentales y Cultura",
+      "country": "US",
+      "state": "alive",
+      "url": "http://38.65.175.84:8000/play/a0an/index.m3u8",
+      "candidate_count": 1
     },
     {
       "dial": 260,
@@ -1847,12 +1918,13 @@
       "dial": 424,
       "requested": "TCM_HD",
       "tvg_id": "TCM_HD",
-      "reserved": true,
-      "matched_name": null,
-      "group": null,
-      "country": null,
-      "state": "reserved",
-      "url": null
+      "reserved": false,
+      "matched_name": "TCM Latin America South (1080p)",
+      "group": "Entretenimiento",
+      "country": "US",
+      "state": "alive",
+      "url": "http://45.171.64.30:6060/play/a014/index.m3u8",
+      "candidate_count": 1
     },
     {
       "dial": 426,
