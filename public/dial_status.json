@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-10-08T21:25:08Z",
+  "generated_at": "2026-10-09T05:42:46Z",
   "requested_total": 139,
-  "found_total": 32,
-  "missing_total": 107,
+  "found_total": 33,
+  "missing_total": 106,
   "found": [
     {
       "dial": 100,
@@ -293,6 +293,18 @@
       "candidate_count": 1
     },
     {
+      "dial": 301,
+      "requested": "FOX",
+      "tvg_id": "FOX",
+      "reserved": false,
+      "matched_name": "Fox Sports (1080p)",
+      "group": "Deportes",
+      "country": "AR",
+      "state": "alive",
+      "url": "http://138.59.227.20:8000/play/a085/index.m3u8",
+      "candidate_count": 1
+    },
+    {
       "dial": 320,
       "requested": "AYM_SPORTS_HD",
       "tvg_id": "AYM_SPORTS_HD",
@@ -461,7 +473,6 @@
     "ESNE_SD",
     "ENLACE_SD",
     "FILM_&_ARTS_HD",
-    "FOX",
     "ESPN_HD",
     "TVC_DEPORTES_HD",
     "ESPN_2_HD",
@@ -1572,12 +1583,13 @@
       "dial": 301,
       "requested": "FOX",
       "tvg_id": "FOX",
-      "reserved": true,
-      "matched_name": null,
-      "group": null,
-      "country": null,
-      "state": "reserved",
-      "url": null
+      "reserved": false,
+      "matched_name": "Fox Sports (1080p)",
+      "group": "Deportes",
+      "country": "AR",
+      "state": "alive",
+      "url": "http://138.59.227.20:8000/play/a085/index.m3u8",
+      "candidate_count": 1
     },
     {
       "dial": 302,
