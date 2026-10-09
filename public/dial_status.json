@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-10-09T15:15:09Z",
+  "generated_at": "2026-10-09T20:56:01Z",
   "requested_total": 139,
-  "found_total": 33,
-  "missing_total": 106,
+  "found_total": 31,
+  "missing_total": 108,
   "found": [
     {
       "dial": 100,
@@ -209,18 +209,6 @@
       "candidate_count": 1
     },
     {
-      "dial": 232,
-      "requested": "ANTENA_3",
-      "tvg_id": "ANTENA_3",
-      "reserved": false,
-      "matched_name": "Antena 3 Internacional (1080p)",
-      "group": "Entretenimiento",
-      "country": "ES",
-      "state": "alive",
-      "url": "http://38.252.238.18:8000/play/a04a/index.m3u8",
-      "candidate_count": 1
-    },
-    {
       "dial": 234,
       "requested": "AZTECA_INTERNACIONAL_HD",
       "tvg_id": "AZTECA_INTERNACIONAL_HD",
@@ -326,18 +314,6 @@
       "country": "MX",
       "state": "alive",
       "url": "http://181.119.66.28:8081/AZTECA-DEPORTES-HD/index.m3u8",
-      "candidate_count": 1
-    },
-    {
-      "dial": 323,
-      "requested": "PX_SPORTS_HD",
-      "tvg_id": "PX_SPORTS_HD",
-      "reserved": false,
-      "matched_name": "PX Sports (1080p)",
-      "group": "Deportes",
-      "country": "MX",
-      "state": "alive",
-      "url": "http://38.252.238.18:8000/play/a02f/index.m3u8",
       "candidate_count": 1
     },
     {
@@ -447,6 +423,7 @@
     "PASIONES_HD",
     "LIFETIME_HD",
     "SPACE_HD",
+    "ANTENA_3",
     "ADULT_SWIM_HD",
     "HOLA_TV_HD",
     "NICK_JR_HD",
@@ -484,6 +461,7 @@
     "GOLF_CHANNEL_HD",
     "MEGA_SPORTS_1_HD",
     "LAS_HD",
+    "PX_SPORTS_HD",
     "CLARO_SPORTS_HD",
     "WWB_SD",
     "CINEMA_PLATINO_DELAY_SD",
@@ -1213,13 +1191,12 @@
       "dial": 232,
       "requested": "ANTENA_3",
       "tvg_id": "ANTENA_3",
-      "reserved": false,
-      "matched_name": "Antena 3 Internacional (1080p)",
-      "group": "Entretenimiento",
-      "country": "ES",
-      "state": "alive",
-      "url": "http://38.252.238.18:8000/play/a04a/index.m3u8",
-      "candidate_count": 1
+      "reserved": true,
+      "matched_name": null,
+      "group": null,
+      "country": null,
+      "state": "reserved",
+      "url": null
     },
     {
       "dial": 233,
@@ -1740,13 +1717,12 @@
       "dial": 323,
       "requested": "PX_SPORTS_HD",
       "tvg_id": "PX_SPORTS_HD",
-      "reserved": false,
-      "matched_name": "PX Sports (1080p)",
-      "group": "Deportes",
-      "country": "MX",
-      "state": "alive",
-      "url": "http://38.252.238.18:8000/play/a02f/index.m3u8",
-      "candidate_count": 1
+      "reserved": true,
+      "matched_name": null,
+      "group": null,
+      "country": null,
+      "state": "reserved",
+      "url": null
     },
     {
       "dial": 324,
