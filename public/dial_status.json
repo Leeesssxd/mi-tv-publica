@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-10T20:08:45Z",
+  "generated_at": "2026-10-11T05:13:18Z",
   "requested_total": 139,
   "found_total": 31,
   "missing_total": 108,
@@ -26,6 +26,18 @@
       "country": "MX",
       "state": "alive",
       "url": "http://38.44.109.41:8003/play/a033/index.m3u8",
+      "candidate_count": 1
+    },
+    {
+      "dial": 102,
+      "requested": "LAS_ESTRELLAS_HD",
+      "tvg_id": "LAS_ESTRELLAS_HD",
+      "reserved": false,
+      "matched_name": "Las Estrellas",
+      "group": "Familia y TV Abierta",
+      "country": "MX",
+      "state": "alive",
+      "url": "https://channel01-onlymex.akamaized.net/hls/live/2022749/event01/index.m3u8",
       "candidate_count": 1
     },
     {
@@ -98,18 +110,6 @@
       "country": "MX",
       "state": "alive",
       "url": "https://mdstrm.com/live-stream-playlist/60b578b060947317de7b57ac.m3u8",
-      "candidate_count": 1
-    },
-    {
-      "dial": 146,
-      "requested": "JUSTICIA_TV_SD",
-      "tvg_id": "JUSTICIA_TV_SD",
-      "reserved": false,
-      "matched_name": "Justicia TV (Mexico) (720p)",
-      "group": "Noticias",
-      "country": "MX",
-      "state": "alive",
-      "url": "https://live-scjn.ovp-vivaro.digital/ovp-origin/638a22b47746d/playlist.m3u8",
       "candidate_count": 1
     },
     {
@@ -378,7 +378,6 @@
     }
   ],
   "missing": [
-    "LAS_ESTRELLAS_HD",
     "CANAL_4_GDL_HD",
     "CANAL_5_LOCAL_HD",
     "MÁS_VISIÓN_HD",
@@ -393,6 +392,7 @@
     "A+_SD",
     "CANAL_44_UDG_HD",
     "CANAL_DEL_CONGRESO_SD",
+    "JUSTICIA_TV_SD",
     "MEGANOTICIAS_MX_HD",
     "MEGANOTICIAS_HD",
     "AZTECA_UNO_DELAY_SD",
@@ -516,12 +516,13 @@
       "dial": 102,
       "requested": "LAS_ESTRELLAS_HD",
       "tvg_id": "LAS_ESTRELLAS_HD",
-      "reserved": true,
-      "matched_name": null,
-      "group": null,
-      "country": null,
-      "state": "reserved",
-      "url": null
+      "reserved": false,
+      "matched_name": "Las Estrellas",
+      "group": "Familia y TV Abierta",
+      "country": "MX",
+      "state": "alive",
+      "url": "https://channel01-onlymex.akamaized.net/hls/live/2022749/event01/index.m3u8",
+      "candidate_count": 1
     },
     {
       "dial": 103,
@@ -753,13 +754,12 @@
       "dial": 146,
       "requested": "JUSTICIA_TV_SD",
       "tvg_id": "JUSTICIA_TV_SD",
-      "reserved": false,
-      "matched_name": "Justicia TV (Mexico) (720p)",
-      "group": "Noticias",
-      "country": "MX",
-      "state": "alive",
-      "url": "https://live-scjn.ovp-vivaro.digital/ovp-origin/638a22b47746d/playlist.m3u8",
-      "candidate_count": 1
+      "reserved": true,
+      "matched_name": null,
+      "group": null,
+      "country": null,
+      "state": "reserved",
+      "url": null
     },
     {
       "dial": 150,
