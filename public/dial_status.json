@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-10-11T15:02:31Z",
+  "generated_at": "2026-10-11T20:11:46Z",
   "requested_total": 139,
-  "found_total": 28,
-  "missing_total": 111,
+  "found_total": 29,
+  "missing_total": 110,
   "found": [
     {
       "dial": 100,
@@ -38,6 +38,18 @@
       "country": "MX",
       "state": "alive",
       "url": "https://igd-it-runtime.otteravision.com/igd/it/it.m3u8",
+      "candidate_count": 1
+    },
+    {
+      "dial": 106,
+      "requested": "CANAL_6_HD",
+      "tvg_id": "CANAL_6_HD",
+      "reserved": false,
+      "matched_name": "Canal 6 Posadas (1080p)",
+      "group": "Entretenimiento",
+      "country": "AR",
+      "state": "alive",
+      "url": "https://iptv.ixfo.com.ar:30443/live/c6digital/playlist.m3u8",
       "candidate_count": 1
     },
     {
@@ -233,6 +245,18 @@
       "candidate_count": 1
     },
     {
+      "dial": 258,
+      "requested": "DISCOVERY_KIDS_HD",
+      "tvg_id": "DISCOVERY_KIDS_HD",
+      "reserved": false,
+      "matched_name": "Discovery Kids Latin America Mexico (1080p)",
+      "group": "Documentales y Cultura",
+      "country": "US",
+      "state": "alive",
+      "url": "http://38.65.175.84:8000/play/a0an/index.m3u8",
+      "candidate_count": 1
+    },
+    {
       "dial": 260,
       "requested": "DISNEY_CHANNEL_HD",
       "tvg_id": "DISNEY_CHANNEL_HD",
@@ -278,18 +302,6 @@
       "country": "MX",
       "state": "alive",
       "url": "http://181.119.66.28:8081/AZTECA-DEPORTES-HD/index.m3u8",
-      "candidate_count": 1
-    },
-    {
-      "dial": 403,
-      "requested": "PANICO_DELAY_SD",
-      "tvg_id": "PANICO_DELAY_SD",
-      "reserved": false,
-      "matched_name": "Panico (576p)",
-      "group": "Peliculas - Terror",
-      "country": "MX",
-      "state": "alive",
-      "url": "http://181.78.8.199:8000/play/a0bt/index.m3u8",
       "candidate_count": 1
     },
     {
@@ -345,7 +357,6 @@
     "LAS_ESTRELLAS_HD",
     "CANAL_4_GDL_HD",
     "CANAL_5_LOCAL_HD",
-    "CANAL_6_HD",
     "MÁS_VISIÓN_HD",
     "NU9VE_HD",
     "QUIERO_TV_HD",
@@ -395,7 +406,6 @@
     "DISNEY_JR_HD",
     "CARTOONITO_HD",
     "NICKELODEON_HD",
-    "DISCOVERY_KIDS_HD",
     "TOONCAST_HD",
     "BABY_FIRST_HD",
     "BABY_TV_SD",
@@ -433,6 +443,7 @@
     "WWB_SD",
     "CINEMA_PLATINO_DELAY_SD",
     "CINEMA_PLATINO_HD",
+    "PANICO_DELAY_SD",
     "PANICO_HD",
     "SONY_MOVIES",
     "STUDIO_UNIVERSAL_HD",
@@ -528,12 +539,13 @@
       "dial": 106,
       "requested": "CANAL_6_HD",
       "tvg_id": "CANAL_6_HD",
-      "reserved": true,
-      "matched_name": null,
-      "group": null,
-      "country": null,
-      "state": "reserved",
-      "url": null
+      "reserved": false,
+      "matched_name": "Canal 6 Posadas (1080p)",
+      "group": "Entretenimiento",
+      "country": "AR",
+      "state": "alive",
+      "url": "https://iptv.ixfo.com.ar:30443/live/c6digital/playlist.m3u8",
+      "candidate_count": 1
     },
     {
       "dial": 107,
@@ -1270,12 +1282,13 @@
       "dial": 258,
       "requested": "DISCOVERY_KIDS_HD",
       "tvg_id": "DISCOVERY_KIDS_HD",
-      "reserved": true,
-      "matched_name": null,
-      "group": null,
-      "country": null,
-      "state": "reserved",
-      "url": null
+      "reserved": false,
+      "matched_name": "Discovery Kids Latin America Mexico (1080p)",
+      "group": "Documentales y Cultura",
+      "country": "US",
+      "state": "alive",
+      "url": "http://38.65.175.84:8000/play/a0an/index.m3u8",
+      "candidate_count": 1
     },
     {
       "dial": 260,
@@ -1736,13 +1749,12 @@
       "dial": 403,
       "requested": "PANICO_DELAY_SD",
       "tvg_id": "PANICO_DELAY_SD",
-      "reserved": false,
-      "matched_name": "Panico (576p)",
-      "group": "Peliculas - Terror",
-      "country": "MX",
-      "state": "alive",
-      "url": "http://181.78.8.199:8000/play/a0bt/index.m3u8",
-      "candidate_count": 1
+      "reserved": true,
+      "matched_name": null,
+      "group": null,
+      "country": null,
+      "state": "reserved",
+      "url": null
     },
     {
       "dial": 404,
