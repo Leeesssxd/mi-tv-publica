@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-10-11T20:11:46Z",
+  "generated_at": "2026-10-12T05:24:44Z",
   "requested_total": 139,
-  "found_total": 29,
-  "missing_total": 110,
+  "found_total": 26,
+  "missing_total": 113,
   "found": [
     {
       "dial": 100,
@@ -14,18 +14,6 @@
       "country": "MX",
       "state": "alive",
       "url": "https://stream8.mexiserver.com:19360/conectatvx/conectatvx.m3u8",
-      "candidate_count": 1
-    },
-    {
-      "dial": 101,
-      "requested": "AZTECA_UNO_HD",
-      "tvg_id": "AZTECA_UNO_HD",
-      "reserved": false,
-      "matched_name": "Azteca Uno (1080p)",
-      "group": "Familia y TV Abierta",
-      "country": "MX",
-      "state": "alive",
-      "url": "http://38.44.109.41:8003/play/a033/index.m3u8",
       "candidate_count": 1
     },
     {
@@ -62,18 +50,6 @@
       "country": "MX",
       "state": "alive",
       "url": "http://187.245.231.226:8000/play/a0uz/index.m3u8",
-      "candidate_count": 1
-    },
-    {
-      "dial": 117,
-      "requested": "JALISCO_TV_HD",
-      "tvg_id": "JALISCO_TV_HD",
-      "reserved": false,
-      "matched_name": "Jalisco TV (720p)",
-      "group": "Familia y TV Abierta",
-      "country": "MX",
-      "state": "alive",
-      "url": "https://video0.rogohosting.com:19360/sisjalisciense/sisjalisciense.m3u8",
       "candidate_count": 1
     },
     {
@@ -125,18 +101,6 @@
       "candidate_count": 1
     },
     {
-      "dial": 207,
-      "requested": "AMC_HD",
-      "tvg_id": "AMC_HD",
-      "reserved": false,
-      "matched_name": "AMC Latin America (1080p)",
-      "group": "Peliculas - Cine",
-      "country": "US",
-      "state": "alive",
-      "url": "http://15.204.246.24:8080/AMCHD/index.m3u8",
-      "candidate_count": 1
-    },
-    {
       "dial": 208,
       "requested": "TNT_NOVELAS_HD",
       "tvg_id": "TNT_NOVELAS_HD",
@@ -185,18 +149,6 @@
       "candidate_count": 1
     },
     {
-      "dial": 219,
-      "requested": "COMEDY_CENTRAL_HD",
-      "tvg_id": "COMEDY_CENTRAL_HD",
-      "reserved": false,
-      "matched_name": "Comedy Central Latin America (1080p)",
-      "group": "Peliculas - Comedia",
-      "country": "US",
-      "state": "alive",
-      "url": "http://15.204.246.24:8080/ComedyCentralHD/index.m3u8",
-      "candidate_count": 1
-    },
-    {
       "dial": 223,
       "requested": "EL_GOURMET_HD",
       "tvg_id": "EL_GOURMET_HD",
@@ -206,6 +158,18 @@
       "country": "AR",
       "state": "alive",
       "url": "https://iptv.bitred.cl/ELGOURMET_HD/index.m3u8",
+      "candidate_count": 1
+    },
+    {
+      "dial": 228,
+      "requested": "LIFETIME_HD",
+      "tvg_id": "LIFETIME_HD",
+      "reserved": false,
+      "matched_name": "Lifetime Latin America Mexico (1080p)",
+      "group": "Entretenimiento",
+      "country": "US",
+      "state": "alive",
+      "url": "https://streaming.onnethn.com/LIFETIME/index.m3u8",
       "candidate_count": 1
     },
     {
@@ -230,18 +194,6 @@
       "country": "ES",
       "state": "alive",
       "url": "https://rtvelivestream-rtveplayplus.rtve.es/rtvesec/int/star_main_1080.m3u8",
-      "candidate_count": 1
-    },
-    {
-      "dial": 250,
-      "requested": "CARTOON_NETWORK_HD",
-      "tvg_id": "CARTOON_NETWORK_HD",
-      "reserved": false,
-      "matched_name": "Cartoon Network Latin America South Atlantic (1080p)",
-      "group": "Peliculas - Familiar",
-      "country": "US",
-      "state": "alive",
-      "url": "http://158.172.217.18:8000/play/a03a/index.m3u8",
       "candidate_count": 1
     },
     {
@@ -305,6 +257,18 @@
       "candidate_count": 1
     },
     {
+      "dial": 403,
+      "requested": "PANICO_DELAY_SD",
+      "tvg_id": "PANICO_DELAY_SD",
+      "reserved": false,
+      "matched_name": "Panico (576p)",
+      "group": "Peliculas - Terror",
+      "country": "MX",
+      "state": "alive",
+      "url": "http://181.78.8.199:8000/play/a0bt/index.m3u8",
+      "candidate_count": 1
+    },
+    {
       "dial": 406,
       "requested": "EUROPA_EUROPA_HD",
       "tvg_id": "EUROPA_EUROPA_HD",
@@ -354,6 +318,7 @@
     }
   ],
   "missing": [
+    "AZTECA_UNO_HD",
     "LAS_ESTRELLAS_HD",
     "CANAL_4_GDL_HD",
     "CANAL_5_LOCAL_HD",
@@ -363,6 +328,7 @@
     "ONCE_TV_HD",
     "CANAL_13_HD",
     "CANAL_14_HD",
+    "JALISCO_TV_HD",
     "TV_UNAM_SD",
     "CANAL_22.2_SD",
     "APRENDE_+_SD",
@@ -386,6 +352,7 @@
     "TV5_MONDE_SD",
     "STAR_CHANNEL_HD",
     "UNIVERSAL_TV_HD",
+    "AMC_HD",
     "AXN_HD",
     "TNT_SERIES_HD",
     "WARNER_CHANNEL_HD",
@@ -393,16 +360,17 @@
     "A&E_HD",
     "ATRESERIES_HD",
     "USA_HD",
+    "COMEDY_CENTRAL_HD",
     "CORAZÓN_HD",
     "MAS_CHIC_SD",
     "DISCOVERY_H&H_HD",
     "PASIONES_HD",
-    "LIFETIME_HD",
     "SPACE_HD",
     "ANTENA_3",
     "ADULT_SWIM_HD",
     "HOLA_TV_HD",
     "NICK_JR_HD",
+    "CARTOON_NETWORK_HD",
     "DISNEY_JR_HD",
     "CARTOONITO_HD",
     "NICKELODEON_HD",
@@ -443,7 +411,6 @@
     "WWB_SD",
     "CINEMA_PLATINO_DELAY_SD",
     "CINEMA_PLATINO_HD",
-    "PANICO_DELAY_SD",
     "PANICO_HD",
     "SONY_MOVIES",
     "STUDIO_UNIVERSAL_HD",
@@ -482,13 +449,12 @@
       "dial": 101,
       "requested": "AZTECA_UNO_HD",
       "tvg_id": "AZTECA_UNO_HD",
-      "reserved": false,
-      "matched_name": "Azteca Uno (1080p)",
-      "group": "Familia y TV Abierta",
-      "country": "MX",
-      "state": "alive",
-      "url": "http://38.44.109.41:8003/play/a033/index.m3u8",
-      "candidate_count": 1
+      "reserved": true,
+      "matched_name": null,
+      "group": null,
+      "country": null,
+      "state": "reserved",
+      "url": null
     },
     {
       "dial": 102,
@@ -629,13 +595,12 @@
       "dial": 117,
       "requested": "JALISCO_TV_HD",
       "tvg_id": "JALISCO_TV_HD",
-      "reserved": false,
-      "matched_name": "Jalisco TV (720p)",
-      "group": "Familia y TV Abierta",
-      "country": "MX",
-      "state": "alive",
-      "url": "https://video0.rogohosting.com:19360/sisjalisciense/sisjalisciense.m3u8",
-      "candidate_count": 1
+      "reserved": true,
+      "matched_name": null,
+      "group": null,
+      "country": null,
+      "state": "reserved",
+      "url": null
     },
     {
       "dial": 120,
@@ -942,13 +907,12 @@
       "dial": 207,
       "requested": "AMC_HD",
       "tvg_id": "AMC_HD",
-      "reserved": false,
-      "matched_name": "AMC Latin America (1080p)",
-      "group": "Peliculas - Cine",
-      "country": "US",
-      "state": "alive",
-      "url": "http://15.204.246.24:8080/AMCHD/index.m3u8",
-      "candidate_count": 1
+      "reserved": true,
+      "matched_name": null,
+      "group": null,
+      "country": null,
+      "state": "reserved",
+      "url": null
     },
     {
       "dial": 208,
@@ -1079,13 +1043,12 @@
       "dial": 219,
       "requested": "COMEDY_CENTRAL_HD",
       "tvg_id": "COMEDY_CENTRAL_HD",
-      "reserved": false,
-      "matched_name": "Comedy Central Latin America (1080p)",
-      "group": "Peliculas - Comedia",
-      "country": "US",
-      "state": "alive",
-      "url": "http://15.204.246.24:8080/ComedyCentralHD/index.m3u8",
-      "candidate_count": 1
+      "reserved": true,
+      "matched_name": null,
+      "group": null,
+      "country": null,
+      "state": "reserved",
+      "url": null
     },
     {
       "dial": 220,
@@ -1147,12 +1110,13 @@
       "dial": 228,
       "requested": "LIFETIME_HD",
       "tvg_id": "LIFETIME_HD",
-      "reserved": true,
-      "matched_name": null,
-      "group": null,
-      "country": null,
-      "state": "reserved",
-      "url": null
+      "reserved": false,
+      "matched_name": "Lifetime Latin America Mexico (1080p)",
+      "group": "Entretenimiento",
+      "country": "US",
+      "state": "alive",
+      "url": "https://streaming.onnethn.com/LIFETIME/index.m3u8",
+      "candidate_count": 1
     },
     {
       "dial": 230,
@@ -1237,13 +1201,12 @@
       "dial": 250,
       "requested": "CARTOON_NETWORK_HD",
       "tvg_id": "CARTOON_NETWORK_HD",
-      "reserved": false,
-      "matched_name": "Cartoon Network Latin America South Atlantic (1080p)",
-      "group": "Peliculas - Familiar",
-      "country": "US",
-      "state": "alive",
-      "url": "http://158.172.217.18:8000/play/a03a/index.m3u8",
-      "candidate_count": 1
+      "reserved": true,
+      "matched_name": null,
+      "group": null,
+      "country": null,
+      "state": "reserved",
+      "url": null
     },
     {
       "dial": 251,
@@ -1749,12 +1712,13 @@
       "dial": 403,
       "requested": "PANICO_DELAY_SD",
       "tvg_id": "PANICO_DELAY_SD",
-      "reserved": true,
-      "matched_name": null,
-      "group": null,
-      "country": null,
-      "state": "reserved",
-      "url": null
+      "reserved": false,
+      "matched_name": "Panico (576p)",
+      "group": "Peliculas - Terror",
+      "country": "MX",
+      "state": "alive",
+      "url": "http://181.78.8.199:8000/play/a0bt/index.m3u8",
+      "candidate_count": 1
     },
     {
       "dial": 404,
