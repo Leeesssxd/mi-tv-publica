@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-10-12T05:24:44Z",
+  "generated_at": "2026-10-12T17:50:49Z",
   "requested_total": 139,
-  "found_total": 26,
-  "missing_total": 113,
+  "found_total": 30,
+  "missing_total": 109,
   "found": [
     {
       "dial": 100,
@@ -50,6 +50,18 @@
       "country": "MX",
       "state": "alive",
       "url": "http://187.245.231.226:8000/play/a0uz/index.m3u8",
+      "candidate_count": 1
+    },
+    {
+      "dial": 117,
+      "requested": "JALISCO_TV_HD",
+      "tvg_id": "JALISCO_TV_HD",
+      "reserved": false,
+      "matched_name": "Jalisco TV (720p)",
+      "group": "Familia y TV Abierta",
+      "country": "MX",
+      "state": "alive",
+      "url": "https://video0.rogohosting.com:19360/sisjalisciense/sisjalisciense.m3u8",
       "candidate_count": 1
     },
     {
@@ -101,6 +113,18 @@
       "candidate_count": 1
     },
     {
+      "dial": 207,
+      "requested": "AMC_HD",
+      "tvg_id": "AMC_HD",
+      "reserved": false,
+      "matched_name": "AMC Latin America (1080p)",
+      "group": "Peliculas - Cine",
+      "country": "US",
+      "state": "alive",
+      "url": "http://15.204.246.24:8080/AMCHD/index.m3u8",
+      "candidate_count": 1
+    },
+    {
       "dial": 208,
       "requested": "TNT_NOVELAS_HD",
       "tvg_id": "TNT_NOVELAS_HD",
@@ -146,6 +170,18 @@
       "country": "US",
       "state": "alive",
       "url": "http://72.1.184.5:8089/play/a05d/index.m3u8",
+      "candidate_count": 1
+    },
+    {
+      "dial": 219,
+      "requested": "COMEDY_CENTRAL_HD",
+      "tvg_id": "COMEDY_CENTRAL_HD",
+      "reserved": false,
+      "matched_name": "Comedy Central Latin America (1080p)",
+      "group": "Peliculas - Comedia",
+      "country": "US",
+      "state": "alive",
+      "url": "http://15.204.246.24:8080/ComedyCentralHD/index.m3u8",
       "candidate_count": 1
     },
     {
@@ -230,6 +266,18 @@
       "country": "US",
       "state": "alive",
       "url": "https://cdn3.wowza.com/1/SmVrQmZCUXZhVDgz/b3J3MFJv/hls/live/playlist.m3u8",
+      "candidate_count": 1
+    },
+    {
+      "dial": 301,
+      "requested": "FOX",
+      "tvg_id": "FOX",
+      "reserved": false,
+      "matched_name": "Fox Sports (1080p)",
+      "group": "Deportes",
+      "country": "AR",
+      "state": "alive",
+      "url": "http://138.59.227.20:8000/play/a085/index.m3u8",
       "candidate_count": 1
     },
     {
@@ -328,7 +376,6 @@
     "ONCE_TV_HD",
     "CANAL_13_HD",
     "CANAL_14_HD",
-    "JALISCO_TV_HD",
     "TV_UNAM_SD",
     "CANAL_22.2_SD",
     "APRENDE_+_SD",
@@ -352,7 +399,6 @@
     "TV5_MONDE_SD",
     "STAR_CHANNEL_HD",
     "UNIVERSAL_TV_HD",
-    "AMC_HD",
     "AXN_HD",
     "TNT_SERIES_HD",
     "WARNER_CHANNEL_HD",
@@ -360,7 +406,6 @@
     "A&E_HD",
     "ATRESERIES_HD",
     "USA_HD",
-    "COMEDY_CENTRAL_HD",
     "CORAZÓN_HD",
     "MAS_CHIC_SD",
     "DISCOVERY_H&H_HD",
@@ -394,7 +439,6 @@
     "ESNE_SD",
     "ENLACE_SD",
     "FILM_&_ARTS_HD",
-    "FOX",
     "ESPN_HD",
     "TVC_DEPORTES_HD",
     "ESPN_2_HD",
@@ -595,12 +639,13 @@
       "dial": 117,
       "requested": "JALISCO_TV_HD",
       "tvg_id": "JALISCO_TV_HD",
-      "reserved": true,
-      "matched_name": null,
-      "group": null,
-      "country": null,
-      "state": "reserved",
-      "url": null
+      "reserved": false,
+      "matched_name": "Jalisco TV (720p)",
+      "group": "Familia y TV Abierta",
+      "country": "MX",
+      "state": "alive",
+      "url": "https://video0.rogohosting.com:19360/sisjalisciense/sisjalisciense.m3u8",
+      "candidate_count": 1
     },
     {
       "dial": 120,
@@ -907,12 +952,13 @@
       "dial": 207,
       "requested": "AMC_HD",
       "tvg_id": "AMC_HD",
-      "reserved": true,
-      "matched_name": null,
-      "group": null,
-      "country": null,
-      "state": "reserved",
-      "url": null
+      "reserved": false,
+      "matched_name": "AMC Latin America (1080p)",
+      "group": "Peliculas - Cine",
+      "country": "US",
+      "state": "alive",
+      "url": "http://15.204.246.24:8080/AMCHD/index.m3u8",
+      "candidate_count": 1
     },
     {
       "dial": 208,
@@ -1043,12 +1089,13 @@
       "dial": 219,
       "requested": "COMEDY_CENTRAL_HD",
       "tvg_id": "COMEDY_CENTRAL_HD",
-      "reserved": true,
-      "matched_name": null,
-      "group": null,
-      "country": null,
-      "state": "reserved",
-      "url": null
+      "reserved": false,
+      "matched_name": "Comedy Central Latin America (1080p)",
+      "group": "Peliculas - Comedia",
+      "country": "US",
+      "state": "alive",
+      "url": "http://15.204.246.24:8080/ComedyCentralHD/index.m3u8",
+      "candidate_count": 1
     },
     {
       "dial": 220,
@@ -1501,12 +1548,13 @@
       "dial": 301,
       "requested": "FOX",
       "tvg_id": "FOX",
-      "reserved": true,
-      "matched_name": null,
-      "group": null,
-      "country": null,
-      "state": "reserved",
-      "url": null
+      "reserved": false,
+      "matched_name": "Fox Sports (1080p)",
+      "group": "Deportes",
+      "country": "AR",
+      "state": "alive",
+      "url": "http://138.59.227.20:8000/play/a085/index.m3u8",
+      "candidate_count": 1
     },
     {
       "dial": 302,
