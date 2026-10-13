@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-10-13T06:25:48Z",
+  "generated_at": "2026-10-13T15:53:25Z",
   "requested_total": 139,
-  "found_total": 30,
-  "missing_total": 109,
+  "found_total": 29,
+  "missing_total": 110,
   "found": [
     {
       "dial": 100,
@@ -113,18 +113,6 @@
       "candidate_count": 1
     },
     {
-      "dial": 207,
-      "requested": "AMC_HD",
-      "tvg_id": "AMC_HD",
-      "reserved": false,
-      "matched_name": "AMC Latin America (1080p)",
-      "group": "Peliculas - Cine",
-      "country": "US",
-      "state": "alive",
-      "url": "http://15.204.246.24:8080/AMCHD/index.m3u8",
-      "candidate_count": 1
-    },
-    {
       "dial": 208,
       "requested": "TNT_NOVELAS_HD",
       "tvg_id": "TNT_NOVELAS_HD",
@@ -170,18 +158,6 @@
       "country": "US",
       "state": "alive",
       "url": "http://72.1.184.5:8089/play/a05d/index.m3u8",
-      "candidate_count": 1
-    },
-    {
-      "dial": 219,
-      "requested": "COMEDY_CENTRAL_HD",
-      "tvg_id": "COMEDY_CENTRAL_HD",
-      "reserved": false,
-      "matched_name": "Comedy Central Latin America (1080p)",
-      "group": "Peliculas - Comedia",
-      "country": "US",
-      "state": "alive",
-      "url": "http://15.204.246.24:8080/ComedyCentralHD/index.m3u8",
       "candidate_count": 1
     },
     {
@@ -317,6 +293,18 @@
       "candidate_count": 1
     },
     {
+      "dial": 403,
+      "requested": "PANICO_DELAY_SD",
+      "tvg_id": "PANICO_DELAY_SD",
+      "reserved": false,
+      "matched_name": "Panico (576p)",
+      "group": "Peliculas - Terror",
+      "country": "MX",
+      "state": "alive",
+      "url": "http://181.78.8.199:8000/play/a0bt/index.m3u8",
+      "candidate_count": 1
+    },
+    {
       "dial": 406,
       "requested": "EUROPA_EUROPA_HD",
       "tvg_id": "EUROPA_EUROPA_HD",
@@ -399,6 +387,7 @@
     "TV5_MONDE_SD",
     "STAR_CHANNEL_HD",
     "UNIVERSAL_TV_HD",
+    "AMC_HD",
     "AXN_HD",
     "TNT_SERIES_HD",
     "WARNER_CHANNEL_HD",
@@ -406,6 +395,7 @@
     "A&E_HD",
     "ATRESERIES_HD",
     "USA_HD",
+    "COMEDY_CENTRAL_HD",
     "CORAZÓN_HD",
     "MAS_CHIC_SD",
     "DISCOVERY_H&H_HD",
@@ -454,7 +444,6 @@
     "WWB_SD",
     "CINEMA_PLATINO_DELAY_SD",
     "CINEMA_PLATINO_HD",
-    "PANICO_DELAY_SD",
     "PANICO_HD",
     "SONY_MOVIES",
     "STUDIO_UNIVERSAL_HD",
@@ -952,13 +941,12 @@
       "dial": 207,
       "requested": "AMC_HD",
       "tvg_id": "AMC_HD",
-      "reserved": false,
-      "matched_name": "AMC Latin America (1080p)",
-      "group": "Peliculas - Cine",
-      "country": "US",
-      "state": "alive",
-      "url": "http://15.204.246.24:8080/AMCHD/index.m3u8",
-      "candidate_count": 1
+      "reserved": true,
+      "matched_name": null,
+      "group": null,
+      "country": null,
+      "state": "reserved",
+      "url": null
     },
     {
       "dial": 208,
@@ -1089,13 +1077,12 @@
       "dial": 219,
       "requested": "COMEDY_CENTRAL_HD",
       "tvg_id": "COMEDY_CENTRAL_HD",
-      "reserved": false,
-      "matched_name": "Comedy Central Latin America (1080p)",
-      "group": "Peliculas - Comedia",
-      "country": "US",
-      "state": "alive",
-      "url": "http://15.204.246.24:8080/ComedyCentralHD/index.m3u8",
-      "candidate_count": 1
+      "reserved": true,
+      "matched_name": null,
+      "group": null,
+      "country": null,
+      "state": "reserved",
+      "url": null
     },
     {
       "dial": 220,
@@ -1761,12 +1748,13 @@
       "dial": 403,
       "requested": "PANICO_DELAY_SD",
       "tvg_id": "PANICO_DELAY_SD",
-      "reserved": true,
-      "matched_name": null,
-      "group": null,
-      "country": null,
-      "state": "reserved",
-      "url": null
+      "reserved": false,
+      "matched_name": "Panico (576p)",
+      "group": "Peliculas - Terror",
+      "country": "MX",
+      "state": "alive",
+      "url": "http://181.78.8.199:8000/play/a0bt/index.m3u8",
+      "candidate_count": 1
     },
     {
       "dial": 404,
