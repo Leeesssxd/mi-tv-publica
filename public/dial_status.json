@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-16T13:21:22Z",
+  "generated_at": "2026-10-16T19:42:28Z",
   "requested_total": 139,
   "found_total": 29,
   "missing_total": 110,
@@ -101,18 +101,6 @@
       "candidate_count": 1
     },
     {
-      "dial": 207,
-      "requested": "AMC_HD",
-      "tvg_id": "AMC_HD",
-      "reserved": false,
-      "matched_name": "AMC Latin America (1080p)",
-      "group": "Peliculas - Cine",
-      "country": "US",
-      "state": "alive",
-      "url": "http://15.204.246.24:8080/AMCHD/index.m3u8",
-      "candidate_count": 1
-    },
-    {
       "dial": 208,
       "requested": "TNT_NOVELAS_HD",
       "tvg_id": "TNT_NOVELAS_HD",
@@ -182,6 +170,18 @@
       "country": "AR",
       "state": "alive",
       "url": "https://iptv.bitred.cl/ELGOURMET_HD/index.m3u8",
+      "candidate_count": 1
+    },
+    {
+      "dial": 228,
+      "requested": "LIFETIME_HD",
+      "tvg_id": "LIFETIME_HD",
+      "reserved": false,
+      "matched_name": "Lifetime Latin America Mexico (1080p)",
+      "group": "Entretenimiento",
+      "country": "US",
+      "state": "alive",
+      "url": "https://streaming.onnethn.com/LIFETIME/index.m3u8",
       "candidate_count": 1
     },
     {
@@ -388,6 +388,7 @@
     "STAR_CHANNEL_HD",
     "FX_HD",
     "UNIVERSAL_TV_HD",
+    "AMC_HD",
     "AXN_HD",
     "TNT_SERIES_HD",
     "WARNER_CHANNEL_HD",
@@ -399,7 +400,6 @@
     "MAS_CHIC_SD",
     "DISCOVERY_H&H_HD",
     "PASIONES_HD",
-    "LIFETIME_HD",
     "SPACE_HD",
     "ANTENA_3",
     "ADULT_SWIM_HD",
@@ -940,13 +940,12 @@
       "dial": 207,
       "requested": "AMC_HD",
       "tvg_id": "AMC_HD",
-      "reserved": false,
-      "matched_name": "AMC Latin America (1080p)",
-      "group": "Peliculas - Cine",
-      "country": "US",
-      "state": "alive",
-      "url": "http://15.204.246.24:8080/AMCHD/index.m3u8",
-      "candidate_count": 1
+      "reserved": true,
+      "matched_name": null,
+      "group": null,
+      "country": null,
+      "state": "reserved",
+      "url": null
     },
     {
       "dial": 208,
@@ -1145,12 +1144,13 @@
       "dial": 228,
       "requested": "LIFETIME_HD",
       "tvg_id": "LIFETIME_HD",
-      "reserved": true,
-      "matched_name": null,
-      "group": null,
-      "country": null,
-      "state": "reserved",
-      "url": null
+      "reserved": false,
+      "matched_name": "Lifetime Latin America Mexico (1080p)",
+      "group": "Entretenimiento",
+      "country": "US",
+      "state": "alive",
+      "url": "https://streaming.onnethn.com/LIFETIME/index.m3u8",
+      "candidate_count": 1
     },
     {
       "dial": 230,
