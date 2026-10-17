@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-10-17T12:13:57Z",
+  "generated_at": "2026-10-17T18:33:11Z",
   "requested_total": 139,
-  "found_total": 28,
-  "missing_total": 111,
+  "found_total": 26,
+  "missing_total": 113,
   "found": [
     {
       "dial": 100,
@@ -185,18 +185,6 @@
       "candidate_count": 1
     },
     {
-      "dial": 228,
-      "requested": "LIFETIME_HD",
-      "tvg_id": "LIFETIME_HD",
-      "reserved": false,
-      "matched_name": "Lifetime Latin America Mexico (1080p)",
-      "group": "Entretenimiento",
-      "country": "US",
-      "state": "alive",
-      "url": "https://streaming.onnethn.com/LIFETIME/index.m3u8",
-      "candidate_count": 1
-    },
-    {
       "dial": 234,
       "requested": "AZTECA_INTERNACIONAL_HD",
       "tvg_id": "AZTECA_INTERNACIONAL_HD",
@@ -269,6 +257,18 @@
       "candidate_count": 1
     },
     {
+      "dial": 301,
+      "requested": "FOX",
+      "tvg_id": "FOX",
+      "reserved": false,
+      "matched_name": "Fox Sports (1080p)",
+      "group": "Deportes",
+      "country": "AR",
+      "state": "alive",
+      "url": "http://138.59.227.20:8000/play/a085/index.m3u8",
+      "candidate_count": 1
+    },
+    {
       "dial": 320,
       "requested": "AYM_SPORTS_HD",
       "tvg_id": "AYM_SPORTS_HD",
@@ -281,18 +281,6 @@
       "candidate_count": 1
     },
     {
-      "dial": 403,
-      "requested": "PANICO_DELAY_SD",
-      "tvg_id": "PANICO_DELAY_SD",
-      "reserved": false,
-      "matched_name": "Panico (576p)",
-      "group": "Peliculas - Terror",
-      "country": "MX",
-      "state": "alive",
-      "url": "http://181.78.8.199:8000/play/a0bt/index.m3u8",
-      "candidate_count": 1
-    },
-    {
       "dial": 406,
       "requested": "EUROPA_EUROPA_HD",
       "tvg_id": "EUROPA_EUROPA_HD",
@@ -302,18 +290,6 @@
       "country": "AR",
       "state": "alive",
       "url": "https://iptv.bitred.cl/EUROPAEUROPA_HD/index.m3u8",
-      "candidate_count": 1
-    },
-    {
-      "dial": 424,
-      "requested": "TCM_HD",
-      "tvg_id": "TCM_HD",
-      "reserved": false,
-      "matched_name": "TCM Latin America South (1080p)",
-      "group": "Entretenimiento",
-      "country": "US",
-      "state": "alive",
-      "url": "http://45.171.64.30:6060/play/a014/index.m3u8",
       "candidate_count": 1
     },
     {
@@ -387,6 +363,7 @@
     "MAS_CHIC_SD",
     "DISCOVERY_H&H_HD",
     "PASIONES_HD",
+    "LIFETIME_HD",
     "SPACE_HD",
     "ANTENA_3",
     "ADULT_SWIM_HD",
@@ -415,7 +392,6 @@
     "ESNE_SD",
     "ENLACE_SD",
     "FILM_&_ARTS_HD",
-    "FOX",
     "ESPN_HD",
     "TVC_DEPORTES_HD",
     "ESPN_2_HD",
@@ -433,6 +409,7 @@
     "WWB_SD",
     "CINEMA_PLATINO_DELAY_SD",
     "CINEMA_PLATINO_HD",
+    "PANICO_DELAY_SD",
     "PANICO_HD",
     "SONY_MOVIES",
     "STUDIO_UNIVERSAL_HD",
@@ -443,6 +420,7 @@
     "CMC_DELAY_SD",
     "CMC_SD",
     "EUROCHANNEL_SD",
+    "TCM_HD",
     "CINE_LATINO_SD",
     "MULTICINEMA_HD",
     "CINECANAL_HD",
@@ -1134,13 +1112,12 @@
       "dial": 228,
       "requested": "LIFETIME_HD",
       "tvg_id": "LIFETIME_HD",
-      "reserved": false,
-      "matched_name": "Lifetime Latin America Mexico (1080p)",
-      "group": "Entretenimiento",
-      "country": "US",
-      "state": "alive",
-      "url": "https://streaming.onnethn.com/LIFETIME/index.m3u8",
-      "candidate_count": 1
+      "reserved": true,
+      "matched_name": null,
+      "group": null,
+      "country": null,
+      "state": "reserved",
+      "url": null
     },
     {
       "dial": 230,
@@ -1526,12 +1503,13 @@
       "dial": 301,
       "requested": "FOX",
       "tvg_id": "FOX",
-      "reserved": true,
-      "matched_name": null,
-      "group": null,
-      "country": null,
-      "state": "reserved",
-      "url": null
+      "reserved": false,
+      "matched_name": "Fox Sports (1080p)",
+      "group": "Deportes",
+      "country": "AR",
+      "state": "alive",
+      "url": "http://138.59.227.20:8000/play/a085/index.m3u8",
+      "candidate_count": 1
     },
     {
       "dial": 302,
@@ -1736,13 +1714,12 @@
       "dial": 403,
       "requested": "PANICO_DELAY_SD",
       "tvg_id": "PANICO_DELAY_SD",
-      "reserved": false,
-      "matched_name": "Panico (576p)",
-      "group": "Peliculas - Terror",
-      "country": "MX",
-      "state": "alive",
-      "url": "http://181.78.8.199:8000/play/a0bt/index.m3u8",
-      "candidate_count": 1
+      "reserved": true,
+      "matched_name": null,
+      "group": null,
+      "country": null,
+      "state": "reserved",
+      "url": null
     },
     {
       "dial": 404,
@@ -1870,13 +1847,12 @@
       "dial": 424,
       "requested": "TCM_HD",
       "tvg_id": "TCM_HD",
-      "reserved": false,
-      "matched_name": "TCM Latin America South (1080p)",
-      "group": "Entretenimiento",
-      "country": "US",
-      "state": "alive",
-      "url": "http://45.171.64.30:6060/play/a014/index.m3u8",
-      "candidate_count": 1
+      "reserved": true,
+      "matched_name": null,
+      "group": null,
+      "country": null,
+      "state": "reserved",
+      "url": null
     },
     {
       "dial": 426,
