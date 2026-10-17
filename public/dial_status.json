@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-10-17T04:01:21Z",
+  "generated_at": "2026-10-17T12:13:57Z",
   "requested_total": 139,
-  "found_total": 30,
-  "missing_total": 109,
+  "found_total": 28,
+  "missing_total": 111,
   "found": [
     {
       "dial": 100,
@@ -14,18 +14,6 @@
       "country": "MX",
       "state": "alive",
       "url": "https://stream8.mexiserver.com:19360/conectatvx/conectatvx.m3u8",
-      "candidate_count": 1
-    },
-    {
-      "dial": 102,
-      "requested": "LAS_ESTRELLAS_HD",
-      "tvg_id": "LAS_ESTRELLAS_HD",
-      "reserved": false,
-      "matched_name": "Las Estrellas",
-      "group": "Familia y TV Abierta",
-      "country": "MX",
-      "state": "alive",
-      "url": "https://channel01-onlymex.akamaized.net/hls/live/2022749/event01/index.m3u8",
       "candidate_count": 1
     },
     {
@@ -281,18 +269,6 @@
       "candidate_count": 1
     },
     {
-      "dial": 301,
-      "requested": "FOX",
-      "tvg_id": "FOX",
-      "reserved": false,
-      "matched_name": "Fox Sports (1080p)",
-      "group": "Deportes",
-      "country": "AR",
-      "state": "alive",
-      "url": "http://138.59.227.20:8000/play/a085/index.m3u8",
-      "candidate_count": 1
-    },
-    {
       "dial": 320,
       "requested": "AYM_SPORTS_HD",
       "tvg_id": "AYM_SPORTS_HD",
@@ -367,6 +343,7 @@
   ],
   "missing": [
     "AZTECA_UNO_HD",
+    "LAS_ESTRELLAS_HD",
     "CANAL_4_GDL_HD",
     "CANAL_5_LOCAL_HD",
     "MÁS_VISIÓN_HD",
@@ -438,6 +415,7 @@
     "ESNE_SD",
     "ENLACE_SD",
     "FILM_&_ARTS_HD",
+    "FOX",
     "ESPN_HD",
     "TVC_DEPORTES_HD",
     "ESPN_2_HD",
@@ -504,13 +482,12 @@
       "dial": 102,
       "requested": "LAS_ESTRELLAS_HD",
       "tvg_id": "LAS_ESTRELLAS_HD",
-      "reserved": false,
-      "matched_name": "Las Estrellas",
-      "group": "Familia y TV Abierta",
-      "country": "MX",
-      "state": "alive",
-      "url": "https://channel01-onlymex.akamaized.net/hls/live/2022749/event01/index.m3u8",
-      "candidate_count": 1
+      "reserved": true,
+      "matched_name": null,
+      "group": null,
+      "country": null,
+      "state": "reserved",
+      "url": null
     },
     {
       "dial": 103,
@@ -1549,13 +1526,12 @@
       "dial": 301,
       "requested": "FOX",
       "tvg_id": "FOX",
-      "reserved": false,
-      "matched_name": "Fox Sports (1080p)",
-      "group": "Deportes",
-      "country": "AR",
-      "state": "alive",
-      "url": "http://138.59.227.20:8000/play/a085/index.m3u8",
-      "candidate_count": 1
+      "reserved": true,
+      "matched_name": null,
+      "group": null,
+      "country": null,
+      "state": "reserved",
+      "url": null
     },
     {
       "dial": 302,
