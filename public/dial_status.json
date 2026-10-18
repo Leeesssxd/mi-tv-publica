@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-10-18T12:46:32Z",
+  "generated_at": "2026-10-18T18:46:38Z",
   "requested_total": 139,
-  "found_total": 29,
-  "missing_total": 110,
+  "found_total": 26,
+  "missing_total": 113,
   "found": [
     {
       "dial": 100,
@@ -185,18 +185,6 @@
       "candidate_count": 1
     },
     {
-      "dial": 228,
-      "requested": "LIFETIME_HD",
-      "tvg_id": "LIFETIME_HD",
-      "reserved": false,
-      "matched_name": "Lifetime Latin America Mexico (1080p)",
-      "group": "Entretenimiento",
-      "country": "US",
-      "state": "alive",
-      "url": "https://streaming.onnethn.com/LIFETIME/index.m3u8",
-      "candidate_count": 1
-    },
-    {
       "dial": 234,
       "requested": "AZTECA_INTERNACIONAL_HD",
       "tvg_id": "AZTECA_INTERNACIONAL_HD",
@@ -242,18 +230,6 @@
       "country": "US",
       "state": "alive",
       "url": "http://38.65.175.84:8000/play/a0an/index.m3u8",
-      "candidate_count": 1
-    },
-    {
-      "dial": 260,
-      "requested": "DISNEY_CHANNEL_HD",
-      "tvg_id": "DISNEY_CHANNEL_HD",
-      "reserved": false,
-      "matched_name": "Disney Channel Latin America Mexico (720p)",
-      "group": "Peliculas - Familiar",
-      "country": "AR",
-      "state": "alive",
-      "url": "http://45.166.93.156:9999/play/a0f3/index.m3u8",
       "candidate_count": 1
     },
     {
@@ -339,18 +315,6 @@
       "state": "alive",
       "url": "http://168.196.127.137:6001/play/a08n/index.m3u8",
       "candidate_count": 1
-    },
-    {
-      "dial": 632,
-      "requested": "EXA_TV_HD",
-      "tvg_id": "EXA_TV_HD",
-      "reserved": false,
-      "matched_name": "Exa TV",
-      "group": "Entretenimiento",
-      "country": "MX",
-      "state": "alive",
-      "url": "http://190.61.90.17:40000/play/a0hk/index.m3u8",
-      "candidate_count": 1
     }
   ],
   "missing": [
@@ -399,6 +363,7 @@
     "MAS_CHIC_SD",
     "DISCOVERY_H&H_HD",
     "PASIONES_HD",
+    "LIFETIME_HD",
     "SPACE_HD",
     "ANTENA_3",
     "ADULT_SWIM_HD",
@@ -407,6 +372,7 @@
     "DISNEY_JR_HD",
     "CARTOONITO_HD",
     "NICKELODEON_HD",
+    "DISNEY_CHANNEL_HD",
     "TOONCAST_HD",
     "BABY_FIRST_HD",
     "BABY_TV_SD",
@@ -463,6 +429,7 @@
     "HTV_HD",
     "BEAT_BOX_SD",
     "VR_PLUS_HD",
+    "EXA_TV_HD",
     "SONY_MOVIES_ALT"
   ],
   "entries": [
@@ -1145,13 +1112,12 @@
       "dial": 228,
       "requested": "LIFETIME_HD",
       "tvg_id": "LIFETIME_HD",
-      "reserved": false,
-      "matched_name": "Lifetime Latin America Mexico (1080p)",
-      "group": "Entretenimiento",
-      "country": "US",
-      "state": "alive",
-      "url": "https://streaming.onnethn.com/LIFETIME/index.m3u8",
-      "candidate_count": 1
+      "reserved": true,
+      "matched_name": null,
+      "group": null,
+      "country": null,
+      "state": "reserved",
+      "url": null
     },
     {
       "dial": 230,
@@ -1293,13 +1259,12 @@
       "dial": 260,
       "requested": "DISNEY_CHANNEL_HD",
       "tvg_id": "DISNEY_CHANNEL_HD",
-      "reserved": false,
-      "matched_name": "Disney Channel Latin America Mexico (720p)",
-      "group": "Peliculas - Familiar",
-      "country": "AR",
-      "state": "alive",
-      "url": "http://45.166.93.156:9999/play/a0f3/index.m3u8",
-      "candidate_count": 1
+      "reserved": true,
+      "matched_name": null,
+      "group": null,
+      "country": null,
+      "state": "reserved",
+      "url": null
     },
     {
       "dial": 261,
@@ -2005,13 +1970,12 @@
       "dial": 632,
       "requested": "EXA_TV_HD",
       "tvg_id": "EXA_TV_HD",
-      "reserved": false,
-      "matched_name": "Exa TV",
-      "group": "Entretenimiento",
-      "country": "MX",
-      "state": "alive",
-      "url": "http://190.61.90.17:40000/play/a0hk/index.m3u8",
-      "candidate_count": 1
+      "reserved": true,
+      "matched_name": null,
+      "group": null,
+      "country": null,
+      "state": "reserved",
+      "url": null
     },
     {
       "dial": 1405,
