@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-10-18T18:46:38Z",
+  "generated_at": "2026-10-19T04:16:46Z",
   "requested_total": 139,
-  "found_total": 26,
-  "missing_total": 113,
+  "found_total": 27,
+  "missing_total": 112,
   "found": [
     {
       "dial": 100,
@@ -38,18 +38,6 @@
       "country": "AR",
       "state": "alive",
       "url": "https://iptv.ixfo.com.ar:30443/live/c6digital/playlist.m3u8",
-      "candidate_count": 1
-    },
-    {
-      "dial": 107,
-      "requested": "AZTECA_7_HD",
-      "tvg_id": "AZTECA_7_HD",
-      "reserved": false,
-      "matched_name": "Azteca 7 (1080p)",
-      "group": "Familia y TV Abierta",
-      "country": "MX",
-      "state": "alive",
-      "url": "http://187.245.231.226:8000/play/a0uz/index.m3u8",
       "candidate_count": 1
     },
     {
@@ -185,6 +173,18 @@
       "candidate_count": 1
     },
     {
+      "dial": 228,
+      "requested": "LIFETIME_HD",
+      "tvg_id": "LIFETIME_HD",
+      "reserved": false,
+      "matched_name": "Lifetime Latin America Mexico (1080p)",
+      "group": "Entretenimiento",
+      "country": "US",
+      "state": "alive",
+      "url": "https://streaming.onnethn.com/LIFETIME/index.m3u8",
+      "candidate_count": 1
+    },
+    {
       "dial": 234,
       "requested": "AZTECA_INTERNACIONAL_HD",
       "tvg_id": "AZTECA_INTERNACIONAL_HD",
@@ -209,18 +209,6 @@
       "candidate_count": 1
     },
     {
-      "dial": 250,
-      "requested": "CARTOON_NETWORK_HD",
-      "tvg_id": "CARTOON_NETWORK_HD",
-      "reserved": false,
-      "matched_name": "Cartoon Network Latin America South Atlantic (1080p)",
-      "group": "Peliculas - Familiar",
-      "country": "US",
-      "state": "alive",
-      "url": "http://158.172.217.18:8000/play/a03a/index.m3u8",
-      "candidate_count": 1
-    },
-    {
       "dial": 258,
       "requested": "DISCOVERY_KIDS_HD",
       "tvg_id": "DISCOVERY_KIDS_HD",
@@ -230,6 +218,18 @@
       "country": "US",
       "state": "alive",
       "url": "http://38.65.175.84:8000/play/a0an/index.m3u8",
+      "candidate_count": 1
+    },
+    {
+      "dial": 260,
+      "requested": "DISNEY_CHANNEL_HD",
+      "tvg_id": "DISNEY_CHANNEL_HD",
+      "reserved": false,
+      "matched_name": "Disney Channel Latin America Mexico (720p)",
+      "group": "Peliculas - Familiar",
+      "country": "AR",
+      "state": "alive",
+      "url": "http://45.166.93.156:9999/play/a0f3/index.m3u8",
       "candidate_count": 1
     },
     {
@@ -315,6 +315,18 @@
       "state": "alive",
       "url": "http://168.196.127.137:6001/play/a08n/index.m3u8",
       "candidate_count": 1
+    },
+    {
+      "dial": 632,
+      "requested": "EXA_TV_HD",
+      "tvg_id": "EXA_TV_HD",
+      "reserved": false,
+      "matched_name": "Exa TV",
+      "group": "Entretenimiento",
+      "country": "MX",
+      "state": "alive",
+      "url": "http://190.61.90.17:40000/play/a0hk/index.m3u8",
+      "candidate_count": 1
     }
   ],
   "missing": [
@@ -322,6 +334,7 @@
     "LAS_ESTRELLAS_HD",
     "CANAL_4_GDL_HD",
     "CANAL_5_LOCAL_HD",
+    "AZTECA_7_HD",
     "MÁS_VISIÓN_HD",
     "NU9VE_HD",
     "QUIERO_TV_HD",
@@ -363,16 +376,15 @@
     "MAS_CHIC_SD",
     "DISCOVERY_H&H_HD",
     "PASIONES_HD",
-    "LIFETIME_HD",
     "SPACE_HD",
     "ANTENA_3",
     "ADULT_SWIM_HD",
     "HOLA_TV_HD",
     "NICK_JR_HD",
+    "CARTOON_NETWORK_HD",
     "DISNEY_JR_HD",
     "CARTOONITO_HD",
     "NICKELODEON_HD",
-    "DISNEY_CHANNEL_HD",
     "TOONCAST_HD",
     "BABY_FIRST_HD",
     "BABY_TV_SD",
@@ -429,7 +441,6 @@
     "HTV_HD",
     "BEAT_BOX_SD",
     "VR_PLUS_HD",
-    "EXA_TV_HD",
     "SONY_MOVIES_ALT"
   ],
   "entries": [
@@ -517,13 +528,12 @@
       "dial": 107,
       "requested": "AZTECA_7_HD",
       "tvg_id": "AZTECA_7_HD",
-      "reserved": false,
-      "matched_name": "Azteca 7 (1080p)",
-      "group": "Familia y TV Abierta",
-      "country": "MX",
-      "state": "alive",
-      "url": "http://187.245.231.226:8000/play/a0uz/index.m3u8",
-      "candidate_count": 1
+      "reserved": true,
+      "matched_name": null,
+      "group": null,
+      "country": null,
+      "state": "reserved",
+      "url": null
     },
     {
       "dial": 108,
@@ -1112,12 +1122,13 @@
       "dial": 228,
       "requested": "LIFETIME_HD",
       "tvg_id": "LIFETIME_HD",
-      "reserved": true,
-      "matched_name": null,
-      "group": null,
-      "country": null,
-      "state": "reserved",
-      "url": null
+      "reserved": false,
+      "matched_name": "Lifetime Latin America Mexico (1080p)",
+      "group": "Entretenimiento",
+      "country": "US",
+      "state": "alive",
+      "url": "https://streaming.onnethn.com/LIFETIME/index.m3u8",
+      "candidate_count": 1
     },
     {
       "dial": 230,
@@ -1202,13 +1213,12 @@
       "dial": 250,
       "requested": "CARTOON_NETWORK_HD",
       "tvg_id": "CARTOON_NETWORK_HD",
-      "reserved": false,
-      "matched_name": "Cartoon Network Latin America South Atlantic (1080p)",
-      "group": "Peliculas - Familiar",
-      "country": "US",
-      "state": "alive",
-      "url": "http://158.172.217.18:8000/play/a03a/index.m3u8",
-      "candidate_count": 1
+      "reserved": true,
+      "matched_name": null,
+      "group": null,
+      "country": null,
+      "state": "reserved",
+      "url": null
     },
     {
       "dial": 251,
@@ -1259,12 +1269,13 @@
       "dial": 260,
       "requested": "DISNEY_CHANNEL_HD",
       "tvg_id": "DISNEY_CHANNEL_HD",
-      "reserved": true,
-      "matched_name": null,
-      "group": null,
-      "country": null,
-      "state": "reserved",
-      "url": null
+      "reserved": false,
+      "matched_name": "Disney Channel Latin America Mexico (720p)",
+      "group": "Peliculas - Familiar",
+      "country": "AR",
+      "state": "alive",
+      "url": "http://45.166.93.156:9999/play/a0f3/index.m3u8",
+      "candidate_count": 1
     },
     {
       "dial": 261,
@@ -1970,12 +1981,13 @@
       "dial": 632,
       "requested": "EXA_TV_HD",
       "tvg_id": "EXA_TV_HD",
-      "reserved": true,
-      "matched_name": null,
-      "group": null,
-      "country": null,
-      "state": "reserved",
-      "url": null
+      "reserved": false,
+      "matched_name": "Exa TV",
+      "group": "Entretenimiento",
+      "country": "MX",
+      "state": "alive",
+      "url": "http://190.61.90.17:40000/play/a0hk/index.m3u8",
+      "candidate_count": 1
     },
     {
       "dial": 1405,
