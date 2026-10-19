@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-10-19T15:38:55Z",
+  "generated_at": "2026-10-19T21:11:36Z",
   "requested_total": 139,
-  "found_total": 29,
-  "missing_total": 110,
+  "found_total": 28,
+  "missing_total": 111,
   "found": [
     {
       "dial": 100,
@@ -317,18 +317,6 @@
       "candidate_count": 1
     },
     {
-      "dial": 424,
-      "requested": "TCM_HD",
-      "tvg_id": "TCM_HD",
-      "reserved": false,
-      "matched_name": "TCM Latin America South (1080p)",
-      "group": "Entretenimiento",
-      "country": "US",
-      "state": "alive",
-      "url": "http://45.171.64.30:6060/play/a014/index.m3u8",
-      "candidate_count": 1
-    },
-    {
       "dial": 430,
       "requested": "MULTIPREMIER_HD",
       "tvg_id": "MULTIPREMIER_HD",
@@ -454,6 +442,7 @@
     "CMC_DELAY_SD",
     "CMC_SD",
     "EUROCHANNEL_SD",
+    "TCM_HD",
     "CINE_LATINO_SD",
     "MULTICINEMA_HD",
     "CINECANAL_HD",
@@ -1882,13 +1871,12 @@
       "dial": 424,
       "requested": "TCM_HD",
       "tvg_id": "TCM_HD",
-      "reserved": false,
-      "matched_name": "TCM Latin America South (1080p)",
-      "group": "Entretenimiento",
-      "country": "US",
-      "state": "alive",
-      "url": "http://45.171.64.30:6060/play/a014/index.m3u8",
-      "candidate_count": 1
+      "reserved": true,
+      "matched_name": null,
+      "group": null,
+      "country": null,
+      "state": "reserved",
+      "url": null
     },
     {
       "dial": 426,
