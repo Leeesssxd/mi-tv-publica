@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-10-20T04:23:30Z",
+  "generated_at": "2026-10-20T13:42:09Z",
   "requested_total": 139,
-  "found_total": 27,
-  "missing_total": 112,
+  "found_total": 29,
+  "missing_total": 110,
   "found": [
     {
       "dial": 100,
@@ -86,6 +86,18 @@
       "country": "MX",
       "state": "alive",
       "url": "https://mdstrm.com/live-stream-playlist/60b578b060947317de7b57ac.m3u8",
+      "candidate_count": 1
+    },
+    {
+      "dial": 146,
+      "requested": "JUSTICIA_TV_SD",
+      "tvg_id": "JUSTICIA_TV_SD",
+      "reserved": false,
+      "matched_name": "Justicia TV (Mexico) (720p)",
+      "group": "Noticias",
+      "country": "MX",
+      "state": "alive",
+      "url": "https://live-scjn.ovp-vivaro.digital/ovp-origin/638a22b47746d/playlist.m3u8",
       "candidate_count": 1
     },
     {
@@ -221,6 +233,18 @@
       "candidate_count": 1
     },
     {
+      "dial": 258,
+      "requested": "DISCOVERY_KIDS_HD",
+      "tvg_id": "DISCOVERY_KIDS_HD",
+      "reserved": false,
+      "matched_name": "Discovery Kids Latin America Mexico (1080p)",
+      "group": "Documentales y Cultura",
+      "country": "US",
+      "state": "alive",
+      "url": "http://38.65.175.84:8000/play/a0an/index.m3u8",
+      "candidate_count": 1
+    },
+    {
       "dial": 260,
       "requested": "DISNEY_CHANNEL_HD",
       "tvg_id": "DISNEY_CHANNEL_HD",
@@ -346,7 +370,6 @@
     "A+_SD",
     "CANAL_44_UDG_HD",
     "CANAL_DEL_CONGRESO_SD",
-    "JUSTICIA_TV_SD",
     "MEGANOTICIAS_MX_HD",
     "MEGANOTICIAS_HD",
     "AZTECA_UNO_DELAY_SD",
@@ -384,7 +407,6 @@
     "DISNEY_JR_HD",
     "CARTOONITO_HD",
     "NICKELODEON_HD",
-    "DISCOVERY_KIDS_HD",
     "TOONCAST_HD",
     "BABY_FIRST_HD",
     "BABY_TV_SD",
@@ -708,12 +730,13 @@
       "dial": 146,
       "requested": "JUSTICIA_TV_SD",
       "tvg_id": "JUSTICIA_TV_SD",
-      "reserved": true,
-      "matched_name": null,
-      "group": null,
-      "country": null,
-      "state": "reserved",
-      "url": null
+      "reserved": false,
+      "matched_name": "Justicia TV (Mexico) (720p)",
+      "group": "Noticias",
+      "country": "MX",
+      "state": "alive",
+      "url": "https://live-scjn.ovp-vivaro.digital/ovp-origin/638a22b47746d/playlist.m3u8",
+      "candidate_count": 1
     },
     {
       "dial": 150,
@@ -1258,12 +1281,13 @@
       "dial": 258,
       "requested": "DISCOVERY_KIDS_HD",
       "tvg_id": "DISCOVERY_KIDS_HD",
-      "reserved": true,
-      "matched_name": null,
-      "group": null,
-      "country": null,
-      "state": "reserved",
-      "url": null
+      "reserved": false,
+      "matched_name": "Discovery Kids Latin America Mexico (1080p)",
+      "group": "Documentales y Cultura",
+      "country": "US",
+      "state": "alive",
+      "url": "http://38.65.175.84:8000/play/a0an/index.m3u8",
+      "candidate_count": 1
     },
     {
       "dial": 260,
