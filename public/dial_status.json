@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-10-21T20:07:09Z",
+  "generated_at": "2026-10-22T04:15:03Z",
   "requested_total": 139,
-  "found_total": 25,
-  "missing_total": 114,
+  "found_total": 29,
+  "missing_total": 110,
   "found": [
     {
       "dial": 100,
@@ -101,6 +101,18 @@
       "candidate_count": 1
     },
     {
+      "dial": 207,
+      "requested": "AMC_HD",
+      "tvg_id": "AMC_HD",
+      "reserved": false,
+      "matched_name": "AMC Latin America (1080p)",
+      "group": "Peliculas - Cine",
+      "country": "US",
+      "state": "alive",
+      "url": "http://15.204.246.24:8080/AMCHD/index.m3u8",
+      "candidate_count": 1
+    },
+    {
       "dial": 208,
       "requested": "TNT_NOVELAS_HD",
       "tvg_id": "TNT_NOVELAS_HD",
@@ -149,6 +161,18 @@
       "candidate_count": 1
     },
     {
+      "dial": 219,
+      "requested": "COMEDY_CENTRAL_HD",
+      "tvg_id": "COMEDY_CENTRAL_HD",
+      "reserved": false,
+      "matched_name": "Comedy Central Latin America (1080p)",
+      "group": "Peliculas - Comedia",
+      "country": "US",
+      "state": "alive",
+      "url": "https://barinaslive1.boldmss.com/COMEDY/COMEDY.isml/COMEDY.m3u8",
+      "candidate_count": 1
+    },
+    {
       "dial": 223,
       "requested": "EL_GOURMET_HD",
       "tvg_id": "EL_GOURMET_HD",
@@ -158,6 +182,18 @@
       "country": "AR",
       "state": "alive",
       "url": "https://iptv.bitred.cl/ELGOURMET_HD/index.m3u8",
+      "candidate_count": 1
+    },
+    {
+      "dial": 228,
+      "requested": "LIFETIME_HD",
+      "tvg_id": "LIFETIME_HD",
+      "reserved": false,
+      "matched_name": "Lifetime Latin America Mexico (1080p)",
+      "group": "Entretenimiento",
+      "country": "US",
+      "state": "alive",
+      "url": "https://streaming.onnethn.com/LIFETIME/index.m3u8",
       "candidate_count": 1
     },
     {
@@ -230,6 +266,18 @@
       "country": "US",
       "state": "alive",
       "url": "https://cdn3.wowza.com/1/SmVrQmZCUXZhVDgz/b3J3MFJv/hls/live/playlist.m3u8",
+      "candidate_count": 1
+    },
+    {
+      "dial": 301,
+      "requested": "FOX",
+      "tvg_id": "FOX",
+      "reserved": false,
+      "matched_name": "Fox Sports (1080p)",
+      "group": "Deportes",
+      "country": "AR",
+      "state": "alive",
+      "url": "http://138.59.227.20:8000/play/a085/index.m3u8",
       "candidate_count": 1
     },
     {
@@ -340,7 +388,6 @@
     "STAR_CHANNEL_HD",
     "FX_HD",
     "UNIVERSAL_TV_HD",
-    "AMC_HD",
     "AXN_HD",
     "TNT_SERIES_HD",
     "WARNER_CHANNEL_HD",
@@ -348,12 +395,10 @@
     "A&E_HD",
     "ATRESERIES_HD",
     "USA_HD",
-    "COMEDY_CENTRAL_HD",
     "CORAZÓN_HD",
     "MAS_CHIC_SD",
     "DISCOVERY_H&H_HD",
     "PASIONES_HD",
-    "LIFETIME_HD",
     "SPACE_HD",
     "ANTENA_3",
     "ADULT_SWIM_HD",
@@ -382,7 +427,6 @@
     "ESNE_SD",
     "ENLACE_SD",
     "FILM_&_ARTS_HD",
-    "FOX",
     "ESPN_HD",
     "TVC_DEPORTES_HD",
     "ESPN_2_HD",
@@ -896,12 +940,13 @@
       "dial": 207,
       "requested": "AMC_HD",
       "tvg_id": "AMC_HD",
-      "reserved": true,
-      "matched_name": null,
-      "group": null,
-      "country": null,
-      "state": "reserved",
-      "url": null
+      "reserved": false,
+      "matched_name": "AMC Latin America (1080p)",
+      "group": "Peliculas - Cine",
+      "country": "US",
+      "state": "alive",
+      "url": "http://15.204.246.24:8080/AMCHD/index.m3u8",
+      "candidate_count": 1
     },
     {
       "dial": 208,
@@ -1032,12 +1077,13 @@
       "dial": 219,
       "requested": "COMEDY_CENTRAL_HD",
       "tvg_id": "COMEDY_CENTRAL_HD",
-      "reserved": true,
-      "matched_name": null,
-      "group": null,
-      "country": null,
-      "state": "reserved",
-      "url": null
+      "reserved": false,
+      "matched_name": "Comedy Central Latin America (1080p)",
+      "group": "Peliculas - Comedia",
+      "country": "US",
+      "state": "alive",
+      "url": "https://barinaslive1.boldmss.com/COMEDY/COMEDY.isml/COMEDY.m3u8",
+      "candidate_count": 1
     },
     {
       "dial": 220,
@@ -1099,12 +1145,13 @@
       "dial": 228,
       "requested": "LIFETIME_HD",
       "tvg_id": "LIFETIME_HD",
-      "reserved": true,
-      "matched_name": null,
-      "group": null,
-      "country": null,
-      "state": "reserved",
-      "url": null
+      "reserved": false,
+      "matched_name": "Lifetime Latin America Mexico (1080p)",
+      "group": "Entretenimiento",
+      "country": "US",
+      "state": "alive",
+      "url": "https://streaming.onnethn.com/LIFETIME/index.m3u8",
+      "candidate_count": 1
     },
     {
       "dial": 230,
@@ -1490,12 +1537,13 @@
       "dial": 301,
       "requested": "FOX",
       "tvg_id": "FOX",
-      "reserved": true,
-      "matched_name": null,
-      "group": null,
-      "country": null,
-      "state": "reserved",
-      "url": null
+      "reserved": false,
+      "matched_name": "Fox Sports (1080p)",
+      "group": "Deportes",
+      "country": "AR",
+      "state": "alive",
+      "url": "http://138.59.227.20:8000/play/a085/index.m3u8",
+      "candidate_count": 1
     },
     {
       "dial": 302,
