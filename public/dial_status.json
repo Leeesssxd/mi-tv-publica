@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-24T18:54:40Z",
+  "generated_at": "2026-10-25T04:15:29Z",
   "requested_total": 139,
   "found_total": 29,
   "missing_total": 110,
@@ -269,15 +269,15 @@
       "candidate_count": 1
     },
     {
-      "dial": 301,
-      "requested": "FOX",
-      "tvg_id": "FOX",
+      "dial": 302,
+      "requested": "ESPN_HD",
+      "tvg_id": "ESPN_HD",
       "reserved": false,
-      "matched_name": "Fox Sports (1080p)",
+      "matched_name": "ESPN Latin America Mexico (1080p)",
       "group": "Deportes",
-      "country": "AR",
+      "country": "US",
       "state": "alive",
-      "url": "http://138.59.227.20:8000/play/a085/index.m3u8",
+      "url": "http://168.228.44.241:9997/play/a06p/index.m3u8",
       "candidate_count": 1
     },
     {
@@ -427,7 +427,7 @@
     "ESNE_SD",
     "ENLACE_SD",
     "FILM_&_ARTS_HD",
-    "ESPN_HD",
+    "FOX",
     "TVC_DEPORTES_HD",
     "ESPN_2_HD",
     "TVC_DEPORTES_2_HD",
@@ -1537,24 +1537,24 @@
       "dial": 301,
       "requested": "FOX",
       "tvg_id": "FOX",
-      "reserved": false,
-      "matched_name": "Fox Sports (1080p)",
-      "group": "Deportes",
-      "country": "AR",
-      "state": "alive",
-      "url": "http://138.59.227.20:8000/play/a085/index.m3u8",
-      "candidate_count": 1
-    },
-    {
-      "dial": 302,
-      "requested": "ESPN_HD",
-      "tvg_id": "ESPN_HD",
       "reserved": true,
       "matched_name": null,
       "group": null,
       "country": null,
       "state": "reserved",
       "url": null
+    },
+    {
+      "dial": 302,
+      "requested": "ESPN_HD",
+      "tvg_id": "ESPN_HD",
+      "reserved": false,
+      "matched_name": "ESPN Latin America Mexico (1080p)",
+      "group": "Deportes",
+      "country": "US",
+      "state": "alive",
+      "url": "http://168.228.44.241:9997/play/a06p/index.m3u8",
+      "candidate_count": 1
     },
     {
       "dial": 303,
