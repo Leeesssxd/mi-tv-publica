@@ -59,6 +59,10 @@ https://barinaslive1.boldmss.com/COMEDY/COMEDY.isml/COMEDY.m3u8
 #EXTVLCOPT:network-caching=2000
 #EXTVLCOPT:http-reconnect=true
 https://iptv.bitred.cl/ELGOURMET_HD/index.m3u8
+#EXTINF:-1 tvg-id="LIFETIME_HD" tvg-name="Lifetime Latin America Mexico (1080p)" tvg-chno="228" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Logo_Lifetime_2020.svg/960px-Logo_Lifetime_2020.svg.png" group-title="Entretenimiento",Lifetime Latin America Mexico (1080p)
+#EXTVLCOPT:network-caching=2000
+#EXTVLCOPT:http-reconnect=true
+https://streaming.onnethn.com/LIFETIME/index.m3u8
 #EXTINF:-1 tvg-id="AZTECA_INTERNACIONAL_HD" tvg-name="Azteca Internacional (1080p)" tvg-chno="234" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/e/eb/Azteca_Internacional_logo_2023.png" group-title="Familia y TV Abierta",Azteca Internacional (1080p)
 #EXTVLCOPT:network-caching=2000
 #EXTVLCOPT:http-reconnect=true
@@ -83,6 +87,10 @@ http://45.166.93.156:9999/play/a0f3/index.m3u8
 #EXTVLCOPT:network-caching=2000
 #EXTVLCOPT:http-reconnect=true
 https://cdn3.wowza.com/1/SmVrQmZCUXZhVDgz/b3J3MFJv/hls/live/playlist.m3u8
+#EXTINF:-1 tvg-id="FOX" tvg-name="Fox Sports (1080p)" tvg-chno="301" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/FOX_Sports_logo.svg/960px-FOX_Sports_logo.svg.png" group-title="Deportes",Fox Sports (1080p)
+#EXTVLCOPT:network-caching=2000
+#EXTVLCOPT:http-reconnect=true
+http://138.59.227.20:8000/play/a085/index.m3u8
 #EXTINF:-1 tvg-id="ESPN_HD" tvg-name="ESPN Latin America Mexico (1080p)" tvg-chno="302" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/ESPN_wordmark.svg/960px-ESPN_wordmark.svg.png" group-title="Deportes",ESPN Latin America Mexico (1080p)
 #EXTVLCOPT:network-caching=2000
 #EXTVLCOPT:http-reconnect=true
@@ -135,6 +143,10 @@ https://thm-it-roku.otteravision.com/thm/it/it.m3u8
 #EXTVLCOPT:network-caching=2000
 #EXTVLCOPT:http-reconnect=true
 https://rmtv.akamaized.net/hls/live/2043153/rmtv-es-web/master.m3u8
+#EXTINF:-1 tvg-id="RealMadridTVEnglish.es@SD" tvg-name="Real Madrid TV English" tvg-logo="https://i.imgur.com/5pMo7dL.png" group-title="Deportes",Real Madrid TV English
+#EXTVLCOPT:network-caching=2000
+#EXTVLCOPT:http-reconnect=true
+http://88.212.15.50/live/real_madrid_tv/index.m3u8
 #EXTINF:-1 tvg-id="RedBullTV.at@ES" tvg-name="Red Bull TV ES (1080p)" tvg-logo="https://images.pluto.tv/channels/5e7cb84a172a0f0007da69e4/colorLogoPNG.png" group-title="Deportes",Red Bull TV ES (1080p)
 #EXTVLCOPT:network-caching=2000
 #EXTVLCOPT:http-reconnect=true
@@ -203,6 +215,10 @@ https://streamyes.alsolnet.com/azaharesfm/live/playlist.m3u8
 #EXTVLCOPT:network-caching=2000
 #EXTVLCOPT:http-reconnect=true
 http://181.78.106.127:5000/play/ca064/index.m3u8
+#EXTINF:-1 tvg-id="BayresTV.ar@SD" tvg-name="Bayres TV (720p)" tvg-logo="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjKrroOZ4RYMYlzGqMQjiIO2QbRNVndEM9PiC-CaRn0PO2AoB_YKyrt6Eigzh4M1gPZaVn5udDL5YzrzxAmyQCj_HTF8Pszo46dk9dABt9TpepY43_IEzT80atZEMaiMcdrqt3lmxAbZYaLwCgr6vDUgV1HlvmhIOJ99UlwAhG2FoHgtCm13CWEugV7Bvg/w1200-h630-p-k-no-nu/bayres-tv-removebg-preview.png" group-title="Entretenimiento",Bayres TV (720p)
+#EXTVLCOPT:network-caching=2000
+#EXTVLCOPT:http-reconnect=true
+https://streaming01.mikrolive.tv/bayrestv/live/playlist.m3u8
 #EXTINF:-1 tvg-id="BCNGospelTV.es@HD" tvg-name="BCN Gospel TV HD (720p)" tvg-logo="https://bcngospelchannel.com/wp-content/uploads/2025/09/bcn-gospel-channer-favicon.png" group-title="Entretenimiento",BCN Gospel TV HD (720p)
 #EXTVLCOPT:network-caching=2000
 #EXTVLCOPT:http-reconnect=true
@@ -271,14 +287,6 @@ https://stream.arcast.com.ar/envivo/castv/playlist.m3u8
 #EXTVLCOPT:network-caching=2000
 #EXTVLCOPT:http-reconnect=true
 https://live20.bozztv.com/akamaissh101/ssh101/canal8sanjuan/playlist.m3u8
-#EXTINF:-1 tvg-id="Canal9Resistencia.ar@SD" tvg-name="Canal 9 Resistencia (720p)" tvg-logo="https://i.imgur.com/xqgRFpC.png" group-title="Entretenimiento",Canal 9 Resistencia (720p)
-#EXTVLCOPT:network-caching=2000
-#EXTVLCOPT:http-reconnect=true
-http://coninfo.net:1935/9linklivert/smil:9linkmultibr.smil/playlist.m3u8
-#EXTINF:-1 tvg-id="CanalDonana.es@SD" tvg-name="Canal Donana (720p) [Not 24/7]" tvg-logo="https://i.imgur.com/0WrKIxm.png" group-title="Entretenimiento",Canal Donana (720p) [Not 24/7]
-#EXTVLCOPT:network-caching=2000
-#EXTVLCOPT:http-reconnect=true
-https://secure5.todostreaming.es/live/division-alm.m3u8
 #EXTINF:-1 tvg-id="CanalMalagaRTV.es@SD" tvg-name="Canal Malaga RTV (720p) [Not 24/7]" tvg-logo="https://i.imgur.com/QSUOxtM.png" group-title="Entretenimiento",Canal Malaga RTV (720p) [Not 24/7]
 #EXTVLCOPT:network-caching=2000
 #EXTVLCOPT:http-reconnect=true
@@ -303,18 +311,10 @@ https://stream.arcast.com.ar/canal7catamarca/ngrp:canal7catamarca_all/playlist.m
 #EXTVLCOPT:network-caching=2000
 #EXTVLCOPT:http-reconnect=true
 https://5ca3e84a76d30.streamlock.net/cbtv/videoc3b3t3v3/playlist.m3u8
-#EXTINF:-1 tvg-id="CiudadTVResistencia.ar@SD" tvg-name="Ciudad TV Resistencia (720p)" tvg-logo="https://i.imgur.com/oL8SMTL.png" group-title="Entretenimiento",Ciudad TV Resistencia (720p)
-#EXTVLCOPT:network-caching=2000
-#EXTVLCOPT:http-reconnect=true
-https://617c5175c970b.streamlock.net:4444/chacodxdtv/livenew/playlist.m3u8
 #EXTINF:-1 tvg-id="CiudadesdelOcioTV.es@SD" tvg-name="Ciudades del Ocio TV (720p)" tvg-logo="https://i.imgur.com/CTQgqsM.png" group-title="Entretenimiento",Ciudades del Ocio TV (720p)
 #EXTVLCOPT:network-caching=2000
 #EXTVLCOPT:http-reconnect=true
 https://cloudvideo.servers10.com:8081/8024/index.m3u8
-#EXTINF:-1 tvg-id="CostaNoroesteTV.es@SD" tvg-name="Costa Noroeste TV (1080p) [Not 24/7]" tvg-logo="https://i.imgur.com/iM9AN6Z.png" group-title="Entretenimiento",Costa Noroeste TV (1080p) [Not 24/7]
-#EXTVLCOPT:network-caching=2000
-#EXTVLCOPT:http-reconnect=true
-https://limited31.todostreaming.es/live/noroestetv-livestream.m3u8
 #EXTINF:-1 tvg-id="CreaLaTV.mx@SD" tvg-name="CreaLaTV (1080p)" tvg-logo="https://i.imgur.com/Bnjj29f.png" group-title="Entretenimiento",CreaLaTV (1080p)
 #EXTVLCOPT:network-caching=2000
 #EXTVLCOPT:http-reconnect=true
@@ -623,6 +623,14 @@ https://60417ddeaf0d9.streamlock.net/ntv/videontv/playlist.m3u8
 #EXTVLCOPT:network-caching=2000
 #EXTVLCOPT:http-reconnect=true
 https://5ca9af4645e15.streamlock.net/grd/videogrd/playlist.m3u8
+#EXTINF:-1 tvg-id="B15Fresnillo.mx@SD" tvg-name="B15 Fresnillo (1080p)" tvg-logo="https://i.imgur.com/kaUhEQy.png" group-title="Familia y TV Abierta",B15 Fresnillo (1080p)
+#EXTVLCOPT:network-caching=2000
+#EXTVLCOPT:http-reconnect=true
+https://s5.mexside.net:1936/lsac/lsac/playlist.m3u8
+#EXTINF:-1 tvg-id="B15Zacatecas.mx@SD" tvg-name="B15 Zacatecas (1080p)" tvg-logo="https://i.imgur.com/kaUhEQy.png" group-title="Familia y TV Abierta",B15 Zacatecas (1080p)
+#EXTVLCOPT:network-caching=2000
+#EXTVLCOPT:http-reconnect=true
+https://s5.mexside.net:1936/envio2/envio2/playlist.m3u8
 #EXTINF:-1 tvg-id="Canal10Durango.mx@SD" tvg-name="Canal 10 Durango (1080p)" tvg-logo="https://i.imgur.com/H34quHQ.png" group-title="Familia y TV Abierta",Canal 10 Durango (1080p)
 #EXTVLCOPT:network-caching=2000
 #EXTVLCOPT:http-reconnect=true
@@ -819,6 +827,10 @@ https://directes-tv-int.3catdirectes.cat/live-origin/canal324-hls/master.m3u8
 #EXTVLCOPT:network-caching=2000
 #EXTVLCOPT:http-reconnect=true
 https://fastly.live.brightcove.com/1846756479408303045/eu-central-1/6057955885001/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJob3N0IjoiZWFxNWh4LmVncmVzcy53YzQ3bTEiLCJhY2NvdW50X2lkIjoiNjA1Nzk1NTg4NTAwMSIsImVobiI6ImZhc3RseS5saXZlLmJyaWdodGNvdmUuY29tIiwiaXNzIjoiYmxpdmUtcGxheWJhY2stc291cmNlLWFwaSIsInN1YiI6InBhdGhtYXB0b2tlbiIsImF1ZCI6WyI2MDU3OTU1ODg1MDAxIl0sImp0aSI6IjE4NDY3NTY0Nzk0MDgzMDMwNDUifQ.o6wb_VA-TVxl3ERgr7FKLlaTjY7smErmsf73QAydySE/playlist-hls-dvr.m3u8
+#EXTINF:-1 tvg-id="A24.ar@SD" tvg-name="A24 (1080p)" tvg-logo="https://i.imgur.com/LnXQkIU.png" group-title="Otros",A24 (1080p)
+#EXTVLCOPT:network-caching=2000
+#EXTVLCOPT:http-reconnect=true
+http://138.59.227.20:8000/play/a05u/index.m3u8
 #EXTINF:-1 tvg-id="AcustikTV.mx@SD" tvg-name="Acustik TV" tvg-logo="https://i.imgur.com/dhiNIng.png" group-title="Otros",Acustik TV
 #EXTVLCOPT:network-caching=2000
 #EXTVLCOPT:http-reconnect=true
@@ -939,10 +951,10 @@ https://d2nq34q0i1r3la.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68
 #EXTVLCOPT:network-caching=2000
 #EXTVLCOPT:http-reconnect=true
 http://158.172.217.18:8000/play/a00d/index.m3u8
-#EXTINF:-1 tvg-id="CosmosTv.ar@SD" tvg-name="Cosmos Tv SD" tvg-logo="https://i0.wp.com/fmcosmos.com/wp-content/uploads/2021/11/COSMOS-TV.png" group-title="Peliculas - Cine",Cosmos Tv SD
+#EXTINF:-1 tvg-id="CosmosTv.ar@HD" tvg-name="Cosmos Tv" tvg-logo="https://i0.wp.com/fmcosmos.com/wp-content/uploads/2021/11/COSMOS-TV.png" group-title="Peliculas - Cine",Cosmos Tv
 #EXTVLCOPT:network-caching=2000
 #EXTVLCOPT:http-reconnect=true
-https://canaletaplus.com:3922/live/cosmoslive.m3u8
+https://tv.mediacp.eu:19360/cosmos/cosmos.m3u8
 #EXTINF:-1 tvg-id="Filmex.mx@SD" tvg-name="Filmex (1080p) [Geo-blocked]" tvg-logo="https://i.imgur.com/Hiz2OyC.png" group-title="Peliculas - Cine",Filmex (1080p) [Geo-blocked]
 #EXTVLCOPT:network-caching=2000
 #EXTVLCOPT:http-reconnect=true
@@ -1095,6 +1107,10 @@ https://amg00627-amg00627c30-rakuten-es-3990.playouts.now.amagi.tv/playlist/amg0
 #EXTVLCOPT:network-caching=2000
 #EXTVLCOPT:http-reconnect=true
 https://streaming.onnethn.com/NICK_JR/playlist.m3u8
+#EXTINF:-1 tvg-id="Pakapaka.ar@SD" tvg-name="Pakapaka (1080p)" tvg-logo="https://i.imgur.com/GJbRWwH.png" group-title="Peliculas - Familiar",Pakapaka (1080p)
+#EXTVLCOPT:network-caching=2000
+#EXTVLCOPT:http-reconnect=true
+http://138.59.227.20:8000/play/a05t/index.m3u8
 #EXTINF:-1 tvg-id="PlimPlim.ar@SD" tvg-name="Plim Plim (1080p)" tvg-logo="https://i.imgur.com/MYc8srh.png" group-title="Peliculas - Familiar",Plim Plim (1080p)
 #EXTVLCOPT:network-caching=2000
 #EXTVLCOPT:http-reconnect=true

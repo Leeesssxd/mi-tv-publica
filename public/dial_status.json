@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-10-25T19:02:38Z",
+  "generated_at": "2026-10-26T04:13:41Z",
   "requested_total": 139,
-  "found_total": 28,
-  "missing_total": 111,
+  "found_total": 30,
+  "missing_total": 109,
   "found": [
     {
       "dial": 100,
@@ -185,6 +185,18 @@
       "candidate_count": 1
     },
     {
+      "dial": 228,
+      "requested": "LIFETIME_HD",
+      "tvg_id": "LIFETIME_HD",
+      "reserved": false,
+      "matched_name": "Lifetime Latin America Mexico (1080p)",
+      "group": "Entretenimiento",
+      "country": "US",
+      "state": "alive",
+      "url": "https://streaming.onnethn.com/LIFETIME/index.m3u8",
+      "candidate_count": 1
+    },
+    {
       "dial": 234,
       "requested": "AZTECA_INTERNACIONAL_HD",
       "tvg_id": "AZTECA_INTERNACIONAL_HD",
@@ -254,6 +266,18 @@
       "country": "US",
       "state": "alive",
       "url": "https://cdn3.wowza.com/1/SmVrQmZCUXZhVDgz/b3J3MFJv/hls/live/playlist.m3u8",
+      "candidate_count": 1
+    },
+    {
+      "dial": 301,
+      "requested": "FOX",
+      "tvg_id": "FOX",
+      "reserved": false,
+      "matched_name": "Fox Sports (1080p)",
+      "group": "Deportes",
+      "country": "AR",
+      "state": "alive",
+      "url": "http://138.59.227.20:8000/play/a085/index.m3u8",
       "candidate_count": 1
     },
     {
@@ -387,7 +411,6 @@
     "MAS_CHIC_SD",
     "DISCOVERY_H&H_HD",
     "PASIONES_HD",
-    "LIFETIME_HD",
     "SPACE_HD",
     "ANTENA_3",
     "ADULT_SWIM_HD",
@@ -416,7 +439,6 @@
     "ESNE_SD",
     "ENLACE_SD",
     "FILM_&_ARTS_HD",
-    "FOX",
     "TVC_DEPORTES_HD",
     "ESPN_2_HD",
     "TVC_DEPORTES_2_HD",
@@ -1134,12 +1156,13 @@
       "dial": 228,
       "requested": "LIFETIME_HD",
       "tvg_id": "LIFETIME_HD",
-      "reserved": true,
-      "matched_name": null,
-      "group": null,
-      "country": null,
-      "state": "reserved",
-      "url": null
+      "reserved": false,
+      "matched_name": "Lifetime Latin America Mexico (1080p)",
+      "group": "Entretenimiento",
+      "country": "US",
+      "state": "alive",
+      "url": "https://streaming.onnethn.com/LIFETIME/index.m3u8",
+      "candidate_count": 1
     },
     {
       "dial": 230,
@@ -1525,12 +1548,13 @@
       "dial": 301,
       "requested": "FOX",
       "tvg_id": "FOX",
-      "reserved": true,
-      "matched_name": null,
-      "group": null,
-      "country": null,
-      "state": "reserved",
-      "url": null
+      "reserved": false,
+      "matched_name": "Fox Sports (1080p)",
+      "group": "Deportes",
+      "country": "AR",
+      "state": "alive",
+      "url": "http://138.59.227.20:8000/play/a085/index.m3u8",
+      "candidate_count": 1
     },
     {
       "dial": 302,
