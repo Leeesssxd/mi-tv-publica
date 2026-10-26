@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-10-26T15:08:11Z",
+  "generated_at": "2026-10-26T21:10:40Z",
   "requested_total": 139,
-  "found_total": 30,
-  "missing_total": 109,
+  "found_total": 29,
+  "missing_total": 110,
   "found": [
     {
       "dial": 100,
@@ -233,18 +233,6 @@
       "candidate_count": 1
     },
     {
-      "dial": 258,
-      "requested": "DISCOVERY_KIDS_HD",
-      "tvg_id": "DISCOVERY_KIDS_HD",
-      "reserved": false,
-      "matched_name": "Discovery Kids Latin America Mexico (1080p)",
-      "group": "Documentales y Cultura",
-      "country": "US",
-      "state": "alive",
-      "url": "http://38.65.175.84:8000/play/a0an/index.m3u8",
-      "candidate_count": 1
-    },
-    {
       "dial": 260,
       "requested": "DISNEY_CHANNEL_HD",
       "tvg_id": "DISNEY_CHANNEL_HD",
@@ -419,6 +407,7 @@
     "DISNEY_JR_HD",
     "CARTOONITO_HD",
     "NICKELODEON_HD",
+    "DISCOVERY_KIDS_HD",
     "TOONCAST_HD",
     "BABY_FIRST_HD",
     "BABY_TV_SD",
@@ -1292,13 +1281,12 @@
       "dial": 258,
       "requested": "DISCOVERY_KIDS_HD",
       "tvg_id": "DISCOVERY_KIDS_HD",
-      "reserved": false,
-      "matched_name": "Discovery Kids Latin America Mexico (1080p)",
-      "group": "Documentales y Cultura",
-      "country": "US",
-      "state": "alive",
-      "url": "http://38.65.175.84:8000/play/a0an/index.m3u8",
-      "candidate_count": 1
+      "reserved": true,
+      "matched_name": null,
+      "group": null,
+      "country": null,
+      "state": "reserved",
+      "url": null
     },
     {
       "dial": 260,
