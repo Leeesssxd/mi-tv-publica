@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-10-30T05:21:49Z",
+  "generated_at": "2026-10-30T15:07:28Z",
   "requested_total": 139,
-  "found_total": 29,
-  "missing_total": 110,
+  "found_total": 30,
+  "missing_total": 109,
   "found": [
     {
       "dial": 100,
@@ -74,6 +74,18 @@
       "country": "MX",
       "state": "alive",
       "url": "https://5fc584f3f19c9.streamlock.net/canal22/smil:canal22.smil/playlist.m3u8",
+      "candidate_count": 1
+    },
+    {
+      "dial": 140,
+      "requested": "ADN_40_SD",
+      "tvg_id": "ADN_40_SD",
+      "reserved": false,
+      "matched_name": "ADN 40 (720p)",
+      "group": "Noticias",
+      "country": "MX",
+      "state": "alive",
+      "url": "https://mdstrm.com/live-stream-playlist/60b578b060947317de7b57ac.m3u8",
       "candidate_count": 1
     },
     {
@@ -367,7 +379,6 @@
     "TV_UNAM_SD",
     "CANAL_22.2_SD",
     "APRENDE_+_SD",
-    "ADN_40_SD",
     "A+_SD",
     "CANAL_44_UDG_HD",
     "CANAL_DEL_CONGRESO_SD",
@@ -685,12 +696,13 @@
       "dial": 140,
       "requested": "ADN_40_SD",
       "tvg_id": "ADN_40_SD",
-      "reserved": true,
-      "matched_name": null,
-      "group": null,
-      "country": null,
-      "state": "reserved",
-      "url": null
+      "reserved": false,
+      "matched_name": "ADN 40 (720p)",
+      "group": "Noticias",
+      "country": "MX",
+      "state": "alive",
+      "url": "https://mdstrm.com/live-stream-playlist/60b578b060947317de7b57ac.m3u8",
+      "candidate_count": 1
     },
     {
       "dial": 141,
