@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-11-02T18:15:01Z",
+  "generated_at": "2026-11-03T06:14:12Z",
   "requested_total": 139,
-  "found_total": 33,
-  "missing_total": 106,
+  "found_total": 32,
+  "missing_total": 107,
   "found": [
     {
       "dial": 100,
@@ -110,18 +110,6 @@
       "country": "US",
       "state": "alive",
       "url": "http://45.184.109.10/live/69393EAE6ADBC65A68F942022362A202/51.m3u8",
-      "candidate_count": 1
-    },
-    {
-      "dial": 207,
-      "requested": "AMC_HD",
-      "tvg_id": "AMC_HD",
-      "reserved": false,
-      "matched_name": "AMC Latin America (1080p)",
-      "group": "Peliculas - Cine",
-      "country": "US",
-      "state": "alive",
-      "url": "http://15.204.246.24:8080/AMCHD/index.m3u8",
       "candidate_count": 1
     },
     {
@@ -435,6 +423,7 @@
     "TV5_MONDE_SD",
     "FX_HD",
     "UNIVERSAL_TV_HD",
+    "AMC_HD",
     "AXN_HD",
     "TNT_SERIES_HD",
     "ID_HD",
@@ -985,13 +974,12 @@
       "dial": 207,
       "requested": "AMC_HD",
       "tvg_id": "AMC_HD",
-      "reserved": false,
-      "matched_name": "AMC Latin America (1080p)",
-      "group": "Peliculas - Cine",
-      "country": "US",
-      "state": "alive",
-      "url": "http://15.204.246.24:8080/AMCHD/index.m3u8",
-      "candidate_count": 1
+      "reserved": true,
+      "matched_name": null,
+      "group": null,
+      "country": null,
+      "state": "reserved",
+      "url": null
     },
     {
       "dial": 208,
