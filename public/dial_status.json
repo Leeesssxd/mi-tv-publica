@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-11-04T05:49:58Z",
+  "generated_at": "2026-11-04T16:15:36Z",
   "requested_total": 139,
-  "found_total": 33,
-  "missing_total": 106,
+  "found_total": 32,
+  "missing_total": 107,
   "found": [
     {
       "dial": 100,
@@ -341,18 +341,6 @@
       "candidate_count": 1
     },
     {
-      "dial": 410,
-      "requested": "TNT_HD",
-      "tvg_id": "TNT_HD",
-      "reserved": false,
-      "matched_name": "TNT Sports Premium ArgentinaHD (1080p)",
-      "group": "Noticias",
-      "country": "CL",
-      "state": "alive",
-      "url": "http://181.78.79.131:8000/play/a0q9",
-      "candidate_count": 1
-    },
-    {
       "dial": 424,
       "requested": "TCM_HD",
       "tvg_id": "TCM_HD",
@@ -494,6 +482,7 @@
     "SONY_MOVIES",
     "STUDIO_UNIVERSAL_HD",
     "CINEMAX_HD",
+    "TNT_HD",
     "CINEMA_PLATINO_2_DELAY_SD",
     "CINEMA_PLATINO_2_SD",
     "CMC_DELAY_SD",
@@ -1862,13 +1851,12 @@
       "dial": 410,
       "requested": "TNT_HD",
       "tvg_id": "TNT_HD",
-      "reserved": false,
-      "matched_name": "TNT Sports Premium ArgentinaHD (1080p)",
-      "group": "Noticias",
-      "country": "CL",
-      "state": "alive",
-      "url": "http://181.78.79.131:8000/play/a0q9",
-      "candidate_count": 1
+      "reserved": true,
+      "matched_name": null,
+      "group": null,
+      "country": null,
+      "state": "reserved",
+      "url": null
     },
     {
       "dial": 415,
