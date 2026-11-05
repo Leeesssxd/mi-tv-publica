@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-11-04T16:15:36Z",
+  "generated_at": "2026-11-05T06:10:29Z",
   "requested_total": 139,
-  "found_total": 32,
-  "missing_total": 107,
+  "found_total": 31,
+  "missing_total": 108,
   "found": [
     {
       "dial": 100,
@@ -209,18 +209,6 @@
       "candidate_count": 1
     },
     {
-      "dial": 228,
-      "requested": "LIFETIME_HD",
-      "tvg_id": "LIFETIME_HD",
-      "reserved": false,
-      "matched_name": "Lifetime Latin America Mexico (1080p)",
-      "group": "Entretenimiento",
-      "country": "US",
-      "state": "alive",
-      "url": "https://streaming.onnethn.com/LIFETIME/index.m3u8",
-      "candidate_count": 1
-    },
-    {
       "dial": 234,
       "requested": "AZTECA_INTERNACIONAL_HD",
       "tvg_id": "AZTECA_INTERNACIONAL_HD",
@@ -305,18 +293,6 @@
       "candidate_count": 1
     },
     {
-      "dial": 320,
-      "requested": "AYM_SPORTS_HD",
-      "tvg_id": "AYM_SPORTS_HD",
-      "reserved": false,
-      "matched_name": "AyM Sports (1080p)",
-      "group": "Deportes",
-      "country": "MX",
-      "state": "alive",
-      "url": "http://168.196.127.137:6001/play/a06v/index.m3u8",
-      "candidate_count": 1
-    },
-    {
       "dial": 403,
       "requested": "PANICO_DELAY_SD",
       "tvg_id": "PANICO_DELAY_SD",
@@ -338,6 +314,18 @@
       "country": "AR",
       "state": "alive",
       "url": "https://iptv.bitred.cl/EUROPAEUROPA_HD/index.m3u8",
+      "candidate_count": 1
+    },
+    {
+      "dial": 410,
+      "requested": "TNT_HD",
+      "tvg_id": "TNT_HD",
+      "reserved": false,
+      "matched_name": "TNT Sports Premium ArgentinaHD (1080p)",
+      "group": "Noticias",
+      "country": "CL",
+      "state": "alive",
+      "url": "http://181.78.79.131:8000/play/a0q9",
       "candidate_count": 1
     },
     {
@@ -433,6 +421,7 @@
     "MAS_CHIC_SD",
     "DISCOVERY_H&H_HD",
     "PASIONES_HD",
+    "LIFETIME_HD",
     "SPACE_HD",
     "ANTENA_3",
     "ADULT_SWIM_HD",
@@ -471,6 +460,7 @@
     "NFL_HD",
     "GOLF_CHANNEL_HD",
     "MEGA_SPORTS_1_HD",
+    "AYM_SPORTS_HD",
     "LAS_HD",
     "AZTECA_DEPORTES_NETWORK_HD",
     "PX_SPORTS_HD",
@@ -482,7 +472,6 @@
     "SONY_MOVIES",
     "STUDIO_UNIVERSAL_HD",
     "CINEMAX_HD",
-    "TNT_HD",
     "CINEMA_PLATINO_2_DELAY_SD",
     "CINEMA_PLATINO_2_SD",
     "CMC_DELAY_SD",
@@ -1180,13 +1169,12 @@
       "dial": 228,
       "requested": "LIFETIME_HD",
       "tvg_id": "LIFETIME_HD",
-      "reserved": false,
-      "matched_name": "Lifetime Latin America Mexico (1080p)",
-      "group": "Entretenimiento",
-      "country": "US",
-      "state": "alive",
-      "url": "https://streaming.onnethn.com/LIFETIME/index.m3u8",
-      "candidate_count": 1
+      "reserved": true,
+      "matched_name": null,
+      "group": null,
+      "country": null,
+      "state": "reserved",
+      "url": null
     },
     {
       "dial": 230,
@@ -1694,13 +1682,12 @@
       "dial": 320,
       "requested": "AYM_SPORTS_HD",
       "tvg_id": "AYM_SPORTS_HD",
-      "reserved": false,
-      "matched_name": "AyM Sports (1080p)",
-      "group": "Deportes",
-      "country": "MX",
-      "state": "alive",
-      "url": "http://168.196.127.137:6001/play/a06v/index.m3u8",
-      "candidate_count": 1
+      "reserved": true,
+      "matched_name": null,
+      "group": null,
+      "country": null,
+      "state": "reserved",
+      "url": null
     },
     {
       "dial": 321,
@@ -1851,12 +1838,13 @@
       "dial": 410,
       "requested": "TNT_HD",
       "tvg_id": "TNT_HD",
-      "reserved": true,
-      "matched_name": null,
-      "group": null,
-      "country": null,
-      "state": "reserved",
-      "url": null
+      "reserved": false,
+      "matched_name": "TNT Sports Premium ArgentinaHD (1080p)",
+      "group": "Noticias",
+      "country": "CL",
+      "state": "alive",
+      "url": "http://181.78.79.131:8000/play/a0q9",
+      "candidate_count": 1
     },
     {
       "dial": 415,
