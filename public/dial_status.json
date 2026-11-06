@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-11-06T15:58:59Z",
+  "generated_at": "2026-11-06T21:38:40Z",
   "requested_total": 139,
-  "found_total": 30,
-  "missing_total": 109,
+  "found_total": 28,
+  "missing_total": 111,
   "found": [
     {
       "dial": 100,
@@ -305,18 +305,6 @@
       "candidate_count": 1
     },
     {
-      "dial": 410,
-      "requested": "TNT_HD",
-      "tvg_id": "TNT_HD",
-      "reserved": false,
-      "matched_name": "TNT Sports Premium ArgentinaHD (1080p)",
-      "group": "Noticias",
-      "country": "CL",
-      "state": "alive",
-      "url": "http://181.78.79.131:8000/play/a0q9",
-      "candidate_count": 1
-    },
-    {
       "dial": 424,
       "requested": "TCM_HD",
       "tvg_id": "TCM_HD",
@@ -350,18 +338,6 @@
       "country": "US",
       "state": "alive",
       "url": "http://45.184.109.10/live/69393EAE6ADBC65A68F942022362A202/17.m3u8",
-      "candidate_count": 1
-    },
-    {
-      "dial": 632,
-      "requested": "EXA_TV_HD",
-      "tvg_id": "EXA_TV_HD",
-      "reserved": false,
-      "matched_name": "Exa TV",
-      "group": "Entretenimiento",
-      "country": "MX",
-      "state": "alive",
-      "url": "http://190.61.90.17:40000/play/a0hk/index.m3u8",
       "candidate_count": 1
     }
   ],
@@ -461,6 +437,7 @@
     "EUROPA_EUROPA_HD",
     "STUDIO_UNIVERSAL_HD",
     "CINEMAX_HD",
+    "TNT_HD",
     "CINEMA_PLATINO_2_DELAY_SD",
     "CINEMA_PLATINO_2_SD",
     "CMC_DELAY_SD",
@@ -474,6 +451,7 @@
     "HTV_HD",
     "BEAT_BOX_SD",
     "VR_PLUS_HD",
+    "EXA_TV_HD",
     "SONY_MOVIES_ALT"
   ],
   "entries": [
@@ -1826,13 +1804,12 @@
       "dial": 410,
       "requested": "TNT_HD",
       "tvg_id": "TNT_HD",
-      "reserved": false,
-      "matched_name": "TNT Sports Premium ArgentinaHD (1080p)",
-      "group": "Noticias",
-      "country": "CL",
-      "state": "alive",
-      "url": "http://181.78.79.131:8000/play/a0q9",
-      "candidate_count": 1
+      "reserved": true,
+      "matched_name": null,
+      "group": null,
+      "country": null,
+      "state": "reserved",
+      "url": null
     },
     {
       "dial": 415,
@@ -2017,13 +1994,12 @@
       "dial": 632,
       "requested": "EXA_TV_HD",
       "tvg_id": "EXA_TV_HD",
-      "reserved": false,
-      "matched_name": "Exa TV",
-      "group": "Entretenimiento",
-      "country": "MX",
-      "state": "alive",
-      "url": "http://190.61.90.17:40000/play/a0hk/index.m3u8",
-      "candidate_count": 1
+      "reserved": true,
+      "matched_name": null,
+      "group": null,
+      "country": null,
+      "state": "reserved",
+      "url": null
     },
     {
       "dial": 1405,
