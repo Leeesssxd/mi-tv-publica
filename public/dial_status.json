@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-11-10T16:28:12Z",
+  "generated_at": "2026-11-11T05:46:21Z",
   "requested_total": 139,
-  "found_total": 25,
-  "missing_total": 114,
+  "found_total": 26,
+  "missing_total": 113,
   "found": [
     {
       "dial": 100,
@@ -50,6 +50,18 @@
       "country": "MX",
       "state": "alive",
       "url": "http://187.245.231.226:8000/play/a0uz/index.m3u8",
+      "candidate_count": 1
+    },
+    {
+      "dial": 117,
+      "requested": "JALISCO_TV_HD",
+      "tvg_id": "JALISCO_TV_HD",
+      "reserved": false,
+      "matched_name": "Jalisco TV (720p)",
+      "group": "Familia y TV Abierta",
+      "country": "MX",
+      "state": "alive",
+      "url": "https://video0.rogohosting.com:19360/sisjalisciense/sisjalisciense.m3u8",
       "candidate_count": 1
     },
     {
@@ -113,6 +125,18 @@
       "candidate_count": 1
     },
     {
+      "dial": 209,
+      "requested": "AXN_HD",
+      "tvg_id": "AXN_HD",
+      "reserved": false,
+      "matched_name": "AXN Latin America South",
+      "group": "Peliculas - Cine",
+      "country": "US",
+      "state": "alive",
+      "url": "http://45.184.109.10/live/69393EAE6ADBC65A68F942022362A202/10.m3u8",
+      "candidate_count": 1
+    },
+    {
       "dial": 210,
       "requested": "SONY_HD",
       "tvg_id": "SONY_HD",
@@ -173,6 +197,18 @@
       "candidate_count": 1
     },
     {
+      "dial": 236,
+      "requested": "TVE_HD",
+      "tvg_id": "TVE_HD",
+      "reserved": false,
+      "matched_name": "TVE Star HD (1080p)",
+      "group": "Peliculas - Drama y Series",
+      "country": "ES",
+      "state": "alive",
+      "url": "https://rtvelivestream-rtveplayplus.rtve.es/rtvesec/int/star_main_1080.m3u8",
+      "candidate_count": 1
+    },
+    {
       "dial": 250,
       "requested": "CARTOON_NETWORK_HD",
       "tvg_id": "CARTOON_NETWORK_HD",
@@ -182,18 +218,6 @@
       "country": "US",
       "state": "alive",
       "url": "http://158.172.217.18:8000/play/a03a/index.m3u8",
-      "candidate_count": 1
-    },
-    {
-      "dial": 258,
-      "requested": "DISCOVERY_KIDS_HD",
-      "tvg_id": "DISCOVERY_KIDS_HD",
-      "reserved": false,
-      "matched_name": "Discovery Kids Latin America Mexico (1080p)",
-      "group": "Documentales y Cultura",
-      "country": "US",
-      "state": "alive",
-      "url": "http://38.65.175.84:8000/play/a0an/index.m3u8",
       "candidate_count": 1
     },
     {
@@ -230,18 +254,6 @@
       "country": "US",
       "state": "alive",
       "url": "http://168.228.44.241:9997/play/a06p/index.m3u8",
-      "candidate_count": 1
-    },
-    {
-      "dial": 323,
-      "requested": "PX_SPORTS_HD",
-      "tvg_id": "PX_SPORTS_HD",
-      "reserved": false,
-      "matched_name": "PX Sports (1080p)",
-      "group": "Deportes",
-      "country": "MX",
-      "state": "alive",
-      "url": "http://38.65.175.84:8000/play/a0ku/index.m3u8",
       "candidate_count": 1
     },
     {
@@ -316,7 +328,6 @@
     "ONCE_TV_HD",
     "CANAL_13_HD",
     "CANAL_14_HD",
-    "JALISCO_TV_HD",
     "TV_UNAM_SD",
     "CANAL_22.2_SD",
     "APRENDE_+_SD",
@@ -341,7 +352,6 @@
     "FX_HD",
     "UNIVERSAL_TV_HD",
     "AMC_HD",
-    "AXN_HD",
     "TNT_SERIES_HD",
     "WARNER_CHANNEL_HD",
     "ID_HD",
@@ -358,11 +368,11 @@
     "ANTENA_3",
     "ADULT_SWIM_HD",
     "HOLA_TV_HD",
-    "TVE_HD",
     "NICK_JR_HD",
     "DISNEY_JR_HD",
     "CARTOONITO_HD",
     "NICKELODEON_HD",
+    "DISCOVERY_KIDS_HD",
     "DISNEY_CHANNEL_HD",
     "TOONCAST_HD",
     "BABY_FIRST_HD",
@@ -396,6 +406,7 @@
     "AYM_SPORTS_HD",
     "LAS_HD",
     "AZTECA_DEPORTES_NETWORK_HD",
+    "PX_SPORTS_HD",
     "CLARO_SPORTS_HD",
     "WWB_SD",
     "CINEMA_PLATINO_DELAY_SD",
@@ -584,12 +595,13 @@
       "dial": 117,
       "requested": "JALISCO_TV_HD",
       "tvg_id": "JALISCO_TV_HD",
-      "reserved": true,
-      "matched_name": null,
-      "group": null,
-      "country": null,
-      "state": "reserved",
-      "url": null
+      "reserved": false,
+      "matched_name": "Jalisco TV (720p)",
+      "group": "Familia y TV Abierta",
+      "country": "MX",
+      "state": "alive",
+      "url": "https://video0.rogohosting.com:19360/sisjalisciense/sisjalisciense.m3u8",
+      "candidate_count": 1
     },
     {
       "dial": 120,
@@ -919,12 +931,13 @@
       "dial": 209,
       "requested": "AXN_HD",
       "tvg_id": "AXN_HD",
-      "reserved": true,
-      "matched_name": null,
-      "group": null,
-      "country": null,
-      "state": "reserved",
-      "url": null
+      "reserved": false,
+      "matched_name": "AXN Latin America South",
+      "group": "Peliculas - Cine",
+      "country": "US",
+      "state": "alive",
+      "url": "http://45.184.109.10/live/69393EAE6ADBC65A68F942022362A202/10.m3u8",
+      "candidate_count": 1
     },
     {
       "dial": 210,
@@ -1166,12 +1179,13 @@
       "dial": 236,
       "requested": "TVE_HD",
       "tvg_id": "TVE_HD",
-      "reserved": true,
-      "matched_name": null,
-      "group": null,
-      "country": null,
-      "state": "reserved",
-      "url": null
+      "reserved": false,
+      "matched_name": "TVE Star HD (1080p)",
+      "group": "Peliculas - Drama y Series",
+      "country": "ES",
+      "state": "alive",
+      "url": "https://rtvelivestream-rtveplayplus.rtve.es/rtvesec/int/star_main_1080.m3u8",
+      "candidate_count": 1
     },
     {
       "dial": 249,
@@ -1233,13 +1247,12 @@
       "dial": 258,
       "requested": "DISCOVERY_KIDS_HD",
       "tvg_id": "DISCOVERY_KIDS_HD",
-      "reserved": false,
-      "matched_name": "Discovery Kids Latin America Mexico (1080p)",
-      "group": "Documentales y Cultura",
-      "country": "US",
-      "state": "alive",
-      "url": "http://38.65.175.84:8000/play/a0an/index.m3u8",
-      "candidate_count": 1
+      "reserved": true,
+      "matched_name": null,
+      "group": null,
+      "country": null,
+      "state": "reserved",
+      "url": null
     },
     {
       "dial": 260,
@@ -1644,13 +1657,12 @@
       "dial": 323,
       "requested": "PX_SPORTS_HD",
       "tvg_id": "PX_SPORTS_HD",
-      "reserved": false,
-      "matched_name": "PX Sports (1080p)",
-      "group": "Deportes",
-      "country": "MX",
-      "state": "alive",
-      "url": "http://38.65.175.84:8000/play/a0ku/index.m3u8",
-      "candidate_count": 1
+      "reserved": true,
+      "matched_name": null,
+      "group": null,
+      "country": null,
+      "state": "reserved",
+      "url": null
     },
     {
       "dial": 324,
