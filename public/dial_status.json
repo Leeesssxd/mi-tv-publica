@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-11-11T05:46:21Z",
+  "generated_at": "2026-11-11T16:09:53Z",
   "requested_total": 139,
-  "found_total": 26,
-  "missing_total": 113,
+  "found_total": 23,
+  "missing_total": 116,
   "found": [
     {
       "dial": 100,
@@ -50,18 +50,6 @@
       "country": "MX",
       "state": "alive",
       "url": "http://187.245.231.226:8000/play/a0uz/index.m3u8",
-      "candidate_count": 1
-    },
-    {
-      "dial": 117,
-      "requested": "JALISCO_TV_HD",
-      "tvg_id": "JALISCO_TV_HD",
-      "reserved": false,
-      "matched_name": "Jalisco TV (720p)",
-      "group": "Familia y TV Abierta",
-      "country": "MX",
-      "state": "alive",
-      "url": "https://video0.rogohosting.com:19360/sisjalisciense/sisjalisciense.m3u8",
       "candidate_count": 1
     },
     {
@@ -173,18 +161,6 @@
       "candidate_count": 1
     },
     {
-      "dial": 228,
-      "requested": "LIFETIME_HD",
-      "tvg_id": "LIFETIME_HD",
-      "reserved": false,
-      "matched_name": "Lifetime Latin America Mexico (1080p)",
-      "group": "Entretenimiento",
-      "country": "US",
-      "state": "alive",
-      "url": "https://streaming.onnethn.com/LIFETIME/index.m3u8",
-      "candidate_count": 1
-    },
-    {
       "dial": 234,
       "requested": "AZTECA_INTERNACIONAL_HD",
       "tvg_id": "AZTECA_INTERNACIONAL_HD",
@@ -242,18 +218,6 @@
       "country": "AR",
       "state": "alive",
       "url": "http://138.59.227.20:8000/play/a085/index.m3u8",
-      "candidate_count": 1
-    },
-    {
-      "dial": 302,
-      "requested": "ESPN_HD",
-      "tvg_id": "ESPN_HD",
-      "reserved": false,
-      "matched_name": "ESPN Latin America Mexico (1080p)",
-      "group": "Deportes",
-      "country": "US",
-      "state": "alive",
-      "url": "http://168.228.44.241:9997/play/a06p/index.m3u8",
       "candidate_count": 1
     },
     {
@@ -328,6 +292,7 @@
     "ONCE_TV_HD",
     "CANAL_13_HD",
     "CANAL_14_HD",
+    "JALISCO_TV_HD",
     "TV_UNAM_SD",
     "CANAL_22.2_SD",
     "APRENDE_+_SD",
@@ -364,6 +329,7 @@
     "MAS_CHIC_SD",
     "DISCOVERY_H&H_HD",
     "PASIONES_HD",
+    "LIFETIME_HD",
     "SPACE_HD",
     "ANTENA_3",
     "ADULT_SWIM_HD",
@@ -394,6 +360,7 @@
     "ESNE_SD",
     "ENLACE_SD",
     "FILM_&_ARTS_HD",
+    "ESPN_HD",
     "TVC_DEPORTES_HD",
     "ESPN_2_HD",
     "TVC_DEPORTES_2_HD",
@@ -595,13 +562,12 @@
       "dial": 117,
       "requested": "JALISCO_TV_HD",
       "tvg_id": "JALISCO_TV_HD",
-      "reserved": false,
-      "matched_name": "Jalisco TV (720p)",
-      "group": "Familia y TV Abierta",
-      "country": "MX",
-      "state": "alive",
-      "url": "https://video0.rogohosting.com:19360/sisjalisciense/sisjalisciense.m3u8",
-      "candidate_count": 1
+      "reserved": true,
+      "matched_name": null,
+      "group": null,
+      "country": null,
+      "state": "reserved",
+      "url": null
     },
     {
       "dial": 120,
@@ -1111,13 +1077,12 @@
       "dial": 228,
       "requested": "LIFETIME_HD",
       "tvg_id": "LIFETIME_HD",
-      "reserved": false,
-      "matched_name": "Lifetime Latin America Mexico (1080p)",
-      "group": "Entretenimiento",
-      "country": "US",
-      "state": "alive",
-      "url": "https://streaming.onnethn.com/LIFETIME/index.m3u8",
-      "candidate_count": 1
+      "reserved": true,
+      "matched_name": null,
+      "group": null,
+      "country": null,
+      "state": "reserved",
+      "url": null
     },
     {
       "dial": 230,
@@ -1513,13 +1478,12 @@
       "dial": 302,
       "requested": "ESPN_HD",
       "tvg_id": "ESPN_HD",
-      "reserved": false,
-      "matched_name": "ESPN Latin America Mexico (1080p)",
-      "group": "Deportes",
-      "country": "US",
-      "state": "alive",
-      "url": "http://168.228.44.241:9997/play/a06p/index.m3u8",
-      "candidate_count": 1
+      "reserved": true,
+      "matched_name": null,
+      "group": null,
+      "country": null,
+      "state": "reserved",
+      "url": null
     },
     {
       "dial": 303,
