@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-11-13T06:08:27Z",
+  "generated_at": "2026-11-13T16:14:39Z",
   "requested_total": 139,
-  "found_total": 28,
-  "missing_total": 111,
+  "found_total": 25,
+  "missing_total": 114,
   "found": [
     {
       "dial": 100,
@@ -101,18 +101,6 @@
       "candidate_count": 1
     },
     {
-      "dial": 202,
-      "requested": "STAR_CHANNEL_HD",
-      "tvg_id": "STAR_CHANNEL_HD",
-      "reserved": false,
-      "matched_name": "Star Channel Latin America South",
-      "group": "Peliculas - Drama y Series",
-      "country": "US",
-      "state": "alive",
-      "url": "http://45.184.109.10/live/69393EAE6ADBC65A68F942022362A202/51.m3u8",
-      "candidate_count": 1
-    },
-    {
       "dial": 207,
       "requested": "AMC_HD",
       "tvg_id": "AMC_HD",
@@ -134,18 +122,6 @@
       "country": "US",
       "state": "alive",
       "url": "http://158.172.155.130:8000/play/a0at/index.m3u8",
-      "candidate_count": 1
-    },
-    {
-      "dial": 209,
-      "requested": "AXN_HD",
-      "tvg_id": "AXN_HD",
-      "reserved": false,
-      "matched_name": "AXN Latin America South",
-      "group": "Peliculas - Cine",
-      "country": "US",
-      "state": "alive",
-      "url": "http://45.184.109.10/live/69393EAE6ADBC65A68F942022362A202/10.m3u8",
       "candidate_count": 1
     },
     {
@@ -327,18 +303,6 @@
       "state": "alive",
       "url": "http://168.196.127.137:6001/play/a08n/index.m3u8",
       "candidate_count": 1
-    },
-    {
-      "dial": 431,
-      "requested": "CINECANAL_HD",
-      "tvg_id": "CINECANAL_HD",
-      "reserved": false,
-      "matched_name": "Cinecanal South",
-      "group": "Peliculas - Cine",
-      "country": "US",
-      "state": "alive",
-      "url": "http://45.184.109.10/live/69393EAE6ADBC65A68F942022362A202/17.m3u8",
-      "candidate_count": 1
     }
   ],
   "missing": [
@@ -373,8 +337,10 @@
     "BBC_NEWS_HD",
     "DW_LATINOAMÉRICA_SD",
     "TV5_MONDE_SD",
+    "STAR_CHANNEL_HD",
     "FX_HD",
     "UNIVERSAL_TV_HD",
+    "AXN_HD",
     "TNT_SERIES_HD",
     "ID_HD",
     "A&E_HD",
@@ -445,6 +411,7 @@
     "EUROCHANNEL_SD",
     "CINE_LATINO_SD",
     "MULTICINEMA_HD",
+    "CINECANAL_HD",
     "CÍNEMA_HD",
     "VIDEO_ROLA_HD",
     "CLIC_HD",
@@ -896,13 +863,12 @@
       "dial": 202,
       "requested": "STAR_CHANNEL_HD",
       "tvg_id": "STAR_CHANNEL_HD",
-      "reserved": false,
-      "matched_name": "Star Channel Latin America South",
-      "group": "Peliculas - Drama y Series",
-      "country": "US",
-      "state": "alive",
-      "url": "http://45.184.109.10/live/69393EAE6ADBC65A68F942022362A202/51.m3u8",
-      "candidate_count": 1
+      "reserved": true,
+      "matched_name": null,
+      "group": null,
+      "country": null,
+      "state": "reserved",
+      "url": null
     },
     {
       "dial": 204,
@@ -954,13 +920,12 @@
       "dial": 209,
       "requested": "AXN_HD",
       "tvg_id": "AXN_HD",
-      "reserved": false,
-      "matched_name": "AXN Latin America South",
-      "group": "Peliculas - Cine",
-      "country": "US",
-      "state": "alive",
-      "url": "http://45.184.109.10/live/69393EAE6ADBC65A68F942022362A202/10.m3u8",
-      "candidate_count": 1
+      "reserved": true,
+      "matched_name": null,
+      "group": null,
+      "country": null,
+      "state": "reserved",
+      "url": null
     },
     {
       "dial": 210,
@@ -1916,13 +1881,12 @@
       "dial": 431,
       "requested": "CINECANAL_HD",
       "tvg_id": "CINECANAL_HD",
-      "reserved": false,
-      "matched_name": "Cinecanal South",
-      "group": "Peliculas - Cine",
-      "country": "US",
-      "state": "alive",
-      "url": "http://45.184.109.10/live/69393EAE6ADBC65A68F942022362A202/17.m3u8",
-      "candidate_count": 1
+      "reserved": true,
+      "matched_name": null,
+      "group": null,
+      "country": null,
+      "state": "reserved",
+      "url": null
     },
     {
       "dial": 432,
