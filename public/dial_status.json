@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-11-15T05:54:54Z",
+  "generated_at": "2026-11-15T15:42:40Z",
   "requested_total": 139,
-  "found_total": 27,
-  "missing_total": 112,
+  "found_total": 25,
+  "missing_total": 114,
   "found": [
     {
       "dial": 100,
@@ -101,15 +101,15 @@
       "candidate_count": 1
     },
     {
-      "dial": 202,
-      "requested": "STAR_CHANNEL_HD",
-      "tvg_id": "STAR_CHANNEL_HD",
+      "dial": 207,
+      "requested": "AMC_HD",
+      "tvg_id": "AMC_HD",
       "reserved": false,
-      "matched_name": "Star Channel Latin America South",
-      "group": "Peliculas - Drama y Series",
+      "matched_name": "AMC Latin America (1080p)",
+      "group": "Peliculas - Cine",
       "country": "US",
       "state": "alive",
-      "url": "http://45.184.109.10/live/69393EAE6ADBC65A68F942022362A202/51.m3u8",
+      "url": "http://15.204.246.24:8080/AMCHD/index.m3u8",
       "candidate_count": 1
     },
     {
@@ -125,18 +125,6 @@
       "candidate_count": 1
     },
     {
-      "dial": 209,
-      "requested": "AXN_HD",
-      "tvg_id": "AXN_HD",
-      "reserved": false,
-      "matched_name": "AXN Latin America South",
-      "group": "Peliculas - Cine",
-      "country": "US",
-      "state": "alive",
-      "url": "http://45.184.109.10/live/69393EAE6ADBC65A68F942022362A202/10.m3u8",
-      "candidate_count": 1
-    },
-    {
       "dial": 210,
       "requested": "SONY_HD",
       "tvg_id": "SONY_HD",
@@ -146,6 +134,18 @@
       "country": "AR",
       "state": "alive",
       "url": "http://138.121.15.230:9002/SONY/index.m3u8",
+      "candidate_count": 1
+    },
+    {
+      "dial": 212,
+      "requested": "WARNER_CHANNEL_HD",
+      "tvg_id": "WARNER_CHANNEL_HD",
+      "reserved": false,
+      "matched_name": "Warner Channel Mexico (1080p) [Geo-blocked]",
+      "group": "Peliculas - Cine",
+      "country": "US",
+      "state": "alive",
+      "url": "http://15.204.246.24:8080/WarnerChannelHD/index.m3u8",
       "candidate_count": 1
     },
     {
@@ -182,18 +182,6 @@
       "country": "AR",
       "state": "alive",
       "url": "https://iptv.bitred.cl/ELGOURMET_HD/index.m3u8",
-      "candidate_count": 1
-    },
-    {
-      "dial": 228,
-      "requested": "LIFETIME_HD",
-      "tvg_id": "LIFETIME_HD",
-      "reserved": false,
-      "matched_name": "Lifetime Latin America Mexico (1080p)",
-      "group": "Entretenimiento",
-      "country": "US",
-      "state": "alive",
-      "url": "https://streaming.onnethn.com/LIFETIME/index.m3u8",
       "candidate_count": 1
     },
     {
@@ -315,18 +303,6 @@
       "state": "alive",
       "url": "http://45.171.64.30:6060/play/a014/index.m3u8",
       "candidate_count": 1
-    },
-    {
-      "dial": 431,
-      "requested": "CINECANAL_HD",
-      "tvg_id": "CINECANAL_HD",
-      "reserved": false,
-      "matched_name": "Cinecanal South",
-      "group": "Peliculas - Cine",
-      "country": "US",
-      "state": "alive",
-      "url": "http://45.184.109.10/live/69393EAE6ADBC65A68F942022362A202/17.m3u8",
-      "candidate_count": 1
     }
   ],
   "missing": [
@@ -361,11 +337,11 @@
     "BBC_NEWS_HD",
     "DW_LATINOAMÉRICA_SD",
     "TV5_MONDE_SD",
+    "STAR_CHANNEL_HD",
     "FX_HD",
     "UNIVERSAL_TV_HD",
-    "AMC_HD",
+    "AXN_HD",
     "TNT_SERIES_HD",
-    "WARNER_CHANNEL_HD",
     "ID_HD",
     "A&E_HD",
     "E!_HD",
@@ -375,6 +351,7 @@
     "MAS_CHIC_SD",
     "DISCOVERY_H&H_HD",
     "PASIONES_HD",
+    "LIFETIME_HD",
     "SPACE_HD",
     "ADULT_SWIM_HD",
     "HOLA_TV_HD",
@@ -434,6 +411,7 @@
     "CINE_LATINO_SD",
     "MULTICINEMA_HD",
     "MULTIPREMIER_HD",
+    "CINECANAL_HD",
     "CÍNEMA_HD",
     "VIDEO_ROLA_HD",
     "CLIC_HD",
@@ -885,13 +863,12 @@
       "dial": 202,
       "requested": "STAR_CHANNEL_HD",
       "tvg_id": "STAR_CHANNEL_HD",
-      "reserved": false,
-      "matched_name": "Star Channel Latin America South",
-      "group": "Peliculas - Drama y Series",
-      "country": "US",
-      "state": "alive",
-      "url": "http://45.184.109.10/live/69393EAE6ADBC65A68F942022362A202/51.m3u8",
-      "candidate_count": 1
+      "reserved": true,
+      "matched_name": null,
+      "group": null,
+      "country": null,
+      "state": "reserved",
+      "url": null
     },
     {
       "dial": 204,
@@ -919,12 +896,13 @@
       "dial": 207,
       "requested": "AMC_HD",
       "tvg_id": "AMC_HD",
-      "reserved": true,
-      "matched_name": null,
-      "group": null,
-      "country": null,
-      "state": "reserved",
-      "url": null
+      "reserved": false,
+      "matched_name": "AMC Latin America (1080p)",
+      "group": "Peliculas - Cine",
+      "country": "US",
+      "state": "alive",
+      "url": "http://15.204.246.24:8080/AMCHD/index.m3u8",
+      "candidate_count": 1
     },
     {
       "dial": 208,
@@ -942,13 +920,12 @@
       "dial": 209,
       "requested": "AXN_HD",
       "tvg_id": "AXN_HD",
-      "reserved": false,
-      "matched_name": "AXN Latin America South",
-      "group": "Peliculas - Cine",
-      "country": "US",
-      "state": "alive",
-      "url": "http://45.184.109.10/live/69393EAE6ADBC65A68F942022362A202/10.m3u8",
-      "candidate_count": 1
+      "reserved": true,
+      "matched_name": null,
+      "group": null,
+      "country": null,
+      "state": "reserved",
+      "url": null
     },
     {
       "dial": 210,
@@ -977,12 +954,13 @@
       "dial": 212,
       "requested": "WARNER_CHANNEL_HD",
       "tvg_id": "WARNER_CHANNEL_HD",
-      "reserved": true,
-      "matched_name": null,
-      "group": null,
-      "country": null,
-      "state": "reserved",
-      "url": null
+      "reserved": false,
+      "matched_name": "Warner Channel Mexico (1080p) [Geo-blocked]",
+      "group": "Peliculas - Cine",
+      "country": "US",
+      "state": "alive",
+      "url": "http://15.204.246.24:8080/WarnerChannelHD/index.m3u8",
+      "candidate_count": 1
     },
     {
       "dial": 213,
@@ -1123,13 +1101,12 @@
       "dial": 228,
       "requested": "LIFETIME_HD",
       "tvg_id": "LIFETIME_HD",
-      "reserved": false,
-      "matched_name": "Lifetime Latin America Mexico (1080p)",
-      "group": "Entretenimiento",
-      "country": "US",
-      "state": "alive",
-      "url": "https://streaming.onnethn.com/LIFETIME/index.m3u8",
-      "candidate_count": 1
+      "reserved": true,
+      "matched_name": null,
+      "group": null,
+      "country": null,
+      "state": "reserved",
+      "url": null
     },
     {
       "dial": 230,
@@ -1904,13 +1881,12 @@
       "dial": 431,
       "requested": "CINECANAL_HD",
       "tvg_id": "CINECANAL_HD",
-      "reserved": false,
-      "matched_name": "Cinecanal South",
-      "group": "Peliculas - Cine",
-      "country": "US",
-      "state": "alive",
-      "url": "http://45.184.109.10/live/69393EAE6ADBC65A68F942022362A202/17.m3u8",
-      "candidate_count": 1
+      "reserved": true,
+      "matched_name": null,
+      "group": null,
+      "country": null,
+      "state": "reserved",
+      "url": null
     },
     {
       "dial": 432,
