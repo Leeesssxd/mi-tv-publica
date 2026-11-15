@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-14T20:38:56Z",
+  "generated_at": "2026-11-15T05:54:54Z",
   "requested_total": 139,
   "found_total": 27,
   "missing_total": 112,
@@ -113,18 +113,6 @@
       "candidate_count": 1
     },
     {
-      "dial": 207,
-      "requested": "AMC_HD",
-      "tvg_id": "AMC_HD",
-      "reserved": false,
-      "matched_name": "AMC Latin America (1080p)",
-      "group": "Peliculas - Cine",
-      "country": "US",
-      "state": "alive",
-      "url": "http://15.204.246.24:8080/AMCHD/index.m3u8",
-      "candidate_count": 1
-    },
-    {
       "dial": 208,
       "requested": "TNT_NOVELAS_HD",
       "tvg_id": "TNT_NOVELAS_HD",
@@ -161,18 +149,6 @@
       "candidate_count": 1
     },
     {
-      "dial": 212,
-      "requested": "WARNER_CHANNEL_HD",
-      "tvg_id": "WARNER_CHANNEL_HD",
-      "reserved": false,
-      "matched_name": "Warner Channel Mexico (1080p) [Geo-blocked]",
-      "group": "Peliculas - Cine",
-      "country": "US",
-      "state": "alive",
-      "url": "http://15.204.246.24:8080/WarnerChannelHD/index.m3u8",
-      "candidate_count": 1
-    },
-    {
       "dial": 214,
       "requested": "TELEMUNDO_HD",
       "tvg_id": "TELEMUNDO_HD",
@@ -182,6 +158,18 @@
       "country": "US",
       "state": "alive",
       "url": "http://45.173.231.22:8000/play/a01h/index.m3u8",
+      "candidate_count": 1
+    },
+    {
+      "dial": 217,
+      "requested": "ATRESERIES_HD",
+      "tvg_id": "ATRESERIES_HD",
+      "reserved": false,
+      "matched_name": "Atreseries HD (1080p)",
+      "group": "Peliculas - Drama y Series",
+      "country": "ES",
+      "state": "unstable",
+      "url": "https://ignac16.github.io/voxel-tv-streams/a3s.mpd",
       "candidate_count": 1
     },
     {
@@ -206,6 +194,18 @@
       "country": "US",
       "state": "alive",
       "url": "https://streaming.onnethn.com/LIFETIME/index.m3u8",
+      "candidate_count": 1
+    },
+    {
+      "dial": 232,
+      "requested": "ANTENA_3",
+      "tvg_id": "ANTENA_3",
+      "reserved": false,
+      "matched_name": "Antena 3 (1080p)",
+      "group": "Entretenimiento",
+      "country": "ES",
+      "state": "unstable",
+      "url": "https://ignac16.github.io/voxel-tv-streams/a3.mpd",
       "candidate_count": 1
     },
     {
@@ -363,11 +363,12 @@
     "TV5_MONDE_SD",
     "FX_HD",
     "UNIVERSAL_TV_HD",
+    "AMC_HD",
     "TNT_SERIES_HD",
+    "WARNER_CHANNEL_HD",
     "ID_HD",
     "A&E_HD",
     "E!_HD",
-    "ATRESERIES_HD",
     "USA_HD",
     "COMEDY_CENTRAL_HD",
     "CORAZÓN_HD",
@@ -375,7 +376,6 @@
     "DISCOVERY_H&H_HD",
     "PASIONES_HD",
     "SPACE_HD",
-    "ANTENA_3",
     "ADULT_SWIM_HD",
     "HOLA_TV_HD",
     "NICK_JR_HD",
@@ -919,13 +919,12 @@
       "dial": 207,
       "requested": "AMC_HD",
       "tvg_id": "AMC_HD",
-      "reserved": false,
-      "matched_name": "AMC Latin America (1080p)",
-      "group": "Peliculas - Cine",
-      "country": "US",
-      "state": "alive",
-      "url": "http://15.204.246.24:8080/AMCHD/index.m3u8",
-      "candidate_count": 1
+      "reserved": true,
+      "matched_name": null,
+      "group": null,
+      "country": null,
+      "state": "reserved",
+      "url": null
     },
     {
       "dial": 208,
@@ -978,13 +977,12 @@
       "dial": 212,
       "requested": "WARNER_CHANNEL_HD",
       "tvg_id": "WARNER_CHANNEL_HD",
-      "reserved": false,
-      "matched_name": "Warner Channel Mexico (1080p) [Geo-blocked]",
-      "group": "Peliculas - Cine",
-      "country": "US",
-      "state": "alive",
-      "url": "http://15.204.246.24:8080/WarnerChannelHD/index.m3u8",
-      "candidate_count": 1
+      "reserved": true,
+      "matched_name": null,
+      "group": null,
+      "country": null,
+      "state": "reserved",
+      "url": null
     },
     {
       "dial": 213,
@@ -1035,12 +1033,13 @@
       "dial": 217,
       "requested": "ATRESERIES_HD",
       "tvg_id": "ATRESERIES_HD",
-      "reserved": true,
-      "matched_name": null,
-      "group": null,
-      "country": null,
-      "state": "reserved",
-      "url": null
+      "reserved": false,
+      "matched_name": "Atreseries HD (1080p)",
+      "group": "Peliculas - Drama y Series",
+      "country": "ES",
+      "state": "unstable",
+      "url": "https://ignac16.github.io/voxel-tv-streams/a3s.mpd",
+      "candidate_count": 1
     },
     {
       "dial": 218,
@@ -1147,12 +1146,13 @@
       "dial": 232,
       "requested": "ANTENA_3",
       "tvg_id": "ANTENA_3",
-      "reserved": true,
-      "matched_name": null,
-      "group": null,
-      "country": null,
-      "state": "reserved",
-      "url": null
+      "reserved": false,
+      "matched_name": "Antena 3 (1080p)",
+      "group": "Entretenimiento",
+      "country": "ES",
+      "state": "unstable",
+      "url": "https://ignac16.github.io/voxel-tv-streams/a3.mpd",
+      "candidate_count": 1
     },
     {
       "dial": 233,
