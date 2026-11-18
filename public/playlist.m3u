@@ -35,14 +35,26 @@ https://live-scjn.ovp-vivaro.digital/ovp-origin/638a22b47746d/playlist.m3u8
 #EXTVLCOPT:network-caching=2000
 #EXTVLCOPT:http-reconnect=true
 http://45.184.109.10/live/69393EAE6ADBC65A68F942022362A202/51.m3u8
+#EXTINF:-1 tvg-id="AMC_HD" tvg-name="AMC Latin America (1080p)" tvg-chno="207" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/AMC_logo_2019.svg/960px-AMC_logo_2019.svg.png" group-title="Peliculas - Cine",AMC Latin America (1080p)
+#EXTVLCOPT:network-caching=2000
+#EXTVLCOPT:http-reconnect=true
+http://15.204.246.24:8080/AMCHD/index.m3u8
 #EXTINF:-1 tvg-id="TNT_NOVELAS_HD" tvg-name="TNT Novelas (1080p)" tvg-chno="208" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/TNT_Novelas_2025.svg/1920px-TNT_Novelas_2025.svg.png" group-title="Noticias",TNT Novelas (1080p)
 #EXTVLCOPT:network-caching=2000
 #EXTVLCOPT:http-reconnect=true
 http://158.172.155.130:8000/play/a0at/index.m3u8
+#EXTINF:-1 tvg-id="AXN_HD" tvg-name="AXN Latin America South" tvg-chno="209" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/AXN_logo_%282015%29.svg/960px-AXN_logo_%282015%29.svg.png" group-title="Peliculas - Cine",AXN Latin America South
+#EXTVLCOPT:network-caching=2000
+#EXTVLCOPT:http-reconnect=true
+http://45.184.109.10/live/69393EAE6ADBC65A68F942022362A202/10.m3u8
 #EXTINF:-1 tvg-id="SONY_HD" tvg-name="Sony Channel (Argentina) (1080p)" tvg-chno="210" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Sony_Channel_Logo.png/960px-Sony_Channel_Logo.png" group-title="Entretenimiento",Sony Channel (Argentina) (1080p)
 #EXTVLCOPT:network-caching=2000
 #EXTVLCOPT:http-reconnect=true
 http://138.121.15.230:9002/SONY/index.m3u8
+#EXTINF:-1 tvg-id="WARNER_CHANNEL_HD" tvg-name="Warner Channel Mexico (1080p) [Geo-blocked]" tvg-chno="212" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Warner_TV_logo.svg/960px-Warner_TV_logo.svg.png" group-title="Peliculas - Cine",Warner Channel Mexico (1080p) [Geo-blocked]
+#EXTVLCOPT:network-caching=2000
+#EXTVLCOPT:http-reconnect=true
+http://15.204.246.24:8080/WarnerChannelHD/index.m3u8
 #EXTINF:-1 tvg-id="TELEMUNDO_HD" tvg-name="Telemundo Internacional (1080p)" tvg-chno="214" tvg-logo="https://i.imgur.com/j2O4ndp.png" group-title="Entretenimiento",Telemundo Internacional (1080p)
 #EXTVLCOPT:network-caching=2000
 #EXTVLCOPT:http-reconnect=true
@@ -99,6 +111,10 @@ http://181.78.79.131:8000/play/a0q9
 #EXTVLCOPT:network-caching=2000
 #EXTVLCOPT:http-reconnect=true
 http://45.171.64.30:6060/play/a014/index.m3u8
+#EXTINF:-1 tvg-id="MULTIPREMIER_HD" tvg-name="MultiPremier (1080p)" tvg-chno="430" tvg-logo="https://i.imgur.com/H3PzGZW.png" group-title="Peliculas - Cine",MultiPremier (1080p)
+#EXTVLCOPT:network-caching=2000
+#EXTVLCOPT:http-reconnect=true
+http://168.196.127.137:6001/play/a08n/index.m3u8
 #EXTINF:-1 tvg-id="CINECANAL_HD" tvg-name="Cinecanal South" tvg-chno="431" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/CinecanalLA.png/960px-CinecanalLA.png" group-title="Peliculas - Cine",Cinecanal South
 #EXTVLCOPT:network-caching=2000
 #EXTVLCOPT:http-reconnect=true
@@ -199,10 +215,6 @@ https://streamyes.alsolnet.com/azaharesfm/live/playlist.m3u8
 #EXTVLCOPT:network-caching=2000
 #EXTVLCOPT:http-reconnect=true
 http://181.78.106.127:5000/play/ca064/index.m3u8
-#EXTINF:-1 tvg-id="BayresTV.ar@SD" tvg-name="Bayres TV (720p)" tvg-logo="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjKrroOZ4RYMYlzGqMQjiIO2QbRNVndEM9PiC-CaRn0PO2AoB_YKyrt6Eigzh4M1gPZaVn5udDL5YzrzxAmyQCj_HTF8Pszo46dk9dABt9TpepY43_IEzT80atZEMaiMcdrqt3lmxAbZYaLwCgr6vDUgV1HlvmhIOJ99UlwAhG2FoHgtCm13CWEugV7Bvg/w1200-h630-p-k-no-nu/bayres-tv-removebg-preview.png" group-title="Entretenimiento",Bayres TV (720p)
-#EXTVLCOPT:network-caching=2000
-#EXTVLCOPT:http-reconnect=true
-https://streaming01.mikrolive.tv/bayrestv/live/playlist.m3u8
 #EXTINF:-1 tvg-id="BCNGospelTV.es@HD" tvg-name="BCN Gospel TV HD (720p)" tvg-logo="https://bcngospelchannel.com/wp-content/uploads/2025/09/bcn-gospel-channer-favicon.png" group-title="Entretenimiento",BCN Gospel TV HD (720p)
 #EXTVLCOPT:network-caching=2000
 #EXTVLCOPT:http-reconnect=true
@@ -215,6 +227,10 @@ https://cloudvideo.servers10.com:8081/8004/index.m3u8
 #EXTVLCOPT:network-caching=2000
 #EXTVLCOPT:http-reconnect=true
 https://streamlov.alsolnet.com/cadena103/live/playlist.m3u8
+#EXTINF:-1 tvg-id="Canal10Goya.ar@SD" tvg-name="Canal 10 Goya (1080p)" tvg-logo="https://i.ibb.co/cySdXxP/unnamed-5.png" group-title="Entretenimiento",Canal 10 Goya (1080p)
+#EXTVLCOPT:network-caching=2000
+#EXTVLCOPT:http-reconnect=true
+https://tv.streamcasthd.com:3637/live/canal10goyalive.m3u8
 #EXTINF:-1 tvg-id="Canal2deUshuaia.ar@SD" tvg-name="Canal 2 de Ushuaia (1080p)" tvg-logo="https://i.ibb.co/q5NPdK2/canal2-logo.png" group-title="Entretenimiento",Canal 2 de Ushuaia (1080p)
 #EXTVLCOPT:network-caching=2000
 #EXTVLCOPT:http-reconnect=true
@@ -303,6 +319,10 @@ https://limited31.todostreaming.es/live/noroestetv-livestream.m3u8
 #EXTVLCOPT:network-caching=2000
 #EXTVLCOPT:http-reconnect=true
 https://stream.crealatv.com/live.m3u8
+#EXTINF:-1 tvg-id="DespiertaTV.mx@SD" tvg-name="Despierta TV (1080p) [Not 24/7]" tvg-logo="https://i.imgur.com/hywjKNo.jpg" group-title="Entretenimiento",Despierta TV (1080p) [Not 24/7]
+#EXTVLCOPT:network-caching=2000
+#EXTVLCOPT:http-reconnect=true
+https://video2.lhdserver.es/despiertatv/live.m3u8
 #EXTINF:-1 tvg-id="DiezTVLasVillas.es@SD" tvg-name="Diez TV Las Villas (1080p)" tvg-logo="https://i.imgur.com/QTA40lP.png" group-title="Entretenimiento",Diez TV Las Villas (1080p)
 #EXTVLCOPT:network-caching=2000
 #EXTVLCOPT:http-reconnect=true
@@ -315,14 +335,14 @@ https://streaming.cloud.innovasur.es/mmj/index.m3u8
 #EXTVLCOPT:network-caching=2000
 #EXTVLCOPT:http-reconnect=true
 https://nlb2-live.emitstream.com/hls/3mn7wpcv7hbmxmdzaxap/master.m3u8
-#EXTINF:-1 tvg-id="EcoTV.ar@SD" tvg-name="Eco TV (1080p)" tvg-logo="https://i.imgur.com/V2ldYVd.jpg" group-title="Entretenimiento",Eco TV (1080p)
-#EXTVLCOPT:network-caching=2000
-#EXTVLCOPT:http-reconnect=true
-https://stream.arcast.com.ar/ecotv/ngrp:ecotv_all/playlist.m3u8
 #EXTINF:-1 tvg-id="El33.es@Originals" tvg-name="El 33 Originals (1080p) [Not 24/7]" tvg-logo="https://i.imgur.com/frKCBTN.png" group-title="Entretenimiento",El 33 Originals (1080p) [Not 24/7]
 #EXTVLCOPT:network-caching=2000
 #EXTVLCOPT:http-reconnect=true
 https://directes-tv-int.3catdirectes.cat/live-content/c33-super3-hls/master.m3u8
+#EXTINF:-1 tvg-id="ElNueve.ar@SD" tvg-name="El Nueve (1080p)" tvg-logo="https://i.imgur.com/cJHP7bU.png" group-title="Entretenimiento",El Nueve (1080p)
+#EXTVLCOPT:network-caching=2000
+#EXTVLCOPT:http-reconnect=true
+http://15.204.246.24:8080/elnueveHD/index.m3u8
 #EXTINF:-1 tvg-id="ElSonorense.mx@SD" tvg-name="El Sonorense (1080p) [Not 24/7]" tvg-logo="https://i.imgur.com/aKvPd4g.jpg" group-title="Entretenimiento",El Sonorense (1080p) [Not 24/7]
 #EXTVLCOPT:network-caching=2000
 #EXTVLCOPT:http-reconnect=true
@@ -351,10 +371,14 @@ https://pistream.ddns.net/hls/stream.m3u8
 #EXTVLCOPT:network-caching=2000
 #EXTVLCOPT:http-reconnect=true
 https://cdn3.wowza.com/1/RERMR282dnU5eE5Z/OHY0dVFs/hls/live/playlist.m3u8
-#EXTINF:-1 tvg-id="Historia.es@HD" tvg-name="Historia HD (1080p)" tvg-logo="https://i.imgur.com/VUy8xIG.png" group-title="Entretenimiento",Historia HD (1080p)
+#EXTINF:-1 tvg-id="Historia.es@SD" tvg-name="Historia (1080p)" tvg-logo="https://i.imgur.com/VUy8xIG.png" group-title="Entretenimiento",Historia (1080p)
 #EXTVLCOPT:network-caching=2000
 #EXTVLCOPT:http-reconnect=true
-https://d1k3vzh2ivy22k.cloudfront.net/Historia1080.m3u8
+https://d1k3vzh2ivy22k.cloudfront.net/Historia.m3u8
+#EXTINF:-1 tvg-id="ILCECanal15SummaSaberes.mx@SD" tvg-name="ILCE Canal 15 Summa Saberes (720p)" tvg-logo="https://i.imgur.com/r7czgOc.png" group-title="Entretenimiento",ILCE Canal 15 Summa Saberes (720p)
+#EXTVLCOPT:network-caching=2000
+#EXTVLCOPT:http-reconnect=true
+https://live-ilce.ovp-vivaro.digital/ovp-origin-abr/ngrp:6359ef999f3fb_all/playlist.m3u8
 #EXTINF:-1 tvg-id="ImasTV.es@SD" tvg-name="Imas TV (1080p) [Not 24/7]" tvg-logo="https://i.imgur.com/a9hgTmM.png" group-title="Entretenimiento",Imas TV (1080p) [Not 24/7]
 #EXTVLCOPT:network-caching=2000
 #EXTVLCOPT:http-reconnect=true
@@ -395,6 +419,14 @@ https://ingest2-video.streaming-pro.com/canalterrassa/stream/playlist.m3u8
 #EXTVLCOPT:network-caching=2000
 #EXTVLCOPT:http-reconnect=true
 https://ingest2-video.streaming-pro.com/votv/streaming_web/playlist.m3u8
+#EXTINF:-1 tvg-id="MC.mx@SD" tvg-name="MC (1080p)" tvg-logo="https://i.imgur.com/TAjbaml.png" group-title="Entretenimiento",MC (1080p)
+#EXTVLCOPT:network-caching=2000
+#EXTVLCOPT:http-reconnect=true
+http://168.196.127.137:6001/play/a070/index.m3u8
+#EXTINF:-1 tvg-id="MTVLatinAmerica.us@Panregional" tvg-name="MTV Latin America (1080p)" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/MTV_2021_%28brand_version%29.svg/960px-MTV_2021_%28brand_version%29.svg.png" group-title="Entretenimiento",MTV Latin America (1080p)
+#EXTVLCOPT:network-caching=2000
+#EXTVLCOPT:http-reconnect=true
+http://15.204.246.24:8080/MTVHD/index.m3u8
 #EXTINF:-1 tvg-id="MusicTVGranada.es@SD" tvg-name="Music TV Granada (1080p) [Not 24/7]" tvg-logo="https://i.ibb.co/Swd9NP7n/music-tv-granada.png" group-title="Entretenimiento",Music TV Granada (1080p) [Not 24/7]
 #EXTVLCOPT:network-caching=2000
 #EXTVLCOPT:http-reconnect=true
@@ -471,10 +503,6 @@ http://45.134.141.161:2200/ARG/TELEFE_HD/index.m3u8
 #EXTVLCOPT:network-caching=2000
 #EXTVLCOPT:http-reconnect=true
 http://200.115.120.1:8000/play/ca016/index.m3u8
-#EXTINF:-1 tvg-id="TelefeTucuman.ar@SD" tvg-name="Telefe Tucuman (1080p)" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Telefe_Tucum%C3%A1n_%282018%29.png/960px-Telefe_Tucum%C3%A1n_%282018%29.png" group-title="Entretenimiento",Telefe Tucuman (1080p)
-#EXTVLCOPT:network-caching=2000
-#EXTVLCOPT:http-reconnect=true
-https://g2.mc-hor.transport.edge-access.net/a05/ngrp:elochotv-100168_all/Playlist.m3u8?sense=true
 #EXTINF:-1 tvg-id="Telemadrid.es@HD" tvg-name="Telemadrid HD (1080p)" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/TeleMadrid.svg/960px-TeleMadrid.svg.png" group-title="Entretenimiento",Telemadrid HD (1080p)
 #EXTVLCOPT:network-caching=2000
 #EXTVLCOPT:http-reconnect=true
@@ -575,6 +603,14 @@ https://s5.mexside.net:1936/lsac/lsac/playlist.m3u8
 #EXTVLCOPT:network-caching=2000
 #EXTVLCOPT:http-reconnect=true
 https://s5.mexside.net:1936/envio2/envio2/playlist.m3u8
+#EXTINF:-1 tvg-id="CaliforniaMediosTV.mx@SD" tvg-name="California Medios TV (720p)" tvg-logo="https://i.imgur.com/IDvpRNI.png" group-title="Familia y TV Abierta",California Medios TV (720p)
+#EXTVLCOPT:network-caching=2000
+#EXTVLCOPT:http-reconnect=true
+https://s5.mexside.net:1936/medios/medios/playlist.m3u8
+#EXTINF:-1 tvg-id="Canal10Durango.mx@SD" tvg-name="Canal 10 Durango (1080p)" tvg-logo="https://i.imgur.com/H34quHQ.png" group-title="Familia y TV Abierta",Canal 10 Durango (1080p)
+#EXTVLCOPT:network-caching=2000
+#EXTVLCOPT:http-reconnect=true
+https://5e50264bd6766.streamlock.net/canal10durango/videocanal10durango/playlist.m3u8
 #EXTINF:-1 tvg-id="Canal21TV.ar@SD" tvg-name="Canal 21 TV (1080p)" tvg-logo="https://i.imgur.com/Am7yMXg.png" group-title="Familia y TV Abierta",Canal 21 TV (1080p)
 #EXTVLCOPT:network-caching=2000
 #EXTVLCOPT:http-reconnect=true
@@ -627,10 +663,6 @@ https://video1.getstreamhosting.com:1936/8172/8172/playlist.m3u8
 #EXTVLCOPT:network-caching=2000
 #EXTVLCOPT:http-reconnect=true
 https://59d39900ebfb8.streamlock.net/rytqrolive/rytqrolive/chunklist.m3u8
-#EXTINF:-1 tvg-id="SIPSETV81.mx@SD" tvg-name="SIPSE TV 8.1 (1080p) [Not 24/7]" tvg-logo="https://i.imgur.com/123P7dV.png" group-title="Familia y TV Abierta",SIPSE TV 8.1 (1080p) [Not 24/7]
-#EXTVLCOPT:network-caching=2000
-#EXTVLCOPT:http-reconnect=true
-https://webprod.sipse.com.mx:8080/show/merida.m3u8
 #EXTINF:-1 tvg-id="SIPSETVCUN81.mx@SD" tvg-name="SIPSE TVCUN 8.1 (1080p) [Not 24/7]" tvg-logo="https://i.imgur.com/uiTgClU.png" group-title="Familia y TV Abierta",SIPSE TVCUN 8.1 (1080p) [Not 24/7]
 #EXTVLCOPT:network-caching=2000
 #EXTVLCOPT:http-reconnect=true
@@ -639,6 +671,10 @@ https://webprod.sipse.com.mx:8080/show/tvcun.m3u8
 #EXTVLCOPT:network-caching=2000
 #EXTVLCOPT:http-reconnect=true
 https://s5.mexside.net:1936/enlinea/enlinea/playlist.m3u8
+#EXTINF:-1 tvg-id="TeleUV.mx@SD" tvg-name="Tele UV [Not 24/7]" tvg-logo="https://i.imgur.com/8MdUH69.jpeg" group-title="Familia y TV Abierta",Tele UV [Not 24/7]
+#EXTVLCOPT:network-caching=2000
+#EXTVLCOPT:http-reconnect=true
+https://58fe359775f31.streamlock.net/tvuv/myStream/playlist.m3u8
 #EXTINF:-1 tvg-id="TeleYucatan.mx@SD" tvg-name="Tele Yucatan (1080p) [Geo-blocked]" tvg-logo="https://i.imgur.com/XkpDSmO.png" group-title="Familia y TV Abierta",Tele Yucatan (1080p) [Geo-blocked]
 #EXTVLCOPT:network-caching=2000
 #EXTVLCOPT:http-reconnect=true
@@ -867,14 +903,18 @@ https://d2mr4fu91mjx9m.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68
 #EXTVLCOPT:network-caching=2000
 #EXTVLCOPT:http-reconnect=true
 https://d2nq34q0i1r3la.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-awohw8g217ho8/CineWestern_ES.m3u8
+#EXTINF:-1 tvg-id="CineLatino.mx@SD" tvg-name="CineLatino (720p)" tvg-logo="https://i.imgur.com/2V0R0xT.png" group-title="Peliculas - Cine",CineLatino (720p)
+#EXTVLCOPT:network-caching=2000
+#EXTVLCOPT:http-reconnect=true
+http://168.196.127.137:6001/play/a08o/index.m3u8
 #EXTINF:-1 tvg-id="ClaroCinema.mx@SD" tvg-name="Claro Cinema (1080p)" tvg-logo="https://i.imgur.com/SOLGQxQ.jpg" group-title="Peliculas - Cine",Claro Cinema (1080p)
 #EXTVLCOPT:network-caching=2000
 #EXTVLCOPT:http-reconnect=true
 http://45.171.64.30:6060/play/a039/index.m3u8
-#EXTINF:-1 tvg-id="CosmosTv.ar@HD" tvg-name="Cosmos Tv" tvg-logo="https://i0.wp.com/fmcosmos.com/wp-content/uploads/2021/11/COSMOS-TV.png" group-title="Peliculas - Cine",Cosmos Tv
+#EXTINF:-1 tvg-id="CosmosTv.ar@SD" tvg-name="Cosmos Tv SD" tvg-logo="https://i0.wp.com/fmcosmos.com/wp-content/uploads/2021/11/COSMOS-TV.png" group-title="Peliculas - Cine",Cosmos Tv SD
 #EXTVLCOPT:network-caching=2000
 #EXTVLCOPT:http-reconnect=true
-https://tv.mediacp.eu:19360/cosmos/cosmos.m3u8
+https://canaletaplus.com:3922/live/cosmoslive.m3u8
 #EXTINF:-1 tvg-id="Filmex.mx@SD" tvg-name="Filmex (1080p) [Geo-blocked]" tvg-logo="https://i.imgur.com/Hiz2OyC.png" group-title="Peliculas - Cine",Filmex (1080p) [Geo-blocked]
 #EXTVLCOPT:network-caching=2000
 #EXTVLCOPT:http-reconnect=true
@@ -927,10 +967,6 @@ https://jmp2.uk/plu-6385e82900ab2e000768a058.m3u8
 #EXTVLCOPT:network-caching=2000
 #EXTVLCOPT:http-reconnect=true
 https://oly-ftvpc.otteravision.com/oly/ftvpc/ftvpc.m3u8
-#EXTINF:-1 tvg-id="RakutenTVComedyMovies.es@Spain" tvg-name="Rakuten TV Comedy Movies (1080p)" tvg-logo="https://i.imgur.com/Meew6eX.png" group-title="Peliculas - Cine",Rakuten TV Comedy Movies (1080p)
-#EXTVLCOPT:network-caching=2000
-#EXTVLCOPT:http-reconnect=true
-https://71db867f03ce4d71a29e92155f07ab87.mediatailor.eu-west-1.amazonaws.com/v1/master/0547f18649bd788bec7b67b746e47670f558b6b2/production-LiveChannel-6180/master.m3u8
 #EXTINF:-1 tvg-id="RakutenTVFamilyMovies.es@Spain" tvg-name="Rakuten TV Family Movies (1080p)" tvg-logo="https://i.imgur.com/Meew6eX.png" group-title="Peliculas - Cine",Rakuten TV Family Movies (1080p)
 #EXTVLCOPT:network-caching=2000
 #EXTVLCOPT:http-reconnect=true
