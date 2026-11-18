@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-11-17T17:39:22Z",
+  "generated_at": "2026-11-18T06:58:47Z",
   "requested_total": 139,
-  "found_total": 29,
-  "missing_total": 110,
+  "found_total": 26,
+  "missing_total": 113,
   "found": [
     {
       "dial": 100,
@@ -113,18 +113,6 @@
       "candidate_count": 1
     },
     {
-      "dial": 207,
-      "requested": "AMC_HD",
-      "tvg_id": "AMC_HD",
-      "reserved": false,
-      "matched_name": "AMC Latin America (1080p)",
-      "group": "Peliculas - Cine",
-      "country": "US",
-      "state": "alive",
-      "url": "http://15.204.246.24:8080/AMCHD/index.m3u8",
-      "candidate_count": 1
-    },
-    {
       "dial": 208,
       "requested": "TNT_NOVELAS_HD",
       "tvg_id": "TNT_NOVELAS_HD",
@@ -134,18 +122,6 @@
       "country": "US",
       "state": "alive",
       "url": "http://158.172.155.130:8000/play/a0at/index.m3u8",
-      "candidate_count": 1
-    },
-    {
-      "dial": 209,
-      "requested": "AXN_HD",
-      "tvg_id": "AXN_HD",
-      "reserved": false,
-      "matched_name": "AXN Latin America South",
-      "group": "Peliculas - Cine",
-      "country": "US",
-      "state": "alive",
-      "url": "http://45.184.109.10/live/69393EAE6ADBC65A68F942022362A202/10.m3u8",
       "candidate_count": 1
     },
     {
@@ -161,18 +137,6 @@
       "candidate_count": 1
     },
     {
-      "dial": 212,
-      "requested": "WARNER_CHANNEL_HD",
-      "tvg_id": "WARNER_CHANNEL_HD",
-      "reserved": false,
-      "matched_name": "Warner Channel Mexico (1080p) [Geo-blocked]",
-      "group": "Peliculas - Cine",
-      "country": "US",
-      "state": "alive",
-      "url": "http://15.204.246.24:8080/WarnerChannelHD/index.m3u8",
-      "candidate_count": 1
-    },
-    {
       "dial": 214,
       "requested": "TELEMUNDO_HD",
       "tvg_id": "TELEMUNDO_HD",
@@ -182,18 +146,6 @@
       "country": "US",
       "state": "alive",
       "url": "http://45.173.231.22:8000/play/a01h/index.m3u8",
-      "candidate_count": 1
-    },
-    {
-      "dial": 217,
-      "requested": "ATRESERIES_HD",
-      "tvg_id": "ATRESERIES_HD",
-      "reserved": false,
-      "matched_name": "Atreseries HD (1080p)",
-      "group": "Peliculas - Drama y Series",
-      "country": "ES",
-      "state": "unstable",
-      "url": "https://ignac16.github.io/voxel-tv-streams/a3s.mpd",
       "candidate_count": 1
     },
     {
@@ -233,18 +185,6 @@
       "candidate_count": 1
     },
     {
-      "dial": 232,
-      "requested": "ANTENA_3",
-      "tvg_id": "ANTENA_3",
-      "reserved": false,
-      "matched_name": "Antena 3 (1080p)",
-      "group": "Entretenimiento",
-      "country": "ES",
-      "state": "unstable",
-      "url": "https://ignac16.github.io/voxel-tv-streams/a3.mpd",
-      "candidate_count": 1
-    },
-    {
       "dial": 234,
       "requested": "AZTECA_INTERNACIONAL_HD",
       "tvg_id": "AZTECA_INTERNACIONAL_HD",
@@ -281,6 +221,18 @@
       "candidate_count": 1
     },
     {
+      "dial": 256,
+      "requested": "NICKELODEON_HD",
+      "tvg_id": "NICKELODEON_HD",
+      "reserved": false,
+      "matched_name": "Nickelodeon (Spain) HD (1080p)",
+      "group": "Peliculas - Familiar",
+      "country": "ES",
+      "state": "alive",
+      "url": "http://90.170.214.40:9700/stream/avatel/nickelodeonhd/master.m3u8",
+      "candidate_count": 1
+    },
+    {
       "dial": 292,
       "requested": "EWTN_SD",
       "tvg_id": "EWTN_SD",
@@ -290,6 +242,18 @@
       "country": "US",
       "state": "alive",
       "url": "https://cdn3.wowza.com/1/SmVrQmZCUXZhVDgz/b3J3MFJv/hls/live/playlist.m3u8",
+      "candidate_count": 1
+    },
+    {
+      "dial": 301,
+      "requested": "FOX",
+      "tvg_id": "FOX",
+      "reserved": false,
+      "matched_name": "Fox Sports (1080p)",
+      "group": "Deportes",
+      "country": "AR",
+      "state": "alive",
+      "url": "http://138.59.227.20:8000/play/a085/index.m3u8",
       "candidate_count": 1
     },
     {
@@ -387,22 +351,26 @@
     "TV5_MONDE_SD",
     "FX_HD",
     "UNIVERSAL_TV_HD",
+    "AMC_HD",
+    "AXN_HD",
     "TNT_SERIES_HD",
+    "WARNER_CHANNEL_HD",
     "ID_HD",
     "A&E_HD",
     "E!_HD",
+    "ATRESERIES_HD",
     "USA_HD",
     "CORAZÓN_HD",
     "MAS_CHIC_SD",
     "DISCOVERY_H&H_HD",
     "PASIONES_HD",
     "SPACE_HD",
+    "ANTENA_3",
     "ADULT_SWIM_HD",
     "HOLA_TV_HD",
     "NICK_JR_HD",
     "DISNEY_JR_HD",
     "CARTOONITO_HD",
-    "NICKELODEON_HD",
     "DISCOVERY_KIDS_HD",
     "DISNEY_CHANNEL_HD",
     "TOONCAST_HD",
@@ -425,7 +393,6 @@
     "ESNE_SD",
     "ENLACE_SD",
     "FILM_&_ARTS_HD",
-    "FOX",
     "TVC_DEPORTES_HD",
     "ESPN_2_HD",
     "TVC_DEPORTES_2_HD",
@@ -941,13 +908,12 @@
       "dial": 207,
       "requested": "AMC_HD",
       "tvg_id": "AMC_HD",
-      "reserved": false,
-      "matched_name": "AMC Latin America (1080p)",
-      "group": "Peliculas - Cine",
-      "country": "US",
-      "state": "alive",
-      "url": "http://15.204.246.24:8080/AMCHD/index.m3u8",
-      "candidate_count": 1
+      "reserved": true,
+      "matched_name": null,
+      "group": null,
+      "country": null,
+      "state": "reserved",
+      "url": null
     },
     {
       "dial": 208,
@@ -965,13 +931,12 @@
       "dial": 209,
       "requested": "AXN_HD",
       "tvg_id": "AXN_HD",
-      "reserved": false,
-      "matched_name": "AXN Latin America South",
-      "group": "Peliculas - Cine",
-      "country": "US",
-      "state": "alive",
-      "url": "http://45.184.109.10/live/69393EAE6ADBC65A68F942022362A202/10.m3u8",
-      "candidate_count": 1
+      "reserved": true,
+      "matched_name": null,
+      "group": null,
+      "country": null,
+      "state": "reserved",
+      "url": null
     },
     {
       "dial": 210,
@@ -1000,13 +965,12 @@
       "dial": 212,
       "requested": "WARNER_CHANNEL_HD",
       "tvg_id": "WARNER_CHANNEL_HD",
-      "reserved": false,
-      "matched_name": "Warner Channel Mexico (1080p) [Geo-blocked]",
-      "group": "Peliculas - Cine",
-      "country": "US",
-      "state": "alive",
-      "url": "http://15.204.246.24:8080/WarnerChannelHD/index.m3u8",
-      "candidate_count": 1
+      "reserved": true,
+      "matched_name": null,
+      "group": null,
+      "country": null,
+      "state": "reserved",
+      "url": null
     },
     {
       "dial": 213,
@@ -1057,13 +1021,12 @@
       "dial": 217,
       "requested": "ATRESERIES_HD",
       "tvg_id": "ATRESERIES_HD",
-      "reserved": false,
-      "matched_name": "Atreseries HD (1080p)",
-      "group": "Peliculas - Drama y Series",
-      "country": "ES",
-      "state": "unstable",
-      "url": "https://ignac16.github.io/voxel-tv-streams/a3s.mpd",
-      "candidate_count": 1
+      "reserved": true,
+      "matched_name": null,
+      "group": null,
+      "country": null,
+      "state": "reserved",
+      "url": null
     },
     {
       "dial": 218,
@@ -1171,13 +1134,12 @@
       "dial": 232,
       "requested": "ANTENA_3",
       "tvg_id": "ANTENA_3",
-      "reserved": false,
-      "matched_name": "Antena 3 (1080p)",
-      "group": "Entretenimiento",
-      "country": "ES",
-      "state": "unstable",
-      "url": "https://ignac16.github.io/voxel-tv-streams/a3.mpd",
-      "candidate_count": 1
+      "reserved": true,
+      "matched_name": null,
+      "group": null,
+      "country": null,
+      "state": "reserved",
+      "url": null
     },
     {
       "dial": 233,
@@ -1274,12 +1236,13 @@
       "dial": 256,
       "requested": "NICKELODEON_HD",
       "tvg_id": "NICKELODEON_HD",
-      "reserved": true,
-      "matched_name": null,
-      "group": null,
-      "country": null,
-      "state": "reserved",
-      "url": null
+      "reserved": false,
+      "matched_name": "Nickelodeon (Spain) HD (1080p)",
+      "group": "Peliculas - Familiar",
+      "country": "ES",
+      "state": "alive",
+      "url": "http://90.170.214.40:9700/stream/avatel/nickelodeonhd/master.m3u8",
+      "candidate_count": 1
     },
     {
       "dial": 258,
@@ -1539,12 +1502,13 @@
       "dial": 301,
       "requested": "FOX",
       "tvg_id": "FOX",
-      "reserved": true,
-      "matched_name": null,
-      "group": null,
-      "country": null,
-      "state": "reserved",
-      "url": null
+      "reserved": false,
+      "matched_name": "Fox Sports (1080p)",
+      "group": "Deportes",
+      "country": "AR",
+      "state": "alive",
+      "url": "http://138.59.227.20:8000/play/a085/index.m3u8",
+      "candidate_count": 1
     },
     {
       "dial": 302,
