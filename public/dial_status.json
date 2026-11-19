@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-11-19T06:59:50Z",
+  "generated_at": "2026-11-19T17:22:50Z",
   "requested_total": 139,
-  "found_total": 29,
-  "missing_total": 110,
+  "found_total": 27,
+  "missing_total": 112,
   "found": [
     {
       "dial": 100,
@@ -245,18 +245,6 @@
       "candidate_count": 1
     },
     {
-      "dial": 256,
-      "requested": "NICKELODEON_HD",
-      "tvg_id": "NICKELODEON_HD",
-      "reserved": false,
-      "matched_name": "Nickelodeon (Spain) HD (1080p)",
-      "group": "Peliculas - Familiar",
-      "country": "ES",
-      "state": "alive",
-      "url": "http://90.170.214.40:9700/stream/avatel/nickelodeonhd/master.m3u8",
-      "candidate_count": 1
-    },
-    {
       "dial": 292,
       "requested": "EWTN_SD",
       "tvg_id": "EWTN_SD",
@@ -278,18 +266,6 @@
       "country": "AR",
       "state": "alive",
       "url": "http://138.59.227.20:8000/play/a085/index.m3u8",
-      "candidate_count": 1
-    },
-    {
-      "dial": 302,
-      "requested": "ESPN_HD",
-      "tvg_id": "ESPN_HD",
-      "reserved": false,
-      "matched_name": "ESPN Latin America Mexico (1080p)",
-      "group": "Deportes",
-      "country": "US",
-      "state": "alive",
-      "url": "http://168.228.44.241:9997/play/a06p/index.m3u8",
       "candidate_count": 1
     },
     {
@@ -405,6 +381,7 @@
     "NICK_JR_HD",
     "DISNEY_JR_HD",
     "CARTOONITO_HD",
+    "NICKELODEON_HD",
     "DISCOVERY_KIDS_HD",
     "DISNEY_CHANNEL_HD",
     "TOONCAST_HD",
@@ -427,6 +404,7 @@
     "ESNE_SD",
     "ENLACE_SD",
     "FILM_&_ARTS_HD",
+    "ESPN_HD",
     "TVC_DEPORTES_HD",
     "ESPN_2_HD",
     "TVC_DEPORTES_2_HD",
@@ -1271,13 +1249,12 @@
       "dial": 256,
       "requested": "NICKELODEON_HD",
       "tvg_id": "NICKELODEON_HD",
-      "reserved": false,
-      "matched_name": "Nickelodeon (Spain) HD (1080p)",
-      "group": "Peliculas - Familiar",
-      "country": "ES",
-      "state": "alive",
-      "url": "http://90.170.214.40:9700/stream/avatel/nickelodeonhd/master.m3u8",
-      "candidate_count": 1
+      "reserved": true,
+      "matched_name": null,
+      "group": null,
+      "country": null,
+      "state": "reserved",
+      "url": null
     },
     {
       "dial": 258,
@@ -1549,13 +1526,12 @@
       "dial": 302,
       "requested": "ESPN_HD",
       "tvg_id": "ESPN_HD",
-      "reserved": false,
-      "matched_name": "ESPN Latin America Mexico (1080p)",
-      "group": "Deportes",
-      "country": "US",
-      "state": "alive",
-      "url": "http://168.228.44.241:9997/play/a06p/index.m3u8",
-      "candidate_count": 1
+      "reserved": true,
+      "matched_name": null,
+      "group": null,
+      "country": null,
+      "state": "reserved",
+      "url": null
     },
     {
       "dial": 303,
