@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-11-22T06:06:34Z",
+  "generated_at": "2026-11-22T16:14:38Z",
   "requested_total": 139,
-  "found_total": 31,
-  "missing_total": 108,
+  "found_total": 26,
+  "missing_total": 113,
   "found": [
     {
       "dial": 100,
@@ -38,18 +38,6 @@
       "country": "AR",
       "state": "alive",
       "url": "https://iptv.ixfo.com.ar:30443/live/c6digital/playlist.m3u8",
-      "candidate_count": 1
-    },
-    {
-      "dial": 107,
-      "requested": "AZTECA_7_HD",
-      "tvg_id": "AZTECA_7_HD",
-      "reserved": false,
-      "matched_name": "Azteca 7 (1080p)",
-      "group": "Familia y TV Abierta",
-      "country": "MX",
-      "state": "alive",
-      "url": "http://187.245.231.226:8000/play/a0uz/index.m3u8",
       "candidate_count": 1
     },
     {
@@ -149,18 +137,6 @@
       "candidate_count": 1
     },
     {
-      "dial": 212,
-      "requested": "WARNER_CHANNEL_HD",
-      "tvg_id": "WARNER_CHANNEL_HD",
-      "reserved": false,
-      "matched_name": "Warner Channel Mexico (1080p) [Geo-blocked]",
-      "group": "Peliculas - Cine",
-      "country": "US",
-      "state": "alive",
-      "url": "http://15.204.246.24:8080/WarnerChannelHD/index.m3u8",
-      "candidate_count": 1
-    },
-    {
       "dial": 214,
       "requested": "TELEMUNDO_HD",
       "tvg_id": "TELEMUNDO_HD",
@@ -233,18 +209,6 @@
       "candidate_count": 1
     },
     {
-      "dial": 250,
-      "requested": "CARTOON_NETWORK_HD",
-      "tvg_id": "CARTOON_NETWORK_HD",
-      "reserved": false,
-      "matched_name": "Cartoon Network Latin America South Atlantic (1080p)",
-      "group": "Peliculas - Familiar",
-      "country": "US",
-      "state": "alive",
-      "url": "http://158.172.217.18:8000/play/a03a/index.m3u8",
-      "candidate_count": 1
-    },
-    {
       "dial": 260,
       "requested": "DISNEY_CHANNEL_HD",
       "tvg_id": "DISNEY_CHANNEL_HD",
@@ -293,18 +257,6 @@
       "candidate_count": 1
     },
     {
-      "dial": 301,
-      "requested": "FOX",
-      "tvg_id": "FOX",
-      "reserved": false,
-      "matched_name": "Fox Sports (1080p)",
-      "group": "Deportes",
-      "country": "AR",
-      "state": "alive",
-      "url": "http://138.59.227.20:8000/play/a085/index.m3u8",
-      "candidate_count": 1
-    },
-    {
       "dial": 302,
       "requested": "ESPN_HD",
       "tvg_id": "ESPN_HD",
@@ -314,18 +266,6 @@
       "country": "US",
       "state": "alive",
       "url": "http://168.228.44.241:9997/play/a06p/index.m3u8",
-      "candidate_count": 1
-    },
-    {
-      "dial": 403,
-      "requested": "PANICO_DELAY_SD",
-      "tvg_id": "PANICO_DELAY_SD",
-      "reserved": false,
-      "matched_name": "Panico (576p)",
-      "group": "Peliculas - Terror",
-      "country": "MX",
-      "state": "alive",
-      "url": "http://181.78.8.199:8000/play/a0bt/index.m3u8",
       "candidate_count": 1
     },
     {
@@ -382,6 +322,7 @@
     "LAS_ESTRELLAS_HD",
     "CANAL_4_GDL_HD",
     "CANAL_5_LOCAL_HD",
+    "AZTECA_7_HD",
     "MÁS_VISIÓN_HD",
     "NU9VE_HD",
     "QUIERO_TV_HD",
@@ -413,6 +354,7 @@
     "UNIVERSAL_TV_HD",
     "AMC_HD",
     "TNT_SERIES_HD",
+    "WARNER_CHANNEL_HD",
     "ID_HD",
     "A&E_HD",
     "E!_HD",
@@ -427,6 +369,7 @@
     "ADULT_SWIM_HD",
     "HOLA_TV_HD",
     "NICK_JR_HD",
+    "CARTOON_NETWORK_HD",
     "DISNEY_JR_HD",
     "CARTOONITO_HD",
     "NICKELODEON_HD",
@@ -449,6 +392,7 @@
     "ESNE_SD",
     "ENLACE_SD",
     "FILM_&_ARTS_HD",
+    "FOX",
     "TVC_DEPORTES_HD",
     "ESPN_2_HD",
     "TVC_DEPORTES_2_HD",
@@ -466,6 +410,7 @@
     "WWB_SD",
     "CINEMA_PLATINO_DELAY_SD",
     "CINEMA_PLATINO_HD",
+    "PANICO_DELAY_SD",
     "PANICO_HD",
     "SONY_MOVIES",
     "EUROPA_EUROPA_HD",
@@ -572,13 +517,12 @@
       "dial": 107,
       "requested": "AZTECA_7_HD",
       "tvg_id": "AZTECA_7_HD",
-      "reserved": false,
-      "matched_name": "Azteca 7 (1080p)",
-      "group": "Familia y TV Abierta",
-      "country": "MX",
-      "state": "alive",
-      "url": "http://187.245.231.226:8000/play/a0uz/index.m3u8",
-      "candidate_count": 1
+      "reserved": true,
+      "matched_name": null,
+      "group": null,
+      "country": null,
+      "state": "reserved",
+      "url": null
     },
     {
       "dial": 108,
@@ -1021,13 +965,12 @@
       "dial": 212,
       "requested": "WARNER_CHANNEL_HD",
       "tvg_id": "WARNER_CHANNEL_HD",
-      "reserved": false,
-      "matched_name": "Warner Channel Mexico (1080p) [Geo-blocked]",
-      "group": "Peliculas - Cine",
-      "country": "US",
-      "state": "alive",
-      "url": "http://15.204.246.24:8080/WarnerChannelHD/index.m3u8",
-      "candidate_count": 1
+      "reserved": true,
+      "matched_name": null,
+      "group": null,
+      "country": null,
+      "state": "reserved",
+      "url": null
     },
     {
       "dial": 213,
@@ -1259,13 +1202,12 @@
       "dial": 250,
       "requested": "CARTOON_NETWORK_HD",
       "tvg_id": "CARTOON_NETWORK_HD",
-      "reserved": false,
-      "matched_name": "Cartoon Network Latin America South Atlantic (1080p)",
-      "group": "Peliculas - Familiar",
-      "country": "US",
-      "state": "alive",
-      "url": "http://158.172.217.18:8000/play/a03a/index.m3u8",
-      "candidate_count": 1
+      "reserved": true,
+      "matched_name": null,
+      "group": null,
+      "country": null,
+      "state": "reserved",
+      "url": null
     },
     {
       "dial": 251,
@@ -1561,13 +1503,12 @@
       "dial": 301,
       "requested": "FOX",
       "tvg_id": "FOX",
-      "reserved": false,
-      "matched_name": "Fox Sports (1080p)",
-      "group": "Deportes",
-      "country": "AR",
-      "state": "alive",
-      "url": "http://138.59.227.20:8000/play/a085/index.m3u8",
-      "candidate_count": 1
+      "reserved": true,
+      "matched_name": null,
+      "group": null,
+      "country": null,
+      "state": "reserved",
+      "url": null
     },
     {
       "dial": 302,
@@ -1772,13 +1713,12 @@
       "dial": 403,
       "requested": "PANICO_DELAY_SD",
       "tvg_id": "PANICO_DELAY_SD",
-      "reserved": false,
-      "matched_name": "Panico (576p)",
-      "group": "Peliculas - Terror",
-      "country": "MX",
-      "state": "alive",
-      "url": "http://181.78.8.199:8000/play/a0bt/index.m3u8",
-      "candidate_count": 1
+      "reserved": true,
+      "matched_name": null,
+      "group": null,
+      "country": null,
+      "state": "reserved",
+      "url": null
     },
     {
       "dial": 404,
