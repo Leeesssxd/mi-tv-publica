@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-11-21T21:50:42Z",
+  "generated_at": "2026-11-22T06:06:34Z",
   "requested_total": 139,
-  "found_total": 26,
-  "missing_total": 113,
+  "found_total": 31,
+  "missing_total": 108,
   "found": [
     {
       "dial": 100,
@@ -149,6 +149,18 @@
       "candidate_count": 1
     },
     {
+      "dial": 212,
+      "requested": "WARNER_CHANNEL_HD",
+      "tvg_id": "WARNER_CHANNEL_HD",
+      "reserved": false,
+      "matched_name": "Warner Channel Mexico (1080p) [Geo-blocked]",
+      "group": "Peliculas - Cine",
+      "country": "US",
+      "state": "alive",
+      "url": "http://15.204.246.24:8080/WarnerChannelHD/index.m3u8",
+      "candidate_count": 1
+    },
+    {
       "dial": 214,
       "requested": "TELEMUNDO_HD",
       "tvg_id": "TELEMUNDO_HD",
@@ -233,6 +245,42 @@
       "candidate_count": 1
     },
     {
+      "dial": 260,
+      "requested": "DISNEY_CHANNEL_HD",
+      "tvg_id": "DISNEY_CHANNEL_HD",
+      "reserved": false,
+      "matched_name": "Disney Channel Latin America Mexico (720p)",
+      "group": "Peliculas - Familiar",
+      "country": "AR",
+      "state": "alive",
+      "url": "http://45.166.93.156:9999/play/a0f3/index.m3u8",
+      "candidate_count": 1
+    },
+    {
+      "dial": 261,
+      "requested": "TOONCAST_HD",
+      "tvg_id": "TOONCAST_HD",
+      "reserved": false,
+      "matched_name": "Tooncast (1080p)",
+      "group": "Peliculas - Familiar",
+      "country": "US",
+      "state": "alive",
+      "url": "http://45.184.109.10/live/69393EAE6ADBC65A68F942022362A202/69.m3u8",
+      "candidate_count": 1
+    },
+    {
+      "dial": 273,
+      "requested": "HGTV_HD",
+      "tvg_id": "HGTV_HD",
+      "reserved": false,
+      "matched_name": "HGTV Latin America (1080p)",
+      "group": "Documentales y Cultura",
+      "country": "US",
+      "state": "alive",
+      "url": "http://38.87.224.19:2220/play/a01p/index.m3u8",
+      "candidate_count": 1
+    },
+    {
       "dial": 292,
       "requested": "EWTN_SD",
       "tvg_id": "EWTN_SD",
@@ -242,6 +290,18 @@
       "country": "US",
       "state": "alive",
       "url": "https://cdn3.wowza.com/1/SmVrQmZCUXZhVDgz/b3J3MFJv/hls/live/playlist.m3u8",
+      "candidate_count": 1
+    },
+    {
+      "dial": 301,
+      "requested": "FOX",
+      "tvg_id": "FOX",
+      "reserved": false,
+      "matched_name": "Fox Sports (1080p)",
+      "group": "Deportes",
+      "country": "AR",
+      "state": "alive",
+      "url": "http://138.59.227.20:8000/play/a085/index.m3u8",
       "candidate_count": 1
     },
     {
@@ -353,7 +413,6 @@
     "UNIVERSAL_TV_HD",
     "AMC_HD",
     "TNT_SERIES_HD",
-    "WARNER_CHANNEL_HD",
     "ID_HD",
     "A&E_HD",
     "E!_HD",
@@ -372,15 +431,12 @@
     "CARTOONITO_HD",
     "NICKELODEON_HD",
     "DISCOVERY_KIDS_HD",
-    "DISNEY_CHANNEL_HD",
-    "TOONCAST_HD",
     "BABY_FIRST_HD",
     "BABY_TV_SD",
     "ONCE_NIÑOS_SD",
     "DISCOVERY_CHANNEL_HD",
     "DISCOVERY_SCIENCE_HD",
     "TLC",
-    "HGTV_HD",
     "FOOD_NETWORK_HD",
     "DISCOVERY_TURBO_HD",
     "DISCOVERY_THEATER_HD",
@@ -393,7 +449,6 @@
     "ESNE_SD",
     "ENLACE_SD",
     "FILM_&_ARTS_HD",
-    "FOX",
     "TVC_DEPORTES_HD",
     "ESPN_2_HD",
     "TVC_DEPORTES_2_HD",
@@ -966,12 +1021,13 @@
       "dial": 212,
       "requested": "WARNER_CHANNEL_HD",
       "tvg_id": "WARNER_CHANNEL_HD",
-      "reserved": true,
-      "matched_name": null,
-      "group": null,
-      "country": null,
-      "state": "reserved",
-      "url": null
+      "reserved": false,
+      "matched_name": "Warner Channel Mexico (1080p) [Geo-blocked]",
+      "group": "Peliculas - Cine",
+      "country": "US",
+      "state": "alive",
+      "url": "http://15.204.246.24:8080/WarnerChannelHD/index.m3u8",
+      "candidate_count": 1
     },
     {
       "dial": 213,
@@ -1259,23 +1315,25 @@
       "dial": 260,
       "requested": "DISNEY_CHANNEL_HD",
       "tvg_id": "DISNEY_CHANNEL_HD",
-      "reserved": true,
-      "matched_name": null,
-      "group": null,
-      "country": null,
-      "state": "reserved",
-      "url": null
+      "reserved": false,
+      "matched_name": "Disney Channel Latin America Mexico (720p)",
+      "group": "Peliculas - Familiar",
+      "country": "AR",
+      "state": "alive",
+      "url": "http://45.166.93.156:9999/play/a0f3/index.m3u8",
+      "candidate_count": 1
     },
     {
       "dial": 261,
       "requested": "TOONCAST_HD",
       "tvg_id": "TOONCAST_HD",
-      "reserved": true,
-      "matched_name": null,
-      "group": null,
-      "country": null,
-      "state": "reserved",
-      "url": null
+      "reserved": false,
+      "matched_name": "Tooncast (1080p)",
+      "group": "Peliculas - Familiar",
+      "country": "US",
+      "state": "alive",
+      "url": "http://45.184.109.10/live/69393EAE6ADBC65A68F942022362A202/69.m3u8",
+      "candidate_count": 1
     },
     {
       "dial": 262,
@@ -1347,12 +1405,13 @@
       "dial": 273,
       "requested": "HGTV_HD",
       "tvg_id": "HGTV_HD",
-      "reserved": true,
-      "matched_name": null,
-      "group": null,
-      "country": null,
-      "state": "reserved",
-      "url": null
+      "reserved": false,
+      "matched_name": "HGTV Latin America (1080p)",
+      "group": "Documentales y Cultura",
+      "country": "US",
+      "state": "alive",
+      "url": "http://38.87.224.19:2220/play/a01p/index.m3u8",
+      "candidate_count": 1
     },
     {
       "dial": 274,
@@ -1502,12 +1561,13 @@
       "dial": 301,
       "requested": "FOX",
       "tvg_id": "FOX",
-      "reserved": true,
-      "matched_name": null,
-      "group": null,
-      "country": null,
-      "state": "reserved",
-      "url": null
+      "reserved": false,
+      "matched_name": "Fox Sports (1080p)",
+      "group": "Deportes",
+      "country": "AR",
+      "state": "alive",
+      "url": "http://138.59.227.20:8000/play/a085/index.m3u8",
+      "candidate_count": 1
     },
     {
       "dial": 302,
