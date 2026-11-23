@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-11-23T06:56:40Z",
+  "generated_at": "2026-11-23T20:10:47Z",
   "requested_total": 139,
-  "found_total": 25,
-  "missing_total": 114,
+  "found_total": 29,
+  "missing_total": 110,
   "found": [
     {
       "dial": 100,
@@ -185,6 +185,18 @@
       "candidate_count": 1
     },
     {
+      "dial": 234,
+      "requested": "AZTECA_INTERNACIONAL_HD",
+      "tvg_id": "AZTECA_INTERNACIONAL_HD",
+      "reserved": false,
+      "matched_name": "Azteca Internacional (1080p)",
+      "group": "Familia y TV Abierta",
+      "country": "MX",
+      "state": "alive",
+      "url": "http://167.249.23.102:8000/play/a0a3/index.m3u8",
+      "candidate_count": 1
+    },
+    {
       "dial": 236,
       "requested": "TVE_HD",
       "tvg_id": "TVE_HD",
@@ -206,6 +218,18 @@
       "country": "US",
       "state": "alive",
       "url": "http://158.172.217.18:8000/play/a03a/index.m3u8",
+      "candidate_count": 1
+    },
+    {
+      "dial": 260,
+      "requested": "DISNEY_CHANNEL_HD",
+      "tvg_id": "DISNEY_CHANNEL_HD",
+      "reserved": false,
+      "matched_name": "Disney Channel Latin America Mexico (720p)",
+      "group": "Peliculas - Familiar",
+      "country": "AR",
+      "state": "alive",
+      "url": "http://45.166.93.156:9999/play/a0f3/index.m3u8",
       "candidate_count": 1
     },
     {
@@ -257,6 +281,18 @@
       "candidate_count": 1
     },
     {
+      "dial": 302,
+      "requested": "ESPN_HD",
+      "tvg_id": "ESPN_HD",
+      "reserved": false,
+      "matched_name": "ESPN Latin America Mexico (1080p)",
+      "group": "Deportes",
+      "country": "US",
+      "state": "alive",
+      "url": "http://168.228.44.241:9997/play/a06p/index.m3u8",
+      "candidate_count": 1
+    },
+    {
       "dial": 403,
       "requested": "PANICO_DELAY_SD",
       "tvg_id": "PANICO_DELAY_SD",
@@ -278,6 +314,18 @@
       "country": "CL",
       "state": "alive",
       "url": "http://181.78.79.131:8000/play/a0q9",
+      "candidate_count": 1
+    },
+    {
+      "dial": 424,
+      "requested": "TCM_HD",
+      "tvg_id": "TCM_HD",
+      "reserved": false,
+      "matched_name": "TCM Latin America South (1080p)",
+      "group": "Entretenimiento",
+      "country": "US",
+      "state": "alive",
+      "url": "http://45.171.64.30:6060/play/a014/index.m3u8",
       "candidate_count": 1
     },
     {
@@ -355,14 +403,12 @@
     "SPACE_HD",
     "ANTENA_3",
     "ADULT_SWIM_HD",
-    "AZTECA_INTERNACIONAL_HD",
     "HOLA_TV_HD",
     "NICK_JR_HD",
     "DISNEY_JR_HD",
     "CARTOONITO_HD",
     "NICKELODEON_HD",
     "DISCOVERY_KIDS_HD",
-    "DISNEY_CHANNEL_HD",
     "BABY_FIRST_HD",
     "BABY_TV_SD",
     "ONCE_NIÑOS_SD",
@@ -381,7 +427,6 @@
     "ESNE_SD",
     "ENLACE_SD",
     "FILM_&_ARTS_HD",
-    "ESPN_HD",
     "TVC_DEPORTES_HD",
     "ESPN_2_HD",
     "TVC_DEPORTES_2_HD",
@@ -409,7 +454,6 @@
     "CMC_DELAY_SD",
     "CMC_SD",
     "EUROCHANNEL_SD",
-    "TCM_HD",
     "CINE_LATINO_SD",
     "MULTICINEMA_HD",
     "CÍNEMA_HD",
@@ -1145,12 +1189,13 @@
       "dial": 234,
       "requested": "AZTECA_INTERNACIONAL_HD",
       "tvg_id": "AZTECA_INTERNACIONAL_HD",
-      "reserved": true,
-      "matched_name": null,
-      "group": null,
-      "country": null,
-      "state": "reserved",
-      "url": null
+      "reserved": false,
+      "matched_name": "Azteca Internacional (1080p)",
+      "group": "Familia y TV Abierta",
+      "country": "MX",
+      "state": "alive",
+      "url": "http://167.249.23.102:8000/play/a0a3/index.m3u8",
+      "candidate_count": 1
     },
     {
       "dial": 235,
@@ -1246,12 +1291,13 @@
       "dial": 260,
       "requested": "DISNEY_CHANNEL_HD",
       "tvg_id": "DISNEY_CHANNEL_HD",
-      "reserved": true,
-      "matched_name": null,
-      "group": null,
-      "country": null,
-      "state": "reserved",
-      "url": null
+      "reserved": false,
+      "matched_name": "Disney Channel Latin America Mexico (720p)",
+      "group": "Peliculas - Familiar",
+      "country": "AR",
+      "state": "alive",
+      "url": "http://45.166.93.156:9999/play/a0f3/index.m3u8",
+      "candidate_count": 1
     },
     {
       "dial": 261,
@@ -1503,12 +1549,13 @@
       "dial": 302,
       "requested": "ESPN_HD",
       "tvg_id": "ESPN_HD",
-      "reserved": true,
-      "matched_name": null,
-      "group": null,
-      "country": null,
-      "state": "reserved",
-      "url": null
+      "reserved": false,
+      "matched_name": "ESPN Latin America Mexico (1080p)",
+      "group": "Deportes",
+      "country": "US",
+      "state": "alive",
+      "url": "http://168.228.44.241:9997/play/a06p/index.m3u8",
+      "candidate_count": 1
     },
     {
       "dial": 303,
@@ -1835,12 +1882,13 @@
       "dial": 424,
       "requested": "TCM_HD",
       "tvg_id": "TCM_HD",
-      "reserved": true,
-      "matched_name": null,
-      "group": null,
-      "country": null,
-      "state": "reserved",
-      "url": null
+      "reserved": false,
+      "matched_name": "TCM Latin America South (1080p)",
+      "group": "Entretenimiento",
+      "country": "US",
+      "state": "alive",
+      "url": "http://45.171.64.30:6060/play/a014/index.m3u8",
+      "candidate_count": 1
     },
     {
       "dial": 426,
