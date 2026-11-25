@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-11-25T00:42:09Z",
+  "generated_at": "2026-11-25T18:41:30Z",
   "requested_total": 139,
-  "found_total": 27,
-  "missing_total": 112,
+  "found_total": 26,
+  "missing_total": 113,
   "found": [
     {
       "dial": 100,
@@ -146,18 +146,6 @@
       "country": "US",
       "state": "alive",
       "url": "http://45.173.231.22:8000/play/a01h/index.m3u8",
-      "candidate_count": 1
-    },
-    {
-      "dial": 219,
-      "requested": "COMEDY_CENTRAL_HD",
-      "tvg_id": "COMEDY_CENTRAL_HD",
-      "reserved": false,
-      "matched_name": "Comedy Central Latin America (1080p)",
-      "group": "Peliculas - Comedia",
-      "country": "US",
-      "state": "alive",
-      "url": "http://190.93.224.42/COMEDY-CENTRAL/index.m3u8",
       "candidate_count": 1
     },
     {
@@ -372,6 +360,7 @@
     "E!_HD",
     "ATRESERIES_HD",
     "USA_HD",
+    "COMEDY_CENTRAL_HD",
     "CORAZÓN_HD",
     "MAS_CHIC_SD",
     "DISCOVERY_H&H_HD",
@@ -1054,13 +1043,12 @@
       "dial": 219,
       "requested": "COMEDY_CENTRAL_HD",
       "tvg_id": "COMEDY_CENTRAL_HD",
-      "reserved": false,
-      "matched_name": "Comedy Central Latin America (1080p)",
-      "group": "Peliculas - Comedia",
-      "country": "US",
-      "state": "alive",
-      "url": "http://190.93.224.42/COMEDY-CENTRAL/index.m3u8",
-      "candidate_count": 1
+      "reserved": true,
+      "matched_name": null,
+      "group": null,
+      "country": null,
+      "state": "reserved",
+      "url": null
     },
     {
       "dial": 220,
