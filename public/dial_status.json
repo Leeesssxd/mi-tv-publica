@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-25T18:41:30Z",
+  "generated_at": "2026-11-26T07:54:11Z",
   "requested_total": 139,
   "found_total": 26,
   "missing_total": 113,
@@ -149,6 +149,18 @@
       "candidate_count": 1
     },
     {
+      "dial": 219,
+      "requested": "COMEDY_CENTRAL_HD",
+      "tvg_id": "COMEDY_CENTRAL_HD",
+      "reserved": false,
+      "matched_name": "Comedy Central Latin America (1080p)",
+      "group": "Peliculas - Comedia",
+      "country": "US",
+      "state": "alive",
+      "url": "http://190.93.224.42/COMEDY-CENTRAL/index.m3u8",
+      "candidate_count": 1
+    },
+    {
       "dial": 223,
       "requested": "EL_GOURMET_HD",
       "tvg_id": "EL_GOURMET_HD",
@@ -242,18 +254,6 @@
       "country": "US",
       "state": "alive",
       "url": "https://cdn3.wowza.com/1/SmVrQmZCUXZhVDgz/b3J3MFJv/hls/live/playlist.m3u8",
-      "candidate_count": 1
-    },
-    {
-      "dial": 301,
-      "requested": "FOX",
-      "tvg_id": "FOX",
-      "reserved": false,
-      "matched_name": "FOX",
-      "group": "Deportes",
-      "country": "MX",
-      "state": "alive",
-      "url": "https://lilac19.pontiscloud.com/live/gt/FOX/index.m3u8",
       "candidate_count": 1
     },
     {
@@ -360,7 +360,6 @@
     "E!_HD",
     "ATRESERIES_HD",
     "USA_HD",
-    "COMEDY_CENTRAL_HD",
     "CORAZÓN_HD",
     "MAS_CHIC_SD",
     "DISCOVERY_H&H_HD",
@@ -393,6 +392,7 @@
     "ESNE_SD",
     "ENLACE_SD",
     "FILM_&_ARTS_HD",
+    "FOX",
     "ESPN_HD",
     "TVC_DEPORTES_HD",
     "ESPN_2_HD",
@@ -1043,12 +1043,13 @@
       "dial": 219,
       "requested": "COMEDY_CENTRAL_HD",
       "tvg_id": "COMEDY_CENTRAL_HD",
-      "reserved": true,
-      "matched_name": null,
-      "group": null,
-      "country": null,
-      "state": "reserved",
-      "url": null
+      "reserved": false,
+      "matched_name": "Comedy Central Latin America (1080p)",
+      "group": "Peliculas - Comedia",
+      "country": "US",
+      "state": "alive",
+      "url": "http://190.93.224.42/COMEDY-CENTRAL/index.m3u8",
+      "candidate_count": 1
     },
     {
       "dial": 220,
@@ -1502,13 +1503,12 @@
       "dial": 301,
       "requested": "FOX",
       "tvg_id": "FOX",
-      "reserved": false,
-      "matched_name": "FOX",
-      "group": "Deportes",
-      "country": "MX",
-      "state": "alive",
-      "url": "https://lilac19.pontiscloud.com/live/gt/FOX/index.m3u8",
-      "candidate_count": 1
+      "reserved": true,
+      "matched_name": null,
+      "group": null,
+      "country": null,
+      "state": "reserved",
+      "url": null
     },
     {
       "dial": 302,
